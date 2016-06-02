@@ -13,4 +13,4 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load java
-srun java -jar /clusterfs/vector/instrumentData/blackmanlab/snpEff/snpEff.jar build -v HA412
+srun java -jar /clusterfs/vector/instrumentData/blackmanlab/snpEff/snpEff.jar build -gff3 -v HA412
