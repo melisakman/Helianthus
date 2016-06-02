@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/vector/instrumentData/blackmanlab/
+#SBATCH -D /clusterfs/vector/instrumentData/blackmanlab/snpEff
 #SBATCH -J snpEff
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
@@ -13,4 +13,4 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load java
-srun java -jar /global/home/users/makman/snpEff/program/snpEff.jar build -gff3 -v HA412
+srun java -jar /clusterfs/vector/instrumentData/blackmanlab/snpEff/snpEff.jar build -gff3 -v HA412
