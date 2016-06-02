@@ -6,7 +6,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=6
-#SBATCH --mem=4000
+#SBATCH --mem=16000
 #SBATCH --time=4:00:00
 #SBATCH -o /global/home/users/makman/snpEff/outs/snpEff_database.out
 #SBATCH -e /global/home/users/makman/snpEff/outs/snpEff_database.err
