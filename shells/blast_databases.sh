@@ -15,5 +15,5 @@
 #SBATCH --array=1-3
 module load blast
 makeblastdb -in ../Hulke/all_markers.fa -input_type fasta -dbtype nucl -title Hulke -out Hulke
-makeblastdb -in ../HA412/Ha412v1r1_genome.fasta -input_type fasta -dbtype nucl -title HA412 -out HA412
+makeblastdb -in ../HA412/20141217-Ha412v1r1_genome.fasta -input_type fasta -dbtype nucl -title HA412 -out HA412
 makeblastdb -in ../XRQ/HanXRQr1.0-20151230.fa -input_type fasta -dbtype nucl -title XRQ -out XRQ
