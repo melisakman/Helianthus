@@ -14,7 +14,7 @@
 #SBATCH --mail-type=All
 module load java
 module load gtk+/2.24.13 
-srun java -cp GenomeAnalysisTK.jar org.broadinstitute.gatk.tools.CatVariants -R snpEff/data/HA412/sequences.fa \
+srun java -cp GenomeAnalysisTK.jar org.broadinstitute.sting.tools.CatVariants -R snpEff/data/HA412/sequences.fa \
 -V vcf_HA412/chrom1_cultivated_filtered_ordered.vcf.gz \
 -V vcf_HA412/chrom2_cultivated_filtered_ordered.vcf.gz \
 -V vcf_HA412/chrom3_cultivated_filtered_ordered.vcf.gz \

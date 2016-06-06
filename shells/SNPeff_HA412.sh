@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/vector/instrumentData/blackmanlab/snpEff
+#SBATCH -D /clusterfs/vector/instrumentData/blackmanlab/snpEff/results
 #SBATCH -J snpEff
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
@@ -13,4 +13,4 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load java
-srun java -Xmx8g -jar /clusterfs/vector/instrumentData/blackmanlab/snpEff/snpEff.jar -stats test.html HA412 /clusterfs/vector/instrumentData/blackmanlab/vcf_HA412/chrom1_cultivated_filtered_ordered.vcf.gz > /clusterfs/vector/instrumentData/blackmanlab/snpEff/results/test.chr1.ann.vcf
+srun java -Xmx8g -jar /clusterfs/vector/instrumentData/blackmanlab/snpEff/snpEff.jar -stats test.html HA412 /clusterfs/vector/instrumentData/blackmanlab/vcf_HA412/cultivated_filtered_ordered_combined.vcf.gz > /clusterfs/vector/instrumentData/blackmanlab/snpEff/results/combined_snpEff.ann.vcf
