@@ -20,3 +20,5 @@ SNPeff_HA412.sh
 
 First I constructed databases for HA412, XRQ genomes and the set of markers on the combined scaffold map markers of Hulke et al., 2015. This is done with the script:
 blast_databases.sh
+
+This seems to be a likely way I will be taking from now on for mapping candidate genes.
