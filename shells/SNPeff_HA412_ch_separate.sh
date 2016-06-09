@@ -7,7 +7,7 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=6
 #SBATCH --mem=16000
-#SBATCH --time=8:00:00
+#SBATCH --time=48:00:00
 #SBATCH -o /global/home/users/makman/snpEff/outs/snpEff_HA412_ch_separate.out
 #SBATCH -e /global/home/users/makman/snpEff/outs/snpEff_HA412_ch_separate.err
 #SBATCH --mail-user=makman@berkeley.edu
