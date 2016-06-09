@@ -13,7 +13,7 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load java
-module load gtk+/2.24.13 
+module load module load GATK/3.6 
 srun java -cp GenomeAnalysisTK.jar org.broadinstitute.sting.tools.CatVariants -R snpEff/data/HA412/sequences.fa \
 -V chrom1_cultivated_filtered_ordered.vcf.gz \
 -V chrom2_cultivated_filtered_ordered.vcf.gz \
