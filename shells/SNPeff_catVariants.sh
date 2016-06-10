@@ -7,14 +7,14 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=6
 #SBATCH --mem=16000
-#SBATCH --time=24:00:00
+#SBATCH --time=48:00:00
 #SBATCH -o /global/home/users/makman/snpEff/outs/catVariant_HA412.out
 #SBATCH -e /global/home/users/makman/snpEff/outs/catVariant_HA412.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load java
 module load GATK/3.6 
-srun java -cp /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/GenomeAnalysisTK-3.6/GenomeAnalysisTK.jar org.broadinstitute.gatk.tools.CatVariants -R snpEff/data/HA412/sequences.fa \
+srun java -cp /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/GenomeAnalysisTK-3.6/GenomeAnalysisTK.jar org.broadinstitute.gatk.tools.CatVariants -R ../HA412/Ha412v1r1_genome.fasta \
 -V chrom1_cultivated_filtered_ordered.vcf.gz \
 -V chrom2_cultivated_filtered_ordered.vcf.gz \
 -V chrom3_cultivated_filtered_ordered.vcf.gz \
