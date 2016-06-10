@@ -12,8 +12,9 @@
 #SBATCH -e /global/home/users/makman/snpEff/outs/vcftools_merge_HA412.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
+module load perl
 module load vcftools/0.1.13
-srun vcf-concat chrom1_cultivated_filtered_ordered.vcf.gz \
+srun /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-concat chrom1_cultivated_filtered_ordered.vcf.gz \
 chrom2_cultivated_filtered_ordered.vcf.gz \
 chrom3_cultivated_filtered_ordered.vcf.gz \
 chrom4_cultivated_filtered_ordered.vcf.gz \
