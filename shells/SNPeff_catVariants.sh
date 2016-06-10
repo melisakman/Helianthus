@@ -14,7 +14,7 @@
 #SBATCH --mail-type=All
 module load java
 module load GATK/3.6 
-srun java -cp /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/GenomeAnalysisTK-3.6/GenomeAnalysisTK.jar org.broadinstitute.gatk.tools.CatVariants -R ../HA412/Ha412v1r1_genome.fasta \
+srun java -cp /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/GenomeAnalysisTK-3.6/GenomeAnalysisTK.jar org.broadinstitute.gatk.tools.CatVariants -R ../HA412/20141217-Ha412v1r1_genome.fasta \
 -V chrom1_cultivated_filtered_ordered.vcf.gz \
 -V chrom2_cultivated_filtered_ordered.vcf.gz \
 -V chrom3_cultivated_filtered_ordered.vcf.gz \
