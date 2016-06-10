@@ -9,8 +9,10 @@ We start by constructing the databases first. Here I created databases for both 
 SNPeff_database_XRQ.sh
 SNPeff_database_HA412.sh
 
-Then I combined the vcf files that had 17 chromosomes separately by using GATK tools with the following script:
-SNPeff_catVariants.sh
+Then I combined the vcf files that had 17 chromosomes separately by using vcf tools. But before merging the columns on the vcf files have to be ordered because they do not seem to be consistent. This is done by with the following script:
+vcftools_shuffleCols.sh
+The merging is done by:
+vcftools_merge.sh
 
 And finally the program is run on this combined file with the script:
 
