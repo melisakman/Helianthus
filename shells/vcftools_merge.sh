@@ -14,6 +14,7 @@
 #SBATCH --mail-type=All
 module load perl
 module load vcftools/0.1.13
+export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
 srun /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-concat chrom1_cultivated_filtered_ordered.vcf.gz \
 chrom2_cultivated_filtered_ordered.vcf.gz \
 chrom3_cultivated_filtered_ordered.vcf.gz \
