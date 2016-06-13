@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/vector/instrumentData/blackmanlab/vcf_HA412/
+#SBATCH -D /clusterfs/vector/instrumentData/blackmanlab/vcf_HA412/ordered/
 #SBATCH -J vcfMerge
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
