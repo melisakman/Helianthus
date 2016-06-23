@@ -1,6 +1,6 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/vector/instrumentData/blackmanlab/vcf_HA412/ordered/
-#SBATCH -J vcfMerge
+#SBATCH -D /clusterfs/vector/instrumentData/blackmanlab/snpEff/results
+#SBATCH -J gzip
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
 #SBATCH --nodes=1
