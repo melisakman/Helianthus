@@ -13,12 +13,12 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 #SBATCH --array=1-8
-srun cat Ari_copy/Ari-leaf-2-clean_1.fq.gz Ari_copy/Ari-meristem-2-clean_1.fq.gz Ari_copy/Ari-node-2-clean_1.fq.gz > Ari_copy/Ari_2_NLM_1.fq.gz
-srun cat Ari_copy/Ari-leaf-2-clean_2.fq.gz Ari_copy/Ari-meristem-2-clean_2.fq.gz Ari_copy/Ari-node-2-clean_2.fq.gz > Ari_copy/Ari_2_NLM_2.fq.gz
-srun cat Ari_copy/Ari-root-2-clean_1.fq.gz Ari_copy/Ari-shoot-2-clean_1.fq.gz > Ari_copy/Ari_2_RS_1.fq.gz
-srun cat Ari_copy/Ari-root-2-clean_2.fq.gz Ari_copy/Ari-shoot-2-clean_2.fq.gz > Ari_copy/Ari_2_RS_2.fq.gz
+srun cat Ari_copy/Ari-leaf-2-clean_1.fq.gz Ari_copy/Ari-meristem-2-clean_1.fq.gz Ari_copy/Ari-node-2-clean_1.fq.gz > Helianthus/trinity/Ari_2_NLM_1.fq.gz
+srun cat Ari_copy/Ari-leaf-2-clean_2.fq.gz Ari_copy/Ari-meristem-2-clean_2.fq.gz Ari_copy/Ari-node-2-clean_2.fq.gz > Helianthus/trinity/Ari_2_NLM_2.fq.gz
+srun cat Ari_copy/Ari-root-2-clean_1.fq.gz Ari_copy/Ari-shoot-2-clean_1.fq.gz > Helianthus/trinity/Ari_2_RS_1.fq.gz
+srun cat Ari_copy/Ari-root-2-clean_2.fq.gz Ari_copy/Ari-shoot-2-clean_2.fq.gz > Helianthus/trinity/Ari_2_RS_2.fq.gz
 
-srun cat NB_copy/NB-leaf-3-clean_1.fq.gz NB_copy/NB-meristem-3-clean_1.fq.gz NB_copy/NB-node-3-clean_1.fq.gz > NB_copy/NB_3_NLM_1.fq.gz
-srun cat NB_copy/NB-leaf-3-clean_2.fq.gz NB_copy/NB-meristem-3-clean_2.fq.gz NB_copy/NB-node-3-clean_2.fq.gz > NB_copy/NB_3_NLM_2.fq.gz
-srun cat NB_copy/NB-root-2-clean_1.fq.gz NB_copy/NB-shoot-2-clean_1.fq.gz > NB_copy/NB_2_RS_1.fq.gz
-srun cat NB_copy/NB-root-2-clean_2.fq.gz NB_copy/NB-shoot-2-clean_2.fq.gz > NB_copy/NB_2_RS_2.fq.gz
+srun cat NB_copy/NB-leaf-3-clean_1.fq.gz NB_copy/NB-meristem-3-clean_1.fq.gz NB_copy/NB-node-3-clean_1.fq.gz > Helianthus/trinity/NB_3_NLM_1.fq.gz
+srun cat NB_copy/NB-leaf-3-clean_2.fq.gz NB_copy/NB-meristem-3-clean_2.fq.gz NB_copy/NB-node-3-clean_2.fq.gz > Helianthus/trinity/NB_3_NLM_2.fq.gz
+srun cat NB_copy/NB-root-2-clean_1.fq.gz NB_copy/NB-shoot-2-clean_1.fq.gz > Helianthus/trinity/NB_2_RS_1.fq.gz
+srun cat NB_copy/NB-root-2-clean_2.fq.gz NB_copy/NB-shoot-2-clean_2.fq.gz > Helianthus/trinity/NB_2_RS_2.fq.gz
