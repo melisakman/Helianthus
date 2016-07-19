@@ -11,4 +11,5 @@
 #SBATCH --mail-type=All
 module load trinity
 module load bowtie/1.1.1
+module load samtools
 srun Trinity --seqType fq --max_memory 128G --left Ari_2_NLM_1.fq --right Ari_2_NLM_1.fq --CPU 64 --normalize_reads --output trinity_Ari2_NLM --full_cleanup
