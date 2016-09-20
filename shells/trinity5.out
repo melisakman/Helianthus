@@ -1,0 +1,70 @@
+Trinity version: v2.1.1
+** NOTE: Latest version of Trinity is v2.2.0, and can be obtained at:
+	https://github.com/trinityrnaseq/trinityrnaseq/releases
+
+Friday, September 2, 2016: 09:24:50	CMD: java -Xmx64m -XX:ParallelGCThreads=2 -jar /share/apps/trinityrnaseq-2.1.1/util/support_scripts/ExitTester.jar 0
+Friday, September 2, 2016: 09:24:50	CMD: java -Xmx64m -XX:ParallelGCThreads=2 -jar /share/apps/trinityrnaseq-2.1.1/util/support_scripts/ExitTester.jar 1
+Friday, September 2, 2016: 09:24:50	CMD: mkdir -p /home/makman/Helianthus/five/trinity_NB_all
+Friday, September 2, 2016: 09:24:50	CMD: mkdir -p /home/makman/Helianthus/five/trinity_NB_all/chrysalis
+
+
+----------------------------------------------------------------------------------
+-------------- Trinity Phase 1: Clustering of RNA-Seq Reads  ---------------------
+----------------------------------------------------------------------------------
+
+---------------------------------------------------------------
+------------ In silico Read Normalization ---------------------
+-- (Removing Excess Reads Beyond 50 Coverage --
+-- /home/makman/Helianthus/five/trinity_NB_all/insilico_read_normalization --
+---------------------------------------------------------------
+
+Friday, September 2, 2016: 09:24:50	CMD: /share/apps/trinityrnaseq-2.1.1/util/insilico_read_normalization.pl --seqType fq --JM 128G  --max_cov 50 --CPU 64 --output /home/makman/Helianthus/five/trinity_NB_all/insilico_read_normalization --left /home/makman/Helianthus/five/../NB_all_1.fq --right /home/makman/Helianthus/five/../NB_all_2.fq --pairs_together --PARALLEL_STATS  
+Converting input files. (both directions in parallel)CMD: /share/apps/trinityrnaseq-2.1.1/util/..//trinity-plugins/fastool/fastool --illumina-trinity --to-fasta /home/makman/Helianthus/five/../NB_all_1.fq >> left.fa
+CMD: /share/apps/trinityrnaseq-2.1.1/util/..//trinity-plugins/fastool/fastool --illumina-trinity --to-fasta /home/makman/Helianthus/five/../NB_all_2.fq >> right.fa
+Sequences parsed: 165582647
+CMD finished (1109 seconds)
+Sequences parsed: 165582647
+CMD finished (1195 seconds)
+CMD: touch left.fa.ok
+CMD finished (0 seconds)
+CMD: touch right.fa.ok
+CMD finished (0 seconds)
+Done converting input files.CMD: cat left.fa right.fa > both.fa
+CMD finished (711 seconds)
+CMD: touch both.fa.ok
+-------------------------------------------
+----------- Jellyfish  --------------------
+-- (building a k-mer catalog from reads) --
+-------------------------------------------
+
+CMD finished (0 seconds)
+CMD: /share/apps/trinityrnaseq-2.1.1/util/..//trinity-plugins/jellyfish/bin/jellyfish count -t 64 -m 25 -s 12828184509  --canonical  both.fa
+CMD finished (416 seconds)
+CMD: /share/apps/trinityrnaseq-2.1.1/util/..//trinity-plugins/jellyfish/bin/jellyfish histo -t 64 -o jellyfish.K25.min2.kmers.fa.histo mer_counts.jf
+CMD finished (63 seconds)
+CMD: /share/apps/trinityrnaseq-2.1.1/util/..//trinity-plugins/jellyfish/bin/jellyfish dump -L 2 mer_counts.jf > jellyfish.K25.min2.kmers.fa
+CMD finished (177 seconds)
+CMD: touch jellyfish.K25.min2.kmers.fa.success
+CMD finished (0 seconds)
+CMD: /share/apps/trinityrnaseq-2.1.1/util/..//Inchworm/bin/fastaToKmerCoverageStats --reads left.fa --kmers jellyfish.K25.min2.kmers.fa --kmer_size 25  --num_threads 64  --DS  > left.fa.K25.stats
+CMD: /share/apps/trinityrnaseq-2.1.1/util/..//Inchworm/bin/fastaToKmerCoverageStats --reads right.fa --kmers jellyfish.K25.min2.kmers.fa --kmer_size 25  --num_threads 64  --DS  > right.fa.K25.stats
+-reading Kmer occurences...
+-reading Kmer occurences...
+
+ done parsing 270094045 Kmers, 270094045 added, taking 725 seconds.
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  basic_string::substr
+bash: line 1: 61552 Aborted                 (core dumped) /share/apps/trinityrnaseq-2.1.1/util/..//Inchworm/bin/fastaToKmerCoverageStats --reads right.fa --kmers jellyfish.K25.min2.kmers.fa --kmer_size 25 --num_threads 64 --DS > right.fa.K25.stats
+Thread 4 terminated abnormally: Error, cmd: /share/apps/trinityrnaseq-2.1.1/util/..//Inchworm/bin/fastaToKmerCoverageStats --reads right.fa --kmers jellyfish.K25.min2.kmers.fa --kmer_size 25  --num_threads 64  --DS  > right.fa.K25.stats died with ret 34304 at /share/apps/trinityrnaseq-2.1.1/util/insilico_read_normalization.pl line 733.
+
+ done parsing 270094045 Kmers, 270094045 added, taking 820 seconds.
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  basic_string::substr
+bash: line 1: 61549 Aborted                 (core dumped) /share/apps/trinityrnaseq-2.1.1/util/..//Inchworm/bin/fastaToKmerCoverageStats --reads left.fa --kmers jellyfish.K25.min2.kmers.fa --kmer_size 25 --num_threads 64 --DS > left.fa.K25.stats
+Thread 3 terminated abnormally: Error, cmd: /share/apps/trinityrnaseq-2.1.1/util/..//Inchworm/bin/fastaToKmerCoverageStats --reads left.fa --kmers jellyfish.K25.min2.kmers.fa --kmer_size 25  --num_threads 64  --DS  > left.fa.K25.stats died with ret 34304 at /share/apps/trinityrnaseq-2.1.1/util/insilico_read_normalization.pl line 733.
+Error, thread exited with error Error, cmd: /share/apps/trinityrnaseq-2.1.1/util/..//Inchworm/bin/fastaToKmerCoverageStats --reads left.fa --kmers jellyfish.K25.min2.kmers.fa --kmer_size 25  --num_threads 64  --DS  > left.fa.K25.stats died with ret 34304 at /share/apps/trinityrnaseq-2.1.1/util/insilico_read_normalization.pl line 733.
+
+Error, thread exited with error Error, cmd: /share/apps/trinityrnaseq-2.1.1/util/..//Inchworm/bin/fastaToKmerCoverageStats --reads right.fa --kmers jellyfish.K25.min2.kmers.fa --kmer_size 25  --num_threads 64  --DS  > right.fa.K25.stats died with ret 34304 at /share/apps/trinityrnaseq-2.1.1/util/insilico_read_normalization.pl line 733.
+
+Error, 2 threads errored out at /share/apps/trinityrnaseq-2.1.1/util/insilico_read_normalization.pl line 920.
+Error, cmd: /share/apps/trinityrnaseq-2.1.1/util/insilico_read_normalization.pl --seqType fq --JM 128G  --max_cov 50 --CPU 64 --output /home/makman/Helianthus/five/trinity_NB_all/insilico_read_normalization --left /home/makman/Helianthus/five/../NB_all_1.fq --right /home/makman/Helianthus/five/../NB_all_2.fq --pairs_together --PARALLEL_STATS   died with ret 6400 at /share/apps/trinityrnaseq-2.1.1/Trinity line 2183.

@@ -1,0 +1,275 @@
+scp -P 361 /data/raid5part4/genomicsOfSunflower/GREGB_HISEQ/HI.1253.007.Index_2.PI432521_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/GREGB_HISEQ/HI.1253.006.Index_2.PI432521_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/GREGB_HISEQ/HI.1253.005.Index_2.PI432521_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/GREGB_HISEQ/HI.1251.006.Index_21.PI369357_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/GREGB_HISEQ/HI.1251.005.Index_21.PI369357_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/GREGB_HISEQ/HI.1251.006.Index_22.PI369358_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/GREGB_HISEQ/HI.1251.005.Index_22.PI369358_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/GREGB_HISEQ/HI.1253.007.Index_5.PI600720_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/GREGB_HISEQ/HI.1253.006.Index_5.PI600720_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/GREGB_HISEQ/HI.1253.005.Index_5.PI600720_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/GREGB_HISEQ/HI.1251.006.Index_25.PI432505_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/GREGB_HISEQ/HI.1251.005.Index_25.PI432505_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/GREGB_HISEQ/HI.0206.004.Index_8.Hopi_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/GREGB_HISEQ/HI.1253.007.Index_3.PI432522_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/GREGB_HISEQ/HI.1253.006.Index_3.PI432522_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/GREGB_HISEQ/HI.1253.005.Index_3.PI432522_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/GREGB_HISEQ/HI.1253.007.Index_4.PI600718_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/GREGB_HISEQ/HI.1253.006.Index_4.PI600718_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/GREGB_HISEQ/HI.1253.005.Index_4.PI600718_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/GREGB_HISEQ/HI.0913.006.Index_16.MexCult14_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/GREGB_HISEQ/HI.0913.005.Index_16.MexCult14_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/GREGB_HISEQ/HI.0913.006.Index_18.MexCult15_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/GREGB_HISEQ/HI.0913.005.Index_18.MexCult15_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/GREGB_HISEQ/HI.0810.006.Index_12.MexCult3_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/GREGB_HISEQ/HI.0810.005.Index_12.MexCult3_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/GREGB_HISEQ/HI.0810.006.Index_13.MexCult6_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/GREGB_HISEQ/HI.0810.005.Index_13.MexCult6_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/GREGB_HISEQ/HI.0810.006.Index_14.MexCult7_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/GREGB_HISEQ/HI.0810.005.Index_14.MexCult7_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/GREGB_HISEQ/HI.0810.006.Index_15.MexCult9_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/GREGB_HISEQ/HI.0810.005.Index_15.MexCult9_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/GREGB_HISEQ/HI.1253.007.Index_1.PI432516_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/GREGB_HISEQ/HI.1253.006.Index_1.PI432516_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/GREGB_HISEQ/HI.1253.005.Index_1.PI432516_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/GREGB_HISEQ/HI.1251.006.Index_23.PI369360_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/GREGB_HISEQ/HI.1251.005.Index_23.PI369360_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/GREGB_HISEQ/HI.1253.007.Index_27.PI432515_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/GREGB_HISEQ/HI.1253.006.Index_27.PI432515_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/HI.1245.004.Index_3.GSD1573_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/HI.1242.008.Index_23.GSD1258_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/HI.1242.008.Index_20.GSD1139_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/HI.1242.006.Index_15.GSD983_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/HI.1242.005.Index_15.GSD983_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/HI.1245.006.Index_9.GSD2067_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/HI.1245.005.Index_9.GSD2067_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/HI.1245.004.Index_5.GSD1732_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/HI.1245.003.Index_5.GSD1732_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/HI.1245.003.Index_3.GSD1573_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/HI.1245.002.Index_25.GSD1276_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/HI.1245.001.Index_25.GSD1276_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/HI.1242.006.Index_18.GSD1039_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/HI.1242.005.Index_18.GSD1039_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/HI.1245.006.Index_7.GSD2008_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/HI.1245.005.Index_7.GSD2008_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/HI.1242.007.Index_22.GSD1184_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/HI.1242.008.Index_22.GSD1184_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/HI.0741.005.Index_15.MON658_replacement_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/HI.1245.004.Index_6.GSD1795_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/HI.1245.003.Index_6.GSD1795_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/HI.1245.002.Index_2.GSD1503_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/HI.1245.001.Index_2.GSD1503_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/HI.1242.008.Index_21.GSD1169_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/HI.1242.007.Index_21.GSD1169_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/HI.0741.006.Index_15.MON658_replacement_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/HI.1245.002.Index_27.GSD1329_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/HI.1245.001.Index_27.GSD1329_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/HI.0733.005.Index_5.MON151_replacement_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/HI.0733.005.Index_2.MON014_replacement_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/HI.0733.006.Index_2.MON014_replacement_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/HI.0733.006.Index_5.MON151_replacement_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/HI.0733.005.Index_4.MON106_replacement_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/HI.0733.006.Index_4.MON106_replacement_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/HI.0733.005.Index_3.MON069_replacement_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/HI.0733.006.Index_3.MON069_replacement_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/GSD_SAMPLES/HI.0767.002.Index_19.MON818_replacement_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/GSD_SAMPLES/HI.0741.002.Index_7.MON263_replacement_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/GSD_SAMPLES/HI.0767.001.Index_19.MON818_replacement_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/GSD_SAMPLES/HI.0741.002.Index_8.MON308_replacement_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/GSD_SAMPLES/HI.0741.004.Index_11.MON459_replacement_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/GSD_SAMPLES/HI.0741.003.Index_11.MON459_replacement_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/GSD_SAMPLES/HI.0741.002.Index_9.MON365_replacement_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/GSD_SAMPLES/HI.0741.002.Index_6.MON220_replacement_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/GSD_SAMPLES/HI.0741.001.Index_7.MON263_replacement_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/GSD_SAMPLES/HI.0741.004.Index_12.MON520_replacement_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/GSD_SAMPLES/HI.0741.001.Index_8.MON308_replacement_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/GSD_SAMPLES/HI.0741.004.Index_10.MON401_replacement_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/GSD_SAMPLES/HI.0741.003.Index_12.MON520_replacement_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/GSD_SAMPLES/HI.0741.001.Index_9.MON365_replacement_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/GSD_SAMPLES/HI.0741.003.Index_10.MON401_replacement_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/GSD_SAMPLES/HI.0741.001.Index_6.MON220_replacement_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/GSD_SAMPLES/HI.1245.002.Index_1.GSD1375_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/GSD_SAMPLES/HI.1245.001.Index_1.GSD1375_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/GSD_SAMPLES/HI.1245.006.Index_8.GSD2031_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/GSD_SAMPLES/HI.1245.005.Index_8.GSD2031_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/GSD_SAMPLES/HI.0767.002.Index_20.MON862_replacement_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/GSD_SAMPLES/HI.0767.001.Index_20.MON862_replacement_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/GSD_SAMPLES/HI.0741.005.Index_18.MON768_replacement_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/GSD_SAMPLES/HI.0741.006.Index_18.MON768_replacement_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/GSD_SAMPLES/HI.1242.006.Index_16.GSD1009_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/GSD_SAMPLES/HI.1242.006.Index_19.GSD1085_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/GSD_SAMPLES/HI.1242.005.Index_19.GSD1085_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/GSD_SAMPLES/HI.1242.005.Index_16.GSD1009_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/GSD_SAMPLES/HI.0741.005.Index_14.MON606_replacement_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/GSD_SAMPLES/HI.1245.004.Index_4.GSD1707_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/GSD_SAMPLES/HI.1245.003.Index_4.GSD1707_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/GSD_SAMPLES/HI.0741.006.Index_14.MON606_replacement_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/GSD_SAMPLES/HI.0741.005.Index_16.MON713_replacement_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/GSD_SAMPLES/HI.1242.007.Index_23.GSD1258_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/GSD_SAMPLES/HI.1242.007.Index_20.GSD1139_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/GSD_SAMPLES/HI.0741.006.Index_16.MON713_replacement_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/GSD_SAMPLES/HI.0741.004.Index_13.MON564_replacement_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/GSD_SAMPLES/HI.0741.003.Index_13.MON564_replacement_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/GSD_SAMPLES/HI.1245.006.Index_10.GSD2252_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/genomicsOfSunflower/KATE_HISEQ/GSD_SAMPLES/HI.1245.005.Index_10.GSD2252_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerDomestication/HI.1579.003.BioO_1.ann01-cwIA_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerDomestication/HI.1579.002.BioO_3.ann04-nwAR_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerDomestication/HI.1579.005.BioO_4.ann05-ccNM_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerDomestication/HI.1565.008.BioO_5.ann06-seWY_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerDomestication/HI.1565.008.BioO_6.ann08-ceTN_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerDomestication/HI.1579.005.BioO_7.ann10-ccIL_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerDomestication/HI.1579.004.BioO_10.ann20-seAZ_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerDomestication/HI.1579.003.BioO_15.ann28-swSK_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerDomestication/HI.1579.005.BioO_16.ann29-neSD_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerDomestication/HI.1565.008.BioO_21.ann34-cwKS_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerDomestication/HI.1565.008.BioO_24.ann39-ncNE_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerDomestication/HI.1579.002.BioO_27.ann44-ccCA_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1579.006.BioO_11.ann22-nwTX_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1579.006.BioO_17.ann30-neTX_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1579.006.BioO_18.ann31-scTX_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1579.006.BioO_25.ann41-ccTX_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1579.006.BioO_30.ann53-nwTX_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1579.006.BioO_35.ann59-swTX_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1579.006.BioO_36.ann62-neTX_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1579.006.BioO_37.ann63-swTX_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1579.006.BioO_38.ann64-seTX_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1579.006.BioO_40.ann67-swTX_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1579.008.BioO_1.arg01-seTX_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1579.008.BioO_2.arg02-seTX_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1579.008.BioO_4.arg04-seTX_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1579.008.BioO_5.arg05-seTX_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1579.008.BioO_6.arg06-seTX_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1579.008.BioO_8.arg08-seTX_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1580.002.BioO_36.DB114_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1580.002.BioO_35.DB118_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1580.002.BioO_37.DB124_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1580.002.BioO_34.DB129_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1580.001.BioO_1.DB183_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1580.001.BioO_5.DB209_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1580.001.BioO_2.DB291_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1580.001.BioO_3.DB295_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1580.001.BioO_4.DB297_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1580.001.BioO_6.DB302_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1580.002.BioO_7.DB320_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1580.002.BioO_31.DB324_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.007.Index_12.DB334_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.006.Index_12.DB334_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.005.Index_12.DB334_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1580.002.BioO_33.DB38_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1580.002.BioO_32.DB94_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1579.008.BioO_37.deb07-seTX_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1580.002.BioO_25.deb08-ceFL_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1579.007.BioO_35.deb10-swFL_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1579.008.BIoO_33.deb11-ceTX_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1579.007.BioO_34.deb12-ceTX_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1579.007.BioO_36.deb13-ceTX_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1579.007.BioO_24.deb14-cwFL_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1579.008.BioO_41.par07-ukNM_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1579.006.BioO_3.pet01_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1579.007.BioO_5.pet03-neCO_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1579.007.BioO_16.pet04-swSK_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1579.007.BioO_19.pet07-ceND_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1579.007.BioO_20.pet08-ncCO_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1579.007.BioO_21.pet09-ncNE_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1579.007.BioO_23.pet11-swSK_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1579.007.BioO_18.pet12-ceMT_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1579.008.BioO_45.pet13-neNM_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1580.001.BioO_42.pet14-ncTX_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1580.001.BioO_36.pra01-scTX_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1579.008.BioO_25.pra04-scTX_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1580.001.BioO_29.pra05-scTX_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1580.001.BioO_30.pra06-seTX_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.006.Index_23.291C_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.007.Index_23.291C_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.006.Index_21.298C_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.007.Index_21.298C_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.005.Index_6.371C_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.006.Index_6.371C_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.007.Index_6.371C_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.007.Index_27.442M_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.006.Index_27.442M_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.005.Index_15.450C_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.006.Index_15.450C_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.007.Index_15.450C_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.005.Index_7.491C_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.006.Index_7.491C_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.007.Index_7.491C_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.006.Index_2.495C_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.007.Index_2.495C_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.006.Index_19.DB287_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.007.Index_19.DB287_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.006.Index_12.DB334_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.007.Index_12.DB334_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1580.002.BioO_8.DB325_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.006.Index_5.DB37_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.007.Index_5.DB37_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.006.Index_1.DB96_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.007.Index_1.DB96_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.006.Index_3.DIV_1_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.007.Index_3.DIV_1_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.006.Index_11.DIV_10_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.007.Index_11.DIV_10_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.006.Index_8.DIV_13_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.007.Index_8.DIV_13_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.006.Index_20.DIV_19_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.007.Index_20.DIV_19_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.006.Index_9.DIV_4_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.007.Index_9.DIV_4_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.006.Index_22.DIV_7_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.007.Index_22.DIV_7_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.006.Index_10.DIV_9_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.007.Index_10.DIV_9_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.006.Index_14.GRO_15_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.007.Index_14.GRO_15_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.005.Index_14.GRO_15_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.006.Index_16.GRO_22_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.007.Index_16.GRO_22_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.005.Index_4.GRO_35_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.006.Index_4.GRO_35_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.007.Index_4.GRO_35_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.005.Index_18.GRO_7_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.006.Index_18.GRO_7_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+scp -P 361 /data/raid5part4/sunflowerIntrogression/HI.1699.007.Index_18.GRO_7_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+------------
+
+moonrise:/data/raid5part2/brook/helianthus_argophyllus_genome/rawdata/HI.1699.002.Index_21.ARG1805-10_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+moonrise:/data/raid5part2/brook/helianthus_argophyllus_genome/rawdata/HI.1699.001.Index_25.ARG1805-8_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+moonrise:/data/raid5part2/brook/helianthus_argophyllus_genome/rawdata/HI.1699.003.Index_23.ARG1820-7_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+moonrise:/data/raid5part2/brook/helianthus_argophyllus_genome/rawdata/HI.1699.004.Index_27.ARG1834-8_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+mrfox:/data/marco/AnomalusDepletionTest/forEvanH_anomalus_2012_HK24_10-1_350bp_1Xcoverage_DSNtreated_*.fq Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+mrfox:/data/marco/AnomalusDepletionTest/forEvanH_anomalus_2012_HK24_10-4_350bp_1Xcoverage_DSNtreated_*.fq Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+mrfox:/data/marco/AnomalusDepletionTest/forEvanH_anomalus_2012_HK24_11-2_350bp_1Xcoverage_DSNtreated_*.fq Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+mrfox:/data/marco/AnomalusDepletionTest/forEvanH_anomalus_2012_HK24_24-2_350bp_1Xcoverage_DSNtreated_*.fq Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+mrfox:/data/marco/AnomalusDepletionTest/forEvanH_anomalus_2012_LS_2-2_350bp_1Xcoverage_DSNtreated_*.fq Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+mrfox:/data/marco/AnomalusDepletionTest/forEvanH_anomalus_2012_LS_18-5_350bp_1Xcoverage_DSNtreated_*.fq Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+mrfox:/data/marco/AnomalusDepletionTest/forEvanH_anomalus_2012_LS_20-3_350bp_1Xcoverage_DSNtreated_*.fq Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+mrfox:/data/marco/AnomalusDepletionTest/forEvanH_anomalus_2012_LS_22-2_350bp_1Xcoverage_DSNtreated_*.fq Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+mrfox:/data/marco/AnomalusDepletionTest/forEvanH_anomalus_2012_LS_23-1_350bp_1Xcoverage_DSNtreated_*.fq Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+mrfox:/data/marco/AnomalusDepletionTest/forEvanH_anomalus_2012_LS_29-7_350bp_1Xcoverage_DSNtreated_*.fq Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+mrfox:/data/marco/AnomalusDepletionTest/forEvanH_anomalus_2012_LS_30-5_350bp_1Xcoverage_DSNtreated_*.fq Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+mrfox:/data/marco/AnomalusDepletionTest/forEvanH_anomalus_2012_NHK_5-4_350bp_1Xcoverage_DSNtreated_*.fq Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+mrfox:/data/marco/AnomalusDepletionTest/forEvanH_anomalus_2012_NHKE_8-3_350bp_1Xcoverage_DSNtreated_*.fq Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+mrfox:/data/marco/AnomalusDepletionTest/forEvanH_anomalus_2012_NHKE_9-1_350bp_1Xcoverage_DSNtreated_*.fq Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+mrfox:/data/marco/AnomalusDepletionTest/forEvanH_anomalus_2012_NHKG_9-4_350bp_1Xcoverage_DSNtreated_*.fq Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+mrfox:/data/marco/AnomalusDepletionTest/forEvanH_anomalus_2012_NHKG_16-1_350bp_1Xcoverage_DSNtreated_*.fq Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+Sciborg:/Linux/Loren/Seq/WGS/annHA89_1.fq Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+Sciborg:/Linux/Loren/Seq/WGS/annIA_1.fq Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+Sciborg:/Linux/Loren/Seq/WGS/annKS_1.fq Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+Sciborg:/Linux/Loren/Seq/WGS/annMAN_1.fq Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+Sciborg:/Linux/Loren/Seq/WGS/annMo_1.fq Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+Sciborg:/Linux/Loren/Seq/WGS/annNM_1.fq Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+Sciborg:/Linux/Loren/Seq/WGS/annWY_1.fq Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/
+
+
+scp -P 361 HI.1579.003.BioO_1.ann01-cwIA_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/wild/
+scp -P 361 HI.1579.002.BioO_3.ann04-nwAR_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/wild/
+scp -P 361 HI.1579.005.BioO_4.ann05-ccNM_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/wild/
+scp -P 361 HI.1565.008.BioO_5.ann06-seWY_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/wild/
+scp -P 361 HI.1565.008.BioO_6.ann08-ceTN_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/wild/
+scp -P 361 HI.1579.005.BioO_7.ann10-ccIL_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/wild/
+scp -P 361 HI.1579.004.BioO_10.ann20-seAZ_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/wild/
+scp -P 361 HI.1579.003.BioO_15.ann28-swSK_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/wild/
+scp -P 361 HI.1579.005.BioO_16.ann29-neSD_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/wild/
+scp -P 361 HI.1565.008.BioO_21.ann34-cwKS_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/wild/
+scp -P 361 HI.1565.008.BioO_24.ann39-ncNE_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/wild/
+scp -P 361 HI.1579.002.BioO_27.ann44-ccCA_*.fastq.gz Melis_Akman@128.32.8.2:/volume1/Backup/Melis_Akman/UBC_data/wild/
