@@ -6,7 +6,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
-#SBATCH --mem=2000
+#SBATCH --mem=10000
 #SBATCH --time=1:00:00
 #SBATCH -o /global/home/users/makman/trinity/outs/subsampleAri.out
 #SBATCH -e /global/home/users/makman/trinity/outs/subsampleAri.err

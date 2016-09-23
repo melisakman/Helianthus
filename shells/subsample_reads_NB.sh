@@ -3,7 +3,7 @@
 #SBATCH -J subsample 
 #SBATCH --partition=vector 
 #SBATCH --qos=vector_batch 
-#SBATCH --mem=128000 
+#SBATCH --mem=10000
 #SBATCH --time=5:00:00 
 #SBATCH -o /global/home/users/makman/trinity/outs/subsampleNB.out
 #SBATCH -e /global/home/users/makman/trinity/outs/subsampleNB.err 
