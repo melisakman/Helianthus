@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/vector/instrumentData/blackmanlab/Helianthus/NB_copy/
+#SBATCH -D /clusterfs/vector/instrumentData/blackmanlab/Helianthus/
 #SBATCH -J subsample 
 #SBATCH --partition=vector 
 #SBATCH --qos=vector_batch 
