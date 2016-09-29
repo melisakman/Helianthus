@@ -1,5 +1,5 @@
 #!/bin/bash -l
-#SBATCH -D /global/scratch/makman/data/
+#SBATCH -D /global/scratch/makman/
 #SBATCH -J cat
 #SBATCH -o /global/home/users/makman/trinity/outs/cat.out
 #SBATCH -e /global/home/users/makman/trinity/outs/cat.err
@@ -11,5 +11,5 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 #SBATCH --array=1-2
-srun cat /clusterfs/vector/instrumentData/blackmanlab/Helianthus/subsample/data/*_1.fq.gz > AriNB10M_all_1.fq.gz
-srun cat /clusterfs/vector/instrumentData/blackmanlab/Helianthus/subsample/data/*_2.fq.gz > AriNB10M_all_2.fq.gz
+srun cat /clusterfs/vector/instrumentData/blackmanlab/Helianthus/subsample/data/*_1.fq.gz > ./AriNB10M_all_1.fq.gz
+srun cat /clusterfs/vector/instrumentData/blackmanlab/Helianthus/subsample/data/*_2.fq.gz > ./AriNB10M_all_2.fq.gz
