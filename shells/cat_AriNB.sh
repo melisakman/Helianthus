@@ -4,7 +4,7 @@
 #SBATCH -o /global/home/users/makman/trinity/outs/cat.out
 #SBATCH -e /global/home/users/makman/trinity/outs/cat.err
 #SBATCH --qos=savio_lowprio
-#SBATCH --partition=savio
+#SBATCH --partition=savio2
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=6
 #SBATCH --time=48:00:00
