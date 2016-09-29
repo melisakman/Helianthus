@@ -12,7 +12,7 @@
 #SBATCH -e /global/home/users/makman/trinity/outs/subsampleNB2.err
 #SBATCH --mail-user=makman@berkeley.edu 
 #SBATCH --mail-type=All 
-#SBATCH --array=1-36
+#SBATCH --array=1-18
 
 srun /global/home/users/makman/seqtk/seqtk sample -s100 NB/NB-R1plus5-123-clean_1.fq.gz 10000000 | gzip -9 > /clusterfs/vector/instrumentData/blackmanlab/Helianthus/subsample/data/NB-R1plus5-123-sub_1.fq.gz
 srun /global/home/users/makman/seqtk/seqtk sample -s100 NB/NB-R1plus5-123-clean_2.fq.gz 10000000 | gzip -9 > /clusterfs/vector/instrumentData/blackmanlab/Helianthus/subsample/data/NB-R1plus5-123-sub_2.fq.gz
