@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH -D /clusterfs/vector/instrumentData/blackmanlab/Helianthus/subsample/data/
-#SBATCH --partition=savio2
+#SBATCH --partition=vector_batch
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=1
 #SBATCH --time=48:00:00
