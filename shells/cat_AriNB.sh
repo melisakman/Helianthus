@@ -3,7 +3,7 @@
 #SBATCH -J cat
 #SBATCH -o /global/home/users/makman/trinity/outs/cat.out
 #SBATCH -e /global/home/users/makman/trinity/outs/cat.err
-#SBATCH --qos=rosalind_normal
+#SBATCH --qos=savio_lowprio
 #SBATCH --partition=savio
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=6
