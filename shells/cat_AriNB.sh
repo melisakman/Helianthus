@@ -1,10 +1,10 @@
 #!/bin/bash -l
-#SBATCH -D /global/scratch/makman/
+#SBATCH -D /clusterfs/vector/scratch/makman/
 #SBATCH -J cat
 #SBATCH -o /global/home/users/makman/trinity/outs/cat.out
 #SBATCH -e /global/home/users/makman/trinity/outs/cat.err
-#SBATCH --qos=savio_lowprio
-#SBATCH --partition=savio2
+#SBATCH --qos=vector_batch
+#SBATCH --partition=vector
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=6
 #SBATCH --time=48:00:00
