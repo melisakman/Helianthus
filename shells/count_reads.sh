@@ -1,6 +1,7 @@
 #!/bin/bash
 #SBATCH -D /clusterfs/vector/instrumentData/blackmanlab/Helianthus/subsample/data
 #SBATCH --qos=vector_batch
+#SBATCH --partition=vector
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=1
 #SBATCH --time=48:00:00
