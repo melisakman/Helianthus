@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/vector/scratch/makman/snpEff/
+#SBATCH -D /global/home/users/makman/snpEff/
 #SBATCH -J snpEff
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
@@ -13,4 +13,4 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load java
-srun java -Xmx8g -jar /global/home/users/makman/snpEff/snpEff.jar -stats combined_coding.html /clusterfs/vector/instrumentData/blackmanlab/Helianthus/HA412 /clusterfs/vector/instrumentData/blackmanlab/Helianthus/AssociationGenicSNPs/GenicbeagleImputed.vcf > /clusterfs/vector/scratch/makman/snpEff/combined_coding_snpEff.ann.vcf
+srun java -Xmx8g -jar /global/home/users/makman/snpEff/snpEff.jar -stats combined_coding.html HA412 /clusterfs/vector/instrumentData/blackmanlab/Helianthus/AssociationGenicSNPs/GenicbeagleImputed.vcf > /clusterfs/vector/scratch/makman/snpEff/combined_coding_snpEff.ann.vcf
