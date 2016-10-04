@@ -1,0 +1,9 @@
+#%Module1.0########################################################
+#Created on Tue Oct 4 2016.
+#trinity - 2.2.0
+##
+proc ModulesHelp { } {
+	puts stderr "\tThis module loads trinity version 2.2.0.\n”
+}
+set	version	2.2.0
+prepend-path	PATH	/global/home/users/makman/src/trinity/trinityrnaseq-2.2.0
