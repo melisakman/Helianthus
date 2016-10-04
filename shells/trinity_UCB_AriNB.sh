@@ -4,7 +4,7 @@
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
 #SBATCH --nodes=1
-#SBATCH --ntasks-per-node=10
+#SBATCH --ntasks-per-node=12
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=256000
 #SBATCH --time=320:00:00
