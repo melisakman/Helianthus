@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH -D /global/home/users/makman/
 #SBATCH -J Trinity
-#SBATCH --user=fc_blackman
+#SBATCH --account=fc_blackman
 #SBATCH --partition=savio_bigmem
 #SBATCH --qos=savio_lowprio
 #SBATCH --nodes=1
