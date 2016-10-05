@@ -6,7 +6,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=12
 #SBATCH --cpus-per-task=4
-#SBATCH --mem=256000
+#SBATCH --mem=128000
 #SBATCH --time=320:00:00
 #SBATCH -o /global/home/users/makman//trinity/outs/trinityAriNBcombined.out
 #SBATCH -e /global/home/users/makman//trinity/outs/trinityAriNBcombined.err
@@ -16,4 +16,4 @@ export MODULEPATH=$MODULEPATH:/global/home/users/makman/modules
 
 module load trinity/2.2.0
 module load bowtie/1.1.1
-Trinity --seqType fq --max_memory 256G --left /global/scratch/makman/AriNB10M_all_1.fq.gz --right /global/scratch/makman/AriNB10M_all_2.fq.gz --CPU 20 --normalize_reads --output trinity_AriNB_combined --full_cleanup
+Trinity --seqType fq --max_memory 128G --left /global/scratch/makman/AriNB10M_all_1.fq.gz --right /global/scratch/makman/AriNB10M_all_2.fq.gz --CPU 12 --normalize_reads --output trinity_AriNB_combined --full_cleanup
