@@ -1,12 +1,12 @@
 #!/bin/bash
 #SBATCH -D /global/home/users/makman/
 #SBATCH -J Trinity
-#SBATCH --account=makman
+#SBATCH --account=co_rosalind
 #SBATCH --partition=savio_bigmem
 #SBATCH --qos=savio_lowprio
 #SBATCH --nodes=1
-#SBATCH --ntasks-per-node=12
-#SBATCH --cpus-per-task=4
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=20
 #SBATCH --mem=512000
 #SBATCH --time=72:00:00
 #SBATCH -o /global/home/users/makman//trinity/outs/trinityAriNBcombined.out
