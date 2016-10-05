@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -D /global/home/users/makman/
+#SBATCH -D /global/scratch/makman/
 #SBATCH -J Trinity
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio_bigmem
@@ -9,8 +9,8 @@
 #SBATCH --cpus-per-task=20
 #SBATCH --mem=512000
 #SBATCH --time=72:00:00
-#SBATCH -o /global/home/users/makman//trinity/outs/trinityAriNBcombined.out
-#SBATCH -e /global/home/users/makman//trinity/outs/trinityAriNBcombined.err
+#SBATCH -o /global/home/users/makman/trinity/outs/trinityAriNBcombined.out
+#SBATCH -e /global/home/users/makman/trinity/outs/trinityAriNBcombined.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 export MODULEPATH=$MODULEPATH:/global/home/users/makman/modules
