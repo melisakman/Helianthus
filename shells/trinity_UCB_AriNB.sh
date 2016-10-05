@@ -6,7 +6,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=12
 #SBATCH --cpus-per-task=4
-#SBATCH --mem=12000
+#SBATCH --mem=1000
 #SBATCH --time=10:00:00
 #SBATCH -o /global/home/users/makman//trinity/outs/trinityAriNBcombined.out
 #SBATCH -e /global/home/users/makman//trinity/outs/trinityAriNBcombined.err
