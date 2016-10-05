@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -D /global/scratch/makman/
+#SBATCH -D /global/scratch/makman/trinity/
 #SBATCH -J Trinity
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio_bigmem
@@ -17,4 +17,4 @@ export MODULEPATH=$MODULEPATH:/global/home/users/makman/modules
 
 module load trinity/2.2.0
 module load bowtie/1.1.1
-Trinity --seqType fq --max_memory 512G --left /global/scratch/makman/AriNB10M_all_1.fq.gz --right /global/scratch/makman/AriNB10M_all_2.fq.gz --CPU 12 --normalize_reads --output trinity_AriNB_combined --full_cleanup
+Trinity --seqType fq --max_memory 512G --left /global/scratch/makman/AriNB10M_all_1.fq.gz --right /global/scratch/makman/AriNB10M_all_2.fq.gz --CPU 20 --normalize_reads --output trinity_AriNB_combined --full_cleanup
