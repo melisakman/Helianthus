@@ -12,5 +12,5 @@
 module load perlnew/5.18.4
 module load gmap/2015-06-23
 module load rsem/1.2.23
-module load trinity/2.0.6
+module load trinity/2.1.1
 Trinity --seqType fq --max_memory 312G --left ../Ari_all_1.fq --right ../Ari_all_2.fq --CPU 64 --normalize_reads --output trinity_Ari_all --full_cleanup

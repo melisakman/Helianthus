@@ -13,8 +13,7 @@
 #SBATCH -e /global/home/users/makman/trinity/outs/trinityAriNBcombined.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-export MODULEPATH=$MODULEPATH:/global/home/users/makman/modules
 
-module load trinity/2.2.0
+module load trinity
 module load bowtie/1.1.1
 Trinity --seqType fq --max_memory 512G --left /global/scratch/makman/AriNB10M_all_1.fq.gz --right /global/scratch/makman/AriNB10M_all_2.fq.gz --CPU 20 --normalize_reads --output trinity_AriNB_combined --full_cleanup
