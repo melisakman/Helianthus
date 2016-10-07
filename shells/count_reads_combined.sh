@@ -3,7 +3,7 @@
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
 #SBATCH --nodes=1
-#SBATCH --cpus-per-task=1
+#SBATCH --cpus-per-task=6
 #SBATCH --time=8:00:00
 #SBATCH -o /global/home/users/makman/trinity/outs/countcombined_reads.out
 #SBATCH -e /global/home/users/makman/trinity/outs/countcombined_reads.err

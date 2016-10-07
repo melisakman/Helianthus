@@ -4,7 +4,7 @@
 #SBATCH --qos=vector_batch
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=6
-#SBATCH --mem=50000
+#SBATCH --mem=96000
 #SBATCH --time=8:00:00
 #SBATCH -o /global/home/users/makman/trinity/outs/gunzipcombined_reads.out
 #SBATCH -e /global/home/users/makman/trinity/outs/gunzipcombined_reads.err
