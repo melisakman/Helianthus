@@ -6,7 +6,7 @@
 #SBATCH --qos=savio_lowprio
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=24
+#SBATCH --cpus-per-task=20
 #SBATCH --mem=512000
 #SBATCH --time=72:00:00
 #SBATCH -o /global/home/users/makman/trinity/outs/trinityAriNBcombined.out
