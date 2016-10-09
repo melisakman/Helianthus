@@ -9,8 +9,8 @@
 #SBATCH --cpus-per-task=20
 #SBATCH --mem=512000
 #SBATCH --time=72:00:00
-#SBATCH -o /global/home/users/makman/trinity/outs/trinityAriNBcombined.out
-#SBATCH -e /global/home/users/makman/trinity/outs/trinityAriNBcombined.err
+#SBATCH -o /global/home/users/makman/trinity/outs/trinityAriNBcombinedsavio.out
+#SBATCH -e /global/home/users/makman/trinity/outs/trinityAriNBcombinedsavio.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load samtools
