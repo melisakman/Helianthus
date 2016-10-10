@@ -16,5 +16,5 @@
 module load trinity
 module load bowtie/1.1.1
 module load samtools
-Trinity --seqType fq --max_memory 256G --left ../AriNB10M_all_1.fq --right ../AriNB10M_all_2.fq --CPU 12 --normalize_reads --output trinity_AriNB_combined --full_cleanup
+Trinity --seqType fq --max_memory 256G --SS_lib_type RF --left ../AriNB10M_all_1.fq --right ../AriNB10M_all_2.fq --CPU 12 --normalize_reads --output trinity_AriNB_combined --full_cleanup
 
