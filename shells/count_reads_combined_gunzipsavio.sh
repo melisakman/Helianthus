@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH -D /global/scratch/makman/
-#SBATCH --partition=vector
+#SBATCH --partition=savio
 #SBATCH --qos=vector_batch
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=6
