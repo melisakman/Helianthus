@@ -13,4 +13,4 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load bowtie/2.2.3
-srun bowtie-build /clusterfs/vector/instrumentData/blackmanlab/Helianthus/XRQ/HanXRQr1.0-20151230.fa HanXRQ
+srun bowtie2-build /clusterfs/vector/instrumentData/blackmanlab/Helianthus/XRQ/HanXRQr1.0-20151230.fa HanXRQ
