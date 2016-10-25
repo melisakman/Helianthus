@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/vector/instrumentData/blackmanlab/blast_databases/
+#SBATCH -D /clusterfs/vector/instrumentData/blackmanlab/Helianthus/blast_databases/
 #SBATCH -J blast
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
