@@ -22,7 +22,3 @@ module load trinity/2.1.1
 module load bowtie2/2.2.5
 
 /share/apps/trinityrnaseq-2.1.1/util/align_and_estimate_abundance.pl --transcripts /home/makman/Helianthus/trinity_AriNB_genomeGuided/Trinity-GG.fasta --seqType fq --left /home/makman/Helianthus/AriNB10M_all_1.fq --right /home/makman/Helianthus/AriNB10M_all_2.fq --est_method RSEM --aln_method bowtie2 --SS_lib_type RF --debug --output_dir /home/makman/Helianthus/RSEM/ --trinity_mode --prep_reference
-
-
-
-
