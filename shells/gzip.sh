@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/vector/instrumentData/blackmanlab/snpEff/results
+#SBATCH -D /clusterfs/vector/scratch/makman/data
 #SBATCH -J gzip
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
@@ -12,4 +12,4 @@
 #SBATCH -e /global/home/users/makman/snpEff/outs/gzip.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-srun gzip *.vcf
+srun gzip *.fq

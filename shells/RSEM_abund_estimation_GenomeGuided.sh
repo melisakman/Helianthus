@@ -8,8 +8,10 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH -p bigmemh
 #SBATCH --ntasks=64
-#SBATCH --mem=50000
-#SBATCH --time=200:00:00
+#SBATCH --nodes=1
+#SBATCH --cpus-per-task=1
+#SBATCH --mem=400000
+#SBATCH --time=400:00:00
 
 module load perlnew/5.18.2
 module load perl/5.18.4 
