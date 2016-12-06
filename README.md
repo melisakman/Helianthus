@@ -12,7 +12,7 @@ SNPeff_database_HA412.sh
 Then I combined the vcf files that had 17 chromosomes separately by using vcf tools. But before merging the columns on the vcf files have to be ordered because they do not seem to be consistent. This is done by with the following script:
 vcftools_shuffleCols.sh
 The merging is done by:
-vcftools_merge.sh
+vcftools_concat.sh
 
 And finally the program is run on this combined file with the script:
 
