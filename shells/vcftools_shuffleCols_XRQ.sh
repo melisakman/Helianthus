@@ -6,8 +6,8 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=6
-#SBATCH --mem=16000
-#SBATCH --time=48:00:00
+#SBATCH --mem=32000
+#SBATCH --time=96:00:00
 #SBATCH -o /global/home/users/makman/snpEff/outs/vcftools_shuffle_XRQ.out
 #SBATCH -e /global/home/users/makman/snpEff/outs/vcftools_shuffle_XRQ.err
 #SBATCH --mail-user=makman@berkeley.edu
