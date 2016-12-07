@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/vector/scratch/makman/HubnerData/complete_chromosomes/
+#SBATCH -D /clusterfs/vector/scratch/makman/complete_chromosomes/
 #SBATCH -J vcfshuffle
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
