@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/vector/scratch/makman/complete_chromosomes/
+#SBATCH -D /clusterfs/vector/scratch/makman/Hubnerdata/
 #SBATCH -J vcfshuffle
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
@@ -15,19 +15,19 @@
 #SBATCH --array=1-16
 module load vcftools/0.1.13
 export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
-srun /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t HanXRQChr01_complete_ordered_norm.vcf.gz HanXRQChr02_complete_ordered_norm.vcf.gz > ordered/HanXRQChr02_complete_ordered_norm.vcf.gz
-srun /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t HanXRQChr01_complete_ordered_norm.vcf.gz HanXRQChr03_complete_ordered_norm.vcf.gz > ordered/HanXRQChr03_complete_ordered_norm.vcf.gz
-srun /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t HanXRQChr01_complete_ordered_norm.vcf.gz HanXRQChr04_complete_ordered_norm.vcf.gz > ordered/HanXRQChr04_complete_ordered_norm.vcf.gz
-srun /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t HanXRQChr01_complete_ordered_norm.vcf.gz HanXRQChr05_complete_ordered_norm.vcf.gz > ordered/HanXRQChr05_complete_ordered_norm.vcf.gz
-srun /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t HanXRQChr01_complete_ordered_norm.vcf.gz HanXRQChr06_complete_ordered_norm.vcf.gz > ordered/HanXRQChr06_complete_ordered_norm.vcf.gz
-srun /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t HanXRQChr01_complete_ordered_norm.vcf.gz HanXRQChr07_complete_ordered_norm.vcf.gz > ordered/HanXRQChr07_complete_ordered_norm.vcf.gz
-srun /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t HanXRQChr01_complete_ordered_norm.vcf.gz HanXRQChr08_complete_ordered_norm.vcf.gz > ordered/HanXRQChr08_complete_ordered_norm.vcf.gz
-srun /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t HanXRQChr01_complete_ordered_norm.vcf.gz HanXRQChr09_complete_ordered_norm.vcf.gz > ordered/HanXRQChr09_complete_ordered_norm.vcf.gz
-srun /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t HanXRQChr01_complete_ordered_norm.vcf.gz HanXRQChr10_complete_ordered_norm.vcf.gz > ordered/HanXRQChr10_complete_ordered_norm.vcf.gz
-srun /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t HanXRQChr01_complete_ordered_norm.vcf.gz HanXRQChr11_complete_ordered_norm.vcf.gz > ordered/HanXRQChr11_complete_ordered_norm.vcf.gz
-srun /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t HanXRQChr01_complete_ordered_norm.vcf.gz HanXRQChr12_complete_ordered_norm.vcf.gz > ordered/HanXRQChr12_complete_ordered_norm.vcf.gz
-srun /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t HanXRQChr01_complete_ordered_norm.vcf.gz HanXRQChr13_complete_ordered_norm.vcf.gz > ordered/HanXRQChr13_complete_ordered_norm.vcf.gz
-srun /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t HanXRQChr01_complete_ordered_norm.vcf.gz HanXRQChr14_complete_ordered_norm.vcf.gz > ordered/HanXRQChr14_complete_ordered_norm.vcf.gz
-srun /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t HanXRQChr01_complete_ordered_norm.vcf.gz HanXRQChr15_complete_ordered_norm.vcf.gz > ordered/HanXRQChr15_complete_ordered_norm.vcf.gz
-srun /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t HanXRQChr01_complete_ordered_norm.vcf.gz HanXRQChr16_complete_ordered_norm.vcf.gz > ordered/HanXRQChr16_complete_ordered_norm.vcf.gz
-srun /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t HanXRQChr01_complete_ordered_norm.vcf.gz HanXRQChr17_complete_ordered_norm.vcf.gz > ordered/HanXRQChr17_complete_ordered_norm.vcf.gz
+srun /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t XRQ.fil.01.vcf.ok.vcf.gz XRQ.fil.02.vcf.ok.vcf.gz > ordered/XRQ_fil_02_ordered_vcf.gz
+srun /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t XRQ.fil.01.vcf.ok.vcf.gz XRQ.fil.03.vcf.ok.vcf.gz > ordered/XRQ_fil_03_ordered_vcf.gz
+srun /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t XRQ.fil.01.vcf.ok.vcf.gz XRQ.fil.04.vcf.ok.vcf.gz > ordered/XRQ_fil_04_ordered_vcf.gz
+srun /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t XRQ.fil.01.vcf.ok.vcf.gz XRQ.fil.05.vcf.ok.vcf.gz > ordered/XRQ_fil_05_ordered_vcf.gz
+srun /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t XRQ.fil.01.vcf.ok.vcf.gz XRQ.fil.06.vcf.ok.vcf.gz > ordered/XRQ_fil_06_ordered_vcf.gz
+srun /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t XRQ.fil.01.vcf.ok.vcf.gz XRQ.fil.07.vcf.ok.vcf.gz > ordered/XRQ_fil_07_ordered_vcf.gz
+srun /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t XRQ.fil.01.vcf.ok.vcf.gz XRQ.fil.08.vcf.ok.vcf.gz > ordered/XRQ_fil_08_ordered_vcf.gz
+srun /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t XRQ.fil.01.vcf.ok.vcf.gz XRQ.fil.09.vcf.ok.vcf.gz > ordered/XRQ_fil_09_ordered_vcf.gz
+srun /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t XRQ.fil.01.vcf.ok.vcf.gz XRQ.fil.10.vcf.ok.vcf.gz > ordered/XRQ_fil_10_ordered_vcf.gz
+srun /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t XRQ.fil.01.vcf.ok.vcf.gz XRQ.fil.11.vcf.ok.vcf.gz > ordered/XRQ_fil_11_ordered_vcf.gz
+srun /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t XRQ.fil.01.vcf.ok.vcf.gz XRQ.fil.12.vcf.ok.vcf.gz > ordered/XRQ_fil_12_ordered_vcf.gz
+srun /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t XRQ.fil.01.vcf.ok.vcf.gz XRQ.fil.13.vcf.ok.vcf.gz > ordered/XRQ_fil_13_ordered_vcf.gz
+srun /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t XRQ.fil.01.vcf.ok.vcf.gz XRQ.fil.14.vcf.ok.vcf.gz > ordered/XRQ_fil_14_ordered_vcf.gz
+srun /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t XRQ.fil.01.vcf.ok.vcf.gz XRQ.fil.15.vcf.ok.vcf.gz > ordered/XRQ_fil_15_ordered_vcf.gz
+srun /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t XRQ.fil.01.vcf.ok.vcf.gz XRQ.fil.16.vcf.ok.vcf.gz > ordered/XRQ_fil_16_ordered_vcf.gz
+srun /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t XRQ.fil.01.vcf.ok.vcf.gz XRQ.fil.17.vcf.ok.vcf.gz > ordered/XRQ_fil_17_ordered_vcf.gz
