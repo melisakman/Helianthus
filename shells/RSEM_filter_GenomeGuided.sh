@@ -17,5 +17,5 @@ module load R/3.1.2
 module load rsem/1.2.23
 module load trinity/2.1.1
 
-/share/apps/trinityrnaseq-2.1.1/util/filter_fasta_by_rsem_values.pl --rsem_output=/home/makman/Helianthus/RSEM/RSEM.isoforms.results --fasta=/home/makman/Helianthus/trinity_AriNB_genomeGuided/Trinity-GG.fasta --output=/home/makman/Helianthus/filtered/trinity_AriNB_GenGuided_Trinity_filtered.fasta --filtered_output=/home/makman/Helianthus/filtered/trinity_AriNB_GenGuided_Trinity_filteredout.fasta --tpm_cutoff=0.04 --isopct_cutoff=10.00
+/share/apps/trinityrnaseq-2.1.1/util/filter_fasta_by_rsem_values.pl --rsem_output=/home/makman/Helianthus/RSEM/RSEM.isoforms.results --fasta=/home/makman/Helianthus/trinity_AriNB_genomeGuided/Trinity-GG.fasta --output=/home/makman/Helianthus/trinity_AriNB_genomeGuided/filtered/trinity_AriNB_GenGuided_Trinity_filtered.fasta --filtered_output=/home/makman/Helianthus/trinity_AriNB_genomeGuided/filtered/trinity_AriNB_GenGuided_Trinity_filteredout.fasta --tpm_cutoff=0.03 --isopct_cutoff=10.00
 

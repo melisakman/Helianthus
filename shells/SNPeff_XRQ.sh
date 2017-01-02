@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/vector/scratch/makman/snpEff/
+#SBATCH -D /clusterfs/vector/scratch/makman/snpEff/data/
 #SBATCH -J snpEff
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
@@ -13,4 +13,4 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load java
-srun java -Xmx8g -jar ./snpEff.jar -stats ./XRQ/combined_XRQ.html XRQ ./XRQ/XRQ_fil_ordered_combined_vcf.gz > ./XRQ/XRQ_fil_ordered_combined_snpeff_vcf.gz
+srun java -Xmx8g -jar ./snpEff.jar -stats ../XRQ/combined_XRQ.html XRQ ./XRQ/XRQ_fil_ordered_combined_vcf.gz > ./XRQ/XRQ_fil_ordered_combined_snpeff_vcf.gz

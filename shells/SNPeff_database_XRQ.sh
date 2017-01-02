@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /global/home/users/makman/snpEff/data/
+#SBATCH -D /global/home/users/makman/snpEff/
 #SBATCH -J snpEff
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
@@ -13,4 +13,4 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load java
-srun java -jar /global/home/users/makman/snpEff/snpEff.jar build -gff3 -v XRQ
+srun java -jar /global/home/users/makman/snpEff/snpEff/snpEff.jar build -gff3 -v XRQ
