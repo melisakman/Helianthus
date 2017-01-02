@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /global/home/users/makman/snpEff/
+#SBATCH -D /global/home/users/makman/snpEff/snpEff/
 #SBATCH -J snpEff
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
