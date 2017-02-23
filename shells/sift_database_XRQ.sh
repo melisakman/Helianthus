@@ -12,5 +12,4 @@
 #SBATCH -e /global/home/users/makman/sift/outs/sift_database_XRQ.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-module load perl
 srun perl /clusterfs/vector/scratch/makman/sift/scripts_to_build_SIFT_db/make-SIFT-db-all.pl -config ./Helianthus_config.txt
