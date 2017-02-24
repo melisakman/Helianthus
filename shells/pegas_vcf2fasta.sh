@@ -13,4 +13,4 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load python
-srun python ./vcf2FASTA.py -v /clusterfs/vector/scratch/makman/snpEff/vcf/*.vcf -o HanXRQChr01.fasta -c HanXRQChr01
+srun python ./vcf2FASTA.py -v /clusterfs/vector/scratch/makman/snpEff/vcf/XRQ_fil_ordered_combined_vcf.gz -g -o HanXRQChr01.fasta -c HanXRQChr01
