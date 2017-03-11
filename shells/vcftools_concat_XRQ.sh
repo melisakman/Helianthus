@@ -6,7 +6,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=6
-#SBATCH --mem=16000
+#SBATCH --mem=64000
 #SBATCH --time=48:00:00
 #SBATCH -o /global/home/users/makman/snpEff/outs/vcftools_merge_XRQ.out
 #SBATCH -e /global/home/users/makman/snpEff/outs/vcftools_merge_XRQ.err
