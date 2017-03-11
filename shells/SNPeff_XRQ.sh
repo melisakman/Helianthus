@@ -13,4 +13,4 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load java
-srun java -Xmx8g -jar ./snpEff.jar -stats ./results/combined_XRQ_stats.html XRQ ./vcf/XRQ_fil_ordered_combined_vcf.gz > ./results/XRQ_fil_ordered_combined_snpeff_vcf.gz
+srun java -Xmx8g -jar ./snpEff.jar -stats ./results/combined_XRQ_stats.html XRQ ./vcf/XRQ_fil_ordered_combined.vcf.gz > ./results/XRQ_fil_ordered_combined_snpeff.vcf.gz
