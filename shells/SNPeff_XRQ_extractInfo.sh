@@ -8,9 +8,9 @@
 #SBATCH --cpus-per-task=6
 #SBATCH --mem=64000
 #SBATCH --time=16:00:00
-#SBATCH -o /global/home/users/makman/snpEff/outs/snpEff_XRQ_extractCandidates.out
-#SBATCH -e /global/home/users/makman/snpEff/outs/snpEff_XRQ_extractCandidates.err
+#SBATCH -o /global/home/users/makman/snpEff/outs/snpEff_XRQ_extractCandidates_pi.out
+#SBATCH -e /global/home/users/makman/snpEff/outs/snpEff_XRQ_extractCandidates_pi.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load python
-python ./extract_info_candidates.py XRQ_fil_ordered_combined_snpeff_noHeader.vcf ./genes.txt
+python ./extract_info_candidates.py XRQ_fil_ordered_combined_snpeff_noHeader.vcf ./genes_pi.txt
