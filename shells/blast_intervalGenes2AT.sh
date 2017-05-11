@@ -13,4 +13,4 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load blast/2.2.30
-srun blastx -query /global/home/users/makman/blast/intervalGenes_seqs_CDs.fasta -db /clusterfs/vector/instrumentData/blackmanlab/Helianthus/blast_databases/TAIR10_pep_20101214 -outfmt "7 qseqid qlen sseqid slen qstart qend sstart send evalue bitscore score length pident nident mismatch positive gapopen gaps" -out /global/home/users/makman/blast/bedtoolsOverlaps/intervalGenes2AT.txt
+srun blastx -query /global/home/users/makman/blast/bedtoolsOverlaps/intervalGenes_seqs_CDs.fasta -db /clusterfs/vector/instrumentData/blackmanlab/Helianthus/blast_databases/TAIR10_pep_20101214 -outfmt "7 qseqid qlen sseqid slen qstart qend sstart send evalue bitscore score length pident nident mismatch positive gapopen gaps" -out /global/home/users/makman/blast/bedtoolsOverlaps/intervalGenes2AT.txt
