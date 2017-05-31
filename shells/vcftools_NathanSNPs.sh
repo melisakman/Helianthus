@@ -4,10 +4,6 @@
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio
 #SBATCH --qos=rosalind_savio_normal
-#SBATCH --nodes=1
-#SBATCH --ntasks=1
-#SBATCH --cpus-per-task=6
-#SBATCH --mem=16000
 #SBATCH --time=48:00:00
 #SBATCH -o /global/scratch/makman/Nathan_vcf/outs/vcftools_NathanSNPs.out
 #SBATCH -e /global/scratch/makman/Nathan_vcf/outs/vcftools_NathanSNPs.err
