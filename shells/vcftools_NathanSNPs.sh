@@ -2,8 +2,8 @@
 #SBATCH -D /global/scratch/makman/Nathan_vcf/
 #SBATCH -J vcfsweep
 #SBATCH --account=co_rosalind
-#SBATCH --partition=savio
-#SBATCH --qos=rosalind_savio_normal
+#SBATCH --partition=savio2_htc
+#SBATCH --qos=rosalind_htc2_normal
 #SBATCH --time=48:00:00
 #SBATCH -o /global/scratch/makman/Nathan_vcf/outs/vcftools_NathanSNPs.out
 #SBATCH -e /global/scratch/makman/Nathan_vcf/outs/vcftools_NathanSNPs.err
