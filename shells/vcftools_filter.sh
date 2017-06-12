@@ -10,7 +10,7 @@
 #SBATCH --mem=32000
 #SBATCH --time=48:00:00
 #SBATCH -o /global/home/users/makman/vcftools/outs/vcftools_filter.out
-#SBATCH -e /global/home/users/makman/vcftools/outs/vcftools_filter.out
+#SBATCH -e /global/home/users/makman/vcftools/outs/vcftools_filter.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 #SBATCH --array=1-6
