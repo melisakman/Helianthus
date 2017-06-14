@@ -1,9 +1,8 @@
 #!/bin/bash 
 #SBATCH -D /global/scratch/makman/HubnerData/vcf/
 #SBATCH -J vcfsweep
-#SBATCH --account=co_rosalind
-#SBATCH --partition=savio2_htc
-#SBATCH --qos=rosalind_htc2_normal
+#SBATCH --partition=vector
+#SBATCH --qos=vector_batch
 #SBATCH --time=48:00:00
 #SBATCH -o /global/home/users/makman/vcftools/outs/vcftools_MAF_filter.out
 #SBATCH -e /global/home/users/makman/vcftools/outs/vcftools_MAF_filter.err
