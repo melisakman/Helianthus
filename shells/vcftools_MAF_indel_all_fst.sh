@@ -1,8 +1,9 @@
 #!/bin/bash 
 #SBATCH -D /global/scratch/makman/HubnerData/vcf/new_filtering/vcf/
 #SBATCH -J vcffst
-#SBATCH --partition=vector
-#SBATCH --qos=vector_batch
+#SBATCH --account=co_rosalind
+#SBATCH --partition=savio2_htc
+#SBATCH --qos=rosalind_htc2_normal
 #SBATCH --time=48:00:00
 #SBATCH -o /global/home/users/makman/vcftools/outs/vcftools_MAF_indel_all_fst.out
 #SBATCH -e /global/home/users/makman/vcftools/outs/vcftools_MAF_indel_all_fst.err
