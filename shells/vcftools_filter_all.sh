@@ -7,7 +7,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=6
-#SBATCH --mem=32000
+#SBATCH --mem=48000
 #SBATCH --time=72:00:00
 #SBATCH -o /global/home/users/makman/vcftools/outs/vcftools_filter_all_10.out
 #SBATCH -e /global/home/users/makman/vcftools/outs/vcftools_filter_all_10.err
@@ -22,7 +22,7 @@ module load gcc/4.8.5
 # zcat ./HanXRQChr06_complete_ordered_norm.vcf.gz | /global/scratch/makman/bcftools/bcftools filter -g 5 -e 'REF="N"'| /global/scratch/makman/vcflib/bin/vcffilter -f "QUAL > 50 & SAF > 1 & SAR > 1 & RPR > 1 & RPL > 1" | vcftools --gzvcf - --maf 0.01 --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | vcf-sort | gzip -c > HanXRQChr06_complete_ordered_norm_maf_filt_indel_in.vcf.gz
 # zcat ./HanXRQChr07_complete_ordered_norm.vcf.gz | /global/scratch/makman/bcftools/bcftools filter -g 5 -e 'REF="N"'| /global/scratch/makman/vcflib/bin/vcffilter -f "QUAL > 50 & SAF > 1 & SAR > 1 & RPR > 1 & RPL > 1" | vcftools --gzvcf - --maf 0.01 --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | vcf-sort | gzip -c > HanXRQChr07_complete_ordered_norm_maf_filt_indel_in.vcf.gz
 # zcat ./HanXRQChr08_complete_ordered_norm.vcf.gz | /global/scratch/makman/bcftools/bcftools filter -g 5 -e 'REF="N"'| /global/scratch/makman/vcflib/bin/vcffilter -f "QUAL > 50 & SAF > 1 & SAR > 1 & RPR > 1 & RPL > 1" | vcftools --gzvcf - --maf 0.01 --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | vcf-sort | gzip -c > HanXRQChr08_complete_ordered_norm_maf_filt_indel_in.vcf.gz
-# zcat ./HanXRQChr09_complete_ordered_norm.vcf.gz | /global/scratch/makman/bcftools/bcftools filter -g 5 -e 'REF="N"'| /global/scratch/makman/vcflib/bin/vcffilter -f "QUAL > 50 & SAF > 1 & SAR > 1 & RPR > 1 & RPL > 1" | vcftools --gzvcf - --maf 0.01 --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | vcf-sort | gzip -c > HanXRQChr09_complete_ordered_norm_maf_filt_indel_in.vcf.gz
+zcat ./HanXRQChr09_complete_ordered_norm.vcf.gz | /global/scratch/makman/bcftools/bcftools filter -g 5 -e 'REF="N"'| /global/scratch/makman/vcflib/bin/vcffilter -f "QUAL > 50 & SAF > 1 & SAR > 1 & RPR > 1 & RPL > 1" | vcftools --gzvcf - --maf 0.01 --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | vcf-sort | gzip -c > HanXRQChr09_complete_ordered_norm_maf_filt_indel_in.vcf.gz
 zcat ./HanXRQChr10_complete_ordered_norm.vcf.gz | /global/scratch/makman/bcftools/bcftools filter -g 5 -e 'REF="N"'| /global/scratch/makman/vcflib/bin/vcffilter -f "QUAL > 50 & SAF > 1 & SAR > 1 & RPR > 1 & RPL > 1" | vcftools --gzvcf - --maf 0.01 --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | vcf-sort | gzip -c > ../new_filtering/HanXRQChr10_complete_ordered_norm_maf_filt_indel_in.vcf.gz
 # zcat ./HanXRQChr11_complete_ordered_norm.vcf.gz | /global/scratch/makman/bcftools/bcftools filter -g 5 -e 'REF="N"'| /global/scratch/makman/vcflib/bin/vcffilter -f "QUAL > 50 & SAF > 1 & SAR > 1 & RPR > 1 & RPL > 1" | vcftools --gzvcf - --maf 0.01 --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | vcf-sort | gzip -c > HanXRQChr11_complete_ordered_norm_maf_filt_indel_in.vcf.gz
 # zcat ./HanXRQChr12_complete_ordered_norm.vcf.gz | /global/scratch/makman/bcftools/bcftools filter -g 5 -e 'REF="N"'| /global/scratch/makman/vcflib/bin/vcffilter -f "QUAL > 50 & SAF > 1 & SAR > 1 & RPR > 1 & RPL > 1" | vcftools --gzvcf - --maf 0.01 --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | vcf-sort | gzip -c > HanXRQChr12_complete_ordered_norm_maf_filt_indel_in.vcf.gz
