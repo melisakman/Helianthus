@@ -4,10 +4,10 @@
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio
 #SBATCH --qos=rosalind_savio_normal
-#SBATCH --nodes=1
+#SBATCH --nodes=2
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=6
-#SBATCH --mem=54000
+#SBATCH --mem=96000
 #SBATCH --time=72:00:00
 #SBATCH -o /global/home/users/makman/vcftools/outs/vcftools_filter_all_10.out
 #SBATCH -e /global/home/users/makman/vcftools/outs/vcftools_filter_all_10.err
