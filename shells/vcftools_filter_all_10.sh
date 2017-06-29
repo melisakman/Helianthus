@@ -3,9 +3,6 @@
 #SBATCH -J vcfFilter
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
-#SBATCH --nodes=2
-#SBATCH --ntasks=2
-#SBATCH --cpus-per-task=16
 #SBATCH --mem=96000
 #SBATCH --time=10:00:00
 #SBATCH -o /global/home/users/makman/vcftools/outs/vcftools_filter_all_10_sort.out
