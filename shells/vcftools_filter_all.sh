@@ -5,7 +5,7 @@
 #SBATCH --partition=savio
 #SBATCH --qos=rosalind_savio_normal
 #SBATCH --nodes=2
-#SBATCH --ntasks=1
+#SBATCH --ntasks=2
 #SBATCH --cpus-per-task=16
 #SBATCH --mem=64000
 #SBATCH --time=10:00:00
