@@ -7,7 +7,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=6
-#SBATCH --mem=84000
+#SBATCH --mem=72000
 #SBATCH --time=72:00:00
 #SBATCH -o /global/home/users/makman/vcftools/outs/vcftools_filter_all_10.out
 #SBATCH -e /global/home/users/makman/vcftools/outs/vcftools_filter_all_10.err
