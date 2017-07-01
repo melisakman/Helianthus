@@ -14,4 +14,4 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load java
-srun java -Xmx8g -jar /clusterfs/vector/scratch/makman/snpEff/snpEff.jar -stats /clusterfs/vector/scratch/makman/snpEff/results/combined_XRQ_new_filtering_stats.html XRQ /global/scratch/makman/HubnerData/vcf/new_filtering/vcf/XRQ_combined_new_filtering.vcf.gz > /global/scratch/makman/HubnerData/vcf/new_filtering/vcf/XRQ_combined_new_filtering_snpeff.vcf.gz
+java -Xmx8g -jar /clusterfs/vector/scratch/makman/snpEff/snpEff.jar -stats /clusterfs/vector/scratch/makman/snpEff/results/combined_XRQ_new_filtering_stats.html XRQ /global/scratch/makman/HubnerData/vcf/new_filtering/vcf/XRQ_combined_new_filtering.vcf.gz > /global/scratch/makman/HubnerData/vcf/new_filtering/vcf/XRQ_combined_new_filtering_snpeff.vcf.gz
