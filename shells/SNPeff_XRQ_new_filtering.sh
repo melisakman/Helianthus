@@ -1,9 +1,8 @@
 #!/bin/bash 
-#SBATCH -D /global/scratch/makman/HubnerData/vcf/new_filtering/vcf/
+#SBATCH -D /clusterfs/vector/scratch/makman/snpEff/
 #SBATCH -J snpEff
-#SBATCH --account=co_rosalind
-#SBATCH --partition=savio
-#SBATCH --qos=rosalind_savio_normal
+#SBATCH --partition=vector
+#SBATCH --qos=vector_batch
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=6
