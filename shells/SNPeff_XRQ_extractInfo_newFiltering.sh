@@ -13,4 +13,4 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load python
-python ./extract_info_candidates.py ../vcf/XRQ_combined_new_filtering_snpeff.vcf.gz ./newFilteringGenes.txt
+python ./extract_info_candidates.py ../vcf/XRQ_combined_new_filtering_snpeff.vcf ./newFilteringGenes.txt
