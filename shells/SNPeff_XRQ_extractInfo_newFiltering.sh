@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/vector/scratch/makman/snpEff/results/
+#SBATCH -D /clusterfs/vector/scratch/makman/snpEff/vcf/
 #SBATCH -J snpEff
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
@@ -8,9 +8,8 @@
 #SBATCH --cpus-per-task=6
 #SBATCH --mem=16000
 #SBATCH --time=16:00:00
-#SBATCH -o /global/home/users/makman/snpEff/outs/snpEff_XRQ_extractCandidates_newFiltering.out
-#SBATCH -e /global/home/users/makman/snpEff/outs/snpEff_XRQ_extractCandidates_newFiltering.err
+#SBATCH -o /global/home/users/makman/snpEff/outs/snpEff_XRQ_extractCandidates_newFiltering_cp.out
+#SBATCH -e /global/home/users/makman/snpEff/outs/snpEff_XRQ_extractCandidates_newFiltering_cp.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-module load python
-python ./extract_info_candidates_newFiltering.py ../vcf/XRQ_combined_new_filtering_snpeff_noHeader.vcf ./newFilteringGenes.txt
+cp XRQ_combined_new_filtering_snpeff.vcf XRQ_combined_new_filtering_snpeff_noHeader.vcf 
