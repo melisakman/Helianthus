@@ -1,4 +1,5 @@
-#!/bin/bash #SBATCH -D /clusterfs/vector/scratch/makman/Hubnerdata/newFiltering
+#!/bin/bash 
+#SBATCH -D /clusterfs/vector/scratch/makman/Hubnerdata/newFiltering/
 #SBATCH -J vcfMerge
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
