@@ -12,4 +12,4 @@
 #SBATCH -e /global/home/users/makman/snpEff/outs/snpEff_XRQ_extractCandidates_newFiltering_cp.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-cp XRQ_combined_new_filtering_snpeff.vcf XRQ_combined_new_filtering_snpeff_noHeader.vcf 
+tail -n  20417470 XRQ_combined_new_filtering_snpeff.vcf > XRQ_combined_new_filtering_snpeff_noHeader.vcf 
