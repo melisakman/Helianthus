@@ -8,8 +8,8 @@
 #SBATCH --cpus-per-task=6
 #SBATCH --mem=16000
 #SBATCH --time=48:00:00
-#SBATCH -o /global/home/users/makman/snpEff/outs/ancestry_new_filtering.out
-#SBATCH -e /global/home/users/makman/snpEff/outs/ancestry_new_filtering.err
+#SBATCH -o /clusterfs/vector/scratch/makman/ancestry/outs/ancestry_new_filtering.out
+#SBATCH -e /clusterfs/vector/scratch/makman/ancestry/outs/ancestry_new_filtering.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load python
