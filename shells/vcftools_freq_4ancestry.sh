@@ -15,5 +15,5 @@
 
 module load vcftools/0.1.13
 
-vcftools --gzvcf /clusterfs/vector/scratch/makman/Hubnerdata/XRQ.fil.01.vcf.ok.vcf --freq --keep /global/scratch/makman/HubnerData/vcf/new_filtering/vcf/wd_list.txt --out chr1_wild_freq
+vcftools --gzvcf /clusterfs/vector/scratch/makman/Hubnerdata/XRQ.fil.01.vcf.ok.vcf --freq --keep ./wd_list.txt --out chr1_wild_freq
 
