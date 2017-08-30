@@ -1,10 +1,13 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/vector/scratch/makman/ancestry/
 #SBATCH -J vcffreq
-#SBATCH --account=co_rosalind
-#SBATCH --partition=savio2_htc
-#SBATCH --qos=rosalind_htc2_normal
-#SBATCH --time=48:00:00
+#SBATCH --partition=vector
+#SBATCH --qos=vector_batch
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=6
+#SBATCH --mem=2000
+#SBATCH --time=5:00:00
 #SBATCH -o /clusterfs/vector/scratch/makman/ancestry/outs/vcftools_freq.out
 #SBATCH -e /clusterfs/vector/scratch/makman/ancestry/outs/vcftools_freq.err
 #SBATCH --mail-user=makman@berkeley.edu
