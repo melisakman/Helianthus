@@ -1,6 +1,6 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/vector/scratch/makman/ancestry/
-#SBATCH -J vcfMerge
+#SBATCH -J ancestry
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
 #SBATCH --nodes=1
