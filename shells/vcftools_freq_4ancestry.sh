@@ -15,5 +15,5 @@
 
 module load vcftools/0.1.13
 
-vcftools --gzvcf /clusterfs/vector/scratch/makman/Hubnerdata/newFiltering/HanXRQChr01_complete_ordered_norm_maf_filt_indel_in.vcf --freq --out chr1_freq
+vcftools --gzvcf /clusterfs/vector/scratch/makman/Hubnerdata/XRQ.fil.01.vcf.ok.vcf --freq --out chr1_freq
 
