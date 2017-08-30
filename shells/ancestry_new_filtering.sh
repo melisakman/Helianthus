@@ -6,8 +6,8 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=6
-#SBATCH --mem=16000
-#SBATCH --time=48:00:00
+#SBATCH --mem=2000
+#SBATCH --time=5:00:00
 #SBATCH -o /clusterfs/vector/scratch/makman/ancestry/outs/ancestry_new_filtering.out
 #SBATCH -e /clusterfs/vector/scratch/makman/ancestry/outs/ancestry_new_filtering.err
 #SBATCH --mail-user=makman@berkeley.edu
