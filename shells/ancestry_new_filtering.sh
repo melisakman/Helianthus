@@ -15,7 +15,7 @@
 module load python
 
 
-python ./ancestry_informative.py /clusterfs/vector/scratch/makman/Hubnerdata/newFiltering/HanXRQChr01_complete_ordered_norm_maf_filt_indel_in.vcf.gz results/ancestry_chr01.txt
+python ./ancestry_informative.py /clusterfs/vector/scratch/makman/Hubnerdata/newFiltering/HanXRQChr01_complete_ordered_norm_maf_filt_indel_in.vcf results/ancestry_chr01.txt
 # python ./ancestry_informative.py /clusterfs/vector/scratch/makman/Hubnerdata/newFiltering/HanXRQChr02_complete_ordered_norm_maf_filt_indel_in_ordered.vcf.gz results/ancestry_chr02.txt
 # python ./ancestry_informative.py /clusterfs/vector/scratch/makman/Hubnerdata/newFiltering/HanXRQChr03_complete_ordered_norm_maf_filt_indel_in_ordered.vcf.gz results/ancestry_chr03.txt
 # python ./ancestry_informative.py /clusterfs/vector/scratch/makman/Hubnerdata/newFiltering/HanXRQChr04_complete_ordered_norm_maf_filt_indel_in_ordered.vcf.gz results/ancestry_chr04.txt
