@@ -1,9 +1,8 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/vector/instrumentData/blackmanlab/Helianthus/vcf/Sariel_new_variant_calling
 #SBATCH -J vcfFilter
-#SBATCH --account=co_rosalind
-#SBATCH --partition=savio
-#SBATCH --qos=rosalind_savio_normal
+#SBATCH --partition=vector
+#SBATCH --qos=vector_batch
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=16
