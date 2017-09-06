@@ -12,7 +12,7 @@
 #SBATCH -e /global/home/users/makman/vcftools/outs/vcftools_new_variant_calling_filter01_2.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-#SBATCH --array=1-17
+#SBATCH --array=1-9
 module load vcftools/0.1.13
 module load gcc/4.8.5 
 zcat ./chr09.vcf.gz | /clusterfs/vector/scratch/makman/bcftools/bcftools filter -g 5 -e 'REF="N"'| /clusterfs/vector/scratch/makman/vcflib/bin/vcffilter -f "QUAL > 50 & SAF > 1 & SAR > 1 & RPR > 1 & RPL > 1" | vcftools --gzvcf - --maf 0.01 --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | gzip -c > /clusterfs/vector/scratch/makman/Hubnerdata/Sariel_new_variant_calling/filtered/HanXRQChr09_filter01.vcf.gz
