@@ -33,4 +33,3 @@ python /clusterfs/vector/scratch/makman/ancestry/ancestry_informative_from_vcf_d
 python /clusterfs/vector/scratch/makman/ancestry/ancestry_informative_from_vcf_dataStructure.py HanXRQChr16_complete_ordered_norm_maf_filt_indel_in_ordered.vcf /clusterfs/vector/scratch/makman/ancestry/results/dataStructure/HanXRQChr16_ancestry_dataStructure.txt
 python /clusterfs/vector/scratch/makman/ancestry/ancestry_informative_from_vcf_dataStructure.py HanXRQChr17_complete_ordered_norm_maf_filt_indel_in_ordered.vcf /clusterfs/vector/scratch/makman/ancestry/results/dataStructure/HanXRQChr17_ancestry_dataStructure.txt
 
-
