@@ -1,6 +1,6 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/vector/scratch/makman/Hubnerdata/newFiltering/
-#SBATCH -J vcfFilter
+#SBATCH -J ancestry
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
 #SBATCH --ntasks=1
