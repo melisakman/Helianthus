@@ -3,9 +3,8 @@
 #SBATCH -J vcfFilter
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
-#SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=16
+#SBATCH --cpus-per-task=4
 #SBATCH --mem=18000
 #SBATCH --time=48:00:00
 #SBATCH -o /clusterfs/vector/scratch/makman/ancestry/outs/ancestry_dataStructure.out
