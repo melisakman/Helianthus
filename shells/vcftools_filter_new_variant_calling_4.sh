@@ -8,8 +8,8 @@
 #SBATCH --cpus-per-task=16
 #SBATCH --mem=12000
 #SBATCH --time=12:00:00
-#SBATCH -o /global/home/users/makman/vcftools/outs/vcftools_new_variant_calling_filter01_2.out
-#SBATCH -e /global/home/users/makman/vcftools/outs/vcftools_new_variant_calling_filter01_2.err
+#SBATCH -o /global/home/users/makman/vcftools/outs/vcftools_new_variant_calling_filter01_4.out
+#SBATCH -e /global/home/users/makman/vcftools/outs/vcftools_new_variant_calling_filter01_4.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 #SBATCH --array=1-5
