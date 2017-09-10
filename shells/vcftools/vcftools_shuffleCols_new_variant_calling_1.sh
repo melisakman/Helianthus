@@ -3,6 +3,7 @@
 #SBATCH -J vcfshuffle
 #SBATCH --partition=vector
 #SBATCH --mem=12000
+#SBATCH --qos=vector_batch
 #SBATCH --time=12:00:00
 #SBATCH -o /global/home/users/makman/vcftools/outs/vcftools_new_variant_calling_filter01_order1.out
 #SBATCH -e /global/home/users/makman/vcftools/outs/vcftools_new_variant_calling_filter01_order1.err
