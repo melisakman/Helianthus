@@ -12,7 +12,7 @@
 #SBATCH -e /global/home/users/makman/vcftools/outs/vcftools_new_variant_calling_filter01_order.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-#SBATCH --array=1-16
+#SBATCH --array=1-4
 module load vcftools/0.1.13
 export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
 /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t HanXRQChr01_filter01.vcf.gz HanXRQChr02_filter01.vcf.gz > ordered/HanXRQChr02_filter01_ordered.vcf.gz
