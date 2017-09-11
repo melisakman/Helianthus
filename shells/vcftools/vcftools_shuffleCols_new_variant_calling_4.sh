@@ -3,13 +3,13 @@
 #SBATCH -J vcfshuffle
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
-#SBATCH --mem=12000
-#SBATCH --time=12:00:00
-#SBATCH -o /global/home/users/makman/vcftools/outs/vcftools_new_variant_calling_filter01_order4.out
-#SBATCH -e /global/home/users/makman/vcftools/outs/vcftools_new_variant_calling_filter01_order4.err
+#SBATCH --mem=24000
+#SBATCH --time=24:00:00
+#SBATCH -o /global/home/users/makman/vcftools/outs/vcftools_new_variant_calling_filter01_order4_15.out
+#SBATCH -e /global/home/users/makman/vcftools/outs/vcftools_new_variant_calling_filter01_order4_15.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-#SBATCH --array=1-4
+#SBATCH --array=1-1
 module load vcftools/0.1.13
 export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
 # /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t HanXRQChr01_filter01.vcf.gz HanXRQChr02_filter01.vcf.gz > ordered/HanXRQChr02_filter01_ordered.vcf.gz
@@ -24,7 +24,7 @@ export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcfto
 # /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t HanXRQChr01_filter01.vcf.gz HanXRQChr11_filter01.vcf.gz > ordered/HanXRQChr11_filter01_ordered.vcf.gz
 # /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t HanXRQChr01_filter01.vcf.gz HanXRQChr12_filter01.vcf.gz > ordered/HanXRQChr12_filter01_ordered.vcf.gz
 # /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t HanXRQChr01_filter01.vcf.gz HanXRQChr13_filter01.vcf.gz > ordered/HanXRQChr13_filter01_ordered.vcf.gz
-/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t HanXRQChr01_filter01.vcf.gz HanXRQChr14_filter01.vcf.gz > ordered/HanXRQChr14_filter01_ordered.vcf.gz
-/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t HanXRQChr01_filter01.vcf.gz HanXRQChr15_filter01.vcf.gz > ordered/HanXRQChr15_filter01_ordered.vcf.gz
-/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t HanXRQChr01_filter01.vcf.gz HanXRQChr16_filter01.vcf.gz > ordered/HanXRQChr16_filter01_ordered.vcf.gz
-/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t HanXRQChr01_filter01.vcf.gz HanXRQChr17_filter01.vcf.gz > ordered/HanXRQChr17_filter01_ordered.vcf.gz
+# /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t HanXRQChr01_filter01.vcf.gz HanXRQChr14_filter01.vcf.gz > ordered/HanXRQChr14_filter01_ordered.vcf.gz
+/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t HanXRQChr01_filter01.vcf.gz HanXRQChr15_filter01.vcf.gz > ordered/HanXRQChr15_filter01_ordered.vcf
+# /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t HanXRQChr01_filter01.vcf.gz HanXRQChr16_filter01.vcf.gz > ordered/HanXRQChr16_filter01_ordered.vcf.gz
+# /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t HanXRQChr01_filter01.vcf.gz HanXRQChr17_filter01.vcf.gz > ordered/HanXRQChr17_filter01_ordered.vcf.gz
