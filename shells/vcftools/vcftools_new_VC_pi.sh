@@ -1,9 +1,8 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/vector/scratch/makman/Hubnerdata/Sariel_new_variant_calling/filtered/ordered
 #SBATCH -J vcffst
-#SBATCH --account=co_rosalind
-#SBATCH --partition=savio2_htc
-#SBATCH --qos=rosalind_htc2_normal
+#SBATCH --partition=vector
+#SBATCH --qos=vector_batch
 #SBATCH --time=48:00:00
 #SBATCH -o /global/home/users/makman/vcftools/outs/vcftools_new_VC_pi.out
 #SBATCH -e /global/home/users/makman/vcftools/outs/vcftools_new_VC_pi.err
