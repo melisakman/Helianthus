@@ -13,4 +13,4 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
-cat /clusterfs/vector/scratch/makman/snpEff/vcf/HanXRQ_filtered_ordered_newVC_snpeff.vcf | gzip > ../
+cat /clusterfs/vector/scratch/makman/snpEff/vcf/HanXRQ_filtered_ordered_newVC_snpeff.vcf | gzip > ../HanXRQ_filtered_ordered_newVC_snpeff.vcf.gz
