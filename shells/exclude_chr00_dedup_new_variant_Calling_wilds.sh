@@ -5,6 +5,7 @@
 #SBATCH -D /clusterfs/vector/scratch/makman/haplotype_networks/bams/
 #SBATCH --nodes=1
 #SBATCH --time=16:00:00
+#SBATCH --mem=32000
 #SBATCH -o ../outs/filter_dedup_new_VC_bams.out
 #SBATCH -e ../outs/filter_dedup_new_VC_bams.err
 #SBATCH --mail-user=makman@berkeley.edu
