@@ -13,7 +13,7 @@
 
 module load samtools/1.3.1
 
-srun samtools view -b HT013_SD2W-18.sort.dup.realign.bam HanXRQChr01 | samtools rmdup -S > HT013_SD2W-18.sort.dup.realign_nochr00_dedup.bam
+srun samtools view -b HT013_SD2W-18.sort.dup.realign.bam ./chr_regions.txt HT013_SD2W-18.sort.dup.realign_nochr00.bam
 
 # srun samtools view HT172_SK1W-Q.sort.dup.realign.bam chr_regions.txt > HT172_SK1W-Q.sort.dup.realign_nochr00_dedup.bam
 # srun samtools view HT211_MO1W-39.sort.dup.realign.bam -R chr_regions.txt -b rmdup -S > HT211_MO1W-39.sort.dup.realign_nochr00_dedup.bam
