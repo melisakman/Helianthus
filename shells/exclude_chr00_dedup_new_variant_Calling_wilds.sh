@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=filter-dedup
-#SBATCH --account=fc_blackman
 #SBATCH --partition=vector
+#SBATCH --qos=vector_batch
 #SBATCH -D /clusterfs/vector/scratch/makman/haplotype_networks/bams/
 #SBATCH --nodes=1
 #SBATCH --time=16:00:00
