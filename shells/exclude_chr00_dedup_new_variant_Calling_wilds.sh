@@ -13,10 +13,9 @@
 
 module load samtools/1.3.1
 
-srun samtools view HT013_SD2W-18.sort.dup.realign.bam HanXRQChr01 -b > HT013_SD2W-18.sort.dup.realign_nochr00.bam
-srun samtools rmdup -S HT013_SD2W-18.sort.dup.realign_nochr00.bam HT013_SD2W-18.sort.dup.realign_nochr00_dedup.bam
+srun samtools view -b HT013_SD2W-18.sort.dup.realign.bam HanXRQChr01 | samtools rmdup -S > HT013_SD2W-18.sort.dup.realign_nochr00_dedup.bam
 
-# srun samtools view HT172_SK1W-Q.sort.dup.realign.bam chr_regions.txt -b > HT172_SK1W-Q.sort.dup.realign_nochr00_dedup.bam
+# srun samtools view HT172_SK1W-Q.sort.dup.realign.bam chr_regions.txt > HT172_SK1W-Q.sort.dup.realign_nochr00_dedup.bam
 # srun samtools view HT211_MO1W-39.sort.dup.realign.bam -R chr_regions.txt -b rmdup -S > HT211_MO1W-39.sort.dup.realign_nochr00_dedup.bam
 # srun samtools view HT254_KS1W-27.sort.dup.realign.bam -R chr_regions.txt -b | samtools rmdup -S > HT254_KS1W-27.sort.dup.realign_nochr00_dedup.bam
 # srun samtools view HT330_ND1W-6.sort.dup.realign.bam -R chr_regions.txt -b | samtools rmdup -S > HT330_ND1W-6.sort.dup.realign_nochr00_dedup.bam
