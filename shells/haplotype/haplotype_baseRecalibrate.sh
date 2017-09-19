@@ -1,35 +1,36 @@
 #!/bin/bash
 #
-#SBATCH --job-name=BaseReCal
+#SBATCH --job-name=base_calib
 #SBATCH --partition=vector
-#SBATCH -D /global/scratch/nwales/Haplotypes/
+#SBATCH --qos=vector_batch
+#SBATCH -D /clusterfs/vector/scratch/makman/haplotype_networks/bams/
 #SBATCH --nodes=1
-#SBATCH --ntasks=1
 #SBATCH --time=24:00:00
-#SBATCH -o /global/scratch/nwales/Haplotypes/Scripts/BaseRecal_Group_6.out
-#SBATCH -e /global/scratch/nwales/Haplotypes/Scripts/BaseRecal_Group_6.err
-#SBATCH --mail-user=nathan.wales@berkeley.edu
+#SBATCH --mem=32000
+#SBATCH -o ../outs/base_calibrate_chr00_new_VC.out
+#SBATCH -e ../outs/base_calibrate_chr00_new_VC.err
+#SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
 
 module load java
 
 # Make a loop to process each BAM file individually
-for i in $( ls /global/scratch/nwales/Haplotypes/BAM_files/Group_6/*.bam ); do
+for i in $( ls /clusterfs/vector/scratch/makman/haplotype_networks/bams/*_dedup.bam ); do
 	Var_current_path=${i}
 	Var_current_file=`basename $Var_current_path`
-	Var_current_sample=${Var_current_file/_no_Chr00_HanXRQ_dup.bam/}
+	Var_current_sample=${Var_current_file/_nochr00_dedup.bam/}
 	
 ## 1) Run Basecall on Bam file. About 2 hours per sample.
 # doing just for chromosome 1 to make it faster.  
 
-java -Xmx32G -jar /global/home/users/nwales/programs/GenomeAnalysisTK-3.7/GenomeAnalysisTK.jar \
+java -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
     -T BaseRecalibrator \
-    -R /global/scratch/nwales/Genomes/XRQ_ref_GATK/HanXRQr1.0-20151230_no_Chr00.fasta \
+    -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
     -I $Var_current_path \
     -L HanXRQChr01 \
-    -knownSites /global/scratch/nwales/Phasing/Original_VCF/XRQ_fil_ordered_combined.vcf \
-    -o /global/scratch/nwales/Haplotypes/BaseRecalibrator/recal_data_${Var_current_sample}.table
+    -knownSites /clusterfs/vector/scratch/makman/Hubnerdata/Sariel_new_variant_calling/filtered/ordered/HanXRQ_filtered_ordered_newVC.vcf \
+    -o /clusterfs/vector/scratch/makman/haplotype_networks/recal_data_${Var_current_sample}.table
 
 
 # 2) Do a second pass to analyze covariation remaining after recalibration
@@ -54,12 +55,12 @@ java -Xmx32G -jar /global/home/users/nwales/programs/GenomeAnalysisTK-3.7/Genome
 
 ## 4) Apply the recalibration to your sequence data and make new BAM file
 
-java -Xmx32G -jar /global/home/users/nwales/programs/GenomeAnalysisTK-3.7/GenomeAnalysisTK.jar \
+java -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
     -T PrintReads \
-    -R /global/scratch/nwales/Genomes/XRQ_ref_GATK/HanXRQr1.0-20151230_no_Chr00.fasta \
+    -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
     -I $Var_current_path \
-    -BQSR /global/scratch/nwales/Haplotypes/BaseRecalibrator/recal_data_${Var_current_sample}.table \
-    -o /global/scratch/nwales/Haplotypes/BAM_recal/${Var_current_sample}_recal.bam
+    -BQSR /clusterfs/vector/scratch/makman/haplotype_networks/recal_data_${Var_current_sample}.table \
+    -o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/${Var_current_sample}_recal.bam
 
 done
 
