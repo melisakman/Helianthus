@@ -12,7 +12,7 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
-module load samtools
+module load picard
 
 java -Xmx 32G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar AddOrReplaceReadGroups I=HT013_SD2W-18.sort.dup.realign_nochr00_dedup.bam O=HT013_SD2W-18.sort.dup.realign_nochr00_dedup_reGroups.bam RGPL=Illumina RGPU=1
 java -Xmx 32G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar AddOrReplaceReadGroups I=HT360_SD1W-35.sort.dup.realign_nochr00_dedup.bam O=HT360_SD1W-35.sort.dup.realign_nochr00_dedup_reGroups.bam RGPL=Illumina RGPU=1
