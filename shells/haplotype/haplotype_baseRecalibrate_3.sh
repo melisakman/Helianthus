@@ -27,7 +27,7 @@ java -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/Genome
 java -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
     -T PrintReads \
     -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
-    -I HT360_SD1W-35.sort.dup.realign_nochr00_dedup.bam \
+    -I HT172_SK1W-Q.sort.dup.realign_nochr00_dedup.bam \
     -BQSR /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/tables/HT172_SK1W-Q.sort.dup.realign_nochr00_dedup.table \
     -o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/HT172_SK1W-Q.sort.dup.realign_nochr00_dedup_recal.bam
 
