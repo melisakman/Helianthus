@@ -3,7 +3,7 @@
 #SBATCH --job-name=filter-dedup
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
-#SBATCH -D /clusterfs/vector/scratch/makman/haplotype_networks/bams/raw/
+#SBATCH -D /clusterfs/vector/scratch/makman/haplotype_networks/
 #SBATCH --nodes=1
 #SBATCH --time=16:00:00
 #SBATCH --mem=32000
@@ -14,4 +14,4 @@
 
 module load samtools/1.3.1
 
-samtools view -b ./HT013_SD2W-18.sort.dup.realign.bam -L ./chr_group.txt > ./HT013_SD2W-18.sort.dup.realign_nochr00.bam
+samtools view -b ./bams/raw/HT013_SD2W-18.sort.dup.realign.bam -L ./bams/raw/chr_group.txt > ./bams/raw/HT013_SD2W-18.sort.dup.realign_nochr00.bam
