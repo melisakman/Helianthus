@@ -7,8 +7,8 @@
 #SBATCH --nodes=1
 #SBATCH --time=24:00:00
 #SBATCH --mem=32000
-#SBATCH -o ../outs/base_calibrate_index_chr00_new_VC_readGroup.out
-#SBATCH -e ../outs/base_calibrate_index_chr00_new_VC_readGroup.err
+#SBATCH -o /clusterfs/vector/scratch/makman/haplotype_networks/outs/base_calibrate_index_chr00_new_VC_readGroup.out
+#SBATCH -e /clusterfs/vector/scratch/makman/haplotype_networks/outs/base_calibrate_index_chr00_new_VC_readGroup.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
