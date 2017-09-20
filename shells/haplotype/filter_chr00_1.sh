@@ -1,4 +1,5 @@
 #!/bin/bash
+#
 #SBATCH --job-name=filter-dedup
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
@@ -13,4 +14,4 @@
 
 module load samtools/1.3.1
 
-samtools view -b HT013_SD2W-18.sort.dup.realign.bam -L ./chr_group.txt > HT013_SD2W-18.sort.dup.realign_nochr00.bam
+samtools view -b ./HT013_SD2W-18.sort.dup.realign.bam -L ./chr_group.txt > ./HT013_SD2W-18.sort.dup.realign_nochr00.bam
