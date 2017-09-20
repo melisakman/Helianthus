@@ -13,7 +13,7 @@
 
 module load samtools/1.3.1
 
-srun samtools view -b HT013_SD2W-18.sort.dup.realign.bam -L ./chr_group.txt > HT013_SD2W-18.sort.dup.realign_nochr00.bam
+srun samtools view -b ./HT013_SD2W-18.sort.dup.realign.bam -L ./chr_group.txt > HT013_SD2W-18.sort.dup.realign_nochr00.bam
 # srun samtools view -b HT172_SK1W-Q.sort.dup.realign.bam -L ./chr_group.txt > HT172_SK1W-Q.sort.dup.realign_nochr00.bam
 # srun samtools view -b HT211_MO1W-39.sort.dup.realign.bam -L ./chr_group.txt > HT211_MO1W-39.sort.dup.realign_nochr00.bam
 # srun samtools view -b HT254_KS1W-27.sort.dup.realign.bam -L ./chr_group.txt > HT254_KS1W-27.sort.dup.realign_nochr00.bam
