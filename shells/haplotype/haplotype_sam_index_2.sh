@@ -1,8 +1,9 @@
 #!/bin/bash
 #
-#SBATCH --job-name=base_calib
-#SBATCH --partition=vector
-#SBATCH --qos=vector_batch
+#SBATCH --job-name=index
+#SBATCH --account=co_rosalind
+#SBATCH --partition=savio2_htc
+#SBATCH --qos=rosalind_htc2_normal
 #SBATCH -D /clusterfs/vector/scratch/makman/haplotype_networks/bams/
 #SBATCH --nodes=1
 #SBATCH --time=24:00:00
