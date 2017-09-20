@@ -2,7 +2,7 @@
 #SBATCH --job-name=filter-dedup
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
-#SBATCH -D /clusterfs/vector/scratch/makman/haplotype_networks/bams/
+#SBATCH -D /clusterfs/vector/scratch/makman/haplotype_networks/bams/raw/
 #SBATCH --nodes=1
 #SBATCH --time=16:00:00
 #SBATCH --mem=48000
