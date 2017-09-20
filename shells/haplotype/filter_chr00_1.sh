@@ -14,4 +14,4 @@
 
 module load samtools/1.3.1
 
-samtools view -b bams/raw/HT013_SD2W-18.sort.dup.realign.bam -L bams/raw/chr_group.txt > bams/raw/HT013_SD2W-18.sort.dup.realign_nochr00.bam
+samtools view -b ./bams/HT013_SD2W-18.sort.dup.realign.bam -L ./bams/chr_group.txt > ./bams/HT013_SD2W-18.sort.dup.realign_nochr00.bam
