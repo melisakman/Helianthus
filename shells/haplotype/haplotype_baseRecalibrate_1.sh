@@ -31,4 +31,3 @@ java -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/Genome
     -BQSR /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/tables/HT013_SD2W-18.sort.dup.realign_nochr00_dedup.table \
     -o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/HT013_SD2W-18.sort.dup.realign_nochr00_dedup_recal.bam
 
-
