@@ -54,7 +54,7 @@ do
 	for i in $( ls /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/*.bam ); do
 	Var_current_path=${i}
 	Var_current_file=`basename $Var_current_path`
-	Var_current_sample=${Var_current_file/_recal.bam/}
+	Var_current_sample=${Var_current_file/.sort.dup.realign_nochr00_dedup_recal.bam/}
 	
 	srun samtools view -hb -@ 19 $Var_current_path ${var_current_gene_chr}:${var_lower_flanking}-${var_upper_flanking} -o BAMs_for_gene/Reads_${var_current_gene_name}_${Var_current_sample}.bam
 	srun samtools index BAMs_for_gene/Reads_${var_current_gene_name}_${Var_current_sample}.bam
@@ -98,7 +98,7 @@ java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/temp2 -Xmx32G -jar /clust
  	for i in $( ls /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/*.bam ); do
 	 	Var_current_path=${i}
  		Var_current_file=`basename $Var_current_path`
- 		Var_current_sample=${Var_current_file/_recal.bam/}
+ 		Var_current_sample=${Var_current_file/.sort.dup.realign_nochr00_dedup_recal.bam/}
 #  		Var_current_sample= `basename $Var_current_file, ".sort.dup.realign_nochr00_dedup_recal.bam"`
 
 /clusterfs/vector/scratch/makman/haplotype_networks/jre1.7.0_80/bin/java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/temp3 -server -Xmx2g -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
