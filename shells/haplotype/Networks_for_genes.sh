@@ -90,7 +90,7 @@ java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/temp2 -Xmx32G -jar /clust
 ## This output file is filtered to just the SNPs and placed into the right directory 
 	srun vcftools --vcf /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_per_gene/${var_current_gene_name}_new_calls.vcf --recode --remove-indels --remove-filtered-all --minQ 50.0 --max-alleles 2 --out $var_current_gene_name
 
-   ~/programs/bcftools/bin/bcftools view --max-alleles 2 -O v /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/${var_current_gene_name}.recode.vcf | sed "s/##fileformat=VCFv4.2/##fileformat=VCFv4.1/" | sed "s/##FORMAT=<ID=AD,Number=R/##FORMAT=<ID=AD,Number=./" | sed "s/(//" | sed "s/)//" | sed "s/,Version=\"3\">/>/" | ~/programs/bcftools/bin/bcftools view -O v > /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_per_gene/${var_current_gene_name}.recode.vcf
+  /clusterfs/vector/scratch/makman/bcftools/bcftools view --max-alleles 2 -O v /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/${var_current_gene_name}.recode.vcf | sed "s/##fileformat=VCFv4.2/##fileformat=VCFv4.1/" | sed "s/##FORMAT=<ID=AD,Number=R/##FORMAT=<ID=AD,Number=./" | sed "s/(//" | sed "s/)//" | sed "s/,Version=\"3\">/>/" | /clusterfs/vector/scratch/makman/bcftools/bcftools view -O v > /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_per_gene/${var_current_gene_name}.recode.vcf
    mv ${var_current_gene_name}.recode.vcf /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_per_gene/${var_current_gene_name}.before_downgrade.vcf
 
 # doing read backed phasing sample by sample
