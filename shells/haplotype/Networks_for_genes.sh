@@ -28,7 +28,7 @@ module load r/3.2.5
 module load ghostscript/9.04
 
 # Count number of genes in bed file and add 1 for loop  ***** CHANGE BED FILE IN NEXT LINE *******
-Total_lines=`grep -c "^" all_51_genes.bed`
+Total_lines=`grep -c "^" Bens_genes.bed`
 Total_lines=`expr $Total_lines + 1`
 
 # Loops through each line of the bed file and does phasing for the gene
@@ -36,7 +36,7 @@ Line_to_read=1
 while [ $Line_to_read -lt $Total_lines ]
 do
    # ********* CHANGE BED FILE IN NEXT LINE (do not modify "Current_gene_tested.bed") ********
-  sed "${Line_to_read}q;d" all_51_genes.bed > Current_gene_tested.bed;
+  sed "${Line_to_read}q;d" Bens_genes.bed > Current_gene_tested.bed;
   Line_to_read=`expr $Line_to_read + 1`
   
 	var_current_gene_chr=`cut -f 1 Current_gene_tested.bed` 
