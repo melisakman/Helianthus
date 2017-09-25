@@ -8,9 +8,9 @@
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=20
 #SBATCH --time=72:00:00
-#SBATCH --mem=32000
-#SBATCH -o ../outs/haplotypes_new_VC.out
-#SBATCH -e ../outs/haplotypes_new_VC.err
+#SBATCH --mem=96000
+#SBATCH -o ../outs/haplotypes_new_VC2.out
+#SBATCH -e ../outs/haplotypes_new_VC2.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
@@ -60,7 +60,7 @@ do
 	srun samtools view -hb -@ 19 $Var_current_path ${var_current_gene_chr}:${var_lower_flanking}-${var_upper_flanking} -o BAMs_for_gene/Reads_${var_current_gene_name}_${Var_current_sample}.bam
 	srun samtools index BAMs_for_gene/Reads_${var_current_gene_name}_${Var_current_sample}.bam
 
-java -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
+java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/temp1 -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
      -T HaplotypeCaller \
      -nct 20 \
      -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
@@ -73,7 +73,7 @@ java -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/Genome
 	done
 
 ## Join the gVCF for the samples.  
-java -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
+java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/temp2 -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
    -T GenotypeGVCFs \
    -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_HT013_SD2W-18.g.vcf \
@@ -102,7 +102,7 @@ java -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/Genome
 #  		Var_current_sample=${Var_current_file/_recal.bam/}
  		Var_current_sample= `basename $Var_current_file, ".sort.dup.realign_nochr00_dedup_recal.bam"`
 
-/clusterfs/vector/scratch/makman/haplotype_networks/jre1.7.0_80/bin/java -server -Xmx2g -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
+/clusterfs/vector/scratch/makman/haplotype_networks/jre1.7.0_80/bin/java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/temp3 -server -Xmx2g -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
       -T ReadBackedPhasing \
       -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
       -I /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/BAMs_for_gene/Reads_${var_current_gene_name}_${Var_current_sample}.bam \
