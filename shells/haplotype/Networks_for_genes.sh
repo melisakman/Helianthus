@@ -100,7 +100,7 @@ java -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/Genome
 	 	Var_current_path=${i}
  		Var_current_file=`basename $Var_current_path`
 #  		Var_current_sample=${Var_current_file/_recal.bam/}
- 		Var_current_sample= basename($Var_current_file, ".sort.dup.realign_nochr00_dedup_recal.bam")
+ 		Var_current_sample= `basename $Var_current_file, ".sort.dup.realign_nochr00_dedup_recal.bam"`
 
 /clusterfs/vector/scratch/makman/haplotype_networks/jre1.7.0_80/bin/java -server -Xmx2g -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
       -T ReadBackedPhasing \
