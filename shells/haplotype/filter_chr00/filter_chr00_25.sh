@@ -6,8 +6,8 @@
 #SBATCH --nodes=1
 #SBATCH --time=6:00:00
 #SBATCH --mem=48000
-#SBATCH -o /clusterfs/vector/scratch/makman/haplotype_networks/outs/filter_chr00_new_VC_23.out
-#SBATCH -e /clusterfs/vector/scratch/makman/haplotype_networks/outs/filter_chr00_new_VC_23.err
+#SBATCH -o /clusterfs/vector/scratch/makman/haplotype_networks/outs/filter_chr00_new_VC_25.out
+#SBATCH -e /clusterfs/vector/scratch/makman/haplotype_networks/outs/filter_chr00_new_VC_25.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
@@ -28,15 +28,15 @@ module load samtools/1.3.1
 # srun samtools view -b Laguna_Pueblo_487_HanXRQ.bam -L ./chr_group.txt > Laguna_Pueblo_487_HanXRQ_nochr00.bam
 # srun samtools view -b Laguna_Pueblo_488_HanXRQ.bam -L ./chr_group.txt > Laguna_Pueblo_488_HanXRQ_nochr00.bam
 # srun samtools view -b Laguna_Pueblo_489_HanXRQ.bam -L ./chr_group.txt > Laguna_Pueblo_489_HanXRQ_nochr00.bam
-srun samtools view -b Mandan2_48a_HanXRQ.bam -L ./chr_group.txt > Mandan2_48a_HanXRQ_nochr00.bam
-srun samtools view -b Mandan2_48b_HanXRQ.bam -L ./chr_group.txt > Mandan2_48b_HanXRQ_nochr00.bam
-srun samtools view -b Mandan2_48c_HanXRQ.bam -L ./chr_group.txt > Mandan2_48c_HanXRQ_nochr00.bam
+# srun samtools view -b Mandan2_48a_HanXRQ.bam -L ./chr_group.txt > Mandan2_48a_HanXRQ_nochr00.bam
+# srun samtools view -b Mandan2_48b_HanXRQ.bam -L ./chr_group.txt > Mandan2_48b_HanXRQ_nochr00.bam
+# srun samtools view -b Mandan2_48c_HanXRQ.bam -L ./chr_group.txt > Mandan2_48c_HanXRQ_nochr00.bam
 # srun samtools view -b MexCult14_50f_HanXRQ.bam -L ./chr_group.txt > MexCult14_50f_HanXRQ_nochr00.bam
 # srun samtools view -b MexCult14_510_HanXRQ.bam -L ./chr_group.txt > MexCult14_510_HanXRQ_nochr00.bam
 # srun samtools view -b MexCult1_513_HanXRQ.bam -L ./chr_group.txt > MexCult1_513_HanXRQ_nochr00.bam
-# srun samtools view -b MexCult15_511_HanXRQ.bam -L ./chr_group.txt > MexCult15_511_HanXRQ_nochr00.bam
-# srun samtools view -b MexCult15_512_HanXRQ.bam -L ./chr_group.txt > MexCult15_512_HanXRQ_nochr00.bam
-# srun samtools view -b MexCult3_48d_HanXRQ.bam -L ./chr_group.txt > MexCult3_48d_HanXRQ_nochr00.bam
+srun samtools view -b MexCult15_511_HanXRQ.bam -L ./chr_group.txt > MexCult15_511_HanXRQ_nochr00.bam
+srun samtools view -b MexCult15_512_HanXRQ.bam -L ./chr_group.txt > MexCult15_512_HanXRQ_nochr00.bam
+srun samtools view -b MexCult3_48d_HanXRQ.bam -L ./chr_group.txt > MexCult3_48d_HanXRQ_nochr00.bam
 # srun samtools view -b MexCult3_48e_HanXRQ.bam -L ./chr_group.txt > MexCult3_48e_HanXRQ_nochr00.bam
 # srun samtools view -b MexCult6_48f_HanXRQ.bam -L ./chr_group.txt > MexCult6_48f_HanXRQ_nochr00.bam
 # srun samtools view -b MexCult6_490_HanXRQ.bam -L ./chr_group.txt > MexCult6_490_HanXRQ_nochr00.bam
