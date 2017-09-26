@@ -22,9 +22,9 @@ module load samtools/1.3.1
 # srun samtools view -b Hidatsa1_482_HanXRQ.bam -L ./chr_group.txt > Hidatsa1_482_HanXRQ_nochr00.bam
 # srun samtools view -b Hidatsa1_483_HanXRQ.bam -L ./chr_group.txt > Hidatsa1_483_HanXRQ_nochr00.bam
 srun samtools view -b Hidatsa1_484_HanXRQ.bam -L ./chr_group.txt > Hidatsa1_484_HanXRQ_nochr00.bam
-srun samtools view -b Hopi_1_HanXRQ.bam -L ./chr_group.txt > Hopi_1_HanXRQ_nochr00.bam
-srun samtools view -b Hopi_485_HanXRQ.bam -L ./chr_group.txt > Hopi_485_HanXRQ_nochr00.bam
-srun samtools view -b Hopi_486_HanXRQ.bam -L ./chr_group.txt > Hopi_486_HanXRQ_nochr00.bam
+# srun samtools view -b Hopi_1_HanXRQ.bam -L ./chr_group.txt > Hopi_1_HanXRQ_nochr00.bam
+# srun samtools view -b Hopi_485_HanXRQ.bam -L ./chr_group.txt > Hopi_485_HanXRQ_nochr00.bam
+# srun samtools view -b Hopi_486_HanXRQ.bam -L ./chr_group.txt > Hopi_486_HanXRQ_nochr00.bam
 # srun samtools view -b Laguna_Pueblo_487_HanXRQ.bam -L ./chr_group.txt > Laguna_Pueblo_487_HanXRQ_nochr00.bam
 # srun samtools view -b Laguna_Pueblo_488_HanXRQ.bam -L ./chr_group.txt > Laguna_Pueblo_488_HanXRQ_nochr00.bam
 # srun samtools view -b Laguna_Pueblo_489_HanXRQ.bam -L ./chr_group.txt > Laguna_Pueblo_489_HanXRQ_nochr00.bam
