@@ -6,8 +6,8 @@
 #SBATCH --nodes=1
 #SBATCH --time=6:00:00
 #SBATCH --mem=48000
-#SBATCH -o /clusterfs/vector/scratch/makman/haplotype_networks/outs/merge_new_VC_2.out
-#SBATCH -e /clusterfs/vector/scratch/makman/haplotype_networks/outs/merge_new_VC_2.err
+#SBATCH -o /clusterfs/vector/scratch/makman/haplotype_networks/outs/merge_new_VC_wd2.out
+#SBATCH -e /clusterfs/vector/scratch/makman/haplotype_networks/outs/merge_new_VC_wd2.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 

@@ -4,8 +4,8 @@
 #SBATCH --qos=vector_batch
 #SBATCH -D /clusterfs/vector/scratch/makman/haplotype_networks/bams
 #SBATCH --nodes=1
-#SBATCH --time=6:00:00
-#SBATCH --mem=48000
+#SBATCH --time=8:00:00
+#SBATCH --mem=64000
 #SBATCH -o /clusterfs/vector/scratch/makman/haplotype_networks/outs/merge_new_VC_lr7.out
 #SBATCH -e /clusterfs/vector/scratch/makman/haplotype_networks/outs/merge_new_VC_lr7.err
 #SBATCH --mail-user=makman@berkeley.edu
