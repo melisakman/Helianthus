@@ -12,4 +12,4 @@
 #SBATCH --mail-type=All
 
 module load samtools/1.3.1
-srun samtools merge PPN035_combined.bam PPN035*.bam 
+srun samtools merge PPN035_combined.bam PPN035*_nochr00.bam 
