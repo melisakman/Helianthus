@@ -6,25 +6,25 @@
 #SBATCH --nodes=1
 #SBATCH --time=10:00:00
 #SBATCH --mem=48000
-#SBATCH -o /clusterfs/vector/scratch/makman/haplotype_networks/outs/filter_chr00_new_VC_32.out
-#SBATCH -e /clusterfs/vector/scratch/makman/haplotype_networks/outs/filter_chr00_new_VC_32.err
+#SBATCH -o /clusterfs/vector/scratch/makman/haplotype_networks/outs/filter_chr00_new_VC_35.out
+#SBATCH -e /clusterfs/vector/scratch/makman/haplotype_networks/outs/filter_chr00_new_VC_35.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
 module load samtools/1.3.1
 
-srun samtools view -b PI_531071_4d6_HanXRQ.bam -L ./chr_group.txt > PI_531071_4d6_HanXRQ_nochr00.bam
-srun samtools view -b PPN020_7_HanXRQ.bam -L ./chr_group.txt > PPN020_7_HanXRQ_nochr00.bam
-srun samtools view -b PPN026_b_HanXRQ.bam -L ./chr_group.txt > PPN026_b_HanXRQ_nochr00.bam
+# srun samtools view -b PI_531071_4d6_HanXRQ.bam -L ./chr_group.txt > PI_531071_4d6_HanXRQ_nochr00.bam
+# srun samtools view -b PPN020_7_HanXRQ.bam -L ./chr_group.txt > PPN020_7_HanXRQ_nochr00.bam
+# srun samtools view -b PPN026_b_HanXRQ.bam -L ./chr_group.txt > PPN026_b_HanXRQ_nochr00.bam
 # srun samtools view -b PPN069_16_HanXRQ.bam -L ./chr_group.txt > PPN069_16_HanXRQ_nochr00.bam
 # srun samtools view -b PPN072_19_HanXRQ.bam -L ./chr_group.txt > PPN072_19_HanXRQ_nochr00.bam
 # srun samtools view -b PPN093_1e_HanXRQ.bam -L ./chr_group.txt > PPN093_1e_HanXRQ_nochr00.bam
 # srun samtools view -b PPN107_28_HanXRQ.bam -L ./chr_group.txt > PPN107_28_HanXRQ_nochr00.bam
 # srun samtools view -b PPN153_34_HanXRQ.bam -L ./chr_group.txt > PPN153_34_HanXRQ_nochr00.bam
 # srun samtools view -b PPN173_3e_HanXRQ.bam -L ./chr_group.txt > PPN173_3e_HanXRQ_nochr00.bam
-# srun samtools view -b PPN179_40_HanXRQ.bam -L ./chr_group.txt > PPN179_40_HanXRQ_nochr00.bam
-# srun samtools view -b PPN185_44_HanXRQ.bam -L ./chr_group.txt > PPN185_44_HanXRQ_nochr00.bam
-# srun samtools view -b PPN191_46_HanXRQ.bam -L ./chr_group.txt > PPN191_46_HanXRQ_nochr00.bam
+srun samtools view -b PPN179_40_HanXRQ.bam -L ./chr_group.txt > PPN179_40_HanXRQ_nochr00.bam
+srun samtools view -b PPN185_44_HanXRQ.bam -L ./chr_group.txt > PPN185_44_HanXRQ_nochr00.bam
+srun samtools view -b PPN191_46_HanXRQ.bam -L ./chr_group.txt > PPN191_46_HanXRQ_nochr00.bam
 # srun samtools view -b PPN203_2f4_HanXRQ.bam -L ./chr_group.txt > PPN203_2f4_HanXRQ_nochr00.bam
 # srun samtools view -b PPN237_396_HanXRQ.bam -L ./chr_group.txt > PPN237_396_HanXRQ_nochr00.bam
 # srun samtools view -b PPN240_397_HanXRQ.bam -L ./chr_group.txt > PPN240_397_HanXRQ_nochr00.bam
