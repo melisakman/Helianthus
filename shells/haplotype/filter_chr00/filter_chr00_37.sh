@@ -5,7 +5,7 @@
 #SBATCH -D /clusterfs/vector/scratch/makman/haplotype_networks/bams
 #SBATCH --nodes=1
 #SBATCH --time=10:00:00
-#SBATCH --mem=48000
+#SBATCH --mem=64000
 #SBATCH -o /clusterfs/vector/scratch/makman/haplotype_networks/outs/filter_chr00_new_VC_37.out
 #SBATCH -e /clusterfs/vector/scratch/makman/haplotype_networks/outs/filter_chr00_new_VC_37.err
 #SBATCH --mail-user=makman@berkeley.edu

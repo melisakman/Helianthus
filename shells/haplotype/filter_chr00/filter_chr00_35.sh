@@ -5,7 +5,7 @@
 #SBATCH -D /clusterfs/vector/scratch/makman/haplotype_networks/bams
 #SBATCH --nodes=1
 #SBATCH --time=10:00:00
-#SBATCH --mem=48000
+#SBATCH --mem=64000
 #SBATCH -o /clusterfs/vector/scratch/makman/haplotype_networks/outs/filter_chr00_new_VC_35.out
 #SBATCH -e /clusterfs/vector/scratch/makman/haplotype_networks/outs/filter_chr00_new_VC_35.err
 #SBATCH --mail-user=makman@berkeley.edu
@@ -22,8 +22,8 @@ module load samtools/1.3.1
 # srun samtools view -b PPN107_28_HanXRQ.bam -L ./chr_group.txt > PPN107_28_HanXRQ_nochr00.bam
 # srun samtools view -b PPN153_34_HanXRQ.bam -L ./chr_group.txt > PPN153_34_HanXRQ_nochr00.bam
 # srun samtools view -b PPN173_3e_HanXRQ.bam -L ./chr_group.txt > PPN173_3e_HanXRQ_nochr00.bam
-srun samtools view -b PPN179_40_HanXRQ.bam -L ./chr_group.txt > PPN179_40_HanXRQ_nochr00.bam
-srun samtools view -b PPN185_44_HanXRQ.bam -L ./chr_group.txt > PPN185_44_HanXRQ_nochr00.bam
+# srun samtools view -b PPN179_40_HanXRQ.bam -L ./chr_group.txt > PPN179_40_HanXRQ_nochr00.bam
+# srun samtools view -b PPN185_44_HanXRQ.bam -L ./chr_group.txt > PPN185_44_HanXRQ_nochr00.bam
 srun samtools view -b PPN191_46_HanXRQ.bam -L ./chr_group.txt > PPN191_46_HanXRQ_nochr00.bam
 # srun samtools view -b PPN203_2f4_HanXRQ.bam -L ./chr_group.txt > PPN203_2f4_HanXRQ_nochr00.bam
 # srun samtools view -b PPN237_396_HanXRQ.bam -L ./chr_group.txt > PPN237_396_HanXRQ_nochr00.bam
