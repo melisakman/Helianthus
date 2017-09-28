@@ -43,9 +43,10 @@ module load samtools/1.3.1
 # srun samtools view -b MexCult7_491_HanXRQ.bam -L ./chr_group.txt > MexCult7_491_HanXRQ_nochr00.bam
 # srun samtools view -b MexCult7_492_HanXRQ.bam -L ./chr_group.txt > MexCult7_492_HanXRQ_nochr00.bam
 # srun samtools view -b MexCult9_493_HanXRQ.bam -L ./chr_group.txt > MexCult9_493_HanXRQ_nochr00.bam
-srun samtools view -b MexCult9_494_HanXRQ.bam -L ./chr_group.txt > MexCult9_494_HanXRQ_nochr00.bam
-srun samtools view -b PPN046_78_HanXRQ.bam -L ./chr_group.txt > PPN046_78_HanXRQ_nochr00.bam
-srun samtools view -b PPN083_a5_HanXRQ.bam -L ./chr_group.txt > PPN083_a5_HanXRQ_nochr00.bam
+# srun samtools view -b MexCult9_494_HanXRQ.bam -L ./chr_group.txt > MexCult9_494_HanXRQ_nochr00.bam
+# srun samtools view -b PPN046_78_HanXRQ.bam -L ./chr_group.txt > PPN046_78_HanXRQ_nochr00.bam
+# srun samtools view -b PPN083_a5_HanXRQ.bam -L ./chr_group.txt > PPN083_a5_HanXRQ_nochr00.bam
+srun samtools view -b PPN083_a4_HanXRQ.bam -L ./chr_group.txt > PPN083_a4_HanXRQ_nochr00.bam
 # srun samtools view -b Pueblo_4c7_HanXRQ.bam -L ./chr_group.txt > Pueblo_4c7_HanXRQ_nochr00.bam
 # srun samtools view -b Pueblo_4c8_HanXRQ.bam -L ./chr_group.txt > Pueblo_4c8_HanXRQ_nochr00.bam
 # srun samtools view -b Pueblo_4c9_HanXRQ.bam -L ./chr_group.txt > Pueblo_4c9_HanXRQ_nochr00.bam

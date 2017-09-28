@@ -6,18 +6,18 @@
 #SBATCH --nodes=1
 #SBATCH --time=16:00:00
 #SBATCH --mem=48000
-#SBATCH -o /clusterfs/vector/scratch/makman/haplotype_networks/outs/dedup_16.out
-#SBATCH -e /clusterfs/vector/scratch/makman/haplotype_networks/outs/dedup_16.err
+#SBATCH -o /clusterfs/vector/scratch/makman/haplotype_networks/outs/dedup_18.out
+#SBATCH -e /clusterfs/vector/scratch/makman/haplotype_networks/outs/dedup_18.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
 module load samtools/1.3.1
-srun samtools rmdup -S Anzac_Pueblo_combined.bam Anzac_Pueblo_combined_dedup.bam
-srun samtools rmdup -S Arikara_combined.bam Arikara_combined_dedup.bam
+# srun samtools rmdup -S Anzac_Pueblo_combined.bam Anzac_Pueblo_combined_dedup.bam
+# srun samtools rmdup -S Arikara_combined.bam Arikara_combined_dedup.bam
 # srun samtools rmdup -S Havasupai_combined.bam Havasupai_combined_dedup.bam
 # srun samtools rmdup -S Hidatsa1_combined.bam Hidatsa1_combined_dedup.bam
-# srun samtools rmdup -S Hopi_combined.bam Hopi_combined_dedup.bam
-# srun samtools rmdup -S Hopi_1_HanXRQ_nochr00.bam Hopi_1_HanXRQ_nochr00_dedup.bam
+srun samtools rmdup -S Hopi_combined.bam Hopi_combined_dedup.bam
+srun samtools rmdup -S Hopi_1_HanXRQ_nochr00.bam Hopi_1_HanXRQ_nochr00_dedup.bam
 # srun samtools rmdup -S Laguna_Pueblo_combined.bam Laguna_Pueblo_combined_dedup.bam
 # srun samtools rmdup -S Mandan2_combined.bam Mandan2_combined_dedup.bam
 # srun samtools rmdup -S MexCult1_513_HanXRQ_nochr00.bam MexCult1_513_HanXRQ_nochr00_dedup.bam
