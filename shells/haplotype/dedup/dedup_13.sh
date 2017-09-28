@@ -5,7 +5,7 @@
 #SBATCH -D /clusterfs/vector/scratch/makman/haplotype_networks/bams/
 #SBATCH --nodes=1
 #SBATCH --time=16:00:00
-#SBATCH --mem=48000
+#SBATCH --mem=64000
 #SBATCH -o /clusterfs/vector/scratch/makman/haplotype_networks/outs/dedup_13.out
 #SBATCH -e /clusterfs/vector/scratch/makman/haplotype_networks/outs/dedup_13.err
 #SBATCH --mail-user=makman@berkeley.edu
@@ -20,7 +20,7 @@ module load samtools/1.3.1
 # srun samtools rmdup -S annIA_401_nochr00.bam annKS_402_nochr00_dedup.bam
 srun samtools rmdup -S annKS_402_nochr00.bam annNM_405_nochr00_dedup.bam
 srun samtools rmdup -S annNM_405_nochr00.bam annWY_406_nochr00_dedup.bam
-srun samtools rmdup -S annWY_406_nochr00_dedup.bam
+srun samtools rmdup -S annWY_406_nochr00.bam annWY_406_nochr00_dedup.bam
 # srun samtools rmdup -S ann04-nwAR_nochr00_combined.bam ann04-nwAR_nochr00_combined_dedup.bam
 # srun samtools rmdup -S ann05-ccNM_nochr00_combined.bam ann05-ccNM_nochr00_combined_dedup.bam
 # srun samtools rmdup -S ann10-ccIL_nochr00_combined.bam ann10-ccIL_nochr00_combined_dedup.bam
