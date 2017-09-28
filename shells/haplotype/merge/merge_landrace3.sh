@@ -28,4 +28,6 @@ srun samtools merge Hopi_combined.bam Hopi_485_HanXRQ_nochr00.bam Hopi_486_HanXR
 # srun samtools merge Pueblo_combined.bam Pueblo*_nochr00.bam
 # srun samtools merge Seneca_combined.bam Seneca*_nochr00.bam
 # srun samtools merge Zuni_combined.bam Zuni*_nochr00.bam
+srun samtools merge PPN083_combined.bam PPN083*_nochr00.bam
+
 
