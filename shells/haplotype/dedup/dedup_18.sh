@@ -31,4 +31,4 @@ srun samtools rmdup -S Hopi_1_HanXRQ_nochr00.bam Hopi_1_HanXRQ_nochr00_dedup.bam
 # srun samtools rmdup -S Seneca_combined.bam Seneca_combined_dedup.bam
 # srun samtools rmdup -S Zuni_combined.bam Zuni_combined_dedup.bam
 # srun samtools rmdup -S PPN046_78_HanXRQ_nochr00.bam PPN046_78_HanXRQ_nochr00_dedup.bam
-# srun samtools rmdup -S PPN083_a5_HanXRQ_nochr00.bam PPN083_a5_HanXRQ_nochr00_dedup.bam
+# srun samtools rmdup -S PPN083_combined.bam PPN083_combined_dedup.bam
