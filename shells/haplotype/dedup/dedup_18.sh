@@ -17,7 +17,7 @@ module load samtools/1.3.1
 # srun samtools rmdup -S Havasupai_combined.bam Havasupai_combined_dedup.bam
 # srun samtools rmdup -S Hidatsa1_combined.bam Hidatsa1_combined_dedup.bam
 srun samtools rmdup -S Hopi_combined.bam Hopi_combined_dedup.bam
-srun samtools rmdup -S Hopi_1_HanXRQ_nochr00.bam Hopi_1_HanXRQ_nochr00_dedup.bam
+# srun samtools rmdup -S Hopi_1_HanXRQ_nochr00.bam Hopi_1_HanXRQ_nochr00_dedup.bam
 # srun samtools rmdup -S Laguna_Pueblo_combined.bam Laguna_Pueblo_combined_dedup.bam
 # srun samtools rmdup -S Mandan2_combined.bam Mandan2_combined_dedup.bam
 # srun samtools rmdup -S MexCult1_513_HanXRQ_nochr00.bam MexCult1_513_HanXRQ_nochr00_dedup.bam
