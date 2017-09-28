@@ -21,12 +21,12 @@ module load samtools/1.3.1
 # srun samtools rmdup -S annKS_402_nochr00.bam annNM_405_nochr00_dedup.bam
 # srun samtools rmdup -S annNM_405_nochr00.bam annWY_406_nochr00_dedup.bam
 # srun samtools rmdup -S annWY_406_nochr00_dedup.bam
-srun samtools rmdup -S ann04-nwAR_nochr00_combined.bam ann04-nwAR_nochr00_combined_dedup.bam
-srun samtools rmdup -S ann05-ccNM_nochr00_combined.bam ann05-ccNM_nochr00_combined_dedup.bam
-srun samtools rmdup -S ann10-ccIL_nochr00_combined.bam ann10-ccIL_nochr00_combined_dedup.bam
-srun samtools rmdup -S ann20-seAZ_nochr00_combined.bam ann20-seAZ_nochr00_combined_dedup.bam
+# srun samtools rmdup -S ann04-nwAR_nochr00_combined.bam ann04-nwAR_nochr00_combined_dedup.bam
+# srun samtools rmdup -S ann05-ccNM_nochr00_combined.bam ann05-ccNM_nochr00_combined_dedup.bam
+# srun samtools rmdup -S ann10-ccIL_nochr00_combined.bam ann10-ccIL_nochr00_combined_dedup.bam
+# srun samtools rmdup -S ann20-seAZ_nochr00_combined.bam ann20-seAZ_nochr00_combined_dedup.bam
 # srun samtools rmdup -S ann28-swSK_nochr00_combined.bam ann28-swSK_nochr00_combined_dedup.bam
 # srun samtools rmdup -S ann29-neSD_nochr00_combined.bam ann29-neSD_nochr00_combined_dedup.bam
 # srun samtools rmdup -S ann44-ccCA_nochr00_combined.bam ann44-ccCA_nochr00_combined_dedup.bam
-
+srun samtools rmdup -S ann01-cwIA_nochr00_combined.bam ann01-cwIA_nochr00_combined_dedup.bam
 
