@@ -3,12 +3,12 @@
 #SBATCH -J vcffst
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
-#SBATCH --time=48:00:00
+#SBATCH --time=4:00:00
 #SBATCH -o /global/home/users/makman/vcftools/outs/vcftools_new_VC_fst15_update.out
 #SBATCH -e /global/home/users/makman/vcftools/outs/vcftools_new_VC_fst15_update.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-#SBATCH --array=1-1
+#SBATCH --array=1-7
 
 module load vcftools/0.1.13
 vcftools --gzvcf HanXRQChr01_filter01.vcf --minQ 50 --minDP 5 --maxDP 50 --max-missing 0.8  --weir-fst-pop wd_list.txt --weir-fst-pop lr_list.txt --fst-window-size 10000 --out /clusterfs/vector/scratch/makman/new_variant_calling/Fst/lr_wd_Fst_chr01_10kb
