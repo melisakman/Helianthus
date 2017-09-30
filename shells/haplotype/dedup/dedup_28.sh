@@ -5,7 +5,7 @@
 #SBATCH -D /clusterfs/vector/scratch/makman/haplotype_networks/bams/
 #SBATCH --nodes=1
 #SBATCH --time=16:00:00
-#SBATCH --mem=64000
+#SBATCH --mem=80000
 #SBATCH -o /clusterfs/vector/scratch/makman/haplotype_networks/outs/dedup_28.out
 #SBATCH -e /clusterfs/vector/scratch/makman/haplotype_networks/outs/dedup_28.err
 #SBATCH --mail-user=makman@berkeley.edu
@@ -20,9 +20,9 @@ module load samtools/1.3.1
 # srun samtools rmdup -S PPN072_19_HanXRQ_nochr00.bam PPN072_19_HanXRQ_nochr00_dedup.bam
 # srun samtools rmdup -S PPN107_28_HanXRQ_nochr00.bam PPN107_28_HanXRQ_nochr00_dedup.bam
 # srun samtools rmdup -S PPN153_34_HanXRQ_nochr00.bam PPN153_34_HanXRQ_nochr00_dedup.bam
-srun samtools rmdup -S PPN173_3e_HanXRQ_nochr00.bam PPN173_3e_HanXRQ_nochr00_dedup.bam
-srun samtools rmdup -S PPN179_40_HanXRQ_nochr00.bam PPN179_40_HanXRQ_nochr00_dedup.bam
-srun samtools rmdup -S PPN185_44_HanXRQ_nochr00.bam PPN185_44_HanXRQ_nochr00_dedup.bam
+# srun samtools rmdup -S PPN173_3e_HanXRQ_nochr00.bam PPN173_3e_HanXRQ_nochr00_dedup.bam
+# srun samtools rmdup -S PPN179_40_HanXRQ_nochr00.bam PPN179_40_HanXRQ_nochr00_dedup.bam
+# srun samtools rmdup -S PPN185_44_HanXRQ_nochr00.bam PPN185_44_HanXRQ_nochr00_dedup.bam
 srun samtools rmdup -S PPN191_46_HanXRQ_nochr00.bam PPN191_46_HanXRQ_nochr00_dedup.bam
 srun samtools rmdup -S PPN203_2f4_HanXRQ_nochr00.bam PPN203_2f4_HanXRQ_nochr00_dedup.bam
 # srun samtools rmdup -S PPN237_396_HanXRQ_nochr00.bam PPN237_396_HanXRQ_nochr00_dedup.bam
