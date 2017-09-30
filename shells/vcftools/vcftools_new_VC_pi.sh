@@ -4,6 +4,7 @@
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
 #SBATCH --time=4:00:00
+#SBATCH --memory=10000
 #SBATCH -o /global/home/users/makman/vcftools/outs/vcftools_new_VC_pi15_update.out
 #SBATCH -e /global/home/users/makman/vcftools/outs/vcftools_new_VC_pi15_update.err
 #SBATCH --mail-user=makman@berkeley.edu
