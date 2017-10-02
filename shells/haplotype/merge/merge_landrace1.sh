@@ -4,15 +4,15 @@
 #SBATCH --qos=vector_batch
 #SBATCH -D /clusterfs/vector/scratch/makman/haplotype_networks/bams
 #SBATCH --nodes=1
-#SBATCH --time=6:00:00
-#SBATCH --mem=48000
-#SBATCH -o /clusterfs/vector/scratch/makman/haplotype_networks/outs/merge_new_VC_lr1.out
-#SBATCH -e /clusterfs/vector/scratch/makman/haplotype_networks/outs/merge_new_VC_lr1.err
+#SBATCH --time=15:00:00
+#SBATCH --mem=64000
+#SBATCH -o /clusterfs/vector/scratch/makman/haplotype_networks/outs/merge_new_VC_lr1u.out
+#SBATCH -e /clusterfs/vector/scratch/makman/haplotype_networks/outs/merge_new_VC_lr1u.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
 module load samtools/1.3.1
-srun samtools merge Anzac_Pueblo_combined.bam Anzac_Pueblo*_nochr00.bam 
+# srun samtools merge Anzac_Pueblo_combined.bam Anzac_Pueblo*_nochr00.bam 
 srun samtools merge Arikara_combined.bam Arikara*_nochr00.bam
 # srun samtools merge Havasupai_combined.bam Havasupai*_nochr00.bam
 # srun samtools merge Hidatsa1_combined.bam Hidatsa1*_nochr00.bam
