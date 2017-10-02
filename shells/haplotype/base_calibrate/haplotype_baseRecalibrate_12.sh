@@ -5,7 +5,7 @@
 #SBATCH --qos=vector_batch
 #SBATCH -D /clusterfs/vector/scratch/makman/haplotype_networks/bams/
 #SBATCH --nodes=1
-#SBATCH --time=8:00:00
+#SBATCH --time=15:00:00
 #SBATCH --mem=48000
 #SBATCH -o ../outs/base_calibrate_chr00_new_VC12.out
 #SBATCH -e ../outs/base_calibrate_chr00_new_VC12.err
