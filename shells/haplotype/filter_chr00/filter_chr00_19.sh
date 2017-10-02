@@ -17,7 +17,7 @@ module load samtools/1.3.1
 # srun samtools view -b Anzac_Pueblo_419_HanXRQ.bam -L ./chr_group.txt > Anzac_Pueblo_419_HanXRQ_nochr00.bam
 srun samtools view -b Arikara_424_HanXRQ.bam -L ./chr_group.txt > Arikara_424_HanXRQ_nochr00.bam
 srun samtools view -b Arikara_425_HanXRQ.bam -L ./chr_group.txt > Arikara_425_HanXRQ_nochr00.bam
-srun samtools view -b Havasupai_480_HanXRQ.bam -L ./chr_group.txt > Havasupai_480_HanXRQ_nochr00.bam
+# srun samtools view -b Havasupai_480_HanXRQ.bam -L ./chr_group.txt > Havasupai_480_HanXRQ_nochr00.bam
 # srun samtools view -b Havasupai_481_HanXRQ.bam -L ./chr_group.txt > Havasupai_481_HanXRQ_nochr00.bam
 # srun samtools view -b Hidatsa1_482_HanXRQ.bam -L ./chr_group.txt > Hidatsa1_482_HanXRQ_nochr00.bam
 # srun samtools view -b Hidatsa1_483_HanXRQ.bam -L ./chr_group.txt > Hidatsa1_483_HanXRQ_nochr00.bam
