@@ -51,6 +51,7 @@ module load java
 #     -o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/tables/annIA_401_nochr00_dedup.table
 java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/tempor5/ -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
     -T BaseRecalibrator \
+    --fix_misencoded_quality_scores \
     -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
     -I annKS_402_nochr00_dedup.bam \
 	-L HanXRQChr01 \
@@ -58,6 +59,7 @@ java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/tempor5/ -Xmx32G -jar /cl
     -o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/tables/annKS_402_nochr00_dedup.table
 java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/tempor6/ -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
     -T BaseRecalibrator \
+    --fix_misencoded_quality_scores \
     -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
     -I annNM_405_nochr00_dedup.bam \
 	-L HanXRQChr01 \
@@ -65,6 +67,7 @@ java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/tempor6/ -Xmx32G -jar /cl
     -o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/tables/annNM_405_nochr00_dedup.table
 java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/tempor7/ -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
     -T BaseRecalibrator \
+    --fix_misencoded_quality_scores \
     -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
     -I annWY_406_nochr00_dedup.bam \
 	-L HanXRQChr01 \
