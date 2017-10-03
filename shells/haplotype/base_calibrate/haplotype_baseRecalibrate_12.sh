@@ -11,7 +11,7 @@
 #SBATCH -e ../outs/base_calibrate_chr00_new_VC12.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-#SBATCH --array=1-10
+#SBATCH --array=1-1
 
 module load java
 
