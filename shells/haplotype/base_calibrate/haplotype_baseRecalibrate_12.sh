@@ -5,8 +5,8 @@
 #SBATCH --qos=vector_batch
 #SBATCH -D /clusterfs/vector/scratch/makman/haplotype_networks/bams/
 #SBATCH --nodes=1
-#SBATCH --time=15:00:00
-#SBATCH --mem=48000
+#SBATCH --time=18:00:00
+#SBATCH --mem=64000
 #SBATCH -o ../outs/base_calibrate_chr00_new_VC12.out
 #SBATCH -e ../outs/base_calibrate_chr00_new_VC12.err
 #SBATCH --mail-user=makman@berkeley.edu
@@ -92,55 +92,57 @@ module load java
 # 	-L HanXRQChr01 \
 #     -knownSites /clusterfs/vector/scratch/makman/Hubnerdata/Sariel_new_variant_calling/filtered/ordered/HanXRQ_filtered_ordered_newVC.vcf \
 #     -o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/tables/ann10-ccIL_nochr00_combined_dedup.table
-java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/tempor23/ -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
-    -T BaseRecalibrator \
-    -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
-    -I ann20-seAZ_nochr00_combined_dedup.bam \
-	-L HanXRQChr01 \
-    -knownSites /clusterfs/vector/scratch/makman/Hubnerdata/Sariel_new_variant_calling/filtered/ordered/HanXRQ_filtered_ordered_newVC.vcf \
-    -o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/tables/ann20-seAZ_nochr00_combined_dedup.table
-java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/tempor24/ -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
-    -T BaseRecalibrator \
-    -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
-    -I ann28-swSK_nochr00_combined_dedup.bam \
-	-L HanXRQChr01 \
-    -knownSites /clusterfs/vector/scratch/makman/Hubnerdata/Sariel_new_variant_calling/filtered/ordered/HanXRQ_filtered_ordered_newVC.vcf \
-    -o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/tables/ann28-swSK_nochr00_combined_dedup.table
-java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/tempor25/ -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
-    -T BaseRecalibrator \
-    -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
-    -I ann29-neSD_nochr00_combined_dedup.bam \
-	-L HanXRQChr01 \
-    -knownSites /clusterfs/vector/scratch/makman/Hubnerdata/Sariel_new_variant_calling/filtered/ordered/HanXRQ_filtered_ordered_newVC.vcf \
-    -o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/tables/ann29-neSD_nochr00_combined_dedup.table
-java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/tempor26/ -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
-    -T BaseRecalibrator \
-    -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
-    -I ann44-ccCA_nochr00_combined_dedup.bam \
-	-L HanXRQChr01 \
-    -knownSites /clusterfs/vector/scratch/makman/Hubnerdata/Sariel_new_variant_calling/filtered/ordered/HanXRQ_filtered_ordered_newVC.vcf \
-    -o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/tables/ann44-ccCA_nochr00_combined_dedup.table
-java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/tempor28/ -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
-    -T BaseRecalibrator \
-    -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
-    -I PPN020_7_HanXRQ_nochr00_dedup.bam \
-	-L HanXRQChr01 \
-    -knownSites /clusterfs/vector/scratch/makman/Hubnerdata/Sariel_new_variant_calling/filtered/ordered/HanXRQ_filtered_ordered_newVC.vcf \
-    -o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/tables/PPN020_7_HanXRQ_nochr00_dedup.table
-java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/tempor29/ -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
-    -T BaseRecalibrator \
-    -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
-    -I PPN026_b_HanXRQ_nochr00_dedup.bam \
-	-L HanXRQChr01 \
-    -knownSites /clusterfs/vector/scratch/makman/Hubnerdata/Sariel_new_variant_calling/filtered/ordered/HanXRQ_filtered_ordered_newVC.vcf \
-    -o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/tables/PPN026_b_HanXRQ_nochr00_dedup.table
-java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/tempor30/ -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
-    -T BaseRecalibrator \
-    -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
-    -I PPN035_combined_dedup.bam \
-	-L HanXRQChr01 \
-    -knownSites /clusterfs/vector/scratch/makman/Hubnerdata/Sariel_new_variant_calling/filtered/ordered/HanXRQ_filtered_ordered_newVC.vcf \
-    -o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/tables/PPN035_combined_dedup.table
+
+
+# java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/tempor23/ -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
+#     -T BaseRecalibrator \
+#     -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
+#     -I ann20-seAZ_nochr00_combined_dedup.bam \
+# 	-L HanXRQChr01 \
+#     -knownSites /clusterfs/vector/scratch/makman/Hubnerdata/Sariel_new_variant_calling/filtered/ordered/HanXRQ_filtered_ordered_newVC.vcf \
+#     -o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/tables/ann20-seAZ_nochr00_combined_dedup.table
+# java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/tempor24/ -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
+#     -T BaseRecalibrator \
+#     -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
+#     -I ann28-swSK_nochr00_combined_dedup.bam \
+# 	-L HanXRQChr01 \
+#     -knownSites /clusterfs/vector/scratch/makman/Hubnerdata/Sariel_new_variant_calling/filtered/ordered/HanXRQ_filtered_ordered_newVC.vcf \
+#     -o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/tables/ann28-swSK_nochr00_combined_dedup.table
+# java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/tempor25/ -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
+#     -T BaseRecalibrator \
+#     -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
+#     -I ann29-neSD_nochr00_combined_dedup.bam \
+# 	-L HanXRQChr01 \
+#     -knownSites /clusterfs/vector/scratch/makman/Hubnerdata/Sariel_new_variant_calling/filtered/ordered/HanXRQ_filtered_ordered_newVC.vcf \
+#     -o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/tables/ann29-neSD_nochr00_combined_dedup.table
+# java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/tempor26/ -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
+#     -T BaseRecalibrator \
+#     -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
+#     -I ann44-ccCA_nochr00_combined_dedup.bam \
+# 	-L HanXRQChr01 \
+#     -knownSites /clusterfs/vector/scratch/makman/Hubnerdata/Sariel_new_variant_calling/filtered/ordered/HanXRQ_filtered_ordered_newVC.vcf \
+#     -o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/tables/ann44-ccCA_nochr00_combined_dedup.table
+# java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/tempor28/ -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
+#     -T BaseRecalibrator \
+#     -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
+#     -I PPN020_7_HanXRQ_nochr00_dedup.bam \
+# 	-L HanXRQChr01 \
+#     -knownSites /clusterfs/vector/scratch/makman/Hubnerdata/Sariel_new_variant_calling/filtered/ordered/HanXRQ_filtered_ordered_newVC.vcf \
+#     -o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/tables/PPN020_7_HanXRQ_nochr00_dedup.table
+# java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/tempor29/ -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
+#     -T BaseRecalibrator \
+#     -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
+#     -I PPN026_b_HanXRQ_nochr00_dedup.bam \
+# 	-L HanXRQChr01 \
+#     -knownSites /clusterfs/vector/scratch/makman/Hubnerdata/Sariel_new_variant_calling/filtered/ordered/HanXRQ_filtered_ordered_newVC.vcf \
+#     -o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/tables/PPN026_b_HanXRQ_nochr00_dedup.table
+# java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/tempor30/ -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
+#     -T BaseRecalibrator \
+#     -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
+#     -I PPN035_combined_dedup.bam \
+# 	-L HanXRQChr01 \
+#     -knownSites /clusterfs/vector/scratch/makman/Hubnerdata/Sariel_new_variant_calling/filtered/ordered/HanXRQ_filtered_ordered_newVC.vcf \
+#     -o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/tables/PPN035_combined_dedup.table
 java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/tempor31/ -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
     -T BaseRecalibrator \
     -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
@@ -148,20 +150,20 @@ java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/tempor31/ -Xmx32G -jar /c
 	-L HanXRQChr01 \
     -knownSites /clusterfs/vector/scratch/makman/Hubnerdata/Sariel_new_variant_calling/filtered/ordered/HanXRQ_filtered_ordered_newVC.vcf \
     -o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/tables/PPN069_16_HanXRQ_nochr00_dedup.table
-java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/tempor32/ -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
-    -T BaseRecalibrator \
-    -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
-    -I PPN072_19_HanXRQ_nochr00_dedup.bam \
-	-L HanXRQChr01 \
-    -knownSites /clusterfs/vector/scratch/makman/Hubnerdata/Sariel_new_variant_calling/filtered/ordered/HanXRQ_filtered_ordered_newVC.vcf \
-    -o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/tables/PPN072_19_HanXRQ_nochr00_dedup.table
-java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/tempor27/ -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
-    -T BaseRecalibrator \
-    -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
-    -I PI_531071_4d6_HanXRQ_nochr00_dedup.bam \
-	-L HanXRQChr01 \
-    -knownSites /clusterfs/vector/scratch/makman/Hubnerdata/Sariel_new_variant_calling/filtered/ordered/HanXRQ_filtered_ordered_newVC.vcf \
-    -o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/tables/PI_531071_4d6_HanXRQ_nochr00_dedup.table
+# java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/tempor32/ -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
+#     -T BaseRecalibrator \
+#     -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
+#     -I PPN072_19_HanXRQ_nochr00_dedup.bam \
+# 	-L HanXRQChr01 \
+#     -knownSites /clusterfs/vector/scratch/makman/Hubnerdata/Sariel_new_variant_calling/filtered/ordered/HanXRQ_filtered_ordered_newVC.vcf \
+#     -o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/tables/PPN072_19_HanXRQ_nochr00_dedup.table
+# java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/tempor27/ -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
+#     -T BaseRecalibrator \
+#     -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
+#     -I PI_531071_4d6_HanXRQ_nochr00_dedup.bam \
+# 	-L HanXRQChr01 \
+#     -knownSites /clusterfs/vector/scratch/makman/Hubnerdata/Sariel_new_variant_calling/filtered/ordered/HanXRQ_filtered_ordered_newVC.vcf \
+#     -o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/tables/PI_531071_4d6_HanXRQ_nochr00_dedup.table
 
 # java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/tempor1/ -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
 #     -T BaseRecalibrator \
