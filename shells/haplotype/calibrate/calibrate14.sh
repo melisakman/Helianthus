@@ -332,7 +332,7 @@ java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/tempor22/ -Xmx32G -jar /c
     -I PPN083_combined_dedup.bam \
     -BQSR /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/tables/PPN083_combined_dedup.table \
 	-o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/PPN083_combined_dedup_recab.bam
-java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/tempor22/ -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
+java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/tempor56/ -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
     -T PrintReads \
     -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
     -I ann01-cwIA_nochr00_combined_dedup.bam \
