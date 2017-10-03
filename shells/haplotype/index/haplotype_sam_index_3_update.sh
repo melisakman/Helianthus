@@ -11,11 +11,10 @@
 #SBATCH -e /clusterfs/vector/scratch/makman/haplotype_networks/outs/base_calibrate_index_3_u.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-#SBATCH --array=1-35
+#SBATCH --array=1-2
 
 module load samtools
-srun samtools index ann01-cwIA_nochr00_combined_dedup.bam ann01-cwIA_nochr00_combined_dedup.bai
-
+# srun samtools index ann01-cwIA_nochr00_combined_dedup.bam ann01-cwIA_nochr00_combined_dedup.bai
 # srun samtools index ann08-ceTN_3e9_nochr00_dedup.bam ann08-ceTN_3e9_nochr00_dedup.bai
 # srun samtools index ann22-nwTX_3ee_nochr00_dedup.bam ann22-nwTX_3ee_nochr00_dedup.bai
 # srun samtools index ann34-cwKS_3f5_nochr00_dedup.bam ann34-cwKS_3f5_nochr00_dedup.bai
@@ -50,11 +49,11 @@ srun samtools index ann01-cwIA_nochr00_combined_dedup.bam ann01-cwIA_nochr00_com
 # srun samtools index SF_33_177_HanXRQ_nochr00_dedup.bam SF_33_177_HanXRQ_nochr00_dedup.bai
 # srun samtools index PI_531071_4d6_HanXRQ_nochr00_dedup.bam PI_531071_4d6_HanXRQ_nochr00_dedup.bai
 # srun samtools index Anzac_Pueblo_combined_dedup.bam Anzac_Pueblo_combined_dedup.bai
-# srun samtools index Arikara_combined_dedup.bam Arikara_combined_dedup.bai
+srun samtools index Arikara_combined_dedup.bam Arikara_combined_dedup.bai
 # srun samtools index Havasupai_combined_dedup.bam Havasupai_combined_dedup.bai
 # srun samtools index Hidatsa1_combined_dedup.bam Hidatsa1_combined_dedup.bai
 # srun samtools index Hopi_combined_dedup.bam Hopi_combined_dedup.bai
-# srun samtools index Hopi_1_HanXRQ_nochr00_dedup.bam Hopi_1_HanXRQ_nochr00_dedup.bai
+srun samtools index Hopi_1_HanXRQ_nochr00_dedup.bam Hopi_1_HanXRQ_nochr00_dedup.bai
 # srun samtools index Laguna_Pueblo_combined_dedup.bam Laguna_Pueblo_combined_dedup.bai
 # srun samtools index Mandan2_combined_dedup.bam Mandan2_combined_dedup.bai
 # srun samtools index MexCult1_513_HanXRQ_nochr00_dedup.bam MexCult1_513_HanXRQ_nochr00_dedup.bai
