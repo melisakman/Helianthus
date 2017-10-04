@@ -7,8 +7,8 @@
 #SBATCH --nodes=1
 #SBATCH --time=20:00:00
 #SBATCH --mem=64000
-#SBATCH -o ../outs/calibrate_new_VC7.out
-#SBATCH -e ../outs/calibrate_new_VC7.err
+#SBATCH -o ../outs/calibrate_new_VC7u.out
+#SBATCH -e ../outs/calibrate_new_VC7u.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load java
@@ -157,30 +157,33 @@ module load java
 #     -I PPN173_3e_HanXRQ_nochr00_dedup.bam \
 #     -BQSR /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/tables/PPN173_3e_HanXRQ_nochr00_dedup.table \
 # 	-o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/PPN173_3e_HanXRQ_nochr00_dedup_recab.bam
-java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/tempor1/ -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
-    -T PrintReads \
-    -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
-    -I PPN179_40_HanXRQ_nochr00_dedup.bam \
-    -BQSR /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/tables/PPN179_40_HanXRQ_nochr00_dedup.table \
-	-o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/PPN179_40_HanXRQ_nochr00_dedup_recab.bam
-java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/tempor1/ -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
-    -T PrintReads \
-    -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
-    -I PPN185_44_HanXRQ_nochr00_dedup.bam \
-    -BQSR /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/tables/PPN185_44_HanXRQ_nochr00_dedup.table \
-	-o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/PPN185_44_HanXRQ_nochr00_dedup_recab.bam
-java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/tempor1/ -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
-    -T PrintReads \
-    -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
-    -I PPN191_46_HanXRQ_nochr00_dedup.bam \
-    -BQSR /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/tables/PPN191_46_HanXRQ_nochr00_dedup.table \
-	-o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/PPN191_46_HanXRQ_nochr00_dedup_recab.bam
+
+# java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/tempor1/ -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
+#     -T PrintReads \
+#     -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
+#     -I PPN179_40_HanXRQ_nochr00_dedup.bam \
+#     -BQSR /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/tables/PPN179_40_HanXRQ_nochr00_dedup.table \
+# 	-o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/PPN179_40_HanXRQ_nochr00_dedup_recab.bam
+# java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/tempor1/ -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
+#     -T PrintReads \
+#     -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
+#     -I PPN185_44_HanXRQ_nochr00_dedup.bam \
+#     -BQSR /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/tables/PPN185_44_HanXRQ_nochr00_dedup.table \
+# 	-o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/PPN185_44_HanXRQ_nochr00_dedup_recab.bam
+# java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/tempor1/ -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
+#     -T PrintReads \
+#     -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
+#     -I PPN191_46_HanXRQ_nochr00_dedup.bam \
+#     -BQSR /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/tables/PPN191_46_HanXRQ_nochr00_dedup.table \
+# 	-o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/PPN191_46_HanXRQ_nochr00_dedup_recab.bam
 java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/tempor1/ -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
     -T PrintReads \
     -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
     -I PPN203_2f4_HanXRQ_nochr00_dedup.bam \
     -BQSR /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/tables/PPN203_2f4_HanXRQ_nochr00_dedup.table \
 	-o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/PPN203_2f4_HanXRQ_nochr00_dedup_recab.bam
+
+
 # java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/tempor1/ -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
 #     -T PrintReads \
 #     -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
