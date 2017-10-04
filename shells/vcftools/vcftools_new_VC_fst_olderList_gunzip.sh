@@ -3,7 +3,7 @@
 #SBATCH -J gunzip
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
-#SBATCH --time=4:00:00
+#SBATCH --time=8:00:00
 #SBATCH -o /global/home/users/makman/vcftools/outs/vcftools_new_VC_fst15_gunzip.out
 #SBATCH -e /global/home/users/makman/vcftools/outs/vcftools_new_VC_fst15_gunzip.err
 #SBATCH --mail-user=makman@berkeley.edu
