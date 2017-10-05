@@ -16,19 +16,19 @@
 module load java
 
 
-java -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
-    -T BaseRecalibrator \
-    -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
-    -I HT360_SD1W-35.sort.dup.realign_nochr00_dedup_reGroups.bam \
-    -L HanXRQChr01 \
-    -knownSites /clusterfs/vector/scratch/makman/Hubnerdata/Sariel_new_variant_calling/filtered/ordered/HanXRQ_filtered_ordered_newVC.vcf \
-    -o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/tables/HT360_SD1W-35.sort.dup.realign_nochr00_dedup.table
+# java -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
+#     -T BaseRecalibrator \
+#     -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
+#     -I HT360_SD1W-35.sort.dup.realign_nochr00_dedup_reGroups.bam \
+#     -L HanXRQChr01 \
+#     -knownSites /clusterfs/vector/scratch/makman/Hubnerdata/Sariel_new_variant_calling/filtered/ordered/HanXRQ_filtered_ordered_newVC.vcf \
+#     -o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/tables/HT360_SD1W-35.sort.dup.realign_nochr00_dedup.table
 
 java -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
     -T PrintReads \
     -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
     -I HT360_SD1W-35.sort.dup.realign_nochr00_dedup_reGroups.bam \
     -BQSR /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/tables/HT360_SD1W-35.sort.dup.realign_nochr00_dedup.table \
-    -o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/HT360_SD1W-35.sort.dup.realign_nochr00_dedup_recal.bam
+    -o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/HT360_SD1W-35_dedup_recal.bam
 
 

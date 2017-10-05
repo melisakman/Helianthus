@@ -30,6 +30,6 @@ java -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/Genome
     -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
     -I HT211_MO1W-39.sort.dup.realign_nochr00_dedup_reGroups.bam \
     -BQSR /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/tables/HT211_MO1W-39.sort.dup.realign_nochr00_dedup.table \
-    -o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/HT211_MO1W-39.sort.dup.realign_nochr00_dedup_recal.bam
+    -o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/HT211_MO1W-39_dedup_recal.bam
 
 
