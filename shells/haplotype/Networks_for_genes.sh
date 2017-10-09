@@ -93,7 +93,7 @@ java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/temp2 -Xmx32G -jar /clust
    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_Hopi_1.g.vcf \
    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_Laguna_Pueblo.g.vcf \
    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_Mandan2.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_MexCult1.g.vcf \
+   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_MexCult1_513.g.vcf \
    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_MexCult14.g.vcf \
    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_MexCult15.g.vcf \
    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_MexCult3.g.vcf \
