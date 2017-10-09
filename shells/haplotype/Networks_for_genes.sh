@@ -195,8 +195,3 @@ java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/temp2 -Xmx32G -jar /clust
  
 done
 
-ann01-cwIA	ann04-nwAR	ann05-ccNM	ann06-seWY	ann08-ceTN	ann10-ccIL	ann20-seAZ	ann28-swSK	ann29-neSD	ann34-cwKS	ann39-ncNE	ann44-ccCA	annIA	annKS	annMAN	annNM	annWY	Anzac_Pueblo	Arikara	Havasupai	Hidatsa#1	Hopi	IA1W-1	IA2W-17	KS1W-27	KS2W-35	Laguna_Pueblo	Mandan#2	MB1W-40	MexCult14	MexCult15	MexCult1	MexCult3	MexCult6	MexCult7	MexCult9	MO1W-39	ND1W-6	PI_531071	PPN020	PPN026	PPN046	PPN069	PPN072	PPN083	PPN09PPN107	PPN153	PPN173	PPN179	PPN181	PPN185	PPN191	PPN203	PPN237	PPN240	PPN242	PPN255	PPN262	PPN285	Pueblo	SD1W-35	SD2W-18	Seneca	SF_33	SK1W-Zuni
-
-# 
-# #CHROM  POS     ID      REF     ALT     QUAL    FILTER  INFO    FORMAT  1       
-# Anzac_Pueblo    Arikara Havasupai       Hidatsa#1       Hopi    Laguna_Pueblo   Mandan#2        MexCult1        MexCult14       MexCult15       MexCult3        MexCult6        MexCult7        MexCult9        PI_531071       PPN020  PPN026  PPN035  PPN046  PPN069  PPN072  PPN083  PPN107  PPN153  PPN173  PPN179  PPN185  PPN191  PPN203  PPN237  PPN240  PPN255  PPN262  Pueblo  SF_33   Seneca  Zuni    ann01-cwIA      ann04-nwAR      ann05-ccNM      ann06-seWY      ann08-ceTN      ann10-ccIL      ann20-seAZ      ann22-nwTX      ann28-swSK      ann29-neSD      ann34-cwKS      ann39-ncNE      ann44-ccCA      annIA   annKS   annWY
