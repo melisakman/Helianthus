@@ -6,19 +6,20 @@
 #SBATCH --nodes=1
 #SBATCH --time=6:00:00
 #SBATCH --mem=48000
-#SBATCH -o /clusterfs/vector/scratch/makman/haplotype_networks/outs/filter_chr00_new_VC_11.out
-#SBATCH -e /clusterfs/vector/scratch/makman/haplotype_networks/outs/filter_chr00_new_VC_11.err
+#SBATCH -o /clusterfs/vector/scratch/makman/haplotype_networks/outs/filter_chr00_new_VC_11u.out
+#SBATCH -e /clusterfs/vector/scratch/makman/haplotype_networks/outs/filter_chr00_new_VC_11u.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
 module load samtools/1.3.1
-srun samtools view -b ann01-cwIA_3e2_HanXRQ.bam -L ./chr_group.txt > ann01-cwIA_3e2_nochr00.bam
-srun samtools view -b ann01-cwIA_3e3_HanXRQ.bam -L ./chr_group.txt > ann01-cwIA_3e3_nochr00.bam
-srun samtools view -b ann04-nwAR_3e4_HanXRQ.bam -L ./chr_group.txt > ann04-nwAR_3e4_nochr00.bam
-srun samtools view -b ann04-nwAR_3e5_HanXRQ.bam -L ./chr_group.txt > ann04-nwAR_3e5_nochr00.bam
+# srun samtools view -b ann01-cwIA_3e2_HanXRQ.bam -L ./chr_group.txt > ann01-cwIA_3e2_nochr00.bam
+# srun samtools view -b ann01-cwIA_3e3_HanXRQ.bam -L ./chr_group.txt > ann01-cwIA_3e3_nochr00.bam
+# srun samtools view -b ann04-nwAR_3e4_HanXRQ.bam -L ./chr_group.txt > ann04-nwAR_3e4_nochr00.bam
+# srun samtools view -b ann04-nwAR_3e5_HanXRQ.bam -L ./chr_group.txt > ann04-nwAR_3e5_nochr00.bam
+
 # srun samtools view -b ann05-ccNM_3e6_HanXRQ.bam -L ./chr_group.txt > ann05-ccNM_3e6_nochr00.bam
 # srun samtools view -b ann05-ccNM_3e7_HanXRQ.bam -L ./chr_group.txt > ann05-ccNM_3e7_nochr00.bam
-# srun samtools view -b ann06-seWY_3e8_HanXRQ.bam -L ./chr_group.txt > ann06-seWY_3e8_nochr00.bam
+srun samtools view -b ann06-seWY_3e8_HanXRQ.bam -L ./chr_group.txt > ann06-seWY_3e8_nochr00.bam
 # srun samtools view -b ann08-ceTN_3e9_HanXRQ.bam -L ./chr_group.txt > ann08-ceTN_3e9_nochr00.bam
 # srun samtools view -b ann10-ccIL_3ea_HanXRQ.bam -L ./chr_group.txt > ann10-ccIL_3ea_nochr00.bam
 # srun samtools view -b ann10-ccIL_3eb_HanXRQ.bam -L ./chr_group.txt > ann10-ccIL_3eb_nochr00.bam
