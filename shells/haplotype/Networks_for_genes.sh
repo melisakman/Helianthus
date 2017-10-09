@@ -4,7 +4,7 @@
 #SBATCH --job-name=haplo
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
-#SBATCH -D /clusterfs/vector/scratch/makman/haplotype_networks/bams/
+#SBATCH -D /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=20
 #SBATCH --time=72:00:00
