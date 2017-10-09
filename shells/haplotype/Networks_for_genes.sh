@@ -147,29 +147,29 @@ do
 ## This output file is filtered to just the SNPs and placed into the right directory 
 # 	srun vcftools --vcf /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_per_gene/${var_current_gene_name}_new_calls.vcf --recode --remove-indels --remove-filtered-all --minQ 50.0 --max-alleles 2 --out $var_current_gene_name
 
-  /clusterfs/vector/scratch/makman/bcftools/bcftools view --max-alleles 2 -O v /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/${var_current_gene_name}.recode.vcf | sed "s/##fileformat=VCFv4.2/##fileformat=VCFv4.1/" | sed "s/##FORMAT=<ID=AD,Number=R/##FORMAT=<ID=AD,Number=./" | sed "s/(//" | sed "s/)//" | sed "s/,Version=\"3\">/>/" | /clusterfs/vector/scratch/makman/bcftools/bcftools view -O v > /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_per_gene/${var_current_gene_name}.recode.vcf
-   mv ${var_current_gene_name}.recode.vcf /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_per_gene/${var_current_gene_name}.before_downgrade.vcf
-# 
+ #  /clusterfs/vector/scratch/makman/bcftools/bcftools view --max-alleles 2 -O v /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/${var_current_gene_name}.recode.vcf | sed "s/##fileformat=VCFv4.2/##fileformat=VCFv4.1/" | sed "s/##FORMAT=<ID=AD,Number=R/##FORMAT=<ID=AD,Number=./" | sed "s/(//" | sed "s/)//" | sed "s/,Version=\"3\">/>/" | /clusterfs/vector/scratch/makman/bcftools/bcftools view -O v > /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_per_gene/${var_current_gene_name}.recode.vcf
+#    mv ${var_current_gene_name}.recode.vcf /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_per_gene/${var_current_gene_name}.before_downgrade.vcf
+# # 
 # # doing read backed phasing sample by sample
 # # Make a loop to process each BAM file individually
-#  	for i in $( ls /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/*.bam ); do
-# 	 	Var_current_path=${i}
-#  		Var_current_file=`basename $Var_current_path`
-#  		Var_current_sample=${Var_current_file/_dedup_recal.bam/}
-# 
-# /clusterfs/vector/scratch/makman/haplotype_networks/jre1.7.0_80/bin/java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/temp3 -server -Xmx2g -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
-#       -T ReadBackedPhasing \
-#       -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
-#       -I /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/BAMs_for_gene/Reads_${var_current_gene_name}_${Var_current_sample}.bam \
-#       --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_per_gene/${var_current_gene_name}.recode.vcf \
-#       -o /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_readback/phased_${var_current_gene_name}_${Var_current_sample}.vcf \
-#       -L Current_gene_tested.bed \
-#        --min_base_quality_score 17 \
-#        --min_mapping_quality_score 20 \
-#        --phaseQualityThresh 20 \
-#       --sampleToPhase ${Var_current_sample} \
-#       -et NO_ET 
-# #       -K /global/home/users/nwales/programs/GenomeAnalysisTK-2.6-5-gba531bd/nathan.wales_berkeley.edu.key
+ 	for i in $( ls /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/*.bam ); do
+	 	Var_current_path=${i}
+ 		Var_current_file=`basename $Var_current_path`
+ 		Var_current_sample=${Var_current_file/_dedup_recal.bam/}
+
+/clusterfs/vector/scratch/makman/haplotype_networks/jre1.7.0_80/bin/java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/temp3 -server -Xmx2g -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
+      -T ReadBackedPhasing \
+      -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
+      -I /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/BAMs_for_gene/Reads_${var_current_gene_name}_${Var_current_sample}.bam \
+      --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_per_gene/${var_current_gene_name}.recode.vcf \
+      -o /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_readback/phased_${var_current_gene_name}_${Var_current_sample}.vcf \
+      -L Current_gene_tested.bed \
+       --min_base_quality_score 17 \
+       --min_mapping_quality_score 20 \
+       --phaseQualityThresh 20 \
+      --sampleToPhase ${Var_current_sample} \
+      -et NO_ET 
+#       -K /global/home/users/nwales/programs/GenomeAnalysisTK-2.6-5-gba531bd/nathan.wales_berkeley.edu.key
 # 	
 # 		# Compress vcf for merging with other files
 # 
