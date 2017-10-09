@@ -72,74 +72,74 @@ do
 	done
 
 ## Join the gVCF for the samples.  
-java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/temp2 -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
-   -T GenotypeGVCFs \
-   -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_HT013_SD2W-18.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_HT172_SK1W-Q.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_HT211_MO1W-39.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_HT254_KS1W-27.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_HT330_ND1W-6.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_HT360_SD1W-35.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_HT55_IA2W-17.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_Q075_IA1W-1.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_Q086_MB1W-40.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_QPG4_KS2W-35.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_Anzac_Pueblo.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_Arikara.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_Havasupai.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_Hidatsa1.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_Hopi.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_Hopi_1.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_Laguna_Pueblo.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_Mandan2.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_MexCult1_513.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_MexCult14.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_MexCult15.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_MexCult3.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_MexCult6.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_MexCult7.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_MexCult9.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_PI_531071_4d6.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_PPN020_7.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_PPN026_b.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_PPN035.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_PPN046_78.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_PPN069_16.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_PPN072_19.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_PPN083.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_PPN107_28.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_PPN153_34.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_PPN173_3e.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_PPN179_40.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_PPN185_44.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_PPN191_46.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_PPN203_2f4.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_PPN237_396.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_PPN240_397.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_PPN255_3ae.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_PPN262_3b7.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_Pueblo.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_SF_33_177.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_Seneca.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_Zuni.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_ann01-cwIA.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_ann04-nwAR.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_ann05-ccNM.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_ann08-ceTN_3e9.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_ann10-ccIL.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_ann20-seAZ.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_ann22-nwTX_3ee.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_ann28-swSK.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_ann29-neSD.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_ann34-cwKS_3f5.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_ann39-ncNE_3f6.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_ann44-ccCA.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_annIA_401.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_annKS_402.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_annNM_405.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_annWY_406.g.vcf \
-   -o  /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_per_gene/${var_current_gene_name}_new_calls.vcf
+# java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/temp2 -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
+#    -T GenotypeGVCFs \
+#    -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_HT013_SD2W-18.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_HT172_SK1W-Q.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_HT211_MO1W-39.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_HT254_KS1W-27.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_HT330_ND1W-6.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_HT360_SD1W-35.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_HT55_IA2W-17.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_Q075_IA1W-1.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_Q086_MB1W-40.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_QPG4_KS2W-35.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_Anzac_Pueblo.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_Arikara.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_Havasupai.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_Hidatsa1.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_Hopi.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_Hopi_1.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_Laguna_Pueblo.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_Mandan2.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_MexCult1_513.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_MexCult14.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_MexCult15.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_MexCult3.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_MexCult6.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_MexCult7.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_MexCult9.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_PI_531071_4d6.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_PPN020_7.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_PPN026_b.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_PPN035.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_PPN046_78.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_PPN069_16.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_PPN072_19.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_PPN083.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_PPN107_28.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_PPN153_34.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_PPN173_3e.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_PPN179_40.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_PPN185_44.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_PPN191_46.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_PPN203_2f4.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_PPN237_396.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_PPN240_397.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_PPN255_3ae.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_PPN262_3b7.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_Pueblo.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_SF_33_177.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_Seneca.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_Zuni.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_ann01-cwIA.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_ann04-nwAR.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_ann05-ccNM.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_ann08-ceTN_3e9.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_ann10-ccIL.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_ann20-seAZ.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_ann22-nwTX_3ee.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_ann28-swSK.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_ann29-neSD.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_ann34-cwKS_3f5.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_ann39-ncNE_3f6.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_ann44-ccCA.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_annIA_401.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_annKS_402.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_annNM_405.g.vcf \
+#    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_annWY_406.g.vcf \
+#    -o  /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_per_gene/${var_current_gene_name}_new_calls.vcf
 
 #  variant to be added above!!! /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_ann06-seWY.g.vcf \
 
@@ -147,40 +147,39 @@ java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/temp2 -Xmx32G -jar /clust
 ## This output file is filtered to just the SNPs and placed into the right directory 
 	srun vcftools --vcf /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_per_gene/${var_current_gene_name}_new_calls.vcf --recode --remove-indels --remove-filtered-all --minQ 50.0 --max-alleles 2 --out $var_current_gene_name
 
-  /clusterfs/vector/scratch/makman/bcftools/bcftools view --max-alleles 2 -O v /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/${var_current_gene_name}.recode.vcf | sed "s/##fileformat=VCFv4.2/##fileformat=VCFv4.1/" | sed "s/##FORMAT=<ID=AD,Number=R/##FORMAT=<ID=AD,Number=./" | sed "s/(//" | sed "s/)//" | sed "s/,Version=\"3\">/>/" | /clusterfs/vector/scratch/makman/bcftools/bcftools view -O v > /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_per_gene/${var_current_gene_name}.recode.vcf
-   mv ${var_current_gene_name}.recode.vcf /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_per_gene/${var_current_gene_name}.before_downgrade.vcf
-
-# doing read backed phasing sample by sample
-# Make a loop to process each BAM file individually
- 	for i in $( ls /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/*.bam ); do
-	 	Var_current_path=${i}
- 		Var_current_file=`basename $Var_current_path`
- 		Var_current_sample=${Var_current_file/_dedup_recal.bam/}
-#  		Var_current_sample= `basename $Var_current_file, ".sort.dup.realign_nochr00_dedup_recal.bam"`
-
-/clusterfs/vector/scratch/makman/haplotype_networks/jre1.7.0_80/bin/java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/temp3 -server -Xmx2g -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
-      -T ReadBackedPhasing \
-      -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
-      -I /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/BAMs_for_gene/Reads_${var_current_gene_name}_${Var_current_sample}.bam \
-      --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_per_gene/${var_current_gene_name}.recode.vcf \
-      -o /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_readback/phased_${var_current_gene_name}_${Var_current_sample}.vcf \
-      -L Current_gene_tested.bed \
-       --min_base_quality_score 17 \
-       --min_mapping_quality_score 20 \
-       --phaseQualityThresh 20 \
-      --sampleToPhase ${Var_current_sample} \
-      -et NO_ET 
-#       -K /global/home/users/nwales/programs/GenomeAnalysisTK-2.6-5-gba531bd/nathan.wales_berkeley.edu.key
-	
-		# Compress vcf for merging with other files
-
-		srun /clusterfs/vector/scratch/makman/tabix-0.2.6/bgzip -c /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_readback/phased_${var_current_gene_name}_${Var_current_sample}.vcf > /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_readback/phased_${var_current_gene_name}_${Var_current_sample}.vcf.gz 
-		srun /clusterfs/vector/scratch/makman/tabix-0.2.6/tabix -p vcf /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_readback/phased_${var_current_gene_name}_${Var_current_sample}.vcf.gz  
-
-	done
-
- 	srun vcf-merge /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_readback/phased_${var_current_gene_name}_*.vcf.gz  | ~/programs/tabix-0.2.6/bgzip -c > /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_final/merged_${var_current_gene_name}_phased.vcf.gz
-	srun /clusterfs/vector/scratch/makman/bcftools/bcftools reheader -o /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_final/renamed_${var_current_gene_name}_phased.vcf.gz -s /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/Scripts/Names_for_pegas.txt /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_final/merged_${var_current_gene_name}_phased.vcf.gz
+#   /clusterfs/vector/scratch/makman/bcftools/bcftools view --max-alleles 2 -O v /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/${var_current_gene_name}.recode.vcf | sed "s/##fileformat=VCFv4.2/##fileformat=VCFv4.1/" | sed "s/##FORMAT=<ID=AD,Number=R/##FORMAT=<ID=AD,Number=./" | sed "s/(//" | sed "s/)//" | sed "s/,Version=\"3\">/>/" | /clusterfs/vector/scratch/makman/bcftools/bcftools view -O v > /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_per_gene/${var_current_gene_name}.recode.vcf
+#    mv ${var_current_gene_name}.recode.vcf /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_per_gene/${var_current_gene_name}.before_downgrade.vcf
+# 
+# # doing read backed phasing sample by sample
+# # Make a loop to process each BAM file individually
+#  	for i in $( ls /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/*.bam ); do
+# 	 	Var_current_path=${i}
+#  		Var_current_file=`basename $Var_current_path`
+#  		Var_current_sample=${Var_current_file/_dedup_recal.bam/}
+# 
+# /clusterfs/vector/scratch/makman/haplotype_networks/jre1.7.0_80/bin/java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/temp3 -server -Xmx2g -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
+#       -T ReadBackedPhasing \
+#       -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
+#       -I /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/BAMs_for_gene/Reads_${var_current_gene_name}_${Var_current_sample}.bam \
+#       --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_per_gene/${var_current_gene_name}.recode.vcf \
+#       -o /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_readback/phased_${var_current_gene_name}_${Var_current_sample}.vcf \
+#       -L Current_gene_tested.bed \
+#        --min_base_quality_score 17 \
+#        --min_mapping_quality_score 20 \
+#        --phaseQualityThresh 20 \
+#       --sampleToPhase ${Var_current_sample} \
+#       -et NO_ET 
+# #       -K /global/home/users/nwales/programs/GenomeAnalysisTK-2.6-5-gba531bd/nathan.wales_berkeley.edu.key
+# 	
+# 		# Compress vcf for merging with other files
+# 
+# 		srun /clusterfs/vector/scratch/makman/tabix-0.2.6/bgzip -c /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_readback/phased_${var_current_gene_name}_${Var_current_sample}.vcf > /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_readback/phased_${var_current_gene_name}_${Var_current_sample}.vcf.gz 
+# 		srun /clusterfs/vector/scratch/makman/tabix-0.2.6/tabix -p vcf /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_readback/phased_${var_current_gene_name}_${Var_current_sample}.vcf.gz  
+# 
+# 	done
+# 
+#  	srun vcf-merge /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_readback/phased_${var_current_gene_name}_*.vcf.gz  | ~/programs/tabix-0.2.6/bgzip -c > /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_final/merged_${var_current_gene_name}_phased.vcf.gz
+# 	srun /clusterfs/vector/scratch/makman/bcftools/bcftools reheader -o /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_final/renamed_${var_current_gene_name}_phased.vcf.gz -s /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/Scripts/Names_for_pegas.txt /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_final/merged_${var_current_gene_name}_phased.vcf.gz
  
  	# Run pegas in R on the files and make PDFs
  	# Rscript --vanilla /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/Scripts/Pegas_on_VCF.R $var_current_gene_name renamed_${var_current_gene_name}_phased.vcf.gz
