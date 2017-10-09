@@ -55,7 +55,7 @@ do
 	Var_current_path=${i}
 	Var_current_file=`basename $Var_current_path`
 	Var_current_sample=${Var_current_file/_dedup_recal.bam/}
-	echo Var_current_sample
+	print $Var_current_sample
 	
 	# srun samtools view -hb -@ 19 $Var_current_path ${var_current_gene_chr}:${var_lower_flanking}-${var_upper_flanking} -o ../Haplo_by_gene/BAMs_for_gene/Reads_${var_current_gene_name}_${Var_current_sample}.bam
 # 	srun samtools index ../Haplo_by_gene/BAMs_for_gene/Reads_${var_current_gene_name}_${Var_current_sample}.bam
