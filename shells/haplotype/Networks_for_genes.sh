@@ -169,7 +169,7 @@ do
        --phaseQualityThresh 20 \
       --sampleToPhase ${Var_current_sample} \
       -et NO_ET 
-      -K /clusterfs/vector/scratch/makman/GenomeAnalysisTK-2.8-1-g932cd3a/gsamembers_broadinstitute.org.key
+      -K /clusterfs/vector/scratch/makman/GenomeAnalysisTK-2.8-1-g932cd3a/makman.key
 # 	
 # 		# Compress vcf for merging with other files
 # 
