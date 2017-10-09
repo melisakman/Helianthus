@@ -6,8 +6,8 @@
 #SBATCH --nodes=1
 #SBATCH --time=10:00:00
 #SBATCH --mem=48000
-#SBATCH -o /clusterfs/vector/scratch/makman/haplotype_networks/outs/filter_chr00_new_VC_16.out
-#SBATCH -e /clusterfs/vector/scratch/makman/haplotype_networks/outs/filter_chr00_new_VC_16.err
+#SBATCH -o /clusterfs/vector/scratch/makman/haplotype_networks/outs/filter_chr00_new_VC_16u.out
+#SBATCH -e /clusterfs/vector/scratch/makman/haplotype_networks/outs/filter_chr00_new_VC_16u.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
@@ -35,6 +35,6 @@ module load samtools/1.3.1
 
 # srun samtools view -b ann44-ccCA_3f9_HanXRQ.bam -L ./chr_group.txt > ann44-ccCA_3f9_nochr00.bam
 # srun samtools view -b annIA_401_HanXRQ.bam -L ./chr_group.txt > annIA_401_nochr00.bam
-srun samtools view -b annKS_402_HanXRQ.bam -L ./chr_group.txt > annKS_402_nochr00.bam
+# srun samtools view -b annKS_402_HanXRQ.bam -L ./chr_group.txt > annKS_402_nochr00.bam
 # srun samtools view -b annNM_405_HanXRQ.bam -L ./chr_group.txt > annNM_405_nochr00.bam
-# srun samtools view -b annWY_406_HanXRQ.bam -L ./chr_group.txt > annWY_406_nochr00.bam
+srun samtools view -b annWY_406_HanXRQ.bam -L ./chr_group.txt > annWY_406_nochr00.bam
