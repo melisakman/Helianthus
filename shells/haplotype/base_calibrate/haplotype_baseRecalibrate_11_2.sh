@@ -11,7 +11,6 @@
 #SBATCH -e ../outs/base_calibrate_chr00_new_VC11_2.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-#SBATCH --array=1-3
 module load java
 
 # java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/tempor1/ -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
