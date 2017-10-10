@@ -14,15 +14,15 @@
 #SBATCH --array=1-1
 
 module load samtools
-srun samtools index ann01-cwIA_nochr00_combined_dedup.bam ann01-cwIA_nochr00_combined_dedup.bai
+# srun samtools index ann01-cwIA_nochr00_combined_dedup.bam ann01-cwIA_nochr00_combined_dedup.bai
 # srun samtools index ann08-ceTN_3e9_nochr00_dedup.bam ann08-ceTN_3e9_nochr00_dedup.bai
 # srun samtools index ann22-nwTX_3ee_nochr00_dedup.bam ann22-nwTX_3ee_nochr00_dedup.bai
 # srun samtools index ann34-cwKS_3f5_nochr00_dedup.bam ann34-cwKS_3f5_nochr00_dedup.bai
 # srun samtools index ann39-ncNE_3f6_nochr00_dedup.bam ann39-ncNE_3f6_nochr00_dedup.bai
 # srun samtools index annIA_401_nochr00_dedup.bam annIA_401_nochr00_dedup.bai
 # srun samtools index annKS_402_nochr00_dedup.bam annKS_402_nochr00_dedup.bai
-# srun samtools index annNM_405_nochr00_dedup.bam annNM_405_nochr00_dedup.bai
-# srun samtools index annWY_406_nochr00_dedup.bam annWY_406_nochr00_dedup.bai
+srun samtools index annNM_405_nochr00_dedup.bam annNM_405_nochr00_dedup.bai
+srun samtools index annWY_406_nochr00_dedup.bam annWY_406_nochr00_dedup.bai
 # srun samtools index ann04-nwAR_nochr00_combined_dedup.bam ann04-nwAR_nochr00_combined_dedup.bai
 # srun samtools index ann05-ccNM_nochr00_combined_dedup.bam ann05-ccNM_nochr00_combined_dedup.bai
 # srun samtools index ann10-ccIL_nochr00_combined_dedup.bam ann10-ccIL_nochr00_combined_dedup.bai
