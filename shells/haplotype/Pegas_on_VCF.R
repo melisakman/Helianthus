@@ -1,9 +1,9 @@
 #!/usr/bin/env Rscript
 args = commandArgs(trailingOnly=TRUE)
-lib = "/clusterfs/vector/scratch/makman/Rpackages/"
+# lib = "/clusterfs/vector/scratch/makman/Rpackages/"
 gene <- args[1]
 VCF_file <- args[2]
-install.packages("pegas")
+# install.packages("pegas")
 library(pegas)
 library(vcfR)
 
