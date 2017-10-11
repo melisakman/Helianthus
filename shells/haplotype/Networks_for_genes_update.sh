@@ -20,7 +20,7 @@
 
 export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
 echo $PATH
-export PATH=/clusterfs/vector/scratch/makman/tabix-0.2.6/
+export PATH=/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/global/home/groups/allhands/bin:/global/home/users/makman/bin:/global/home/users/makman/angsd/liblzma/:/global/home/users/makman/angsd/liblzma/include/lzma/:/clusterfs/vector/scratch/makman/tabix-0.2.6/
 echo $PATH
 module load samtools/1.3.1
 module load vcftools/0.1.13
