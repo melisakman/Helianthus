@@ -68,7 +68,7 @@ do
 #      --dbsnp /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_per_gene/${var_current_gene_name}_original.vcf \
 #      -o /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_${Var_current_sample}.g.vcf
 
-# 	done
+	done
 # echo evren
 # Join the gVCF for the samples.  
 # java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/temp2 -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
