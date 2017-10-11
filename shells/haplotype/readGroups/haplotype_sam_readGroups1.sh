@@ -3,7 +3,7 @@
 #SBATCH --job-name=base_calib
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
-#SBATCH -D /clusterfs/vector/scratch/makman/haplotype_networks/bams/
+#SBATCH -D /clusterfs/vector/scratch/makman/haplotype_networks/bams/eski
 #SBATCH --nodes=1
 #SBATCH --time=24:00:00
 #SBATCH --mem=32000
