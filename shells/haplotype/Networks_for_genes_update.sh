@@ -164,7 +164,7 @@ do
 # # 
 # 	done
 # # 
- 	srun vcf-merge /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_readback/phased_${var_current_gene_name}_*.vcf.gz  | /clusterfs/vector/scratch/makman/tabix-0.2.6/bgzip -c > /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_final/merged_${var_current_gene_name}_phased.vcf.gz
+ 	srun vcf-merge /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_readback/phased_${var_current_gene_name}_*.vcf  | /clusterfs/vector/scratch/makman/tabix-0.2.6/bgzip -c > /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_final/merged_${var_current_gene_name}_phased.vcf.gz
 	srun /clusterfs/vector/scratch/makman/bcftools/bcftools reheader -o /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_final/renamed_${var_current_gene_name}_phased.vcf.gz -s /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/Scripts/Names_for_pegas.txt /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_final/merged_${var_current_gene_name}_phased.vcf.gz
 #  
 #  	# Run pegas in R on the files and make PDFs
