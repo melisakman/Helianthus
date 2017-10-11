@@ -37,5 +37,5 @@ module load samtools/1.3.1
 # srun samtools view -b annKS_402_HanXRQ.bam -L ./chr_group.txt > annKS_402_nochr00.bam
 # srun samtools view -b annMAN_403_HanXRQ.bam -L ./chr_group.txt > annMAN_403_nochr00.bam
 
-# srun samtools view -b annNM_405_HanXRQ.bam -L ./chr_group.txt > annNM_405_nochr00.bam
-srun samtools view -b annWY_406_HanXRQ.bam -L ./chr_group.txt > annWY_406_nochr00.bam
+srun samtools view -b annNM_405_HanXRQ.bam -L ./chr_group.txt > annNM_405_nochr00.bam
+# srun samtools view -b annWY_406_HanXRQ.bam -L ./chr_group.txt > annWY_406_nochr00.bam
