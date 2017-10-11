@@ -3,7 +3,7 @@ args = commandArgs(trailingOnly=TRUE)
 
 gene <- args[1]
 VCF_file <- args[2]
-
+install.packages(pegas)
 library(pegas)
 library(vcfR)
 
