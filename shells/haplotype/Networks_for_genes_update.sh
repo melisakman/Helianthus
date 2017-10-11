@@ -74,16 +74,6 @@ do
 java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/temp2 -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
    -T GenotypeGVCFs \
    -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_SD2W-18.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_SK1W-Q.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_MO1W-39.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_KS1W-27.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_ND1W-6.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_SD1W-35.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_IA2W-17.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_IA1W-1.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_MB1W-40.g.vcf \
-   --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_KS2W-35.g.vcf \
    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_Anzac_Pueblo.g.vcf \
    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_Arikara.g.vcf \
    --variant /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/gVCF_samples/raw.snps.indels_${var_current_gene_name}_Havasupai.g.vcf \
@@ -148,7 +138,7 @@ java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/temp2 -Xmx32G -jar /clust
 # # 
 # # doing read backed phasing sample by sample
 # # Make a loop to process each BAM file individually
- 	for i in $( ls /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/*1W*.bam ); do
+ 	for i in $( ls /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/*2W*.bam ); do
 	 	Var_current_path=${i}
  		Var_current_file=`basename $Var_current_path`
  		Var_current_sample=${Var_current_file/_dedup_recal.bam/}
@@ -169,18 +159,18 @@ java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/temp2 -Xmx32G -jar /clust
 # 	
 # # 		# Compress vcf for merging with other files
 # # 
-# 		srun /clusterfs/vector/scratch/makman/tabix-0.2.6/bgzip -c /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_readback/phased_${var_current_gene_name}_${Var_current_sample}.vcf > /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_readback/phased_${var_current_gene_name}_${Var_current_sample}.vcf.gz 
-#  		srun /clusterfs/vector/scratch/makman/tabix-0.2.6/tabix -p vcf /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_readback/phased_${var_current_gene_name}_${Var_current_sample}.vcf.gz  
+		srun /clusterfs/vector/scratch/makman/tabix-0.2.6/bgzip -c /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_readback/phased_${var_current_gene_name}_${Var_current_sample}.vcf > /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_readback/phased_${var_current_gene_name}_${Var_current_sample}.vcf.gz 
+ 		srun /clusterfs/vector/scratch/makman/tabix-0.2.6/tabix -p vcf /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_readback/phased_${var_current_gene_name}_${Var_current_sample}.vcf.gz  
 # # 
 	done
 # # 
-#  	srun vcf-merge /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_readback/phased_${var_current_gene_name}_*.vcf.gz  | ~/programs/tabix-0.2.6/bgzip -c > /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_final/merged_${var_current_gene_name}_phased.vcf.gz
-# 	srun /clusterfs/vector/scratch/makman/bcftools/bcftools reheader -o /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_final/renamed_${var_current_gene_name}_phased.vcf.gz -s /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/Scripts/Names_for_pegas.txt /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_final/merged_${var_current_gene_name}_phased.vcf.gz
+ 	srun vcf-merge /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_readback/phased_${var_current_gene_name}_*.vcf.gz  | ~/programs/tabix-0.2.6/bgzip -c > /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_final/merged_${var_current_gene_name}_phased.vcf.gz
+	srun /clusterfs/vector/scratch/makman/bcftools/bcftools reheader -o /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_final/renamed_${var_current_gene_name}_phased.vcf.gz -s /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/Scripts/Names_for_pegas.txt /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_final/merged_${var_current_gene_name}_phased.vcf.gz
 #  
 #  	# Run pegas in R on the files and make PDFs
-#  	Rscript --vanilla /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/Scripts/Pegas_on_VCF.R $var_current_gene_name renamed_${var_current_gene_name}_phased.vcf.gz
+ 	Rscript --vanilla /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/Scripts/Pegas_on_VCF.R $var_current_gene_name renamed_${var_current_gene_name}_phased.vcf.gz
 # #  	
-#  	gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=/clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/Network_plots/${var_current_gene_name}_networks.pdf /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_final/HapNet_${var_current_gene_name}*.pdf
+ 	gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=/clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/Network_plots/${var_current_gene_name}_networks.pdf /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_final/HapNet_${var_current_gene_name}*.pdf
 #  	#rm  /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_final/HapNet_${var_current_gene_name}*.pdf 
 #  	rm Current_gene_tested.bed
 	#rm /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_final/merged_${var_current_gene_name}_phased.vcf.gz
