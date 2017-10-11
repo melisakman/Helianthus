@@ -51,14 +51,14 @@ do
 #  	mv ${var_current_gene_name}_original.recode.vcf /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_per_gene/${var_current_gene_name}_original.vcf
 
 	# Make a loop to process each BAM file individually
-	# for i in $( ls /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/*.bam ); do
-# 	Var_current_path=${i}
-# 	Var_current_file=`basename $Var_current_path`
-# 	Var_current_sample=${Var_current_file/_dedup_recal.bam/}
+	for i in $( ls /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/*1W*.bam ); do
+	Var_current_path=${i}
+	Var_current_file=`basename $Var_current_path`
+	Var_current_sample=${Var_current_file/_dedup_recal.bam/}
 # 	echo $Var_current_sample
 # 	
 # 	srun samtools view -hb -@ 19 $Var_current_path ${var_current_gene_chr}:${var_lower_flanking}-${var_upper_flanking} -o ../Haplo_by_gene/BAMs_for_gene/Reads_${var_current_gene_name}_${Var_current_sample}.bam
-# 	srun samtools index ../Haplo_by_gene/BAMs_for_gene/Reads_${var_current_gene_name}_${Var_current_sample}.bam
+	srun samtools index ../Haplo_by_gene/BAMs_for_gene/Reads_${var_current_gene_name}_${Var_current_sample}.bam
 # 
 # java -Djava.io.tmpdir=/clusterfs/vector/scratch/makman/temp1 -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
 #      -T HaplotypeCaller \
