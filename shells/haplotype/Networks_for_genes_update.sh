@@ -19,6 +19,8 @@
 ## New SNPs are called using just the reads for the gene 
 
 export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
+mpiexec /clusterfs/vector/scratch/makman/tabix-0.2.6/
+
 module load samtools/1.3.1
 module load vcftools/0.1.13
 
