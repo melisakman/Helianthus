@@ -19,17 +19,17 @@ module load java
 java -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
     -T BaseRecalibrator \
     -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
-    -I QPG4_KS2W-35.sort.dup.realign_nochr00_dedup_reGroups.bam \
+    -I annNM_405_nochr00_dedup.bam \
     -L HanXRQChr01 \
     -knownSites /clusterfs/vector/scratch/makman/Hubnerdata/Sariel_new_variant_calling/filtered/ordered/HanXRQ_filtered_ordered_newVC.vcf \
-    -o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/tables/QPG4_KS2W-35.sort.dup.realign_nochr00_dedup.table
+    -o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/tables/annNM_405_nochr00_dedup.table
 
 java -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
     -T PrintReads \
     -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
-    -I QPG4_KS2W-35.sort.dup.realign_nochr00_dedup_reGroups.bam \
-    -BQSR /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/tables/QPG4_KS2W-35.sort.dup.realign_nochr00_dedup.table \
-    -o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/QPG4_KS2W-35.sort.dup.realign_nochr00_dedup_recal.bam
+    -I annNM_405_nochr00_dedup.bam \
+    -BQSR /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/tables/annNM_405_nochr00_dedup.table \
+    -o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/annNM_405_nochr00_dedup_recal.bam
 
 
 
