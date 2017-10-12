@@ -8,7 +8,7 @@
 #SBATCH --time=8:00:00
 #SBATCH --mem=48000
 #SBATCH -o ../outs/base_calibrate_chr00_new_VC10.out
-#SBATCH -e ../outs/base_calibrate_chr00_new_VC10.err
+#SBATCH -e /clusterfs/vector/scratch/makman/haplotype_networks/outs/base_calibrate_chr00_new_VC10.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
@@ -18,6 +18,7 @@ module load java
 
 java -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
     -T BaseRecalibrator \
+    --fix_misencoded_quality_scores \
     -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
     -I annNM_405_nochr00_dedup.bam \
     -L HanXRQChr01 \
