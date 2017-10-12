@@ -19,7 +19,7 @@ module load picard
 # java -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar AddOrReplaceReadGroups I=SD1W-35_dedup.bam O=SD1W-35_dedup_reGroups.bam RGPL=Illumina RGPU=2.2 RGLB=B RGSM=SD1W-35
 # java -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar AddOrReplaceReadGroups I=SK1W-Q_dedup.bam O=SK1W-Q_dedup_reGroups.bam RGPL=Illumina RGPU=3.3 RGLB=C RGSM=SK1W-Q
 # java -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar AddOrReplaceReadGroups I=IA2W-17_dedup.bam O=IA2W-17_dedup_reGroups.bam RGPL=Illumina RGPU=4.4 RGLB=D RGSM=IA2W-17
-java -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar AddOrReplaceReadGroups I=MO1W-39_dedup.bam O=MO1W-39_dedup_reGroups.bam RGPL=Illumina RGPU=5.5 RGLB=E RGSM=MO1W-39
+# java -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar AddOrReplaceReadGroups I=MO1W-39_dedup.bam O=MO1W-39_dedup_reGroups.bam RGPL=Illumina RGPU=5.5 RGLB=E RGSM=MO1W-39
 java -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar AddOrReplaceReadGroups I=IA1W-1_dedup.bam O=QIA1W-1_dedup_reGroups.bam RGPL=Illumina RGPU=6.6 RGLB=F RGSM=IA1W-1
 # java -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar AddOrReplaceReadGroups I=KS1W-27_dedup.bam O=KS1W-27_dedup_reGroups.bam RGPL=Illumina RGPU=7.7 RGLB=G RGSM=KS1W-27
 # java -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar AddOrReplaceReadGroups I=MB1W-40_dedup.bam O=MB1W-40_dedup_reGroups.bam RGPL=Illumina RGPU=8.8 RGLB=H RGSM=MB1W-40
