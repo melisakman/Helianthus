@@ -7,8 +7,8 @@
 #SBATCH -D /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene
 #SBATCH --time=72:00:00
 #SBATCH --mem=32000
-#SBATCH -o /clusterfs/vector/scratch/makman/haplotype_networks/outs/haplotypes_new_VC.out
-#SBATCH -e /clusterfs/vector/scratch/makman/haplotype_networks/outs/haplotypes_new_VC.err
+#SBATCH -o /clusterfs/vector/scratch/makman/haplotype_networks/outs/haplotypes_new_VC_u.out
+#SBATCH -e /clusterfs/vector/scratch/makman/haplotype_networks/outs/haplotypes_new_VC_.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
