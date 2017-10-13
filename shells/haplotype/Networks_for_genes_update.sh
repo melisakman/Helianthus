@@ -51,7 +51,7 @@ do
 #  	mv ${var_current_gene_name}_original.recode.vcf /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_per_gene/${var_current_gene_name}_original.vcf
 
 	# Make a loop to process each BAM file individually
-	for i in $( ls /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/*annNM*.bam ); do
+	for i in $( ls /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/*2W*.bam ); do
 	Var_current_path=${i}
 	Var_current_file=`basename $Var_current_path`
 	Var_current_sample=${Var_current_file/_dedup_recal.bam/}
