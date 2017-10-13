@@ -16,14 +16,14 @@
 module load java
 
 
-java -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
-    -T BaseRecalibrator \
-    -R ../HanXRQr1.0-20151230_no_Chr00.fasta \
-    -I SD2W-18_dedup_reGroups.bam \
-    -L HanXRQChr01 \
-    -knownSites /clusterfs/vector/scratch/makman/Hubnerdata/Sariel_new_variant_calling/filtered/ordered/HanXRQ_filtered_ordered_newVC.vcf \
-    -o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/tables/SD2W-18_dedup.table
-
+# java -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
+#     -T BaseRecalibrator \
+#     -R ../HanXRQr1.0-20151230_no_Chr00.fasta \
+#     -I SD2W-18_dedup_reGroups.bam \
+#     -L HanXRQChr01 \
+#     -knownSites /clusterfs/vector/scratch/makman/Hubnerdata/Sariel_new_variant_calling/filtered/ordered/HanXRQ_filtered_ordered_newVC.vcf \
+#     -o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/tables/SD2W-18_dedup.table
+# 
 java -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
     -T PrintReads \
     -R ../HanXRQr1.0-20151230_no_Chr00.fasta \

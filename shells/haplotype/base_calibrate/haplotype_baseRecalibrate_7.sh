@@ -16,13 +16,13 @@
 module load java
 
 
-java -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
-    -T BaseRecalibrator \
-    -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
-    -I KS1W-27_dedup_reGroups.bam \
-    -L HanXRQChr01 \
-    -knownSites /clusterfs/vector/scratch/makman/Hubnerdata/Sariel_new_variant_calling/filtered/ordered/HanXRQ_filtered_ordered_newVC.vcf \
-    -o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/tables/KS1W-27_dedup.table
+# java -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
+#     -T BaseRecalibrator \
+#     -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta \
+#     -I KS1W-27_dedup_reGroups.bam \
+#     -L HanXRQChr01 \
+#     -knownSites /clusterfs/vector/scratch/makman/Hubnerdata/Sariel_new_variant_calling/filtered/ordered/HanXRQ_filtered_ordered_newVC.vcf \
+#     -o /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/tables/KS1W-27_dedup.table
 
 java -Xmx32G -jar /clusterfs/vector/scratch/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
     -T PrintReads \
