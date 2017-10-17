@@ -47,8 +47,8 @@ do
 	var_upper_flanking=`expr $var_current_gene_end + 200`
 	
 	# Make VCF file for gene to speed things up 
-# 	srun vcftools --vcf /clusterfs/vector/scratch/makman/Hubnerdata/Sariel_new_variant_calling/filtered/ordered/HanXRQ_filtered_ordered_newVC.vcf --chr $var_current_gene_chr --from-bp $var_current_gene_start --to-bp $var_current_gene_end --recode --out ${var_current_gene_name}_original
-#  	mv ${var_current_gene_name}_original.recode.vcf /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_per_gene/${var_current_gene_name}_original.vcf
+	srun vcftools --vcf /clusterfs/vector/scratch/makman/Hubnerdata/Sariel_new_variant_calling/filtered/ordered/HanXRQ_filtered_ordered_newVC.vcf --chr $var_current_gene_chr --from-bp $var_current_gene_start --to-bp $var_current_gene_end --recode --out ${var_current_gene_name}_original
+ 	mv ${var_current_gene_name}_original.recode.vcf /clusterfs/vector/scratch/makman/haplotype_networks/Haplo_by_gene/VCF_per_gene/${var_current_gene_name}_original.vcf
 
 	# Make a loop to process each BAM file individually
 	for i in $( ls /clusterfs/vector/scratch/makman/haplotype_networks/bams/bam_recal/*2W*.bam ); do
