@@ -11,13 +11,13 @@
 #SBATCH --mail-type=All
 #SBATCH --array=1-10
 module load vcftools/0.1.15
-vcftools --vcf Plastome_for_Pegas_Q30.vcf --keep wd_list.txt --site-pi --out wd_pi_cp
-vcftools --vcf Plastome_for_Pegas_Q30.vcf --keep lr_list.txt --site-pi --out lr_pi_cp
-vcftools --vcf Plastome_for_Pegas_Q30.vcf --keep ethno_list.txt --site-pi --out ethno_pi_cp
-vcftools --vcf Plastome_for_Pegas_Q30.vcf --keep archeo_list.txt --site-pi --out archeo_pi_cp
-vcftools --vcf Plastome_for_Pegas_Q30.vcf --keep cv_list.txt --site-pi --out cv_pi_cp
-vcftools --vcf Mito_for_Pegas_Q30.vcf --keep wd_list.txt --site-pi --out wd_pi_mt
-vcftools --vcf Mito_for_Pegas_Q30.vcf --keep lr_list.txt --site-pi --out lr_pi_mt
-vcftools --vcf Mito_for_Pegas_Q30.vcf --keep ethno_list.txt --site-pi --out ethno_pi_mt
-vcftools --vcf Mito_for_Pegas_Q30.vcf --keep archeo_list.txt --site-pi --out archeo_pi_mt
-vcftools --vcf Mito_for_Pegas_Q30.vcf --keep cv_list.txt --site-pi --out cv_pi_mt
+vcftools --vcf Plastome_for_Pegas_Q30.vcf --keep wd_list.txt --site-pi --haploid --out wd_pi_cp
+vcftools --vcf Plastome_for_Pegas_Q30.vcf --keep lr_list.txt --site-pi --haploid --out lr_pi_cp
+vcftools --vcf Plastome_for_Pegas_Q30.vcf --keep ethno_list.txt --site-pi --haploid --out ethno_pi_cp
+vcftools --vcf Plastome_for_Pegas_Q30.vcf --keep archeo_list.txt --site-pi --haploid --out archeo_pi_cp
+vcftools --vcf Plastome_for_Pegas_Q30.vcf --keep cv_list.txt --site-pi --haploid --out cv_pi_cp
+vcftools --vcf Mito_for_Pegas_Q30.vcf --keep wd_list.txt --site-pi --haploid --out wd_pi_mt
+vcftools --vcf Mito_for_Pegas_Q30.vcf --keep lr_list.txt --site-pi --haploid --out lr_pi_mt
+vcftools --vcf Mito_for_Pegas_Q30.vcf --keep ethno_list.txt --site-pi --haploid --out ethno_pi_mt
+vcftools --vcf Mito_for_Pegas_Q30.vcf --keep archeo_list.txt --site-pi --haploid --out archeo_pi_mt
+vcftools --vcf Mito_for_Pegas_Q30.vcf --keep cv_list.txt --site-pi --haploid --out cv_pi_mt
