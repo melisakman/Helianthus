@@ -11,13 +11,13 @@
 #SBATCH --mail-type=All
 #SBATCH --array=1-10
 module load vcftools/0.1.13
-vcftools --vcf Plastome_for_Pegas_Q30.vcf --minQ 40 --minDP 2 --maxDP 25 --keep wd_list.txt --max-missing 0.3 --site-pi --out wd_pi_cp
-vcftools --vcf Plastome_for_Pegas_Q30.vcf --minQ 40 --minDP 2 --maxDP 25 --keep lr_list.txt --max-missing 0.3 --site-pi --out lr_pi_cp
-vcftools --vcf Plastome_for_Pegas_Q30.vcf --minQ 40 --minDP 2 --maxDP 25 --keep ethno_list.txt --max-missing 0.3 --site-pi --out ethno_pi_cp
-vcftools --vcf Plastome_for_Pegas_Q30.vcf --minQ 40 --minDP 2 --maxDP 25 --keep archeo_list.txt --max-missing 0.3 --site-pi --out archeo_pi_cp
-vcftools --vcf Plastome_for_Pegas_Q30.vcf --minQ 40 --minDP 2 --maxDP 25 --keep cv_list.txt --max-missing 0.3 --site-pi --out cv_pi_cp
-vcftools --vcf Mito_for_Pegas_Q30.vcf --minQ 40 --minDP 2 --maxDP 25 --keep wd_list.txt --max-missing 0.3 --site-pi --out wd_pi_mt
-vcftools --vcf Mito_for_Pegas_Q30.vcf --minQ 40 --minDP 2 --maxDP 25 --keep lr_list.txt --max-missing 0.3 --site-pi --out lr_pi_mt
-vcftools --vcf Mito_for_Pegas_Q30.vcf --minQ 40 --minDP 2 --maxDP 25 --keep ethno_list.txt --max-missing 0.3 --site-pi --out ethno_pi_mt
-vcftools --vcf Mito_for_Pegas_Q30.vcf --minQ 40 --minDP 2 --maxDP 25 --keep archeo_list.txt --max-missing 0.3 --site-pi --out archeo_pi_mt
-vcftools --vcf Mito_for_Pegas_Q30.vcf --minQ 40 --minDP 2 --maxDP 25 --keep cv_list.txt --max-missing 0.3 --site-pi --out cv_pi_mt
+vcftools --vcf Plastome_for_Pegas_Q30.vcf --minQ 40 --minDP 2 --maxDP 25 --keep wd_list.txt --max-missing 0.3 --window-pi 10000 --out wd_pi_cp
+vcftools --vcf Plastome_for_Pegas_Q30.vcf --minQ 40 --minDP 2 --maxDP 25 --keep lr_list.txt --max-missing 0.3 --window-pi 10000 --out lr_pi_cp
+vcftools --vcf Plastome_for_Pegas_Q30.vcf --minQ 40 --minDP 2 --maxDP 25 --keep ethno_list.txt --max-missing 0.3 --window-pi 10000 --out ethno_pi_cp
+vcftools --vcf Plastome_for_Pegas_Q30.vcf --minQ 40 --minDP 2 --maxDP 25 --keep archeo_list.txt --max-missing 0.3 --window-pi 10000 --out archeo_pi_cp
+vcftools --vcf Plastome_for_Pegas_Q30.vcf --minQ 40 --minDP 2 --maxDP 25 --keep cv_list.txt --max-missing 0.3 --window-pi 10000 --out cv_pi_cp
+vcftools --vcf Mito_for_Pegas_Q30.vcf --minQ 40 --minDP 2 --maxDP 25 --keep wd_list.txt --max-missing 0.3 --window-pi 10000 --out wd_pi_mt
+vcftools --vcf Mito_for_Pegas_Q30.vcf --minQ 40 --minDP 2 --maxDP 25 --keep lr_list.txt --max-missing 0.3 --window-pi 10000 --out lr_pi_mt
+vcftools --vcf Mito_for_Pegas_Q30.vcf --minQ 40 --minDP 2 --maxDP 25 --keep ethno_list.txt --max-missing 0.3 --window-pi 10000 --out ethno_pi_mt
+vcftools --vcf Mito_for_Pegas_Q30.vcf --minQ 40 --minDP 2 --maxDP 25 --keep archeo_list.txt --max-missing 0.3 --window-pi 10000 --out archeo_pi_mt
+vcftools --vcf Mito_for_Pegas_Q30.vcf --minQ 40 --minDP 2 --maxDP 25 --keep cv_list.txt --max-missing 0.3 --window-pi 10000 --out cv_pi_mt
