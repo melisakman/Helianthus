@@ -1,0 +1,3 @@
+ancestry analysis
+
+1. Use ancestry_NVC_dataStructure.py script for transforming the vcf files to the format necessary by infocalc.
