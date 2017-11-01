@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/vector/scratch/makman/Hubnerdata/newFiltering/
+#SBATCH -D /clusterfs/vector/scratch/makman/Hubnerdata/Sariel_new_variant_calling/filtered/ordered/
 #SBATCH -J ancestry
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
