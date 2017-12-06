@@ -2,8 +2,9 @@
 #SBATCH -D /clusterfs/vector/scratch/makman/Hubnerdata/Sariel_new_variant_calling/filtered/ordered
 #SBATCH -J vcffst
 #SBATCH --account=co_rosalind
-#SBATCH --partition=savio2_knl
-#SBATCH --time=4:00:00
+#SBATCH --partition=savio2
+#SBATCH --reservation=sl7testing
+#SBATCH --time=1:00:00
 #SBATCH -o /global/home/users/makman/vcftools/outs/vcftools_new_VC_tajD_merged_SL7.out
 #SBATCH -e /global/home/users/makman/vcftools/outs/vcftools_new_VC_tajD_merged_SL7.err
 #SBATCH --mail-user=makman@berkeley.edu
