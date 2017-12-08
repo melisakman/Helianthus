@@ -1,6 +1,6 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/vector/scratch/makman/GATK_variant_calling/fastq
-#SBATCH -J cat fastq
+#SBATCH -D /clusterfs/vector/scratch/makman/GATK_variant_calling/fastq/
+#SBATCH -J catfastq
 #SBATCH --partition=vector
 #SBATCH --mem=12000
 #SBATCH --qos=vector_batch
