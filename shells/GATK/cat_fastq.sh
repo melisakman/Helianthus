@@ -2,9 +2,9 @@
 #SBATCH -D /clusterfs/vector/scratch/makman/GATK_variant_calling/fastq/
 #SBATCH -J catfastq
 #SBATCH --partition=vector
-#SBATCH --mem=12000
+#SBATCH --mem=36000
 #SBATCH --qos=vector_batch
-#SBATCH --time=12:00:00
+#SBATCH --time=36:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/cat_fastq.out
 #SBATCH -e /global/home/users/makman/GATK/outs/cat_fastq.err
 #SBATCH --mail-user=makman@berkeley.edu
