@@ -11,5 +11,5 @@
 #SBATCH --mail-type=All
 #SBATCH --array=1-2
 module load bedtools
-bedtools bamtofastq -fq2 -i SF_33_177_HanXRQ.bam -fq SF_33.fastq
-bedtools bamtofastq -fq2 -i PPN262_3b7_HanXRQ.bam -fq PPN_262.fastq
+bedtools bamtofastq -i SF_33_177_HanXRQ.bam -fq SF_33_R1.fastq -fq2 SF_33_R2.fastq
+bedtools bamtofastq -i PPN262_3b7_HanXRQ.bam -fq PPN_262_R1.fastq PPN_262_R2.fastq
