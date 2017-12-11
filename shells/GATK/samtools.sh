@@ -1,6 +1,6 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/bam/
-#SBATCH -J fastqdump
+#SBATCH -J samtools
 #SBATCH --account=fc_blackman
 #SBATCH --partition=savio2
 #SBATCH --mem=36000
