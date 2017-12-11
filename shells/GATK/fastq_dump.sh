@@ -1,9 +1,10 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/bam/
+#SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/sra/
 #SBATCH -J fastqdump
-#SBATCH --partition=vector
+#SBATCH --account=fc_blackman
+#SBATCH --partition=savio2
 #SBATCH --mem=36000
-#SBATCH --qos=vector_batch
+#SBATCH --qos=savio_normal
 #SBATCH --time=36:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/fastqdump.out
 #SBATCH -e /global/home/users/makman/GATK/outs/fastqdump.err
