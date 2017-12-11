@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/vector/scratch/makman/GATK_variant_calling/fastq/bam/
+#SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/bam/
 #SBATCH -J bam2fastq
 #SBATCH --partition=vector
 #SBATCH --mem=36000
@@ -12,4 +12,4 @@
 #SBATCH --array=1-2
 module load bedtools
 bedtools bamtofastq -i SF_33_177_HanXRQ.bam -fq SF_33_R1.fastq -fq2 SF_33_R2.fastq
-bedtools bamtofastq -i PPN262_3b7_HanXRQ.bam -fq PPN_262_R1.fastq PPN_262_R2.fastq
+bedtools bamtofastq -i PPN262_3b7_HanXRQ.bam -fq PPN_262_R1.fastq -fq2 PPN_262_R2.fastq
