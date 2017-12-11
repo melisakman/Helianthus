@@ -11,4 +11,4 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load samtools/1.3.1
-samtools view /clusterfs/rosalind/users/makman/GATK/fastq/bam/PPN262_3b7_HanXRQ.bam | grep -nr "HWI-ST916:92:C0F4AACXX:4:2206:19793:27999"
+samtools view /clusterfs/rosalind/users/makman/GATK/fastq/bam/PPN262_3b7_HanXRQ.bam | grep -n "HWI-ST916:92:C0F4AACXX:4:2206:19793:27999"
