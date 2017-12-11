@@ -1,9 +1,10 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK_variant_calling/fastq/
 #SBATCH -J catfastq1
-#SBATCH --partition=vector
+#SBATCH --account=co_rosalind
+#SBATCH --partition=savio
+#SBATCH --qos=rosalind_savio_normal
 #SBATCH --mem=36000
-#SBATCH --qos=vector_batch
 #SBATCH --time=48:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/cat_fastq1.out
 #SBATCH -e /global/home/users/makman/GATK/outs/cat_fastq1.err
