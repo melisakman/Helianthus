@@ -10,7 +10,6 @@
 #SBATCH -e /global/home/users/makman/GATK/outs/copy.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-ssh dtn
-cp /clusterfs/vector/scratch/makman/GATK_variant_calling/fastq/* /global/scratch/makman/GATK/fastq/
+cp /clusterfs/vector/scratch/makman/GATK_variant_calling/fastq/* /clusterfs/rosalind/users/makman/GATK/fastq/
 
 
