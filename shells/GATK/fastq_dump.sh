@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/vector/scratch/makman/GATK_variant_calling/fastq/bam/
+#SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/bam/
 #SBATCH -J fastqdump
 #SBATCH --partition=vector
 #SBATCH --mem=36000
