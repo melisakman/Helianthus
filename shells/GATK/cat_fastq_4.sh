@@ -1,6 +1,7 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/
 #SBATCH -J catfastq4
+#SBATCH --account=fc_blackman
 #SBATCH --partition=savio2
 #SBATCH --mem=36000
 #SBATCH --qos=savio_normal
