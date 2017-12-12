@@ -10,7 +10,7 @@
 #SBATCH -e /global/home/users/makman/GATK/outs/fastqdump6.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-#SBATCH --array=1-2
+#SBATCH --array=1-1
 module load sra-tools/2.8.1 
 # fastq-dump -I --split-files SRR5140347
 # fastq-dump -I --split-files SRR5140383
@@ -20,7 +20,7 @@ module load sra-tools/2.8.1
 # fastq-dump -I --split-files SRR5140327
 # fastq-dump -I --split-files SRR5140350
 # fastq-dump -I --split-files SRR5140371
-fastq-dump -I --split-files SRR5140364
+# fastq-dump -I --split-files SRR5140364
 fastq-dump -I --split-files SRR5140372
 # fastq-dump -I --split-files SRR5140355
 # fastq-dump -I --split-files SRR5140357
