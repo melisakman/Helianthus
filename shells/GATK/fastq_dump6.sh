@@ -4,7 +4,7 @@
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio
 #SBATCH --qos=rosalind_savio_normal
-#SBATCH --mem=36000
+#SBATCH --mem=48000
 #SBATCH --time=36:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/fastqdump6.out
 #SBATCH -e /global/home/users/makman/GATK/outs/fastqdump6.err
