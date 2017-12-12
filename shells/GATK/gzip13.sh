@@ -1,28 +1,28 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/
-#SBATCH -J gzip11
+#SBATCH -J gzip13
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio
 #SBATCH --qos=rosalind_savio_normal
 #SBATCH --mem=48000
 #SBATCH --time=48:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/gzip11.out
-#SBATCH -e /global/home/users/makman/GATK/outs/gzip11.err
+#SBATCH -o /global/home/users/makman/GATK/outs/gzip13.out
+#SBATCH -e /global/home/users/makman/GATK/outs/gzip13.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
-gzip RHA271_R1.fastq
-gzip RHA271_R2.fastq
-gzip RHA309_R1.fastq
-gzip RHA309_R2.fastq
+# gzip RHA271_R1.fastq
+# gzip RHA271_R2.fastq
+# gzip RHA309_R1.fastq
+# gzip RHA309_R2.fastq
 # gzip RHA311_R1.fastq
 # gzip RHA311_R2.fastq
 # gzip RHA328_R1.fastq
 # gzip RHA328_R2.fastq
-# gzip RHA355_R1.fastq
-# gzip RHA355_R2.fastq
-# gzip RHA358_R1.fastq
-# gzip RHA358_R2.fastq
+gzip RHA355_R1.fastq
+gzip RHA355_R2.fastq
+gzip RHA358_R1.fastq
+gzip RHA358_R2.fastq
 # gzip RHA426_R1.fastq
 # gzip RHA426_R2.fastq
 # gzip RHA857_R1.fastq
