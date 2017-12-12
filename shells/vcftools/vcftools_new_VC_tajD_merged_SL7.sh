@@ -1,7 +1,7 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/vector/scratch/makman/Hubnerdata/Sariel_new_variant_calling/filtered/ordered
+#SBATCH -D /clusterfs/rosalind/users/makman/SL7
 #SBATCH -J vcffst
-#SBATCH --account=co_rosalind
+#SBATCH --account=fc_blackman
 #SBATCH --partition=savio2
 #SBATCH --reservation=sl7testing
 #SBATCH --time=1:00:00
@@ -10,4 +10,4 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load bio/vcftools/0.1.15
-vcftools --gzvcf ../../merged_Nov2017/chr01.vcf.gz --minQ 50 --minDP 3 --maxDP 25 --keep wd_list.txt --max-missing 0.8 --TajimaD 10000  --out /clusterfs/vector/scratch/makman/new_variant_calling/merged/TajD/wd_TajD_chr01_10kb_SL7
+vcftools --gzvcf chr01.vcf.gz --minQ 50 --minDP 3 --maxDP 25 --keep wd_list.txt --max-missing 0.8 --TajimaD 10000  --out wd_TajD_chr01_10kb_SL7
