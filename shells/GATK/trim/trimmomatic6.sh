@@ -10,6 +10,7 @@
 #SBATCH -e /global/home/users/makman/GATK/outs/trim6.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
+module load java
 
 # java -jar /clusterfs/rosalind/users/makman/Trimmomatic-0.36/trimmomatic-0.36.jar PE ann01-cwIA_R1.fastq.gz ann01-cwIA_R2.fastq.gz ann01-cwIA_R1_trimmed_fastq.gz ann01-cwIA_R1_unpaired.fastq.gz ann01-cwIA_R2_trimmed_fastq.gz ann01-cwIA_R2_unpaired.fastq.gz ILLUMINACLIP:adaptersRay.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
 # java -jar /clusterfs/rosalind/users/makman/Trimmomatic-0.36/trimmomatic-0.36.jar PE ann04-nwAR_R1.fastq.gz ann04-nwAR_R2.fastq.gz ann04-nwAR_R1_trimmed_fastq.gz ann04-nwAR_R1_unpaired.fastq.gz ann04-nwAR_R2_trimmed_fastq.gz ann04-nwAR_R2_unpaired.fastq.gz ILLUMINACLIP:adaptersRay.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
