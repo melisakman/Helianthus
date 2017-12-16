@@ -6,8 +6,8 @@
 #SBATCH --mem=48000
 #SBATCH --qos=savio_normal
 #SBATCH --time=48:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/trim6.out
-#SBATCH -e /global/home/users/makman/GATK/outs/trim6.err
+#SBATCH -o /global/home/users/makman/GATK/outs/trim6a.out
+#SBATCH -e /global/home/users/makman/GATK/outs/trim6a.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load java
@@ -32,10 +32,12 @@ module load java
 # java -jar /clusterfs/rosalind/users/makman/Trimmomatic-0.36/trimmomatic-0.36.jar PE IA2W-17_R1.fastq.gz IA2W-17_R2.fastq.gz IA2W-17_R1_trimmed_fastq.gz IA2W-17_R1_unpaired.fastq.gz IA2W-17_R2_trimmed_fastq.gz IA2W-17_R2_unpaired.fastq.gz ILLUMINACLIP:adaptersRay.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
 # java -jar /clusterfs/rosalind/users/makman/Trimmomatic-0.36/trimmomatic-0.36.jar PE KS1W-27_R1.fastq.gz KS1W-27_R2.fastq.gz KS1W-27_R1_trimmed_fastq.gz KS1W-27_R1_unpaired.fastq.gz KS1W-27_R2_trimmed_fastq.gz KS1W-27_R2_unpaired.fastq.gz ILLUMINACLIP:adaptersRay.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
 # java -jar /clusterfs/rosalind/users/makman/Trimmomatic-0.36/trimmomatic-0.36.jar PE KS2W-35_R1.fastq.gz KS2W-35_R2.fastq.gz KS2W-35_R1_trimmed_fastq.gz KS2W-35_R1_unpaired.fastq.gz KS2W-35_R2_trimmed_fastq.gz KS2W-35_R2_unpaired.fastq.gz ILLUMINACLIP:adaptersRay.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
-java -jar /clusterfs/rosalind/users/makman/Trimmomatic-0.36/trimmomatic-0.36.jar PE annMB1W-40_R1.fastq.gz annMB1W-40_R2.fastq.gz annMB1W-40_R1_trimmed_fastq.gz annMB1W-40_R1_unpaired.fastq.gz annMB1W-40_R2_trimmed_fastq.gz annMB1W-40_R2_unpaired.fastq.gz ILLUMINACLIP:adaptersRay.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
-java -jar /clusterfs/rosalind/users/makman/Trimmomatic-0.36/trimmomatic-0.36.jar PE annMO1W-39_R1.fastq.gz annMO1W-39_R2.fastq.gz annMO1W-39_R1_trimmed_fastq.gz annMO1W-39_R1_unpaired.fastq.gz annMO1W-39_R2_trimmed_fastq.gz annMO1W-39_R2_unpaired.fastq.gz ILLUMINACLIP:adaptersRay.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
-java -jar /clusterfs/rosalind/users/makman/Trimmomatic-0.36/trimmomatic-0.36.jar PE annND1W-6_R1.fastq.gz annND1W-6_R2.fastq.gz annND1W-6_R1_trimmed_fastq.gz annND1W-6_R1_unpaired.fastq.gz annND1W-6_R2_trimmed_fastq.gz annND1W-6_R2_unpaired.fastq.gz ILLUMINACLIP:adaptersRay.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+# java -jar /clusterfs/rosalind/users/makman/Trimmomatic-0.36/trimmomatic-0.36.jar PE annMB1W-40_R1.fastq.gz annMB1W-40_R2.fastq.gz annMB1W-40_R1_trimmed_fastq.gz annMB1W-40_R1_unpaired.fastq.gz annMB1W-40_R2_trimmed_fastq.gz annMB1W-40_R2_unpaired.fastq.gz ILLUMINACLIP:adaptersRay.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+# java -jar /clusterfs/rosalind/users/makman/Trimmomatic-0.36/trimmomatic-0.36.jar PE annMO1W-39_R1.fastq.gz annMO1W-39_R2.fastq.gz annMO1W-39_R1_trimmed_fastq.gz annMO1W-39_R1_unpaired.fastq.gz annMO1W-39_R2_trimmed_fastq.gz annMO1W-39_R2_unpaired.fastq.gz ILLUMINACLIP:adaptersRay.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+# java -jar /clusterfs/rosalind/users/makman/Trimmomatic-0.36/trimmomatic-0.36.jar PE annND1W-6_R1.fastq.gz annND1W-6_R2.fastq.gz annND1W-6_R1_trimmed_fastq.gz annND1W-6_R1_unpaired.fastq.gz annND1W-6_R2_trimmed_fastq.gz annND1W-6_R2_unpaired.fastq.gz ILLUMINACLIP:adaptersRay.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
 java -jar /clusterfs/rosalind/users/makman/Trimmomatic-0.36/trimmomatic-0.36.jar PE annSD1W-35_R1.fastq.gz annSD1W-35_R2.fastq.gz annSD1W-35_R1_trimmed_fastq.gz annSD1W-35_R1_unpaired.fastq.gz annSD1W-35_R2_trimmed_fastq.gz annSD1W-35_R2_unpaired.fastq.gz ILLUMINACLIP:adaptersRay.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
 # java -jar /clusterfs/rosalind/users/makman/Trimmomatic-0.36/trimmomatic-0.36.jar PE SD2W-18_R1.fastq.gz SD2W-18_R2.fastq.gz SD2W-18_R1_trimmed_fastq.gz SD2W-18_R1_unpaired.fastq.gz SD2W-18_R2_trimmed_fastq.gz SD2W-18_R2_unpaired.fastq.gz ILLUMINACLIP:adaptersRay.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
 # java -jar /clusterfs/rosalind/users/makman/Trimmomatic-0.36/trimmomatic-0.36.jar PE SK1W-Q_R1.fastq.gz SK1W-Q_R2.fastq.gz SK1W-Q_R1_trimmed_fastq.gz SK1W-Q_R1_unpaired.fastq.gz SK1W-Q_R2_trimmed_fastq.gz SK1W-Q_R2_unpaired.fastq.gz ILLUMINACLIP:adaptersRay.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
 # java -jar /clusterfs/rosalind/users/makman/Trimmomatic-0.36/trimmomatic-0.36.jar PE Anzac_Pueblo_R1.fastq.gz Anzac_Pueblo_R2.fastq.gz Anzac_Pueblo_R1_trimmed_fastq.gz Anzac_Pueblo_R1_unpaired.fastq.gz Anzac_Pueblo_R2_trimmed_fastq.gz Anzac_Pueblo_R2_unpaired.fastq.gz ILLUMINACLIP:adaptersRay.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
