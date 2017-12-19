@@ -119,10 +119,10 @@ module load fastqc/0.11.5
 # annIA_R2_trimmed_fastq.gz
 # annKS1W-27_R1_trimmed_fastq.gz
 # annKS1W-27_R2_trimmed_fastq.gz
-annKS2W-35_R1_trimmed_fastq.gz
-annKS2W-35_R2_trimmed_fastq.gz
-annKS_R1_trimmed_fastq.gz
-annKS_R2_trimmed_fastq.gz
+fastqc annKS2W-35_R1_trimmed_fastq.gz
+fastqc annKS2W-35_R2_trimmed_fastq.gz
+fastqc annKS_R1_trimmed_fastq.gz
+fastqc annKS_R2_trimmed_fastq.gz
 # annMB1W-40_R1_trimmed_fastq.gz
 # annMB1W-40_R2_trimmed_fastq.gz
 # annMO1W-39_R1_trimmed_fastq.gz

@@ -107,10 +107,10 @@ module load fastqc/0.11.5
 # ann29-neSD_R2_trimmed_fastq.gz
 # ann34-cwKS_R1_trimmed_fastq.gz
 # ann34-cwKS_R2_trimmed_fastq.gz
-ann39-ncNE_R1_trimmed_fastq.gz
-ann39-ncNE_R2_trimmed_fastq.gz
-ann44-ccCA_R1_trimmed_fastq.gz
-ann44-ccCA_R2_trimmed_fastq.gz
+fastqc ann39-ncNE_R1_trimmed_fastq.gz
+fastqc ann39-ncNE_R2_trimmed_fastq.gz
+fastqc ann44-ccCA_R1_trimmed_fastq.gz
+fastqc ann44-ccCA_R2_trimmed_fastq.gz
 # annIA1W-1_R1_trimmed_fastq.gz
 # annIA1W-1_R2_trimmed_fastq.gz
 # annIA2W-17_R1_trimmed_fastq.gz

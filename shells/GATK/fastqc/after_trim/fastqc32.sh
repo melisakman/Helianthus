@@ -135,9 +135,9 @@ module load fastqc/0.11.5
 # annSD1W-35_R2_trimmed_fastq.gz
 # annSD2W-18_R1_trimmed_fastq.gz
 # annSD2W-18_R2_trimmed_fastq.gz
-annSK1W-Q_R1_trimmed_fastq.gz
-annSK1W-Q_R2_trimmed_fastq.gz
-annWY_R1_trimmed_fastq.gz
-annWY_R2_trimmed_fastq.gz
+fastqc annSK1W-Q_R1_trimmed_fastq.gz
+fastqc annSK1W-Q_R2_trimmed_fastq.gz
+fastqc annWY_R1_trimmed_fastq.gz
+fastqc annWY_R2_trimmed_fastq.gz
 
 

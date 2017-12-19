@@ -95,10 +95,10 @@ module load fastqc/0.11.5
 # fastqc ann05-ccNM_R2_trimmed_fastq.gz
 # fastqc ann06-seWY_R1_trimmed_fastq.gz
 # fastqc ann06-seWY_R2_trimmed_fastq.gz
-ann08-ceTN_R1_trimmed_fastq.gz
-ann08-ceTN_R2_trimmed_fastq.gz
-ann10-ccIL_R1_trimmed_fastq.gz
-ann10-ccIL_R2_trimmed_fastq.gz
+fastqc ann08-ceTN_R1_trimmed_fastq.gz
+fastqc ann08-ceTN_R2_trimmed_fastq.gz
+fastqc ann10-ccIL_R1_trimmed_fastq.gz
+fastqc ann10-ccIL_R2_trimmed_fastq.gz
 # ann20-seAZ_R1_trimmed_fastq.gz
 # ann20-seAZ_R2_trimmed_fastq.gz
 # ann28-swSK_R1_trimmed_fastq.gz
