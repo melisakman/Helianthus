@@ -19,10 +19,10 @@ module load fastqc/0.11.5
 # HA124_R2_trimmed_fastq.gz
 # HA316_R1_trimmed_fastq.gz
 # HA316_R2_trimmed_fastq.gz
-HA404_R1_trimmed_fastq.gz
-HA404_R2_trimmed_fastq.gz
-HA433_R1_trimmed_fastq.gz
-HA433_R2_trimmed_fastq.gz
+fastqc HA404_R1_trimmed_fastq.gz
+fastqc HA404_R2_trimmed_fastq.gz
+fastqc HA433_R1_trimmed_fastq.gz
+fastqc HA433_R2_trimmed_fastq.gz
 # HA442_R1_trimmed_fastq.gz
 # HA442_R2_trimmed_fastq.gz
 # HA821_R1_trimmed_fastq.gz

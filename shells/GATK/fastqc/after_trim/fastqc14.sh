@@ -63,10 +63,10 @@ module load fastqc/0.11.5
 # PPN255_Manchurian_R2_trimmed_fastq.gz
 # PPN262_R1_trimmed_fastq.gz
 # PPN262_R2_trimmed_fastq.gz
-RHA271_R1_trimmed_fastq.gz
-RHA271_R2_trimmed_fastq.gz
-RHA309_R1_trimmed_fastq.gz
-RHA309_R2_trimmed_fastq.gz
+fastqc RHA271_R1_trimmed_fastq.gz
+fastqc RHA271_R2_trimmed_fastq.gz
+fastqc RHA309_R1_trimmed_fastq.gz
+fastqc RHA309_R2_trimmed_fastq.gz
 # RHA311_R1_trimmed_fastq.gz
 # RHA311_R2_trimmed_fastq.gz
 # RHA328_R1_trimmed_fastq.gz

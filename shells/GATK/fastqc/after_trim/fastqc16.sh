@@ -71,10 +71,10 @@ module load fastqc/0.11.5
 # RHA311_R2_trimmed_fastq.gz
 # RHA328_R1_trimmed_fastq.gz
 # RHA328_R2_trimmed_fastq.gz
-RHA355_R1_trimmed_fastq.gz
-RHA355_R2_trimmed_fastq.gz
-RHA358_R1_trimmed_fastq.gz
-RHA358_R2_trimmed_fastq.gz
+fastqc RHA355_R1_trimmed_fastq.gz
+fastqc RHA355_R2_trimmed_fastq.gz
+fastqc RHA358_R1_trimmed_fastq.gz
+fastqc RHA358_R2_trimmed_fastq.gz
 # RHA408_R1_trimmed_fastq.gz
 # RHA408_R2_trimmed_fastq.gz
 # RHA426_R1_trimmed_fastq.gz

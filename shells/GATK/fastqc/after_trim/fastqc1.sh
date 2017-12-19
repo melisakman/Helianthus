@@ -11,10 +11,10 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load fastqc/0.11.5 
-Anzac_Pueblo_R1_trimmed_fastq.gz
-Anzac_Pueblo_R2_trimmed_fastq.gz
-Arikara_R1_trimmed_fastq.gz
-Arikara_R2_trimmed_fastq.gz
+fastqc Anzac_Pueblo_R1_trimmed_fastq.gz
+fastqc Anzac_Pueblo_R2_trimmed_fastq.gz
+fastqc Arikara_R1_trimmed_fastq.gz
+fastqc Arikara_R2_trimmed_fastq.gz
 # HA124_R1_trimmed_fastq.gz
 # HA124_R2_trimmed_fastq.gz
 # HA316_R1_trimmed_fastq.gz

@@ -31,10 +31,10 @@ module load fastqc/0.11.5
 # HA89_R2_trimmed_fastq.gz
 # Havasupai_R1_trimmed_fastq.gz
 # Havasupai_R2_trimmed_fastq.gz
-Hidatsa1_R1_trimmed_fastq.gz
-Hidatsa1_R2_trimmed_fastq.gz
-Hopi_PPN285_R1_trimmed_fastq.gz
-Hopi_PPN285_R2_trimmed_fastq.gz
+fastqc Hidatsa1_R1_trimmed_fastq.gz
+fastqc Hidatsa1_R2_trimmed_fastq.gz
+fastqc Hopi_PPN285_R1_trimmed_fastq.gz
+fastqc Hopi_PPN285_R2_trimmed_fastq.gz
 # Hopi_R1_trimmed_fastq.gz
 # Hopi_R2_trimmed_fastq.gz
 # Laguna_Pueblo_R1_trimmed_fastq.gz

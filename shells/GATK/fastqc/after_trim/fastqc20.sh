@@ -87,10 +87,10 @@ module load fastqc/0.11.5
 # VIR847_R2_trimmed_fastq.gz
 # Zuni_R1_trimmed_fastq.gz
 # Zuni_R2_trimmed_fastq.gz
-ann01-cwIA_R1_trimmed_fastq.gz
-ann01-cwIA_R2_trimmed_fastq.gz
-ann04-nwAR_R1_trimmed_fastq.gz
-ann04-nwAR_R2_trimmed_fastq.gz
+fastqc ann01-cwIA_R1_trimmed_fastq.gz
+fastqc ann01-cwIA_R2_trimmed_fastq.gz
+fastqc ann04-nwAR_R1_trimmed_fastq.gz
+fastqc ann04-nwAR_R2_trimmed_fastq.gz
 # ann05-ccNM_R1_trimmed_fastq.gz
 # ann05-ccNM_R2_trimmed_fastq.gz
 # ann06-seWY_R1_trimmed_fastq.gz

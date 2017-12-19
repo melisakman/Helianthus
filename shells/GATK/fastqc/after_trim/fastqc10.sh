@@ -47,10 +47,10 @@ module load fastqc/0.11.5
 # MexCult15_R2_trimmed_fastq.gz
 # MexCult1_R1_trimmed_fastq.gz
 # MexCult1_R2_trimmed_fastq.gz
-MexCult3_R1_trimmed_fastq.gz
-MexCult3_R2_trimmed_fastq.gz
-MexCult6_R1_trimmed_fastq.gz
-MexCult6_R2_trimmed_fastq.gz
+fastqc MexCult3_R1_trimmed_fastq.gz
+fastqc MexCult3_R2_trimmed_fastq.gz
+fastqc MexCult6_R1_trimmed_fastq.gz
+fastqc MexCult6_R2_trimmed_fastq.gz
 # MexCult7_R1_trimmed_fastq.gz
 # MexCult7_R2_trimmed_fastq.gz
 # MexCult9_R1_trimmed_fastq.gz

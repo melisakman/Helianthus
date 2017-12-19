@@ -1,6 +1,6 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/
-#SBATCH -J fastqc20
+#SBATCH -J fastqc21
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio
 #SBATCH --qos=rosalind_savio_normal
@@ -91,10 +91,10 @@ module load fastqc/0.11.5
 # ann01-cwIA_R2_trimmed_fastq.gz
 # ann04-nwAR_R1_trimmed_fastq.gz
 # ann04-nwAR_R2_trimmed_fastq.gz
-ann05-ccNM_R1_trimmed_fastq.gz
-ann05-ccNM_R2_trimmed_fastq.gz
-ann06-seWY_R1_trimmed_fastq.gz
-ann06-seWY_R2_trimmed_fastq.gz
+fastqc ann05-ccNM_R1_trimmed_fastq.gz
+fastqc ann05-ccNM_R2_trimmed_fastq.gz
+fastqc ann06-seWY_R1_trimmed_fastq.gz
+fastqc ann06-seWY_R2_trimmed_fastq.gz
 # ann08-ceTN_R1_trimmed_fastq.gz
 # ann08-ceTN_R2_trimmed_fastq.gz
 # ann10-ccIL_R1_trimmed_fastq.gz

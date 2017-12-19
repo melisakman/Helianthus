@@ -39,10 +39,10 @@ module load fastqc/0.11.5
 # Hopi_R2_trimmed_fastq.gz
 # Laguna_Pueblo_R1_trimmed_fastq.gz
 # Laguna_Pueblo_R2_trimmed_fastq.gz
-Mandan2_R1_trimmed_fastq.gz
-Mandan2_R2_trimmed_fastq.gz
-MexCult14_R1_trimmed_fastq.gz
-MexCult14_R2_trimmed_fastq.gz
+fastqc Mandan2_R1_trimmed_fastq.gz
+fastqc Mandan2_R2_trimmed_fastq.gz
+fastqc MexCult14_R1_trimmed_fastq.gz
+fastqc MexCult14_R2_trimmed_fastq.gz
 # MexCult15_R1_trimmed_fastq.gz
 # MexCult15_R2_trimmed_fastq.gz
 # MexCult1_R1_trimmed_fastq.gz
