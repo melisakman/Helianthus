@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/rosalind/users/makman/XPCLR/XPCLR/bin/helianthus
+#SBATCH -D /clusterfs/rosalind/users/makman/XPCLR/XPCLR/helianthus
 #SBATCH -J XPCLR
 #SBATCH --account=fc_blackman
 #SBATCH --partition=savio2
