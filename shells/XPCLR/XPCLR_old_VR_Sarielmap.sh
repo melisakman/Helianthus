@@ -10,6 +10,7 @@
 #SBATCH -e /global/home/users/makman/XPCLR/outs/Sariel_map.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
+#SBATCH --array=1-17
 ../bin/XPCLR -xpclr wd_genotype_Chr01.txt lr_genotype_Chr01.txt HanXRQr1.0-20151230.bp_to_cM.280x801_modified_XPCLR.txt Sariel_map/wd_lr_Chr01_xpclr.txt -w1 0.005 200 2000 1 -p0 0.95
 ../bin/XPCLR -xpclr wd_genotype_Chr02.txt lr_genotype_Chr02.txt HanXRQr1.0-20151230.bp_to_cM.280x801_modified_XPCLR.txt Sariel_map/wd_lr_Chr02_xpclr.txt -w1 0.005 200 2000 2 -p0 0.95
 ../bin/XPCLR -xpclr wd_genotype_Chr03.txt lr_genotype_Chr03.txt HanXRQr1.0-20151230.bp_to_cM.280x801_modified_XPCLR.txt Sariel_map/wd_lr_Chr03_xpclr.txt -w1 0.005 200 2000 3 -p0 0.95
