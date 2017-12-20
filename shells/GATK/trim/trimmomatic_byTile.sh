@@ -12,5 +12,5 @@
 #SBATCH --mail-type=All
 module load java
 
-./filterbytile.sh in1=annIA1W-1_R1_trimmed.fastq in2=annIA1W-1_R2_trimmed.fastq out1=annIA1W-1_R1_trimmed_byTile.fastq out2=annIA1W-1_R2_trimmed_byTile.fastq
+./filterbytile.sh in1=annIA1W-1_R1_trimmed.fastq.gz in2=annIA1W-1_R2_trimmed.fastq.gz out1=annIA1W-1_R1_trimmed_byTile.fastq.gz out2=annIA1W-1_R2_trimmed_byTile.fastq.gz
 
