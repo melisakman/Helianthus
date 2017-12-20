@@ -10,4 +10,4 @@
 #SBATCH -e /global/home/users/makman/XPCLR/outs/deneme.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-./XPCLR -xpclr ../helianthus/wd_genotype_Chr01_1000.txt ../helianthus/lr_genotype_Chr01_1000.txt ../helianthus/map_1000_refAlt.txt ../helianthus/Sariel_map/wd_lr_Chr01_xpclr_1000.txt -w1 0.005 200 2000 1 -p0 0.95
+./XPCLR -xpclr ../helianthus/wd_genotype_Chr01_1000.txt ../helianthus/lr_genotype_Chr01_1000.txt ../helianthus/map_1000_refAlt.txt ../helianthus/Sariel_map/wd_lr_Chr01_xpclr_1000.txt -w1 0.005 200 100000 1 -p0 0.95
