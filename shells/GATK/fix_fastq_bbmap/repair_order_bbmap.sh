@@ -3,7 +3,7 @@
 #SBATCH -J bbmap1
 #SBATCH --account=fc_blackman
 #SBATCH --partition=savio2
-#SBATCH --mem=84000
+#SBATCH --mem=72000
 #SBATCH --qos=savio_normal
 #SBATCH --time=48:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/bbmap_repair1.out
