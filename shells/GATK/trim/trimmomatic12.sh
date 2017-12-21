@@ -4,7 +4,7 @@
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio
 #SBATCH --qos=rosalind_savio_normal
-#SBATCH --mem=96000
+#SBATCH --mem=64000
 #SBATCH --time=72:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/trim12a_update.out
 #SBATCH -e /global/home/users/makman/GATK/outs/trim12a_update.err
