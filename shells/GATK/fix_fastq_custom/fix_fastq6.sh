@@ -1,13 +1,13 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/trimmed/
-#SBATCH -J fixfastq5
+#SBATCH -J fixfastq6
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio
 #SBATCH --qos=rosalind_savio_normal
 #SBATCH --mem=54000
 #SBATCH --time=72:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/fix_fastq5.out
-#SBATCH -e /global/home/users/makman/GATK/outs/fix_fastq5.err
+#SBATCH -o /global/home/users/makman/GATK/outs/fix_fastq6.out
+#SBATCH -e /global/home/users/makman/GATK/outs/fix_fastq6.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
