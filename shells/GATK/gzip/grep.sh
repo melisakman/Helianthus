@@ -11,7 +11,7 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 echo "HA124 forward"
-zcat HA124_R1_trimmed_fastq.gz | grep "SRR5140383.11"
+zcat HA124_R1_trimmed_fastq.gz | grep "SRR5140383.11."
 echo "HA124 reverse"
-zcat HA124_R2_trimmed_fastq.gz | grep "SRR5140383.11"
+zcat HA124_R2_trimmed_fastq.gz | grep "SRR5140383.11."
 
