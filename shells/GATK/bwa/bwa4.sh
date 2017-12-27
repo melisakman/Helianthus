@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/
+#SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/trimmed
 #SBATCH -J bwa4
 #SBATCH --account=fc_blackman
 #SBATCH --partition=savio2
@@ -20,8 +20,8 @@ module load bwa/0.7.15
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa HA316_R1_trimmed_fastq.gz HA316_R2_trimmed_fastq.gz > HA316.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa HA404_R1_trimmed_fastq.gz HA404_R2_trimmed_fastq.gz > HA404.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa HA433_R1_trimmed_fastq.gz HA433_R2_trimmed_fastq.gz > HA433.sam
-bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa HA442_R1_trimmed_fastq.gz HA442_R2_trimmed_fastq.gz > HA442.sam
-bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa HA821_R1_trimmed_fastq.gz HA821_R2_trimmed_fastq.gz > HA821.sam
+bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa HA442_R1_trimmed_fixed.fastq.gz HA442_R2_trimmed_fixed.fastq.gz > HA442.sam
+bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa HA821_R1_trimmed_fixed.fastq.gz HA821_R2_trimmed_fixed.fastq.gz > HA821.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa HA89_R1_trimmed_fastq.gz HA89_R2_trimmed_fastq.gz > HA89.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa Havasupai_R1_trimmed_fastq.gz Havasupai_R2_trimmed_fastq.gz > Havasupai.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa Hidatsa1_R1_trimmed_fastq.gz Hidatsa1_R2_trimmed_fastq.gz > Hidatsa1.sam

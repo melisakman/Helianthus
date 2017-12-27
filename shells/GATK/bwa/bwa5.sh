@@ -1,16 +1,15 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/
+#SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/trimmed
 #SBATCH -J bwa5
 #SBATCH --account=fc_blackman
 #SBATCH --partition=savio2
 #SBATCH --mem=48000
 #SBATCH --qos=savio_normal
 #SBATCH --time=72:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/bwa5.out
-#SBATCH -e /global/home/users/makman/GATK/outs/bwa5.err
+#SBATCH -o /global/home/users/makman/GATK/outs/bwa5_fixed.out
+#SBATCH -e /global/home/users/makman/GATK/outs/bwa5_fixed.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-#SBATCH --array=1-2
 
 module load bwa/0.7.15
 
@@ -22,8 +21,9 @@ module load bwa/0.7.15
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa HA433_R1_trimmed_fastq.gz HA433_R2_trimmed_fastq.gz > HA433.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa HA442_R1_trimmed_fastq.gz HA442_R2_trimmed_fastq.gz > HA442.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa HA821_R1_trimmed_fastq.gz HA821_R2_trimmed_fastq.gz > HA821.sam
-bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa HA89_R1_trimmed_fastq.gz HA89_R2_trimmed_fastq.gz > HA89.sam
-bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa Havasupai_R1_trimmed_fastq.gz Havasupai_R2_trimmed_fastq.gz > Havasupai.sam
+bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa HA89_R1_trimmed_fixed.fastq.gz HA89_R2_trimmed_fixed.fastq.gz > HA89.sam
+
+# bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa Havasupai_R1_trimmed_fastq.gz Havasupai_R2_trimmed_fastq.gz > Havasupai.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa Hidatsa1_R1_trimmed_fastq.gz Hidatsa1_R2_trimmed_fastq.gz > Hidatsa1.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa Hopi_PPN285_R1_trimmed_fastq.gz Hopi_PPN285_R2_trimmed_fastq.gz > Hopi_PPN285.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa Hopi_R1_trimmed_fastq.gz Hopi_R2_trimmed_fastq.gz > Hopi.sam
