@@ -10,7 +10,6 @@
 #SBATCH -e /global/home/users/makman/GATK/outs/bwa19.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-#SBATCH --array=1-2
 
 module load bwa/0.7.15
 
@@ -53,7 +52,7 @@ module load bwa/0.7.15
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa RHA857_R1_trimmed_fastq.gz RHA857_R2_trimmed_fastq.gz > RHA857.sam
 
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa SF33_R1_trimmed_fastq.gz SF33_R2_trimmed_fastq.gz > SF33.sam
-bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa Seneca_R1_trimmed_fastq.gz Seneca_R2_trimmed_fastq.gz > Seneca.sam
+# bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa Seneca_R1_trimmed_fastq.gz Seneca_R2_trimmed_fastq.gz > Seneca.sam
 bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa VIR847_R1_trimmed_fastq.gz VIR847_R2_trimmed_fastq.gz > VIR847.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa Zuni_R1_trimmed_fastq.gz Zuni_R2_trimmed_fastq.gz > Zuni.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa ann01-cwIA_R1_trimmed_fastq.gz ann01-cwIA_R2_trimmed_fastq.gz > ann01-cwIA.sam
