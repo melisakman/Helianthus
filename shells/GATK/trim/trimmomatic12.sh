@@ -1,11 +1,11 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/
+#SBATCH -D /clusterfs/vector/scratch/makman/GATK_variant_calling/trim/
 #SBATCH -J trim12
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio
 #SBATCH --qos=rosalind_savio_normal
 #SBATCH --mem=64000
-#SBATCH --time=72:00:00
+#SBATCH --time=144:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/trim12a_update.out
 #SBATCH -e /global/home/users/makman/GATK/outs/trim12a_update.err
 #SBATCH --mail-user=makman@berkeley.edu
