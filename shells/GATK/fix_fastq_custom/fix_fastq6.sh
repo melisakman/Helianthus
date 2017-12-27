@@ -15,8 +15,8 @@
 # gunzip HA124_R2_trimmed.fastq.gz 
 # gunzip HA316_R1_trimmed.fastq.gz 
 # gunzip HA316_R2_trimmed.fastq.gz 
-zcat HA404_R1_trimmed.fastq.gz > HA404_R1_trimmed.fastq
-zcat HA404_R2_trimmed.fastq.gz > HA404_R2_trimmed.fastq
+gunzip HA404_R1_trimmed.fastq.gz
+gunzip HA404_R2_trimmed.fastq.gz
 # gunzip HA433_R1_trimmed.fastq.gz 
 # gunzip HA433_R2_trimmed.fastq.gz 
 # gunzip HA442_R1_trimmed.fastq.gz 
