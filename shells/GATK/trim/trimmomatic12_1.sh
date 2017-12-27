@@ -1,7 +1,6 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/vector/scratch/makman/GATK_variant_calling/trim/
 #SBATCH -J trim12
-#SBATCH --account=co_rosalind
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
 #SBATCH --mem=96000
@@ -10,7 +9,6 @@
 #SBATCH -e /global/home/users/makman/GATK/outs/trim12a1_update.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-#SBATCH --array=1-2
 module load java
 
 # java -jar /clusterfs/rosalind/users/makman/Trimmomatic-0.36/trimmomatic-0.36.jar PE ann01-cwIA_R1.fastq.gz ann01-cwIA_R2.fastq.gz ann01-cwIA_R1_trimmed_fastq.gz ann01-cwIA_R1_unpaired.fastq.gz ann01-cwIA_R2_trimmed_fastq.gz ann01-cwIA_R2_unpaired.fastq.gz ILLUMINACLIP:adaptersRay.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
