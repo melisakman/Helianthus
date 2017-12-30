@@ -13,6 +13,8 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
+module load numpy/1.11.0
+
 python /clusterfs/vector/scratch/makman/H12/SelectionHapStats/scripts/H12_H2H1.py chr01_G12_input.txt 40 -o chr01_G12_output.txt
 python /clusterfs/vector/scratch/makman/H12/SelectionHapStats/scripts/H12_H2H1.py chr02_G12_input.txt 40 -o chr02_G12_output.txt
 python /clusterfs/vector/scratch/makman/H12/SelectionHapStats/scripts/H12_H2H1.py chr03_G12_input.txt 40 -o chr03_G12_output.txt
