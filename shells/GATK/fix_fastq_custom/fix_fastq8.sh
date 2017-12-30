@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/trimmed_fixed/
+#SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/trimmed
 #SBATCH -J fixfastq8
 #SBATCH --account=fc_blackman
 #SBATCH --partition=savio2
@@ -14,8 +14,8 @@
 gunzip HA404_R1_trimmed.fastq.gz
 # gunzip HA404_R2_trimmed.fastq.gz
 
-python ../trimmed/remove_pair_info.py HA404_R1_trimmed.fastq HA404_R1_trimmed_fixed.fastq
-# python ../trimmed/remove_pair_info.py HA404_R2_trimmed.fastq HA404_R2_trimmed_fixed.fastq
+python remove_pair_info.py HA404_R1_trimmed.fastq HA404_R1_trimmed_fixed.fastq
+# python remove_pair_info.py HA404_R2_trimmed.fastq HA404_R2_trimmed_fixed.fastq
 
 gzip HA404_R1_trimmed_fixed.fastq
 # gzip HA404_R2_trimmed_fixed.fastq
