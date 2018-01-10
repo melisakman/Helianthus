@@ -4,7 +4,7 @@
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio
 #SBATCH --qos=rosalind_savio_normal
-#SBATCH --mem= 48000
+#SBATCH --mem= 48G
 #SBATCH --time=72:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/mark_dups1.out
 #SBATCH -e /global/home/users/makman/GATK/outs/mark_dups1.err
