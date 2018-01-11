@@ -6,15 +6,15 @@
 #SBATCH --qos=rosalind_savio_normal
 #SBATCH --mem=72000
 #SBATCH --time=72:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/mark_dups1.out
-#SBATCH -e /global/home/users/makman/GATK/outs/mark_dups1.err
+#SBATCH -o /global/home/users/makman/GATK/outs/mark_dups15.out
+#SBATCH -e /global/home/users/makman/GATK/outs/mark_dups15.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
 module load picard/2.4.1 
 
-java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx48G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar SortSam INPUT=Anzac_Pueblo.sam OUTPUT=Anzac_Pueblo_sorted.bam SORT_ORDER=coordinate 
-java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx48G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar SortSam INPUT=Arikara.sam OUTPUT=Arikara_sorted.bam SORT_ORDER=coordinate 
+# java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx48G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar SortSam INPUT=Anzac_Pueblo.sam OUTPUT=Anzac_Pueblo_sorted.bam SORT_ORDER=coordinate 
+# java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx48G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar SortSam INPUT=Arikara.sam OUTPUT=Arikara_sorted.bam SORT_ORDER=coordinate 
 # java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx72G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar SortSam INPUT=HA124.sam OUTPUT=HA124_sorted.bam SORT_ORDER=coordinate 
 # java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx72G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar SortSam INPUT=HA316.sam OUTPUT=HA316_sorted.bam SORT_ORDER=coordinate 
 # java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx72G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar SortSam INPUT=HA404.sam OUTPUT=HA404_sorted.bam SORT_ORDER=coordinate 
@@ -22,10 +22,10 @@ java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx48G -jar 
 # java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx72G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar SortSam INPUT=HA442.sam OUTPUT=HA442_sorted.bam SORT_ORDER=coordinate 
 # java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx72G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar SortSam INPUT=HA821.sam OUTPUT=HA821_sorted.bam SORT_ORDER=coordinate 
 # java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx72G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar SortSam INPUT=HA89.sam OUTPUT=HA89_sorted.bam SORT_ORDER=coordinate 
-java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx72G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar SortSam INPUT=Havasupai.sam OUTPUT=Havasupai_sorted.bam SORT_ORDER=coordinate 
-java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx72G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar SortSam INPUT=Hidatsa1.sam OUTPUT=Hidatsa1_sorted.bam SORT_ORDER=coordinate 
-java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx72G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar SortSam INPUT=Hopi.sam OUTPUT=Hopi_sorted.bam SORT_ORDER=coordinate 
-java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx72G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar SortSam INPUT=Hopi_PPN285.sam OUTPUT=Hopi_PPN285_sorted.bam SORT_ORDER=coordinate 
+# java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx72G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar SortSam INPUT=Havasupai.sam OUTPUT=Havasupai_sorted.bam SORT_ORDER=coordinate 
+# java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx72G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar SortSam INPUT=Hidatsa1.sam OUTPUT=Hidatsa1_sorted.bam SORT_ORDER=coordinate 
+# java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx72G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar SortSam INPUT=Hopi.sam OUTPUT=Hopi_sorted.bam SORT_ORDER=coordinate 
+# java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx72G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar SortSam INPUT=Hopi_PPN285.sam OUTPUT=Hopi_PPN285_sorted.bam SORT_ORDER=coordinate 
 # java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx72G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar SortSam INPUT=Laguna_Pueblo.sam OUTPUT=Laguna_Pueblo_sorted.bam SORT_ORDER=coordinate 
 # java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx72G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar SortSam INPUT=Mandan2.sam OUTPUT=Mandan2_sorted.bam SORT_ORDER=coordinate 
 # java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx72G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar SortSam INPUT=MexCult1.sam OUTPUT=MexCult1_sorted.bam SORT_ORDER=coordinate 
@@ -58,13 +58,13 @@ java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx72G -jar 
 # java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx72G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar SortSam INPUT=ann05-ccNM.sam OUTPUT=ann05-ccNM_sorted.bam SORT_ORDER=coordinate 
 # java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx72G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar SortSam INPUT=ann06-seWY.sam OUTPUT=ann06-seWY_sorted.bam SORT_ORDER=coordinate 
 # java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx72G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar SortSam INPUT=ann08-ceTN.sam OUTPUT=ann08-ceTN_sorted.bam SORT_ORDER=coordinate 
-# java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx72G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar SortSam INPUT=ann10-ccIL.sam OUTPUT=ann10-ccIL_sorted.bam SORT_ORDER=coordinate 
-# java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx72G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar SortSam INPUT=ann20-seAZ.sam OUTPUT=ann20-seAZ_sorted.bam SORT_ORDER=coordinate 
-# java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx72G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar SortSam INPUT=ann28-swSK.sam OUTPUT=ann28-swSK_sorted.bam SORT_ORDER=coordinate 
-# java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx72G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar SortSam INPUT=ann29-neSD.sam OUTPUT=ann29-neSD_sorted.bam SORT_ORDER=coordinate 
-# java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx72G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar SortSam INPUT=ann34-cwKS.sam OUTPUT=ann34-cwKS_sorted.bam SORT_ORDER=coordinate 
-# java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx72G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar SortSam INPUT=ann39-ncNE.sam OUTPUT=ann39-ncNE_sorted.bam SORT_ORDER=coordinate 
-# java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx72G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar SortSam INPUT=ann44-ccCA.sam OUTPUT=ann44-ccCA_sorted.bam SORT_ORDER=coordinate 
+java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx72G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar SortSam INPUT=ann10-ccIL.sam OUTPUT=ann10-ccIL_sorted.bam SORT_ORDER=coordinate 
+java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx72G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar SortSam INPUT=ann20-seAZ.sam OUTPUT=ann20-seAZ_sorted.bam SORT_ORDER=coordinate 
+java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx72G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar SortSam INPUT=ann28-swSK.sam OUTPUT=ann28-swSK_sorted.bam SORT_ORDER=coordinate 
+java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx72G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar SortSam INPUT=ann29-neSD.sam OUTPUT=ann29-neSD_sorted.bam SORT_ORDER=coordinate 
+java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx72G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar SortSam INPUT=ann34-cwKS.sam OUTPUT=ann34-cwKS_sorted.bam SORT_ORDER=coordinate 
+java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx72G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar SortSam INPUT=ann39-ncNE.sam OUTPUT=ann39-ncNE_sorted.bam SORT_ORDER=coordinate 
+java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx72G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar SortSam INPUT=ann44-ccCA.sam OUTPUT=ann44-ccCA_sorted.bam SORT_ORDER=coordinate 
 # java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx72G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar SortSam INPUT=annIA.sam OUTPUT=annIA_sorted.bam SORT_ORDER=coordinate 
 # java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx72G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar SortSam INPUT=annIA1W-1.sam OUTPUT=annIA1W-1_sorted.bam SORT_ORDER=coordinate 
 # java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx72G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar SortSam INPUT=annIA2W-17.sam OUTPUT=annIA2W-17_sorted.bam SORT_ORDER=coordinate 
