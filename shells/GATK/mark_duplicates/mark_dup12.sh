@@ -1,6 +1,6 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/sams/
-#SBATCH -J markdup1
+#SBATCH -J markdup12
 #SBATCH --account=fc_blackman
 #SBATCH --partition=savio2
 #SBATCH --mem=72000
