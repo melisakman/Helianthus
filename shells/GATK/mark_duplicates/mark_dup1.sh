@@ -4,13 +4,12 @@
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio
 #SBATCH --qos=rosalind_savio_normal
-#SBATCH --mem=72000
+#SBATCH --mem=54000
 #SBATCH --time=72:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/mark_dups1.out
 #SBATCH -e /global/home/users/makman/GATK/outs/mark_dups1.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-#SBATCH --array=1-6
 module load picard/2.4.1 
 
 java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx48G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar SortSam INPUT=Anzac_Pueblo.sam OUTPUT=Anzac_Pueblo_sorted.bam SORT_ORDER=coordinate 
