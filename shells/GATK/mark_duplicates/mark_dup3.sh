@@ -1,10 +1,10 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/sams/
 #SBATCH -J markdup1
-#SBATCH --account=co_rosalind
-#SBATCH --partition=savio
-#SBATCH --qos=rosalind_savio_normal
+#SBATCH --account=fc_blackman
+#SBATCH --partition=savio2
 #SBATCH --mem=72000
+#SBATCH --qos=savio_normal
 #SBATCH --time=72:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/mark_dups3.out
 #SBATCH -e /global/home/users/makman/GATK/outs/mark_dups3.err
