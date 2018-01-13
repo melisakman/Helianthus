@@ -10,6 +10,7 @@
 #SBATCH -e /global/home/users/makman/GATK/outs/base_cal1.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
+module load java
 
 java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar -T BaseRecalibrator -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta -I Anzac_Pueblo_sorted_markdup.bam -L HanXRQChr01 -knownSites /clusterfs/vector/scratch/makman/Hubnerdata/Sariel_new_variant_calling/merged_Nov2017/merged_NVC.vcf.gz -o Anzac_Pueblo_dedup.table 
 java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar -T BaseRecalibrator -R /clusterfs/vector/scratch/makman/haplotype_networks/HanXRQr1.0-20151230_no_Chr00.fasta -I Arikara_sorted_markdup.bam -L HanXRQChr01 -knownSites /clusterfs/vector/scratch/makman/Hubnerdata/Sariel_new_variant_calling/merged_Nov2017/merged_NVC.vcf.gz -o Arikara_dedup.table 
