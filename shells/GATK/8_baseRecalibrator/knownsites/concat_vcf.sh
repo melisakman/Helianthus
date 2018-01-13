@@ -12,5 +12,5 @@
 
 module load vcftools/0.1.15
 
-vcf-concat *.vcf.gz | gzip -c > merged_NVC.vcf.gz
+vcf-concat *.vcf | gzip -c > merged_NVC.vcf.gz
 
