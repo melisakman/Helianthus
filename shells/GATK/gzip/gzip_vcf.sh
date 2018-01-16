@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/trimmed
+#SBATCH -D /clusterfs/rosalind/users/makman/
 #SBATCH -J fastqc
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio
@@ -10,5 +10,5 @@
 #SBATCH -e /global/home/users/makman/GATK/outs/gzip.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-gzip *.fastq
+gunzip merged_NVC.vcf.gz
 
