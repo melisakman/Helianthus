@@ -1,19 +1,19 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/sams/
-#SBATCH -J varcal1
+#SBATCH -J varcal7
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio
 #SBATCH --qos=rosalind_savio_normal
 #SBATCH --mem=64000
 #SBATCH --time=72:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/variant_cal1_2.out
-#SBATCH -e /global/home/users/makman/GATK/outs/variant_cal1_2.err
+#SBATCH -o /global/home/users/makman/GATK/outs/variant_cal7.out
+#SBATCH -e /global/home/users/makman/GATK/outs/variant_cal7.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load java
 
 # /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230_no_Chr00.fasta -I Anzac_Pueblo_sorted_markdup_recal.bam -O Anzac_Pueblo.g.vcf.gz -ERC GVCF
-/clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230_no_Chr00.fasta -I Arikara_sorted_markdup_recal.bam -O Arikara.g.vcf.gz -ERC GVCF
+# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230_no_Chr00.fasta -I Arikara_sorted_markdup_recal.bam -O Arikara.g.vcf.gz -ERC GVCF
 # 
 # /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230_no_Chr00.fasta -I HA124_sorted_markdup_recal.bam -O HA124.g.vcf.gz -ERC GVCF
 # /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230_no_Chr00.fasta -I HA316_sorted_markdup_recal.bam -O HA316.g.vcf.gz -ERC GVCF
@@ -30,8 +30,8 @@ module load java
 # /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230_no_Chr00.fasta -I Hidatsa1_sorted_markdup_recal.bam -O Hidatsa1.g.vcf.gz -ERC GVCF
 # /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230_no_Chr00.fasta -I Hopi_sorted_markdup_recal.bam -O Hopi.g.vcf.gz -ERC GVCF
 # 
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230_no_Chr00.fasta -I Hopi_PPN285_sorted_markdup_recal.bam -O Hopi_PPN285.g.vcf.gz -ERC GVCF
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230_no_Chr00.fasta -I Laguna_Pueblo_sorted_markdup_recal.bam -O Laguna_Pueblo.g.vcf.gz -ERC GVCF
+/clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230_no_Chr00.fasta -I Hopi_PPN285_sorted_markdup_recal.bam -O Hopi_PPN285.g.vcf.gz -ERC GVCF
+/clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230_no_Chr00.fasta -I Laguna_Pueblo_sorted_markdup_recal.bam -O Laguna_Pueblo.g.vcf.gz -ERC GVCF
 # 
 # /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230_no_Chr00.fasta -I Mandan2_sorted_markdup_recal.bam -O Mandan2.g.vcf.gz -ERC GVCF
 # /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230_no_Chr00.fasta -I MexCult1_sorted_markdup_recal.bam -O MexCult1.g.vcf.gz -ERC GVCF
