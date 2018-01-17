@@ -6,7 +6,7 @@
 #SBATCH --qos=rosalind_savio_normal
 #SBATCH --mem=64000
 #SBATCH --time=72:00:00
-#SBATCH -O /global/home/users/makman/GATK/outs/variant_cal1.out
+#SBATCH -o /global/home/users/makman/GATK/outs/variant_cal1.out
 #SBATCH -e /global/home/users/makman/GATK/outs/variant_cal1.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
