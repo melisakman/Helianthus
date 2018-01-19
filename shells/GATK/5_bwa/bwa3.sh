@@ -1,13 +1,13 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/trimmed_fixed
+#SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/trimmedtrimmed_fixed
 #SBATCH -J bwa3
 #SBATCH --account=fc_blackman
 #SBATCH --partition=savio2
 #SBATCH --mem=48000
 #SBATCH --qos=savio_normal
 #SBATCH --time=72:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/bwa3_1.out
-#SBATCH -e /global/home/users/makman/GATK/outs/bwa3_1.err
+#SBATCH -o /global/home/users/makman/GATK/outs/bwa3.out
+#SBATCH -e /global/home/users/makman/GATK/outs/bwa3.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 

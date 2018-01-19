@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/
+#SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/trimmed
 #SBATCH -J bwa9
 #SBATCH --account=fc_blackman
 #SBATCH --partition=savio2
@@ -31,7 +31,7 @@ module load bwa/0.7.15
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa Mandan2_R1_trimmed_fastq.gz Mandan2_R2_trimmed_fastq.gz > Mandan2.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa MexCult14_R1_trimmed_fastq.gz MexCult14_R2_trimmed_fastq.gz > MexCult14.sam
 bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa MexCult15_R1_trimmed_fastq.gz MexCult15_R2_trimmed_fastq.gz > MexCult15.sam
-bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa MexCult1_R1_trimmed_fastq.gz MexCult1_R2_trimmed_fastq.gz > MexCult1.sam
+# bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa MexCult1_R1_trimmed_fastq.gz MexCult1_R2_trimmed_fastq.gz > MexCult1.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa MexCult3_R1_trimmed_fastq.gz MexCult3_R2_trimmed_fastq.gz > MexCult3.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa MexCult6_R1_trimmed_fastq.gz MexCult6_R2_trimmed_fastq.gz > MexCult6.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa MexCult7_R1_trimmed_fastq.gz MexCult7_R2_trimmed_fastq.gz > MexCult7.sam
