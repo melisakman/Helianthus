@@ -35,15 +35,15 @@
 # gzip RHA355_R2_trimmed_fixed.fastq
 # gzip RHA358_R1_trimmed_fixed.fastq
 # gzip RHA358_R2_trimmed_fixed.fastq
-# gzip RHA408_R1_trimmed_fixed.fastq
-# gzip RHA408_R2_trimmed_fixed.fastq
-# gzip RHA857_R1_trimmed_fixed.fastq
-# gzip RHA857_R2_trimmed_fixed.fastq
+gzip RHA408_R1_trimmed_fixed.fastq
+gzip RHA408_R2_trimmed_fixed.fastq
+gzip RHA857_R1_trimmed_fixed.fastq
+gzip RHA857_R2_trimmed_fixed.fastq
 # gzip VIR847_R1_trimmed_fixed.fastq
 # gzip VIR847_R2_trimmed_fixed.fastq
-gzip HA89_R1_trimmed_fixed.fastq 
-gzip HA89_R2_trimmed_fixed.fastq 
-gzip PPN255_Manchurian_R1_trimmed_fixed.fastq 
-gzip PPN255_Manchurian_R2_trimmed_fixed.fastq 
+# gzip HA89_R1_trimmed_fixed.fastq 
+# gzip HA89_R2_trimmed_fixed.fastq 
+# gzip PPN255_Manchurian_R1_trimmed_fixed.fastq 
+# gzip PPN255_Manchurian_R2_trimmed_fixed.fastq 
 
 

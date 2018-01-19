@@ -15,12 +15,12 @@
 # gzip HA124_R2_trimmed_fixed.fastq 
 # gzip HA316_R1_trimmed_fixed.fastq 
 # gzip HA316_R2_trimmed_fixed.fastq 
-# gzip HA404_R1_trimmed_fixed.fastq 
-# gzip HA404_R2_trimmed_fixed.fastq 
+gzip HA404_R1_trimmed_fixed.fastq 
+gzip HA404_R2_trimmed_fixed.fastq 
 gzip HA433_R1_trimmed_fixed.fastq 
 gzip HA433_R2_trimmed_fixed.fastq 
-gzip HA442_R1_trimmed_fixed.fastq 
-gzip HA442_R2_trimmed_fixed.fastq 
+# gzip HA442_R1_trimmed_fixed.fastq 
+# gzip HA442_R2_trimmed_fixed.fastq 
 # gzip HA821_R1_trimmed_fixed.fastq 
 # gzip HA821_R2_trimmed_fixed.fastq 
 # gzip RHA271_R1_trimmed_fixed.fastq

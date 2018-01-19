@@ -43,9 +43,11 @@
 # gzip VIR847_R2_trimmed_fixed.fastq
 # gzip HA89_R1_trimmed_fixed.fastq 
 # gzip HA89_R2_trimmed_fixed.fastq 
-# gzip PPN255_Manchurian_R1_trimmed_fixed.fastq 
-# gzip PPN255_Manchurian_R2_trimmed_fixed.fastq 
+gzip PPN255_Manchurian_R1_trimmed_fixed.fastq 
+gzip PPN255_Manchurian_R2_trimmed_fixed.fastq 
+gzip RHA426_R1_trimmed_fixed.fastq
 gzip RHA426_R2_trimmed_fixed.fastq
+
 
 
 
