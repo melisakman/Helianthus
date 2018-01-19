@@ -1,20 +1,20 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/trimmed
-#SBATCH -J bwa2
+#SBATCH -J bwa64
 #SBATCH --account=fc_blackman
 #SBATCH --partition=savio2
 #SBATCH --mem=48000
 #SBATCH --qos=savio_normal
 #SBATCH --time=72:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/bwa2.out
-#SBATCH -e /global/home/users/makman/GATK/outs/bwa2.err
+#SBATCH -o /global/home/users/makman/GATK/outs/bwa64.out
+#SBATCH -e /global/home/users/makman/GATK/outs/bwa64.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
 module load bwa/0.7.15
 
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa Anzac_Pueblo_R1_trimmed.fastq.gz Anzac_Pueblo_R2_trimmed.fastq.gz > Anzac_Pueblo.sam
-bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa Arikara_R1_trimmed.fastq.gz Arikara_R2_trimmed.fastq.gz > Arikara.sam
+# bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa Arikara_R1_trimmed.fastq.gz Arikara_R2_trimmed.fastq.gz > Arikara.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa HA124_R1_trimmed_fixed.fastq.gz HA124_R2_trimmed_fixed.fastq.gz > HA124.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa HA316_R1_trimmed_fixed.fastq.gz HA316_R2_trimmed_fixed.fastq.gz > HA316.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa HA404_R1_trimmed_fixed.fastq.gz HA404_R2_trimmed_fixed.fastq.gz > HA404.sam
@@ -76,6 +76,6 @@ bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-201512
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa annND1W-6_R1_trimmed.fastq.gz annND1W-6_R2_trimmed.fastq.gz > annND1W-6.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa annNM_R1_trimmed.fastq.gz annNM_R2_trimmed.fastq.gz > annNM.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa annSD1W-35_R1_trimmed.fastq.gz annSD1W-35_R2_trimmed.fastq.gz > annSD1W-35.sam
-# bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa annSD2W-18_R1_trimmed.fastq.gz annSD2W-18_R2_trimmed.fastq.gz > annSD2W-18.sam
+bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa annSD2W-18_R1_trimmed.fastq.gz annSD2W-18_R2_trimmed.fastq.gz > annSD2W-18.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa annSK1W-Q_R1_trimmed.fastq.gz annSK1W-Q_R2_trimmed.fastq.gz > annSK1W-Q.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa annWY_R1_trimmed.fastq.gz annWY_R2_trimmed.fastq.gz > annWY.sam
