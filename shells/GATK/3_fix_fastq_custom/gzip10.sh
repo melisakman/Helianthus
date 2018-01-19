@@ -11,7 +11,6 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
-gzip HA404_R1_trimmed.fastq
-gzip HA404_R2_trimmed.fastq
+wc -l *_fixed.fastq
 
 
