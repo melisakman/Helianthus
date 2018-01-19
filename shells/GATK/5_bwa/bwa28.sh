@@ -72,7 +72,7 @@ module load bwa/0.7.15
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa annIA2W-17_R1_trimmed_fastq.gz annIA2W-17_R2_trimmed_fastq.gz > annIA2W-17.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa annIA_R1_trimmed_fastq.gz annIA_R2_trimmed_fastq.gz > annIA.sam
 bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa annKS1W-27_R1_trimmed_fastq.gz annKS1W-27_R2_trimmed_fastq.gz > annKS1W-27.sam
-bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa annKS2W-35_R1_trimmed_fastq.gz annKS2W-35_R2_trimmed_fastq.gz > annKS2W-35.sam
+# bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa annKS2W-35_R1_trimmed_fastq.gz annKS2W-35_R2_trimmed_fastq.gz > annKS2W-35.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa annKS_R1_trimmed_fastq.gz annKS_R2_trimmed_fastq.gz > annKS.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa annMB1W-40_R1_trimmed_fastq.gz annMB1W-40_R2_trimmed_fastq.gz > annMB1W-40.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa annMO1W-39_R1_trimmed_fastq.gz annMO1W-39_R2_trimmed_fastq.gz > annMO1W-39.sam

@@ -6,8 +6,8 @@
 #SBATCH --qos=rosalind_savio_normal
 #SBATCH --mem=48000
 #SBATCH --time=72:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/bwa22.out
-#SBATCH -e /global/home/users/makman/GATK/outs/bwa22.err
+#SBATCH -o /global/home/users/makman/GATK/outs/bwa22b.out
+#SBATCH -e /global/home/users/makman/GATK/outs/bwa22b.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 #SBATCH --array=1-2
@@ -59,7 +59,7 @@ module load bwa/0.7.15
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa ann01-cwIA_R1_trimmed_fastq.gz ann01-cwIA_R2_trimmed_fastq.gz > ann01-cwIA.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa ann04-nwAR_R1_trimmed_fastq.gz ann04-nwAR_R2_trimmed_fastq.gz > ann04-nwAR.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa ann05-ccNM_R1_trimmed_fastq.gz ann05-ccNM_R2_trimmed_fastq.gz > ann05-ccNM.sam
-bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa ann06-seWY_R1_trimmed_fastq.gz ann06-seWY_R2_trimmed_fastq.gz > ann06-seWY.sam
+# bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa ann06-seWY_R1_trimmed_fastq.gz ann06-seWY_R2_trimmed_fastq.gz > ann06-seWY.sam
 bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa ann08-ceTN_R1_trimmed_fastq.gz ann08-ceTN_R2_trimmed_fastq.gz > ann08-ceTN.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa ann10-ccIL_R1_trimmed_fastq.gz ann10-ccIL_R2_trimmed_fastq.gz > ann10-ccIL.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa ann20-seAZ_R1_trimmed_fastq.gz ann20-seAZ_R2_trimmed_fastq.gz > ann20-seAZ.sam
