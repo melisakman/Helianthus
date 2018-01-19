@@ -79,7 +79,7 @@
 # python remove_pair_info.py RHA857_R2_trimmed.fastq RHA857_R2_trimmed_fixed.fastq
 # python remove_pair_info.py VIR847_R1_trimmed.fastq VIR847_R1_trimmed_fixed.fastq
 # python remove_pair_info.py VIR847_R2_trimmed.fastq VIR847_R2_trimmed_fixed.fastq
-python remove_pair_info.py HA89_R1_trimmed.fastq HA89_R1_trimmed_fixed.fastq
+# python remove_pair_info.py HA89_R1_trimmed.fastq HA89_R1_trimmed_fixed.fastq
 # python remove_pair_info.py HA89_R2_trimmed.fastq HA89_R2_trimmed_fixed.fastq
 # python remove_pair_info.py PPN255_Manchurian_R1_trimmed.fastq PPN255_Manchurian_R1_trimmed_fixed.fastq
 # python remove_pair_info.py PPN255_Manchurian_R2_trimmed.fastq PPN255_Manchurian_R2_trimmed_fixed.fastq
