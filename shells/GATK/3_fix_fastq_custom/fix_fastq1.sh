@@ -15,12 +15,12 @@ gunzip HA124_R1_trimmed.fastq.gz
 gunzip HA124_R2_trimmed.fastq.gz 
 gunzip HA316_R1_trimmed.fastq.gz 
 gunzip HA316_R2_trimmed.fastq.gz 
-gunzip HA404_R1_trimmed.fastq.gz 
-gunzip HA404_R2_trimmed.fastq.gz 
-gunzip HA433_R1_trimmed.fastq.gz 
-gunzip HA433_R2_trimmed.fastq.gz 
-gunzip HA442_R1_trimmed.fastq.gz 
-gunzip HA442_R2_trimmed.fastq.gz 
+# gunzip HA404_R1_trimmed.fastq.gz 
+# gunzip HA404_R2_trimmed.fastq.gz 
+# gunzip HA433_R1_trimmed.fastq.gz 
+# gunzip HA433_R2_trimmed.fastq.gz 
+# gunzip HA442_R1_trimmed.fastq.gz 
+# gunzip HA442_R2_trimmed.fastq.gz 
 # gunzip HA821_R1_trimmed.fastq.gz 
 # gunzip HA821_R2_trimmed.fastq.gz 
 # gunzip RHA271_R1_trimmed.fastq.gz
@@ -43,20 +43,20 @@ gunzip HA442_R2_trimmed.fastq.gz
 # gunzip VIR847_R2_trimmed.fastq.gz
 # gunzip HA89_R1_trimmed.fastq.gz 
 # gunzip HA89_R2_trimmed.fastq.gz 
-# gunzip PPN255_Manchurian_R1_trimmed_fastq.gz 
-# gunzip PPN255_Manchurian_R2_trimmed_fastq.gz 
+# gunzip PPN255_Manchurian_R1_trimmed.fastq.gz 
+# gunzip PPN255_Manchurian_R2_trimmed.fastq.gz 
 
 
 python remove_pair_info.py HA124_R1_trimmed.fastq HA124_R1_trimmed_fixed.fastq
 python remove_pair_info.py HA124_R2_trimmed.fastq HA124_R2_trimmed_fixed.fastq
 python remove_pair_info.py HA316_R1_trimmed.fastq HA316_R1_trimmed_fixed.fastq
 python remove_pair_info.py HA316_R2_trimmed.fastq HA316_R2_trimmed_fixed.fastq
-python remove_pair_info.py HA404_R1_trimmed.fastq HA404_R1_trimmed_fixed.fastq
-python remove_pair_info.py HA404_R2_trimmed.fastq HA404_R2_trimmed_fixed.fastq
-python remove_pair_info.py HA433_R1_trimmed.fastq HA433_R1_trimmed_fixed.fastq
-python remove_pair_info.py HA433_R2_trimmed.fastq HA433_R2_trimmed_fixed.fastq
-python remove_pair_info.py HA442_R1_trimmed.fastq HA442_R1_trimmed_fixed.fastq
-python remove_pair_info.py HA442_R2_trimmed.fastq HA442_R2_trimmed_fixed.fastq
+# python remove_pair_info.py HA404_R1_trimmed.fastq HA404_R1_trimmed_fixed.fastq
+# python remove_pair_info.py HA404_R2_trimmed.fastq HA404_R2_trimmed_fixed.fastq
+# python remove_pair_info.py HA433_R1_trimmed.fastq HA433_R1_trimmed_fixed.fastq
+# python remove_pair_info.py HA433_R2_trimmed.fastq HA433_R2_trimmed_fixed.fastq
+# python remove_pair_info.py HA442_R1_trimmed.fastq HA442_R1_trimmed_fixed.fastq
+# python remove_pair_info.py HA442_R2_trimmed.fastq HA442_R2_trimmed_fixed.fastq
 # python remove_pair_info.py HA821_R1_trimmed.fastq HA821_R1_trimmed_fixed.fastq
 # python remove_pair_info.py HA821_R2_trimmed.fastq HA821_R2_trimmed_fixed.fastq
 # python remove_pair_info.py RHA271_R1_trimmed.fastq RHA271_R1_trimmed_fixed.fastq
