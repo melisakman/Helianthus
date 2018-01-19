@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/trimmed_fixed/
+#SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/trimmed/
 #SBATCH -J gzip7
 #SBATCH --account=fc_blackman
 #SBATCH --partition=savio2
@@ -41,8 +41,8 @@
 # gzip RHA857_R2_trimmed_fixed.fastq
 gzip VIR847_R1_trimmed_fixed.fastq
 gzip VIR847_R2_trimmed_fixed.fastq
-gzip HA89_R1_trimmed_fixed.fastq 
-gzip HA89_R2_trimmed_fixed.fastq 
+# gzip HA89_R1_trimmed_fixed.fastq 
+# gzip HA89_R2_trimmed_fixed.fastq 
 # gzip PPN255_Manchurian_R1_trimmed_fixed.fastq 
 # gzip PPN255_Manchurian_R2_trimmed_fixed.fastq 
 # gzip RHA426_R1_trimmed_fixed.fastq

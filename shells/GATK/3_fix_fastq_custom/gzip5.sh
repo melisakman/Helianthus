@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/trimmed_fixed/
+#SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/trimmed/
 #SBATCH -J gzip5
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio
