@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/trimmedtrimmed_fixed
+#SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/trimmed
 #SBATCH -J bwa4
 #SBATCH --account=fc_blackman
 #SBATCH --partition=savio2
@@ -10,7 +10,6 @@
 #SBATCH -e /global/home/users/makman/GATK/outs/bwa4.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-#SBATCH --array=1-2
 
 module load bwa/0.7.15
 

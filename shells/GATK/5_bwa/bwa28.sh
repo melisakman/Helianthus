@@ -10,7 +10,6 @@
 #SBATCH -e /global/home/users/makman/GATK/outs/bwa28.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-#SBATCH --array=1-2
 
 module load bwa/0.7.15
 

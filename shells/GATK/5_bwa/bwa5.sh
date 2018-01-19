@@ -21,7 +21,7 @@ module load bwa/0.7.15
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa HA433_R1_trimmed.fastq.gz HA433_R2_trimmed.fastq.gz > HA433.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa HA442_R1_trimmed.fastq.gz HA442_R2_trimmed.fastq.gz > HA442.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa HA821_R1_trimmed.fastq.gz HA821_R2_trimmed.fastq.gz > HA821.sam
-bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa HA89_R1_trimmed_fixed.fastq.gz HA89_R2_trimmed_fixed.fastq.gz > HA89.sam
+bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa HA89_R1_trimmed.fastq.gz HA89_R2_trimmed.fastq.gz > HA89.sam
 
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa Havasupai_R1_trimmed.fastq.gz Havasupai_R2_trimmed.fastq.gz > Havasupai.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa Hidatsa1_R1_trimmed.fastq.gz Hidatsa1_R2_trimmed.fastq.gz > Hidatsa1.sam
