@@ -15,13 +15,13 @@ module load bwa/0.7.15
 
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa Anzac_Pueblo_R1_trimmed.fastq.gz Anzac_Pueblo_R2_trimmed.fastq.gz > Anzac_Pueblo.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa Arikara_R1_trimmed.fastq.gz Arikara_R2_trimmed.fastq.gz > Arikara.sam
-# bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa HA124_R1_trimmed.fastq.gz HA124_R2_trimmed.fastq.gz > HA124.sam
-# bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa HA316_R1_trimmed.fastq.gz HA316_R2_trimmed.fastq.gz > HA316.sam
-# bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa HA404_R1_trimmed.fastq.gz HA404_R2_trimmed.fastq.gz > HA404.sam
-# bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa HA433_R1_trimmed.fastq.gz HA433_R2_trimmed.fastq.gz > HA433.sam
-# bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa HA442_R1_trimmed.fastq.gz HA442_R2_trimmed.fastq.gz > HA442.sam
-# bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa HA821_R1_trimmed.fastq.gz HA821_R2_trimmed.fastq.gz > HA821.sam
-# bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa HA89_R1_trimmed.fastq.gz HA89_R2_trimmed.fastq.gz > HA89.sam
+# bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa HA124_R1_trimmed_fixed.fastq.gz HA124_R2_trimmed_fixed.fastq.gz > HA124.sam
+# bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa HA316_R1_trimmed_fixed.fastq.gz HA316_R2_trimmed_fixed.fastq.gz > HA316.sam
+# bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa HA404_R1_trimmed_fixed.fastq.gz HA404_R2_trimmed_fixed.fastq.gz > HA404.sam
+# bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa HA433_R1_trimmed_fixed.fastq.gz HA433_R2_trimmed_fixed.fastq.gz > HA433.sam
+# bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa HA442_R1_trimmed_fixed.fastq.gz HA442_R2_trimmed_fixed.fastq.gz > HA442.sam
+# bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa HA821_R1_trimmed_fixed.fastq.gz HA821_R2_trimmed_fixed.fastq.gz > HA821.sam
+# bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa HA89_R1_trimmed_fixed.fastq.gz HA89_R2_trimmed_fixed.fastq.gz > HA89.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa Havasupai_R1_trimmed.fastq.gz Havasupai_R2_trimmed.fastq.gz > Havasupai.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa Hidatsa1_R1_trimmed.fastq.gz Hidatsa1_R2_trimmed.fastq.gz > Hidatsa1.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa Hopi_PPN285_R1_trimmed.fastq.gz Hopi_PPN285_R2_trimmed.fastq.gz > Hopi_PPN285.sam
@@ -37,23 +37,21 @@ module load bwa/0.7.15
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa MexCult9_R1_trimmed.fastq.gz MexCult9_R2_trimmed.fastq.gz > MexCult9.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa PPN046_R1_trimmed.fastq.gz PPN046_R2_trimmed.fastq.gz > PPN046.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa PPN083_R1_trimmed.fastq.gz PPN083_R2_trimmed.fastq.gz > PPN083.sam
-# bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa PPN255_Manchurian_R1_trimmed.fastq.gz PPN255_Manchurian_R2_trimmed.fastq.gz > PPN255_Manchurian.sam
+# bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa PPN255_Manchurian_R1_trimmed_fixed.fastq.gz PPN255_Manchurian_R2_trimmed_fixed.fastq.gz > PPN255_Manchurian.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa PPN262_R1_trimmed.fastq.gz PPN262_R2_trimmed.fastq.gz > PPN262.sam
-# bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa Pueblo_R1_trimmed.fastq.gz Pueblo_R2_trimmed.fastq.gz > Pueblo.sam
-# bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa RHA271_R1_trimmed.fastq.gz RHA271_R2_trimmed.fastq.gz > RHA271.sam
-# bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa RHA309_R1_trimmed.fastq.gz RHA309_R2_trimmed.fastq.gz > RHA309.sam
-# bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa RHA311_R1_trimmed.fastq.gz RHA311_R2_trimmed.fastq.gz > RHA311.sam
-# bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa RHA328_R1_trimmed.fastq.gz RHA328_R2_trimmed.fastq.gz > RHA328.sam
-# bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa RHA355_R1_trimmed.fastq.gz RHA355_R2_trimmed.fastq.gz > RHA355.sam
-# bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa RHA358_R1_trimmed.fastq.gz RHA358_R2_trimmed.fastq.gz > RHA358.sam
-# bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa RHA408_R1_trimmed.fastq.gz RHA408_R2_trimmed.fastq.gz > RHA408.sam
+bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa Pueblo_R1_trimmed.fastq.gz Pueblo_R2_trimmed.fastq.gz > Pueblo.sam
+# bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa RHA271_R1_trimmed_fixed.fastq.gz RHA271_R2_trimmed_fixed.fastq.gz > RHA271.sam
+# bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa RHA309_R1_trimmed_fixed.fastq.gz RHA309_R2_trimmed_fixed.fastq.gz > RHA309.sam
+# bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa RHA311_R1_trimmed_fixed.fastq.gz RHA311_R2_trimmed_fixed.fastq.gz > RHA311.sam
+# bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa RHA328_R1_trimmed_fixed.fastq.gz RHA328_R2_trimmed_fixed.fastq.gz > RHA328.sam
+# bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa RHA355_R1_trimmed_fixed.fastq.gz RHA355_R2_trimmed_fixed.fastq.gz > RHA355.sam
+# bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa RHA358_R1_trimmed_fixed.fastq.gz RHA358_R2_trimmed_fixed.fastq.gz > RHA358.sam
+# bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa RHA408_R1_trimmed_fixed.fastq.gz RHA408_R2_trimmed_fixed.fastq.gz > RHA408.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa RHA426_R1_trimmed.fastq.gz RHA426_R2_trimmed.fastq.gz > RHA426.sam
-
-# bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa RHA857_R1_trimmed.fastq.gz RHA857_R2_trimmed.fastq.gz > RHA857.sam
-
+# bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa RHA857_R1_trimmed_fixed.fastq.gz RHA857_R2_trimmed_fixed.fastq.gz > RHA857.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa SF33_R1_trimmed.fastq.gz SF33_R2_trimmed.fastq.gz > SF33.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa Seneca_R1_trimmed.fastq.gz Seneca_R2_trimmed.fastq.gz > Seneca.sam
-# bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa VIR847_R1_trimmed.fastq.gz VIR847_R2_trimmed.fastq.gz > VIR847.sam
+# bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa VIR847_R1_trimmed_fixed.fastq.gz VIR847_R2_trimmed_fixed.fastq.gz > VIR847.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa Zuni_R1_trimmed.fastq.gz Zuni_R2_trimmed.fastq.gz > Zuni.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa ann01-cwIA_R1_trimmed.fastq.gz ann01-cwIA_R2_trimmed.fastq.gz > ann01-cwIA.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa ann04-nwAR_R1_trimmed.fastq.gz ann04-nwAR_R2_trimmed.fastq.gz > ann04-nwAR.sam
@@ -68,7 +66,7 @@ module load bwa/0.7.15
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa ann39-ncNE_R1_trimmed.fastq.gz ann39-ncNE_R2_trimmed.fastq.gz > ann39-ncNE.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa ann44-ccCA_R1_trimmed.fastq.gz ann44-ccCA_R2_trimmed.fastq.gz > ann44-ccCA.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa annIA1W-1_R1_trimmed.fastq.gz annIA1W-1_R2_trimmed.fastq.gz > annIA1W-1.sam
-bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa annIA2W-17_R1_trimmed.fastq.gz annIA2W-17_R2_trimmed.fastq.gz > annIA2W-17.sam
+# bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa annIA2W-17_R1_trimmed.fastq.gz annIA2W-17_R2_trimmed.fastq.gz > annIA2W-17.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa annIA_R1_trimmed.fastq.gz annIA_R2_trimmed.fastq.gz > annIA.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa annKS1W-27_R1_trimmed.fastq.gz annKS1W-27_R2_trimmed.fastq.gz > annKS1W-27.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa annKS2W-35_R1_trimmed.fastq.gz annKS2W-35_R2_trimmed.fastq.gz > annKS2W-35.sam

@@ -1,13 +1,13 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/trimmed
-#SBATCH -J bwa65
+#SBATCH -J bwa66
 #SBATCH --account=fc_blackman
 #SBATCH --partition=savio2
 #SBATCH --mem=48000
 #SBATCH --qos=savio_normal
 #SBATCH --time=72:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/bwa65.out
-#SBATCH -e /global/home/users/makman/GATK/outs/bwa65.err
+#SBATCH -o /global/home/users/makman/GATK/outs/bwa66.out
+#SBATCH -e /global/home/users/makman/GATK/outs/bwa66.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
@@ -77,5 +77,5 @@ module load bwa/0.7.15
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa annNM_R1_trimmed.fastq.gz annNM_R2_trimmed.fastq.gz > annNM.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa annSD1W-35_R1_trimmed.fastq.gz annSD1W-35_R2_trimmed.fastq.gz > annSD1W-35.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa annSD2W-18_R1_trimmed.fastq.gz annSD2W-18_R2_trimmed.fastq.gz > annSD2W-18.sam
-bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa annSK1W-Q_R1_trimmed.fastq.gz annSK1W-Q_R2_trimmed.fastq.gz > annSK1W-Q.sam
-# bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa annWY_R1_trimmed.fastq.gz annWY_R2_trimmed.fastq.gz > annWY.sam
+# bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa annSK1W-Q_R1_trimmed.fastq.gz annSK1W-Q_R2_trimmed.fastq.gz > annSK1W-Q.sam
+bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa annWY_R1_trimmed.fastq.gz annWY_R2_trimmed.fastq.gz > annWY.sam
