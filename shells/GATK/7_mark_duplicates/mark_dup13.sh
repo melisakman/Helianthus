@@ -52,7 +52,7 @@ module load picard/2.4.1
 
 java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx54G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar MarkDuplicates INPUT=SF33_sorted.bam OUTPUT=SF33_sorted_markdup.bam METRICS_FILE=metrics_SF33.txt
 
-# java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar MarkDuplicates INPUT=Seneca_sorted.bam OUTPUT=Seneca_sorted_markdup.bam METRICS_FILE=metrics_Seneca.txt
+java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar MarkDuplicates INPUT=Seneca_sorted.bam OUTPUT=Seneca_sorted_markdup.bam METRICS_FILE=metrics_Seneca.txt
 java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx54G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar MarkDuplicates INPUT=VIR847_sorted.bam OUTPUT=VIR847_sorted_markdup.bam METRICS_FILE=metrics_VIR847.txt
 
 # java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar MarkDuplicates INPUT=Zuni_sorted.bam OUTPUT=Zuni_sorted_markdup.bam METRICS_FILE=metrics_Zuni.txt
