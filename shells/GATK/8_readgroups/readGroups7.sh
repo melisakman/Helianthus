@@ -6,8 +6,8 @@
 #SBATCH --mem=64000
 #SBATCH --qos=savio_normal
 #SBATCH --time=48:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/readgroups7.out
-#SBATCH -e /global/home/users/makman/GATK/outs/readgroups7.err
+#SBATCH -o /global/home/users/makman/GATK/outs/readgroups7_2.out
+#SBATCH -e /global/home/users/makman/GATK/outs/readgroups7_2.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load picard/2.4.1 
@@ -36,10 +36,10 @@ module load picard/2.4.1
 # java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar AddOrReplaceReadGroups I=MexCult9_sorted_markdup.bam O=MexCult9_sorted_markdup_readGroup.bam RGPL=Illumina RGPU=1 RGLB=1 RGSM=MexCult9
 # java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar AddOrReplaceReadGroups I=PPN046_sorted_markdup.bam O=PPN046_sorted_markdup_readGroup.bam RGPL=Illumina RGPU=1 RGLB=1 RGSM=PPN046
 # java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar AddOrReplaceReadGroups I=PPN083_sorted_markdup.bam O=PPN083_sorted_markdup_readGroup.bam RGPL=Illumina RGPU=1 RGLB=1 RGSM=PPN083
-java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar AddOrReplaceReadGroups I=PPN255_Manchurian_sorted_markdup.bam O=PPN255_Manchurian_sorted_markdup_readGroup.bam RGPL=Illumina RGPU=1 RGLB=1 RGSM=PPN255_Manchurian
-java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar AddOrReplaceReadGroups I=PPN262_sorted_markdup.bam O=PPN262_sorted_markdup_readGroup.bam RGPL=Illumina RGPU=1 RGLB=1 RGSM=PPN262
-java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar AddOrReplaceReadGroups I=Pueblo_sorted_markdup.bam O=Pueblo_sorted_markdup_readGroup.bam RGPL=Illumina RGPU=1 RGLB=1 RGSM=Pueblo
-# java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar AddOrReplaceReadGroups I=RHA271_sorted_markdup.bam O=RHA271_sorted_markdup_readGroup.bam RGPL=Illumina RGPU=1 RGLB=1 RGSM=RHA271
+# java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar AddOrReplaceReadGroups I=PPN255_Manchurian_sorted_markdup.bam O=PPN255_Manchurian_sorted_markdup_readGroup.bam RGPL=Illumina RGPU=1 RGLB=1 RGSM=PPN255_Manchurian
+# java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar AddOrReplaceReadGroups I=PPN262_sorted_markdup.bam O=PPN262_sorted_markdup_readGroup.bam RGPL=Illumina RGPU=1 RGLB=1 RGSM=PPN262
+# java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar AddOrReplaceReadGroups I=Pueblo_sorted_markdup.bam O=Pueblo_sorted_markdup_readGroup.bam RGPL=Illumina RGPU=1 RGLB=1 RGSM=Pueblo
+java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar AddOrReplaceReadGroups I=RHA271_sorted_markdup.bam O=RHA271_sorted_markdup_readGroup.bam RGPL=Illumina RGPU=1 RGLB=1 RGSM=RHA271
 
 # java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar AddOrReplaceReadGroups I=RHA309_sorted_markdup.bam O=RHA309_sorted_markdup_readGroup.bam RGPL=Illumina RGPU=1 RGLB=1 RGSM=RHA309
 # java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar AddOrReplaceReadGroups I=RHA311_sorted_markdup.bam O=RHA311_sorted_markdup_readGroup.bam RGPL=Illumina RGPU=1 RGLB=1 RGSM=RHA311
