@@ -5,7 +5,7 @@
 #SBATCH --partition=savio
 #SBATCH --qos=rosalind_savio_normal
 #SBATCH --mem=64000
-#SBATCH --time=72:00:00
+#SBATCH --time=48:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/readgroups17.out
 #SBATCH -e /global/home/users/makman/GATK/outs/readgroups17.err
 #SBATCH --mail-user=makman@berkeley.edu
