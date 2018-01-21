@@ -49,9 +49,9 @@ module load samtools
 # samtools index RHA426_sorted_markdup_readGroup.bam RHA426_sorted_markdup_readGroup.bai
 # samtools index RHA857_sorted_markdup_readGroup.bam RHA857_sorted_markdup_readGroup.bai
 
-# samtools index SF33_sorted_markdup_readGroup.bam SF33_sorted_markdup_readGroup.bai
-# samtools index Seneca_sorted_markdup_readGroup.bam Seneca_sorted_markdup_readGroup.bai
-# samtools index VIR847_sorted_markdup_readGroup.bam VIR847_sorted_markdup_readGroup.bai
+samtools index SF33_sorted_markdup_readGroup.bam SF33_sorted_markdup_readGroup.bai
+samtools index Seneca_sorted_markdup_readGroup.bam Seneca_sorted_markdup_readGroup.bai
+samtools index VIR847_sorted_markdup_readGroup.bam VIR847_sorted_markdup_readGroup.bai
 samtools index Zuni_sorted_markdup_readGroup.bam Zuni_sorted_markdup_readGroup.bai
 
 # samtools index ann01-cwIA_sorted_markdup_readGroup.bam ann01-cwIA_sorted_markdup_readGroup.bai

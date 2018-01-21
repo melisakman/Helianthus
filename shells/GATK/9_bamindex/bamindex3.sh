@@ -21,8 +21,8 @@ module load samtools
 # samtools index HA442_sorted_markdup_readGroup.bam HA442_sorted_markdup_readGroup.bai
 # samtools index HA821_sorted_markdup_readGroup.bam HA821_sorted_markdup_readGroup.bai
 samtools index HA89_sorted_markdup_readGroup.bam HA89_sorted_markdup_readGroup.bai
-# samtools index Havasupai_sorted_markdup_readGroup.bam Havasupai_sorted_markdup_readGroup.bai
-# samtools index Hidatsa1_sorted_markdup_readGroup.bam Hidatsa1_sorted_markdup_readGroup.bai
+samtools index Havasupai_sorted_markdup_readGroup.bam Havasupai_sorted_markdup_readGroup.bai
+samtools index Hidatsa1_sorted_markdup_readGroup.bam Hidatsa1_sorted_markdup_readGroup.bai
 samtools index Hopi_sorted_markdup_readGroup.bam Hopi_sorted_markdup_readGroup.bai
 # samtools index Hopi_PPN285_sorted_markdup_readGroup.bam Hopi_PPN285_sorted_markdup_readGroup.bai
 # samtools index Laguna_Pueblo_sorted_markdup_readGroup.bam Laguna_Pueblo_sorted_markdup_readGroup.bai
