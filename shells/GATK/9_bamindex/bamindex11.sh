@@ -1,11 +1,10 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/sams/
 #SBATCH -J markdup1
-#SBATCH --account=co_rosalind
-#SBATCH --partition=savio
-#SBATCH --qos=rosalind_savio_normal
+#SBATCH --account=fc_blackman
+#SBATCH --partition=savio2
 #SBATCH --mem=64000
-#SBATCH --time=72:00:00
+#SBATCH --qos=savio_normal
 #SBATCH -o /global/home/users/makman/GATK/outs/bamindex11.out
 #SBATCH -e /global/home/users/makman/GATK/outs/bamindex11.err
 #SBATCH --mail-user=makman@berkeley.edu
