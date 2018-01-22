@@ -1,13 +1,13 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/sams/
-#SBATCH -J varcal13
+#SBATCH -J varcal46
 #SBATCH --account=fc_blackman
 #SBATCH --partition=savio2
 #SBATCH --mem=64000
 #SBATCH --qos=savio_normal
 #SBATCH --time=32:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/variant_cal13.out
-#SBATCH -e /global/home/users/makman/GATK/outs/variant_cal13.err
+#SBATCH -o /global/home/users/makman/GATK/outs/variant_cal46.out
+#SBATCH -e /global/home/users/makman/GATK/outs/variant_cal46.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load java
