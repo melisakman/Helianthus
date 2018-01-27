@@ -6,7 +6,7 @@
 #SBATCH --qos=rosalind_htc2_normal
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=20
+#SBATCH --cpus-per-task=12
 #SBATCH --time=200:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/variant_cal66.out
 #SBATCH -e /global/home/users/makman/GATK/outs/variant_cal66.err
