@@ -3,7 +3,10 @@
 #SBATCH -J varcal7
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
-#SBATCH --nodes=2
+#SBATCH --ntasks-per-node=1 
+#SBATCH --cpus-per-task=8
+#SBATCH --mem=64000
+#SBATCH --nodes=1
 #SBATCH --time=200:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/variant_cal7.out
 #SBATCH -e /global/home/users/makman/GATK/outs/variant_cal7.err
