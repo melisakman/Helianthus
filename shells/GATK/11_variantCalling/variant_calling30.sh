@@ -1,11 +1,9 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/sams/
-#SBATCH -J varcal30
+#SBATCH -J varcal7
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
-#SBATCH --nodes=1
-#SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=12
+#SBATCH --nodes=2
 #SBATCH --time=200:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/variant_cal30.out
 #SBATCH -e /global/home/users/makman/GATK/outs/variant_cal30.err
