@@ -1,11 +1,13 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/sams/
 #SBATCH -J varcal7
-#SBATCH --account=fc_blackman
-#SBATCH --partition=savio2
-#SBATCH --mem=64000
-#SBATCH --qos=savio_normal
-#SBATCH --time=72:00:00
+#SBATCH --account=co_rosalind
+#SBATCH --partition=savio2_htc
+#SBATCH --qos=rosalind_htc2_normal
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=12
+#SBATCH --time=200:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/variant_cal7.out
 #SBATCH -e /global/home/users/makman/GATK/outs/variant_cal7.err
 #SBATCH --mail-user=makman@berkeley.edu
