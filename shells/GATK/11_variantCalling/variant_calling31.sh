@@ -1,15 +1,15 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/sams/
 #SBATCH -J varcal31
-#SBATCH --partition=vector
-#SBATCH --qos=vector_batch
+#SBATCH --account=co_rosalind
+#SBATCH --partition=savio
+#SBATCH --qos=rosalind_savio_normal
 #SBATCH --nodes=1
-#SBATCH --ntasks-per-node=1 
-#SBATCH --cpus-per-task=8
-#SBATCH --mem=64000
-#SBATCH --time=200:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/variant_cal31.out
-#SBATCH -e /global/home/users/makman/GATK/outs/variant_cal31.err
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=20
+#SBATCH --time=300:00:00
+#SBATCH -o /global/home/users/makman/GATK/outs/variant_cal31_re.out
+#SBATCH -e /global/home/users/makman/GATK/outs/variant_cal31_re.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load java
@@ -105,7 +105,7 @@ module load java
 # /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I annMO1W-39_sorted_markdup_recal.bam -O annMO1W-39.g.vcf.gz -ERC GVCF
 # 
 # 
-/clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I annND1W-6_sorted_markdup_recal.bam -O annND1W-6.g.vcf.gz -ERC GVCF
+/clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I annND1W-6_sorted_markdup_recal.bam -O annND1W-6_re.g.vcf.gz -ERC GVCF
 # /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I annNM_sorted_markdup_recal.bam -O annNM.g.vcf.gz -ERC GVCF
 # 
 # /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I annSD1W-35_sorted_markdup_recal.bam -O annSD1W-35.g.vcf.gz -ERC GVCF
