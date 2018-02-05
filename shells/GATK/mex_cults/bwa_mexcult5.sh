@@ -13,6 +13,8 @@
 #SBATCH --mail-type=All
 
 module load bwa/0.7.17-r1188
+module load java
+
 
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa HI.4520.005.NEBNext_Index_30.Mex_A1516_R1_trimmed.fastq.gz HI.4520.005.NEBNext_Index_30.Mex_A1516_R2_trimmed.fastq.gz > Mex_A1516.sam
 # bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa HI.4520.005.NEBNext_Index_37.Mex_A1517_R1_trimmed.fastq.gz HI.4520.005.NEBNext_Index_37.Mex_A1517_R2_trimmed.fastq.gz > Mex_A1517.sam
