@@ -1,13 +1,12 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/trimmed
 #SBATCH -J bwaM4
-#SBATCH --account=co_rosalind
-#SBATCH --partition=savio
-#SBATCH --qos=rosalind_savio_normal
+#SBATCH --partition=vector
+#SBATCH --qos=vector_batch
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=20
-#SBATCH --time=72:00:00
+#SBATCH --cpus-per-task=12
+#SBATCH --time=360:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/bwa_mexcult4.out
 #SBATCH -e /global/home/users/makman/GATK/outs/bwa_mexcult4.err
 #SBATCH --mail-user=makman@berkeley.edu
