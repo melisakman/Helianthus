@@ -1,13 +1,12 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/sams/
 #SBATCH -J sortmex2
-#SBATCH --account=co_rosalind
-#SBATCH --partition=savio2_htc
-#SBATCH --qos=rosalind_htc2_normal
+#SBATCH --partition=vector
+#SBATCH --qos=vector_batch
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=12
-#SBATCH --time=300:00:00
+#SBATCH --time=360:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/sam_sort_mexcult2.out
 #SBATCH -e /global/home/users/makman/GATK/outs/sam_sort_mexcult2.err
 #SBATCH --mail-user=makman@berkeley.edu
