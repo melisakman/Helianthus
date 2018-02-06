@@ -6,7 +6,7 @@
 #SBATCH --qos=rosalind_htc2_normal
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=24
+#SBATCH --cpus-per-task=12
 #SBATCH --time=300:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/sam_sort_mexcult4.out
 #SBATCH -e /global/home/users/makman/GATK/outs/sam_sort_mexcult4.err
