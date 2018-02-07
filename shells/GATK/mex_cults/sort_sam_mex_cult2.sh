@@ -6,6 +6,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=12
+#SBATCH --memory=64000
 #SBATCH --time=360:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/sam_sort_mexcult2.out
 #SBATCH -e /global/home/users/makman/GATK/outs/sam_sort_mexcult2.err
