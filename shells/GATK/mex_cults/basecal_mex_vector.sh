@@ -15,6 +15,12 @@
 module load samtools
 module load java
 
+java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar AddOrReplaceReadGroups I=Mex_A1516_sorted_markdup.bam O=Mex_A1516_sorted_markdup_readGroups.bam RGPL=Illumina RGPU=1 RGLB=1 RGSM=Mex_A1516
+# java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar AddOrReplaceReadGroups I=Mex_A1517_sorted_markdup.bam O=Mex_A1517_sorted_markdup_readGroups.bam RGPL=Illumina RGPU=1 RGLB=1 RGSM=Mex_A1517
+# java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar AddOrReplaceReadGroups I=Mex_A1572_sorted_markdup.bam O=Mex_A1572_sorted_markdup_readGroups.bam RGPL=Illumina RGPU=1 RGLB=1 RGSM=Mex_A1572
+# java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar AddOrReplaceReadGroups I=Mex_A1574_sorted_markdup.bam O=Mex_A1574_sorted_markdup_readGroups.bam RGPL=Illumina RGPU=1 RGLB=1 RGSM=Mex_A1574
+# java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar AddOrReplaceReadGroups I=Mex_Ann261_sorted_markdup.bam O=Mex_Ann261_sorted_markdup_readGroups.bam RGPL=Illumina RGPU=1 RGLB=1 RGSM=Mex_Ann261
+
 
 samtools index Mex_A1516_sorted_markdup.bam Mex_A1516_sorted_markdup.bai
 # samtools index Mex_A1517_sorted_markdup.bam Mex_A1517_sorted_markdup.bai
