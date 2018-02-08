@@ -21,7 +21,7 @@ java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx48G -jar 
 # java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx72G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar SortSam INPUT=Mex_Ann261.sam OUTPUT=Mex_Ann261_sorted.bam SORT_ORDER=coordinate 
 
 
-java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar MarkDuplicates INPUT=Mex_A1516_sorted.bam OUTPUT=Mex_A1516_sorted_markdup.bam METRICS_FILE=metrics_Mex_A1516.txt
+# java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar MarkDuplicates INPUT=Mex_A1516_sorted.bam OUTPUT=Mex_A1516_sorted_markdup.bam METRICS_FILE=metrics_Mex_A1516.txt
 # java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar MarkDuplicates INPUT=Mex_A1517_sorted.bam OUTPUT=Mex_A1517_sorted_markdup.bam METRICS_FILE=metrics_Mex_A1517.txt
 # java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar MarkDuplicates INPUT=Mex_A1572_sorted.bam OUTPUT=Mex_A1572_sorted_markdup.bam METRICS_FILE=metrics_Mex_A1572.txt
 # java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar MarkDuplicates INPUT=Mex_A1574_sorted.bam OUTPUT=Mex_A1574_sorted_markdup.bam METRICS_FILE=metrics_Mex_A1574.txt
