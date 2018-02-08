@@ -11,7 +11,10 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
-
+echo first
+echo $PYTHONPATH
 module load hapflk/1.4
+echo second
+echo $PYTHONPATH
 
 hapflk --file hapmap3-lct --kinship kinship.txt -K 15 --nfit=1 --ncpu=2
