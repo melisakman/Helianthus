@@ -3,7 +3,7 @@
 #SBATCH -J combine_gvcfs
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio
-#SBATCH --qos=rosalind_htc2_norma
+#SBATCH --qos=rosalind_htc2_normal
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=12
