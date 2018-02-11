@@ -80,5 +80,5 @@ module load java
 --variant annSD1W-35.g.vcf.gz \
 --variant annSD2W-18.g.vcf.gz \
 --variant annSK1W-Q.g.vcf.gz \
---variant annWY \
+--variant annWY.g.vcf.gz \
 -O combined.g.vcf.gz
