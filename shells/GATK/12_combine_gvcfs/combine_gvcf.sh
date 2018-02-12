@@ -12,6 +12,7 @@
 #SBATCH -e /global/home/users/makman/GATK/outs/combine_gvcfs_vector2.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
+zcat combined_vector.g.vcf.gz | tail
 
 module load java
 
