@@ -1,14 +1,15 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/sams/
 #SBATCH -J combine_gvcfs
-#SBATCH --partition=vector
-#SBATCH --qos=vector_batch
+#SBATCH --account=co_rosalind
+#SBATCH --partition=savio
+#SBATCH --qos=rosalind_savio_normal
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=20
 #SBATCH --time=300:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/combine_gvcfs_vector.out
-#SBATCH -e /global/home/users/makman/GATK/outs/combine_gvcfs_vector.err
+#SBATCH -o /global/home/users/makman/GATK/outs/combine_gvcfs_savionormal.out
+#SBATCH -e /global/home/users/makman/GATK/outs/combine_gvcfs_savionormal.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
@@ -24,7 +25,7 @@ module load java
 --variant HA433.g.vcf.gz \
 --variant HA442.g.vcf.gz \
 --variant HA821.g.vcf.gz \
---variant HA89d.g.vcf.gz \
+--variant HA89.g.vcf.gz \
 --variant Havasupai.g.vcf.gz \
 --variant Hidatsa1.g.vcf.gz \
 --variant Hopid.g.vcf.gz \
@@ -82,4 +83,4 @@ module load java
 --variant annSD2W-18.g.vcf.gz \
 --variant annSK1W-Q.g.vcf.gz \
 --variant annWY.g.vcf.gz \
--O combined_vector.g.vcf.gz
+-O combined_savio_normal.g.vcf.gz
