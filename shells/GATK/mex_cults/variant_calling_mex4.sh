@@ -5,8 +5,8 @@
 #SBATCH --qos=vector_batch
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=20
-#SBATCH --mem=64000
+#SBATCH --cpus-per-task=10
+#SBATCH --mem=32000
 #SBATCH --time=400:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/variant_cal_mex4.out
 #SBATCH -e /global/home/users/makman/GATK/outs/variant_cal_mex4.err
