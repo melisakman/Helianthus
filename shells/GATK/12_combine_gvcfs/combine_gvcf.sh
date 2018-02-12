@@ -1,15 +1,15 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/sams/
 #SBATCH -J combine_gvcfs
-#SBATCH --partition=vector
-#SBATCH --qos=vector_batch
+#SBATCH --partition=rosalind_co
+#SBATCH --qos=rosalind_savio_normal
 #SBATCH --nodes=1
-#SBATCH --mem=256000
+#SBATCH --mem=64000
 #SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=48
+#SBATCH --cpus-per-task=20
 #SBATCH --time=300:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/combine_gvcfs_vector2.out
-#SBATCH -e /global/home/users/makman/GATK/outs/combine_gvcfs_vector2.err
+#SBATCH -o /global/home/users/makman/GATK/outs/combine_gvcfs_savio.out
+#SBATCH -e /global/home/users/makman/GATK/outs/combine_gvcfs_savio.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 zcat combined_vector.g.vcf.gz | tail
@@ -84,4 +84,4 @@ module load java
 --variant annSD2W-18.g.vcf.gz \
 --variant annSK1W-Q.g.vcf.gz \
 --variant annWY.g.vcf.gz \
--O combined_vector.g.vcf.gz
+-O combined_savio.g.vcf.gz
