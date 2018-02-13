@@ -14,7 +14,7 @@
 
 module load java
 
-/clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx240G" CombineGVCFs \
+/clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx48G" CombineGVCFs \
 -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
 -L HanXRQChr13 \
 --variant Anzac_Pueblo.g.vcf.gz \
