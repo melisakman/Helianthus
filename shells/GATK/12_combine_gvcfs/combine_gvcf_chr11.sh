@@ -3,10 +3,9 @@
 #SBATCH -J com11
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
-#SBATCH --nodes=1
 #SBATCH --mem=48000
 #SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=12
+#SBATCH --cpus-per-task=8
 #SBATCH --time=400:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/combine_gvcfs_chr11.out
 #SBATCH -e /global/home/users/makman/GATK/outs/combine_gvcfs_chr11.err
