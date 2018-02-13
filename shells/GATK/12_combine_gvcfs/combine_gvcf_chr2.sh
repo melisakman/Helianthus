@@ -1,6 +1,6 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/sams/gvcfs
-#SBATCH -J com1
+#SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/sams/
+#SBATCH -J comg_nsavio
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio
 #SBATCH --qos=rosalind_savio_normal
