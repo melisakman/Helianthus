@@ -1,14 +1,15 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/sams/gvcfs
-#SBATCH -J com5
+#SBATCH -J com17
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
+#SBATCH --nodes=1
 #SBATCH --mem=48000
 #SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=8
+#SBATCH --cpus-per-task=12
 #SBATCH --time=400:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/combine_gvcfs_chr05.out
-#SBATCH -e /global/home/users/makman/GATK/outs/combine_gvcfs_chr05.err
+#SBATCH -o /global/home/users/makman/GATK/outs/combine_gvcfs_chr17.out
+#SBATCH -e /global/home/users/makman/GATK/outs/combine_gvcfs_chr17.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
@@ -16,7 +17,7 @@ module load java
 
 /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx240G" CombineGVCFs \
 -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
--L HanXRQChr05 \
+-L HanXRQChr17 \
 --variant Anzac_Pueblo.g.vcf.gz \
 --variant Arikara.g.vcf.gz \
 --variant HA124.g.vcf.gz \
@@ -83,4 +84,4 @@ module load java
 --variant annSD2W-18.g.vcf.gz \
 --variant annSK1W-Q.g.vcf.gz \
 --variant annWY.g.vcf.gz \
--O combined_chr05.g.vcf.gz
+-O combined_chr17.g.vcf.gz

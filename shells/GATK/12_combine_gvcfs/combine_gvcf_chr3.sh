@@ -1,12 +1,13 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/sams/gvcfs
 #SBATCH -J com3
-#SBATCH --partition=vector
-#SBATCH --qos=vector_batch
+#SBATCH --account=co_rosalind
+#SBATCH --partition=savio
+#SBATCH --qos=rosalind_savio_normal
 #SBATCH --nodes=1
-#SBATCH --mem=48000
+#SBATCH --mem=64000
 #SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=12
+#SBATCH --cpus-per-task=20
 #SBATCH --time=400:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/combine_gvcfs_chr03.out
 #SBATCH -e /global/home/users/makman/GATK/outs/combine_gvcfs_chr03.err
