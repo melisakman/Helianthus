@@ -1,7 +1,7 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/sams/
 #SBATCH -J comg_nsavio
-#SBATCH --partition=rosalind_co
+#SBATCH --partition=co_rosalind
 #SBATCH --qos=rosalind_savio_normal
 #SBATCH --nodes=1
 #SBATCH --mem=64000
