@@ -18,5 +18,5 @@ module load java
 
 /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G" GenotypeGVCFs \
 -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
--V combined_chr05.g.vcf.gz
+-V combined_chr05.g.vcf.gz \
 -O VC_MA_chr05.vcf.gz
