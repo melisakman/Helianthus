@@ -1,6 +1,6 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/sams/gvcfs
-#SBATCH -J gntype1
+#SBATCH -J gntype4
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio
 #SBATCH --qos=rosalind_savio_normal
@@ -9,8 +9,8 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=20
 #SBATCH --time=400:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/genotype_chr1.out
-#SBATCH -e /global/home/users/makman/GATK/outs/genotype_chr1.err
+#SBATCH -o /global/home/users/makman/GATK/outs/genotype_chr4.out
+#SBATCH -e /global/home/users/makman/GATK/outs/genotype_chr4.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
@@ -18,5 +18,5 @@ module load java
 
 /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G" GenotypeGVCFs \
 -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
--V combined_chr01.g.vcf.gz
--O VC_MA_chr01.vcf.gz
+-V combined_chr04.g.vcf.gz
+-O VC_MA_chr04.vcf.gz
