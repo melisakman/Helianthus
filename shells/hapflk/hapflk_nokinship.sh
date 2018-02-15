@@ -6,8 +6,8 @@
 #SBATCH --nodes=1
 #SBATCH --time=5:00:00
 #SBATCH --mem=32000
-#SBATCH -o hapflk_nokinship.out
-#SBATCH -e hapflk_nokinship.err
+#SBATCH -o /clusterfs/rosalind/users/makman/hapflk-1.4/hapflk-tutorial/hapflk_nokinship.out
+#SBATCH -e /clusterfs/rosalind/users/makman/hapflk-1.4/hapflk-tutorial/hapflk_nokinship.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
