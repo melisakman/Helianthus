@@ -14,4 +14,4 @@
 module load hapflk/1.4
 
 
-hapflk --file merged_NVC_noXRQ_fixed -K 3 --nfit=15 --ncpu=2
+hapflk --file merged_NVC_noXRQ_fixed2 -K 3 --nfit=15 --ncpu=2
