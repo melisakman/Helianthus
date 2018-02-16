@@ -17,7 +17,14 @@ module load picard/2.9.0
 samtools/1.6
 
 
-java -jar /clusterfs/rosalind/users/makman/Trimmomatic-0.36/trimmomatic-0.36.jar PE HI.0206.004.Index_8.Hopi_R1.fastq.gz HI.0206.004.Index_8.Hopi_R2.fastq.gz Hopi_real_R1_trimmed_fastq.gz Hopi_real_R1_unpaired.fastq.gz Hopi_real_R2_trimmed_fastq.gz Hopi_real_R2_unpaired.fastq.gz ILLUMINACLIP:adaptersRay.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+java -jar /clusterfs/rosalind/users/makman/Trimmomatic-0.36/trimmomatic-0.36.jar PE HI.0206.004.Index_8.Hopi_R1.fastq.gz HI.0206.004.Index_8.Hopi_R2.fastq.gz Hopi_real_R1_trimmed.fastq.gz Hopi_real_R1_unpaired.fastq.gz Hopi_real_R2_trimmed.fastq.gz Hopi_real_R2_unpaired.fastq.gz ILLUMINACLIP:adaptersRay.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+gunzip Hopi_real_R1_trimmed.fastq.gz
+gunzip Hopi_real_R2_trimmed.fastq.gz
+python ready/trimmed/remove_pair_info.py Hopi_real_R1_trimmed.fastq Hopi_real_R1_trimmed_fixed.fastq
+python ready/trimmed/remove_pair_info.py Hopi_real_R1_trimmed.fastq Hopi_real_R2_trimmed_fixed.fastq
+gzip Hopi_real_R1_trimmed_fixed.fastq
+gzip Hopi_real_R2_trimmed_fixed.fastq
 bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa Hopi_real_R1_trimmed_fixed.fastq.gz Hopi_real_R2_trimmed_fixed.fastq.gz > Hopi_real.sam
 java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar SortSam INPUT=Hopi_real.sam OUTPUT=Hopi_real_sorted.bam SORT_ORDER=coordinate 
 java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar MarkDuplicates INPUT=Hopi_real_sorted.bam OUTPUT=Hopi_real_sorted_markdup.bam METRICS_FILE=metrics_Hopi_real.txt
