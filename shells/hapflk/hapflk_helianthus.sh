@@ -14,4 +14,4 @@
 module load hapflk/1.4
 
 
-hapflk --file small_helianthus_41 -K 15 --nfit=1 --ncpu=2
+hapflk --file small_helianthus_40 -K 15 --nfit=1 --ncpu=2
