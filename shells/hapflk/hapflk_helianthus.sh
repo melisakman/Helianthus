@@ -14,4 +14,4 @@
 module load hapflk/1.4
 
 
-hapflk --file merged_NVC_noXRQ_fixed_9 -K 15 --nfit=1 --ncpu=2
+hapflk --file small_helianthus_39 -K 15 --nfit=1 --ncpu=2
