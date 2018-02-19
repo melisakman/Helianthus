@@ -13,7 +13,7 @@
 module load java
 module load bwa/0.7.17-r1188
 module load picard/2.9.0 
-samtools
+module load samtools/1.6
 
 
 # 
