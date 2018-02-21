@@ -6,12 +6,12 @@
 #SBATCH --nodes=1
 #SBATCH --time=100:00:00
 #SBATCH --mem=32000
-#SBATCH -o /clusterfs/rosalind/users/makman/hapflk-1.4/hapflk-tutorial/hapflk_helianthus.out
-#SBATCH -e /clusterfs/rosalind/users/makman/hapflk-1.4/hapflk-tutorial/hapflk_helianthus.err
+#SBATCH -o /clusterfs/rosalind/users/makman/hapflk-1.4/hapflk-tutorial/hapflk_helianthus_small_indel.out
+#SBATCH -e /clusterfs/rosalind/users/makman/hapflk-1.4/hapflk-tutorial/hapflk_helianthus_small_indel.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
 module load hapflk/1.4
 
 
-hapflk --file merged_NVC_noXRQ_fixed -K 15 --nfit=1 --ncpu=2
+hapflk --file small_helinathus_40 -K 15 --nfit=1 --ncpu=2
