@@ -83,5 +83,5 @@ module load java
 --variant annSD2W-18.g.vcf.gz \
 --variant annSK1W-Q.g.vcf.gz \
 --variant annWY.g.vcf.gz \
---variant Hopi_real.g.vcf.gz \
+--variant Hopi_real_chr08.g.vcf.gz \
 -O combined_chr08.g.vcf.gz
