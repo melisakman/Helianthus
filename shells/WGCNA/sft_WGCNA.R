@@ -7,7 +7,7 @@ args = commandArgs(trailingOnly=TRUE)
 
 setwd("/clusterfs/rosalind/users/makman/WGCNA_Ara")
 install.packages("WGCNA")
-
+54
 library("WGCNA")
 enableWGCNAThreads()
 lnames = load(file = "Arab_dataInput.RData")
