@@ -3,7 +3,7 @@
 #SBATCH -J WGCNA
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
-#SBATCH --mem=128000
+#SBATCH --mem=64000
 #SBATCH --time=400:00:00
 #SBATCH -o /global/home/users/makman/WGCNA/WGCNA_power.out
 #SBATCH -e /global/home/users/makman/WGCNA/WGCNA_power.err
