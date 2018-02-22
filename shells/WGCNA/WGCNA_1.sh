@@ -1,6 +1,7 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/WGCNA_Ara/
 #SBATCH -J WGCNA
+#SBATCH --verbose
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
 #SBATCH --mem=64000
