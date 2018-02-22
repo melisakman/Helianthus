@@ -10,17 +10,6 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
-module load r/3.4.2
-R
+module load r/3.2.5
 
-install.packages("WGCNA")
-
-library(WGCNA)
-enableWGCNAThreads()
-lnames = load(file = "Arab_dataInput.RData")
-lnames
-# Choose a set of soft-thresholding powers
-powers = c(c(1:10), seq(from = 12, to=20, by=2))
-# Call the network topology analysis function
-sft = pickSoftThreshold(datArab, powerVector = powers, verbose = 5)
-sft 
+Rscript --vanilla /global/home/users/makman/git/Helianthus/shells/WGCNA/sft_WGCNA.R
