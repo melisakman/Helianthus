@@ -5,10 +5,7 @@ args = commandArgs(trailingOnly=TRUE)
 ######################################################################
 # Written by Melis Akman, February 2018
 
-setwd("/clusterfs/rosalind/users/makman/WGCNA_Ara")
-install.packages("/global/home/users/makman/R/memoise", repos = NULL, lib = "/global/home/users/makman/R/x86_64-pc-linux-gnu-library/3.4/")
-
-install.packages("/global/home/users/makman/R/WGCNA", repos = NULL, lib = "/global/home/users/makman/R/x86_64-pc-linux-gnu-library/3.4/")
+setwd("/home/makman/Arabi_GxE")
 library("WGCNA")
 enableWGCNAThreads()
 lnames = load(file = "Arab_dataInput.RData")
@@ -19,3 +16,25 @@ powers = c(c(1:10), seq(from = 12, to=20, by=2))
 sft = pickSoftThreshold(datArab, powerVector = powers, verbose = 5)
 sft 
 write.csv(sft, file = "sft.csv")
+
+softPower = 8;
+bwnet = blockwiseModules(datArab, maxBlockSize = 20000,
+                         power = 8, TOMType = "unsigned", minModuleSize = 50,
+                         reassignThreshold = 0, mergeCutHeight = 0.25,
+                         numericLabels = TRUE,
+                         saveTOMs = TRUE,
+                         saveTOMFileBase = "power8_combined_TOM-blockwise_updated",
+                         verbose = 3)
+save(bwnet, file="combined_power8_bwnet.RData")# Call the hierarchical clustering function
+
+
+softPower = 6;
+bwnet = blockwiseModules(datArab, maxBlockSize = 20000,
+                         power = 6, TOMType = "unsigned", minModuleSize = 50,
+                         reassignThreshold = 0, mergeCutHeight = 0.25,
+                         numericLabels = TRUE,
+                         saveTOMs = TRUE,
+                         saveTOMFileBase = "power8_combined_TOM-blockwise_updated",
+                         verbose = 3)
+save(bwnet, file="combined_power6_bwnet.RData")# Call the hierarchical clustering function
+
