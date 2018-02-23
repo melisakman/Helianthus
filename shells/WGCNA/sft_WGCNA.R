@@ -6,8 +6,9 @@ args = commandArgs(trailingOnly=TRUE)
 # Written by Melis Akman, February 2018
 
 setwd("/clusterfs/rosalind/users/makman/WGCNA_Ara")
-install.packages("WGCNA")
-54
+install.packages("/global/home/users/makman/R/memoise", repos = NULL, lib = "/global/home/users/makman/R/x86_64-pc-linux-gnu-library/3.4/")
+
+install.packages("/global/home/users/makman/R/WGCNA", repos = NULL, lib = "/global/home/users/makman/R/x86_64-pc-linux-gnu-library/3.4/")
 library("WGCNA")
 enableWGCNAThreads()
 lnames = load(file = "Arab_dataInput.RData")
