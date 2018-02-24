@@ -14,6 +14,7 @@
 module load bio/vcftools/0.1.15
 module load gcc/4.8.5 
 module load java
+module load perl
 
 # java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T SelectVariants \
 # 	-R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
