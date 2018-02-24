@@ -16,16 +16,16 @@ module load gcc/4.8.5
 module load java
 
 java -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -Xmx60G -T SelectVariants \
-	-R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \ 
-	-V VC_MA_chr01.vcf \ 
-	-selectType SNP \ 
+	-R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
+	-V VC_MA_chr01.vcf \
+	-selectType SNP \
 	-o VC_MA_chr01_snps.vcf 
 
-java -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -Xmx60G -T VariantFiltration \ 
-	-R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \ 
-	-V VC_MA_chr01_snps.vcf \ 
-	--filterExpression "QD < 2.0 || FS > 60.0 || MQ < 40.0 || MQRankSum < -12.5 || ReadPosRankSum < -8.0" \ 
-	--filterName "my_snp_filter" \ 
+java -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -Xmx60G -T VariantFiltration \
+	-R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
+	-V VC_MA_chr01_snps.vcf \
+	--filterExpression "QD < 2.0 || FS > 60.0 || MQ < 40.0 || MQRankSum < -12.5 || ReadPosRankSum < -8.0" \
+	--filterName "my_snp_filter" \
 	-o VC_MA_chr01_snps_filtered.vcf 
 
 
@@ -52,14 +52,14 @@ java -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysis
 # VC_MA_chr17.vcf.g | gzip -c VC_MA_combined.vcf.gz
 # 
 # /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G" SelectVariants \
-# -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \ 
-# -V VC_MA_combined.vcf \ 
-# -selectType SNP \ 
+# -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
+# -V VC_MA_combined.vcf \
+# -selectType SNP \
 # -o VC_MA_combined_snps.vcf 
 # 
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G" VariantFiltration \ 
-# -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \ 
-# -V VC_MA_combined_snps.vcf \ 
-# --filterExpression "QD < 2.0 || FS > 60.0 || MQ < 40.0 || MQRankSum < -12.5 || ReadPosRankSum < -8.0" \ 
-# --filterName "my_snp_filter" \ 
+# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G" VariantFiltration \
+# -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
+# -V VC_MA_combined_snps.vcf \
+# --filterExpression "QD < 2.0 || FS > 60.0 || MQ < 40.0 || MQRankSum < -12.5 || ReadPosRankSum < -8.0" \
+# --filterName "my_snp_filter" \
 # -o VC_MA_combined_snps_filtered.vcf 
