@@ -13,7 +13,8 @@
 #SBATCH --mail-type=All
 module load bio/vcftools/0.1.15
 module load gcc/4.8.5 
- 
+module load java
+
 java -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -T SelectVariants \
 -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \ 
 -V VC_MA_chr01.vcf \ 
