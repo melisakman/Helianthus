@@ -17,16 +17,16 @@ module load java
 
 java -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T SelectVariants \
 	-R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
-	-V VC_MA_chr01.vcf \
+	-V VC_MA_chr01.vcf.gz \
 	-selectType SNP \
-	-o VC_MA_chr01_snps.vcf 
+	-o VC_MA_chr01_snps.vcf.gz 
 
 java -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T VariantFiltration \
 	-R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
-	-V VC_MA_chr01_snps.vcf \
+	-V VC_MA_chr01_snps.vcf.gz \
 	--filterExpression "QD < 2.0 || FS > 60.0 || MQ < 40.0 || MQRankSum < -12.5 || ReadPosRankSum < -8.0" \
 	--filterName "my_snp_filter" \
-	-o VC_MA_chr01_snps_filtered.vcf 
+	-o VC_MA_chr01_snps_filtered.vcf.gz 
 
 
 
