@@ -33,7 +33,7 @@ module load perl
 
 
 
-vcf-concat VC_MA_chr01.vcf.gz \
+/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.15/bin/bin/vcf-concat VC_MA_chr01.vcf.gz \
 	VC_MA_chr02.vcf.gz \
 	VC_MA_chr03.vcf.gz \
 	VC_MA_chr04.vcf.gz \
