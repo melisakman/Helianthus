@@ -4,8 +4,6 @@
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
 #SBATCH --mem=64000
-#SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=12
 #SBATCH --time=400:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/hardfilter_VC_MA_SNP_mex.out
 #SBATCH -e /global/home/users/makman/GATK/outs/hardfilter_VC_MA_SNP_mex.err
