@@ -14,13 +14,13 @@
 module load bio/vcftools/0.1.15
 module load gcc/4.8.5 
  
-/clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G" SelectVariants \
+java -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -T SelectVariants \
 -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \ 
 -V VC_MA_chr01.vcf \ 
 -selectType SNP \ 
 -o VC_MA_chr01_snps.vcf 
 
-/clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G" VariantFiltration \ 
+java -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -T VariantFiltration \ 
 -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \ 
 -V VC_MA_chr01_snps.vcf \ 
 --filterExpression "QD < 2.0 || FS > 60.0 || MQ < 40.0 || MQRankSum < -12.5 || ReadPosRankSum < -8.0" \ 
