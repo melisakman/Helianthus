@@ -35,16 +35,18 @@ export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcfto
 # 	VC_MA_chr16.vcf.gz \
 # 	VC_MA_chr17.vcf.gz | gzip -c > VC_MA_combined.vcf.gz
 
-gunzip VC_MA_combined.vcf.gz
-/clusterfs/vector/scratch/makman/tabix-0.2.6/bgzip -c VC_MA_combined.vcf > VC_MA_combined.vcf.gz
-/clusterfs/vector/scratch/makman/tabix-0.2.6/tabix -p vcf VC_MA_combined.vcf.gz
-
-java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T SelectVariants \
-	-R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
-	-V VC_MA_combined.vcf.gz \
-	-selectType SNP \
-	-o VC_MA_combined_snps.vcf 
-
+# gunzip VC_MA_combined.vcf.gz
+# /clusterfs/vector/scratch/makman/tabix-0.2.6/bgzip -c VC_MA_combined.vcf > VC_MA_combined.vcf.gz
+# /clusterfs/vector/scratch/makman/tabix-0.2.6/tabix -p vcf VC_MA_combined.vcf.gz
+# 
+# java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T SelectVariants \
+# 	-R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
+# 	-V VC_MA_combined.vcf.gz \
+# 	-selectType SNP \
+# 	-o VC_MA_combined_snps.vcf 
+# 
+# /clusterfs/vector/scratch/makman/tabix-0.2.6/bgzip -c VC_MA_combined_snps.vcf > VC_MA_combined_snps.vcf.gz
+# /clusterfs/vector/scratch/makman/tabix-0.2.6/tabix -p vcf VC_MA_combined_snps.vcf.gz
 java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T VariantFiltration \
 	-R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
 	-V VC_MA_combined_snps.vcf.gz \
