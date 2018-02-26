@@ -1,6 +1,6 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/sams/gvcfs
-#SBATCH -J filt1
+#SBATCH -J filt2
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio2_htc
 #SBATCH --qos=rosalind_htc2_normal
@@ -15,5 +15,5 @@
 #SBATCH --mail-type=All
 module load bio/vcftools/0.1.15
 module load gcc/4.8.5 
-zcat VC_MA_combined_snps_filtered.vcf.gz | /clusterfs/rosalind/users/makman/bcftools/bcftools filter -g 5 -e 'REF="N"'| /clusterfs/rosalind/users/makman/vcflib/bin/vcffilter -f "QUAL > 50 & SAF > 1 & SAR > 1 & RPR > 1 & RPL > 1" | vcftools --gzvcf - --maf 0.01 --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | gzip -c > VC_MA_combined_snps_filtered_2.vcf.gz
 
+zcat VC_MA_combined_snps_hardfiltered.vcf.gz | /clusterfs/rosalind/users/makman/bcftools/bcftools filter -g 5 -e 'REF="N"'| vcftools --gzvcf - --maf 0.01 --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | gzip -c > VC_MA_combined_snps_hardfiltered_filtered.vcf.gz
