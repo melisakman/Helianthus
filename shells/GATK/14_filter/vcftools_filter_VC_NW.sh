@@ -3,7 +3,7 @@
 #SBATCH -J filt2
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio
-#SBATCH --qos=savio_normal
+#SBATCH --qos=savio2_normal
 #SBATCH --nodes=1
 #SBATCH --mem=64000
 #SBATCH --ntasks-per-node=1
