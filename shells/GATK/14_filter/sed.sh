@@ -1,14 +1,10 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/sams/gvcfs
 #SBATCH -J sed
-#SBATCH --account=co_rosalind
-#SBATCH --partition=savio
-#SBATCH --qos=rosalind_savio_normal
-#SBATCH --nodes=1
-#SBATCH --mem=64000
-#SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=20
-#SBATCH --time=400:00:00
+#SBATCH --partition=vector
+#SBATCH --qos=vector_batch
+#SBATCH --time=200:00:00
+#SBATCH --mem=24000
 #SBATCH -o /global/home/users/makman/GATK/outs/sed_SNP.out
 #SBATCH -e /global/home/users/makman/GATK/outs/sed_SNP.err
 #SBATCH --mail-user=makman@berkeley.edu
