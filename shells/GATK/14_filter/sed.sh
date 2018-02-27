@@ -14,5 +14,6 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 # zcat VC_MA_combined_snps_hardfiltered_filtered.vcf.gz | sed 's/HanXRQChr//' | gzip > VC_MA_combined_snps_hardfiltered_filtered_hanxrq_removed.vcf.gz
-zcat VC_MA_combined_snps_mex_hardfiltered_filtered.vcf.gz | sed 's/HanXRQChr//' | gzip > VC_MA_combined_snps_mex_hardfiltered_filtered_hanxrq_removed.vcf.gz
+# zcat VC_MA_combined_snps_mex_hardfiltered_filtered.vcf.gz | sed 's/HanXRQChr//' | gzip > VC_MA_combined_snps_mex_hardfiltered_filtered_hanxrq_removed.vcf.gz
+zcat /clusterfs/vector/scratch/makman/Hubnerdata/Sariel_new_variant_calling/merged_Nov2017/merged_NVC.vcf.gz | sed 's/HanXRQChr//' | gzip > /clusterfs/vector/scratch/makman/Hubnerdata/Sariel_new_variant_calling/merged_Nov2017/merged_NVC_hanxrq_removed.vcf.gz
 
