@@ -1,16 +1,6 @@
-#!/bin/bash 
-#SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/sams/gvcfs
-#SBATCH -J SNPRelate
-#SBATCH --partition=vector
-#SBATCH --qos=vector_batch
-#SBATCH --mem=64000
-#SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=12
-#SBATCH --time=400:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/SNPRelate_SNP.out
-#SBATCH -e /global/home/users/makman/GATK/outs/SNPRelate_SNP.err
-#SBATCH --mail-user=makman@berkeley.edu
-#SBATCH --mail-type=All
+
+srun --account co_rosalind -p savio2_htc --qos rosalind_htc2_normal --mem=64000 --time=400:00:00 --pty bash
+
 module load r/3.4.3
 
 R
@@ -18,7 +8,7 @@ library(gdsfmt)
 library(SNPRelate)
 setwd("/clusterfs/rosalind/users/makman/GATK/fastq/ready/sams/gvcfs")
 
-vcf.fn = "VC_MA_combined_snps_filtered_hanxrq_removed.vcf.gz"
+vcf.fn = "VC_MA_combined_snps_hardfiltered_filtered_hanxrq_removed.vcf.gz"
 snpgdsVCF2GDS(vcf.fn, "test.gds", method="biallelic.only")
 snpgdsSummary("test.gds")
 genofile <- snpgdsOpen("test.gds")
