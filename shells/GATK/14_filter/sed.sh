@@ -1,8 +1,10 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/sams/gvcfs
 #SBATCH -J sed
-#SBATCH --partition=vector
-#SBATCH --qos=vector_batch
+#SBATCH --account=co_rosalind
+#SBATCH --partition=savio2_htc
+#SBATCH --qos=rosalind_htc2_normal
+#SBATCH --nodes=1
 #SBATCH --mem=64000
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=12
