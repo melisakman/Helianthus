@@ -51,7 +51,7 @@ library(gdsfmt)
 library(SNPRelate)
 setwd("/clusterfs/rosalind/users/makman/GATK/fastq/ready/sams/gvcfs")
 
-vcf.fn = "merged_NVC_hanxrq_removed.vcf.gz"
+vcf.fn = "merged_NVC_hanxrq_removed_filtered.vcf.gz"
 snpgdsVCF2GDS(vcf.fn, "merged.gds", method="biallelic.only")
 snpgdsSummary("merged.gds")
 genofile <- snpgdsOpen("merged.gds")
@@ -93,7 +93,7 @@ library(gdsfmt)
 library(SNPRelate)
 setwd("/clusterfs/rosalind/users/makman/GATK/fastq/ready/sams/gvcfs")
 
-vcf.fn = "Filtered.only_SNPs.whole_genome_hanxrq_removed.vcf.gz"
+vcf.fn = "Filtered.only_SNPs.whole_genome_hanxrq_removed_filtered.vcf.gz"
 snpgdsVCF2GDS(vcf.fn, "VC_NW.gds", method="biallelic.only")
 snpgdsSummary("VC_NW.gds")
 genofile <- snpgdsOpen("VC_NW.gds")
