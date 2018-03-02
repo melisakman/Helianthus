@@ -42,7 +42,7 @@ write.table(tab, file = "PCA_SNP_mex.csv")
 
 ## Sariel merged
 
-srun --account co_rosalind -p savio2_htc --qos rosalind_htc2_normal --mem=64000 --time=400:00:00 --pty bash
+srun -p vector --qos vector_batch --mem=64000 --time=400:00:00 --pty bash
 
 module load r/3.4.3
 
@@ -52,9 +52,9 @@ library(SNPRelate)
 setwd("/clusterfs/rosalind/users/makman/GATK/fastq/ready/sams/gvcfs")
 
 vcf.fn = "merged_NVC_hanxrq_removed_filtered.vcf.gz"
-snpgdsVCF2GDS(vcf.fn, "merged.gds", method="biallelic.only")
-snpgdsSummary("merged.gds")
-genofile <- snpgdsOpen("merged.gds")
+snpgdsVCF2GDS(vcf.fn, "merged_filtered.gds", method="biallelic.only")
+snpgdsSummary("merged_filtered.gds")
+genofile <- snpgdsOpen("merged_filtered.gds")
 
 
 set.seed(1000)
@@ -79,7 +79,7 @@ tab <- data.frame(sample.id = pca$sample.id, EV1 = pca$eigenvect[,1],    # the f
 	stringsAsFactors = FALSE)
 head(tab)
 
-write.table(tab, file = "PCA_merged.csv")
+write.table(tab, file = "PCA_merged_filtered.csv")
 
 
 ##Nathan GATK
