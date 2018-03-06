@@ -1,9 +1,8 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/sams/gvcfs
 #SBATCH -J hfilt
-#SBATCH --account=co_rosalind
-#SBATCH --partition=savio
-#SBATCH --qos=rosalind_savio_normal
+#SBATCH --partition=vector
+#SBATCH --qos=vector_batch
 #SBATCH --nodes=1
 #SBATCH --mem=64000
 #SBATCH --ntasks-per-node=1
