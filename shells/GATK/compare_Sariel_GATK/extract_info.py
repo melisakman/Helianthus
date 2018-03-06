@@ -29,7 +29,7 @@ for line1 in file1:
 	pos = splt1[1]
 	chr = splt1[0]	
 	allele_list = []
-	allele_list= splt1[9:20] + splt1[21:26] + splt1[27:30] + splt1[31:53]] + splt1[55:61] + splt1[62:70] + splt1[71:76]
+	allele_list= splt1[9:20] + splt1[21:26] + splt1[27:30] + splt1[31:53] + splt1[55:61] + splt1[62:70] + splt1[71:76]
 	
 	for j in range_wd:
 		if str(allele_list[j][0:3]) == "0/0":
