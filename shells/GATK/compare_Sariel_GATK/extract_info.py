@@ -8,9 +8,9 @@ file1 = open(InputFile1, "r")
 file2 = open(OutputFile1, 'w')
 
 	
-range_wd = range(50,53) + range(55,61) + range(62,70) + range(71,76)
-range_lr = [9,10] + range(18,20) + range (21,26) + range(27,30) + range(31,34) + [36,47,49]
-range_cv = range(11,18) + [34,35] + range(37,47) +[48]
+range_wd = range(38,60)
+range_lr = [0,1] + range(9,22) + [24,35,37]
+range_cv = range(2,9) + [22,23] + range(25,35) + [36]
 	
 for line1 in file1: 
 	wild_ref = 0
@@ -30,7 +30,6 @@ for line1 in file1:
 	chr = splt1[0]	
 	allele_list = []
 	allele_list= splt1[9:20] + splt1[21:26] + splt1[27:30] + splt1[31:53] + splt1[55:61] + splt1[62:70] + splt1[71:76]
-	
 	for j in range_wd:
 		if str(allele_list[j][0:3]) == "0/0":
 			wild_ref += 1
