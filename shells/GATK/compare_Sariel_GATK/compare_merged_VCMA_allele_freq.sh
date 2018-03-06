@@ -14,5 +14,6 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
-python extract_info.py overlapping_variants_from_VCMA.vcf
+# python extract_info.py overlapping_variants_from_VCMA.vcf
 
+python extract_info.py non_overlapping_variants_from_VC_MA.vcf
