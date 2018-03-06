@@ -9,7 +9,7 @@ file2 = open(OutputFile1, 'w')
 
 	
 range_wd = range(50,53) + range(55,61) + range(62,70) + range(71,76)
-range_lr = [9,10] + range(18,26) + range(27,30) + range(31,34) + [36,47,49]
+range_lr = [9,10] + range(18,20) + range (21,26) + range(27,30) + range(31,34) + [36,47,49]
 range_cv = range(11,18) + [34,35] + range(37,47) +[48]
 	
 for line1 in file1: 
@@ -29,7 +29,7 @@ for line1 in file1:
 	pos = splt1[1]
 	chr = splt1[0]	
 	allele_list = []
-	allele_list= splt1[9:26] + splt1[27:30] + splt1[31:53]] + splt1[55:61] + splt1[62:70] + splt1[71:76]
+	allele_list= splt1[9:20] + splt1[21:26] + splt1[27:30] + splt1[31:53]] + splt1[55:61] + splt1[62:70] + splt1[71:76]
 	
 	for j in range_wd:
 		if str(allele_list[j][0:3]) == "0/0":
@@ -53,7 +53,9 @@ for line1 in file1:
 		elif str(allele_list[m][0:3]) == "1/1":
 			cv_alt += 1
 	file2.write(str(chr) + ";" + str(pos) + ";" + str(ref) + "/" + str(alt) +  "\t" + 
-	str(wild_ref) + "/" + str(wild_hetero) + "/" + str(wild_alt) + "\t" + str(lr_ref) + "/" + str(lr_hetero) + "/" + str(lr_alt) + "\t" + str(cv_ref) + "/" + str(cv_hetero) + "/" + str(cv_alt) + "\n")
+	str(wild_ref) + "/" + str(wild_hetero) + "/" + str(wild_alt) + "\t" + str(lr_ref) + 
+	"/" + str(lr_hetero) + "/" + str(lr_alt) + "\t" + str(cv_ref) + "/" + str(cv_hetero) + 
+	"/" + str(cv_alt) + "\n")
 	
 
 
