@@ -16,7 +16,6 @@ file5 = open(OutputFile3, 'w')
 count = 0
 
 file2_lines = file2.readlines()
-length =len(file2_lines)
 
 for line1 in file1:
 	found = 0
