@@ -16,4 +16,5 @@
 module load bio/vcftools/0.1.15
 module load gcc/4.8.5 
 
-zcat VC_MA_combined_snps_hardfiltered.vcf.gz | /clusterfs/rosalind/users/makman/bcftools/bcftools filter -g 5 -e 'REF="N"'| vcftools --gzvcf - --maf 0.01 --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | gzip -c > VC_MA_combined_snps_hardfiltered_filtered.vcf.gz
+zcat VC_MA_combined_all_hardfiltered.vcf.gz | /clusterfs/rosalind/users/makman/bcftools/bcftools filter -g 5 -e 'REF="N"'| vcftools --gzvcf - --maf 0.01 --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | gzip -c > VC_MA_combined_all_hardfiltered_filtered.vcf.gz
+zcat VC_MA_combined_mex_all_hardfiltered.vcf.gz | /clusterfs/rosalind/users/makman/bcftools/bcftools filter -g 5 -e 'REF="N"'| vcftools --gzvcf - --maf 0.01 --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | gzip -c > VC_MA_combined_mex_all_hardfiltered_filtered.vcf.gz
