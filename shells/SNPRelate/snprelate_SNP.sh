@@ -135,7 +135,7 @@ library(gdsfmt)
 library(SNPRelate)
 setwd("/clusterfs/rosalind/users/makman/GATK/fastq/ready/sams/gvcfs")
 
-vcf.fn = "VC_MA_combined_all_hardfiltered_filtered.vcf"
+vcf.fn = "VC_MA_combined_all_hardfiltered_filtered_hanxrq_removed.vcf"
 snpgdsVCF2GDS(vcf.fn, "all_filtered.gds", method="biallelic.only")
 snpgdsSummary("all_filtered.gds")
 genofile <- snpgdsOpen("all_filtered.gds")
