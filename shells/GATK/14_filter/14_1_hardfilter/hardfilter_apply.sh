@@ -18,7 +18,7 @@ module load java
 module load bio/vcftools/0.1.15
 export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
 
-vcf-concat VC_MA_combined_snps_info_hardfilter.vcf.gz VC_MA_combined_indel_info_hardfilter.vcf.gz > VC_MA_combined_all_info_hardfilter.vcf
+# vcf-concat VC_MA_combined_snps_info_hardfilter.vcf.gz VC_MA_combined_indel_info_hardfilter.vcf.gz > VC_MA_combined_all_info_hardfilter.vcf
 vcf-sort VC_MA_combined_all_info_hardfilter.vcf | gzip -c > VC_MA_combined_all_info_hardfilter_sorted.vcf.gz
 
 
