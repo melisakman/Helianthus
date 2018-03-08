@@ -9,10 +9,10 @@ library(gdsfmt)
 library(SNPRelate)
 setwd("/clusterfs/rosalind/users/makman/GATK/fastq/ready/sams/gvcfs")
 
-vcf.fn = "VC_MA_combined_snps_mex_hardfiltered_filtered_hanxrq_removed.vcf.gz"
-snpgdsVCF2GDS(vcf.fn, "test_mex.gds", method="biallelic.only")
-snpgdsSummary("test_mex.gds")
-genofile <- snpgdsOpen("test_mex.gds")
+vcf.fn = "VC_MA_combined_all_hardfiltered.vcf.gz"
+snpgdsVCF2GDS(vcf.fn, "VC_MA.gds", method="biallelic.only")
+snpgdsSummary("VC_MA.gds")
+genofile <- snpgdsOpen("VC_MA.gds")
 
 
 set.seed(1000)
@@ -51,10 +51,10 @@ library(gdsfmt)
 library(SNPRelate)
 setwd("/clusterfs/rosalind/users/makman/GATK/fastq/ready/sams/gvcfs")
 
-vcf.fn = "merged_NVC_hanxrq_removed_filtered.vcf.gz"
-snpgdsVCF2GDS(vcf.fn, "merged_filtered.gds", method="biallelic.only")
-snpgdsSummary("merged_filtered.gds")
-genofile <- snpgdsOpen("merged_filtered.gds")
+vcf.fn = "merged_NVC_filtered_dups_hanxrqchr_removed.vcf"
+snpgdsVCF2GDS(vcf.fn, "merged_dups_removed_filtered.gds", method="biallelic.only")
+snpgdsSummary("merged_dups_removed_filtered.gds")
+genofile <- snpgdsOpen("merged_dups_removed_filtered.gds")
 
 
 set.seed(1000)
@@ -79,7 +79,7 @@ tab <- data.frame(sample.id = pca$sample.id, EV1 = pca$eigenvect[,1],    # the f
 	stringsAsFactors = FALSE)
 head(tab)
 
-write.table(tab, file = "PCA_merged_filtered.csv")
+write.table(tab, file = "PCA_merged_dups_Removed_filtered.csv")
 
 
 ##Nathan GATK
