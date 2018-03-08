@@ -20,7 +20,9 @@ export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcfto
 
 # vcf-concat VC_MA_combined_snps_info_hardfilter.vcf.gz VC_MA_combined_indel_info_hardfilter.vcf.gz > VC_MA_combined_all_info_hardfilter.vcf
 # vcf-sort -t /clusterfs/rosalind/users/makman/temp VC_MA_combined_all_info_hardfilter.vcf > VC_MA_combined_all_info_hardfilter_sorted.vcf
-# gzip VC_MA_combined_all_info_hardfilter_sorted.vcf
+gunzip VC_MA_combined_all_info_hardfilter_sorted.vcf.gz
+
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c VC_MA_combined_all_info_hardfilter_sorted.vcf > VC_MA_combined_all_info_hardfilter_sorted.vcf.gz 
 
 /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf VC_MA_combined_all_info_hardfilter_sorted.vcf.gz  
 
