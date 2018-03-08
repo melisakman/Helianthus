@@ -8,7 +8,7 @@
 #SBATCH --mem=64000
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=12
-#SBATCH --time=400:00:00
+#SBATCH --time=72:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/filter_VC_MA2.out
 #SBATCH -e /global/home/users/makman/GATK/outs/filter_VC_MA2.err
 #SBATCH --mail-user=makman@berkeley.edu
