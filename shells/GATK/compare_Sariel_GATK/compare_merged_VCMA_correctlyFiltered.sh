@@ -8,7 +8,7 @@
 #SBATCH --mem=64000
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=20
-#SBATCH --time=100:00:00
+#SBATCH --time=80:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/compare_Sariel_VCMA_sorted_dupsremoved_filtered.out
 #SBATCH -e /global/home/users/makman/GATK/outs/compare_Sariel_VCMA_sorted_dupsremoved_filtered.err
 #SBATCH --mail-user=makman@berkeley.edu
