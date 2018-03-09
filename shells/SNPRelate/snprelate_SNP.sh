@@ -124,9 +124,11 @@ head(tab)
 write.csv(tab, file = "PCA_VC_NW.csv")
 
 
-## filtered all VCMA (SNP+indel)
+## filtered (hardfiltered correctly and then vcftoolls filtered) all VCMA (SNP+indel)
 
 srun --account co_rosalind -p savio2_htc --qos rosalind_htc2_normal --mem=64000 --time=400:00:00 --pty bash
+
+zcat VC_MA_combined_all_hardfiltered_filtered.vcf.gz | sed 's/HanXRQChr//' > VC_MA_combined_all_hardfiltered_filtered_hanxrq_removed.vcf
 
 module load r/3.4.3
 
@@ -136,9 +138,9 @@ library(SNPRelate)
 setwd("/clusterfs/rosalind/users/makman/GATK/fastq/ready/sams/gvcfs")
 
 vcf.fn = "VC_MA_combined_all_hardfiltered_filtered_hanxrq_removed.vcf"
-snpgdsVCF2GDS(vcf.fn, "all_filtered.gds", method="biallelic.only")
-snpgdsSummary("all_filtered.gds")
-genofile <- snpgdsOpen("all_filtered.gds")
+snpgdsVCF2GDS(vcf.fn, "VC_MA_all_filtered.gds", method="biallelic.only")
+snpgdsSummary("VC_MA_all_filtered.gds")
+genofile <- snpgdsOpen("VC_MA_all_filtered.gds")
 
 
 set.seed(1000)
@@ -163,5 +165,8 @@ tab <- data.frame(sample.id = pca$sample.id, EV1 = pca$eigenvect[,1],    # the f
 	stringsAsFactors = FALSE)
 head(tab)
 
-write.table(tab, file = "PCA_SNP_mex.csv")
+SnpLoad <- snpgdsPCASNPLoading(pca, genofile)
+
+
+write.table(tab, file = "PCA_VCMA_all_hardfiltered_filtered.csv")
 
