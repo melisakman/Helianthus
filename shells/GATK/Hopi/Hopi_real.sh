@@ -7,7 +7,7 @@
 #SBATCH --mem=64000
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=20
-#SBATCH --time=68:00:00
+#SBATCH --time=60:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/Hopi_real_2.out
 #SBATCH -e /global/home/users/makman/GATK/outs/Hopi_real_2.err
 #SBATCH --mail-user=makman@berkeley.edu
