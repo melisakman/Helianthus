@@ -14,6 +14,7 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
-gunzip VC_MA_combined_all_hardfiltered_filtered.vcf.gz
-python overlap_vcfs.py VC_MA_combined_all_hardfiltered_filtered.vcf merged_NVC_filtered_dups_removed.vcf
+# gunzip VC_MA_combined_all_hardfiltered_filtered.vcf.gz
+# python overlap_vcfs.py VC_MA_combined_all_hardfiltered_filtered.vcf merged_NVC_filtered_dups_removed.vcf
+python overlap_vcfs.py merged_NVC_filtered_dups_removed.vcf VC_MA_combined_all_hardfiltered_filtered.vcf
 
