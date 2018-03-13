@@ -20,8 +20,10 @@ module load samtools/1.6
 
 
 
-zcat HI.1253.007.Index_1.PI432516_R1.fastq.gz HI.1253.006.Index_1.PI432516_R1.fastq.gz HI.1253.005.Index_1.PI432516_R1.fastq.gz > ready/Pueblo_R1.fastq.gz
-zcat HI.1253.007.Index_1.PI432516_R2.fastq.gz HI.1253.006.Index_1.PI432516_R2.fastq.gz HI.1253.005.Index_1.PI432516_R2.fastq.gz > ready/Pueblo_R2.fastq.gz
+# zcat HI.1253.007.Index_1.PI432516_R1.fastq.gz HI.1253.006.Index_1.PI432516_R1.fastq.gz HI.1253.005.Index_1.PI432516_R1.fastq.gz > ready/Pueblo_R1.fastq.gz
+# zcat HI.1253.007.Index_1.PI432516_R2.fastq.gz HI.1253.006.Index_1.PI432516_R2.fastq.gz HI.1253.005.Index_1.PI432516_R2.fastq.gz > ready/Pueblo_R2.fastq.gz
+gzip Pueblo_R1.fastq
+gzip Pueblo_R2.fastq
 java -jar /clusterfs/rosalind/users/makman/Trimmomatic-0.36/trimmomatic-0.36.jar PE Pueblo_R1.fastq.gz Pueblo_R2.fastq.gz Pueblo_R1_trimmed_fastq.gz Pueblo_R1_unpaired.fastq.gz Pueblo_R2_trimmed_fastq.gz Pueblo_R2_unpaired.fastq.gz ILLUMINACLIP:adaptersRay.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
 bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa Pueblo_R1_trimmed.fastq.gz Pueblo_R2_trimmed.fastq.gz > Pueblo.sam
 java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx72G -jar /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/picard/2.4.1/picard.jar SortSam INPUT=Pueblo.sam OUTPUT=Pueblo_sorted.bam SORT_ORDER=coordinate 
