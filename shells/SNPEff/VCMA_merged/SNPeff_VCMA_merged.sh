@@ -13,5 +13,5 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load java
-java -Xmx16g -jar /clusterfs/vector/scratch/makman/snpEff/snpEff.jar -stats VCMA_SNPEff_stats.html XRQ VC_MA_combined_all_hardfiltered_filtered.vcf > VC_MA_combined_all_hardfiltered_filtered_snpeff.vcf
-java -Xmx16g -jar /clusterfs/vector/scratch/makman/snpEff/snpEff.jar -stats merged_SNPEff_stats.html XRQ merged_NVC_filtered_dups_removed.vcf > merged_NVC_filtered_dups_removed_snpeff.vcf
+java -Xmx16g -jar /clusterfs/vector/scratch/makman/snpEff/snpEff.jar -noLof -stats VCMA_SNPEff_stats.html XRQ VC_MA_combined_all_hardfiltered_filtered.vcf > VC_MA_combined_all_hardfiltered_filtered_snpeff.vcf
+java -Xmx16g -jar /clusterfs/vector/scratch/makman/snpEff/snpEff.jar -noLof -stats merged_SNPEff_stats.html XRQ merged_NVC_filtered_dups_removed.vcf > merged_NVC_filtered_dups_removed_snpeff.vcf
