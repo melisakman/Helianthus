@@ -1,10 +1,13 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/sams/gvcfs
 #SBATCH -J allele_freq
-#SBATCH --partition=vector
-#SBATCH --qos=vector_batch
-#SBATCH --mem=16000
-#SBATCH --time=100:00:00
+#SBATCH --account=co_rosalind
+#SBATCH --partition=savio2_htc
+#SBATCH --qos=rosalind_htc2_normal
+#SBATCH --mem=64000
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=6
+#SBATCH --time=200:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/compare_Sariel_VCMA_allele_freq_propFiltered.out
 #SBATCH -e /global/home/users/makman/GATK/outs/compare_Sariel_VCMA_allele_freq_propFiltered.err
 #SBATCH --mail-user=makman@berkeley.edu
