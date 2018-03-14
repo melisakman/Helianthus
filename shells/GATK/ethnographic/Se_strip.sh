@@ -21,7 +21,7 @@ module load samtools/1.6
 
 
 
-java -jar /clusterfs/rosalind/users/makman/Trimmomatic-0.36/trimmomatic-0.36.jar PE Se_strip/Se_strip_USPD16084925-AK2942_HJHWVCCXY_L4_1.fq.gz Se_strip/Se_strip_USPD16084925-AK2942_HJHWVCCXY_L4_2.fq.gz Se_strip_R1_trimmed_fastq.gz Se_strip_R1_unpaired.fastq.gz Se_strip_R2_trimmed_fastq.gz Se_strip_R2_unpaired.fastq.gz ILLUMINACLIP:adaptersRay.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+# java -jar /clusterfs/rosalind/users/makman/Trimmomatic-0.36/trimmomatic-0.36.jar PE Se_strip/Se_strip_USPD16084925-AK2942_HJHWVCCXY_L4_1.fq.gz Se_strip/Se_strip_USPD16084925-AK2942_HJHWVCCXY_L4_2.fq.gz Se_strip_R1_trimmed.fastq.gz Se_strip_R1_unpaired.fastq.gz Se_strip_R2_trimmed.fastq.gz Se_strip_R2_unpaired.fastq.gz ILLUMINACLIP:adaptersRay.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
 
 bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa Se_strip_R1_trimmed.fastq.gz Se_strip_R2_trimmed.fastq.gz > Se_strip.sam
 
