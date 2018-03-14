@@ -21,7 +21,7 @@ module load samtools/1.6
 
 
 
-java -jar /clusterfs/rosalind/users/makman/Trimmomatic-0.36/trimmomatic-0.36.jar PE Ari_broa_USPD16084925-AK2959_HJHWVCCXY_L4_1.fq.gz Ari_broa_USPD16084925-AK2959_HJHWVCCXY_L4_2.fq.gz Ari_broa_R1_trimmed_fastq.gz Ari_broa_R1_unpaired.fastq.gz Ari_broa_R2_trimmed_fastq.gz Ari_broa_R2_unpaired.fastq.gz ILLUMINACLIP:adaptersRay.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+java -jar /clusterfs/rosalind/users/makman/Trimmomatic-0.36/trimmomatic-0.36.jar PE Ari_broa/Ari_broa_USPD16084925-AK2959_HJHWVCCXY_L4_1.fq.gz Ari_broa/Ari_broa_USPD16084925-AK2959_HJHWVCCXY_L4_2.fq.gz Ari_broa_R1_trimmed_fastq.gz Ari_broa_R1_unpaired.fastq.gz Ari_broa_R2_trimmed_fastq.gz Ari_broa_R2_unpaired.fastq.gz ILLUMINACLIP:adaptersRay.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
 
 bwa mem -t 16 -M /clusterfs/rosalind/users/makman/GATK/bwa_mem/HanXRQr1.0-20151230.fa Ari_broa_R1_trimmed.fastq.gz Ari_broa_R2_trimmed.fastq.gz > Ari_broa.sam
 
