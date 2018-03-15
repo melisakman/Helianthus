@@ -12,8 +12,7 @@
 #SBATCH -e /global/home/users/makman/vcftools/outs/vcftools_VCMA_merged_tajD.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-#SBATCH --array=1-34
-module load vcftools/0.1.13
+module load bio/vcftools/0.1.15
 
 vcftools --vcf VC_MA_combined_all_hardfiltered_filtered.vcf --minQ 50 --minDP 3 --maxDP 25 --keep wd_list.txt --max-missing 0.8 --TajimaD 10000 --out tajD/VCMA_wd_tajD_10kb
 vcftools --vcf VC_MA_combined_all_hardfiltered_filtered.vcf --minQ 50 --minDP 3 --maxDP 25 --keep lr_list.txt --max-missing 0.8 --TajimaD 10000 --out tajD/VCMA_lr_tajD_10kb
