@@ -2,8 +2,8 @@
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/sams/gvcfs/gvcf
 #SBATCH -J com17_ethno
 #SBATCH --account=co_rosalind
-#SBATCH --partition=savio
-#SBATCH --qos=rosalind_savio_normal
+#SBATCH --partition=savio2_htc
+#SBATCH --qos=rosalind_htc2_normal
 #SBATCH --nodes=1
 #SBATCH --mem=64000
 #SBATCH --ntasks-per-node=1
