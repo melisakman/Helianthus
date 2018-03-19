@@ -7,7 +7,7 @@
 #SBATCH --nodes=1
 #SBATCH --mem=64000
 #SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=20
+#SBATCH --cpus-per-task=12
 #SBATCH --time=400:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/combine_gvcfs_chr17_ethno.out
 #SBATCH -e /global/home/users/makman/GATK/outs/combine_gvcfs_chr17_ethno.err
