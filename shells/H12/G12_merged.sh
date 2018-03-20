@@ -1,6 +1,6 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/vector/scratch/makman/H12/G12
-#SBATCH -J G12
+#SBATCH -D /clusterfs/rosalind/users/makman/G12
+#SBATCH -J G12_merged
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
 #SBATCH --nodes=1
