@@ -14,7 +14,7 @@
 
 module load bio/vcftools/0.1.15
 
-vcftools --vcf merged_NVC_filtered_dups_removed.vcf --chr HanXRQChr01 --out merged_NVC_filtered_dups_removed_chr01.vcf
+vcftools --vcf merged_NVC_filtered_dups_removed.vcf --chr HanXRQChr01 --recode --out merged_NVC_filtered_dups_removed_chr01.vcf
 
 python /clusterfs/rosalind/users/makman/G12/vcf2genotype.py merged_NVC_filtered_dups_removed_chr01.vcf /clusterfs/rosalind/users/makman/G12/lr_cv_G12_merged_filtered_samples.txt /clusterfs/rosalind/users/makman/G12/merged_NVC_filtered_dups_removed_chr01_G12_input.txt
 
