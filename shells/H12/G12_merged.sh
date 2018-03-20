@@ -13,7 +13,7 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
-module load numpy/1.11.0
+module load numpy/1.13.3
 module load python
 
 python /clusterfs/vector/scratch/makman/H12/SelectionHapStats/scripts/H12_H2H1.py merged_NVC_filtered_dups_removed_chr01_G12_input.txt 40 -o chr01_G12_merged_output.txt
