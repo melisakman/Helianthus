@@ -14,7 +14,8 @@
 #SBATCH --mail-type=All
 
 module load numpy/1.13.3
-module load python
+module unload python
+module load python/3.5
 
 python /clusterfs/vector/scratch/makman/H12/SelectionHapStats/scripts/H12_H2H1.py merged_NVC_filtered_dups_removed_chr01_G12_input.txt 40 -o chr01_G12_merged_output.txt
 python /clusterfs/vector/scratch/makman/H12/SelectionHapStats/scripts/H12_H2H1.py merged_NVC_filtered_dups_removed_chr02_G12_input.txt 40 -o chr02_G12_merged_output.txt
