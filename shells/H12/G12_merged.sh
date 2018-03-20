@@ -12,10 +12,11 @@
 #SBATCH -e /global/home/users/makman/H12/outs/G12_filtered_merged.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-
-module purge
+module unload python/3.5
+module unload python/3.5-consultsw
+module unload python/3.6
+module load python/2.7.14
 module load numpy/1.13.3
-module load python/3.5
 
 python /clusterfs/vector/scratch/makman/H12/SelectionHapStats/scripts/H12_H2H1.py merged_NVC_filtered_dups_removed_chr01_G12_input.txt 40 -o chr01_G12_merged_output.txt
 python /clusterfs/vector/scratch/makman/H12/SelectionHapStats/scripts/H12_H2H1.py merged_NVC_filtered_dups_removed_chr02_G12_input.txt 40 -o chr02_G12_merged_output.txt
