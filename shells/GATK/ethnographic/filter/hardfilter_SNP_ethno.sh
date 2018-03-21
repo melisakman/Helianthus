@@ -20,7 +20,7 @@ module load bio/vcftools/0.1.15
 
 # export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.15/perl/
 
-vcf-concat VC_MA_chr01_ethno.vcf.gz \
+vcftools concat VC_MA_chr01_ethno.vcf.gz \
 VC_MA_chr02_ethno.vcf.gz \
 VC_MA_chr03_ethno.vcf.gz \
 VC_MA_chr04_ethno.vcf.gz \
