@@ -13,10 +13,10 @@
 #SBATCH -e /global/home/users/makman/GATK/outs/hardfilter_VC_MA_indel_ethno.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-module load bio/vcftools/0.1.13
-module load gcc/4.8.5 
 module load java
 module load perl
+module load gcc/4.8.5 
+
 export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
 
 java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T SelectVariants \
@@ -25,8 +25,8 @@ java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar
 	-selectType INDEL \
 	-o VC_MA_combined_indel_ethno.vcf 
 
-/clusterfs/vector/scratch/makman/tabix-0.2.6/bgzip -c VC_MA_combined_indel_ethno.vcf > VC_MA_combined_indel_ethno.vcf.gz
-/clusterfs/vector/scratch/makman/tabix-0.2.6/tabix -p vcf VC_MA_combined_indel_ethno.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c VC_MA_combined_indel_ethno.vcf > VC_MA_combined_indel_ethno.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf VC_MA_combined_indel_ethno.vcf.gz
 
 java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T VariantFiltration \
 	-R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
@@ -40,5 +40,6 @@ java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar
 	-V VC_MA_combined_indel_ethno_hardfilterInfo.vcf.gz \
 	--excludeFiltered \
 	-o VC_MA_combined_indel_ethno_hardfiltered.vcf.gz 
+module load bio/vcftools/0.1.15
 
 zcat VC_MA_combined_indel_ethno_hardfiltered.vcf.gz | /clusterfs/rosalind/users/makman/bcftools/bcftools filter -g 5 -e 'REF="N"'| vcftools --gzvcf - --maf 0.01 --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | gzip -c > VC_MA_combined_indel_ethno_hardfiltered_filtered.vcf.gz
