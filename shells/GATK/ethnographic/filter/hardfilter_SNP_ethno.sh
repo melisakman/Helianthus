@@ -20,23 +20,23 @@ module load gcc/4.8.5
 
 export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
 
-/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-concat VC_MA_chr01_ethno.vcf.gz \
-	VC_MA_chr02_ethno.vcf.gz \
-	VC_MA_chr03_ethno.vcf.gz \
-	VC_MA_chr04_ethno.vcf.gz \
-	VC_MA_chr05_ethno.vcf.gz \
-	VC_MA_chr06_ethno.vcf.gz \
-	VC_MA_chr07_ethno.vcf.gz \
-	VC_MA_chr08_ethno.vcf.gz \
-	VC_MA_chr09_ethno.vcf.gz \
-	VC_MA_chr10_ethno.vcf.gz \
-	VC_MA_chr11_ethno.vcf.gz \
-	VC_MA_chr12_ethno.vcf.gz \
-	VC_MA_chr13_ethno.vcf.gz \
-	VC_MA_chr14_ethno.vcf.gz \
-	VC_MA_chr15_ethno.vcf.gz \
-	VC_MA_chr16_ethno.vcf.gz \
-	VC_MA_chr17_ethno.vcf.gz > VC_MA_combined_ethno.vcf
+vcf-concat VC_MA_chr01_ethno.vcf.gz \
+VC_MA_chr02_ethno.vcf.gz \
+VC_MA_chr03_ethno.vcf.gz \
+VC_MA_chr04_ethno.vcf.gz \
+VC_MA_chr05_ethno.vcf.gz \
+VC_MA_chr06_ethno.vcf.gz \
+VC_MA_chr07_ethno.vcf.gz \
+VC_MA_chr08_ethno.vcf.gz \
+VC_MA_chr09_ethno.vcf.gz \
+VC_MA_chr10_ethno.vcf.gz \
+VC_MA_chr11_ethno.vcf.gz \
+VC_MA_chr12_ethno.vcf.gz \
+VC_MA_chr13_ethno.vcf.gz \
+VC_MA_chr14_ethno.vcf.gz \
+VC_MA_chr15_ethno.vcf.gz \
+VC_MA_chr16_ethno.vcf.gz \
+VC_MA_chr17_ethno.vcf.gz > VC_MA_combined_ethno.vcf
 
 
 /clusterfs/vector/scratch/makman/tabix-0.2.6/bgzip -c VC_MA_combined_ethno.vcf > VC_MA_combined_ethno.vcf.gz
