@@ -14,11 +14,10 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load java
-module load perl
 module load bio/vcftools/0.1.15
 module load gcc/4.8.5 
 
-export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
+# export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
 
 vcf-concat VC_MA_chr01_ethno.vcf.gz \
 VC_MA_chr02_ethno.vcf.gz \
@@ -39,8 +38,8 @@ VC_MA_chr16_ethno.vcf.gz \
 VC_MA_chr17_ethno.vcf.gz > VC_MA_combined_ethno.vcf
 
 
-/clusterfs/vector/scratch/makman/tabix-0.2.6/bgzip -c VC_MA_combined_ethno.vcf > VC_MA_combined_ethno.vcf.gz
-/clusterfs/vector/scratch/makman/tabix-0.2.6/tabix -p vcf VC_MA_combined_ethno.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c VC_MA_combined_ethno.vcf > VC_MA_combined_ethno.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf VC_MA_combined_ethno.vcf.gz
 
 java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T SelectVariants \
 	-R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
@@ -48,8 +47,8 @@ java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar
 	-selectType SNP \
 	-o VC_MA_combined_snps_ethno.vcf 
 
-/clusterfs/vector/scratch/makman/tabix-0.2.6/bgzip -c VC_MA_combined_snps_ethno.vcf > VC_MA_combined_snps_ethno.vcf.gz
-/clusterfs/vector/scratch/makman/tabix-0.2.6/tabix -p vcf VC_MA_combined_snps_ethno.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c VC_MA_combined_snps_ethno.vcf > VC_MA_combined_snps_ethno.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf VC_MA_combined_snps_ethno.vcf.gz
 
 java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T VariantFiltration \
 	-R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
