@@ -16,9 +16,9 @@
 module load java
 module load perl
 module load bio/vcftools/0.1.15
-module load gcc/4.8.5 
+# module load gcc/4.8.5 
 
-export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.15/perl/
+# export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.15/perl/
 
 vcf-concat VC_MA_chr01_ethno.vcf.gz \
 VC_MA_chr02_ethno.vcf.gz \
