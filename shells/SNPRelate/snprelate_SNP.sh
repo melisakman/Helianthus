@@ -170,3 +170,49 @@ SnpLoad <- snpgdsPCASNPLoading(pca, genofile)
 
 write.table(tab, file = "PCA_VCMA_all_hardfiltered_filtered.csv")
 
+
+## ethnographic samples
+
+zcat VC_MA_combined_snps_ethno_hardfiltered_filtered.vcf.gz | sed 's/HanXRQChr//' > VC_MA_combined_snps_ethno_hardfiltered_filtered_hanxrq_removed.vcf
+
+module load r/3.4.3
+
+R
+library(gdsfmt)
+library(SNPRelate)
+setwd("/clusterfs/rosalind/users/makman/GATK/fastq/ready/sams/gvcfs/gvcf")
+
+vcf.fn = "VC_MA_combined_snps_ethno_hardfiltered_filtered_hanxrq_removed.vcf"
+snpgdsVCF2GDS(vcf.fn, "ethno.gds", method="biallelic.only")
+snpgdsSummary("VC_MA_all_filtered.gds")
+genofile <- snpgdsOpen("VC_MA_all_filtered.gds")
+
+
+set.seed(1000)
+# Try different LD thresholds for sensitivity analysis
+snpset <- snpgdsLDpruning(genofile, ld.threshold=0.2)
+names(snpset)
+head(snpset$chr1)
+snpset.id <- unlist(snpset)
+
+
+
+pca <- snpgdsPCA(genofile, snp.id=snpset.id, num.thread=2)
+pc.percent <- pca$varprop*100
+head(round(pc.percent, 2))
+tab <- data.frame(sample.id = pca$sample.id, EV1 = pca$eigenvect[,1],    # the first eigenvector
+	EV2 = pca$eigenvect[,2],    # the second eigenvector
+	EV3 = pca$eigenvect[,3],
+	EV4 = pca$eigenvect[,4],
+	EV5 = pca$eigenvect[,5],
+	EV6 = pca$eigenvect[,6],
+	EV7 = pca$eigenvect[,7],
+	stringsAsFactors = FALSE)
+head(tab)
+
+SnpLoad <- snpgdsPCASNPLoading(pca, genofile)
+
+
+write.table(tab, file = "PCA_VCMA_all_hardfiltered_filtered.csv")
+
+
