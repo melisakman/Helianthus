@@ -26,7 +26,6 @@ HA821_sorted_markdup_recal.bam \
 HA89_sorted_markdup_recal.bam \
 Havasupai_sorted_markdup_recal.bam \
 Hidatsa1_sorted_markdup_recal.bam \
-Hopi_sorted_markdup_recal.bam \
 Hopi_real_sorted_markdup_recal.bam \
 Hopi_PPN285_sorted_markdup_recal.bam \
 Laguna_Pueblo_sorted_markdup_recal.bam \
@@ -80,6 +79,6 @@ annND1W-6_sorted_markdup_recal.bam \
 annNM_sorted_markdup_recal.bam \
 annSD1W-35_sorted_markdup_recal.bam \
 annSD2W-18_sorted_markdup_recal.bam \
-annSK1W-Q_sorted_markdup_recal.bam 
+annSK1W-Q_sorted_markdup_recal.bam \
 annWY_sorted_markdup_recal.bam > ../freebayes/freebayes_combined.vcf
 
