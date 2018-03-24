@@ -1,116 +1,121 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/sams/
-#SBATCH -J varcal1
-#SBATCH --account=fc_blackman
-#SBATCH --partition=savio2
+#SBATCH -D /clusterfs/rosalind/users/makman/GATK/bams
+#SBATCH -J freebayes
+#SBATCH --account=co_rosalind
+#SBATCH --partition=savio
+#SBATCH --qos=rosalind_savio_normal
+#SBATCH --nodes=1
 #SBATCH --mem=64000
-#SBATCH --qos=savio_normal
-#SBATCH --time=72:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/variant_cal1.out
-#SBATCH -e /global/home/users/makman/GATK/outs/variant_cal1.err
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=20
+#SBATCH --time=400:00:00
+#SBATCH -o /global/home/users/makman/GATK/outs/freebayes.out
+#SBATCH -e /global/home/users/makman/GATK/outs/freebayes.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-module load java
 
-/clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I Anzac_Pueblo_sorted_markdup_recal.bam -O Anzac_Pueblo.g.vcf.gz -ERC GVCF
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I Arikara_sorted_markdup_recal.bam -O Arikara.g.vcf.gz -ERC GVCF
-# 
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I HA124_sorted_markdup_recal.bam -O HA124.g.vcf.gz -ERC GVCF
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I HA316_sorted_markdup_recal.bam -O HA316.g.vcf.gz -ERC GVCF
-# 
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I HA404_sorted_markdup_recal.bam -O HA404.g.vcf.gz -ERC GVCF
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I HA433_sorted_markdup_recal.bam -O HA433.g.vcf.gz -ERC GVCF
-# 
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I HA442_sorted_markdup_recal.bam -O HA442.g.vcf.gz -ERC GVCF
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I HA821_sorted_markdup_recal.bam -O HA821.g.vcf.gz -ERC GVCF
-# 
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I HA89_sorted_markdup_recal.bam -O HA89.g.vcf.gz -ERC GVCF
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I Havasupai_sorted_markdup_recal.bam -O Havasupai.g.vcf.gz -ERC GVCF
-# 
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I Hidatsa1_sorted_markdup_recal.bam -O Hidatsa1.g.vcf.gz -ERC GVCF
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I Hopi_sorted_markdup_recal.bam -O Hopi.g.vcf.gz -ERC GVCF
-# 
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I Hopi_PPN285_sorted_markdup_recal.bam -O Hopi_PPN285.g.vcf.gz -ERC GVCF
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I Laguna_Pueblo_sorted_markdup_recal.bam -O Laguna_Pueblo.g.vcf.gz -ERC GVCF
-# 
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I Mandan2_sorted_markdup_recal.bam -O Mandan2.g.vcf.gz -ERC GVCF
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I MexCult1_sorted_markdup_recal.bam -O MexCult1.g.vcf.gz -ERC GVCF
-# 
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I MexCult14_sorted_markdup_recal.bam -O MexCult14.g.vcf.gz -ERC GVCF
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I MexCult15_sorted_markdup_recal.bam -O MexCult15.g.vcf.gz -ERC GVCF
-# 
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I MexCult3_sorted_markdup_recal.bam -O MexCult3.g.vcf.gz -ERC GVCF
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I MexCult6_sorted_markdup_recal.bam -O MexCult6.g.vcf.gz -ERC GVCF
-# 
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I MexCult7_sorted_markdup_recal.bam -O MexCult7.g.vcf.gz -ERC GVCF
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I MexCult9_sorted_markdup_recal.bam -O MexCult9.g.vcf.gz -ERC GVCF
-# 
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I PPN046_sorted_markdup_recal.bam -O PPN046.g.vcf.gz -ERC GVCF
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I PPN083_sorted_markdup_recal.bam -O PPN083.g.vcf.gz -ERC GVCF
-# 
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I PPN255_Manchurian_sorted_markdup_recal.bam -O PPN255_Manchurian.g.vcf.gz -ERC GVCF
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I PPN262_sorted_markdup_recal.bam -O PPN262.g.vcf.gz -ERC GVCF
-# 
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I Pueblo_sorted_markdup_recal.bam -O Pueblo.g.vcf.gz -ERC GVCF
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I RHA271_sorted_markdup_recal.bam -O RHA271.g.vcf.gz -ERC GVCF
-# 
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I RHA309_sorted_markdup_recal.bam -O RHA309.g.vcf.gz -ERC GVCF
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I RHA311_sorted_markdup_recal.bam -O RHA311.g.vcf.gz -ERC GVCF
-# 
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I RHA328_sorted_markdup_recal.bam -O RHA328.g.vcf.gz -ERC GVCF
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I RHA355_sorted_markdup_recal.bam -O RHA355.g.vcf.gz -ERC GVCF
-# 
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I RHA358_sorted_markdup_recal.bam -O RHA358.g.vcf.gz -ERC GVCF
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I RHA408_sorted_markdup_recal.bam -O RHA408.g.vcf.gz -ERC GVCF
-# 
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I RHA426_sorted_markdup_recal.bam -O RHA426.g.vcf.gz -ERC GVCF
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I RHA857_sorted_markdup_recal.bam -O RHA857.g.vcf.gz -ERC GVCF
-# 
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I SF33_sorted_markdup_recal.bam -O SF33.g.vcf.gz -ERC GVCF
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I Seneca_sorted_markdup_recal.bam -O Seneca.g.vcf.gz -ERC GVCF
-# 
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I VIR847_sorted_markdup_recal.bam -O VIR847.g.vcf.gz -ERC GVCF
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I Zuni_sorted_markdup_recal.bam -O Zuni.g.vcf.gz -ERC GVCF
-# 
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I ann01-cwIA_sorted_markdup_recal.bam -O ann01-cwIA_dedup.table
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I ann04-nwAR_sorted_markdup_recal.bam -O ann04-nwAR_dedup.table
-# 
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I ann05-ccNM_sorted_markdup_recal.bam -O ann05-ccNM_dedup.table
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I ann06-seWY_sorted_markdup_recal.bam -O ann06-seWY_dedup.table
-# 
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I ann08-ceTN_sorted_markdup_recal.bam -O ann08-ceTN_dedup.table
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I ann10-ccIL_sorted_markdup_recal.bam -O ann10-ccIL_dedup.table
-# 
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I ann20-seAZ_sorted_markdup_recal.bam -O ann20-seAZ_dedup.table
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I ann28-swSK_sorted_markdup_recal.bam -O ann28-swSK_dedup.table
-# 
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I ann29-neSD_sorted_markdup_recal.bam -O ann29-neSD_dedup.table
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I ann34-cwKS_sorted_markdup_recal.bam -O ann34-cwKS_dedup.table
-# 
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I ann39-ncNE_sorted_markdup_recal.bam -O ann39-ncNE_dedup.table
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I ann44-ccCA_sorted_markdup_recal.bam -O ann44-ccCA_dedup.table
-# 
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I annIA_sorted_markdup_recal.bam -O annIA.g.vcf.gz -ERC GVCF
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I annIA1W-1_sorted_markdup_recal.bam -O annIA1W-1_dedup.table
-# 
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I annIA2W-17_sorted_markdup_recal.bam -O annIA2W-17_dedup.table
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I annKS_sorted_markdup_recal.bam -O annKS.g.vcf.gz -ERC GVCF
-# 
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I annKS1W-27_sorted_markdup_recal.bam -O annKS1W-27_dedup.table
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I annKS2W-35_sorted_markdup_recal.bam -O annKS2W-35_dedup.table
-# 
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I annMB1W-40_sorted_markdup_recal.bam -O annMB1W-40_dedup.table
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I annMO1W-39_sorted_markdup_recal.bam -O annMO1W-39_dedup.table
-# 
-# 
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I annND1W-6_sorted_markdup_recal.bam -O annND1W-6_dedup.table
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I annNM_sorted_markdup_recal.bam -O annNM.g.vcf.gz -ERC GVCF
-# 
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I annSD1W-35_sorted_markdup_recal.bam -O annSD1W-35_dedup.table
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I annSD2W-18_sorted_markdup_recal.bam -O annSD2W-18_dedup.table
-# 
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I annSK1W-Q_sorted_markdup_recal.bam -O annSK1W-Q_dedup.table
-# /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I annWY_sorted_markdup_recal.bam -O annWY.g.vcf.gz -ERC GVCF
-# 
-# 
-# 
+module load freebayes/v1.1.0-56-ga180635
+
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  Anzac_Pueblo_sorted_markdup_recal.bam > ../freebayes/Anzac_Pueblo.vcf
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  Arikara_sorted_markdup_recal.bam > ../freebayes/Arikara.vcf
+
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  HA124_sorted_markdup_recal.bam > ../freebayes/HA124.vcf
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  HA316_sorted_markdup_recal.bam > ../freebayes/HA316.vcf
+
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  HA404_sorted_markdup_recal.bam > ../freebayes/HA404.vcf
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  HA433_sorted_markdup_recal.bam > ../freebayes/HA433.vcf
+
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  HA442_sorted_markdup_recal.bam > ../freebayes/HA442.vcf
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  HA821_sorted_markdup_recal.bam > ../freebayes/HA821.vcf
+
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  HA89_sorted_markdup_recal.bam > ../freebayes/HA89.vcf
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  Havasupai_sorted_markdup_recal.bam > ../freebayes/Havasupai.vcf
+
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  Hidatsa1_sorted_markdup_recal.bam > ../freebayes/Hidatsa1.vcf
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  Hopi_sorted_markdup_recal.bam > ../freebayes/Hopi.vcf
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  Hopi_real_sorted_markdup_recal.bam > ../freebayes/Hopi_real.vcf
+
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  Hopi_PPN285_sorted_markdup_recal.bam > ../freebayes/Hopi_PPN285.vcf
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  Laguna_Pueblo_sorted_markdup_recal.bam > ../freebayes/Laguna_Pueblo.vcf
+
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  Mandan2_sorted_markdup_recal.bam > ../freebayes/Mandan2.vcf
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  MexCult1_sorted_markdup_recal.bam > ../freebayes/MexCult1.vcf
+
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  MexCult14_sorted_markdup_recal.bam > ../freebayes/MexCult14.vcf
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  MexCult15_sorted_markdup_recal.bam > ../freebayes/MexCult15.vcf
+
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  MexCult3_sorted_markdup_recal.bam > ../freebayes/MexCult3.vcf
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  MexCult6_sorted_markdup_recal.bam > ../freebayes/MexCult6.vcf
+
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  MexCult7_sorted_markdup_recal.bam > ../freebayes/MexCult7.vcf
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  MexCult9_sorted_markdup_recal.bam > ../freebayes/MexCult9.vcf
+
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  PPN046_sorted_markdup_recal.bam > ../freebayes/PPN046.vcf
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  PPN083_sorted_markdup_recal.bam > ../freebayes/PPN083.vcf
+
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  PPN255_Manchurian_sorted_markdup_recal.bam > ../freebayes/PPN255_Manchurian.vcf
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  PPN262_sorted_markdup_recal.bam > ../freebayes/PPN262.vcf
+
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  Pueblo_sorted_markdup_recal.bam > ../freebayes/Pueblo.vcf
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  RHA271_sorted_markdup_recal.bam > ../freebayes/RHA271.vcf
+
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  RHA309_sorted_markdup_recal.bam > ../freebayes/RHA309.vcf
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  RHA311_sorted_markdup_recal.bam > ../freebayes/RHA311.vcf
+
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  RHA328_sorted_markdup_recal.bam > ../freebayes/RHA328.vcf
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  RHA355_sorted_markdup_recal.bam > ../freebayes/RHA355.vcf
+
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  RHA358_sorted_markdup_recal.bam > ../freebayes/RHA358.vcf
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  RHA408_sorted_markdup_recal.bam > ../freebayes/RHA408.vcf
+
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  RHA426_sorted_markdup_recal.bam > ../freebayes/RHA426.vcf
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  RHA857_sorted_markdup_recal.bam > ../freebayes/RHA857.vcf
+
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  SF33_sorted_markdup_recal.bam > ../freebayes/SF33.vcf
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  Seneca_sorted_markdup_recal.bam > ../freebayes/Seneca.vcf
+
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  VIR847_sorted_markdup_recal.bam > ../freebayes/VIR847.vcf
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  Zuni_sorted_markdup_recal.bam > ../freebayes/Zuni.vcf
+
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  ann01-cwIA_sorted_markdup_recal.bam > ../freebayes/ann01-cwIA.vcf
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  ann04-nwAR_sorted_markdup_recal.bam > ../freebayes/ann04-nwAR.vcf
+
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  ann05-ccNM_sorted_markdup_recal.bam > ../freebayes/ann05-ccNM.vcf
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  ann06-seWY_sorted_markdup_recal.bam > ../freebayes/ann06-seWY.vcf
+
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  ann08-ceTN_sorted_markdup_recal.bam > ../freebayes/ann08-ceTN.vcf
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  ann10-ccIL_sorted_markdup_recal.bam > ../freebayes/ann10-ccIL.vcf
+
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  ann20-seAZ_sorted_markdup_recal.bam > ../freebayes/ann20-seAZ.vcf
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  ann28-swSK_sorted_markdup_recal.bam > ../freebayes/ann28-swSK.vcf
+
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  ann29-neSD_sorted_markdup_recal.bam > ../freebayes/ann29-neSD.vcf
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  ann34-cwKS_sorted_markdup_recal.bam > ../freebayes/ann34-cwKS.vcf
+
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  ann39-ncNE_sorted_markdup_recal.bam > ../freebayes/ann39-ncNE.vcf
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  ann44-ccCA_sorted_markdup_recal.bam > ../freebayes/ann44-ccCA.vcf
+
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  annIA_sorted_markdup_recal.bam > ../freebayes/annIA.vcf
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  annIA1W-1_sorted_markdup_recal.bam > ../freebayes/annIA1W-1.vcf
+
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  annIA2W-17_sorted_markdup_recal.bam > ../freebayes/annIA2W-17.vcf
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  annKS_sorted_markdup_recal.bam > ../freebayes/annKS.vcf
+
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  annKS1W-27_sorted_markdup_recal.bam > ../freebayes/annKS1W-27.vcf
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  annKS2W-35_sorted_markdup_recal.bam > ../freebayes/annKS2W-35.vcf
+
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  annMB1W-40_sorted_markdup_recal.bam > ../freebayes/annMB1W-40.vcf
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  annMO1W-39_sorted_markdup_recal.bam > ../freebayes/annMO1W-39.vcf
+
+
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  annND1W-6_sorted_markdup_recal.bam > ../freebayes/annND1W-6.vcf
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  annNM_sorted_markdup_recal.bam > ../freebayes/annNM.vcf
+
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  annSD1W-35_sorted_markdup_recal.bam > ../freebayes/annSD1W-35.vcf
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  annSD2W-18_sorted_markdup_recal.bam > ../freebayes/annSD2W-18.vcf
+
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  annSK1W-Q_sorted_markdup_recal.bam > ../freebayes/annSK1W-Q.vcf
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  annWY_sorted_markdup_recal.bam > ../freebayes/annWY.vcf
+
+
+

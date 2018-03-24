@@ -184,8 +184,8 @@ setwd("/clusterfs/rosalind/users/makman/GATK/fastq/ready/sams/gvcfs/gvcf")
 
 vcf.fn = "VC_MA_combined_snps_ethno_hardfiltered_filtered_hanxrq_removed.vcf"
 snpgdsVCF2GDS(vcf.fn, "ethno.gds", method="biallelic.only")
-snpgdsSummary("VC_MA_all_filtered.gds")
-genofile <- snpgdsOpen("VC_MA_all_filtered.gds")
+snpgdsSummary("ethno.gds")
+genofile <- snpgdsOpen("ethno.gds")
 
 
 set.seed(1000)
@@ -213,6 +213,6 @@ head(tab)
 SnpLoad <- snpgdsPCASNPLoading(pca, genofile)
 
 
-write.table(tab, file = "PCA_VCMA_all_hardfiltered_filtered.csv")
+write.table(tab, file = "PCA_ethno.csv")
 
 
