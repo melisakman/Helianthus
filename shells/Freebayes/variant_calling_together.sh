@@ -15,7 +15,8 @@
 #SBATCH --mail-type=All
 module load freebayes/v1.1.0-56-ga180635
 
-freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa Anzac_Pueblo_sorted_markdup_recal.bam \
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
+Anzac_Pueblo_sorted_markdup_recal.bam \
 Arikara_sorted_markdup_recal.bam \
 HA124_sorted_markdup_recal.bam \
 HA316_sorted_markdup_recal.bam \
@@ -73,8 +74,8 @@ annIA2W-17_sorted_markdup_recal.bam \
 annKS_sorted_markdup_recal.bam \
 annKS1W-27_sorted_markdup_recal.bam \
 annKS2W-35_sorted_markdup_recal.bam \
-annMB1W-40_sorted_markdup_recal.bam \
-annMO1W-39_sorted_markdup_recal.bam \
+#annMB1W-40_sorted_markdup_recal.bam \ ran this and said readgroups are the same with MO1W-39
+annMO1W-39_sorted_markdup_recal.bam \ #ran this and said readgroups are the same with MB1W-40
 annND1W-6_sorted_markdup_recal.bam \
 annNM_sorted_markdup_recal.bam \
 annSD1W-35_sorted_markdup_recal.bam \
