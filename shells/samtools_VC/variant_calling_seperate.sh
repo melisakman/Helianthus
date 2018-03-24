@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/rosalind/users/makman/GATK/bam | bcftools view -bvcg -s
+#SBATCH -D /clusterfs/rosalind/users/makman/GATK/bams
 #SBATCH -J samtools_VC
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio
