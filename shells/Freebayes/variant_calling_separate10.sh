@@ -1,12 +1,12 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/bams
-#SBATCH -J fb4
+#SBATCH -J fb10
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
 #SBATCH --mem=16000
 #SBATCH --time=400:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/freebayes4.out
-#SBATCH -e /global/home/users/makman/GATK/outs/freebayes4.err
+#SBATCH -o /global/home/users/makman/GATK/outs/freebayes10.out
+#SBATCH -e /global/home/users/makman/GATK/outs/freebayes10.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
@@ -27,9 +27,9 @@ module load freebayes/v1.1.0-56-ga180635
 # freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  HA89_sorted_markdup_recal.bam > ../freebayes/HA89.vcf
 # freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  Havasupai_sorted_markdup_recal.bam > ../freebayes/Havasupai.vcf
 # 
-freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  Hidatsa1_sorted_markdup_recal.bam > ../freebayes/Hidatsa1.vcf
-freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  Hopi_sorted_markdup_recal.bam > ../freebayes/Hopi.vcf
-freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  Hopi_real_sorted_markdup_recal.bam > ../freebayes/Hopi_real.vcf
+# freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  Hidatsa1_sorted_markdup_recal.bam > ../freebayes/Hidatsa1.vcf
+# freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  Hopi_sorted_markdup_recal.bam > ../freebayes/Hopi.vcf
+# freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  Hopi_real_sorted_markdup_recal.bam > ../freebayes/Hopi_real.vcf
 # 
 # freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  Hopi_PPN285_sorted_markdup_recal.bam > ../freebayes/Hopi_PPN285.vcf
 # freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  Laguna_Pueblo_sorted_markdup_recal.bam > ../freebayes/Laguna_Pueblo.vcf
@@ -46,8 +46,8 @@ freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  Hopi_real_
 # freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  MexCult7_sorted_markdup_recal.bam > ../freebayes/MexCult7.vcf
 # freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  MexCult9_sorted_markdup_recal.bam > ../freebayes/MexCult9.vcf
 # 
-# freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  PPN046_sorted_markdup_recal.bam > ../freebayes/PPN046.vcf
-# freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  PPN083_sorted_markdup_recal.bam > ../freebayes/PPN083.vcf
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  PPN046_sorted_markdup_recal.bam > ../freebayes/PPN046.vcf
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  PPN083_sorted_markdup_recal.bam > ../freebayes/PPN083.vcf
 # 
 # freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  PPN255_Manchurian_sorted_markdup_recal.bam > ../freebayes/PPN255_Manchurian.vcf
 # freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  PPN262_sorted_markdup_recal.bam > ../freebayes/PPN262.vcf

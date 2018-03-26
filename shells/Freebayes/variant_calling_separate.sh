@@ -107,7 +107,6 @@ freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  annKS2W-35
 freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  annMB1W-40_sorted_markdup_recal.bam > ../freebayes/annMB1W-40.vcf
 freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  annMO1W-39_sorted_markdup_recal.bam > ../freebayes/annMO1W-39.vcf
 
-
 freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  annND1W-6_sorted_markdup_recal.bam > ../freebayes/annND1W-6.vcf
 freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  annNM_sorted_markdup_recal.bam > ../freebayes/annNM.vcf
 

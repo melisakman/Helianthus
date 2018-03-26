@@ -1,6 +1,6 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/bams
-#SBATCH -J freebayes
+#SBATCH -J fb5
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
 #SBATCH --mem=16000
