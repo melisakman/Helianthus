@@ -1,6 +1,6 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/rosalind/users/makman/
-#SBATCH -J fastqc
+#SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq
+#SBATCH -J zip
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio
 #SBATCH --qos=rosalind_savio_normal
