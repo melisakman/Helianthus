@@ -10,5 +10,8 @@
 #SBATCH -e /global/home/users/makman/GATK/outs/gzip.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-gunzip merged_NVC.vcf.gz
+gzip VCMA_ethno/*.vcf
+gzip VCMA_regular/*.vcf
+gzip final_vcfs/*.vcf
+gzip merged_filtered/*.vcf
 
