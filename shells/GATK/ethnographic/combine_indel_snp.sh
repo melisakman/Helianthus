@@ -1,6 +1,6 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/VCMA_ethno
-#SBATCH -J compare
+#SBATCH -J cat-sort
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio
 #SBATCH --qos=rosalind_savio_normal
@@ -13,6 +13,7 @@
 #SBATCH -e /global/home/users/makman/GATK/outs/VCMA_ethno_combine_snp_indel.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-module load bio/vcftools/0.1.15
-vcf-concat VC_MA_combined_snps_ethno_hardfiltered_filtered.vcf.gz VC_MA_combined_indel_ethno_hardfiltered_filtered.vcf.gz > VC_MA_combined_all_ethno_hardfiltered_filtered.vcf.gz
-vcf-sort VC_MA_combined_all_ethno_hardfiltered_filtered.vcf.gz > VC_MA_combined_all_ethno_hardfiltered_filtered_sorted.vcf.gz
+export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
+
+/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-concat VC_MA_combined_snps_ethno_hardfiltered_filtered.vcf.gz VC_MA_combined_indel_ethno_hardfiltered_filtered.vcf.gz > VC_MA_combined_all_ethno_hardfiltered_filtered.vcf.gz
+/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-sort VC_MA_combined_all_ethno_hardfiltered_filtered.vcf.gz > VC_MA_combined_all_ethno_hardfiltered_filtered_sorted.vcf.gz
