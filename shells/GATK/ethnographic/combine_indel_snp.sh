@@ -14,6 +14,6 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
-
+TMPDIR=/clusterfs/rosalind/users/makman/temp
 # /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-concat VC_MA_combined_snps_ethno_hardfiltered_filtered.vcf.gz VC_MA_combined_indel_ethno_hardfiltered_filtered.vcf.gz > VC_MA_combined_all_ethno_hardfiltered_filtered.vcf.gz
 /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-sort VC_MA_combined_all_ethno_hardfiltered_filtered.vcf > VC_MA_combined_all_ethno_hardfiltered_filtered_sorted.vcf
