@@ -73,8 +73,6 @@ annIA2W-17_sorted_markdup_recal.bam \
 annKS_sorted_markdup_recal.bam \
 annKS1W-27_sorted_markdup_recal.bam \
 annKS2W-35_sorted_markdup_recal.bam \
-annMB1W-40_sorted_markdup_recal.bam \
-annMO1W-39_sorted_markdup_recal.bam \
 annND1W-6_sorted_markdup_recal.bam \
 annNM_sorted_markdup_recal.bam \
 annSD1W-35_sorted_markdup_recal.bam \
