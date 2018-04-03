@@ -80,4 +80,4 @@ annNM_sorted_markdup_recal.bam \
 annSD1W-35_sorted_markdup_recal.bam \
 annSD2W-18_sorted_markdup_recal.bam \
 annSK1W-Q_sorted_markdup_recal.bam \
-annWY_sorted_markdup_recal.bam --gvcf ../freebayes/freebayes_combined_chr01.vcf.gz
+annWY_sorted_markdup_recal.bam > ../freebayes/freebayes_combined_chr01.vcf
