@@ -14,6 +14,13 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load freebayes/v1.1.0-56-ga180635
+module load samtools
+
+samtools index Anzac_Pueblo_sorted_markdup_recal_RG.bam Anzac_Pueblo_sorted_markdup_recal_RG.bai
+samtools index HA433_sorted_markdup_recal_RG.bam HA433_sorted_markdup_recal_RG.bai
+samtools index Hidatsa1_sorted_markdup_recal_RG.bam Hidatsa1_sorted_markdup_recal_RG.bai
+samtools index MexCult7_sorted_markdup_recal_RG.bam MexCult7_sorted_markdup_recal_RG.bai
+samtools index ann01-cwIA_sorted_markdup_recal_RG.bam ann01-cwIA_sorted_markdup_recal_RG.bai
 
 freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -r HanXRQChr01 Anzac_Pueblo_sorted_markdup_recal_RG.bam HA433_sorted_markdup_recal_RG.bam Hidatsa1_sorted_markdup_recal_RG.bam MexCult7_sorted_markdup_recal_RG.bam ann01-cwIA_sorted_markdup_recal_RG.bam > ../freebayes/freebayes_combined_chr01.vcf
 # Arikara_sorted_markdup_recal_RG.bam \
