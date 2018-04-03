@@ -15,7 +15,7 @@
 #SBATCH --mail-type=All
 module load freebayes/v1.1.0-56-ga180635
 
-freebayes-parallel -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -r HanXRQChr01 Anzac_Pueblo_sorted_markdup_recal.bam \
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -r HanXRQChr01 Anzac_Pueblo_sorted_markdup_recal.bam \
 Arikara_sorted_markdup_recal.bam \
 HA124_sorted_markdup_recal.bam \
 HA316_sorted_markdup_recal.bam \
