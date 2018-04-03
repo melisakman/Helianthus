@@ -9,23 +9,23 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=20
 #SBATCH --time=400:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/freebayes_combined.out
-#SBATCH -e /global/home/users/makman/GATK/outs/freebayes_combined.err
+#SBATCH -o /clusterfs/rosalind/users/makman/GATK/bams/freebayes_combined.out
+#SBATCH -e /clusterfs/rosalind/users/makman/GATK/bams/freebayes_combined.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load freebayes/v1.1.0-56-ga180635
 
-freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -r HanXRQChr01 Anzac_Pueblo_sorted_markdup_recal.bam \
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -r HanXRQChr01 Anzac_Pueblo_sorted_markdup_recal.bam HA433_sorted_markdup_recal.bam Hidatsa1_sorted_markdup_recal.bam MexCult7_sorted_markdup_recal.bam ann01-cwIA_sorted_markdup_recal.bam > ../freebayes/freebayes_combined_chr01.vcf
 # Arikara_sorted_markdup_recal.bam \
 # HA124_sorted_markdup_recal.bam \
 # HA316_sorted_markdup_recal.bam \
 # HA404_sorted_markdup_recal.bam \
-HA433_sorted_markdup_recal.bam \
+# HA433_sorted_markdup_recal.bam \
 # HA442_sorted_markdup_recal.bam \
 # HA821_sorted_markdup_recal.bam \
 # HA89_sorted_markdup_recal.bam \
 # Havasupai_sorted_markdup_recal.bam \
-Hidatsa1_sorted_markdup_recal.bam \
+# Hidatsa1_sorted_markdup_recal.bam \
 # Hopi_real_sorted_markdup_recal.bam \
 # Hopi_PPN285_sorted_markdup_recal.bam \
 # Laguna_Pueblo_sorted_markdup_recal.bam \
@@ -35,7 +35,7 @@ Hidatsa1_sorted_markdup_recal.bam \
 # MexCult15_sorted_markdup_recal.bam \
 # MexCult3_sorted_markdup_recal.bam \
 # MexCult6_sorted_markdup_recal.bam \
-MexCult7_sorted_markdup_recal.bam \
+# MexCult7_sorted_markdup_recal.bam \
 # MexCult9_sorted_markdup_recal.bam \
 # PPN046_sorted_markdup_recal.bam \
 # PPN083_sorted_markdup_recal.bam \
@@ -55,13 +55,13 @@ MexCult7_sorted_markdup_recal.bam \
 # Seneca_sorted_markdup_recal.bam \
 # VIR847_sorted_markdup_recal.bam \
 # Zuni_sorted_markdup_recal.bam \
-ann01-cwIA_sorted_markdup_recal.bam \
-ann04-nwAR_sorted_markdup_recal.bam \
+# ann01-cwIA_sorted_markdup_recal.bam \
+# ann04-nwAR_sorted_markdup_recal.bam \
 # ann05-ccNM_sorted_markdup_recal.bam \
 # ann06-seWY_sorted_markdup_recal.bam \
 # ann08-ceTN_sorted_markdup_recal.bam \
-ann10-ccIL_sorted_markdup_recal.bam \
-ann20-seAZ_sorted_markdup_recal.bam \
+# ann10-ccIL_sorted_markdup_recal.bam \
+# ann20-seAZ_sorted_markdup_recal.bam \
 # ann28-swSK_sorted_markdup_recal.bam \
 # ann29-neSD_sorted_markdup_recal.bam \
 # ann34-cwKS_sorted_markdup_recal.bam \
@@ -79,4 +79,4 @@ ann20-seAZ_sorted_markdup_recal.bam \
 # annSD2W-18_sorted_markdup_recal.bam \
 # annSK1W-Q_sorted_markdup_recal.bam \
 # annWY_sorted_markdup_recal.bam \
-> ../freebayes/freebayes_combined_chr01.vcf
+# > ../freebayes/freebayes_combined_chr01.vcf
