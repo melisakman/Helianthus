@@ -1,6 +1,6 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/bams
-#SBATCH -J index17
+#SBATCH -J index18
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio
 #SBATCH --qos=rosalind_savio_normal
@@ -78,20 +78,20 @@ module load samtools
 # samtools index annND1W-6_sorted_markdup_recal_RG.bam annND1W-6_sorted_markdup_recal_RG.bai
 # samtools index annNM_sorted_markdup_recal_RG.bam annNM_sorted_markdup_recal_RG.bai
 # samtools index annSD1W-35_sorted_markdup_recal_RG.bam annSD1W-35_sorted_markdup_recal_RG.bai
-samtools index annSD2W-18_sorted_markdup_recal_RG.bam annSD2W-18_sorted_markdup_recal_RG.bai
-samtools index annSK1W-Q_sorted_markdup_recal_RG.bam annSK1W-Q_sorted_markdup_recal_RG.bai
-samtools index annWY_sorted_markdup_recal_RG.bam annWY_sorted_markdup_recal_RG.bai
-
-samtools index Ari_Mand_sorted_markdup_recal_RG.bam Ari_Mand_sorted_markdup_recal_RG.bai
-samtools index Ari_broa_sorted_markdup_recal_RG.bam Ari_broa_sorted_markdup_recal_RG.bai
-samtools index Paiute_sorted_markdup_recal_RG.bam Paiute_sorted_markdup_recal_RG.bai
-samtools index Se137749_sorted_markdup_recal_RG.bam Se137749_sorted_markdup_recal_RG.bai
-# samtools index Se_purp_sorted_markdup_recal_RG.bam Se_purp_sorted_markdup_recal_RG.bai
-# samtools index Se_strip_sorted_markdup_recal_RG.bam Se_strip_sorted_markdup_recal_RG.bai
-# samtools index Mex_A1516_sorted_markdup_readGroups_recal_RG.bam Mex_A1516_sorted_markdup_readGroups_recal_RG.bai
-# samtools index Mex_A1517_sorted_markdup_readGroups_recal_RG.bam Mex_A1517_sorted_markdup_readGroups_recal_RG.bai
-# samtools index Mex_A1572_sorted_markdup_readGroups_recal_RG.bam Mex_A1572_sorted_markdup_readGroups_recal_RG.bai
-# samtools index Mex_A1574_sorted_markdup_readGroups_recal_RG.bam Mex_A1574_sorted_markdup_readGroups_recal_RG.bai
-# samtools index Mex_Ann261_sorted_markdup_readGroups_recal_RG.bam Mex_Ann261_sorted_markdup_readGroups_recal_RG.bai
+# samtools index annSD2W-18_sorted_markdup_recal_RG.bam annSD2W-18_sorted_markdup_recal_RG.bai
+# samtools index annSK1W-Q_sorted_markdup_recal_RG.bam annSK1W-Q_sorted_markdup_recal_RG.bai
+# samtools index annWY_sorted_markdup_recal_RG.bam annWY_sorted_markdup_recal_RG.bai
+# 
+# samtools index Ari_Mand_sorted_markdup_recal_RG.bam Ari_Mand_sorted_markdup_recal_RG.bai
+# samtools index Ari_broa_sorted_markdup_recal_RG.bam Ari_broa_sorted_markdup_recal_RG.bai
+# samtools index Paiute_sorted_markdup_recal_RG.bam Paiute_sorted_markdup_recal_RG.bai
+# samtools index Se137749_sorted_markdup_recal_RG.bam Se137749_sorted_markdup_recal_RG.bai
+samtools index Se_purp_sorted_markdup_recal_RG.bam Se_purp_sorted_markdup_recal_RG.bai
+samtools index Se_strip_sorted_markdup_recal_RG.bam Se_strip_sorted_markdup_recal_RG.bai
+samtools index Mex_A1516_sorted_markdup_readGroups_recal_RG.bam Mex_A1516_sorted_markdup_readGroups_recal_RG.bai
+samtools index Mex_A1517_sorted_markdup_readGroups_recal_RG.bam Mex_A1517_sorted_markdup_readGroups_recal_RG.bai
+samtools index Mex_A1572_sorted_markdup_readGroups_recal_RG.bam Mex_A1572_sorted_markdup_readGroups_recal_RG.bai
+samtools index Mex_A1574_sorted_markdup_readGroups_recal_RG.bam Mex_A1574_sorted_markdup_readGroups_recal_RG.bai
+samtools index Mex_Ann261_sorted_markdup_readGroups_recal_RG.bam Mex_Ann261_sorted_markdup_readGroups_recal_RG.bai
  
 
