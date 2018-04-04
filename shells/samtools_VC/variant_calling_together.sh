@@ -13,9 +13,12 @@
 #SBATCH -e /global/home/users/makman/GATK/outs/freebayes_combined_chr01.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-module load freebayes/v1.1.0-56-ga180635
 
-freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -r HanXRQChr01 Anzac_Pueblo_sorted_markdup_recal_RG.bam \
+module load samtools/0.1.19
+bcftools/1.6 
+
+
+samtools mpileup -uf /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa Anzac_Pueblo_sorted_markdup_recal_RG.bam \
 Arikara_sorted_markdup_recal_RG.bam \
 HA124_sorted_markdup_recal_RG.bam \
 HA316_sorted_markdup_recal_RG.bam \
@@ -91,4 +94,4 @@ Mex_A1516_sorted_markdup_readGroups_recal_RG.bam \
 Mex_A1517_sorted_markdup_readGroups_recal_RG.bam \
 Mex_A1572_sorted_markdup_readGroups_recal_RG.bam \
 Mex_A1574_sorted_markdup_readGroups_recal_RG.bam \
-Mex_Ann261_sorted_markdup_readGroups_recal_RG.bam > ../freebayes/freebayes_combined_chr01.vcf
+Mex_Ann261_sorted_markdup_readGroups_recal_RG.bam | bcftools view -bvcg - > ../samtools_VC/samtools_combined.bcf
