@@ -45,10 +45,12 @@ module load samtools
 # samtools index RHA311_sorted_markdup_recal_RG.bam RHA311_sorted_markdup_recal_RG.bai
 # samtools index RHA328_sorted_markdup_recal_RG.bam RHA328_sorted_markdup_recal_RG.bai
 # samtools index RHA355_sorted_markdup_recal_RG.bam RHA355_sorted_markdup_recal_RG.bai
-samtools index RHA358_sorted_markdup_recal_RG.bam RHA358_sorted_markdup_recal_RG.bai
-samtools index RHA408_sorted_markdup_recal_RG.bam RHA408_sorted_markdup_recal_RG.bai
+
+# samtools index RHA358_sorted_markdup_recal_RG.bam RHA358_sorted_markdup_recal_RG.bai
+# samtools index RHA408_sorted_markdup_recal_RG.bam RHA408_sorted_markdup_recal_RG.bai
 samtools index RHA426_sorted_markdup_recal_RG.bam RHA426_sorted_markdup_recal_RG.bai
-samtools index RHA857_sorted_markdup_recal_RG.bam RHA857_sorted_markdup_recal_RG.bai
+# samtools index RHA857_sorted_markdup_recal_RG.bam RHA857_sorted_markdup_recal_RG.bai
+
 # samtools index SF33_sorted_markdup_recal_RG.bam SF33_sorted_markdup_recal_RG.bai
 # samtools index Seneca_sorted_markdup_recal_RG.bam Seneca_sorted_markdup_recal_RG.bai
 # samtools index VIR847_sorted_markdup_recal_RG.bam VIR847_sorted_markdup_recal_RG.bai
