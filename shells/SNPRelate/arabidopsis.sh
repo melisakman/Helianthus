@@ -18,5 +18,5 @@
 
 module load r/3.4.3
 
-Rscript /global/home/users/makman/git/Helianthus/shells/SNPRelate/Arabidopsis.R
+Rscript /global/home/users/makman/git/Helianthus/shells/SNPRelate/arabidopsis.R
 
