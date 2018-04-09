@@ -7,8 +7,8 @@
 #SBATCH --mem=64000
 #SBATCH --ntasks-per-node=1
 #SBATCH --time=400:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/freebayes_combined_chr01.out
-#SBATCH -e /global/home/users/makman/GATK/outs/freebayes_combined_chr01.err
+#SBATCH -o /global/home/users/makman/GATK/outs/samtools_combined_chr01.out
+#SBATCH -e /global/home/users/makman/GATK/outs/samtools_combined_chr01.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
