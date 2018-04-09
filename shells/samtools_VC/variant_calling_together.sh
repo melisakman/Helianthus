@@ -1,6 +1,6 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/bams
-#SBATCH -J fb1
+#SBATCH -J st1
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
 #SBATCH --nodes=1
