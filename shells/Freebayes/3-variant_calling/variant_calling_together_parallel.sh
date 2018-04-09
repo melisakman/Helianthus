@@ -14,6 +14,8 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load freebayes/v1.1.0-56-ga180635
+module load parallel/20180322
+module load vcflib/1.0.0
 ./freebayes-parallel 20 -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -r HanXRQChr01 /clusterfs/rosalind/users/makman/GATK/bams/Anzac_Pueblo_sorted_markdup_recal_RG.bam \
 /clusterfs/rosalind/users/makman/GATK/bams/Arikara_sorted_markdup_recal_RG.bam \
 /clusterfs/rosalind/users/makman/GATK/bams/HA124_sorted_markdup_recal_RG.bam \
