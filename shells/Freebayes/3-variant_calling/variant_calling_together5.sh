@@ -27,7 +27,7 @@ HA89_sorted_markdup_recal_RG.bam \
 Havasupai_sorted_markdup_recal_RG.bam \
 Hidatsa1_sorted_markdup_recal_RG.bam \
 Hopi_real_sorted_markdup_recal_RG.bam \
-Hopi_PPN285_sorted_markdup_recal_RG.bam \
+Hopi_PPN285_sorted_markdup_recal.bam \
 Laguna_Pueblo_sorted_markdup_recal_RG.bam \
 Mandan2_sorted_markdup_recal_RG.bam \
 MexCult1_sorted_markdup_recal_RG.bam \
