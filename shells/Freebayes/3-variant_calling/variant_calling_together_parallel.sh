@@ -13,7 +13,7 @@
 #SBATCH -e /global/home/users/makman/GATK/outs/freebayes_combined_chr01p.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-# module load freebayes/v1.1.0-56-ga180635
+module load freebayes/v1.1.0-56-ga180635
 module load parallel/20180322
 # ./fasta_generate_regions.py /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa.fai 100000 > /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa.100kbp.regions
 ./freebayes-parallel /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa.100kbp.regions 20 -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -r HanXRQChr01 /clusterfs/rosalind/users/makman/GATK/bams/Anzac_Pueblo_sorted_markdup_recal_RG.bam \
