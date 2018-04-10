@@ -32,7 +32,7 @@ module load freebayes/v1.1.0-56-ga180635
 # freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  Hopi_real_sorted_markdup_recal.bam > ../freebayes/Hopi_real.vcf
 # 
 freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  Hopi_PPN285_sorted_markdup_recal.bam > ../freebayes/Hopi_PPN285.vcf
-freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  Laguna_Pueblo_sorted_markdup_recal.bam > ../freebayes/Laguna_Pueblo.vcf
+# freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  Laguna_Pueblo_sorted_markdup_recal.bam > ../freebayes/Laguna_Pueblo.vcf
 # 
 # freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  Mandan2_sorted_markdup_recal.bam > ../freebayes/Mandan2.vcf
 # freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa  MexCult1_sorted_markdup_recal.bam > ../freebayes/MexCult1.vcf
