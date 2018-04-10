@@ -25,15 +25,19 @@ bcftools/1.6
 # samtools mpileup -uf /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa HA442_sorted_markdup_recal.bam | bcftools view -bvcg - > ../samtools_VC/HA442.raw.bcf
 # samtools mpileup -uf /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa HA821_sorted_markdup_recal.bam | bcftools view -bvcg - > ../samtools_VC/HA821.raw.bcf
 
-samtools mpileup -uf /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa HA89_sorted_markdup_recal.bam | bcftools view -bvcg - > ../samtools_VC/HA89.raw.bcf
-samtools mpileup -uf /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa Havasupai_sorted_markdup_recal.bam | bcftools view -bvcg - > ../samtools_VC/Havasupai.raw.bcf
 
-samtools mpileup -uf /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa Hidatsa1_sorted_markdup_recal.bam | bcftools view -bvcg - > ../samtools_VC/Hidatsa1.raw.bcf
-samtools mpileup -uf /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa Hopi_sorted_markdup_recal.bam | bcftools view -bvcg - > ../samtools_VC/Hopi.raw.bcf
-samtools mpileup -uf /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa Hopi_real_sorted_markdup_recal.bam | bcftools view -bvcg - > ../samtools_VC/Hopi_real.raw.bcf
+
+# samtools mpileup -uf /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa HA89_sorted_markdup_recal.bam | bcftools view -bvcg - > ../samtools_VC/HA89.raw.bcf
+# samtools mpileup -uf /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa Havasupai_sorted_markdup_recal.bam | bcftools view -bvcg - > ../samtools_VC/Havasupai.raw.bcf
+# 
+# samtools mpileup -uf /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa Hidatsa1_sorted_markdup_recal.bam | bcftools view -bvcg - > ../samtools_VC/Hidatsa1.raw.bcf
+# samtools mpileup -uf /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa Hopi_sorted_markdup_recal.bam | bcftools view -bvcg - > ../samtools_VC/Hopi.raw.bcf
+# samtools mpileup -uf /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa Hopi_real_sorted_markdup_recal.bam | bcftools view -bvcg - > ../samtools_VC/Hopi_real.raw.bcf
 
 samtools mpileup -uf /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa Hopi_PPN285_sorted_markdup_recal.bam | bcftools view -bvcg - > ../samtools_VC/Hopi_PPN285.raw.bcf
-samtools mpileup -uf /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa Laguna_Pueblo_sorted_markdup_recal.bam | bcftools view -bvcg - > ../samtools_VC/Laguna_Pueblo.raw.bcf
+# samtools mpileup -uf /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa Laguna_Pueblo_sorted_markdup_recal.bam | bcftools view -bvcg - > ../samtools_VC/Laguna_Pueblo.raw.bcf
+
+
 
 # samtools mpileup -uf /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa Mandan2_sorted_markdup_recal.bam | bcftools view -bvcg - > ../samtools_VC/Mandan2.raw.bcf
 # samtools mpileup -uf /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa MexCult1_sorted_markdup_recal.bam | bcftools view -bvcg - > ../samtools_VC/MexCult1.raw.bcf
