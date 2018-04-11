@@ -4,7 +4,7 @@
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
 #SBATCH --nodes=1
-#SBATCH --mem=120000
+#SBATCH --mem=64000
 #SBATCH --ntasks-per-node=1
 #SBATCH --time=400:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/freebayes_combined_chr01p2.out
