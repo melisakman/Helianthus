@@ -1,23 +1,21 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/freebayes/scripts/
 #SBATCH -J fb1p
-#SBATCH --account=co_rosalind
-#SBATCH --partition=savio
-#SBATCH --qos=rosalind_savio_normal
+#SBATCH --partition=vector
+#SBATCH --qos=vector_batch
 #SBATCH --nodes=1
-#SBATCH --mem=64000
+#SBATCH --mem=120000
 #SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=20
 #SBATCH --time=400:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/freebayes_combined_chr01p.out
-#SBATCH -e /global/home/users/makman/GATK/outs/freebayes_combined_chr01p.err
+#SBATCH -o /global/home/users/makman/GATK/outs/freebayes_combined_chr01p2.out
+#SBATCH -e /global/home/users/makman/GATK/outs/freebayes_combined_chr01p2.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load freebayes/v1.1.0-56-ga180635
 module load parallel/20180322
 TMPDIR=/clusterfs/rosalind/users/makman/temp
 # ./fasta_generate_regions.py /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa.fai 100000 > /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa.100kbp.regions
-./freebayes-parallel /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa.100kbp.regions 20 -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -r HanXRQChr01 /clusterfs/rosalind/users/makman/GATK/bams/Anzac_Pueblo_sorted_markdup_recal_RG.bam \
+./freebayes-parallel /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa.100kbp.regions 16 --tmpdir /clusterfs/rosalind/users/makman/temp -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -r HanXRQChr01 /clusterfs/rosalind/users/makman/GATK/bams/Anzac_Pueblo_sorted_markdup_recal_RG.bam \
 /clusterfs/rosalind/users/makman/GATK/bams/Arikara_sorted_markdup_recal_RG.bam \
 /clusterfs/rosalind/users/makman/GATK/bams/HA124_sorted_markdup_recal_RG.bam \
 /clusterfs/rosalind/users/makman/GATK/bams/HA316_sorted_markdup_recal_RG.bam \
