@@ -1,6 +1,6 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/freebayes/scripts/
-#SBATCH -J fb3p
+#SBATCH -J fb4p
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio2_htc
 #SBATCH --qos=rosalind_htc2_normal
@@ -9,14 +9,14 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=12
 #SBATCH --time=400:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/freebayes_combined_chr03p.out
-#SBATCH -e /global/home/users/makman/GATK/outs/freebayes_combined_chr03p.err
+#SBATCH -o /global/home/users/makman/GATK/outs/freebayes_combined_chr04p.out
+#SBATCH -e /global/home/users/makman/GATK/outs/freebayes_combined_chr04p.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load freebayes/v1.1.0-56-ga180635
 module load parallel/20180322
 TMPDIR=/clusterfs/rosalind/users/makman/temp_free
-./freebayes-parallel /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa.100kbp.regions 12 -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -r HanXRQChr03 /clusterfs/rosalind/users/makman/GATK/bams/Anzac_Pueblo_sorted_markdup_recal_RG.bam \
+./freebayes-parallel /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa.100kbp.regions 12 -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -r HanXRQChr04 /clusterfs/rosalind/users/makman/GATK/bams/Anzac_Pueblo_sorted_markdup_recal_RG.bam \
 /clusterfs/rosalind/users/makman/GATK/bams/Arikara_sorted_markdup_recal_RG.bam \
 /clusterfs/rosalind/users/makman/GATK/bams/HA124_sorted_markdup_recal_RG.bam \
 /clusterfs/rosalind/users/makman/GATK/bams/HA316_sorted_markdup_recal_RG.bam \
@@ -92,4 +92,4 @@ TMPDIR=/clusterfs/rosalind/users/makman/temp_free
 /clusterfs/rosalind/users/makman/GATK/bams/Mex_A1517_sorted_markdup_readGroups_recal_RG.bam \
 /clusterfs/rosalind/users/makman/GATK/bams/Mex_A1572_sorted_markdup_readGroups_recal_RG.bam \
 /clusterfs/rosalind/users/makman/GATK/bams/Mex_A1574_sorted_markdup_readGroups_recal_RG.bam \
-/clusterfs/rosalind/users/makman/GATK/bams/Mex_Ann261_sorted_markdup_readGroups_recal_RG.bam > /clusterfs/rosalind/users/makman/GATK/freebayes/freebayes_combined_chr03_p.vcf
+/clusterfs/rosalind/users/makman/GATK/bams/Mex_Ann261_sorted_markdup_readGroups_recal_RG.bam > /clusterfs/rosalind/users/makman/GATK/freebayes/freebayes_combined_chr04_p.vcf
