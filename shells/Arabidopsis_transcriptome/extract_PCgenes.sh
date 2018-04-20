@@ -12,4 +12,6 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
-python extract_variant_snpID.py testy_recode_snpid_fixed.vcf V1_ordered_10K.csv V1_top10K.vcf V1_top10K_pos.txt
+# python extract_variant_snpID.py testy_recode_snpid_fixed.vcf V1_ordered_10K.csv V1_top10K.vcf V1_top10K_pos.txt
+
+python extract_variant_snpID.py testy_recode_snpid_fixed.vcf V1_ordered_2500.csv V1_top2500.vcf V1_top2500_pos.txt
