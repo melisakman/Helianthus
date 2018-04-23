@@ -5,7 +5,7 @@
 #SBATCH --partition=savio2_htc
 #SBATCH --qos=rosalind_htc2_normal
 #SBATCH --nodes=1
-#SBATCH --mem=128000
+#SBATCH --mem=64000
 #SBATCH --time=800:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/freebayes_combined_chr10_rosalind.out
 #SBATCH -e /global/home/users/makman/GATK/outs/freebayes_combined_chr10_rosalind.err
