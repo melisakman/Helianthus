@@ -1,14 +1,14 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/bams
-#SBATCH -J st1
+#SBATCH -J st1_v2
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
 #SBATCH --nodes=1
 #SBATCH --mem=64000
 #SBATCH --ntasks-per-node=1
-#SBATCH --time=400:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/samtools_combined_chr01.out
-#SBATCH -e /global/home/users/makman/GATK/outs/samtools_combined_chr01.err
+#SBATCH --time=800:00:00
+#SBATCH -o /global/home/users/makman/GATK/outs/samtools_combined_chr01_v2.out
+#SBATCH -e /global/home/users/makman/GATK/outs/samtools_combined_chr01_v2.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
@@ -92,4 +92,4 @@ Mex_A1516_sorted_markdup_readGroups_recal_RG.bam \
 Mex_A1517_sorted_markdup_readGroups_recal_RG.bam \
 Mex_A1572_sorted_markdup_readGroups_recal_RG.bam \
 Mex_A1574_sorted_markdup_readGroups_recal_RG.bam \
-Mex_Ann261_sorted_markdup_readGroups_recal_RG.bam | bcftools view -bvcg - > ../samtools_VC/samtools_combined.bcf
+Mex_Ann261_sorted_markdup_readGroups_recal_RG.bam | bcftools view -bvcg - > ../samtools_VC/samtools_combined_v2.bcf
