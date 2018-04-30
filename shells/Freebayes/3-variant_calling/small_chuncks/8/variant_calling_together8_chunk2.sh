@@ -1,12 +1,12 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/bams
 #SBATCH -J fb8-2
-#SBATCH --partition=vector
-#SBATCH --qos=vector_batch
-#SBATCH --mem=16000
+#SBATCH --account=co_rosalind
+#SBATCH --partition=savio2_htc
+#SBATCH --qos=rosalind_htc2_normal
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-tasks=1
-#SBATCH --time=400:00:00
+#SBATCH --cpus-per-task=1
+#SBATCH --time=800:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/freebayes_combined_chr08_chunk2.out
 #SBATCH -e /global/home/users/makman/GATK/outs/freebayes_combined_chr08_chunk2.err
 #SBATCH --mail-user=makman@berkeley.edu
@@ -14,7 +14,7 @@
 module load freebayes/v1.1.0-56-ga180635
 TMPDIR=/clusterfs/rosalind/users/makman/temp
 
-freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -r HanXRQChr08:135888855-145888854 Anzac_Pueblo_sorted_markdup_recal_RG.bam \
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -r HanXRQChr08:135888854-145888853 Anzac_Pueblo_sorted_markdup_recal_RG.bam \
 Arikara_sorted_markdup_recal_RG.bam \
 HA124_sorted_markdup_recal_RG.bam \
 HA316_sorted_markdup_recal_RG.bam \
