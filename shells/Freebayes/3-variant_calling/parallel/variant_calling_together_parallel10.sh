@@ -6,9 +6,9 @@
 #SBATCH --qos=rosalind_htc2_normal
 #SBATCH --nodes=1
 #SBATCH --mem=128000
-#SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=12
-#SBATCH --time=400:00:00
+#SBATCH --ntasks-per-node=12
+#SBATCH --cpus-per-task=1
+#SBATCH --time=800:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/freebayes_combined_chr10p.out
 #SBATCH -e /global/home/users/makman/GATK/outs/freebayes_combined_chr10p.err
 #SBATCH --mail-user=makman@berkeley.edu
