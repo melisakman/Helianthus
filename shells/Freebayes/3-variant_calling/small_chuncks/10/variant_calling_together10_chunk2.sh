@@ -1,19 +1,19 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/bams
-#SBATCH -J fb10
+#SBATCH -J fb10-2
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio2_htc
 #SBATCH --qos=rosalind_htc2_normal
-#SBATCH --nodes=1
-#SBATCH --mem=64000
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=1
 #SBATCH --time=800:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/freebayes_combined_chr10_rosalind.out
-#SBATCH -e /global/home/users/makman/GATK/outs/freebayes_combined_chr10_rosalind.err
+#SBATCH -o /global/home/users/makman/GATK/outs/freebayes_combined_chr10_chunk2.out
+#SBATCH -e /global/home/users/makman/GATK/outs/freebayes_combined_chr10_chunk2.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load freebayes/v1.1.0-56-ga180635
 TMPDIR=/clusterfs/rosalind/users/makman/temp
-freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -r HanXRQChr10 Anzac_Pueblo_sorted_markdup_recal_RG.bam \
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -r HanXRQChr10:109465494-119465493 Anzac_Pueblo_sorted_markdup_recal_RG.bam \
 Arikara_sorted_markdup_recal_RG.bam \
 HA124_sorted_markdup_recal_RG.bam \
 HA316_sorted_markdup_recal_RG.bam \
@@ -89,4 +89,4 @@ Mex_A1516_sorted_markdup_readGroups_recal_RG.bam \
 Mex_A1517_sorted_markdup_readGroups_recal_RG.bam \
 Mex_A1572_sorted_markdup_readGroups_recal_RG.bam \
 Mex_A1574_sorted_markdup_readGroups_recal_RG.bam \
-Mex_Ann261_sorted_markdup_readGroups_recal_RG.bam > ../freebayes/freebayes_combined_chr10_rosalind.vcf
+Mex_Ann261_sorted_markdup_readGroups_recal_RG.bam > ../freebayes/freebayes_combined_chr10_chunk2.vcf
