@@ -13,6 +13,6 @@
 #SBATCH -e /global/home/users/makman/GATK/outs/chunks_combine_chr8.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-module load bio/vcftools/0.1.15
+export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
 TMPDIR=/clusterfs/rosalind/users/makman/temp
-vcf-concat freebayes_combined_chr08.vcf freebayes_combined_chr08_chunk1.vcf freebayes_combined_chr08_chunk2.vcf freebayes_combined_chr08_chunk3.vcf > freebayes_combined_chr08_chunksTogether.vcf
+/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-concat freebayes_combined_chr08.vcf freebayes_combined_chr08_chunk1.vcf freebayes_combined_chr08_chunk2.vcf freebayes_combined_chr08_chunk3.vcf > freebayes_combined_chr08_chunksTogether.vcf
