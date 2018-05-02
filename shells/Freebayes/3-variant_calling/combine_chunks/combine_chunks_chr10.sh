@@ -15,7 +15,11 @@
 #SBATCH --mail-type=All
 export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
 TMPDIR=/clusterfs/rosalind/users/makman/temp
-/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-concat freebayes_combined_chr10.vcf \
+
+wc -l freebayes_combined_chr10.vcf
+
+head -n freebayes_combined_chr10.vcf > freebayes_combined_chr10_excluded.vcf
+/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-concat freebayes_combined_chr10_excluded.vcf \
 freebayes_combined_chr10_chunk1.vcf freebayes_combined_chr10_chunk2.vcf freebayes_combined_chr10_chunk3.vcf \
 freebayes_combined_chr10_chunk4.vcf freebayes_combined_chr10_chunk5.vcf freebayes_combined_chr10_chunk6.vcf \
 freebayes_combined_chr10_chunk7.vcf freebayes_combined_chr10_chunk8.vcf freebayes_combined_chr10_chunk9.vcf \
