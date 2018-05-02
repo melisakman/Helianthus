@@ -18,10 +18,10 @@ TMPDIR=/clusterfs/rosalind/users/makman/temp
 
 wc -l freebayes_combined_chr10.vcf
 
-head -n freebayes_combined_chr10.vcf > freebayes_combined_chr10_excluded.vcf
-/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-concat freebayes_combined_chr10_excluded.vcf \
-freebayes_combined_chr10_chunk1.vcf freebayes_combined_chr10_chunk2.vcf freebayes_combined_chr10_chunk3.vcf \
-freebayes_combined_chr10_chunk4.vcf freebayes_combined_chr10_chunk5.vcf freebayes_combined_chr10_chunk6.vcf \
-freebayes_combined_chr10_chunk7.vcf freebayes_combined_chr10_chunk8.vcf freebayes_combined_chr10_chunk9.vcf \
-freebayes_combined_chr10_chunk10.vcf freebayes_combined_chr10_chunk11.vcf freebayes_combined_chr10_chunk12.vcf \
-freebayes_combined_chr10_chunk13.vcf freebayes_combined_chr10_chunk14.vcf  freebayes_combined_chr10_chunk15.vcf > freebayes_combined_chr10_chunksTogether.vcf
+# head -n freebayes_combined_chr10.vcf > freebayes_combined_chr10_excluded.vcf
+# /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-concat freebayes_combined_chr10_excluded.vcf \
+# freebayes_combined_chr10_chunk1.vcf freebayes_combined_chr10_chunk2.vcf freebayes_combined_chr10_chunk3.vcf \
+# freebayes_combined_chr10_chunk4.vcf freebayes_combined_chr10_chunk5.vcf freebayes_combined_chr10_chunk6.vcf \
+# freebayes_combined_chr10_chunk7.vcf freebayes_combined_chr10_chunk8.vcf freebayes_combined_chr10_chunk9.vcf \
+# freebayes_combined_chr10_chunk10.vcf freebayes_combined_chr10_chunk11.vcf freebayes_combined_chr10_chunk12.vcf \
+# freebayes_combined_chr10_chunk13.vcf freebayes_combined_chr10_chunk14.vcf  freebayes_combined_chr10_chunk15.vcf > freebayes_combined_chr10_chunksTogether.vcf
