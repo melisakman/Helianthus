@@ -19,6 +19,6 @@ TMPDIR=/clusterfs/rosalind/users/makman/temp
 /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-concat freebayes_combined_chr17.vcf \
 freebayes_combined_chr17_chunk1.vcf freebayes_combined_chr17_chunk2.vcf freebayes_combined_chr17_chunk3.vcf \
 freebayes_combined_chr17_chunk4.vcf freebayes_combined_chr17_chunk5.vcf freebayes_combined_chr17_chunk6.vcf \
-freebayes_combined_chr17_chunk7.vcf freebayes_combined_chr17_chunk8.vcf freebayes_combined_chr17_chunk9.vcf
-freebayes_combined_chr17_chunk10.vcf freebayes_combined_chr17_chunk11.vcf freebayes_combined_chr17_chunk12.vcf
+freebayes_combined_chr17_chunk7.vcf freebayes_combined_chr17_chunk8.vcf freebayes_combined_chr17_chunk9.vcf \
+freebayes_combined_chr17_chunk10.vcf freebayes_combined_chr17_chunk11.vcf freebayes_combined_chr17_chunk12.vcf \
 freebayes_combined_chr17_chunk13.vcf freebayes_combined_chr17_chunk14.vcf > freebayes_combined_chr17_chunksTogether.vcf
