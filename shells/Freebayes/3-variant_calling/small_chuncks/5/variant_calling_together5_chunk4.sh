@@ -14,7 +14,7 @@
 module load freebayes/v1.1.0-56-ga180635
 TMPDIR=/clusterfs/rosalind/users/makman/temp
 
-freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -r HanXRQchr05:205609933-209609932 Anzac_Pueblo_sorted_markdup_recal_RG.bam \
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -r HanXRQChr05:205609933-209609932 Anzac_Pueblo_sorted_markdup_recal_RG.bam \
 Arikara_sorted_markdup_recal_RG.bam \
 HA124_sorted_markdup_recal_RG.bam \
 HA316_sorted_markdup_recal_RG.bam \
