@@ -16,8 +16,8 @@
 export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
 TMPDIR=/clusterfs/rosalind/users/makman/temp
 
-wc -l freebayes_combined_chr02.vcf 
+# wc -l freebayes_combined_chr02.vcf #12062958
 
-# head -n 9955659 freebayes_combined_chr02.vcf > freebayes_combined_chr02_exclude.vcf
-# /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-concat freebayes_combined_chr02_exclude.vcf \
-# freebayes_combined_chr02_chunk1.vcf freebayes_combined_chr02_chunk2.vcf > freebayes_combined_chr02_chunksTogether.vcf
+head -n 12062957 freebayes_combined_chr02.vcf > freebayes_combined_chr02_exclude.vcf
+/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-concat freebayes_combined_chr02_exclude.vcf \
+freebayes_combined_chr02_chunk1.vcf freebayes_combined_chr02_chunk2.vcf > freebayes_combined_chr02_chunksTogether.vcf
