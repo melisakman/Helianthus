@@ -15,7 +15,7 @@
 #SBATCH --mail-type=All
 module load java
 module load gatk/3.8.1
-java -Xmx64G -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/gatk/3.8.0/GenomeAnalysisTK.jar -T HaplotypeCaller --emitRefConfidence GVCF 128000 -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I Anzac_Pueblo_sorted_markdup_recal_RG.bam -o ../fastq/invariants/Anzac_Pueblo_invariant.g.vcf.gz 
+java -Xmx64G -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/gatk/3.8.0/GenomeAnalysisTK.jar -T HaplotypeCaller --emitRefConfidence GVCF -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I Anzac_Pueblo_sorted_markdup_recal_RG.bam -o ../fastq/invariants/Anzac_Pueblo_invariant.g.vcf.gz 
 # /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I Arikara_sorted_markdup_recal.bam -O Arikara.g.vcf.gz -ERC GVCF
 # 
 # /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -I HA124_sorted_markdup_recal.bam -O HA124.g.vcf.gz -ERC GVCF
