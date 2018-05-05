@@ -1,11 +1,10 @@
 #!/bin/bash
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/bams
 #SBATCH -J fb07-10
-#SBATCH --account=co_rosalind
-#SBATCH --partition=savio2_htc
-#SBATCH --qos=rosalind_htc2_normal
+#SBATCH --partition=vector
+#SBATCH --qos=vector_batch
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=1
+#SBATCH --cpus-per-task=2
 #SBATCH --time=800:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/freebayes_invariant_chr07_chunk10.out
 #SBATCH -e /global/home/users/makman/GATK/outs/freebayes_invariant_chr07_chunk10.err
