@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/gvcf/combined
+#SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/gvcf/samples_separate
 #SBATCH -J gntyp1M
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio
@@ -18,6 +18,83 @@ module load java
 module load gatk/3.8.1
 java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp/ -Xmx60G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/gatk/3.8.0/GenomeAnalysisTK.jar -T GenotypeGVCFs \
 -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
---includeNonVariantSites \
--V combined_chr01_ethno.g.vcf.gz \
+-L HanXRQChr01 --includeNonVariantSites \
+--variant Anzac_Pueblo.g.vcf.gz \
+--variant Arikara.g.vcf.gz \
+--variant HA124.g.vcf.gz \
+--variant HA316.g.vcf.gz \
+--variant HA404.g.vcf.gz \
+--variant HA433.g.vcf.gz \
+--variant HA442.g.vcf.gz \
+--variant HA821.g.vcf.gz \
+--variant HA89.g.vcf.gz \
+--variant Havasupai.g.vcf.gz \
+--variant Hidatsa1.g.vcf.gz \
+--variant Hopi.g.vcf.gz \
+--variant Hopi_PPN285.g.vcf.gz \
+--variant Laguna_Pueblo.g.vcf.gz \
+--variant Mandan2.g.vcf.gz \
+--variant MexCult1.g.vcf.gz \
+--variant MexCult14.g.vcf.gz \
+--variant MexCult15.g.vcf.gz \
+--variant MexCult3.g.vcf.gz \
+--variant MexCult6.g.vcf.gz \
+--variant MexCult7.g.vcf.gz \
+--variant MexCult9.g.vcf.gz \
+--variant PPN046.g.vcf.gz \
+--variant PPN083.g.vcf.gz \
+--variant PPN255_Manchurian.g.vcf.gz \
+--variant PPN262.g.vcf.gz \
+--variant Pueblo.g.vcf.gz \
+--variant RHA271.g.vcf.gz \
+--variant RHA309.g.vcf.gz \
+--variant RHA311.g.vcf.gz \
+--variant RHA328.g.vcf.gz \
+--variant RHA355.g.vcf.gz \
+--variant RHA358.g.vcf.gz \
+--variant RHA408.g.vcf.gz \
+--variant RHA426.g.vcf.gz \
+--variant RHA857.g.vcf.gz \
+--variant SF33.g.vcf.gz \
+--variant Seneca.g.vcf.gz \
+--variant VIR847.g.vcf.gz \
+--variant Zuni.g.vcf.gz \
+--variant ann01-cwIA.g.vcf.gz \
+--variant ann04-nwAR.g.vcf.gz \
+--variant ann05-ccNM.g.vcf.gz \
+--variant ann06-seWY.g.vcf.gz \
+--variant ann08-ceTN.g.vcf.gz \
+--variant ann10-ccIL.g.vcf.gz \
+--variant ann20-seAZ.g.vcf.gz \
+--variant ann28-swSK.g.vcf.gz \
+--variant ann29-neSD.g.vcf.gz \
+--variant ann34-cwKS.g.vcf.gz \
+--variant ann39-ncNE.g.vcf.gz \
+--variant ann44-ccCA.g.vcf.gz \
+--variant annIA.g.vcf.gz \
+--variant annIA1W-1.g.vcf.gz \
+--variant annIA2W-17.g.vcf.gz \
+--variant annKS.g.vcf.gz \
+--variant annKS1W-27.g.vcf.gz \
+--variant annKS2W-35.g.vcf.gz \
+--variant annMB1W-40.g.vcf.gz \
+--variant annMO1W-39.g.vcf.gz \
+--variant annND1W-6.g.vcf.gz \
+--variant annNM.g.vcf.gz \
+--variant annSD1W-35.g.vcf.gz \
+--variant annSD2W-18.g.vcf.gz \
+--variant annSK1W-Q.g.vcf.gz \
+--variant annWY.g.vcf.gz \
+--variant Hopi_real_chr01.g.vcf.gz \
+--variant Mex_A1516.g.vcf.gz \
+--variant Mex_A1517.g.vcf.gz \
+--variant Mex_A1572.g.vcf.gz \
+--variant Mex_A1574.g.vcf.gz \
+--variant Mex_Ann261.g.vcf.gz \
+--variant Ari_broa.g.vcf.gz \
+--variant Ari_Mand.g.vcf.gz \
+--variant Paiute.g.vcf.gz \
+--variant Se_purp.g.vcf.gz \
+--variant Se_strip.g.vcf.gz \
+--variant Se137749.g.vcf.gz \
 -o ../../invariants/VCMA_chr01.vcf.gz
