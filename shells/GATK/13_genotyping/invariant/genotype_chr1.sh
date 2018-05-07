@@ -16,7 +16,7 @@
 
 module load java
 
-/clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp/ -Xmx60G" GenotypeGVCFs --includeNonVariantSites \
+/clusterfs/vector/home/groups/software/sl-7.x86_64/modules/gatk/3.8.0/GenomeAnalysisTK.jar --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp/ -Xmx60G" GenotypeGVCFs --includeNonVariantSites \
 -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
 -V combined_chr01_ethno.g.vcf.gz \
 -O ../../invariants/VCMA_chr01.vcf.gz
