@@ -20,4 +20,4 @@ java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp/ -Xmx60G -jar /clust
 -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
 --includeNonVariantSites \
 -V combined_chr01_ethno.g.vcf.gz \
--O ../../invariants/VCMA_chr01.vcf.gz
+-o ../../invariants/VCMA_chr01.vcf.gz
