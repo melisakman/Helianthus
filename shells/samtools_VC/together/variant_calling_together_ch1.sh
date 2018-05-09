@@ -1,12 +1,11 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/bams
 #SBATCH -J st1
+#SBATCH --account=co_rosalind
 #SBATCH --partition=savio
 #SBATCH --qos=rosalind_savio_normal
 #SBATCH --nodes=1
 #SBATCH --mem=64000
-#SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=20
 #SBATCH --time=400:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/samtools_combined_chr01.out
 #SBATCH -e /global/home/users/makman/GATK/outs/samtools_combined_chr01.err
