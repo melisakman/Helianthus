@@ -1,22 +1,23 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/bams
 #SBATCH -J st6
-#SBATCH --partition=vector
-#SBATCH --qos=vector_batch
+#SBATCH --partition=savio
+#SBATCH --qos=rosalind_savio_normal
 #SBATCH --nodes=1
 #SBATCH --mem=64000
 #SBATCH --ntasks-per-node=1
-#SBATCH --time=800:00:00
+#SBATCH --cpus-per-task=20
+#SBATCH --time=400:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/samtools_combined_chr06.out
 #SBATCH -e /global/home/users/makman/GATK/outs/samtools_combined_chr06.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
-module load samtools/0.1.19
-bcftools/1.6 
+module load samtools/1.6
+module load bcftools/1.6
 
 
-samtools mpileup -uf -r HanXRQChr06 /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa Anzac_Pueblo_sorted_markdup_recal_RG.bam \
+bcftools mpileup -Ou -f HanXRQChr06 /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa Anzac_Pueblo_sorted_markdup_recal_RG.bam \
 Arikara_sorted_markdup_recal_RG.bam \
 HA124_sorted_markdup_recal_RG.bam \
 HA316_sorted_markdup_recal_RG.bam \
@@ -92,4 +93,4 @@ Mex_A1516_sorted_markdup_readGroups_recal_RG.bam \
 Mex_A1517_sorted_markdup_readGroups_recal_RG.bam \
 Mex_A1572_sorted_markdup_readGroups_recal_RG.bam \
 Mex_A1574_sorted_markdup_readGroups_recal_RG.bam \
-Mex_Ann261_sorted_markdup_readGroups_recal_RG.bam | bcftools view -bvcg - > ../samtools_VC/samtools_combined_chr06.bcf
+Mex_Ann261_sorted_markdup_readGroups_recal_RG.bam | bcftools call -Oz > ../samtools_VC/samtools_combined_chr06.vcf.gz
