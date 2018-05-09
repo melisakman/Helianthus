@@ -16,7 +16,7 @@ module load samtools/1.6
 module load bcftools/1.6
 
 
-bcftools mpileup -Ou -f HanXRQChr01 /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa Anzac_Pueblo_sorted_markdup_recal_RG.bam \
+bcftools mpileup -Ou -r HanXRQChr01 -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa Anzac_Pueblo_sorted_markdup_recal_RG.bam \
 Arikara_sorted_markdup_recal_RG.bam \
 HA124_sorted_markdup_recal_RG.bam \
 HA316_sorted_markdup_recal_RG.bam \
