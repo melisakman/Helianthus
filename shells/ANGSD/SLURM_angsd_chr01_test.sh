@@ -1,6 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=ANGSD
 #SBATCH --account=co_rosalind
+#SBATCH -D /clusterfs/rosalind/users/makman/GATK/ANGSD/
 #SBATCH --partition=savio
 #SBATCH --qos=rosalind_savio_normal
 #SBATCH --nodes=1
