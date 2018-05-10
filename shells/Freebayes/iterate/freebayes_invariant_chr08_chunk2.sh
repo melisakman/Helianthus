@@ -4,7 +4,7 @@
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=2
+#SBATCH --cpus-per-task=1
 #SBATCH --time=800:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/freebayes_invariant_chr08_chunk2.out
 #SBATCH -e /global/home/users/makman/GATK/outs/freebayes_invariant_chr08_chunk2.err
