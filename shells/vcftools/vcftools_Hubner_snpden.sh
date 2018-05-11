@@ -14,4 +14,5 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load bio/vcftools/0.1.15
-vcftools --gzvcf ./XRQ_fil_ordered_combined.vcf.gz --chr HanXRQChr02 --minQ 50 --minDP 3 --maxDP 25 --keep wd_list.txt --max-missing 0.8 --SNPdensity 250 --out wd_snpden_chr02_250bp
+# vcftools --gzvcf ./XRQ_fil_ordered_combined.vcf.gz --chr HanXRQChr02 --minQ 50 --minDP 3 --maxDP 25 --keep wd_list.txt --max-missing 0.8 --SNPdensity 250 --out wd_snpden_chr02_250bp
+vcftools --gzvcf ./XRQ_fil_ordered_combined.vcf.gz --chr HanXRQChr02 --minQ 50 --minDP 3 --maxDP 25 --keep lr_list.txt --max-missing 0.8 --SNPdensity 250 --out lr_snpden_chr02_250bp
