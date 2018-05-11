@@ -1,19 +1,21 @@
 #!/bin/bash
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/bams
-#SBATCH -J st01-1
+#SBATCH -J st01
 #SBATCH --account=co_rosalind
-#SBATCH --partition=savio2_htc
-#SBATCH --qos=rosalind_htc2_normal
-#SBATCH --ntasks=1
-#SBATCH --cpus-per-task=1
-#SBATCH --time=800:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/samtools_invariant_chr01_chunk1.out
-#SBATCH -e /global/home/users/makman/GATK/outs/samtools_invariant_chr01_chunk1.err
+#SBATCH --partition=savio
+#SBATCH --qos=rosalind_savio_normal
+#SBATCH --nodes=1
+#SBATCH --mem=64000
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=20
+#SBATCH --time=400:00:00
+#SBATCH -o /global/home/users/makman/GATK/outs/samtools_invariant_chr01.out
+#SBATCH -e /global/home/users/makman/GATK/outs/samtools_invariant_chr01.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load bcftools/1.6
 TMPDIR=/clusterfs/rosalind/users/makman/temp
-bcftools mpileup -Ou --max-depth 100 -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -r HanXRQChr01:1-80000000 \
+bcftools mpileup -Ou --max-depth 100 -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -r HanXRQChr01 \
 Anzac_Pueblo_sorted_markdup_recal_RG.bam \
 Arikara_sorted_markdup_recal_RG.bam \
 HA124_sorted_markdup_recal_RG.bam \
@@ -90,4 +92,4 @@ Mex_A1516_sorted_markdup_readGroups_recal_RG.bam \
 Mex_A1517_sorted_markdup_readGroups_recal_RG.bam \
 Mex_A1572_sorted_markdup_readGroups_recal_RG.bam \
 Mex_A1574_sorted_markdup_readGroups_recal_RG.bam \
-Mex_Ann261_sorted_markdup_readGroups_recal_RG.bam | bcftools call -Ozm > ../samtools_VC/samtools_combined_chr01_chunk1.vcf.gz
+Mex_Ann261_sorted_markdup_readGroups_recal_RG.bam | bcftools call -Ozm > ../samtools_VC/samtools_combined_chr01.vcf.gz
