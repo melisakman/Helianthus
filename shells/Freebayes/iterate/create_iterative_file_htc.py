@@ -25,7 +25,7 @@ for i in iterations:
 #SBATCH --mail-type=All
 module load freebayes/v1.1.0-56-ga180635
 TMPDIR=/clusterfs/rosalind/users/makman/temp\n
-freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa --report-monomorphic -r HanXRQChr""" + str(chr) + ":" + str(border_l) + "-" + str(border_r) + "\\" +
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa --report-monomorphic -r HanXRQChr""" + str(chr) + ":" + str(border_l) + "-" + str(border_r) + " \\" +
 """\nAnzac_Pueblo_sorted_markdup_recal_RG.bam \\
 Arikara_sorted_markdup_recal_RG.bam \\
 HA124_sorted_markdup_recal_RG.bam \\
