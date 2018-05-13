@@ -13,7 +13,7 @@
 module load freebayes/v1.1.0-56-ga180635
 TMPDIR=/clusterfs/rosalind/users/makman/temp
 
-freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa --report-monomorphic -r HanXRQChr07:16000001-24000000\
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa --report-monomorphic -r HanXRQChr07:23277693-24000000\
 Anzac_Pueblo_sorted_markdup_recal_RG.bam \
 Arikara_sorted_markdup_recal_RG.bam \
 HA124_sorted_markdup_recal_RG.bam \
@@ -90,4 +90,4 @@ Mex_A1516_sorted_markdup_readGroups_recal_RG.bam \
 Mex_A1517_sorted_markdup_readGroups_recal_RG.bam \
 Mex_A1572_sorted_markdup_readGroups_recal_RG.bam \
 Mex_A1574_sorted_markdup_readGroups_recal_RG.bam \
-Mex_Ann261_sorted_markdup_readGroups_recal_RG.bam > ../freebayes/freebayes_invariant_chr07_chunk3.vcf
+Mex_Ann261_sorted_markdup_readGroups_recal_RG.bam > ../freebayes/freebayes_invariant_chr07_chunk3b.vcf
