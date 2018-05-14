@@ -9,15 +9,15 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=20
 #SBATCH --time=400:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/genotype_chr17_invariant.out
-#SBATCH -e /global/home/users/makman/GATK/outs/genotype_chr17_invariant.err
+#SBATCH -o /global/home/users/makman/GATK/outs/genotype_chr17b_invariant.out
+#SBATCH -e /global/home/users/makman/GATK/outs/genotype_chr17b_invariant.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
 module load java
 java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T GenotypeGVCFs \
 -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
--L HanXRQChr17 --includeNonVariantSites \
+-L HanXRQChr17:214723239- --includeNonVariantSites \
 --variant Anzac_Pueblo.g.vcf.gz \
 --variant Arikara.g.vcf.gz \
 --variant HA124.g.vcf.gz \
@@ -96,4 +96,4 @@ java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp/ -Xmx60G -jar /clust
 --variant Se_purp.g.vcf.gz \
 --variant Se_strip.g.vcf.gz \
 --variant Se137749.g.vcf.gz \
--o ../../invariants/VCMA_chr17.vcf.gz
+-o ../../invariants/VCMA_chr17b.vcf.gz
