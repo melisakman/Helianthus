@@ -9,13 +9,13 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=20
 #SBATCH --time=400:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/samtools_invariant_chr02.out
-#SBATCH -e /global/home/users/makman/GATK/outs/samtools_invariant_chr02.err
+#SBATCH -o /global/home/users/makman/GATK/outs/samtools_invariant_chr02b.out
+#SBATCH -e /global/home/users/makman/GATK/outs/samtools_invariant_chr02b.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load bcftools/1.6
 TMPDIR=/clusterfs/rosalind/users/makman/temp
-bcftools mpileup -Ou --max-depth 100 -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -r HanXRQChr02 \
+bcftools mpileup -Ou --max-depth 100 -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -r HanXRQChr02:13415071- \
 Anzac_Pueblo_sorted_markdup_recal_RG.bam \
 Arikara_sorted_markdup_recal_RG.bam \
 HA124_sorted_markdup_recal_RG.bam \
@@ -92,4 +92,4 @@ Mex_A1516_sorted_markdup_readGroups_recal_RG.bam \
 Mex_A1517_sorted_markdup_readGroups_recal_RG.bam \
 Mex_A1572_sorted_markdup_readGroups_recal_RG.bam \
 Mex_A1574_sorted_markdup_readGroups_recal_RG.bam \
-Mex_Ann261_sorted_markdup_readGroups_recal_RG.bam | bcftools call -Oz -m > ../samtools_VC/samtools_invariant_chr02.vcf.gz
+Mex_Ann261_sorted_markdup_readGroups_recal_RG.bam | bcftools call -Oz -m > ../samtools_VC/samtools_invariant_chr02b.vcf.gz
