@@ -4,7 +4,7 @@
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=5
+#SBATCH --cpus-per-task=10
 #SBATCH --time=800:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/coverage.out
 #SBATCH -e /global/home/users/makman/GATK/outs/coverage.err
@@ -13,4 +13,4 @@
 module load java 
 java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
 -T DepthOfCoverage -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
--o ../../coverage_haplotype/coverage -I bams.list
+-o ../../coverage_haplotype/coverage -nct 10 -I ./bams.list
