@@ -13,4 +13,4 @@
 module load java 
 java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
 -T DepthOfCoverage -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
--o ../../coverage_haplotype/coverage -nct 10 -I ./bams.list
+-o ../../coverage_haplotype/coverage -I ./bams.list
