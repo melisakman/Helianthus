@@ -1,21 +1,22 @@
 #!/bin/bash
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/bams
-#SBATCH -J fb01-5
+#SBATCH -J coverage
 #SBATCH --account=co_rosalind
-#SBATCH --partition=savio2_htc
-#SBATCH --qos=rosalind_htc2_normal
-#SBATCH --ntasks=1
-#SBATCH --cpus-per-task=1
-#SBATCH --time=800:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/freebayes_invariant_chr01_chunk5.out
-#SBATCH -e /global/home/users/makman/GATK/outs/freebayes_invariant_chr01_chunk5.err
+#SBATCH --partition=savio
+#SBATCH --qos=rosalind_savio_normal
+#SBATCH --nodes=1
+#SBATCH --mem=64000
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=20
+#SBATCH --time=400:00:00
+#SBATCH -o /global/home/users/makman/GATK/outs/coverage.out
+#SBATCH -e /global/home/users/makman/GATK/outs/coverage.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-module load freebayes/v1.1.0-56-ga180635
-TMPDIR=/clusterfs/rosalind/users/makman/temp
 
-freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa --report-monomorphic -r HanXRQChr01:32000001-40000000\
-Anzac_Pueblo_sorted_markdup_recal_RG.bam \
+java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
+-T DepthOfCoverage -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
+-o ../../coverage_haplotype/coverage -I Anzac_Pueblo_sorted_markdup_recal_RG.bam \
 Arikara_sorted_markdup_recal_RG.bam \
 HA124_sorted_markdup_recal_RG.bam \
 HA316_sorted_markdup_recal_RG.bam \
@@ -91,4 +92,4 @@ Mex_A1516_sorted_markdup_readGroups_recal_RG.bam \
 Mex_A1517_sorted_markdup_readGroups_recal_RG.bam \
 Mex_A1572_sorted_markdup_readGroups_recal_RG.bam \
 Mex_A1574_sorted_markdup_readGroups_recal_RG.bam \
-Mex_Ann261_sorted_markdup_readGroups_recal_RG.bam > ../freebayes/freebayes_invariant_chr01_chunk5.vcf
+Mex_Ann261_sorted_markdup_readGroups_recal_RG.bam 
