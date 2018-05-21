@@ -25,10 +25,9 @@ java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar
 	-o VCMA_chr02_indel.vcf.gz 
 
 
-/clusterfs/vector/home/groups/software/sl-7.x86_64/modules/gatk-4.0.1.2/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G" VariantFiltration \
+java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T VariantFiltration \
 	-R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
 	-V VCMA_chr02_indel.vcf.gz \
-	--missing-values-evaluate-as-failing \
 	--filterExpression "QD < 2.0 || FS > 200.0 || SOR > 10.0 || ReadPosRankSum < -20.0" \
 	--filterName "my_indel_filter" \
 	-o VCMA_chr02_indel_filterInfo.vcf.gz  
