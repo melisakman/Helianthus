@@ -6,7 +6,8 @@
 #SBATCH --qos=rosalind_htc2_normal
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=6
-#SBATCH --time=800:00:00#SBATCH -o /global/home/users/makman/GATK/outs/hardfilter_VCMA_SNP_chr10_invariant.out
+#SBATCH --time=800:00:00
+#SBATCH -o /global/home/users/makman/GATK/outs/hardfilter_VCMA_SNP_chr10_invariant.out
 #SBATCH -e /global/home/users/makman/GATK/outs/hardfilter_VCMA_SNP_chr10_invariant.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
@@ -21,10 +22,9 @@ java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar
 	-selectType SNP \
 	-o VCMA_chr10_SNP.vcf.gz 
 
-/clusterfs/vector/home/groups/software/sl-7.x86_64/modules/gatk-4.0.1.2/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G" VariantFiltration \
+java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T VariantFiltration \
 	-R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
 	-V VCMA_chr10_SNP.vcf.gz \
-	--missing-values-evaluate-as-failing \
 	--filterExpression "QD < 2.0 || MQ < 40.0 || FS > 60.0 || SOR > 3.0 || MQRankSum < -12.5 || ReadPosRankSum < -8.0" \
 	--filterName "my_SNP_filter" \
 	-o VCMA_chr10_SNP_filterInfo.vcf.gz  

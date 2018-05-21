@@ -18,16 +18,15 @@ module load java
 module load gatk/4.0.1.2
 export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
 
-java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T SelectVariants \
-	-R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
-	-V VCMA_chr03.vcf.gz \
-	-selectType SNP \
-	-o VCMA_chr03_SNP.vcf.gz 
+# java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T SelectVariants \
+# 	-R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
+# 	-V VCMA_chr03.vcf.gz \
+# 	-selectType SNP \
+# 	-o VCMA_chr03_SNP.vcf.gz 
 
-/clusterfs/vector/home/groups/software/sl-7.x86_64/modules/gatk-4.0.1.2/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G" VariantFiltration \
+java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T VariantFiltration \
 	-R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
 	-V VCMA_chr03_SNP.vcf.gz \
-	--missing-values-evaluate-as-failing \
 	--filterExpression "QD < 2.0 || MQ < 40.0 || FS > 60.0 || SOR > 3.0 || MQRankSum < -12.5 || ReadPosRankSum < -8.0" \
 	--filterName "my_SNP_filter" \
 	-o VCMA_chr03_SNP_filterInfo.vcf.gz  
