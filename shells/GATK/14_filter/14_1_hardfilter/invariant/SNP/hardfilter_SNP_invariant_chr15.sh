@@ -1,6 +1,7 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/invariants/
 #SBATCH -J filchr15S
+#SBATCH --account=co_rosalind
 #SBATCH --partition=savio2_htc
 #SBATCH --qos=rosalind_htc2_normal
 #SBATCH --ntasks=1
