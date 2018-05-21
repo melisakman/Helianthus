@@ -22,7 +22,10 @@ freebayes_invariant_chr10_chunk6.vcf \
 freebayes_invariant_chr10_chunk7.vcf \
 freebayes_invariant_chr10_chunk8.vcf \
 freebayes_invariant_chr10_chunk9.vcf \
-freebayes_invariant_chr10_chunk10.vcf \
+freebayes_invariant_chr10_chunk10a.vcf \
+freebayes_invariant_chr10_chunk10b.vcf \
+freebayes_invariant_chr10_chunk10c.vcf \
+freebayes_invariant_chr10_chunk10d.vcf \
 freebayes_invariant_chr10_chunk11.vcf \
 freebayes_invariant_chr10_chunk12.vcf \
 freebayes_invariant_chr10_chunk13.vcf \
