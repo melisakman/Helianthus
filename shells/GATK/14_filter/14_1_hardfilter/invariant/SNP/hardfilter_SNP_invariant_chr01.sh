@@ -1,6 +1,6 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/invariants/
-#SBATCH -J filchr01
+#SBATCH -J filchr01S
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio
 #SBATCH --qos=rosalind_savio_normal
@@ -9,35 +9,32 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=20
 #SBATCH --time=400:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/hardfilter_VCMA_indel_chr01_invariant.out
-#SBATCH -e /global/home/users/makman/GATK/outs/hardfilter_VCMA_indel_chr01_invariant.err
+#SBATCH -o /global/home/users/makman/GATK/outs/hardfilter_VCMA_SNP_chr01_invariant.out
+#SBATCH -e /global/home/users/makman/GATK/outs/hardfilter_VCMA_SNP_chr01_invariant.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-module load bio/vcftools/0.1.13
 module load gcc/4.8.5 
 module load java
-module load perl
 module load gatk/4.0.1.2
 export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
 
 java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T SelectVariants \
 	-R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
 	-V VCMA_chr01.vcf.gz \
-	-selectType INDEL \
-	-o VCMA_chr01_indel.vcf.gz 
-
+	-selectType SNP \
+	-o VCMA_chr01_SNP.vcf.gz 
 
 /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/gatk-4.0.1.2/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G" VariantFiltration \
 	-R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
-	-V VCMA_chr01_indel.vcf.gz \
+	-V VCMA_chr01_SNP.vcf.gz \
 	--missing-values-evaluate-as-failing \
-	--filterExpression "QD < 2.0 || FS > 200.0 || SOR > 10.0 || ReadPosRankSum < -20.0" \
-	--filterName "my_indel_filter" \
-	-o VCMA_chr01_indel_filterInfo.vcf.gz  
+	--filterExpression "QD < 2.0 || MQ < 40.0 || FS > 60.0 || SOR > 3.0 || MQRankSum < -12.5 || ReadPosRankSum < -8.0" \
+	--filterName "my_SNP_filter" \
+	-o VCMA_chr01_SNP_filterInfo.vcf.gz  
 	
 java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T SelectVariants \
 	-R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
-	-V VCMA_chr01_indel_filterInfo.vcf.gz \
+	-V VCMA_chr01_SNP_filterInfo.vcf.gz \
 	--excludeFiltered \
-	-o VCMA_chr01_indel_hardfiltered.vcf.gz 
+	-o VCMA_chr01_SNP_hardfiltered.vcf.gz 
 
