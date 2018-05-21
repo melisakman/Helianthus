@@ -25,7 +25,7 @@ export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcfto
 # 	-o VCMA_chr01_indel.vcf.gz 
 
 
-/clusterfs/vector/home/groups/software/sl-7.x86_64/modules/gatk-4.0.1.2/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G" VariantFiltration \
+java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T VariantFiltration \
 -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
 -V VCMA_chr01_indel.vcf.gz \
 --missing-values-evaluate-as-failing \
