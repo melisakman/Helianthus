@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/bams
 #SBATCH -J fb17-27
 #SBATCH --account=co_rosalind
