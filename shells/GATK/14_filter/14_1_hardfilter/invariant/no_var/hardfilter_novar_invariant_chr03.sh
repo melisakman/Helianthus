@@ -18,11 +18,11 @@ module load java
 module load gatk/4.0.1.2
 export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
 
-# java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T SelectVariants \
-# 	-R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
-# 	-V VCMA_chr03.vcf.gz \
-# 	-selectType NO_VARIATION \
-# 	-o VCMA_chr03_NO_VARIATION.vcf.gz 
+java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T SelectVariants \
+	-R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
+	-V VCMA_chr03.vcf.gz \
+	-selectType NO_VARIATION \
+	-o VCMA_chr03_NO_VARIATION.vcf.gz 
 
 java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T VariantFiltration \
 	-R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
