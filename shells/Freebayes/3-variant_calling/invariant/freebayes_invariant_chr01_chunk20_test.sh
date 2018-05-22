@@ -6,14 +6,14 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
 #SBATCH --time=800:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/freebayes_invariant_chr01_chunk20.out
-#SBATCH -e /global/home/users/makman/GATK/outs/freebayes_invariant_chr01_chunk20.err
+#SBATCH -o /global/home/users/makman/GATK/outs/freebayes_invariant_chr01_chunk20test.out
+#SBATCH -e /global/home/users/makman/GATK/outs/freebayes_invariant_chr01_chunk20test.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load freebayes/v1.1.0-56-ga180635
 TMPDIR=/clusterfs/rosalind/users/makman/temp
 
-freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa --report-monomorphic -r HanXRQChr01:152000001-153905722 \
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa --report-monomorphic -r HanXRQChr01:153905000-153905722 \
 Anzac_Pueblo_sorted_markdup_recal_RG.bam \
 Arikara_sorted_markdup_recal_RG.bam \
 HA124_sorted_markdup_recal_RG.bam \
@@ -90,4 +90,4 @@ Mex_A1516_sorted_markdup_readGroups_recal_RG.bam \
 Mex_A1517_sorted_markdup_readGroups_recal_RG.bam \
 Mex_A1572_sorted_markdup_readGroups_recal_RG.bam \
 Mex_A1574_sorted_markdup_readGroups_recal_RG.bam \
-Mex_Ann261_sorted_markdup_readGroups_recal_RG.bam > ../freebayes/freebayes_invariant_chr01_chunk20.vcf
+Mex_Ann261_sorted_markdup_readGroups_recal_RG.bam > ../freebayes/freebayes_invariant_chr01_chunk20test.vcf
