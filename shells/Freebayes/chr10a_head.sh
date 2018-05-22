@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -D /clusterfs/rosalind/users/makman/GATK/bams
+#SBATCH -D /clusterfs/rosalind/users/makman/GATK/freebayes/
 #SBATCH -J fb10a
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
