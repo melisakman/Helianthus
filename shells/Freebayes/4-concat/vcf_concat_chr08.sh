@@ -37,3 +37,4 @@ freebayes_invariant_chr08_chunk18.vcf \
 freebayes_invariant_chr08_chunk19.vcf \
 freebayes_invariant_chr08_chunk20.vcf > freebayes_invariant_chr08_combined.vcf.gz
 
+##8b
