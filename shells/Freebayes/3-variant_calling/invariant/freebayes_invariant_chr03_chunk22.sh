@@ -1,12 +1,12 @@
 #!/bin/bash
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/bams
 #SBATCH -J fb03-22
-#SBATCH --account=co_rosalind
-#SBATCH --partition=savio2_htc
-#SBATCH --qos=rosalind_htc2_normal
+#SBATCH --account=fc_blackman
+#SBATCH --partition=savio2
+#SBATCH --time=72:00:00
+#SBATCH --qos=savio_normal
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=1
-#SBATCH --time=800:00:00
+#SBATCH --cpus-per-task=2
 #SBATCH -o /global/home/users/makman/GATK/outs/freebayes_invariant_chr03_chunk22.out
 #SBATCH -e /global/home/users/makman/GATK/outs/freebayes_invariant_chr03_chunk22.err
 #SBATCH --mail-user=makman@berkeley.edu
