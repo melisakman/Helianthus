@@ -14,5 +14,5 @@
 module load freebayes/v1.1.0-56-ga180635
 TMPDIR=/clusterfs/rosalind/users/makman/temp
 
-freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa --report-monomorphic -r HanXRQChr17:161286001- \
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa --report-monomorphic -r HanXRQChr17:161286002- \
 Anzac_Pueblo_sorted_markdup_recal_RG.bam > ../freebayes/freebayes_invariant_chr17_AnzacPueblo_b.vcf
