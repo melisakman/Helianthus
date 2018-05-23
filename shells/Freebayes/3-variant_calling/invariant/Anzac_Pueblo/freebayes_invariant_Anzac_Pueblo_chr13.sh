@@ -2,13 +2,11 @@
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/bams
 #SBATCH -J APchr13
 #SBATCH --account=co_rosalind
-#SBATCH --partition=savio
-#SBATCH --qos=rosalind_savio_normal
-#SBATCH --nodes=1
-#SBATCH --mem=64000
-#SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=20
-#SBATCH --time=400:00:00
+#SBATCH --partition=savio2_htc
+#SBATCH --qos=rosalind_htc2_normal
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=1
+#SBATCH --time=800:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/freebayes_invariant_chr13_Anzac_b.out
 #SBATCH -e /global/home/users/makman/GATK/outs/freebayes_invariant_chr13_Anzac_b.err
 #SBATCH --mail-user=makman@berkeley.edu
