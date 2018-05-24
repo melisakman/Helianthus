@@ -6,14 +6,14 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=4
 #SBATCH --time=800:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/freebayes_invariant_chr10_chunk14d.out
-#SBATCH -e /global/home/users/makman/GATK/outs/freebayes_invariant_chr10_chunk14d.err
+#SBATCH -o /global/home/users/makman/GATK/outs/freebayes_invariant_chr10_chunk14e.out
+#SBATCH -e /global/home/users/makman/GATK/outs/freebayes_invariant_chr10_chunk14e.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load freebayes/v1.1.0-56-ga180635
 TMPDIR=/clusterfs/rosalind/users/makman/temp
 
-freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa --report-monomorphic -r HanXRQChr10:111000001-112000000\
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa --report-monomorphic -r HanXRQChr10:110000001-111000000\
 Anzac_Pueblo_sorted_markdup_recal_RG.bam \
 Arikara_sorted_markdup_recal_RG.bam \
 HA124_sorted_markdup_recal_RG.bam \

@@ -91,4 +91,4 @@ Mex_A1516_sorted_markdup_readGroups_recal_RG.bam \
 Mex_A1517_sorted_markdup_readGroups_recal_RG.bam \
 Mex_A1572_sorted_markdup_readGroups_recal_RG.bam \
 Mex_A1574_sorted_markdup_readGroups_recal_RG.bam \
-Mex_Ann261_sorted_markdup_readGroups_recal_RG.bam > ../freebayes/freebayes_invariant_chr10_chunk14.vcf
+Mex_Ann261_sorted_markdup_readGroups_recal_RG.bam > ../freebayes/freebayes_invariant_chr10_chunk14a.vcf
