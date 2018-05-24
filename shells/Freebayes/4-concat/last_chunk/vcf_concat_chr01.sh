@@ -19,5 +19,5 @@
 # freebayes_invariant_chr01_AnzacPueblo.vcf freebayes_invariant_chr01_AnzacPueblo_b.vcf > freebayes_invariant_chr01_AnzacPueblo_all.vcf
 
 module load bio/vcftools/0.1.15
-
+export PERL5LIB=/global/software/sl-7.x86_64/modules/apps/bio/vcftools/0.1.15/share/perl5/
 vcf-merge freebayes_invariant_chr01_combined_end.vcf freebayes_invariant_chr01_AnzacPueblo_all.vcf > freebayes_invariant_chr01_all.vcf
