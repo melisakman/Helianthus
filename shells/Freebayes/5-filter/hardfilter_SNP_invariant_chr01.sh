@@ -37,3 +37,6 @@ java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar
 	--excludeFiltered \
 	-o VCMA_chr01_SNP_hardfiltered.vcf.gz 
 
+bcftools filter -sLowQual -g3 -G10 \
+    -e "QUAL/DP<2 || (RPB<0.1 && %QUAL<15) || (AC<2 && %QUAL<15) || %MAX(DV)<=3 || %MAX(DV)/%MAX(DP)<=0.3" \
+    calls.vcf.gz

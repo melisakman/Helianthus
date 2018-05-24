@@ -22,14 +22,14 @@ freebayes_invariant_chr10_chunk6.vcf \
 freebayes_invariant_chr10_chunk7.vcf \
 freebayes_invariant_chr10_chunk8.vcf \
 freebayes_invariant_chr10_chunk9.vcf \
-freebayes_invariant_chr10_chunk10a.vcf \
-freebayes_invariant_chr10_chunk10b.vcf \
-freebayes_invariant_chr10_chunk10c.vcf \
-freebayes_invariant_chr10_chunk10d.vcf \
+freebayes_invariant_chr10_chunk10.vcf \
 freebayes_invariant_chr10_chunk11.vcf \
 freebayes_invariant_chr10_chunk12.vcf \
 freebayes_invariant_chr10_chunk13.vcf \
 freebayes_invariant_chr10_chunk14.vcf \
+freebayes_invariant_chr10_chunk14b.vcf \
+freebayes_invariant_chr10_chunk14c.vcf \
+freebayes_invariant_chr10_chunk14d.vcf \
 freebayes_invariant_chr10_chunk15.vcf \
 freebayes_invariant_chr10_chunk16.vcf \
 freebayes_invariant_chr10_chunk17.vcf \
@@ -46,5 +46,6 @@ freebayes_invariant_chr10_chunk27.vcf \
 freebayes_invariant_chr10_chunk28.vcf \
 freebayes_invariant_chr10_chunk29.vcf \
 freebayes_invariant_chr10_chunk30.vcf \
-freebayes_invariant_chr10_chunk31.vcf > freebayes_invariant_chr10_combined.vcf.gz
+freebayes_invariant_chr10_chunk31.vcf 
+freebayes_invariant_chr10_chunk31b.vcf> freebayes_invariant_chr10_combined.vcf.gz
 

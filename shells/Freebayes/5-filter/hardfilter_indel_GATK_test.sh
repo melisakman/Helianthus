@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/invariants/
+#SBATCH -D /clusterfs/rosalind/users/makman/GATK/freebayes/
 #SBATCH -J filchr02
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio

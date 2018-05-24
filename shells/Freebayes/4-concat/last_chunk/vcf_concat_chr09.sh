@@ -43,5 +43,5 @@ freebayes_invariant_chr09_chunk25.vcf \
 freebayes_invariant_chr09_chunk25b.vcf \
 freebayes_invariant_chr09_chunk26.vcf \
 freebayes_invariant_chr09_chunk26b.vcf \
-freebayes_invariant_chr09_chunk27.vcf > freebayes_invariant_chr09_combined.vcf.gz
+freebayes_invariant_chr09_chunk27.vcf > freebayes_invariant_chr09_all.vcf.gz
 
