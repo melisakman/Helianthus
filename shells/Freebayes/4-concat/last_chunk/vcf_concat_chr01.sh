@@ -18,6 +18,6 @@
 # /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-concat \
 # freebayes_invariant_chr01_AnzacPueblo.vcf freebayes_invariant_chr01_AnzacPueblo_b.vcf > freebayes_invariant_chr01_AnzacPueblo_all.vcf
 
-bio/vcftools/0.1.15
+module load bio/vcftools/0.1.15
 
 vcf-merge freebayes_invariant_chr01_combined_end.vcf freebayes_invariant_chr01_AnzacPueblo_all.vcf > freebayes_invariant_chr01_all.vcf
