@@ -25,4 +25,5 @@ TMPDIR=/clusterfs/rosalind/users/makman/temp
 /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf freebayes_invariant_chr01_AnzacPueblo_all.vcf.gz  
 
 
-/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-merge freebayes_invariant_chr01_combined_end.vcf.gz freebayes_invariant_chr01_AnzacPueblo_all.vcf.gz > freebayes_invariant_chr01_all.vcf.gz
+/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-merge \
+freebayes_invariant_chr01_combined_end.vcf.gz freebayes_invariant_chr01_AnzacPueblo_all.vcf.gz > freebayes_invariant_chr01_all.vcf.gz

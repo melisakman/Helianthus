@@ -19,5 +19,12 @@ freebayes_invariant_chr04_chunk23b.vcf > freebayes_invariant_chr04_combined_end.
 /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-concat \
 freebayes_invariant_chr04_AnzacPueblo.vcf freebayes_invariant_chr04_AnzacPueblo_b.vcf > freebayes_invariant_chr04_AnzacPueblo_all.vcf
 
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c freebayes_invariant_chr04_combined_end.vcf > freebayes_invariant_chr04_combined_end.vcf.gz 
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c freebayes_invariant_chr04_AnzacPueblo_all.vcf > freebayes_invariant_chr04_AnzacPueblo_all.vcf.gz 
+
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf freebayes_invariant_chr04_combined_end.vcf.gz  
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf freebayes_invariant_chr04_AnzacPueblo_all.vcf.gz  
+
+
 /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-merge \
-freebayes_invariant_chr04_combined_end.vcf freebayes_invariant_chr04_AnzacPueblo_all.vcf > freebayes_invariant_chr04_all.vcf
+freebayes_invariant_chr04_combined_end.vcf.gz freebayes_invariant_chr04_AnzacPueblo_all.vcf.gz > freebayes_invariant_chr04_all.vcf.gz
