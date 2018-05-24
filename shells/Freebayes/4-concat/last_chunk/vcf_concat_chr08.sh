@@ -13,16 +13,7 @@
 export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
 TMPDIR=/clusterfs/rosalind/users/makman/temp
 /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-concat \
-freebayes_invariant_chr08_chunk1.vcf \
-freebayes_invariant_chr08_chunk2.vcf \
-freebayes_invariant_chr08_chunk2b.vcf \
-freebayes_invariant_chr08_chunk3.vcf \
-freebayes_invariant_chr08_chunk4.vcf \
-freebayes_invariant_chr08_chunk5.vcf \
-freebayes_invariant_chr08_chunk6.vcf \
-freebayes_invariant_chr08_chunk7.vcf \
-freebayes_invariant_chr08_chunk7b.vcf \
-freebayes_invariant_chr08_chunk8.vcf \
+freebayes_invariant_chr08_combined_b.vcf \
 freebayes_invariant_chr08_chunk8b.vcf \
 freebayes_invariant_chr08_chunk9.vcf \
 freebayes_invariant_chr08_chunk10.vcf \
@@ -37,4 +28,13 @@ freebayes_invariant_chr08_chunk18.vcf \
 freebayes_invariant_chr08_chunk19.vcf \
 freebayes_invariant_chr08_chunk20.vcf > freebayes_invariant_chr08_combined.vcf.gz
 
-##8b
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c freebayes_invariant_chr08_combined_end.vcf > freebayes_invariant_chr08_combined_end.vcf.gz 
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c freebayes_invariant_chr08_AnzacPueblo.vcf > freebayes_invariant_chr08_AnzacPueblo_all.vcf.gz 
+
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf freebayes_invariant_chr08_combined_end.vcf.gz  
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf freebayes_invariant_chr08_AnzacPueblo_all.vcf.gz  
+
+
+/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-merge \
+freebayes_invariant_chr08_combined_end.vcf.gz freebayes_invariant_chr08_AnzacPueblo_all.vcf.gz > freebayes_invariant_chr08_all.vcf.gz
+
