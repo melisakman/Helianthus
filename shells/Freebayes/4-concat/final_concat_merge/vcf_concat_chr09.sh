@@ -53,4 +53,4 @@ freebayes_invariant_chr09_AnzacPueblo.vcf freebayes_invariant_chr09_AnzacPueblo_
 /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf freebayes_invariant_chr09_combined.vcf.gz  
 /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf freebayes_invariant_chr09_AnzacPueblo_all.vcf.gz  
 
-bcftools merge -m all -O z freebayes_invariant_chr09_combined.vcf.gz freebayes_invariant_chr09_AnzacPueblo_all.vcf.gz > freebayes_invariant_chr09_all.vcf.gz
+bcftools merge -m all -O z freebayes_invariant_chr09_combined.vcf.gz freebayes_invariant_chr09_AnzacPueblo_all.vcf.gz > final_combined/freebayes_invariant_chr09_all.vcf.gz

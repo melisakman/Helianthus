@@ -38,5 +38,5 @@ TMPDIR=/clusterfs/rosalind/users/makman/temp
 # freebayes_invariant_chr16_chunk23.vcf \
 # freebayes_invariant_chr16_chunk24.vcf > freebayes_invariant_chr16_combined.vcf
 
-/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c freebayes_invariant_chr16_combined.vcf > freebayes_invariant_chr16_all.vcf.gz 
-/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf freebayes_invariant_chr16_all.vcf.gz  
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c freebayes_invariant_chr16_combined.vcf > final_combined/freebayes_invariant_chr16_all.vcf.gz 
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf final_combined/freebayes_invariant_chr16_all.vcf.gz  

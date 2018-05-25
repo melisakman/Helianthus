@@ -58,5 +58,5 @@ freebayes_invariant_chr15_chunk20.vcf \
 freebayes_invariant_chr15_chunk21.vcf \
 freebayes_invariant_chr15_chunk22.vcf > freebayes_invariant_chr15_combined.vcf
 
-/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c freebayes_invariant_chr15_combined.vcf > freebayes_invariant_chr15_all.vcf.gz 
-/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf freebayes_invariant_chr15_all.vcf.gz  
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c freebayes_invariant_chr15_combined.vcf > final_combined/freebayes_invariant_chr15_all.vcf.gz 
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf final_combined/freebayes_invariant_chr15_all.vcf.gz  
