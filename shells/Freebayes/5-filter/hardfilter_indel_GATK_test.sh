@@ -19,19 +19,19 @@ export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcfto
 # /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf freebayes_invariant_chr01_chunk1.vcf.gz  
 
 
-java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T SelectVariants \
-	-R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
-	-V freebayes_invariant_chr01_chunk1.vcf.gz \
-	-selectType INDEL \
-	-o freebayes_invariant_chr01_chunk1_GATKtest.vcf.gz 
-
-
-# java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T VariantFiltration \
+# java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T SelectVariants \
 # 	-R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
-# 	-V freebayes_invariant_chr01_chunk1_GATKtest.vcf.gz \
-# 	--filterExpression "QD < 2.0 || FS > 200.0 || SOR > 10.0 || ReadPosRankSum < -20.0" \
-# 	--filterName "my_indel_filter" \
-# 	-o freebayes_invariant_chr01_chunk1_GATKtest_filterInfo.vcf.gz 
+# 	-V freebayes_invariant_chr01_chunk1.vcf.gz \
+# 	-selectType INDEL \
+# 	-o freebayes_invariant_chr01_chunk1_GATKtest.vcf.gz 
+
+
+java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T VariantFiltration \
+	-R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
+	-V freebayes_invariant_chr01_chunk1_GATKtest.vcf.gz \
+	--filterExpression "QD < 2.0 || FS > 200.0 || SOR > 10.0 || ReadPosRankSum < -20.0" \
+	--filterName "my_indel_filter" \
+	-o freebayes_invariant_chr01_chunk1_GATKtest_filterInfo.vcf.gz 
 # 	
 # java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T SelectVariants \
 # 	-R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
