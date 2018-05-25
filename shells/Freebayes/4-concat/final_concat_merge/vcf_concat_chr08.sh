@@ -35,6 +35,11 @@ freebayes_invariant_chr08_chunk16.vcf \
 freebayes_invariant_chr08_chunk17.vcf \
 freebayes_invariant_chr08_chunk18.vcf \
 freebayes_invariant_chr08_chunk19.vcf \
-freebayes_invariant_chr08_chunk20.vcf > freebayes_invariant_chr08_combined.vcf.gz
+freebayes_invariant_chr08_chunk20.vcf > freebayes_invariant_chr08_combined.vcf
 
-##8b
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c freebayes_invariant_chr08_combined.vcf > freebayes_invariant_chr08_combined.vcf.gz 
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c freebayes_invariant_chr08_AnzacPueblo.vcf > freebayes_invariant_chr08_AnzacPueblo.vcf.gz 
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf freebayes_invariant_chr08_combined.vcf.gz  
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf freebayes_invariant_chr08_AnzacPueblo.vcf.gz  
+
+bcftools merge -m all -O z freebayes_invariant_chr08_combined.vcf.gz freebayes_invariant_chr08_AnzacPueblo.vcf.gz > freebayes_invariant_chr08_all.vcf.gz
