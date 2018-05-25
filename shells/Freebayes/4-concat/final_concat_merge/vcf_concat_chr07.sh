@@ -12,6 +12,8 @@
 #SBATCH --mail-type=All
 export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
 TMPDIR=/clusterfs/rosalind/users/makman/temp
+module load bcftools/1.6
+
 # /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-concat \
 # freebayes_invariant_chr07_chunk1.vcf \
 # freebayes_invariant_chr07_chunk2.vcf \
