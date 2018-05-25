@@ -35,7 +35,11 @@ module load bcftools/1.6
 
 /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-concat \
 freebayes_invariant_chr07_combined.vcf \
-freebayes_invariant_chr07_chunk13.vcf > freebayes_invariant_chr07_combined_end.vcf
+freebayes_invariant_chr07_chunk13.vcf \
+freebayes_invariant_chr07_chunk13b.vcf \
+freebayes_invariant_chr07_chunk13c.vcf \
+freebayes_invariant_chr07_chunk13d.vcf \
+freebayes_invariant_chr07_chunk13e.vcf > freebayes_invariant_chr07_combined_end.vcf
 
 /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c freebayes_invariant_chr07_combined.vcf > freebayes_invariant_chr07_combined.vcf.gz 
 /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c freebayes_invariant_chr07_AnzacPueblo.vcf > freebayes_invariant_chr07_AnzacPueblo.vcf.gz 

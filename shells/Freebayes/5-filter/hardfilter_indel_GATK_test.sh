@@ -1,16 +1,13 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/rosalind/users/makman/GATK/freebayes/
-#SBATCH -J filchr02
-#SBATCH --account=co_rosalind
-#SBATCH --partition=savio
-#SBATCH --qos=rosalind_savio_normal
-#SBATCH --nodes=1
-#SBATCH --mem=64000
-#SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=20
-#SBATCH --time=400:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/hardfilter_VCMA_indel_chr02_invariant.out
-#SBATCH -e /global/home/users/makman/GATK/outs/hardfilter_VCMA_indel_chr02_invariant.err
+#SBATCH -D /clusterfs/rosalind/users/makman/GATK/freebayes/final_combined/
+#SBATCH -J filter_test
+#SBATCH --partition=vector
+#SBATCH --qos=vector_batch
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=2
+#SBATCH --time=800:00:00
+#SBATCH -o /global/home/users/makman/GATK/outs/hardfilter_freebayes_GATK_test.out
+#SBATCH -e /global/home/users/makman/GATK/outs/hardfilter_freebayes_GATK_test.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load gcc/4.8.5 
@@ -20,21 +17,21 @@ export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcfto
 
 java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T SelectVariants \
 	-R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
-	-V VCMA_chr02.vcf.gz \
+	-V freebayes_invariant_chr01_all.vcf.gz \
 	-selectType INDEL \
-	-o VCMA_chr02_indel.vcf.gz 
+	-o freebayes_invariant_chr01_indel_GATKtest.vcf.gz 
 
 
-java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T VariantFiltration \
-	-R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
-	-V VCMA_chr02_indel.vcf.gz \
-	--filterExpression "QD < 2.0 || FS > 200.0 || SOR > 10.0 || ReadPosRankSum < -20.0" \
-	--filterName "my_indel_filter" \
-	-o VCMA_chr02_indel_filterInfo.vcf.gz  
-	
-java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T SelectVariants \
-	-R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
-	-V VCMA_chr02_indel_filterInfo.vcf.gz \
-	--excludeFiltered \
-	-o VCMA_chr02_indel_hardfiltered.vcf.gz 
+# java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T VariantFiltration \
+# 	-R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
+# 	-V freebayes_invariant_chr01_indel_GATKtest.vcf.gz \
+# 	--filterExpression "QD < 2.0 || FS > 200.0 || SOR > 10.0 || ReadPosRankSum < -20.0" \
+# 	--filterName "my_indel_filter" \
+# 	-o freebayes_invariant_chr01_indel_GATKtest_filterInfo.vcf.gz 
+# 	
+# java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T SelectVariants \
+# 	-R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
+# 	-V freebayes_invariant_chr01_indel_GATKtest_filterInfo.vcf.gz \
+# 	--excludeFiltered \
+# 	-o freebayes_invariant_chr01_indel_GATKtest_filtered.vcf.gz
 

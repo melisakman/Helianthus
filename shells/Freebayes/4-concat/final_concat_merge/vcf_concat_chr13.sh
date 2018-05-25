@@ -24,6 +24,11 @@ freebayes_invariant_chr13_chunk4.vcf \
 freebayes_invariant_chr13_chunk5.vcf \
 freebayes_invariant_chr13_chunk6.vcf \
 freebayes_invariant_chr13_chunk6b.vcf \
+freebayes_invariant_chr13_chunk6c.vcf \
+freebayes_invariant_chr13_chunk6d.vcf \
+freebayes_invariant_chr13_chunk6e.vcf \
+freebayes_invariant_chr13_chunk6f.vcf \
+freebayes_invariant_chr13_chunk6g.vcf \
 freebayes_invariant_chr13_chunk7.vcf \
 freebayes_invariant_chr13_chunk8.vcf \
 freebayes_invariant_chr13_chunk9.vcf \

@@ -26,6 +26,9 @@ freebayes_invariant_chr08_chunk7.vcf \
 freebayes_invariant_chr08_chunk7b.vcf \
 freebayes_invariant_chr08_chunk8.vcf \
 freebayes_invariant_chr08_chunk8b.vcf \
+freebayes_invariant_chr08_chunk8c.vcf \
+freebayes_invariant_chr08_chunk8d.vcf \
+freebayes_invariant_chr08_chunk8e.vcf \
 freebayes_invariant_chr08_chunk9.vcf \
 freebayes_invariant_chr08_chunk10.vcf \
 freebayes_invariant_chr08_chunk11.vcf \
