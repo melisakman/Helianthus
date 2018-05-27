@@ -45,7 +45,7 @@ freebayes_invariant_chr12_chunk17b.vcf \
 freebayes_invariant_chr12_chunk18.vcf \
 freebayes_invariant_chr12_chunk19.vcf \
 freebayes_invariant_chr12_chunk20.vcf \
-freebayes_invariant_chr12_chunk21.vcf\
+freebayes_invariant_chr12_chunk21.vcf \
 freebayes_invariant_chr12_chunk21b.vcf > freebayes_invariant_chr12_combined.vcf
 
 /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-concat \
