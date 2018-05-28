@@ -1,11 +1,14 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/freebayes/
 #SBATCH -J catchr06-2
-#SBATCH --partition=vector
-#SBATCH --qos=vector_batch
-#SBATCH --ntasks=1
-#SBATCH --cpus-per-task=2
-#SBATCH --time=800:00:00
+#SBATCH --account=co_rosalind
+#SBATCH --partition=savio
+#SBATCH --qos=rosalind_savio_normal
+#SBATCH --nodes=1
+#SBATCH --mem=64000
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=20
+#SBATCH --time=100:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/freebayes_vcf_concat_chr06_2.out
 #SBATCH -e /global/home/users/makman/GATK/outs/freebayes_vcf_concat_chr06_2.err
 #SBATCH --mail-user=makman@berkeley.edu
