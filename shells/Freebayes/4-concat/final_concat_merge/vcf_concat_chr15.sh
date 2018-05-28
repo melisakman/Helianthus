@@ -8,7 +8,8 @@
 #SBATCH --mem=64000
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=20
-#SBATCH --time=100:00:00#SBATCH -o /global/home/users/makman/GATK/outs/freebayes_vcf_concat_chr15.out
+#SBATCH --time=100:00:00
+#SBATCH -o /global/home/users/makman/GATK/outs/freebayes_vcf_concat_chr15.out
 #SBATCH -e /global/home/users/makman/GATK/outs/freebayes_vcf_concat_chr15.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
