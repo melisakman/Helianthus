@@ -63,8 +63,8 @@ module load bcftools/1.6
 # 
 # /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c freebayes_invariant_chr13_combined.vcf > freebayes_invariant_chr13_combined.vcf.gz 
 # /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c freebayes_invariant_chr13_AnzacPueblo_all.vcf > freebayes_invariant_chr13_AnzacPueblo_all.vcf.gz 
-/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf freebayes_invariant_chr13_combined.vcf.gz  
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf freebayes_invariant_chr13_combined.vcf.gz  
 # /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf freebayes_invariant_chr13_AnzacPueblo_all.vcf.gz  
-
+head -n 37798320 freebayes_invariant_chr13_combined.vcf | tail -n 50
 # bcftools merge -m all -O z freebayes_invariant_chr13_combined.vcf.gz freebayes_invariant_chr13_AnzacPueblo_all.vcf.gz > final_combined/freebayes_invariant_chr13_all.vcf.gz
 
