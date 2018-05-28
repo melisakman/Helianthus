@@ -14,51 +14,51 @@ export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcfto
 TMPDIR=/clusterfs/rosalind/users/makman/temp
 module load bcftools/1.6
 
-/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-concat \
-freebayes_invariant_chr10_chunk1.vcf \
-freebayes_invariant_chr10_chunk2.vcf \
-freebayes_invariant_chr10_chunk3.vcf \
-freebayes_invariant_chr10_chunk4.vcf \
-freebayes_invariant_chr10_chunk5.vcf \
-freebayes_invariant_chr10_chunk6.vcf \
-freebayes_invariant_chr10_chunk7.vcf \
-freebayes_invariant_chr10_chunk8.vcf \
-freebayes_invariant_chr10_chunk9.vcf \
-freebayes_invariant_chr10_chunk10.vcf \
-freebayes_invariant_chr10_chunk10b.vcf \
-freebayes_invariant_chr10_chunk11.vcf \
-freebayes_invariant_chr10_chunk11b.vcf \
-freebayes_invariant_chr10_chunk12.vcf \
-freebayes_invariant_chr10_chunk12b.vcf \
-freebayes_invariant_chr10_chunk13.vcf \
-freebayes_invariant_chr10_chunk14a.vcf \
-freebayes_invariant_chr10_chunk14b.vcf \
-freebayes_invariant_chr10_chunk14c.vcf \
-freebayes_invariant_chr10_chunk14d.vcf \
-freebayes_invariant_chr10_chunk14e.vcf \
-freebayes_invariant_chr10_chunk15.vcf \
-freebayes_invariant_chr10_chunk16.vcf \
-freebayes_invariant_chr10_chunk16b.vcf \
-freebayes_invariant_chr10_chunk17.vcf \
-freebayes_invariant_chr10_chunk18.vcf \
-freebayes_invariant_chr10_chunk19.vcf \
-freebayes_invariant_chr10_chunk20.vcf \
-freebayes_invariant_chr10_chunk21.vcf \
-freebayes_invariant_chr10_chunk22.vcf \
-freebayes_invariant_chr10_chunk23.vcf \
-freebayes_invariant_chr10_chunk24.vcf \
-freebayes_invariant_chr10_chunk25.vcf \
-freebayes_invariant_chr10_chunk25b.vcf \
-freebayes_invariant_chr10_chunk26.vcf \
-freebayes_invariant_chr10_chunk26b.vcf \
-freebayes_invariant_chr10_chunk27.vcf \
-freebayes_invariant_chr10_chunk27b.vcf \
-freebayes_invariant_chr10_chunk28.vcf \
-freebayes_invariant_chr10_chunk29.vcf \
-freebayes_invariant_chr10_chunk29b.vcf \
-freebayes_invariant_chr10_chunk30.vcf \
-freebayes_invariant_chr10_chunk31.vcf \
-freebayes_invariant_chr10_chunk31b.vcf > freebayes_invariant_chr10_combined.vcf
+# /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-concat \
+# freebayes_invariant_chr10_chunk1.vcf \
+# freebayes_invariant_chr10_chunk2.vcf \
+# freebayes_invariant_chr10_chunk3.vcf \
+# freebayes_invariant_chr10_chunk4.vcf \
+# freebayes_invariant_chr10_chunk5.vcf \
+# freebayes_invariant_chr10_chunk6.vcf \
+# freebayes_invariant_chr10_chunk7.vcf \
+# freebayes_invariant_chr10_chunk8.vcf \
+# freebayes_invariant_chr10_chunk9.vcf \
+# freebayes_invariant_chr10_chunk10.vcf \
+# freebayes_invariant_chr10_chunk10b.vcf \
+# freebayes_invariant_chr10_chunk11.vcf \
+# freebayes_invariant_chr10_chunk11b.vcf \
+# freebayes_invariant_chr10_chunk12.vcf \
+# freebayes_invariant_chr10_chunk12b.vcf \
+# freebayes_invariant_chr10_chunk13.vcf \
+# freebayes_invariant_chr10_chunk14a.vcf \
+# freebayes_invariant_chr10_chunk14b.vcf \
+# freebayes_invariant_chr10_chunk14c.vcf \
+# freebayes_invariant_chr10_chunk14d.vcf \
+# freebayes_invariant_chr10_chunk14e.vcf \
+# freebayes_invariant_chr10_chunk15.vcf \
+# freebayes_invariant_chr10_chunk16.vcf \
+# freebayes_invariant_chr10_chunk16b.vcf \
+# freebayes_invariant_chr10_chunk17.vcf \
+# freebayes_invariant_chr10_chunk18.vcf \
+# freebayes_invariant_chr10_chunk19.vcf \
+# freebayes_invariant_chr10_chunk20.vcf \
+# freebayes_invariant_chr10_chunk21.vcf \
+# freebayes_invariant_chr10_chunk22.vcf \
+# freebayes_invariant_chr10_chunk23.vcf \
+# freebayes_invariant_chr10_chunk24.vcf \
+# freebayes_invariant_chr10_chunk25.vcf \
+# freebayes_invariant_chr10_chunk25b.vcf \
+# freebayes_invariant_chr10_chunk26.vcf \
+# freebayes_invariant_chr10_chunk26b.vcf \
+# freebayes_invariant_chr10_chunk27.vcf \
+# freebayes_invariant_chr10_chunk27b.vcf \
+# freebayes_invariant_chr10_chunk28.vcf \
+# freebayes_invariant_chr10_chunk29.vcf \
+# freebayes_invariant_chr10_chunk29b.vcf \
+# freebayes_invariant_chr10_chunk30.vcf \
+# freebayes_invariant_chr10_chunk31.vcf \
+# freebayes_invariant_chr10_chunk31b.vcf > freebayes_invariant_chr10_combined.vcf
 
 /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-concat \
 freebayes_invariant_chr10_AnzacPueblo.vcf freebayes_invariant_chr10_AnzacPueblo_b.vcf > freebayes_invariant_chr10_AnzacPueblo_all.vcf
