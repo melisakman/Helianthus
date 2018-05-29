@@ -11,9 +11,13 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
+gunzip freebayes/freebayes_invariant_chr01_combined.vcf.gz
+gunzip fastq/invariants/VCMA_chr01.vcf.gz
+gunzip samtools_VC/samtools_invariant_chr01.vcf.gz
+
 /global/home/users/makman/VariantMetaCaller_v1.0/VariantMetaCaller -t prioritize --allInfo \
 -c /global/home/users/makman/VariantMetaCaller_v1.0/definitions.config \
--v GATK HaplotypeCaller fastq/invariants/VCMA_chr01.vcf.gz \
--v samtools samtools samtools_VC/samtools_invariant_chr01.vcf.gz \
--v freebayes freebayes freebayes/final_combined/freebayes_invariant_chr01_all.vcf.gz \
+-v GATK HaplotypeCaller fastq/invariants/VCMA_chr01.vcf \
+-v samtools samtools samtools_VC/samtools_invariant_chr01.vcf \
+-v freebayes freebayes freebayes/final_combined/freebayes_invariant_chr01_all.vcf \
 -o VMC_chr01_test.vcf --allInfo 
