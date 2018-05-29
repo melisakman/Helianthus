@@ -25,4 +25,8 @@ module load java
 # 
 
 
-bcftools filter -e "QUAL/DP < 2.0 || ReadPosRankSum < -20.0" freebayes_invariant_chr01_chunk1_test.vcf.gz  -O z -o freebayes_invariant_chr01_chunk1_test_filtered.vcf.gz
+# bcftools filter -e "QUAL/DP < 2.0 || QUAL < 50 || SAF < 1 || SAR < 1 || RPR < 1 || RPL < 1" freebayes_invariant_chr01_chunk1_test.vcf.gz  -O z -o freebayes_invariant_chr01_chunk1_test_filtered.vcf.gz
+
+zcat freebayes_invariant_chr01_chunk1_test.vcf.gz | bcftools filter -g 5 -e 'REF="N" || QUAL/DP < 2.0'| /global/scratch/makman/vcflib/bin/vcffilter -f "QUAL > 50 & SAF > 1 & SAR > 1 & RPR > 1 & RPL > 1" | vcftools --gzvcf - --maf 0.01 --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | vcf-sort | gzip -c > freebayes_invariant_chr01_chunk1_test_filtered.vcf.gz
+
+
