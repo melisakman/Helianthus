@@ -9,7 +9,7 @@
 #SBATCH -o /global/home/users/makman/GATK/outs/bcftools_filter_samtools1.out
 #SBATCH -e /global/home/users/makman/GATK/outs/bcftools_filter_samtools1.err
 #SBATCH --mail-user=makman@berkeley.edu
-#SBATCH --mail-type=
+#SBATCH --mail-type=All
 
 module load bcftools/1.6
 module load bio/vcftools
