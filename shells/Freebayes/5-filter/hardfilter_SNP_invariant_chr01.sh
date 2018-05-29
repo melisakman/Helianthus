@@ -25,4 +25,4 @@ module load java
 # 
 
 
-bcftools filter -e "QUAL/DP < 2.0 || FS > 200.0 || SOR > 10.0 || ReadPosRankSum < -20.0" freebayes_invariant_chr01_chunk1_test.vcf.gz  -O z -o freebayes_invariant_chr01_chunk1_test_filtered.vcf.gz
+bcftools filter -e "QUAL/DP < 2.0 || SOR > 10.0 || ReadPosRankSum < -20.0" freebayes_invariant_chr01_chunk1_test.vcf.gz  -O z -o freebayes_invariant_chr01_chunk1_test_filtered.vcf.gz
