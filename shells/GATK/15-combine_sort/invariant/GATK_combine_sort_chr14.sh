@@ -1,10 +1,11 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/invariants/
 #SBATCH -J sort14
-#SBATCH --partition=vector
-#SBATCH --qos=vector_batch
+#SBATCH --account=co_rosalind
+#SBATCH --partition=savio2_htc
+#SBATCH --qos=rosalind_htc2_normal
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=6
+#SBATCH --cpus-per-task=4
 #SBATCH --time=800:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/GATK_filtered_combineSort_chr14.out
 #SBATCH -e /global/home/users/makman/GATK/outs/GATK_filtered_combineSort_chr14.err
