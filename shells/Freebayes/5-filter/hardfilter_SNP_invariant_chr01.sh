@@ -9,34 +9,23 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=20
 #SBATCH --time=400:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/hardfilter_VCMA_SNP_chr01_invariant.out
-#SBATCH -e /global/home/users/makman/GATK/outs/hardfilter_VCMA_SNP_chr01_invariant.err
+#SBATCH -o /global/home/users/makman/GATK/outs/bcftools_filter_freebayes_chr01.out
+#SBATCH -e /global/home/users/makman/GATK/outs/bcftools_filter_freebayes_chr01.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-module load gcc/4.8.5 
-module load java
-module load gatk/4.0.1.2
-export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
 
-# java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T SelectVariants \
-# 	-R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
-# 	-V VCMA_chr01.vcf.gz \
-# 	-selectType SNP \
-# 	-o VCMA_chr01_SNP.vcf.gz 
+module load bcftools/1.6
 
-java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T VariantFiltration \
-	-R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
-	-V VCMA_chr01_SNP.vcf.gz \
-	--filterExpression "QD < 2.0 || MQ < 40.0 || FS > 60.0 || SOR > 3.0 || MQRankSum < -12.5 || ReadPosRankSum < -8.0" \
-	--filterName "my_SNP_filter" \
-	-o VCMA_chr01_SNP_filterInfo.vcf.gz  
-	
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c ../freebayes_invariant_chr01_chunk1.vcf > freebayes_invariant_chr01_chunk1.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf freebayes_invariant_chr01_chunk1.vcf.gz  
+
+
 java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T SelectVariants \
 	-R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
-	-V VCMA_chr01_SNP_filterInfo.vcf.gz \
-	--excludeFiltered \
-	-o VCMA_chr01_SNP_hardfiltered.vcf.gz 
+	-V freebayes_invariant_chr01_chunk1.vcf.gz \
+	-selectType INDEL \
+	-o freebayes_invariant_chr01_chunk1_GATKtest.vcf.gz 
 
-bcftools filter -sLowQual -g3 -G10 \
-    -e "QUAL/DP<2 || (RPB<0.1 && %QUAL<15) || (AC<2 && %QUAL<15) || %MAX(DV)<=3 || %MAX(DV)/%MAX(DP)<=0.3" \
-    calls.vcf.gz
+
+
+bcftools filter -e "QD < 2.0 || FS > 200.0 || SOR > 10.0 || ReadPosRankSum < -20.0" -O z -o freebayes_invariant_chr01_chunk1_GATKtest_filtered.vcf.gz
