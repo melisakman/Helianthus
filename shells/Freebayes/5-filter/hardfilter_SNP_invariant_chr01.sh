@@ -17,12 +17,12 @@ module load java
 # /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf freebayes_invariant_chr01_chunk1.vcf.gz  
 
 
-java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T SelectVariants \
-	-R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
-	-V freebayes_invariant_chr01_chunk1.vcf.gz \
-	-selectType INDEL \
-	-o freebayes_invariant_chr01_chunk1_test.vcf.gz 
+# java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T SelectVariants \
+# 	-R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
+# 	-V freebayes_invariant_chr01_chunk1.vcf.gz \
+# 	-selectType INDEL \
+# 	-o freebayes_invariant_chr01_chunk1_test.vcf.gz 
+# 
 
 
-
-bcftools filter -e "QD < 2.0 || FS > 200.0 || SOR > 10.0 || ReadPosRankSum < -20.0" freebayes_invariant_chr01_chunk1_test.vcf.gz  -O z -o freebayes_invariant_chr01_chunk1_test_filtered.vcf.gz
+bcftools filter -e "QUAL/DP < 2.0 || FS > 200.0 || SOR > 10.0 || ReadPosRankSum < -20.0" freebayes_invariant_chr01_chunk1_test.vcf.gz  -O z -o freebayes_invariant_chr01_chunk1_test_filtered.vcf.gz
