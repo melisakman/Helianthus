@@ -30,7 +30,7 @@ freebayes_invariant_chr06_secondtime_chunk9.vcf \
 freebayes_invariant_chr06_secondtime_chunk10.vcf \
 freebayes_invariant_chr06_secondtime_chunk11.vcf \
 freebayes_invariant_chr06_secondtime_chunk12.vcf \
-freebayes_invariant_chr06_secondtime_chunk13.vcf 
+freebayes_invariant_chr06_secondtime_chunk13.vcf \
 freebayes_invariant_chr06_secondtime_chunk14.vcf \
 freebayes_invariant_chr06_secondtime_chunk15.vcf \
 freebayes_invariant_chr06_secondtime_chunk16.vcf \

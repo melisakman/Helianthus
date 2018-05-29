@@ -45,7 +45,7 @@ freebayes_invariant_chr05_secondtime_chunk24.vcf \
 freebayes_invariant_chr05_secondtime_chunk25.vcf \
 freebayes_invariant_chr05_secondtime_chunk26.vcf \
 freebayes_invariant_chr05_secondtime_chunk27.vcf \
-freebayes_invariant_chr05_secondtime_chunk28.vcf 
+freebayes_invariant_chr05_secondtime_chunk28.vcf \
 freebayes_invariant_chr05_secondtime_chunk29.vcf \
 freebayes_invariant_chr05_secondtime_chunk30.vcf \
 freebayes_invariant_chr05_secondtime_chunk31.vcf \
@@ -75,6 +75,6 @@ freebayes_invariant_chr05_secondtime_chunk54.vcf \
 freebayes_invariant_chr05_secondtime_chunk55.vcf \
 freebayes_invariant_chr05_secondtime_chunk56.vcf > freebayes_invariant_chr05_secondtime_combined.vcf
 
-# /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c freebayes_invariant_chr05_secondtime_combined.vcf > freebayes_invariant_chr05_secondtime_combined.vcf.gz 
-# /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf freebayes_invariant_chr05_secondtime_combined.vcf.gz  
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c freebayes_invariant_chr05_secondtime_combined.vcf > freebayes_invariant_chr05_secondtime_combined.vcf.gz 
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf freebayes_invariant_chr05_secondtime_combined.vcf.gz  
 
