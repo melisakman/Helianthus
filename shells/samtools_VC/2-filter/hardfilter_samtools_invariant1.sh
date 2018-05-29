@@ -12,7 +12,7 @@
 #SBATCH --mail-type=All
 
 module load bcftools/1.6
-module load bio/vcftools
+export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
 module load java
 /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c samtools_invariant_chr01.vcf > samtools_invariant_chr01.vcf.gz 
 
