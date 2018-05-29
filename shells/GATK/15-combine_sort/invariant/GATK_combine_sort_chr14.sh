@@ -16,5 +16,5 @@ module load java
 module load bio/vcftools/0.1.15
 export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
 
-vcf-concat VCMA_chr14_NO_VARIATION_hardfiltered.vcf.gz VCMA_chr14_SNP_hardfiltered.vcf.gz VCMA_chr14_indel_hardfiltered.vcf.gz > VCMA_GATK_chr14_unsorted.vcf.gz
-vcf-sort -t /clusterfs/rosalind/users/makman/temp VCMA_GATK_chr14_unsorted.vcf.gz > filtered_combined/VCMA_GATK_chr14_sorted.vcf.gz
+# vcf-concat VCMA_chr14_NO_VARIATION_hardfiltered.vcf.gz VCMA_chr14_SNP_hardfiltered.vcf.gz VCMA_chr14_indel_hardfiltered.vcf.gz > VCMA_GATK_chr14_unsorted.vcf.gz
+zcat VCMA_GATK_chr14_unsorted.vcf.gz | vcf-sort -t /clusterfs/rosalind/users/makman/temp VCMA_GATK_chr14_unsorted.vcf.gz > filtered_combined/VCMA_GATK_chr14_sorted.vcf.gz
