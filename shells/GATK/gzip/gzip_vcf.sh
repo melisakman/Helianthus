@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/invariants/
+#SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/invariants/filtered_combined/
 #SBATCH -J zip
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
@@ -11,4 +11,4 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
-gzip VCMA_chr01.vcf
+gzip VCMA_GATK_chr07_sorted.vcf
