@@ -6,8 +6,8 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=6
 #SBATCH --time=800:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/bcftools_filter_freebayes1.out
-#SBATCH -e /global/home/users/makman/GATK/outs/bcftools_filter_freebayes1.err
+#SBATCH -o /global/home/users/makman/GATK/outs/bcftools_filter_freebayes1yeni.out
+#SBATCH -e /global/home/users/makman/GATK/outs/bcftools_filter_freebayes1yeni.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
