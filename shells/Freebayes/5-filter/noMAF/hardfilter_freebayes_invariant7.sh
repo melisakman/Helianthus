@@ -4,7 +4,7 @@
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=4
+#SBATCH --cpus-per-task=3
 #SBATCH --time=800:00:006
 #SBATCH -o /global/home/users/makman/GATK/outs/bcftools_filter_freebayes7.out
 #SBATCH -e /global/home/users/makman/GATK/outs/bcftools_filter_freebayes7.err
