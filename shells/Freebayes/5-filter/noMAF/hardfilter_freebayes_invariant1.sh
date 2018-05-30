@@ -15,7 +15,7 @@ module load bcftools/1.6
 module load bio/vcftools
 module load java
 
-zcat freebayes_invariant_chr01_all.vcf.gz | bcftools filter -g 5 -e 'QUAL/DP < 2.0 || QUAL < 50 || RPR < 2 || RPL < 2' | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | gzip -c > freebayes_invariant_chr01_allFiltered_yeni3.vcf.gz
+zcat freebayes_invariant_chr01_all.vcf.gz | bcftools filter -g 5 -e 'QUAL/DP < 2.0 || QUAL < 50 || RPR < 2 || RPL < 2' | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | gzip -c > freebayes_invariant_chr01_allFiltered.vcf.gz
 # zcat freebayes_invariant_chr02_all.vcf.gz | bcftools filter -g 5 -e 'QUAL/DP < 2.0 || QUAL < 50 || RPR < 2 || RPL < 2' | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | gzip -c > freebayes_invariant_chr02_allFiltered.vcf.gz
 # zcat freebayes_invariant_chr03_all.vcf.gz | bcftools filter -g 5 -e 'QUAL/DP < 2.0 || QUAL < 50 || RPR < 2 || RPL < 2' | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | gzip -c > freebayes_invariant_chr03_allFiltered.vcf.gz
 # zcat freebayes_invariant_chr04_all.vcf.gz | bcftools filter -g 5 -e 'QUAL/DP < 2.0 || QUAL < 50 || RPR < 2 || RPL < 2' | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | gzip -c > freebayes_invariant_chr04_allFiltered.vcf.gz
