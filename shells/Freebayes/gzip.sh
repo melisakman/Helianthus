@@ -1,6 +1,6 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/rosalind/users/makman/GATK/freebayes/combined/
-#SBATCH -J gzip
+#SBATCH -D /clusterfs/rosalind/users/makman/GATK/freebayes/
+#SBATCH -J gzipFB
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
 #SBATCH --ntasks=1
