@@ -6,8 +6,8 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=3
 #SBATCH --time=800:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/bcftools_filter_freebayes1.out
-#SBATCH -e /global/home/users/makman/GATK/outs/bcftools_filter_freebayes1.err
+#SBATCH -o /global/home/users/makman/GATK/outs/bcftools_filter_freebayes1test.out
+#SBATCH -e /global/home/users/makman/GATK/outs/bcftools_filter_freebayes1test.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
@@ -15,7 +15,7 @@ module load bcftools/1.6
 module load bio/vcftools
 module load java
 
-zcat freebayes_invariant_chr01_all.vcf.gz | bcftools filter -g 5 -e 'QUAL/DP < 2.0 || QUAL < 50 || RPR < 2 || RPL < 2' | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | gzip -c > freebayes_invariant_chr01_allFiltered.vcf.gz
+zcat freebayes_invariant_chr01_all.vcf.gz | bcftools filter -g 5 -e 'QUAL/DP < 2.0 || QUAL < 50' | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | gzip -c > freebayes_invariant_chr01_allFilteredtest.vcf.gz
 # zcat freebayes_invariant_chr02_all.vcf.gz | bcftools filter -g 5 -e 'QUAL/DP < 2.0 || QUAL < 50 || RPR < 2 || RPL < 2' | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | gzip -c > freebayes_invariant_chr02_allFiltered.vcf.gz
 # zcat freebayes_invariant_chr03_all.vcf.gz | bcftools filter -g 5 -e 'QUAL/DP < 2.0 || QUAL < 50 || RPR < 2 || RPL < 2' | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | gzip -c > freebayes_invariant_chr03_allFiltered.vcf.gz
 # zcat freebayes_invariant_chr04_all.vcf.gz | bcftools filter -g 5 -e 'QUAL/DP < 2.0 || QUAL < 50 || RPR < 2 || RPL < 2' | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | gzip -c > freebayes_invariant_chr04_allFiltered.vcf.gz
