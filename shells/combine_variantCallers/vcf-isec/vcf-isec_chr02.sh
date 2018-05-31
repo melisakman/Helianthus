@@ -16,10 +16,10 @@
 
 module load bcftools/1.6
 
-# gunzip fastq/invariants/filtered_combined/VCMA_GATK_chr02_secondFilter.vcf.gz
-# gunzip freebayes/final_combined/freebayes_invariant_chr02_allFiltered.vcf
-# gunzip samtools_VC/samtools_invariant_chr02_Filtered.vcf.gz
-# 
-bcftools isec -n 2+ -O z fastq/invariants/filtered_combined/VCMA_GATK_chr02_secondFilter.vcf \
-freebayes/final_combined/freebayes_invariant_chr02_allFiltered.vcf \
-samtools_VC/samtools_invariant_chr02_Filtered.vcf > GATK_FB_ST_2plus_intersect_chr02.vcf
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c fastq/invariants/filtered_combined/VCMA_GATK_chr02_secondFilter.vcf > fastq/invariants/filtered_combined/VCMA_GATK_chr02_secondFilter.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c freebayes/final_combined/freebayes_invariant_chr02_allFiltered.vcf > freebayes/final_combined/freebayes_invariant_chr02_allFiltered.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c samtools_VC/samtools_invariant_chr02_Filtered.vcf > samtools_VC/samtools_invariant_chr02_Filtered.vcf.gz
+
+bcftools isec -n 2+ -O z fastq/invariants/filtered_combined/VCMA_GATK_chr02_secondFilter.vcf.gz \
+freebayes/final_combined/freebayes_invariant_chr02_allFiltered.vcf.gz \
+samtools_VC/samtools_invariant_chr02_Filtered.vcf.gz > GATK_FB_ST_2plus_intersect_chr02.vcf
