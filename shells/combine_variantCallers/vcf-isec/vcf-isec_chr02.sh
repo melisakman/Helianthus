@@ -21,8 +21,8 @@ module load bcftools/1.6
 # /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix ./freebayes/final_combined/freebayes_invariant_chr02_allFiltered.vcf.gz
 # /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix ./samtools_VC/samtools_invariant_chr02_Filtered.vcf.gz
 
-bcftools isec -n 2+ -O z fastq/invariants/filtered_combined/VCMA_GATK_chr02_secondFilter.vcf.gz \
-freebayes/final_combined/freebayes_invariant_chr02_allFiltered.vcf.gz > GATK_FB_ST_2plus_intersect_chr02.vcf
+bcftools isec -n 2+ -O z -p vcf-isec fastq/invariants/filtered_combined/VCMA_GATK_chr02_secondFilter.vcf.gz \
+freebayes/final_combined/freebayes_invariant_chr02_allFiltered.vcf.gz
 
 # \
 # samtools_VC/samtools_invariant_chr02_Filtered.vcf.gz
