@@ -14,6 +14,8 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
+gunzip fastq/invariants/filtered_combined/VCMA_GATK_chr02_secondFilter.vcf.gz > VCMA_GATK_chr02_secondFilter.vcf
+
 /global/home/users/makman/VariantMetaCaller_v1.0/VariantMetaCaller -t prioritize --allInfo \
 -c /global/home/users/makman/VariantMetaCaller_v1.0/definitions.config \
 -v GATK HaplotypeCaller fastq/invariants/filtered_combined/VCMA_GATK_chr02_secondFilter.vcf \
