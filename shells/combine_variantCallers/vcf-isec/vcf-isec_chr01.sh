@@ -13,6 +13,11 @@
 #SBATCH --mail-type=All
 
 module load bcftools/1.6
-bcftools isec -n 2+ -O z fastq/invariants/filtered_combined/VCMA_GATK_chr01_sorted_filtered.vcf.gz \
-freebayes/final_combined/freebayes_invariant_chr01_allFiltered.vcf.gz \
-samtools_VC/samtools_invariant_chr01_Filtered.vcf.gz > GATK_FB_ST_2plus_intersect_chr01.vcf.gz
+
+gunzip fastq/invariants/filtered_combined/VCMA_GATK_chr01_secondFilter.vcf.gz
+gunzip freebayes/final_combined/freebayes_invariant_chr01_allFiltered.vcf
+# gunzip samtools_VC/samtools_invariant_chr01_Filtered.vcf.gz
+# 
+# bcftools isec -n 2+ -O z fastq/invariants/filtered_combined/VCMA_GATK_chr01_sorted_filtered.vcf \
+# freebayes/final_combined/freebayes_invariant_chr01_allFiltered.vcf \
+# samtools_VC/samtools_invariant_chr01_Filtered.vcf > GATK_FB_ST_2plus_intersect_chr01.vcf
