@@ -25,7 +25,7 @@ gunzip samtools_VC/samtools_invariant_chr03_Filtered_sorted.vcf.gz
 /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix ./freebayes/final_combined/freebayes_invariant_chr03_allFiltered.vcf.gz
 /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix ./samtools_VC/samtools_invariant_chr03_Filtered_sorted.vcf.gz
 
-bcftools isec -n 2+ -O z -p vcf-isec_chr03 fastq/invariants/filtered_combined/VCMA_GATK_chr03_secondFilter.vcf.gz \
+bcftools isec -n +2 -O z -p vcf-isec_chr03 fastq/invariants/filtered_combined/VCMA_GATK_chr03_secondFilter.vcf.gz \
 freebayes/final_combined/freebayes_invariant_chr03_allFiltered.vcf.gz \
 samtools_VC/samtools_invariant_chr03_Filtered_sorted.vcf.gz
 
