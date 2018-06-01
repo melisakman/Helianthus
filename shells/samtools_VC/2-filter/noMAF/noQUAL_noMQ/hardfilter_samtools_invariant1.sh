@@ -7,7 +7,7 @@
 #SBATCH --cpus-per-task=6
 #SBATCH --time=800:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/bcftools_filter_samtools1_noqual.out
-#SBATCH -i /global/home/users/makman/GATK/outs/bcftools_filter_samtools1_noqual.err
+#SBATCH -e /global/home/users/makman/GATK/outs/bcftools_filter_samtools1_noqual.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
