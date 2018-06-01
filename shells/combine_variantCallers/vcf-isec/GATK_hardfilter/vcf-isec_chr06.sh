@@ -14,16 +14,16 @@
 module load bcftools/1.6
 
 gunzip fastq/invariants/filtered_combined/VCMA_GATK_chr06_sorted.vcf.gz
-gunzip freebayes/final_combined/freebayes_invariant_chr06_allFiltered.vcf.gz
-gunzip samtools_VC/samtools_invariant_chr06_Filtered_sorted.vcf.gz
+# gunzip freebayes/final_combined/freebayes_invariant_chr06_allFiltered.vcf.gz
+# gunzip samtools_VC/samtools_invariant_chr06_Filtered_sorted.vcf.gz
 
 /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c fastq/invariants/filtered_combined/VCMA_GATK_chr06_sorted.vcf > fastq/invariants/filtered_combined/VCMA_GATK_chr06_sorted.vcf.gz
-/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c freebayes/final_combined/freebayes_invariant_chr06_allFiltered.vcf > freebayes/final_combined/freebayes_invariant_chr06_allFiltered.vcf.gz
-/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c samtools_VC/samtools_invariant_chr06_Filtered_sorted.vcf > samtools_VC/samtools_invariant_chr06_Filtered_sorted.vcf.gz
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c freebayes/final_combined/freebayes_invariant_chr06_allFiltered.vcf > freebayes/final_combined/freebayes_invariant_chr06_allFiltered.vcf.gz
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c samtools_VC/samtools_invariant_chr06_Filtered_sorted.vcf > samtools_VC/samtools_invariant_chr06_Filtered_sorted.vcf.gz
 
 /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix ./fastq/invariants/filtered_combined/VCMA_GATK_chr06_sorted.vcf.gz
-/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix ./freebayes/final_combined/freebayes_invariant_chr06_allFiltered.vcf.gz
-/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix ./samtools_VC/samtools_invariant_chr06_Filtered_sorted.vcf.gz
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix ./freebayes/final_combined/freebayes_invariant_chr06_allFiltered.vcf.gz
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix ./samtools_VC/samtools_invariant_chr06_Filtered_sorted.vcf.gz
 
 bcftools isec -n +2 -O z -p vcf-isec_chr06_hardFilter fastq/invariants/filtered_combined/VCMA_GATK_chr06_sorted.vcf.gz \
 freebayes/final_combined/freebayes_invariant_chr06_allFiltered.vcf.gz \
