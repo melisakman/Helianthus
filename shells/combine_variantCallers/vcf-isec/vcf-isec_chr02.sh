@@ -12,6 +12,7 @@
 #SBATCH --mail-type=All
 
 module load bcftools/1.6
+export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
 
 # gunzip fastq/invariants/filtered_combined/VCMA_GATK_chr02_secondFilter.vcf.gz
 # gunzip freebayes/final_combined/freebayes_invariant_chr02_allFiltered.vcf.gz
@@ -25,7 +26,10 @@ module load bcftools/1.6
 # /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix ./freebayes/final_combined/freebayes_invariant_chr02_allFiltered.vcf.gz
 # /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix ./samtools_VC/samtools_invariant_chr02_Filtered_sorted.vcf.gz
 
-bcftools isec -n=2 -O z -p vcf-isec_chr02_equal fastq/invariants/filtered_combined/VCMA_GATK_chr02_secondFilter.vcf.gz \
-freebayes/final_combined/freebayes_invariant_chr02_allFiltered.vcf.gz \
-samtools_VC/samtools_invariant_chr02_Filtered_sorted.vcf.gz
+# bcftools isec -n=2 -O z -p vcf-isec_chr02_equal fastq/invariants/filtered_combined/VCMA_GATK_chr02_secondFilter.vcf.gz \
+# freebayes/final_combined/freebayes_invariant_chr02_allFiltered.vcf.gz \
+# samtools_VC/samtools_invariant_chr02_Filtered_sorted.vcf.gz
 
+/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-isec -n +2 fastq/invariants/filtered_combined/VCMA_GATK_chr02_secondFilter.vcf.gz \
+freebayes/final_combined/freebayes_invariant_chr02_allFiltered.vcf.gz \
+samtools_VC/samtools_invariant_chr02_Filtered_sorted.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > GK_FB_ST_2plus.vcf.gz
