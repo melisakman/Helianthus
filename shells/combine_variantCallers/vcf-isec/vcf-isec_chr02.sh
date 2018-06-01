@@ -6,11 +6,12 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=6
 #SBATCH --time=800:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/vcf-isec_chr02.out
-#SBATCH -e /global/home/users/makman/GATK/outs/vcf-isec_chr02.err
+#SBATCH -o /global/home/users/makman/GATK/outs/vcf-isec_chr02vcf-isec.out
+#SBATCH -e /global/home/users/makman/GATK/outs/vcf-isec_chr02vcf-isec.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
+module load htslib/1.6
 module load bcftools/1.6
 export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
 
