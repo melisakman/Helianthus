@@ -1,6 +1,6 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/
-#SBATCH -J vcfisec2
+#SBATCH -J isecchr02
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
 #SBATCH --ntasks=1
@@ -17,7 +17,7 @@ module load bcftools/1.6
 # gunzip freebayes/final_combined/freebayes_invariant_chr02_allFiltered.vcf.gz
 # gunzip samtools_VC/samtools_invariant_chr02_Filtered_sorted.vcf.gz
 # 
-# /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c fastq/invariants/filtered_combined/VCMA_GATK_chr02_secondFilter.vcf > fastq/invariants/filtered_combined/VCMA_GATK_chr02_secondFilter.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c fastq/invariants/filtered_combined/VCMA_GATK_chr02_secondFilter.vcf > fastq/invariants/filtered_combined/VCMA_GATK_chr02_secondFilter.vcf.gz
 # /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c freebayes/final_combined/freebayes_invariant_chr02_allFiltered.vcf > freebayes/final_combined/freebayes_invariant_chr02_allFiltered.vcf.gz
 # /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c samtools_VC/samtools_invariant_chr02_Filtered_sorted.vcf > samtools_VC/samtools_invariant_chr02_Filtered_sorted.vcf.gz
 # 
