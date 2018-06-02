@@ -16,5 +16,8 @@ module load bcftools/1.6
 
 # /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix ./fastq/invariants/filtered_combined/VCMA_GATK_chr11_nonstringentFilter.vcf.gz
 
-bcftools isec -n +2 -O z -p vcf-isec_chr11_strvsnon fastq/invariants/filtered_combined/VCMA_GATK_chr11_nonstringentFilter.vcf.gz \
-fastq/invariants/filtered_combined/VCMA_GATK_chr11_secondFilter.vcf.gz 
+# bcftools isec -n +2 -O z -p vcf-isec_chr11_strvsnon fastq/invariants/filtered_combined/VCMA_GATK_chr11_nonstringentFilter.vcf.gz \
+# fastq/invariants/filtered_combined/VCMA_GATK_chr11_secondFilter.vcf.gz 
+
+zcat fastq/invariants/filtered_combined/VCMA_GATK_chr11_nonstringentFilter.vcf.gz | wc -l
+zcat fastq/invariants/filtered_combined/VCMA_GATK_chr11_secondFilter.vcf.gz | wc -l
