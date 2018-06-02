@@ -1,9 +1,8 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/bcftools_isec/secondFilter/
 #SBATCH -J vcfshuffle1
-#SBATCH --account=co_rosalind
-#SBATCH --partition=savio2_htc
-#SBATCH --qos=rosalind_htc2_normal
+#SBATCH --partition=vector
+#SBATCH --qos=vector_batch
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=6
 #SBATCH --time=800:00:00
