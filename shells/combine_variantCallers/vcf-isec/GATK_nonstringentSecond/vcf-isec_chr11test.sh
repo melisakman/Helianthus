@@ -21,3 +21,4 @@ module load bcftools/1.6
 
 zcat fastq/invariants/filtered_combined/VCMA_GATK_chr11_nonstringentFilter.vcf.gz | wc -l
 zcat fastq/invariants/filtered_combined/VCMA_GATK_chr11_secondFilter.vcf.gz | wc -l
+zcat fastq/invariants/filtered_combined/VCMA_GATK_chr11_sorted.vcf.gz | wc -l
