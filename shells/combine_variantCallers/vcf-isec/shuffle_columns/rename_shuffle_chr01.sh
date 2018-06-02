@@ -17,5 +17,5 @@ export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcfto
 
 # bcftools view -S ../sample_names.txt 0000.vcf.gz | bcftools reheader -s ../sample_rename.txt -o 0000_renamed.vcf.gz
 
-/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t 0000_renamed.vcf.gz 0001.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > 0001_sorted.vcf.gz
-/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t 0000_renamed.vcf.gz 0002.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > 0002_sorted.vcf.gz
+/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t 0000_renamed.vcf 0001.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > 0001_sorted.vcf.gz
+/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t 0000_renamed.vcf 0002.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > 0002_sorted.vcf.gz
