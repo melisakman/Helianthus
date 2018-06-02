@@ -15,7 +15,7 @@ module load bcftools/1.6
 module load vcftools/0.1.13
 export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
 
-bcftools view -G Hopi 0000.vcf.gz | bcftools reheader -s ../sample_names.txt -O z -o 0000_renamed.vcf.gz
+bcftools view -S ../sample_names.txt 0000.vcf.gz | bcftools reheader -s ../sample_rename.txt -O z -o 0000_renamed.vcf.gz
 
 /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t vcf-isec_chr01/0000_renamed.vcf.gz vcf-isec_chr01/0001.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > vcf-isec_chr01/0001_sorted.vcf.gz
 /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t vcf-isec_chr01/0000_renamed.vcf.gz vcf-isec_chr01/0002.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > vcf-isec_chr01/0002_sorted.vcf.gz
