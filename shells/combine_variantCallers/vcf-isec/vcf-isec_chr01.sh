@@ -10,7 +10,7 @@
 #SBATCH -e /global/home/users/makman/GATK/outs/chr01_vcf-isec.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-
+module load bcftools/1.6
 export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
 TMPDIR=/clusterfs/rosalind/users/makman/temp
 
