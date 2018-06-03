@@ -12,7 +12,7 @@
 #SBATCH --mail-type=All
 export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
 TMPDIR=/clusterfs/rosalind/users/makman/temp
-PATH=$PATH:/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix
+PATH=$PATH:/clusterfs/rosalind/users/makman/tabix-0.2.6/
 
 /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-isec -n +2 fastq/invariants/filtered_combined/VCMA_GATK_chr01_secondFilter.vcf.gz \
 freebayes/final_combined/freebayes_invariant_chr01_allFiltered.vcf.gz \
