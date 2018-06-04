@@ -1,11 +1,14 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/
 #SBATCH -J isecchr02
-#SBATCH --partition=vector
-#SBATCH --qos=vector_batch
-#SBATCH --ntasks=1
-#SBATCH --cpus-per-task=6
-#SBATCH --time=800:00:00
+#SBATCH --account=co_rosalind
+#SBATCH --partition=savio
+#SBATCH --qos=rosalind_savio_normal
+#SBATCH --nodes=1
+#SBATCH --mem=64000
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=20
+#SBATCH --time=400:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/vcf-isec_chr02.out
 #SBATCH -e /global/home/users/makman/GATK/outs/vcf-isec_chr02.err
 #SBATCH --mail-user=makman@berkeley.edu
