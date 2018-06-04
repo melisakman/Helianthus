@@ -38,10 +38,10 @@ gunzip G12/chr04_intersect.vcf.gz
 
 
 
-python /clusterfs/rosalind/users/makman/G12/vcf2genotype.py G12/chr01_intersect.vcf G12/lr_cv_samples.txt G12/VCMA_chr01_G12_input.txt
-python /clusterfs/rosalind/users/makman/G12/vcf2genotype.py G12/chr02_intersect.vcf G12/lr_cv_samples.txt G12/VCMA_chr02_G12_input.txt
-python /clusterfs/rosalind/users/makman/G12/vcf2genotype.py G12/chr03_intersect.vcf G12/lr_cv_samples.txt G12/VCMA_chr03_G12_input.txt
-python /clusterfs/rosalind/users/makman/G12/vcf2genotype.py G12/chr04_intersect.vcf G12/lr_cv_samples.txt G12/VCMA_chr04_G12_input.txt
+# python /clusterfs/rosalind/users/makman/G12/vcf2genotype.py G12/chr01_intersect.vcf G12/lr_cv_samples.txt G12/VCMA_chr01_G12_input.txt
+# python /clusterfs/rosalind/users/makman/G12/vcf2genotype.py G12/chr02_intersect.vcf G12/lr_cv_samples.txt G12/VCMA_chr02_G12_input.txt
+# python /clusterfs/rosalind/users/makman/G12/vcf2genotype.py G12/chr03_intersect.vcf G12/lr_cv_samples.txt G12/VCMA_chr03_G12_input.txt
+# python /clusterfs/rosalind/users/makman/G12/vcf2genotype.py G12/chr04_intersect.vcf G12/lr_cv_samples.txt G12/VCMA_chr04_G12_input.txt
 # python /clusterfs/rosalind/users/makman/G12/vcf2genotype.py G12/chr05_intersect.vcf G12/lr_cv_samples.txt G12/VCMA_chr05_G12_input.txt
 # python /clusterfs/rosalind/users/makman/G12/vcf2genotype.py G12/chr06_intersect.vcf G12/lr_cv_samples.txt G12/VCMA_chr06_G12_input.txt
 # python /clusterfs/rosalind/users/makman/G12/vcf2genotype.py G12/chr07_intersect.vcf G12/lr_cv_samples.txt G12/VCMA_chr07_G12_input.txt
