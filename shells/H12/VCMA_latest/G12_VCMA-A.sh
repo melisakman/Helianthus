@@ -8,8 +8,8 @@
 #SBATCH --cpus-per-task=6
 #SBATCH --mem=16000
 #SBATCH --time=48:00:00
-#SBATCH -o /global/home/users/makman/H12/outs/G12_VCMA-A.out
-#SBATCH -e /global/home/users/makman/H12/outs/G12_VCMA-A.err
+#SBATCH -o /global/home/users/makman/H12/outs/G12_VCMA-A2.out
+#SBATCH -e /global/home/users/makman/H12/outs/G12_VCMA-A2.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module unload python/3.5
@@ -18,10 +18,10 @@ module unload python/3.6
 module load python/2.7.14
 module load numpy/1.13.3
 
-python /clusterfs/vector/scratch/makman/H12/SelectionHapStats/scripts/H12_H2H1.py VCMA_chr01_G12_input.txt 46 -o chr01_G12_VCMA_output.txt
-# python /clusterfs/vector/scratch/makman/H12/SelectionHapStats/scripts/H12_H2H1.py VCMA_chr02_G12_input.txt 46 -o chr02_G12_VCMA_output.txt
-# python /clusterfs/vector/scratch/makman/H12/SelectionHapStats/scripts/H12_H2H1.py VCMA_chr03_G12_input.txt 46 -o chr03_G12_VCMA_output.txt
-# python /clusterfs/vector/scratch/makman/H12/SelectionHapStats/scripts/H12_H2H1.py VCMA_chr04_G12_input.txt 46 -o chr04_G12_VCMA_output.txt
+# python /clusterfs/vector/scratch/makman/H12/SelectionHapStats/scripts/H12_H2H1.py VCMA_chr01_G12_input.txt 46 -o chr01_G12_VCMA_output.txt
+python /clusterfs/vector/scratch/makman/H12/SelectionHapStats/scripts/H12_H2H1.py VCMA_chr02_G12_input.txt 46 -o chr02_G12_VCMA_output.txt
+python /clusterfs/vector/scratch/makman/H12/SelectionHapStats/scripts/H12_H2H1.py VCMA_chr03_G12_input.txt 46 -o chr03_G12_VCMA_output.txt
+python /clusterfs/vector/scratch/makman/H12/SelectionHapStats/scripts/H12_H2H1.py VCMA_chr04_G12_input.txt 46 -o chr04_G12_VCMA_output.txt
 # python /clusterfs/vector/scratch/makman/H12/SelectionHapStats/scripts/H12_H2H1.py VCMA_chr05_G12_input.txt 46 -o chr05_G12_VCMA_output.txt
 # python /clusterfs/vector/scratch/makman/H12/SelectionHapStats/scripts/H12_H2H1.py VCMA_chr06_G12_input.txt 46 -o chr06_G12_VCMA_output.txt
 # python /clusterfs/vector/scratch/makman/H12/SelectionHapStats/scripts/H12_H2H1.py VCMA_chr07_G12_input.txt 46 -o chr07_G12_VCMA_output.txt
