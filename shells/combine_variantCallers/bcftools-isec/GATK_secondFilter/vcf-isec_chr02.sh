@@ -41,3 +41,8 @@ bcftools view -S bcftools_isec/secondFilter/sample_names.txt 0000.vcf.gz | bcfto
 /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t bcftools_isec/secondFilter/vcf-isec_chr02/0000_renamed.vcf.gz bcftools_isec/secondFilter/vcf-isec_chr02/0001.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > bcftools_isec/secondFilter/vcf-isec_chr02/0001_sorted.vcf.gz
 /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t bcftools_isec/secondFilter/vcf-isec_chr02/0000_renamed.vcf.gz bcftools_isec/secondFilter/vcf-isec_chr02/0002.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > bcftools_isec/secondFilter/vcf-isec_chr02/0002_sorted.vcf.gz
 
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf bcftools_isec/secondFilter/vcf-isec_chr02/0000_renamed.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf bcftools_isec/secondFilter/vcf-isec_chr02/0001_sorted.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf bcftools_isec/secondFilter/vcf-isec_chr02/0002_sorted.vcf.gz
+/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-isec -n +2 \
+bcftools_isec/secondFilter/vcf-isec_chr02/0000_renamed.vcf.gz bcftools_isec/secondFilter/vcf-isec_chr02/0001_sorted.vcf.gz bcftools_isec/secondFilter/vcf-isec_chr02/0002_sorted.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > bcftools_isec/secondFilter/vcf-isec_chr02/chr02_intersect.vcf.gz
