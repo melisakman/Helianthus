@@ -3,9 +3,7 @@
 #SBATCH -D /home/makman/sift/
 #SBATCH -J sftchr02
 #SBATCH --partition=bigmemh
-#SBATCH --mem=96000
-#SBATCH --nodes=1
-#SBATCH --ntasks-per-node=1
+#SBATCH --mem=32000
 #SBATCH -o /home/makman/Helianthus/outs/sift_annotate_helia_VCMA_latest_chr02.out
 #SBATCH -e /home/makman/Helianthus/outs/sift_annotate_helia_VCMA_latest_chr02.err
 #SBATCH --mail-user=makman@berkeley.edu
