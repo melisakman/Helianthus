@@ -34,7 +34,7 @@ bcftools isec -n +2 -O z -p vcf-isec_chr02 fastq/invariants/filtered_combined/VC
 freebayes/final_combined/freebayes_invariant_chr02_allFiltered.vcf.gz \
 samtools_VC/samtools_invariant_chr02_Filtered_sorted.vcf.gz
 
-bcftools view -S bcftools_isec/secondFilter/sample_names.txt 0000.vcf.gz | bcftools reheader -s bcftools_isec/secondFilter/sample_rename.txt -o bcftools_isec/secondFilter/vcf-isec_chr02/0000_renamed.vcf
+bcftools view -S bcftools_isec/secondFilter/sample_names.txt bcftools_isec/secondFilter/vcf-isec_chr02/0000.vcf.gz | bcftools reheader -s bcftools_isec/secondFilter/sample_rename.txt -o bcftools_isec/secondFilter/vcf-isec_chr02/0000_renamed.vcf
 
 /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c bcftools_isec/secondFilter/vcf-isec_chr02/0000_renamed.vcf > bcftools_isec/secondFilter/vcf-isec_chr02/0000_renamed.vcf.gz
 
