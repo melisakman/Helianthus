@@ -3,7 +3,7 @@
 #SBATCH -J vcfTajD
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
-#SBATCH --time=4:00:00
+#SBATCH --time=40:00:00
 #SBATCH --mem=24000
 #SBATCH -o /global/home/users/makman/vcftools/outs/vcftools_VCMA_tajD_persite.out
 #SBATCH -e /global/home/users/makman/vcftools/outs/vcftools_VCMA_tajD_persite.err
