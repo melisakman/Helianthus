@@ -9,7 +9,7 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
-module load bio/vcftools/0.1.15p
+module load bio/vcftools/0.1.15
 vcftools --gzvcf vcf-isec_chr01/chr01_intersect.vcf.gz --weir-fst-pop wd_list.txt --weir-fst-pop lr_list.txt --fst-window-size 1 --out fst/lr_wd_chr01_persite
 vcftools --gzvcf vcf-isec_chr02/chr02_intersect.vcf.gz --weir-fst-pop wd_list.txt --weir-fst-pop lr_list.txt --fst-window-size 1 --out fst/lr_wd_chr02_persite
 vcftools --gzvcf vcf-isec_chr03/chr03_intersect.vcf.gz --weir-fst-pop wd_list.txt --weir-fst-pop lr_list.txt --fst-window-size 1 --out fst/lr_wd_chr03_persite
