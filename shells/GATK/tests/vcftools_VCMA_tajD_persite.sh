@@ -4,11 +4,12 @@
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
 #SBATCH --time=4:00:00
+#SBATCH --mem=24000
 #SBATCH -o /global/home/users/makman/vcftools/outs/vcftools_VCMA_tajD_persite.out
 #SBATCH -e /global/home/users/makman/vcftools/outs/vcftools_VCMA_tajD_persite.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-module load bio/vcftools/0.1.15p
+module load bio/vcftools/0.1.15
 vcftools --gzvcf vcf-isec_chr01/chr01_intersect.vcf.gz --keep wd_list.txt --TajimaD 1 --out tajD/wd_TajD_chr01_persite
 vcftools --gzvcf vcf-isec_chr02/chr02_intersect.vcf.gz --keep wd_list.txt --TajimaD 1 --out tajD/wd_TajD_chr02_persite
 vcftools --gzvcf vcf-isec_chr03/chr03_intersect.vcf.gz --keep wd_list.txt --TajimaD 1 --out tajD/wd_TajD_chr03_persite
