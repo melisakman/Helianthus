@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/rosalind/users/makman/GATK/SNPEff/VCMA
+#SBATCH -D /clusterfs/rosalind/users/makman/GATK/SNPEff/VCMA/XRQ
 #SBATCH -J snpEff
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
