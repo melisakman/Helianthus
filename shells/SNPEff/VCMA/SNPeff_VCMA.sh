@@ -13,4 +13,4 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load java
-zcat ../../bcftools_isec/secondFilter/vcf-isec_chr01/chr01_intersect.vcf.gz | java -Xmx16g -jar /clusterfs/vector/scratch/makman/snpEff/snpEff.jar -noLof -stats VCMA_SNPEff_stats.html | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > chr01_intersect_snpeff.vcf.gz
+zcat ../../bcftools_isec/secondFilter/vcf-isec_chr01/chr01_intersect.vcf.gz | java -Xmx16g -jar /clusterfs/vector/scratch/makman/snpEff/snpEff.jar -noLof -stats VCMA_SNPEff_stats.html XRQ | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > chr01_intersect_snpeff.vcf.gz
