@@ -12,11 +12,13 @@
 #SBATCH --mail-type=All
 #SBATCH --time=800:00:00
 
+module load hapflk/1.4
 module load bio/vcftools
 module load python
 # zcat chr01_intersect.vcf.gz | sed 's/HanXRQChr//g' | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > chr01_intersect_noHanXRQ.vcf.gz
-vcftools --gzvcf chr01_intersect_noHanXRQ.vcf.gz --out chr01_intersect_noHanXRQ --chr 01 --plink
-python ../plink_ped_fixer.py ../samples_VCMA_hapflk.txt chr01_intersect_noHanXRQ.ped chr01_intersect_noHanXRQ_modified.ped
+# vcftools --gzvcf chr01_intersect_noHanXRQ.vcf.gz --out chr01_intersect_noHanXRQ --chr 01 --plink
+# python ../plink_ped_fixer.py ../samples_VCMA_hapflk.txt chr01_intersect_noHanXRQ.ped chr01_intersect_noHanXRQ_modified.ped
 
+hapflk --file chr01_intersect_noHanXRQ_modified --miss_pheno 0 --chr 01 --from 1 --to 20000000 -p Chr01a --ncpu 16 -K 15
 
 
