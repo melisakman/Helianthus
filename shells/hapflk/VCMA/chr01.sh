@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -D /clusterfs/rosalind/users/makman/GATK/bcftools/secondFilter/vcf-isec_chr01
+#SBATCH -D /clusterfs/rosalind/users/makman/GATK/bcftools_isec/secondFilter/vcf-isec_chr01
 #SBATCH -J sed
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
@@ -12,7 +12,7 @@
 #SBATCH --mail-type=All
 #SBATCH --time=800:00:00
 
-
+module load python
 echo "starting sed"
 zcat chr01_intersect.vcf.gz | sed 's/HanXRQChr//g' | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > chr01_intersect_noHanXRQ.vcf.gz
 echo "starting plink"
