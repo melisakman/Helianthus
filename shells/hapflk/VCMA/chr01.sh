@@ -10,6 +10,8 @@
 #SBATCH -e /global/home/users/makman/GATK/outs/hapflk_sed_chr01.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
+#SBATCH --time=800:00:00
+
 
 echo "starting sed"
 zcat chr01_intersect.vcf.gz | sed 's/HanXRQChr//g' | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > chr01_intersect_noHanXRQ.vcf.gz
