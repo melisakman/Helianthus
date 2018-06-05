@@ -12,12 +12,10 @@
 #SBATCH --mail-type=All
 #SBATCH --time=800:00:00
 
+module load bio/vcftools
 module load python
-echo "starting sed"
-zcat chr01_intersect.vcf.gz | sed 's/HanXRQChr//g' | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > chr01_intersect_noHanXRQ.vcf.gz
-echo "starting plink"
+# zcat chr01_intersect.vcf.gz | sed 's/HanXRQChr//g' | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > chr01_intersect_noHanXRQ.vcf.gz
 vcftools --gzvcf chr01_intersect_noHanXRQ.vcf.gz --out chr01_intersect_noHanXRQ --chr 01 --plink
-echo "starting ped_fixer"
 python ../plink_ped_fixer.py ../samples_VCMA_hapflk.txt chr01_intersect_noHanXRQ.ped chr01_intersect_noHanXRQ_modified.ped
 
 
