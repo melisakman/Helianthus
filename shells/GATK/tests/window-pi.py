@@ -3,10 +3,13 @@
 import sys
 inputFile = sys.argv[1] # pi file as created by vcftools
 bin = sys.argv[2] # bin length
-outputFile = sys.argv[3] # output file name
+outputFile1 = sys.argv[3] # output file name w/o NA
+outputFile2 = sys.argv[4] # output file name w NA
 
 file_in = open(inputFile, "r")
-file_out= open(outputFile, "w")
+file_out1= open(outputFile1, "w")
+file_out2= open(outputFile2, "w")
+
 file_out.write("chr\tbin-end\tno_sites\tno_snp\tpi\n")
 pi_sum = 0
 bin_start = 0
@@ -35,9 +38,11 @@ for line in file_in:
 		else:
 			if counter != 0:
 				pi_avg = float(pi_sum) / counter
+				file_out1.write(str(chr) + "\t" + str(current_bin) + "\t" + str(counter) + "\t" + str(snp_no) + "\t" + str(pi_avg) + "\n")
 			else:
 				pi_avg = "NA"
-			file_out.write(str(chr) + "\t" + str(current_bin) + "\t" + str(counter) + "\t" + str(snp_no) + "\t" + str(pi_avg) + "\n")
+				file_out2.write(str(chr) + "\t" + str(current_bin) + "\t" + str(counter) + "\t" + str(snp_no) + "\t" + str(pi_avg) + "\n")
+
 			counter = 0
 			pi_sum = 0
 			current_bin += int(bin)
