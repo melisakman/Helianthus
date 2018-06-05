@@ -10,7 +10,9 @@ file_in = open(inputFile, "r")
 file_out1= open(outputFile1, "w")
 file_out2= open(outputFile2, "w")
 
-file_out.write("chr\tbin-end\tno_sites\tno_snp\tpi\n")
+file_out1.write("chr\tbin-end\tno_sites\tno_snp\tpi\n")
+file_out2.write("chr\tbin-end\tno_sites\tno_snp\tpi\n")
+
 pi_sum = 0
 bin_start = 0
 current_bin = int(bin)
@@ -49,4 +51,4 @@ for line in file_in:
 			snp_no = 0
 if counter >= 0:
 	pi_avg = float(pi_sum) / counter		
-	file_out.write(str(chr) + "\t" + str(current_bin) + "\t" + str(counter) + "\t" + str(snp_no) + "\t" + str(pi_avg) + "\n")
+	file_out1.write(str(chr) + "\t" + str(current_bin) + "\t" + str(counter) + "\t" + str(snp_no) + "\t" + str(pi_avg) + "\n")
