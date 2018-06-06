@@ -1,13 +1,12 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/bcftools_isec/secondFilter/
 #SBATCH -J both_chr01
-#SBATCH --account=co_rosalind
-#SBATCH --partition=savio
-#SBATCH --qos=rosalind_savio_normal
+#SBATCH --partition=vector
+#SBATCH --qos=vector_batch
 #SBATCH --nodes=1
-#SBATCH --mem=64000
-#SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=20
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=6
+#SBATCH --mem=16000
 #SBATCH --time=400:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/VCMA_SNP_indel.out
 #SBATCH -e /global/home/users/makman/GATK/outs/VCMA_SNP_indel.err
