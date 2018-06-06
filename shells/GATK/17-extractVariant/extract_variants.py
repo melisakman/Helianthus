@@ -13,7 +13,7 @@ for line in file1:
 		file2.write(line)
 	else:
 		alt = split[4] 
-		if alt =! ".":
+		if alt != ".":
 			file2.write(line)
 		else:
 			continue
