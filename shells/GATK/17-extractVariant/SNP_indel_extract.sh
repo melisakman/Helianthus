@@ -17,6 +17,25 @@ module load java
 module load gatk/4.0.1.2
 export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
 
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf vcf-isec_chr01/chr01_intersect.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf vcf-isec_chr02/chr02_intersect.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf vcf-isec_chr03/chr03_intersect.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf vcf-isec_chr04/chr04_intersect.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf vcf-isec_chr05/chr05_intersect.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf vcf-isec_chr06/chr06_intersect.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf vcf-isec_chr07/chr07_intersect.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf vcf-isec_chr08/chr08_intersect.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf vcf-isec_chr09/chr09_intersect.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf vcf-isec_chr10/chr10_intersect.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf vcf-isec_chr11/chr11_intersect.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf vcf-isec_chr12/chr12_intersect.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf vcf-isec_chr13/chr13_intersect.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf vcf-isec_chr14/chr14_intersect.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf vcf-isec_chr15/chr15_intersect.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf vcf-isec_chr16/chr16_intersect.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf vcf-isec_chr17/chr17_intersect.vcf.gz
+
+
 java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T SelectVariants \
 	-R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
 	-V vcf-isec_chr01/chr01_intersect.vcf.gz \
