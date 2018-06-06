@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/bcftools_isec/secondFilter/vcf-isec_chr01
-#SBATCH -J flkchr01
+#SBATCH -J flk_01_1
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
 #SBATCH --nodes=1

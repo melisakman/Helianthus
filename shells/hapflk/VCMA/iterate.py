@@ -13,7 +13,7 @@ for i in iterations:
 	file_name = "freebayes_invariant_chr" + str(chr) + "_chunk" + str(i) + ".sh"
 	file = open(file_name, 'w')
 	file.write("""#!/bin/bash
-#SBATCH -D /clusterfs/rosalind/users/makman/GATK/bcftools_isec/secondFilter/vcf-isec_chr""" + str(chr) + """\n#SBATCH -J flkchr""" + str(chr) + """\n#SBATCH --partition=vector
+#SBATCH -D /clusterfs/rosalind/users/makman/GATK/bcftools_isec/secondFilter/vcf-isec_chr""" + str(chr) + """\n#SBATCH -J flk_""" + str(chr) + "_" + str(i) + """\n#SBATCH --partition=vector
 #SBATCH --qos=vector_batch
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
