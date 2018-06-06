@@ -16,7 +16,7 @@ module load hapflk/1.4
 module load bio/vcftools
 module load python
 zcat chr17_intersect.vcf.gz | sed 's/HanXRQChr//g' | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > chr17_intersect_noHanXRQ.vcf.gz
-vcftools --gzvcf chr17_intersect_noHanXRQ.vcf.gz --out chr17_intersect_noHanXRQ --chr 01 --plink
+vcftools --gzvcf chr17_intersect_noHanXRQ.vcf.gz --out chr17_intersect_noHanXRQ --chr 17 --plink
 python ../plink_ped_fixer.py ../samples_VCMA_hapflk.txt chr17_intersect_noHanXRQ.ped chr17_intersect_noHanXRQ_modified.ped
 mv chr17_intersect_noHanXRQ.map chr17_intersect_noHanXRQ_modified.map
 hapflk --file chr17_intersect_noHanXRQ_modified --miss_pheno 0 --chr 17 --from 1 --to 20000000 -p chr17_1 --ncpu 16 -K 15
