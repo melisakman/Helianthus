@@ -11,4 +11,5 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 #SBATCH --time=800:00:00
+module load hapflk/1.4
 hapflk --file chr01_intersect_noHanXRQ_modified --miss_pheno 0 --chr 01 --from 20000001 --to 40000000 -p chr01_2 --ncpu 16 -K 15
