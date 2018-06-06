@@ -2,12 +2,11 @@
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/bcftools_isec/secondFilter/vcf-isec_chr10
 #SBATCH -J flk_10_1
 #SBATCH --account=co_rosalind
-#SBATCH --partition=savio
-#SBATCH --qos=rosalind_savio_normal
+#SBATCH --partition=savio2_htc
+#SBATCH --qos=rosalind_htc2_normal
 #SBATCH --nodes=1
+#SBATCH --ntasks=1
 #SBATCH --mem=64000
-#SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=20
 #SBATCH -o /global/home/users/makman/GATK/outs/hapflk_sed_chr10_1.out
 #SBATCH -e /global/home/users/makman/GATK/outs/hapflk_sed_chr10_1.err
 #SBATCH --mail-user=makman@berkeley.edu
