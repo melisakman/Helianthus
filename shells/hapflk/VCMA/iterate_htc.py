@@ -10,7 +10,7 @@ start = 1
 end = 20000000
 
 for i in iterations:
-	file_name = "freebayes_invariant_chr" + str(chr) + "_chunk" + str(i) + ".sh"
+	file_name = "hapflk_invariant_chr" + str(chr) + "_" + str(i) + ".sh"
 	file = open(file_name, 'w')
 	file.write("""#!/bin/bash
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/bcftools_isec/secondFilter/vcf-isec_chr""" + str(chr) + """\n#SBATCH -J flk_""" + str(chr) + "_" + str(i) + 
