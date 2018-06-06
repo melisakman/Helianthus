@@ -12,5 +12,5 @@
 #SBATCH -e /global/home/users/makman/blast/outs/VCMA_fst_tajD_genes2AT.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-module load blast/2.6.0
+module load bio/blast/2.6.0
 blastx -query fst_tajD_intersect_gene_CDs.txt -db /clusterfs/vector/instrumentData/blackmanlab/Helianthus/blast_databases/TAIR10_pep_20101214 -outfmt "7 qseqid qlen sseqid slen qstart qend sstart send evalue bitscore score length pident nident mismatch positive gapopen gaps" -out VCMA_fst_tajD_Genes2AT.txt
