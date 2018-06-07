@@ -5,7 +5,7 @@
 #SBATCH --qos=vector_batch
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=6
+#SBATCH --cpus-per-task=12
 #SBATCH --mem=16000
 #SBATCH --time=400:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/VCMA_SNP_indel_3.out
