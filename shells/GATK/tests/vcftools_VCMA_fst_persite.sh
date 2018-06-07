@@ -15,12 +15,12 @@ module load bio/vcftools/0.1.15
 # vcftools --gzvcf vcf-isec_chr02/chr02_intersect.vcf.gz --weir-fst-pop wd_list.txt --weir-fst-pop lr_list.txt --fst-window-size 1 --out fst/lr_wd_chr02_persite
 # vcftools --gzvcf vcf-isec_chr03/chr03_intersect.vcf.gz --weir-fst-pop wd_list.txt --weir-fst-pop lr_list.txt --fst-window-size 1 --out fst/lr_wd_chr03_persite
 # vcftools --gzvcf vcf-isec_chr04/chr04_intersect.vcf.gz --weir-fst-pop wd_list.txt --weir-fst-pop lr_list.txt --fst-window-size 1 --out fst/lr_wd_chr04_persite
-vcftools --gzvcf vcf-isec_chr05/chr05_intersect.vcf.gz --weir-fst-pop wd_list.txt --weir-fst-pop lr_list.txt --fst-window-size 1 --out fst/lr_wd_chr05_persite
+vcftools --vcf vcf-isec_chr05/chr05_intersect.vcf --weir-fst-pop wd_list.txt --weir-fst-pop lr_list.txt --fst-window-size 1 --out fst/lr_wd_chr05_persite
 # vcftools --gzvcf vcf-isec_chr06/chr06_intersect.vcf.gz --weir-fst-pop wd_list.txt --weir-fst-pop lr_list.txt --fst-window-size 1 --out fst/lr_wd_chr06_persite
 # vcftools --gzvcf vcf-isec_chr07/chr07_intersect.vcf.gz --weir-fst-pop wd_list.txt --weir-fst-pop lr_list.txt --fst-window-size 1 --out fst/lr_wd_chr07_persite
 # vcftools --gzvcf vcf-isec_chr08/chr08_intersect.vcf.gz --weir-fst-pop wd_list.txt --weir-fst-pop lr_list.txt --fst-window-size 1 --out fst/lr_wd_chr08_persite
 # vcftools --gzvcf vcf-isec_chr09/chr09_intersect.vcf.gz --weir-fst-pop wd_list.txt --weir-fst-pop lr_list.txt --fst-window-size 1 --out fst/lr_wd_chr09_persite
-vcftools --gzvcf vcf-isec_chr10/chr10_intersect.vcf.gz --weir-fst-pop wd_list.txt --weir-fst-pop lr_list.txt --fst-window-size 1 --out fst/lr_wd_chr10_persite
+vcftools --vcf vcf-isec_chr10/chr10_intersect.vcf --weir-fst-pop wd_list.txt --weir-fst-pop lr_list.txt --fst-window-size 1 --out fst/lr_wd_chr10_persite
 # vcftools --gzvcf vcf-isec_chr11/chr11_intersect.vcf.gz --weir-fst-pop wd_list.txt --weir-fst-pop lr_list.txt --fst-window-size 1 --out fst/lr_wd_chr11_persite
 # vcftools --gzvcf vcf-isec_chr12/chr12_intersect.vcf.gz --weir-fst-pop wd_list.txt --weir-fst-pop lr_list.txt --fst-window-size 1 --out fst/lr_wd_chr12_persite
 # vcftools --gzvcf vcf-isec_chr13/chr13_intersect.vcf.gz --weir-fst-pop wd_list.txt --weir-fst-pop lr_list.txt --fst-window-size 1 --out fst/lr_wd_chr13_persite
