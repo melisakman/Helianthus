@@ -7,10 +7,10 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --mem=64000
-#SBATCH -o /global/home/users/makman/GATK/outs/hapflk_sed_chr17_5.out
-#SBATCH -e /global/home/users/makman/GATK/outs/hapflk_sed_chr17_5.err
+#SBATCH -o /global/home/users/makman/GATK/outs/hapflk_sed_chr17_5_variantOnly.out
+#SBATCH -e /global/home/users/makman/GATK/outs/hapflk_sed_chr17_5_variantOnly.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 #SBATCH --time=800:00:00
 module load hapflk/1.4
-hapflk --file chr17_intersect_noHanXRQ_modified --miss_pheno 0 --chr 17 --from 80000001 --to 100000000 -p chr17_5 --ncpu 16 -K 15
+hapflk --file chr17_intersect_variantOnly_modified --miss_pheno 0 --chr 17 --from 80000001 --to 100000000 -p chr17_5 --ncpu 16 -K 15

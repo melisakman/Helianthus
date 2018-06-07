@@ -20,13 +20,13 @@ for i in iterations:
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --mem=64000
-#SBATCH -o /global/home/users/makman/GATK/outs/hapflk_sed_chr""" + str(chr) + "_" + str(i) + ".out" +
-"""\n#SBATCH -e /global/home/users/makman/GATK/outs/hapflk_sed_chr""" + str(chr) + "_" + str(i) + ".err" +
+#SBATCH -o /global/home/users/makman/GATK/outs/hapflk_sed_chr""" + str(chr) + "_" + str(i) + "_variantOnly.out" +
+"""\n#SBATCH -e /global/home/users/makman/GATK/outs/hapflk_sed_chr""" + str(chr) + "_" + str(i) + "_variantOnly.err" +
 """\n#SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 #SBATCH --time=800:00:00
 module load hapflk/1.4
-hapflk --file chr""" + str(chr) + "_intersect_noHanXRQ_modified --miss_pheno 0 --chr " + str(chr) + " --from " + str(start) + " --to " + str(end) + " -p chr" + str(chr) + "_" + str(i) + " --ncpu 16 -K 15")
+hapflk --file chr""" + str(chr) + "_intersect_variantOnly_modified --miss_pheno 0 --chr " + str(chr) + " --from " + str(start) + " --to " + str(end) + " -p chr" + str(chr) + "_" + str(i) + " --ncpu 16 -K 15")
 	start += 20000000
 	end += 20000000
 
