@@ -3,7 +3,7 @@
 #SBATCH -J vcffst
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
-#SBATCH --mem=24000
+#SBATCH --mem=48000
 #SBATCH --time=4:00:00
 #SBATCH -o /global/home/users/makman/vcftools/outs/vcftools_VCMA_fstpersite.out
 #SBATCH -e /global/home/users/makman/vcftools/outs/vcftools_VCMA_fstpersite.err
