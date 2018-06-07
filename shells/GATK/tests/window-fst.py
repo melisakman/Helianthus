@@ -49,6 +49,6 @@ for line in file_in:
 			fst_sum = 0
 			current_bin += int(bin)
 			snp_no = 0
-if counter >= 0:
+if counter > 0:
 	fst_avg = float(fst_sum) / counter		
 	file_out1.write(str(chr) + "\t" + str(current_bin) + "\t" + str(counter) + "\t" + str(snp_no) + "\t" + str(fst_avg) + "\n")
