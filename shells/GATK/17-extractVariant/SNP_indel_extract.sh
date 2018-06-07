@@ -17,59 +17,77 @@ module load java
 module load gatk/4.0.1.2
 export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
 
-gunzip vcf-isec_chr01/chr01_intersect.vcf.gz
-gunzip vcf-isec_chr02/chr02_intersect.vcf.gz
-gunzip vcf-isec_chr03/chr03_intersect.vcf.gz
-gunzip vcf-isec_chr04/chr04_intersect.vcf.gz
-gunzip vcf-isec_chr05/chr05_intersect.vcf.gz
-gunzip vcf-isec_chr06/chr06_intersect.vcf.gz
-gunzip vcf-isec_chr07/chr07_intersect.vcf.gz
-gunzip vcf-isec_chr08/chr08_intersect.vcf.gz
-gunzip vcf-isec_chr09/chr09_intersect.vcf.gz
-gunzip vcf-isec_chr10/chr10_intersect.vcf.gz
-gunzip vcf-isec_chr11/chr11_intersect.vcf.gz
-gunzip vcf-isec_chr12/chr12_intersect.vcf.gz
-gunzip vcf-isec_chr13/chr13_intersect.vcf.gz
-gunzip vcf-isec_chr14/chr14_intersect.vcf.gz
-gunzip vcf-isec_chr15/chr15_intersect.vcf.gz
-gunzip vcf-isec_chr16/chr16_intersect.vcf.gz
-gunzip vcf-isec_chr17/chr17_intersect.vcf.gz
+# gunzip vcf-isec_chr01/chr01_intersect.vcf.gz
+# gunzip vcf-isec_chr02/chr02_intersect.vcf.gz
+# gunzip vcf-isec_chr03/chr03_intersect.vcf.gz
+# gunzip vcf-isec_chr04/chr04_intersect.vcf.gz
+# gunzip vcf-isec_chr05/chr05_intersect.vcf.gz
+# gunzip vcf-isec_chr06/chr06_intersect.vcf.gz
+# gunzip vcf-isec_chr07/chr07_intersect.vcf.gz
+# gunzip vcf-isec_chr08/chr08_intersect.vcf.gz
+# gunzip vcf-isec_chr09/chr09_intersect.vcf.gz
+# gunzip vcf-isec_chr10/chr10_intersect.vcf.gz
+# gunzip vcf-isec_chr11/chr11_intersect.vcf.gz
+# gunzip vcf-isec_chr12/chr12_intersect.vcf.gz
+# gunzip vcf-isec_chr13/chr13_intersect.vcf.gz
+# gunzip vcf-isec_chr14/chr14_intersect.vcf.gz
+# gunzip vcf-isec_chr15/chr15_intersect.vcf.gz
+# gunzip vcf-isec_chr16/chr16_intersect.vcf.gz
+# gunzip vcf-isec_chr17/chr17_intersect.vcf.gz
+# 
+# python ./extract_variants.py vcf-isec_chr01/chr01_intersect.vcf vcf-isec_chr01/chr01_intersect_variantsOnly.vcf 
+# python ./extract_variants.py vcf-isec_chr02/chr02_intersect.vcf vcf-isec_chr02/chr02_intersect_variantsOnly.vcf 
+# python ./extract_variants.py vcf-isec_chr03/chr03_intersect.vcf vcf-isec_chr03/chr03_intersect_variantsOnly.vcf 
+# python ./extract_variants.py vcf-isec_chr04/chr04_intersect.vcf vcf-isec_chr04/chr04_intersect_variantsOnly.vcf 
+# python ./extract_variants.py vcf-isec_chr05/chr05_intersect.vcf vcf-isec_chr05/chr05_intersect_variantsOnly.vcf 
+# python ./extract_variants.py vcf-isec_chr06/chr06_intersect.vcf vcf-isec_chr06/chr06_intersect_variantsOnly.vcf 
+# python ./extract_variants.py vcf-isec_chr07/chr07_intersect.vcf vcf-isec_chr07/chr07_intersect_variantsOnly.vcf 
+# python ./extract_variants.py vcf-isec_chr08/chr08_intersect.vcf vcf-isec_chr08/chr08_intersect_variantsOnly.vcf 
+# python ./extract_variants.py vcf-isec_chr09/chr09_intersect.vcf vcf-isec_chr09/chr09_intersect_variantsOnly.vcf 
+# python ./extract_variants.py vcf-isec_chr10/chr10_intersect.vcf vcf-isec_chr10/chr10_intersect_variantsOnly.vcf 
+# python ./extract_variants.py vcf-isec_chr11/chr11_intersect.vcf vcf-isec_chr11/chr11_intersect_variantsOnly.vcf 
+# python ./extract_variants.py vcf-isec_chr12/chr12_intersect.vcf vcf-isec_chr12/chr12_intersect_variantsOnly.vcf 
+# python ./extract_variants.py vcf-isec_chr13/chr13_intersect.vcf vcf-isec_chr13/chr13_intersect_variantsOnly.vcf 
+# python ./extract_variants.py vcf-isec_chr14/chr14_intersect.vcf vcf-isec_chr14/chr14_intersect_variantsOnly.vcf 
+# python ./extract_variants.py vcf-isec_chr15/chr15_intersect.vcf vcf-isec_chr15/chr15_intersect_variantsOnly.vcf 
+# python ./extract_variants.py vcf-isec_chr16/chr16_intersect.vcf vcf-isec_chr16/chr16_intersect_variantsOnly.vcf 
+# python ./extract_variants.py vcf-isec_chr17/chr17_intersect.vcf vcf-isec_chr17/chr17_intersect_variantsOnly.vcf 
+# 
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c vcf-isec_chr01/chr01_intersect_variantsOnly.vcf > vcf-isec_chr01/chr01_intersect_variantsOnly.vcf.gz
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c vcf-isec_chr02/chr02_intersect_variantsOnly.vcf > vcf-isec_chr02/chr02_intersect_variantsOnly.vcf.gz
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c vcf-isec_chr03/chr03_intersect_variantsOnly.vcf > vcf-isec_chr03/chr03_intersect_variantsOnly.vcf.gz
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c vcf-isec_chr04/chr04_intersect_variantsOnly.vcf > vcf-isec_chr04/chr04_intersect_variantsOnly.vcf.gz
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c vcf-isec_chr05/chr05_intersect_variantsOnly.vcf > vcf-isec_chr05/chr05_intersect_variantsOnly.vcf.gz
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c vcf-isec_chr06/chr06_intersect_variantsOnly.vcf > vcf-isec_chr06/chr06_intersect_variantsOnly.vcf.gz
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c vcf-isec_chr07/chr07_intersect_variantsOnly.vcf > vcf-isec_chr07/chr07_intersect_variantsOnly.vcf.gz
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c vcf-isec_chr08/chr08_intersect_variantsOnly.vcf > vcf-isec_chr08/chr08_intersect_variantsOnly.vcf.gz
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c vcf-isec_chr09/chr09_intersect_variantsOnly.vcf > vcf-isec_chr09/chr09_intersect_variantsOnly.vcf.gz
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c vcf-isec_chr10/chr10_intersect_variantsOnly.vcf > vcf-isec_chr10/chr10_intersect_variantsOnly.vcf.gz
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c vcf-isec_chr11/chr11_intersect_variantsOnly.vcf > vcf-isec_chr11/chr11_intersect_variantsOnly.vcf.gz
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c vcf-isec_chr12/chr12_intersect_variantsOnly.vcf > vcf-isec_chr12/chr12_intersect_variantsOnly.vcf.gz
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c vcf-isec_chr13/chr13_intersect_variantsOnly.vcf > vcf-isec_chr13/chr13_intersect_variantsOnly.vcf.gz
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c vcf-isec_chr14/chr14_intersect_variantsOnly.vcf > vcf-isec_chr14/chr14_intersect_variantsOnly.vcf.gz
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c vcf-isec_chr15/chr15_intersect_variantsOnly.vcf > vcf-isec_chr15/chr15_intersect_variantsOnly.vcf.gz
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c vcf-isec_chr16/chr16_intersect_variantsOnly.vcf > vcf-isec_chr16/chr16_intersect_variantsOnly.vcf.gz
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c vcf-isec_chr17/chr17_intersect_variantsOnly.vcf > vcf-isec_chr17/chr17_intersect_variantsOnly.vcf.gz
 
-python ./extract_variants.py vcf-isec_chr01/chr01_intersect.vcf vcf-isec_chr01/chr01_intersect_variantsOnly.vcf 
-python ./extract_variants.py vcf-isec_chr02/chr02_intersect.vcf vcf-isec_chr02/chr02_intersect_variantsOnly.vcf 
-python ./extract_variants.py vcf-isec_chr03/chr03_intersect.vcf vcf-isec_chr03/chr03_intersect_variantsOnly.vcf 
-python ./extract_variants.py vcf-isec_chr04/chr04_intersect.vcf vcf-isec_chr04/chr04_intersect_variantsOnly.vcf 
-python ./extract_variants.py vcf-isec_chr05/chr05_intersect.vcf vcf-isec_chr05/chr05_intersect_variantsOnly.vcf 
-python ./extract_variants.py vcf-isec_chr06/chr06_intersect.vcf vcf-isec_chr06/chr06_intersect_variantsOnly.vcf 
-python ./extract_variants.py vcf-isec_chr07/chr07_intersect.vcf vcf-isec_chr07/chr07_intersect_variantsOnly.vcf 
-python ./extract_variants.py vcf-isec_chr08/chr08_intersect.vcf vcf-isec_chr08/chr08_intersect_variantsOnly.vcf 
-python ./extract_variants.py vcf-isec_chr09/chr09_intersect.vcf vcf-isec_chr09/chr09_intersect_variantsOnly.vcf 
-python ./extract_variants.py vcf-isec_chr10/chr10_intersect.vcf vcf-isec_chr10/chr10_intersect_variantsOnly.vcf 
-python ./extract_variants.py vcf-isec_chr11/chr11_intersect.vcf vcf-isec_chr11/chr11_intersect_variantsOnly.vcf 
-python ./extract_variants.py vcf-isec_chr12/chr12_intersect.vcf vcf-isec_chr12/chr12_intersect_variantsOnly.vcf 
-python ./extract_variants.py vcf-isec_chr13/chr13_intersect.vcf vcf-isec_chr13/chr13_intersect_variantsOnly.vcf 
-python ./extract_variants.py vcf-isec_chr14/chr14_intersect.vcf vcf-isec_chr14/chr14_intersect_variantsOnly.vcf 
-python ./extract_variants.py vcf-isec_chr15/chr15_intersect.vcf vcf-isec_chr15/chr15_intersect_variantsOnly.vcf 
-python ./extract_variants.py vcf-isec_chr16/chr16_intersect.vcf vcf-isec_chr16/chr16_intersect_variantsOnly.vcf 
-python ./extract_variants.py vcf-isec_chr17/chr17_intersect.vcf vcf-isec_chr17/chr17_intersect_variantsOnly.vcf 
-
-/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c vcf-isec_chr01/chr01_intersect_variantsOnly.vcf > vcf-isec_chr01/chr01_intersect_variantsOnly.vcf.gz
-/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c vcf-isec_chr02/chr02_intersect_variantsOnly.vcf > vcf-isec_chr02/chr02_intersect_variantsOnly.vcf.gz
-/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c vcf-isec_chr03/chr03_intersect_variantsOnly.vcf > vcf-isec_chr03/chr03_intersect_variantsOnly.vcf.gz
-/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c vcf-isec_chr04/chr04_intersect_variantsOnly.vcf > vcf-isec_chr04/chr04_intersect_variantsOnly.vcf.gz
-/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c vcf-isec_chr05/chr05_intersect_variantsOnly.vcf > vcf-isec_chr05/chr05_intersect_variantsOnly.vcf.gz
-/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c vcf-isec_chr06/chr06_intersect_variantsOnly.vcf > vcf-isec_chr06/chr06_intersect_variantsOnly.vcf.gz
-/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c vcf-isec_chr07/chr07_intersect_variantsOnly.vcf > vcf-isec_chr07/chr07_intersect_variantsOnly.vcf.gz
-/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c vcf-isec_chr08/chr08_intersect_variantsOnly.vcf > vcf-isec_chr08/chr08_intersect_variantsOnly.vcf.gz
-/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c vcf-isec_chr09/chr09_intersect_variantsOnly.vcf > vcf-isec_chr09/chr09_intersect_variantsOnly.vcf.gz
-/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c vcf-isec_chr10/chr10_intersect_variantsOnly.vcf > vcf-isec_chr10/chr10_intersect_variantsOnly.vcf.gz
-/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c vcf-isec_chr11/chr11_intersect_variantsOnly.vcf > vcf-isec_chr11/chr11_intersect_variantsOnly.vcf.gz
-/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c vcf-isec_chr12/chr12_intersect_variantsOnly.vcf > vcf-isec_chr12/chr12_intersect_variantsOnly.vcf.gz
-/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c vcf-isec_chr13/chr13_intersect_variantsOnly.vcf > vcf-isec_chr13/chr13_intersect_variantsOnly.vcf.gz
-/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c vcf-isec_chr14/chr14_intersect_variantsOnly.vcf > vcf-isec_chr14/chr14_intersect_variantsOnly.vcf.gz
-/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c vcf-isec_chr15/chr15_intersect_variantsOnly.vcf > vcf-isec_chr15/chr15_intersect_variantsOnly.vcf.gz
-/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c vcf-isec_chr16/chr16_intersect_variantsOnly.vcf > vcf-isec_chr16/chr16_intersect_variantsOnly.vcf.gz
-/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c vcf-isec_chr17/chr17_intersect_variantsOnly.vcf > vcf-isec_chr17/chr17_intersect_variantsOnly.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c gunzip vcf-isec_chr01/chr01_intersect.vcf > gunzip vcf-isec_chr01/chr01_intersect.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c gunzip vcf-isec_chr02/chr02_intersect.vcf > gunzip vcf-isec_chr02/chr02_intersect.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c gunzip vcf-isec_chr03/chr03_intersect.vcf > gunzip vcf-isec_chr03/chr03_intersect.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c gunzip vcf-isec_chr04/chr04_intersect.vcf > gunzip vcf-isec_chr04/chr04_intersect.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c gunzip vcf-isec_chr05/chr05_intersect.vcf > gunzip vcf-isec_chr05/chr05_intersect.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c gunzip vcf-isec_chr06/chr06_intersect.vcf > gunzip vcf-isec_chr06/chr06_intersect.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c gunzip vcf-isec_chr07/chr07_intersect.vcf > gunzip vcf-isec_chr07/chr07_intersect.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c gunzip vcf-isec_chr08/chr08_intersect.vcf > gunzip vcf-isec_chr08/chr08_intersect.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c gunzip vcf-isec_chr09/chr09_intersect.vcf > gunzip vcf-isec_chr09/chr09_intersect.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c gunzip vcf-isec_chr10/chr10_intersect.vcf > gunzip vcf-isec_chr10/chr10_intersect.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c gunzip vcf-isec_chr11/chr11_intersect.vcf > gunzip vcf-isec_chr11/chr11_intersect.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c gunzip vcf-isec_chr12/chr12_intersect.vcf > gunzip vcf-isec_chr12/chr12_intersect.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c gunzip vcf-isec_chr13/chr13_intersect.vcf > gunzip vcf-isec_chr13/chr13_intersect.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c gunzip vcf-isec_chr14/chr14_intersect.vcf > gunzip vcf-isec_chr14/chr14_intersect.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c gunzip vcf-isec_chr15/chr15_intersect.vcf > gunzip vcf-isec_chr15/chr15_intersect.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c gunzip vcf-isec_chr16/chr16_intersect.vcf > gunzip vcf-isec_chr16/chr16_intersect.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c gunzip vcf-isec_chr17/chr17_intersect.vcf > gunzip vcf-isec_chr17/chr17_intersect.vcf.gz
 
 # java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T SelectVariants \
 # 	-R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
