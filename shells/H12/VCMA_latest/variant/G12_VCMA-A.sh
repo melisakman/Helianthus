@@ -18,10 +18,10 @@ module unload python/3.6
 module load python/2.7.14
 module load numpy/1.13.3
 
-# python /clusterfs/vector/scratch/makman/H12/SelectionHapStats/scripts/H12_H2H1.py VCMA_chr01_variantsOnly_G12_input.txt 46 -o chr01_variantsOnly_G12_VCMA_output.txt
-python /clusterfs/vector/scratch/makman/H12/SelectionHapStats/scripts/H12_H2H1.py VCMA_chr02_variantsOnly_G12_input.txt 46 -o chr02_variantsOnly_G12_VCMA_output.txt
-python /clusterfs/vector/scratch/makman/H12/SelectionHapStats/scripts/H12_H2H1.py VCMA_chr03_variantsOnly_G12_input.txt 46 -o chr03_variantsOnly_G12_VCMA_output.txt
-python /clusterfs/vector/scratch/makman/H12/SelectionHapStats/scripts/H12_H2H1.py VCMA_chr04_variantsOnly_G12_input.txt 46 -o chr04_variantsOnly_G12_VCMA_output.txt
+python /clusterfs/vector/scratch/makman/H12/SelectionHapStats/scripts/H12_H2H1.py VCMA_chr01_variantsOnly_G12_input.txt 46 -o chr01_variantsOnly_G12_VCMA_output.txt
+# python /clusterfs/vector/scratch/makman/H12/SelectionHapStats/scripts/H12_H2H1.py VCMA_chr02_variantsOnly_G12_input.txt 46 -o chr02_variantsOnly_G12_VCMA_output.txt
+# python /clusterfs/vector/scratch/makman/H12/SelectionHapStats/scripts/H12_H2H1.py VCMA_chr03_variantsOnly_G12_input.txt 46 -o chr03_variantsOnly_G12_VCMA_output.txt
+# python /clusterfs/vector/scratch/makman/H12/SelectionHapStats/scripts/H12_H2H1.py VCMA_chr04_variantsOnly_G12_input.txt 46 -o chr04_variantsOnly_G12_VCMA_output.txt
 # python /clusterfs/vector/scratch/makman/H12/SelectionHapStats/scripts/H12_H2H1.py VCMA_chr05_variantsOnly_G12_input.txt 46 -o chr05_variantsOnly_G12_VCMA_output.txt
 # python /clusterfs/vector/scratch/makman/H12/SelectionHapStats/scripts/H12_H2H1.py VCMA_chr06_variantsOnly_G12_input.txt 46 -o chr06_variantsOnly_G12_VCMA_output.txt
 # python /clusterfs/vector/scratch/makman/H12/SelectionHapStats/scripts/H12_H2H1.py VCMA_chr07_variantsOnly_G12_input.txt 46 -o chr07_variantsOnly_G12_VCMA_output.txt
