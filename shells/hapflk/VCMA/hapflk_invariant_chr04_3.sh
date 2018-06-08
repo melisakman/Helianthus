@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -D /clusterfs/rosalind/users/makman/GATK/bcftools_isec/secondFilter/vcf-isec_chr04
+#SBATCH -D /clusterfs/rosalind/users/makman/GATK/bcftools_isec/secondFilter/
 #SBATCH -J flk_04_3
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch

@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -D /clusterfs/rosalind/users/makman/GATK/bcftools_isec/secondFilter/vcf-isec_chr14
+#SBATCH -D /clusterfs/rosalind/users/makman/GATK/bcftools_isec/secondFilter/
 #SBATCH -J flk_14_5
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio2_htc

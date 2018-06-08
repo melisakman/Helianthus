@@ -13,7 +13,8 @@ for i in iterations:
 	file_name = "hapflk_invariant_chr" + str(chr) + "_" + str(i) + ".sh"
 	file = open(file_name, 'w')
 	file.write("""#!/bin/bash
-#SBATCH -D /clusterfs/rosalind/users/makman/GATK/bcftools_isec/secondFilter/vcf-isec_chr""" + str(chr) + """\n#SBATCH -J flk_""" + str(chr) + "_" + str(i) + 
+#SBATCH -D /clusterfs/rosalind/users/makman/GATK/bcftools_isec/secondFilter/
+#SBATCH -J flk_""" + str(chr) + "_" + str(i) + 
 """\n#SBATCH --account=co_rosalind
 #SBATCH --partition=savio2_htc
 #SBATCH --qos=rosalind_htc2_normal
