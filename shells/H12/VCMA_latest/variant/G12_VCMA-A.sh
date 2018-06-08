@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/rosalind/users/makman/GATK/bcftools_isec/secondFilter/G12/
+#SBATCH -D /clusterfs/rosalind/users/makman/GATK/bcftools_isec/secondFilter/G12/variant
 #SBATCH -J G12_A
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
