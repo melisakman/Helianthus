@@ -88,5 +88,5 @@ for line1 in file1:
 			allele_list = []
 
 
-		SF=1,2;ANN=A|upstream_gene_variant|MODIFIER|HanXRQChr01g0000001|gene:HanXRQChr01g0000001|transcript|mRNA:HanXRQChr01g0000001|protein_coding||c.-762G>A|||||442|,A|intergenic_region|MODIFIER|HanXRQChr01g0000001|gene:HanXRQChr01g0000001|intergenic_region|gene:HanXRQChr01g0000001|||n.1160G>A||||||
+# 		SF=1,2;ANN=A|upstream_gene_variant|MODIFIER|HanXRQChr01g0000001|gene:HanXRQChr01g0000001|transcript|mRNA:HanXRQChr01g0000001|protein_coding||c.-762G>A|||||442|,A|intergenic_region|MODIFIER|HanXRQChr01g0000001|gene:HanXRQChr01g0000001|intergenic_region|gene:HanXRQChr01g0000001|||n.1160G>A||||||
 		
