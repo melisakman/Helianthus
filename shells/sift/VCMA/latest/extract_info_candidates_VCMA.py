@@ -38,7 +38,7 @@ for line1 in file1:
 # 	mex_hetero = 0 
 # 	mex_alt = 0
 	splt1 = line1.split("\t")
-	if splt[4] != ".":
+	if splt1[4] != ".":
 		ann = splt1[7].split("|")
 		gene = splt1[7].split("gene:")[1][:19]
 		ref = splt1[3]
