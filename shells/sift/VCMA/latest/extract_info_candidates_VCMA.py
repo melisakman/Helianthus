@@ -50,6 +50,7 @@ for line1 in file1:
 			impact = ann[2]
 		
 			type1 = ann[1]
+			print line1
 			if splt1[7].find(",") != -1:  
 				type2 = splt1[7].split(",")[1].split("|")[1]
 # 				print type2
