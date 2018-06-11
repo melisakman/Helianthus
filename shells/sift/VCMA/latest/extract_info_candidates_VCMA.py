@@ -28,6 +28,7 @@ lr_alt = 0
 # mex_alt = 0
 	
 for line1 in file1: 
+	print line1
 	wild_ref = 0
 	wild_hetero = 0
 	wild_alt = 0
@@ -38,7 +39,6 @@ for line1 in file1:
 # 	mex_hetero = 0 
 # 	mex_alt = 0
 	splt1 = line1.split("\t")
-	print line1
 	if splt1[0][0] == "#":
 		continue
 	else:
