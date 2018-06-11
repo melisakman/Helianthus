@@ -38,6 +38,7 @@ for line1 in file1:
 # 	mex_hetero = 0 
 # 	mex_alt = 0
 	splt1 = line1.split("\t")
+	print line1
 	if splt1[0][0] == "#":
 		continue
 	else:
