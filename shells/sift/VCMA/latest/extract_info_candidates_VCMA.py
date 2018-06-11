@@ -52,7 +52,7 @@ for line1 in file1:
 			type1 = ann[1]
 			if splt1[7].find(",") != -1:  
 				type2 = splt1[7].split(",")[1].split("|")[1]
-				print line1
+# 				print type2
 			else:
 				type2 =''
 		
@@ -80,12 +80,12 @@ for line1 in file1:
 # 						mex_hetero += 1
 # 					elif str(allele_list[m][0:3]) == "1/1":
 # 						mex_alt += 1
-				file3.write(str(gene) + ";" + str(pos) + ";" + str(ref) + "/" + str(alt) + ";" + str(type1) + "/" + str(type2)+ ";" + str(impact) + "\t" + 
-				str(wild_ref) + "\t" + str(wild_hetero) + "\t" + str(wild_alt) + "\t" + str(lr_ref) + "\t" + str(lr_hetero) + "\t" + str(lr_alt) + "\n")
-# 				file3.write(str(gene) + ";" + str(pos) + ";" + str(ref) + "/" + str(alt) + ";" + str(type1) + "/" + str(type2)+ ";" + str(impact) + "\t" + 
-# 				str(wild_ref) + "\t" + str(wild_hetero) + "\t" + str(wild_alt) + "\t" + str(lr_ref) + "\t" + str(lr_hetero) + "\t" + str(lr_alt) + "\t" + str(mex_ref) + "\t" + str(mex_hetero) + "\t" + str(mex_alt)+ "\n")
+			file3.write(str(gene) + ";" + str(pos) + ";" + str(ref) + "/" + str(alt) + ";" + str(type1) + "/" + str(type2)+ ";" + str(impact) + "\t" + 
+			str(wild_ref) + "\t" + str(wild_hetero) + "\t" + str(wild_alt) + "\t" + str(lr_ref) + "\t" + str(lr_hetero) + "\t" + str(lr_alt) + "\n")
+# 			file3.write(str(gene) + ";" + str(pos) + ";" + str(ref) + "/" + str(alt) + ";" + str(type1) + "/" + str(type2)+ ";" + str(impact) + "\t" + 
+# 			str(wild_ref) + "\t" + str(wild_hetero) + "\t" + str(wild_alt) + "\t" + str(lr_ref) + "\t" + str(lr_hetero) + "\t" + str(lr_alt) + "\t" + str(mex_ref) + "\t" + str(mex_hetero) + "\t" + str(mex_alt)+ "\n")
 			
-			allele_list = []
+		allele_list = []
 
 
 # 		SF=1,2;ANN=A|upstream_gene_variant|MODIFIER|HanXRQChr01g0000001|gene:HanXRQChr01g0000001|transcript|mRNA:HanXRQChr01g0000001|protein_coding||c.-762G>A|||||442|,A|intergenic_region|MODIFIER|HanXRQChr01g0000001|gene:HanXRQChr01g0000001|intergenic_region|gene:HanXRQChr01g0000001|||n.1160G>A||||||
