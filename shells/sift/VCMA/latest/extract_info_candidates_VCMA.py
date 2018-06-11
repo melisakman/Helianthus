@@ -39,6 +39,8 @@ for line1 in file1:
 # 	mex_alt = 0
 	splt1 = line1.split("\t")
 	if splt1[0][0] == "#":
+		continue
+	else:
 		if splt1[4] != ".":
 			ann = splt1[7].split("|")
 			gene = splt1[7].split("gene:")[1][:19]
