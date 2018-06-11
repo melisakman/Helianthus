@@ -41,6 +41,7 @@ for line1 in file1:
 	if splt1[0][0] == "#":
 		continue
 	else:
+		print line
 		if splt1[4] != ".":
 			ann = splt1[7].split("|")
 			gene = splt1[7].split("gene:")[1][:19]
