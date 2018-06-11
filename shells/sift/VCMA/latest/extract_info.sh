@@ -13,23 +13,23 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
-gunzip chr01_intersect_snpeff_SIFTpredictions.vcf.gz
-gunzip chr02_intersect_snpeff_SIFTpredictions.vcf.gz
-gunzip chr03_intersect_snpeff_SIFTpredictions.vcf.gz
-gunzip chr04_intersect_snpeff_SIFTpredictions.vcf.gz
-gunzip chr05_intersect_snpeff_SIFTpredictions.vcf.gz
-gunzip chr06_intersect_snpeff_SIFTpredictions.vcf.gz
-gunzip chr07_intersect_snpeff_SIFTpredictions.vcf.gz
-gunzip chr08_intersect_snpeff_SIFTpredictions.vcf.gz
-gunzip chr09_intersect_snpeff_SIFTpredictions.vcf.gz
-gunzip chr10_intersect_snpeff_SIFTpredictions.vcf.gz
-gunzip chr11_intersect_snpeff_SIFTpredictions.vcf.gz
-gunzip chr12_intersect_snpeff_SIFTpredictions.vcf.gz
-gunzip chr13_intersect_snpeff_SIFTpredictions.vcf.gz
-gunzip chr14_intersect_snpeff_SIFTpredictions.vcf.gz
-gunzip chr15_intersect_snpeff_SIFTpredictions.vcf.gz
-gunzip chr16_intersect_snpeff_SIFTpredictions.vcf.gz
-gunzip chr17_intersect_snpeff_SIFTpredictions.vcf.gz
+# gunzip chr01_intersect_snpeff_SIFTpredictions.vcf.gz
+# gunzip chr02_intersect_snpeff_SIFTpredictions.vcf.gz
+# gunzip chr03_intersect_snpeff_SIFTpredictions.vcf.gz
+# gunzip chr04_intersect_snpeff_SIFTpredictions.vcf.gz
+# gunzip chr05_intersect_snpeff_SIFTpredictions.vcf.gz
+# gunzip chr06_intersect_snpeff_SIFTpredictions.vcf.gz
+# gunzip chr07_intersect_snpeff_SIFTpredictions.vcf.gz
+# gunzip chr08_intersect_snpeff_SIFTpredictions.vcf.gz
+# gunzip chr09_intersect_snpeff_SIFTpredictions.vcf.gz
+# gunzip chr10_intersect_snpeff_SIFTpredictions.vcf.gz
+# gunzip chr11_intersect_snpeff_SIFTpredictions.vcf.gz
+# gunzip chr12_intersect_snpeff_SIFTpredictions.vcf.gz
+# gunzip chr13_intersect_snpeff_SIFTpredictions.vcf.gz
+# gunzip chr14_intersect_snpeff_SIFTpredictions.vcf.gz
+# gunzip chr15_intersect_snpeff_SIFTpredictions.vcf.gz
+# gunzip chr16_intersect_snpeff_SIFTpredictions.vcf.gz
+# gunzip chr17_intersect_snpeff_SIFTpredictions.vcf.gz
 
 python /global/home/users/makman/git/Helianthus/shells/sift/VCMA/latest/extract_info_candidates_VCMA.py chr01_intersect_snpeff_SIFTpredictions.vcf G12all_pi_tajD_fst_geneNames.txt chr01_G12all_fst_pi_tajD_siftInfo.txt
 python /global/home/users/makman/git/Helianthus/shells/sift/VCMA/latest/extract_info_candidates_VCMA.py chr02_intersect_snpeff_SIFTpredictions.vcf G12all_pi_tajD_fst_geneNames.txt chr02_G12all_fst_pi_tajD_siftInfo.txt
