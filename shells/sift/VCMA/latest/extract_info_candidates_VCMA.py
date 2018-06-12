@@ -143,10 +143,11 @@ for line1 in file1:
 					ethno_freq = ((2*float(ethno_ref)) + ethno_hetero)/ (2*(ethno_ref + ethno_hetero + ethno_alt))
 				else:
 					ethno_freq = "NA"
-				
-			file3.write(str(gene) + ";" + str(pos) + ";" + str(ref) + "/" + str(alt) + ";" + str(type) + "\t" + str(wd_freq) + "\t" + str(lr_freq) + "\t" +
-			str(wd_mex_freq) + "\t" + str(wd_US_freq) + "\t" + str(lr_mex_freq) + "\t" + str(lr_US_freq) + "\t" +
-			str(ethno_freq) + "\t" + str(wild_ref) + "\\" + str(wild_hetero) + "\\" + str(wild_alt) + "\t" +
+				print wd_freq
+			file3.write(str(gene) + ";" + str(pos) + ";" + str(ref) + "/" + str(alt) + ";" + str(type) + "\t" + 
+			str(wd_freq) + "\t" + str(lr_freq) + "\t" + str(wd_mex_freq) + "\t" + str(wd_US_freq) + 
+			"\t" + str(lr_mex_freq) + "\t" + str(lr_US_freq) + "\t" + str(ethno_freq) + "\t" + 
+			str(wild_ref) + "\\" + str(wild_hetero) + "\\" + str(wild_alt) + "\t" +
 			str(lr_ref) + "\\" + str(lr_hetero) + "\\" + str(lr_alt) + "\t" +
 			str(wd_mex_ref) + "\\" + str(wd_mex_hetero) + "\\" + str(wd_mex_alt) + "\t" +
 			str(wd_US_ref) + "\\" + str(wd_US_hetero) + "\\" + str(wd_US_alt) + "\t" +
