@@ -143,7 +143,7 @@ for line1 in file1:
 					ethno_freq = ((2*float(ethno_ref)) + ethno_hetero)/ (2*(ethno_ref + ethno_hetero + ethno_alt))
 				else:
 					ethno_freq = "NA"
-				print wd_freq
+			print wd_freq
 			file3.write(str(gene) + ";" + str(pos) + ";" + str(ref) + "/" + str(alt) + ";" + str(type) + "\t" + 
 			str(wd_freq) + "\t" + str(lr_freq) + "\t" + str(wd_mex_freq) + "\t" + str(wd_US_freq) + 
 			"\t" + str(lr_mex_freq) + "\t" + str(lr_US_freq) + "\t" + str(ethno_freq) + "\t" + 
