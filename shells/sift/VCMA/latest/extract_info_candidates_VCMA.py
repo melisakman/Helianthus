@@ -28,7 +28,6 @@ lr_alt = 0
 # mex_alt = 0
 	
 for line1 in file1: 
-	print line1
 	wild_ref = 0
 	wild_hetero = 0
 	wild_alt = 0
@@ -42,7 +41,6 @@ for line1 in file1:
 	if splt1[0][0] == "#":
 		continue
 	else:
-		print line1
 		if splt1[4] != ".":
 			ann = splt1[7].split("|")
 			gene = splt1[7].split("gene:")[1][:19]
