@@ -12,4 +12,4 @@
 module load bio/vcftools/0.1.15
 
 
-vcftools --vcf All_plastomes_5.named.vcf --keep samples.txt --out plastome_melis.vcf
+vcftools --vcf All_plastomes_5.named.vcf --keep samples.txt --recode --out plastome_melis.vcf
