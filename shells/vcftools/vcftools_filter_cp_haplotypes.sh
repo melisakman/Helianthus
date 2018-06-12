@@ -9,8 +9,7 @@
 #SBATCH -e /global/home/users/makman/vcftools/outs/vcftools_filter_cp_haplotype.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-#SBATCH --array=1-2
 module load bio/vcftools/0.1.15
 
 
-vcftools --vcf All_plastomes_5.named.vcf --keep samples.txt > plastome_melis.vcf
+vcftools --vcf All_plastomes_5.named.vcf --keep samples.txt --out plastome_melis.vcf
