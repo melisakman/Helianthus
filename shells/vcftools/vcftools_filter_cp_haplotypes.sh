@@ -1,12 +1,8 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/cp_haplotype
 #SBATCH -J vcfFilter
-#SBATCH --account=co_rosalind
-#SBATCH --partition=savio
-#SBATCH --qos=rosalind_savio_normal
-#SBATCH --nodes=1
-#SBATCH --ntasks=1
-#SBATCH --cpus-per-task=6
+#SBATCH --partition=vector
+#SBATCH --qos=vector_batch
 #SBATCH --mem=32000
 #SBATCH --time=48:00:00
 #SBATCH -o /global/home/users/makman/vcftools/outs/vcftools_filter_cp_haplotype.out
