@@ -29,7 +29,7 @@ for line2 in file2:
 	split2 = line2.split("\t")
 	pos2 = split2[1]
 	alt2 = split2[3]
-	type = split2[4]
+	type = split2[4][:-1]
 	if pos2 in truth:
 		print type
 		if type == "111":
