@@ -16,7 +16,7 @@ for line1 in file1:
 	pos1 = split1[1]
 	alt1 = split1[3]
 	truth[pos1] = alt1
-
+print truth
 all3_concord = 0
 all3_nonconcord = 0
 all12_concord = 0
@@ -31,7 +31,6 @@ for line2 in file2:
 	alt2 = split2[3]
 	type = split2[4][:-1]
 	if pos2 in truth:
-		print type
 		if type == "111":
 			if truth[pos2] == alt2:
 				all3_concord +=1
