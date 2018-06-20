@@ -33,10 +33,10 @@ for line2 in file2:
 		if type == "111":
 			if truth[pos2] == alt2:
 				all3_concord +=1
-				print "all3_concord " + line2
+# 				print "all3_concord " + line2
 			else:
 				all3_nonconcord +=1
-				print "all3_nonconcord " + line2
+# 				print "all3_nonconcord " + line2
 
 		elif type == "110":
 			if truth[pos2] == alt2:
