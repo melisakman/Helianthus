@@ -14,7 +14,7 @@ truth = {}
 for line1 in file1:
 	split1 = line1.split("\t")
 	pos1 = split1[1]
-	alt1 = split1[3]
+	alt1 = split1[3][:-1]
 	truth[pos1] = alt1
 print truth
 all3_concord = 0
