@@ -1,11 +1,11 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/
 #SBATCH -J VMC
-#SBATCH --account=co_rosalind
-#SBATCH --partition=savio2_htc
-#SBATCH --qos=rosalind_htc2_normal
-#SBATCH --mem=256000
-#SBATCH --time=800:00:00
+#SBATCH --account=fc_blackman
+#SBATCH --partition=savio_bigmem
+#SBATCH --mem=512000
+#SBATCH --qos=savio_normal
+#SBATCH --time=72:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/VMC_chr01htc.out
 #SBATCH -e /global/home/users/makman/GATK/outs/VMC_chr01htc.err
 #SBATCH --mail-user=makman@berkeley.edu
