@@ -16,7 +16,6 @@ for line1 in file1:
 	pos1 = split1[1]
 	alt1 = split1[3][:-1]
 	truth[pos1] = alt1
-print truth
 all3_concord = 0
 all3_nonconcord = 0
 all12_concord = 0
