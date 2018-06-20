@@ -28,6 +28,7 @@ all13_nonconcord = 0
 all23 = 0
 all23_concord = 0
 all23_nonconcord = 0
+not_found = 0
 for line2 in file2:
 	split2 = line2.split("\t")
 	pos2 = split2[1]
@@ -61,8 +62,11 @@ for line2 in file2:
 				all23_concord +=1
 			else:
 				all23_nonconcord +=1
+		else:
+			not_found +=1
 
 print "all 3 concordant ref and alt = " + str(all3_concord) + " all 3 non-concordant = " + str(all3_nonconcord)	+ " total = " + str(all)			
 print "GATK FB concordant ref and alt = " + str(all12_concord) + " GATK FB non-concordant = " + str(all12_nonconcord) + " total = " + str(all12)		
 print "GATK ST concordant ref and alt = " + str(all13_concord) + " GATK ST non-concordant = " + str(all13_nonconcord) + " total = " + str(all13)				
 print "FB ST concordant ref and alt = " + str(all23_concord) + " FB ST non-concordant = " + str(all23_nonconcord) + " total = " + str(all23)				
+print "not found = " + str(not_found)
