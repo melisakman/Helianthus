@@ -14,8 +14,8 @@
 
 /global/home/users/makman/VariantMetaCaller_v1.0/VariantMetaCaller -t prioritize --allInfo \
 -c /global/home/users/makman/VariantMetaCaller_v1.0/definitions.config \
--v GATK HaplotypeCaller fastq/invariants/filtered_combined/VCMA_GATK_chr02_secondFilter.vcf \
--v freebayes freebayes freebayes/final_combined/freebayes_invariant_chr02_allFiltered.vcf \
+-v GATK HaplotypeCaller fastq/invariants/filtered_combined/VCMA_GATK_chr01_secondFilter.vcf \
+-v freebayes freebayes freebayes/final_combined/freebayes_invariant_chr01_allFiltered.vcf \
 -o VMC_chr01_test_htc.vcf --allInfo
 
 
