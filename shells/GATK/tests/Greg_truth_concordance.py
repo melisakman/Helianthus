@@ -62,8 +62,6 @@ for line2 in file2:
 				all23_concord +=1
 			else:
 				all23_nonconcord +=1
-	else:
-		not_found +=1
 
 print "all 3 concordant ref and alt = " + str(all3_concord) + " all 3 non-concordant = " + str(all3_nonconcord)	+ " total = " + str(all)			
 print "GATK FB concordant ref and alt = " + str(all12_concord) + " GATK FB non-concordant = " + str(all12_nonconcord) + " total = " + str(all12)		

@@ -20,7 +20,7 @@ matplotlib/2.1.0
 
 # bcftools isec -n +1 -O z -p vcf-isec_chr01_1 fastq/invariants/filtered_combined/VCMA_GATK_chr01_secondFilter.vcf.gz \
 # freebayes/final_combined/freebayes_invariant_chr01_allFiltered.vcf.gz \
-# samtools_VC/samtools_invariant_chr01_Filtered_sorted.vcf.gz
+# /clusterfs/rosalind/users/makman/GATK/samtools_VC/samtools_invariant_chr01_Filtered_sorted.vcf.gz
 
 bcftools stats fastq/invariants/filtered_combined/VCMA_GATK_chr01_secondFilter.vcf.gz > bcftools_isec/secondFilter/stats/VCMA_GATK_chr01_secondFilter.vchk
 bcftools stats freebayes/final_combined/freebayes_invariant_chr01_allFiltered.vcf.gz > bcftools_isec/secondFilter/stats/freebayes_invariant_chr01_allFiltered.vchk
