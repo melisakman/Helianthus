@@ -26,7 +26,7 @@ all13_nonconcord = 0
 all23_concord = 0
 all23_nonconcord = 0
 for line2 in file2:
-	split2 = line2.split["\t"]:
+	split2 = line2.split("\t")
 	pos2 = split2[1]
 	alt2 = split[3]
 	type = split[4]
