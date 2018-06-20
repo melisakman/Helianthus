@@ -32,7 +32,7 @@ for line2 in file2:
 	type = split[4]
 	if pos2 in truth:
 		if type == "111":
-			if truth(pos2) = alt2:
+			if truth(pos2) == alt2:
 				all3_concord +=1
 			else:
 				all3_nonconcord +=1
