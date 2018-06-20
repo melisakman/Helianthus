@@ -37,17 +37,17 @@ for line2 in file2:
 			else:
 				all3_nonconcord +=1
 		elif type == "110":
-			if truth(pos2) = alt2:
+			if truth(pos2) == alt2:
 				all12_concord +=1
 			else:
 				all12_nonconcord +=1
 		elif type == "101":
-			if truth(pos2) = alt2:
+			if truth(pos2) == alt2:
 				all13_concord +=1
 			else:
 				all13_nonconcord +=1
 		elif type == "011":
-			if truth(pos2) = alt2:
+			if truth(pos2) == alt2:
 				all23_concord +=1
 			else:
 				all23_nonconcord +=1
