@@ -84,5 +84,6 @@ matplotlib/2.1.0
 # plot-vcfstats chr16_intersect_3.vchk -p plot_chr16_3
 # plot-vcfstats chr17_intersect_3.vchk -p plot_chr17_3
 
-bcftools stats ../vcf-isec_chr01/chr01_intersect_variantsOnly.vcf.gz > chr01_intersect_variantsOnly.vchk
-plot-vcfstats chr01_intersect_variantsOnly.vchk -p plot_chr01_variantsOnly
+# bcftools stats ../vcf-isec_chr01/chr01_intersect_variantsOnly.vcf.gz > chr01_intersect_variantsOnly.vchk
+# plot-vcfstats chr01_intersect_variantsOnly.vchk -p plot_chr01_variantsOnly
+

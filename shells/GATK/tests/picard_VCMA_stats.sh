@@ -1,18 +1,16 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/bcftools_isec/secondFilter/stats
-#SBATCH -J stats
+#SBATCH -J picard
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
 #SBATCH --time=4:00:00
-#SBATCH -o /global/home/users/makman/vcftools/outs/vcftools_VCMA_stats.out
-#SBATCH -e /global/home/users/makman/vcftools/outs/vcftools_VCMA_stats.err
+#SBATCH -o /global/home/users/makman/vcftools/outs/picard_VCMA_stats.out
+#SBATCH -e /global/home/users/makman/vcftools/outs/picard_VCMA_stats.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
-module load bcftools/1.6
-module unload python
-module load python/2.7.14
-matplotlib/2.1.0
+module load picard/2.9.0 
+module load java
 
 bcftools stats ../vcf-isec_chr01/chr01_intersect.vcf > chr01_intersect.vchk
 bcftools stats ../vcf-isec_chr02/chr02_intersect.vcf > chr02_intersect.vchk
