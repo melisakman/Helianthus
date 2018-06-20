@@ -28,8 +28,8 @@ all23_nonconcord = 0
 for line2 in file2:
 	split2 = line2.split("\t")
 	pos2 = split2[1]
-	alt2 = split[3]
-	type = split[4]
+	alt2 = split2[3]
+	type = split2[4]
 	if pos2 in truth:
 		if type == "111":
 			if truth(pos2) == alt2:
