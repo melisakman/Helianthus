@@ -31,6 +31,7 @@ for line2 in file2:
 	alt2 = split2[3]
 	type = split2[4]
 	if pos2 in truth:
+		print type
 		if type == "111":
 			print 1
 			if truth(pos2) == alt2:
