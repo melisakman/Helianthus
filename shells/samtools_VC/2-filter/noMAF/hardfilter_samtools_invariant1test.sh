@@ -2,8 +2,8 @@
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/samtools_VC/
 #SBATCH -J filST1
 #SBATCH --account=co_rosalind
-#SBATCH --partition=savio
-#SBATCH --qos=rosalind_savio_normal
+#SBATCH --partition=savio2_htc
+#SBATCH --qos=rosalind_htc2_normal
 #SBATCH --ntasks-per-node=1
 #SBATCH --time=400:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/bcftools_filter_samtools1test.out
