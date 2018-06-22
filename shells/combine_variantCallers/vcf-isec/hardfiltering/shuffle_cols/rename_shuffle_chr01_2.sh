@@ -15,7 +15,7 @@ module load bcftools/1.6
 module load vcftools/0.1.13
 export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
 
-# bcftools view -S ../../secondFilter/sample_names.txt 0000.vcf.gz | bcftools reheader -s ../../secondFilter/sample_rename.txt -o 0000_renamed.vcf
+bcftools view -S ../../secondFilter/sample_names.txt 0000.vcf.gz | bcftools reheader -s ../../secondFilter/sample_rename.txt -o 0000_renamed.vcf
 
 /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c 0000_renamed.vcf > 0000_renamed.vcf.gz
 
