@@ -8,7 +8,7 @@ InputFile2 = sys.argv[2] # sites file
 OutputFile1 =sys.argv[3] #discordant sites, false negatives
 file1 = open(InputFile1, "r")
 file2 = open(InputFile2, "r")
-file3 = open(OutputFile3, "w")
+file3 = open(OutputFile1, "w")
 
 truth = {}
 concordant = []
