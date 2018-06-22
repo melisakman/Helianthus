@@ -15,13 +15,13 @@ module load bio/vcftools/0.1.15
 
 # vcftools --gzvcf secondFilter/vcf-isec_chr01_3/chr01_intersect_3.vcf.gz --weir-fst-pop secondFilter/wd_list.txt --weir-fst-pop secondFilter/lr_list.txt --fst-window-size 10000 --out ../compare_filtering/second_filtering_3
 
-# vcftools --gzvcf hardFilter/vcf-isec_chr01_hardFilter/chr01_intersect.vcf.gz --weir-fst-pop secondFilter/wd_list.txt --weir-fst-pop secondFilter/lr_list.txt --fst-window-size 10000 --out ../compare_filtering/hard_filtering_2
+vcftools --gzvcf hardFilter/vcf-isec_chr01_hardFilter/chr01_intersect.vcf.gz --weir-fst-pop secondFilter/wd_list.txt --weir-fst-pop secondFilter/lr_list.txt --fst-window-size 10000 --out ../compare_filtering/hard_filtering_2
 
-# vcftools --gzvcf hardFilter/vcf-isec_chr01_hardFilter_3/chr01_intersect_3.vcf.gz --weir-fst-pop secondFilter/wd_list.txt --weir-fst-pop secondFilter/lr_list.txt --fst-window-size 10000 --out ../compare_filtering/hard_filtering_3
+vcftools --gzvcf hardFilter/vcf-isec_chr01_hardFilter_3/chr01_intersect_3.vcf.gz --weir-fst-pop secondFilter/wd_list.txt --weir-fst-pop secondFilter/lr_list.txt --fst-window-size 10000 --out ../compare_filtering/hard_filtering_3
 
 # vcftools --gzvcf ../fastq/invariants/filtered_combined/VCMA_GATK_chr01_sorted.vcf.gz --weir-fst-pop secondFilter/wd_list.txt --weir-fst-pop secondFilter/lr_list.txt --fst-window-size 10000 --out ../compare_filtering/GATK_hard
 
-vcftools --vcf ../fastq/invariants/filtered_combined/VCMA_GATK_chr01_secondFilter.vcf --weir-fst-pop secondFilter/wd_list.txt --weir-fst-pop secondFilter/lr_list.txt --fst-window-size 10000 --out ../compare_filtering/GATK_second
+# vcftools --vcf ../fastq/invariants/filtered_combined/VCMA_GATK_chr01_secondFilter.vcf --weir-fst-pop secondFilter/wd_list.txt --weir-fst-pop secondFilter/lr_list.txt --fst-window-size 10000 --out ../compare_filtering/GATK_second
 
 # vcftools --gzvcf ../freebayes/final_combined/freebayes_invariant_chr01_allFiltered.vcf.gz --weir-fst-pop secondFilter/wd_list.txt --weir-fst-pop secondFilter/lr_list.txt --fst-window-size 10000 --out ../compare_filtering/FB
 
