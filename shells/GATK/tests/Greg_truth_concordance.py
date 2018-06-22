@@ -33,6 +33,7 @@ all23_nonconcord = 0
 not_found = 0
 for line2 in file2:
 	split2 = line2.split("\t")
+	print split2[1]
 	pos2 = split2[1]
 	alt2 = split2[3]
 	type = split2[4][:-1]
@@ -78,10 +79,10 @@ print "GATK FB concordant ref and alt = " + str(all12_concord) + " GATK FB non-c
 print "GATK ST concordant ref and alt = " + str(all13_concord) + " GATK ST non-concordant = " + str(all13_nonconcord) + " total = " + str(all13)				
 print "FB ST concordant ref and alt = " + str(all23_concord) + " FB ST non-concordant = " + str(all23_nonconcord) + " total = " + str(all23)				
 print "not found = " + str(not_found)
-file3.write("concordant sites")
+file3.write("concordant sites\n")
 for item in concordant:
   file3.write("%s\n" % item)
   
-file3.write("discordant sites")
+file3.write("discordant sites\n")
 for item in discordant:
   file3.write("%s\n" % item)
