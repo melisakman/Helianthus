@@ -16,5 +16,8 @@ for line2 in file2:
 for line1 in file1:
 	split = line1.split("\t")
 	pos = split[1]
-	if pos in list:
+	if pos in list and split[0] == "HanXRQChr01":
 		file3.write(line1)
+	else:
+		continue
+		
