@@ -11,7 +11,7 @@
 
 module load bio/vcftools/0.1.15
 
-vcftools --vcf secondFilter/vcf-isec_chr01/chr01_intersect.vcf --weir-fst-pop secondFilter/wd_list.txt --weir-fst-pop secondFilter/lr_list.txt --fst-window-size 10000 --out ../compare_filtering/second_filtering_2
+# vcftools --vcf secondFilter/vcf-isec_chr01/chr01_intersect.vcf --weir-fst-pop secondFilter/wd_list.txt --weir-fst-pop secondFilter/lr_list.txt --fst-window-size 10000 --out ../compare_filtering/second_filtering_2
 
 # vcftools --gzvcf secondFilter/vcf-isec_chr01_3/chr01_intersect_3.vcf.gz --weir-fst-pop secondFilter/wd_list.txt --weir-fst-pop secondFilter/lr_list.txt --fst-window-size 10000 --out ../compare_filtering/second_filtering_3
 
