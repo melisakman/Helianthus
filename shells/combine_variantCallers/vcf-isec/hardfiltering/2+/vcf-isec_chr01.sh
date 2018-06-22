@@ -1,13 +1,13 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/rosalind/users/makman/GATK/bcftools_isec/secondFilter/vcf-isec_chr01
+#SBATCH -D /clusterfs/rosalind/users/makman/GATK/bcftools_isec/hardFilter/vcf-isec_chr01_hardFilter
 #SBATCH -J isecchr01
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=6
 #SBATCH --time=800:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/chr01_vcf-isec.out
-#SBATCH -e /global/home/users/makman/GATK/outs/chr01_vcf-isec.err
+#SBATCH -o /global/home/users/makman/GATK/outs/chr01_vcf-isec_hf2.out
+#SBATCH -e /global/home/users/makman/GATK/outs/chr01_vcf-isec_hf2.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
