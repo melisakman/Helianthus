@@ -16,6 +16,6 @@ module load bio/vcftools
 export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
 module load java
 
-# zcat samtools_invariant_chr01_combined.vcf.gz | bcftools filter -g 5 -i 'TYPE = "indel" || TYPE = "snp" || TYPE = "mnp" || TYPE = "ref"' | bcftools filter -g 5 -i 'QUAL/DP > 2.0 && QUAL > 50 && MQ > 40'  | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | vcf-sort -t /clusterfs/rosalind/users/makman/temp | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > samtools_invariant_chr01_Filtered_sorted_test.vcf.gz
+cat samtools_invariant_chr01_combined.vcf | bcftools filter -g 5 -i 'TYPE = "indel" || TYPE = "snp" || TYPE = "mnp" || TYPE = "ref"' | bcftools filter -g 5 -i 'QUAL/DP > 2.0 && QUAL > 50 && MQ > 40'  | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | vcf-sort -t /clusterfs/rosalind/users/makman/temp | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > samtools_invariant_chr01_Filtered_sorted_test.vcf.gz
 
 
