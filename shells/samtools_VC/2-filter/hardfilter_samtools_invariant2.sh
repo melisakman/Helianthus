@@ -3,7 +3,7 @@
 #SBATCH -J filST2
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio2_htc
-#SBATCH --qos=savio_normal
+#SBATCH --qos=rosalind_htc2_normal
 #SBATCH --cpus-per-task=4
 #SBATCH --time=72:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/bcftools_filterUpdate_samtools2.out
