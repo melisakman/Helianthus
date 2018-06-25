@@ -4,9 +4,8 @@
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio2_htc
 #SBATCH --qos=rosalind_htc2_normal
-#SBATCH --ntasks=1
-#SBATCH --cpus-per-task=6
-#SBATCH --time=800:00:00
+#SBATCH --cpus-per-task=4
+#SBATCH --time=72:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/shufflecols_samtools1.out
 #SBATCH -e /global/home/users/makman/GATK/outs/shufflecols_samtools1.err
 #SBATCH --mail-user=makman@berkeley.edu
@@ -14,7 +13,7 @@
 
 module load vcftools/0.1.13
 export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
-/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t fastq/invariants/VCMA_chr01_SNP_hardfiltered.vcf.gz samtools_VC/samtools_invariant_chr01_allFiltered.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > samtools_VC/shuffleCols/samtools_invariant_chr01_allFilteredshuffled.vcf.gz
+/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t fastq/invariants/VCMA_chr01_SNP_hardfiltered.vcf.gz samtools_VC/samtools_invariant_chr01_allFiltered.vcf | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > samtools_VC/shuffleCols/samtools_invariant_chr01_allFilteredshuffled.vcf.gz
 /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t fastq/invariants/VCMA_chr01_SNP_hardfiltered.vcf.gz samtools_VC/samtools_invariant_chr02_allFiltered.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > samtools_VC/shuffleCols/samtools_invariant_chr02_allFilteredshuffled.vcf.gz
 /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t fastq/invariants/VCMA_chr01_SNP_hardfiltered.vcf.gz samtools_VC/samtools_invariant_chr03_allFiltered.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > samtools_VC/shuffleCols/samtools_invariant_chr03_allFilteredshuffled.vcf.gz
 # /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t fastq/invariants/VCMA_chr01_SNP_hardfiltered.vcf.gz samtools_VC/samtools_invariant_chr04_allFiltered.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > samtools_VC/shuffleCols/samtools_invariant_chr04_allFilteredshuffled.vcf.gz
