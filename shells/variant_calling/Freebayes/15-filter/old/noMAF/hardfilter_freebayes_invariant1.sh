@@ -34,4 +34,4 @@ module load java
 # zcat freebayes_invariant_chr17_all.vcf.gz | bcftools filter -g 5 -i 'QUAL/DP > 2.0 || QUAL > 50 || TYPE = "indel" || TYPE = "snp" || TYPE = "mnp" || TYPE = "ref" || SAF > 1 || SAR > 1 || RPR > 1 || RPL > 1' | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | gzip -c > freebayes_invariant_chr17_allFiltered.vcf.gz
 # 
 
-zcat old/freebayes_invariant_chr01_all.vcf.gz | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout > freebayes_invariant_chr01_allFiltered_onlyvcftools.vcf.gz
+zcat old/freebayes_invariant_chr01_all.vcf | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout > freebayes_invariant_chr01_allFiltered_onlyvcftools.vcf
