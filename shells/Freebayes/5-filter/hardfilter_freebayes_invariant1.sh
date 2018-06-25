@@ -1,11 +1,11 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/freebayes/final_combined
 #SBATCH -J filFB1
-#SBATCH --account=co_rosalind
-#SBATCH --partition=savio2_htc
-#SBATCH --qos=rosalind_htc2_normal
-#SBATCH --cpus-per-task=4
-#SBATCH --time=400:00:00
+#SBATCH --account=fc_blackman
+#SBATCH --partition=savio2
+#SBATCH --mem=64000
+#SBATCH --qos=savio_normal
+#SBATCH --time=72:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/bcftools_filter2_freebayes1.out
 #SBATCH -e /global/home/users/makman/GATK/outs/bcftools_filter2_freebayes1.err
 #SBATCH --mail-user=makman@berkeley.edu
