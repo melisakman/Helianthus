@@ -11,7 +11,6 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
-module load bio/vcftools
 export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
 # /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t fastq/invariants/VCMA_chr01_SNP_hardfiltered.vcf.gz samtools_VC/samtools_invariant_chr01_allFiltered.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > samtools_VC/shuffleCols/samtools_invariant_chr01_allFilteredshuffled.vcf.gz
 # /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t fastq/invariants/VCMA_chr01_SNP_hardfiltered.vcf.gz samtools_VC/samtools_invariant_chr02_allFiltered.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > samtools_VC/shuffleCols/samtools_invariant_chr02_allFilteredshuffled.vcf.gz
