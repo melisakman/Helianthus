@@ -23,7 +23,7 @@ all_concord = 0
 all_nonconcord = 0
 for line2 in file2:
 	split2 = line2.split("\t")
-	if split[0][0] == "#":
+	if split2[0][0] == "#":
 		continue
 	else:
 		pos2 = split2[1]
