@@ -41,7 +41,7 @@ for line2 in file2:
 				discordant.append(pos2 + "\t" + truth[pos2] + "\t" + alt2)
 
 
-print "concordant ref and alt = " + str(all3_concord) + " non-concordant = " + str(all3_nonconcord)	+ " total = " + str(all)		
+print "concordant ref and alt = " + str(all_concord) + " non-concordant = " + str(all_nonconcord)	+ " total = " + str(all)		
 file3.write("concordant sites\n")
 for item in concordant:
   file3.write("%s\n" % item)

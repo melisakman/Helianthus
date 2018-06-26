@@ -24,4 +24,3 @@ module load bcftools/1.6
 bcftools isec -n +2 -O z -p bcftools_isec/chr01_3 ./fastq/invariants/VCMA_chr01.vcf.gz \
 ./freebayes/final_combined/old/freebayes_invariant_chr01_all.vcf.gz \
 ./samtools_VC/old/samtools_invariant_chr01_combined.vcf.gz
-
