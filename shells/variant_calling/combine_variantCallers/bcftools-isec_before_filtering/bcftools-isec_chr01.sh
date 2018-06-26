@@ -2,7 +2,7 @@
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/
 #SBATCH -J 3isehr01
 #SBATCH --account=co_rosalind
-#SBATCH --partition=savio_normal
+#SBATCH --partition=
 #SBATCH --qos=rosalind_normal
 #SBATCH --time=400:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/bcf-isec_chr01_3.out
