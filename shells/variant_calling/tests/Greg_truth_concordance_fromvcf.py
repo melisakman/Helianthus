@@ -31,11 +31,11 @@ for line2 in file2:
 		if truth[pos2] == alt2:
 			all_concord +=1
 # 			print "all3_concord " + line2
-			concordant.append(pos2 + "\t" + truth[pos2] + "\t" alt2)
+			concordant.append(pos2 + "\t" + truth[pos2] + "\t" + alt2)
 		else:
 			all_nonconcord +=1
 # 			print "all3_nonconcord " + line2
-			discordant.append(pos2 + "\t" + truth[pos2] + "\t" alt2)
+			discordant.append(pos2 + "\t" + truth[pos2] + "\t" + alt2)
 
 
 print "concordant ref and alt = " + str(all3_concord) + " non-concordant = " + str(all3_nonconcord)	+ " total = " + str(all)		
