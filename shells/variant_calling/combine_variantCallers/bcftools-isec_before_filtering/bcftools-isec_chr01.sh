@@ -1,8 +1,9 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/
 #SBATCH -J 3isehr01
-#SBATCH --partition=vector
-#SBATCH --qos=vector_batch
+#SBATCH --account=co_rosalind
+#SBATCH --partition=savio
+#SBATCH --qos=rosalind_normal
 #SBATCH --time=400:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/bcf-isec_chr01_3.out
 #SBATCH -e /global/home/users/makman/GATK/outs/bcf-isec_chr01_3.err
