@@ -23,19 +23,22 @@ all_concord = 0
 all_nonconcord = 0
 for line2 in file2:
 	split2 = line2.split("\t")
-	pos2 = split2[1]
-	alt2 = split2[4]
-	qual = split2[5]
-	if pos2 in truth:
-		all +=1
-		if truth[pos2] == alt2:
-			all_concord +=1
-# 			print "all3_concord " + line2
-			concordant.append(pos2 + "\t" + truth[pos2] + "\t" + alt2)
-		else:
-			all_nonconcord +=1
-# 			print "all3_nonconcord " + line2
-			discordant.append(pos2 + "\t" + truth[pos2] + "\t" + alt2)
+	if split[0][0] == "#":
+		continue
+	else:
+		pos2 = split2[1]
+		alt2 = split2[4]
+		qual = split2[5]
+		if pos2 in truth:
+			all +=1
+			if truth[pos2] == alt2:
+				all_concord +=1
+# 				print "all3_concord " + line2
+				concordant.append(pos2 + "\t" + truth[pos2] + "\t" + alt2)
+			else:
+				all_nonconcord +=1
+# 				print "all3_nonconcord " + line2
+				discordant.append(pos2 + "\t" + truth[pos2] + "\t" + alt2)
 
 
 print "concordant ref and alt = " + str(all3_concord) + " non-concordant = " + str(all3_nonconcord)	+ " total = " + str(all)		
