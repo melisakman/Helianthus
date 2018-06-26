@@ -4,8 +4,6 @@
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio
 #SBATCH --qos=rosalind_savio_normal
-#SBATCH --mem=48000
-#SBATCH --ntasks-per-node=1
 #SBATCH --time=400:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/bcf-isec_chr01_3.out
 #SBATCH -e /global/home/users/makman/GATK/outs/bcf-isec_chr01_3.err
