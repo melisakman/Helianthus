@@ -14,7 +14,7 @@
 module load bcftools/1.6
 module unload python
 module load python/2.7.14
-matplotlib/2.1.0
+module load matplotlib/2.1.0
 
 bcftools stats ../freebayes/final_combined/freebayes_invariant_chr01_allFiltered.vcf > freebayes_newFiltering.vchk
 plot-vcfstats freebayes_newFiltering.vchk -p plot_freebayes_newFiltering
@@ -27,3 +27,9 @@ plot-vcfstats GATK_secondFiltering.vchk -p plot_GATK_secondFiltering
 
 bcftools stats ../fastq/invariants/filtered_combined/VCMA_GATK_chr01_sorted.vcf > GATK_hardFiltering.vchk
 plot-vcfstats GATK_hardFiltering.vchk -p plot_GATK_hardFiltering
+
+
+
+bcftools stats ../freebayes/final_combined/freebayes_invariant_chr01_allFiltered_snpnoqual.vcf > freebayes_newFiltering_snpNoqual.vchk
+plot-vcfstats freebayes_newFiltering_snpNoqual.vchk -p plot_freebayes_newFiltering_snpNoqual
+freebayes_invariant_chr01_allFiltered_snpnoqual.vcf
