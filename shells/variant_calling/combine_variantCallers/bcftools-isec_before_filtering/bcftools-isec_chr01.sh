@@ -1,10 +1,11 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/
 #SBATCH -J 3isehr01
-#SBATCH --account=co_rosalind
-#SBATCH --partition=
-#SBATCH --qos=rosalind_normal
-#SBATCH --time=400:00:00
+#SBATCH --account=fc_blackman
+#SBATCH --partition=savio2
+#SBATCH --mem=24000
+#SBATCH --qos=savio_normal
+#SBATCH --time=72:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/bcf-isec_chr01_3.out
 #SBATCH -e /global/home/users/makman/GATK/outs/bcf-isec_chr01_3.err
 #SBATCH --mail-user=makman@berkeley.edu
