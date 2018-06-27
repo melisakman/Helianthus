@@ -22,8 +22,8 @@ for line in input:
 			print 1
 # 			if qual > qual_previous:
 # 				line_to_write = line
-			else:
-				pos_previous = pos
+# 			else:
+# 				pos_previous = pos
 		else:
 # 			output.write(line_to_write)			
 			pos_previous = pos
