@@ -1,19 +1,19 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/
-#SBATCH -J 2isehr01
-#SBATCH --account=fc_blackman
+#SBATCH -J 3isehr01
+#SBATCH --account=co_rosalind
 #SBATCH --partition=savio2_htc
-#SBATCH --mem=10000
-#SBATCH --qos=savio_normal
+#SBATCH --qos=rosalind_htc2_normal
+#SBATCH --cpus-per-task=4
 #SBATCH --time=72:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/bcf-isec_chr01_2.out
-#SBATCH -e /global/home/users/makman/GATK/outs/bcf-isec_chr01_2.err
+#SBATCH -o /global/home/users/makman/GATK/outs/bcf-isec_chr01_3.out
+#SBATCH -e /global/home/users/makman/GATK/outs/bcf-isec_chr01_3.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
 module load bcftools/1.6
 
-# /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c ./fastq/invariants/filtered_combined/VCMA_GATK_chr01_secondFilter.vcf > ./fastq/invariants/filtered_combined/VCMA_GATK_chr01_secondFilter.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c ./fastq/invariants/filtered_combined/VCMA_GATK_chr01_secondFilter.vcf > ./fastq/invariants/filtered_combined/VCMA_GATK_chr01_secondFilter.vcf.gz
 /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c freebayes/final_combined/freebayes_invariant_chr01_allFiltered.vcf  > freebayes/final_combined/freebayes_invariant_chr01_allFiltered.vcf.gz
 /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c samtools_VC/samtools_invariant_chr01_Filtered.vcf > samtools_VC/samtools_invariant_chr01_Filtered.vcf.gz
 
