@@ -13,8 +13,14 @@
 
 module load bio/vcftools
 
-vcftools --gzvcf ../freebayes/final_combined/old/freebayes_invariant_chr01_all.vcf.gz --depth --site-depth --site-mean-depth 
+vcftools --gzvcf ../freebayes/final_combined/old/freebayes_invariant_chr01_all.vcf.gz --depth
+vcftools --gzvcf ../freebayes/final_combined/old/freebayes_invariant_chr01_all.vcf.gz --site-depth
+vcftools --gzvcf ../freebayes/final_combined/old/freebayes_invariant_chr01_all.vcf.gz --site-mean-depth 
 
-vcftools --vcf ../samtools_VC/old/samtools_invariant_chr01_combined.vcf --depth --site-depth --site-mean-depth
+vcftools --vcf ../samtools_VC/old/samtools_invariant_chr01_combined.vcf --depth
+vcftools --vcf ../samtools_VC/old/samtools_invariant_chr01_combined.vcf --site-depth
+vcftools --vcf ../samtools_VC/old/samtools_invariant_chr01_combined.vcf --site-mean-depth
 
-vcftools --vcf ../fastq/invariants/VCMA_chr01.vcf --depth --site-depth --site-mean-depth
+vcftools --vcf ../fastq/invariants/VCMA_chr01.vcf --depth
+vcftools --vcf ../fastq/invariants/VCMA_chr01.vcf --site-depth
+vcftools --vcf ../fastq/invariants/VCMA_chr01.vcf --site-mean-depth
