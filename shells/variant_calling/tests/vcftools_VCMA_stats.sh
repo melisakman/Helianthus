@@ -31,11 +31,15 @@ module load matplotlib/2.1.0
 # bcftools stats ../freebayes/final_combined/freebayes_invariant_chr01_allFiltered_snpnoqual.vcf > freebayes_newFiltering_snpNoqual.vchk
 # plot-vcfstats freebayes_newFiltering_snpNoqual.vchk -p plot_freebayes_newFiltering_snpNoqual
 
-bcftools stats ../freebayes/final_combined/old/freebayes_invariant_chr01_all.vcf.gz > freebayes_raw.vchk
-plot-vcfstats freebayes_raw.vchk -p plot_freebayes_raw
+# bcftools stats ../freebayes/final_combined/old/freebayes_invariant_chr01_all.vcf.gz > freebayes_raw.vchk
+# plot-vcfstats freebayes_raw.vchk -p plot_freebayes_raw
+# 
+# bcftools stats ../samtools_VC/old/samtools_invariant_chr01_combined.vcf  > samtools_raw.vchk
+# plot-vcfstats samtools_raw.vchk -p plot_samtools_raw
+# 
+# bcftools stats ../fastq/invariants/VCMA_chr01.vcf  > GATK_raw.vchk
+# plot-vcfstats GATK_raw.vchk -p plot_GATK_raw
 
-bcftools stats ../samtools_VC/old/samtools_invariant_chr01_combined.vcf  > samtools_raw.vchk
-plot-vcfstats samtools_raw.vchk -p plot_samtools_raw
+bcftools stats ../samtools_VC/samtools_invariant_chr01_Filtered_dupsRemoved.vcf > samtools_invariant_chr01_Filtered_dupsRemoved.vchk
+plot-vcfstats samtools_invariant_chr01_Filtered_dupsRemoved.vchk -p plot_samtools_filtered_dupsRemoved
 
-bcftools stats ../fastq/invariants/VCMA_chr01.vcf  > GATK_raw.vchk
-plot-vcfstats GATK_raw.vchk -p plot_GATK_raw
