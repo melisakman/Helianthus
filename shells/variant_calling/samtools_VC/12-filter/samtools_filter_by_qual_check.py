@@ -15,6 +15,7 @@ for line in input:
 	split = line.split("\t")
 	if split[0][0] == "#":
 # 		output.write(line)
+		continue
 	else:
 # 		qual = float(split[5])
 		pos = split[1]
