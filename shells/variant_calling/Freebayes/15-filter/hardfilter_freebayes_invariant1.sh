@@ -39,6 +39,6 @@ module load java
 
 # cat old/freebayes_invariant_chr01_all.vcf | bcftools filter -g 5 -i 'TYPE = "snp" && QUAL > 20.0 && DP < 60 || TYPE = "indel" && QUAL > 20.0 && DP < 60 || TYPE = "mnp" && QUAL > 20.0 && DP < 60|| TYPE = "ref" && QUAL < 2.723e-15' | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout > freebayes_invariant_chr01_allFiltered_Q20DP60_invariant3rdQuan.vcf
 
-# cat old/freebayes_invariant_chr01_all.vcf | bcftools filter -g 5 -i 'TYPE = "snp" && QUAL > 20.0 && DP < 500 || TYPE = "indel" && QUAL > 20.0 && DP < 60 || TYPE = "mnp" && QUAL > 20.0 && DP < 60|| TYPE = "ref" && QUAL < 2.723e-15' | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout > freebayes_invariant_chr01_allFiltered_Q20DP500_invariant3rdQuan.vcf
+cat old/freebayes_invariant_chr01_all.vcf | bcftools filter -g 5 -i 'TYPE = "snp" && QUAL > 20.0 && DP < 500 || TYPE = "indel" && QUAL > 20.0 && DP < 60 || TYPE = "mnp" && QUAL > 20.0 && DP < 60|| TYPE = "ref" && QUAL < 2.723e-15' | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout > freebayes_invariant_chr01_allFiltered_Q20DP500_invariant3rdQuan.vcf
 
 cat old/freebayes_invariant_chr01_all.vcf | bcftools filter -g 5 -i 'TYPE = "snp" && QUAL/DP > 0.25 || TYPE = "indel" && QUAL/DP > 0.25 || TYPE = "mnp" && QUAL/DP > 0.25|| TYPE = "ref" && QUAL < 2.723e-15' | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout > freebayes_invariant_chr01_allFiltered_QbyDP025_invariant3rdQuan.vcf
