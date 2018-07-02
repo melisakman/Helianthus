@@ -5,7 +5,7 @@
 #SBATCH --partition=savio
 #SBATCH --qos=rosalind_savio_normal
 #SBATCH --cpus-per-task=4
-#SBATCH --time=72:00:00
+#SBATCH --time=24:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/bcftools_filter2_freebayes1b.out
 #SBATCH -e /global/home/users/makman/GATK/outs/bcftools_filter2_freebayes1b.err
 #SBATCH --mail-user=makman@berkeley.edu
