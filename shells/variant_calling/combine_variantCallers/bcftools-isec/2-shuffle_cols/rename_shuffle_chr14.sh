@@ -5,7 +5,7 @@
 #SBATCH --qos=vector_batch
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=6
-#SBATCH --time=800:00:00
+#SBATCH --time=32:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/rename_shuffle_chr14.out
 #SBATCH -e /global/home/users/makman/GATK/outs/rename_shuffle_chr14.err
 #SBATCH --mail-user=makman@berkeley.edu
