@@ -1,4 +1,4 @@
-q#!/bin/bash 
+#!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/bcftools_isec/chr01_2
 #SBATCH -J shfchr01
 #SBATCH --partition=vector
