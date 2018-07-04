@@ -33,4 +33,7 @@ module load java
 # zcat VCMA_GATK_chr17_sorted.vcf.gz | bcftools filter -g 5 -i 'QUAL > 50 || MQ > 40 || TYPE = "indel" || TYPE = "snp" || TYPE = "mnp" || TYPE = "ref"' | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | gzip -c > VCMA_GATK_chr17_secondFilter.vcf.gz
 
 
-cat VCMA_GATK_chr01_sorted.vcf | bcftools filter -g 5 -i 'TYPE = "indel" && QUAL > 40 && MQ > 40 || TYPE = "snp" && QUAL > 40 && MQ > 40 || TYPE = "mnp" && QUAL > 40 && MQ > 40 || TYPE = "ref" && QUAL > 40 && MQ > 40 ' | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout > VCMA_GATK_chr01_secondFilter_2.vcf
+cat VCMA_GATK_chr01_sorted.vcf | bcftools filter -g 5 -i 'TYPE = "indel" && QUAL > 40 || TYPE = "snp" && QUAL > 40 || TYPE = "mnp" && QUAL > 40 || TYPE = "ref" && QUAL > 40' | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout > VCMA_GATK_chr01_secondFilter_3.vcf
+
+cat VCMA_GATK_chr01_sorted.vcf | bcftools filter -g 5 -i 'TYPE = "indel" && QUAL > 40 || TYPE = "snp" && QUAL > 40 || TYPE = "mnp" && QUAL > 40 || TYPE = "ref" && QUAL > 40 && MQ > 40' | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout > VCMA_GATK_chr01_secondFilter_2.vcf
+
