@@ -4,7 +4,7 @@
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio
 #SBATCH --qos=rosalind_savio_normal
-#SBATCH --time=24:00:00
+#SBATCH --time=8:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/bcf-isec_chr04.out
 #SBATCH -e /global/home/users/makman/GATK/outs/bcf-isec_chr04.err
 #SBATCH --mail-user=makman@berkeley.edu
