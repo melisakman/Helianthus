@@ -37,4 +37,4 @@ cat VCMA_GATK_chr01_sorted.vcf | bcftools filter -g 5 -i 'TYPE = "indel" && QUAL
 
 cat VCMA_GATK_chr01_sorted.vcf | bcftools filter -g 5 -i 'TYPE = "indel" && QUAL > 40 || TYPE = "snp" && QUAL > 40 || TYPE = "mnp" && QUAL > 40 || TYPE = "ref" && QUAL > 40' | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout > VCMA_GATK_chr01_secondFilter_2.vcf
 
-cat VCMA_GATK_chr01_sorted.vcf | bcftools filter -g 5 -i 'TYPE = "indel" && QUAL > 20 || TYPE = "snp" && QUAL > 20 || TYPE = "mnp" && QUAL > 20 || TYPE = "ref" && QUAL > 40' | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout > VCMA_GATK_chr01_secondFilter_4.vcf
+cat VCMA_GATK_chr01_sorted.vcf | bcftools filter -g 5 -i 'TYPE = "indel" && QUAL > 20 || TYPE = "snp" && QUAL > 20 || TYPE = "mnp" && QUAL > 20 || TYPE = "ref" && QUAL > 20' | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout > VCMA_GATK_chr01_secondFilter_4.vcf
