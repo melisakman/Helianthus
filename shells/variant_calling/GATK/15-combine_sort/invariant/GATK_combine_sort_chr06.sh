@@ -5,7 +5,7 @@
 #SBATCH --qos=vector_batch
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
-#SBATCH --time=800:00:00
+#SBATCH --time=30:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/GATK_filtered_combineSort_chr06.out
 #SBATCH -e /global/home/users/makman/GATK/outs/GATK_filtered_combineSort_chr06.err
 #SBATCH --mail-user=makman@berkeley.edu
