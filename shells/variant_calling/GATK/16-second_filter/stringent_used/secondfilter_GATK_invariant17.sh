@@ -5,7 +5,7 @@
 #SBATCH --qos=vector_batch
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=6
-#SBATCH --time=800:00:0067
+#SBATCH --time=24:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/bcftools_filter_GATK17.out
 #SBATCH -e /global/home/users/makman/GATK/outs/bcftools_filter_GATK17.err
 #SBATCH --mail-user=makman@berkeley.edu
@@ -35,3 +35,4 @@ zcat VCMA_GATK_chr17_sorted.vcf.gz | vcftools --vcf - --minDP 3 --max-missing 0.
 
 
 # zcat VCMA_GATK_chr01_sorted.vcf.gz | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > VCMA_GATK_chr01_secondFilter.vcf.gz
+

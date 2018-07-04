@@ -1,11 +1,10 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/invariants/filtered_combined/
 #SBATCH -J filGK7
-#SBATCH --partition=vector
-#SBATCH --qos=vector_batch
-#SBATCH --ntasks=1
-#SBATCH --cpus-per-task=6
-#SBATCH --time=800:00:0067
+#SBATCH --account=co_rosalind
+#SBATCH --partition=savio
+#SBATCH --qos=rosalind_savio_normal
+#SBATCH --time=24:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/bcftools_filter_GATK7.out
 #SBATCH -e /global/home/users/makman/GATK/outs/bcftools_filter_GATK7.err
 #SBATCH --mail-user=makman@berkeley.edu
