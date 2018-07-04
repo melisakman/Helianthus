@@ -24,3 +24,4 @@ module load bcftools/1.6
 bcftools isec -n +2 -O z -p bcftools_isec/chr17_2 fastq/invariants/filtered_combined/VCMA_GATK_chr17_secondFilter.vcf.gz \
 samtools_VC/samtools_invariant_chr17_Filtered_dupsRemoved.vcf.gz \
 freebayes/final_combined/freebayes_invariant_chr17_allFiltered.vcf.gz
+

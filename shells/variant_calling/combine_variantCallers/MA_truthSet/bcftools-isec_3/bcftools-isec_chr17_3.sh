@@ -5,7 +5,7 @@
 #SBATCH --partition=savio2_htc
 #SBATCH --qos=rosalind_htc2_normal
 #SBATCH --cpus-per-task=4
-#SBATCH --time=24:00:00
+#SBATCH --time=8:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/bcf-isec_chr17.out
 #SBATCH -e /global/home/users/makman/GATK/outs/bcf-isec_chr17.err
 #SBATCH --mail-user=makman@berkeley.edu
@@ -24,3 +24,5 @@ module load bcftools/1.6
 bcftools isec -n =3 -O z -p bcftools_isec/chr17_3 fastq/invariants/filtered_combined/VCMA_GATK_chr17_secondFilter.vcf.gz \
 samtools_VC/samtools_invariant_chr17_Filtered_dupsRemoved.vcf.gz \
 freebayes/final_combined/freebayes_invariant_chr17_allFiltered.vcf.gz
+
+

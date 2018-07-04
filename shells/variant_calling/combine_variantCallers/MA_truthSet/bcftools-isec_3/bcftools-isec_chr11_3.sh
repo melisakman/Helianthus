@@ -5,7 +5,7 @@
 #SBATCH --partition=savio2_htc
 #SBATCH --qos=rosalind_htc2_normal
 #SBATCH --cpus-per-task=4
-#SBATCH --time=24:00:00
+#SBATCH --time=8:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/bcf-isec_chr11.out
 #SBATCH -e /global/home/users/makman/GATK/outs/bcf-isec_chr11.err
 #SBATCH --mail-user=makman@berkeley.edu
