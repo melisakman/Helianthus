@@ -22,3 +22,4 @@ vcf-sort -t /clusterfs/rosalind/users/makman/temp VCMA_GATK_chr06_unsorted.vcf >
 /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c filtered_combined/VCMA_GATK_chr06_sorted.vcf > filtered_combined/VCMA_GATK_chr06_sorted.vcf.gz 
 
 zcat filtered_combined/VCMA_GATK_chr06_sorted.vcf.gz | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > filtered_combined/VCMA_GATK_chr06_secondFilter.vcf.gz
+
