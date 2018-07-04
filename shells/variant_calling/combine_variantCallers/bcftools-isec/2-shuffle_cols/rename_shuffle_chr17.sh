@@ -5,7 +5,7 @@
 #SBATCH --qos=vector_batch
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=6
-#SBATCH --time=32:00:00
+#SBATCH --time=8:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/rename_shuffle_chr17.out
 #SBATCH -e /global/home/users/makman/GATK/outs/rename_shuffle_chr17.err
 #SBATCH --mail-user=makman@berkeley.edu
@@ -21,3 +21,4 @@ bcftools view -S ../old/secondFilter/sample_names.txt 0000.vcf.gz | bcftools reh
 
 /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t 0000_renamed.vcf.gz 0001.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > 0001_sorted.vcf.gz
 /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t 0000_renamed.vcf.gz 0002.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > 0002_sorted.vcf.gz
+
