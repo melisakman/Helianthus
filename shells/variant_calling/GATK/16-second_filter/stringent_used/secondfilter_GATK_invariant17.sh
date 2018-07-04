@@ -34,3 +34,4 @@ module load java
 zcat VCMA_GATK_chr17_sorted.vcf.gz | bcftools filter -g 5 -i 'QUAL > 50 || MQ > 40 || TYPE = "indel" || TYPE = "snp" || TYPE = "mnp" || TYPE = "ref"' | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | gzip -c > VCMA_GATK_chr17_secondFilter.vcf.gz
 
 
+# zcat VCMA_GATK_chr01_sorted.vcf.gz | bcftools filter -g 5 -i 'QUAL > 50 || MQ > 40 || TYPE = "indel" || TYPE = "snp" || TYPE = "mnp" || TYPE = "ref"' | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | gzip -c > VCMA_GATK_chr01_secondFilter.vcf.gz
