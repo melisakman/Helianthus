@@ -5,7 +5,7 @@
 #SBATCH --partition=savio2_htc
 #SBATCH --qos=rosalind_htc2_normal
 #SBATCH --cpus-per-task=4
-#SBATCH --time=72:00:00
+#SBATCH --time=6:00:00
 #SBATCH -o /global/home/users/makman/vcftools/outs/vcftools_truth_stats.out
 #SBATCH -e /global/home/users/makman/vcftools/outs/vcftools_truth_stats.err
 #SBATCH --mail-user=makman@berkeley.edu
