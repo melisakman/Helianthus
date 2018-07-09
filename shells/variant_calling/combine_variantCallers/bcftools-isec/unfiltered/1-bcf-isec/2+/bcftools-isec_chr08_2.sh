@@ -16,6 +16,6 @@ module load bcftools/1.6
 /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix samtools_VC/old/samtools_invariant_chr08.vcf.gz
 /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix freebayes/final_combined/old/freebayes_invariant_chr08_all.vcf.gz
 
-bcftools isec -n +2 -O z -p bcftools_isec/chr08_2 fastq/invariants/VCMA_chr08.vcf.gz \
+bcftools isec -n +2 -O z -p bcftools_isec/unfiltered/chr08_2 fastq/invariants/VCMA_chr08.vcf.gz \
 samtools_VC/old/samtools_invariant_chr08.vcf.gz \
 freebayes/final_combined/old/freebayes_invariant_chr08_all.vcf.gz
