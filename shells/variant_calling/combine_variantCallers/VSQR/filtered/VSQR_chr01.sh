@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/rosalind/users/makman/GATK/bcftools_isec/chr01_3
+#SBATCH -D /clusterfs/rosalind/users/makman/GATK/bcftools_isec/chr01_2
 #SBATCH -J VSQchr01
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
@@ -11,21 +11,26 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
+java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
+   -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
+   -T VariantAnnotator \
+   -V chr01_intersect.vcf.gz \
+   -o chr01_intersect_annot.vcf.gz \
+   -A QD -A DP -A FS -A SOR -A MQRankSum -A ReadPosRankSum -A InbreedingCoeff -A MQ
 
-
-java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T SelectVariants \
-	-R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
-	-V chr01_intersect.vcf.gz \
-	-selectType SNP \
-	-o chr01_intersect_SNP.vcf.gz 
-
-java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
--T VariantRecalibrator \
--nt 6 \
--R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
--input chr01_intersect_SNP.vcf.gz
--an QD -an MQ -an MQRankSum -an ReadPosRankSum -an FS -an SOR -an InbreedingCoeff \
--mode SNP \
--recalFile output.recal \
--tranchesFile output.tranches \
--rscriptFile output.plots.R
+# java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T SelectVariants \
+# 	-R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
+# 	-V chr01_intersect.vcf.gz \
+# 	-selectType SNP \
+# 	-o chr01_intersect_SNP.vcf.gz 
+# 
+# java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
+# -T VariantRecalibrator \
+# -nt 6 \
+# -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
+# -input chr01_intersect_SNP.vcf.gz
+# -an QD -an MQ -an MQRankSum -an ReadPosRankSum -an FS -an SOR -an InbreedingCoeff \
+# -mode SNP \
+# -recalFile output.recal \
+# -tranchesFile output.tranches \
+# -rscriptFile output.plots.R
