@@ -15,7 +15,7 @@
 #SBATCH --mail-type=All
 module load bcftools/1.6
 TMPDIR=/clusterfs/rosalind/users/makman/temp
-bcftools mpileup -Ou --max-depth 100 -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -r HanXRQChr02:13415071- \
+bcftools mpileup -Ou --max-depth 100 -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa -r HanXRQChr02 \
 Anzac_Pueblo_sorted_markdup_recal_RG.bam \
 Arikara_sorted_markdup_recal_RG.bam \
 HA124_sorted_markdup_recal_RG.bam \
@@ -92,4 +92,4 @@ Mex_A1516_sorted_markdup_readGroups_recal_RG.bam \
 Mex_A1517_sorted_markdup_readGroups_recal_RG.bam \
 Mex_A1572_sorted_markdup_readGroups_recal_RG.bam \
 Mex_A1574_sorted_markdup_readGroups_recal_RG.bam \
-Mex_Ann261_sorted_markdup_readGroups_recal_RG.bam | bcftools call -Oz -m > ../samtools_VC/samtools_invariant_chr02b.vcf.gz
+Mex_Ann261_sorted_markdup_readGroups_recal_RG.bam | bcftools call -Oz -m > ../samtools_VC/samtools_invariant_chr02_new.vcf.gz
