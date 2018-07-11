@@ -14,7 +14,7 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load java
-
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix chr01_intersect.vcf.gz
 java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
    -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
    -T VariantAnnotator \
