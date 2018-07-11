@@ -1,13 +1,13 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/samtools_VC/
-#SBATCH -J filST1
+#SBATCH -J testST1
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio2_htc
 #SBATCH --qos=rosalind_htc2_normal
 #SBATCH --cpus-per-task=4
 #SBATCH --time=72:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/bcftools_filterUpdate_samtools1.out
-#SBATCH -e /global/home/users/makman/GATK/outs/bcftools_filterUpdate_samtools1.err
+#SBATCH -o /global/home/users/makman/GATK/outs/bcftools_filtertest_samtools1.out
+#SBATCH -e /global/home/users/makman/GATK/outs/bcftools_filtertest_samtools1.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
@@ -17,9 +17,9 @@ export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcfto
 module load java
 
 # cat old/samtools_invariant_chr01_combined.vcf | bcftools filter -g 5 -i 'TYPE = "indel" || TYPE = "snp" || TYPE = "mnp" || TYPE = "ref"' | bcftools filter -g 5 -i 'QUAL/DP > 2.0 && QUAL > 20 && MQ > 40' | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | vcf-sort -t /clusterfs/rosalind/users/makman/temp | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > samtools_invariant_chr01_Filtered.vcf.gz
-zcat old/samtools_invariant_chr02_combined.vcf.gz | bcftools filter -g 5 -i 'TYPE = "indel" || TYPE = "snp" || TYPE = "mnp" || TYPE = "ref"' | bcftools filter -g 5 -i 'QUAL/DP > 2.0 && QUAL > 20 && MQ > 40' | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | vcf-sort -t /clusterfs/rosalind/users/makman/temp > samtools_invariant_chr02_Filtered.vcf
-zcat old/samtools_invariant_chr03_combined.vcf.gz | bcftools filter -g 5 -i 'TYPE = "indel" || TYPE = "snp" || TYPE = "mnp" || TYPE = "ref"' | bcftools filter -g 5 -i 'QUAL/DP > 2.0 && QUAL > 20 && MQ > 40' | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | vcf-sort -t /clusterfs/rosalind/users/makman/temp > samtools_invariant_chr03_Filtered.vcf
-zcat old/samtools_invariant_chr04_combined.vcf.gz | bcftools filter -g 5 -i 'TYPE = "indel" || TYPE = "snp" || TYPE = "mnp" || TYPE = "ref"' | bcftools filter -g 5 -i 'QUAL/DP > 2.0 && QUAL > 20 && MQ > 40' | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | vcf-sort -t /clusterfs/rosalind/users/makman/temp > samtools_invariant_chr04_Filtered.vcf
+# zcat old/samtools_invariant_chr02_combined.vcf.gz | bcftools filter -g 5 -i 'TYPE = "indel" || TYPE = "snp" || TYPE = "mnp" || TYPE = "ref"' | bcftools filter -g 5 -i 'QUAL/DP > 2.0 && QUAL > 20 && MQ > 40' | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | vcf-sort -t /clusterfs/rosalind/users/makman/temp > samtools_invariant_chr02_Filtered.vcf
+# zcat old/samtools_invariant_chr03_combined.vcf.gz | bcftools filter -g 5 -i 'TYPE = "indel" || TYPE = "snp" || TYPE = "mnp" || TYPE = "ref"' | bcftools filter -g 5 -i 'QUAL/DP > 2.0 && QUAL > 20 && MQ > 40' | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | vcf-sort -t /clusterfs/rosalind/users/makman/temp > samtools_invariant_chr03_Filtered.vcf
+# zcat old/samtools_invariant_chr04_combined.vcf.gz | bcftools filter -g 5 -i 'TYPE = "indel" || TYPE = "snp" || TYPE = "mnp" || TYPE = "ref"' | bcftools filter -g 5 -i 'QUAL/DP > 2.0 && QUAL > 20 && MQ > 40' | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | vcf-sort -t /clusterfs/rosalind/users/makman/temp > samtools_invariant_chr04_Filtered.vcf
 # zcat old/samtools_invariant_chr05.vcf.gz | bcftools filter -g 5 -i 'TYPE = "indel" || TYPE = "snp" || TYPE = "mnp" || TYPE = "ref"' | bcftools filter -g 5 -i 'QUAL/DP > 2.0 && QUAL > 20 && MQ > 40' | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | vcf-sort -t /clusterfs/rosalind/users/makman/temp | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > samtools_invariant_chr05_Filtered.vcf.gz
 # zcat old/samtools_invariant_chr06.vcf.gz | bcftools filter -g 5 -i 'TYPE = "indel" || TYPE = "snp" || TYPE = "mnp" || TYPE = "ref"' | bcftools filter -g 5 -i 'QUAL/DP > 2.0 && QUAL > 20 && MQ > 40' | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | vcf-sort -t /clusterfs/rosalind/users/makman/temp | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > samtools_invariant_chr06_Filtered.vcf.gz
 # zcat old/samtools_invariant_chr07.vcf.gz | bcftools filter -g 5 -i 'TYPE = "indel" || TYPE = "snp" || TYPE = "mnp" || TYPE = "ref"' | bcftools filter -g 5 -i 'QUAL/DP > 2.0 && QUAL > 20 && MQ > 40' | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | vcf-sort -t /clusterfs/rosalind/users/makman/temp | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > samtools_invariant_chr07_Filtered.vcf.gz
@@ -35,3 +35,15 @@ zcat old/samtools_invariant_chr04_combined.vcf.gz | bcftools filter -g 5 -i 'TYP
 # zcat old/samtools_invariant_chr17.vcf.gz | bcftools filter -g 5 -i 'TYPE = "indel" || TYPE = "snp" || TYPE = "mnp" || TYPE = "ref"' | bcftools filter -g 5 -i 'QUAL/DP > 2.0 && QUAL > 20 && MQ > 40' | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | vcf-sort -t /clusterfs/rosalind/users/makman/temp | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > samtools_invariant_chr17_Filtered.vcf.gz
 
 
+
+
+cat old/samtools_invariant_chr01_combined.vcf | bcftools filter -g 5 -i 'TYPE = "indel" || TYPE = "snp" || TYPE = "mnp" || TYPE = "ref"' | bcftools filter -g 5 -i 'QUAL/DP > 2.0' | vcf-sort -t /clusterfs/rosalind/users/makman/temp > test_filters/samtools_invariant_chr01_Filtered_test1.vcf
+cat old/samtools_invariant_chr01_combined.vcf | bcftools filter -g 5 -i 'TYPE = "indel" || TYPE = "snp" || TYPE = "mnp" || TYPE = "ref"' | bcftools filter -g 5 -i 'QUAL > 20' | vcf-sort -t /clusterfs/rosalind/users/makman/temp > test_filters/samtools_invariant_chr01_Filtered_test2.vcf
+cat old/samtools_invariant_chr01_combined.vcf | bcftools filter -g 5 -i 'TYPE = "indel" || TYPE = "snp" || TYPE = "mnp" || TYPE = "ref"' | bcftools filter -g 5 -i 'MQ > 40' | vcf-sort -t /clusterfs/rosalind/users/makman/temp > test_filters/samtools_invariant_chr01_Filtered_test3.vcf
+cat old/samtools_invariant_chr01_combined.vcf | bcftools filter -g 5 -i 'TYPE = "indel" || TYPE = "snp" || TYPE = "mnp" || TYPE = "ref"' | vcftools --vcf - --minDP 3 --recode --stdout | vcf-sort -t /clusterfs/rosalind/users/makman/temp > test_filters/samtools_invariant_chr01_Filtered_test4.vcf
+cat old/samtools_invariant_chr01_combined.vcf | bcftools filter -g 5 -i 'TYPE = "indel" || TYPE = "snp" || TYPE = "mnp" || TYPE = "ref"' | vcftools --vcf - --maxDP 25 --recode --stdout | vcf-sort -t /clusterfs/rosalind/users/makman/temp > test_filters/samtools_invariant_chr01_Filtered_test5.vcf
+cat old/samtools_invariant_chr01_combined.vcf | bcftools filter -g 5 -i 'TYPE = "indel" || TYPE = "snp" || TYPE = "mnp" || TYPE = "ref"' | vcftools --vcf - --max-missing 0.8 --recode --stdout | vcf-sort -t /clusterfs/rosalind/users/makman/temp > test_filters/samtools_invariant_chr01_Filtered_test6.vcf
+cat old/samtools_invariant_chr01_combined.vcf | bcftools filter -g 5 -i 'TYPE = "indel" || TYPE = "snp" || TYPE = "mnp" || TYPE = "ref"' | bcftools filter -g 5 -i 'QUAL/DP > 2.0 && QUAL > 20' | vcf-sort -t /clusterfs/rosalind/users/makman/temp > test_filters/samtools_invariant_chr01_Filtered_test7.vcf
+cat old/samtools_invariant_chr01_combined.vcf | bcftools filter -g 5 -i 'TYPE = "indel" || TYPE = "snp" || TYPE = "mnp" || TYPE = "ref"' | bcftools filter -g 5 -i 'QUAL/DP > 2.0 && QUAL > 20 && MQ > 40' | vcf-sort -t /clusterfs/rosalind/users/makman/temp > test_filters/samtools_invariant_chr01_Filtered_test8.vcf
+cat old/samtools_invariant_chr01_combined.vcf | bcftools filter -g 5 -i 'TYPE = "indel" || TYPE = "snp" || TYPE = "mnp" || TYPE = "ref"' | bcftools filter -g 5 -i 'QUAL/DP > 2.0 && QUAL > 20 && MQ > 40' | vcftools --vcf - --minDP 3 --recode --stdout | vcf-sort -t /clusterfs/rosalind/users/makman/temp > test_filters/samtools_invariant_chr01_Filtered_test9.vcf
+cat old/samtools_invariant_chr01_combined.vcf | bcftools filter -g 5 -i 'TYPE = "indel" || TYPE = "snp" || TYPE = "mnp" || TYPE = "ref"' | bcftools filter -g 5 -i 'QUAL/DP > 2.0 && QUAL > 20 && MQ > 40' | vcftools --vcf - --minDP 3 --maxDP 25 --recode --stdout | vcf-sort -t /clusterfs/rosalind/users/makman/temp > test_filters/samtools_invariant_chr01_Filtered_test10.vcf
