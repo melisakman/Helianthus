@@ -4,7 +4,7 @@
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio
 #SBATCH --qos=rosalind_savio_normal
-#SBATCH --time=24:00:00
+#SBATCH --time=48:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/bcftools_filter2_freebayes1.out
 #SBATCH -e /global/home/users/makman/GATK/outs/bcftools_filter2_freebayes1.err
 #SBATCH --mail-user=makman@berkeley.edu
@@ -51,6 +51,6 @@ module load java
 # cat old/freebayes_invariant_chr01_all.vcf | bcftools filter -g 5 -i 'TYPE = "snp" && QUAL > 20 && MQM > 40 || TYPE = "indel" && QUAL > 20 && MQM > 40 || TYPE = "mnp" && QUAL > 20 && MQM > 40 || TYPE = "ref" && QUAL < 2.723e-15 && MQMR > 40' | vcftools --vcf - --minDP 3 --maxDP 25 --recode --stdout > test_filters/freebayes_invariant_chr01_allFiltered_test4.vcf
 # cat old/freebayes_invariant_chr01_all.vcf | bcftools filter -g 5 -i 'TYPE = "snp" && QUAL > 20 && MQM > 40 || TYPE = "indel" && QUAL > 20 && MQM > 40 || TYPE = "mnp" && QUAL > 20 && MQM > 40 || TYPE = "ref" && QUAL < 2.723e-15 && MQMR > 40' | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout > test_filters/freebayes_invariant_chr01_test5.vcf
 # cat old/freebayes_invariant_chr01_all.vcf | bcftools filter -g 5 -i 'TYPE = "snp" && MQM > 40 || TYPE = "indel" && MQM > 40 || TYPE = "mnp" && MQM > 40 || TYPE = "ref" && MQMR > 40' > freebayes_invariant_chr01_allFiltered_test6.vcf
-cat old/freebayes_invariant_chr01_all.vcf | vcftools --vcf - --maxDP 25 --recode --stdout > test_filters/freebayes_invariant_chr01_allFiltered_test8.vcf
-cat old/freebayes_invariant_chr01_all.vcf | vcftools --vcf - --max-missing 0.8 --recode --stdout > test_filters/freebayes_invariant_chr01_test9.vcf
+# cat old/freebayes_invariant_chr01_all.vcf | vcftools --vcf - --maxDP 25 --recode --stdout > test_filters/freebayes_invariant_chr01_allFiltered_test8.vcf
+# cat old/freebayes_invariant_chr01_all.vcf | vcftools --vcf - --max-missing 0.8 --recode --stdout > test_filters/freebayes_invariant_chr01_test9.vcf
 cat old/freebayes_invariant_chr01_all.vcf | vcftools --vcf - --minDP 3 --recode --stdout > test_filters/freebayes_invariant_chr01_allFiltered_test7.vcf
