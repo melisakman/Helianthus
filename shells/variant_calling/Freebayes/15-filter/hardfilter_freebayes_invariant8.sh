@@ -2,8 +2,9 @@
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/freebayes/final_combined
 #SBATCH -J filFB8
 #SBATCH --account=co_rosalind
-#SBATCH --partition=savio
-#SBATCH --qos=rosalind_savio_normal
+#SBATCH --partition=savio2_htc
+#SBATCH --qos=rosalind_htc2_normal
+#SBATCH --cpus-per-task=4
 #SBATCH --time=24:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/bcftools_filter2_freebayes8.out
 #SBATCH -e /global/home/users/makman/GATK/outs/bcftools_filter2_freebayes8.err
