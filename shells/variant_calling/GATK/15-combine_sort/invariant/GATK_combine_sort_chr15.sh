@@ -19,5 +19,5 @@ module load bio/vcftools/0.1.15
 export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
 
 # vcf-concat VCMA_chr15_NO_VARIATION_hardfiltered.vcf.gz VCMA_chr15_SNP_hardfiltered.vcf.gz VCMA_chr15_indel_hardfiltered.vcf.gz > VCMA_GATK_chr15_unsorted.vcf
-vcf-sort -t /global/scratch/makman/temp_files/ VCMA_GATK_chr15_unsorted.vcf > filtered_combined/VCMA_GATK_chr15_sorted.vcf
-/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c filtered_combined/VCMA_GATK_chr15_sorted.vcf > filtered_combined/VCMA_GATK_chr15_sorted.vcf.gz 
+vcf-sort -t /global/scratch/makman/temp_files/ VCMA_GATK_chr15_unsorted.vcf > filtered_combined/VCMA_GATK_chr15_hardFiltered_sorted.vcf
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c filtered_combined/VCMA_GATK_chr15_hardFiltered_sorted.vcf > filtered_combined/VCMA_GATK_chr15_hardFiltered_sorted.vcf.gz 

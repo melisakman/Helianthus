@@ -17,9 +17,9 @@ module load bio/vcftools/0.1.15
 export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
 
 vcf-concat VCMA_chr06_NO_VARIATION_hardfiltered.vcf.gz VCMA_chr06_SNP_hardfiltered.vcf.gz VCMA_chr06_indel_hardfiltered.vcf.gz > VCMA_GATK_chr06_unsorted.vcf
-vcf-sort -t /clusterfs/rosalind/users/makman/temp VCMA_GATK_chr06_unsorted.vcf > filtered_combined/VCMA_GATK_chr06_sorted.vcf
+vcf-sort -t /clusterfs/rosalind/users/makman/temp VCMA_GATK_chr06_unsorted.vcf > filtered_combined/VCMA_GATK_chr06_hardFiltered_sorted.vcf
 
-/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c filtered_combined/VCMA_GATK_chr06_sorted.vcf > filtered_combined/VCMA_GATK_chr06_sorted.vcf.gz 
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c filtered_combined/VCMA_GATK_chr06_hardFiltered_sorted.vcf > filtered_combined/VCMA_GATK_chr06_hardFiltered_sorted.vcf.gz 
 
-zcat filtered_combined/VCMA_GATK_chr06_sorted.vcf.gz | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > filtered_combined/VCMA_GATK_chr06_secondFilter.vcf.gz
+zcat filtered_combined/VCMA_GATK_chr06_hardFiltered_sorted.vcf.gz | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > filtered_combined/VCMA_GATK_chr06_secondFilter.vcf.gz
 
