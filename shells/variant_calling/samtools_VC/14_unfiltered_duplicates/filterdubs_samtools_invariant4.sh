@@ -14,7 +14,7 @@
 # gunzip samtools_invariant_chr01.vcf.gz 
 # gunzip samtools_invariant_chr02.vcf.gz 
 # gunzip samtools_invariant_chr03.vcf.gz 
-gunzip samtools_invariant_chr04.vcf.gz 
+gunzip samtools_invariant_chr04_combined.vcf.gz 
 # gunzip samtools_invariant_chr05.vcf.gz 
 # gunzip samtools_invariant_chr06.vcf.gz 
 # gunzip samtools_invariant_chr07.vcf.gz 
@@ -32,7 +32,7 @@ gunzip samtools_invariant_chr04.vcf.gz
 # python ~/git/Helianthus/shells/variant_calling/samtools_VC/12-filter/samtools_filter_by_qual.py samtools_invariant_chr01.vcf samtools_invariant_chr01_dupsRemoved.vcf
 # python ~/git/Helianthus/shells/variant_calling/samtools_VC/12-filter/samtools_filter_by_qual.py samtools_invariant_chr02.vcf samtools_invariant_chr02_dupsRemoved.vcf
 # python ~/git/Helianthus/shells/variant_calling/samtools_VC/12-filter/samtools_filter_by_qual.py samtools_invariant_chr03.vcf samtools_invariant_chr03_dupsRemoved.vcf
-python ~/git/Helianthus/shells/variant_calling/samtools_VC/12-filter/samtools_filter_by_qual.py samtools_invariant_chr04.vcf samtools_invariant_chr04_dupsRemoved.vcf
+python ~/git/Helianthus/shells/variant_calling/samtools_VC/12-filter/samtools_filter_by_qual.py samtools_invariant_chr04_combined.vcf samtools_invariant_chr04_dupsRemoved.vcf
 # python ~/git/Helianthus/shells/variant_calling/samtools_VC/12-filter/samtools_filter_by_qual.py samtools_invariant_chr05.vcf samtools_invariant_chr05_dupsRemoved.vcf
 # python ~/git/Helianthus/shells/variant_calling/samtools_VC/12-filter/samtools_filter_by_qual.py samtools_invariant_chr06.vcf samtools_invariant_chr06_dupsRemoved.vcf
 # python ~/git/Helianthus/shells/variant_calling/samtools_VC/12-filter/samtools_filter_by_qual.py samtools_invariant_chr07.vcf samtools_invariant_chr07_dupsRemoved.vcf
