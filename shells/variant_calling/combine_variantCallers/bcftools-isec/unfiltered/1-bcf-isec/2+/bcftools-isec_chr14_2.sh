@@ -12,10 +12,11 @@
 #SBATCH --mail-type=All
 
 module load bcftools/1.6
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c samtools_VC/old/samtools_invariant_chr14_dupsRemoved.vcf > samtools_VC/old/samtools_invariant_chr14_dupsRemoved.vcf.gz
 
-/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix samtools_VC/old/samtools_invariant_chr14.vcf.gz
-/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix freebayes/final_combined/old/freebayes_invariant_chr14_all.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix samtools_VC/old/samtools_invariant_chr14_dupsRemoved.vcf.gz
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix freebayes/final_combined/old/freebayes_invariant_chr14_all.vcf.gz
 
 bcftools isec -n +2 -O z -p bcftools_isec/unfiltered/chr14_2 fastq/invariants/VCMA_chr14.vcf.gz \
-samtools_VC/old/samtools_invariant_chr14.vcf.gz \
+samtools_VC/old/samtools_invariant_chr14_dupsRemoved.vcf.gz \
 freebayes/final_combined/old/freebayes_invariant_chr14_all.vcf.gz
