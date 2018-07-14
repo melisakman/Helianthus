@@ -2,8 +2,9 @@
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/
 #SBATCH -J 2_chr09
 #SBATCH --account=co_rosalind
-#SBATCH --partition=savio
-#SBATCH --qos=rosalind_savio_normal
+#SBATCH --partition=savio2_htc
+#SBATCH --qos=rosalind_htc2_normal
+#SBATCH --cpus-per-task=4
 #SBATCH --time=80:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/bcf-isec_chr09.out
 #SBATCH -e /global/home/users/makman/GATK/outs/bcf-isec_chr09.err
