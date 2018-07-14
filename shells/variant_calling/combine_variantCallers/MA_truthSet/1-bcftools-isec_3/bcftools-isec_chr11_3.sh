@@ -15,12 +15,12 @@ module load bcftools/1.6
 
 # /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c fastq/invariants/filtered_combined/VCMA_GATK_chr11_secondFilter.vcf > fastq/invariants/filtered_combined/VCMA_GATK_chr11_secondFilter.vcf.gz
 # /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c freebayes/final_combined/freebayes_invariant_chr11_allFiltered.vcf > freebayes/final_combined/freebayes_invariant_chr11_allFiltered.vcf.gz
-# /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c samtools_VC/samtools_invariant_chr11_Filtered_dupsRemoved.vcf > samtools_VC/samtools_invariant_chr11_Filtered_dupsRemoved.vcf.gz
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c samtools_VC/samtools_invariant_chr11_Filtered.vcf > samtools_VC/samtools_invariant_chr11_Filtered.vcf.gz
 # 
 # /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix fastq/invariants/filtered_combined/VCMA_GATK_chr11_secondFilter.vcf.gz
 # /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix freebayes/final_combined/freebayes_invariant_chr11_allFiltered.vcf.gz
-# /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix samtools_VC/samtools_invariant_chr11_Filtered_dupsRemoved.vcf.gz
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix samtools_VC/samtools_invariant_chr11_Filtered.vcf.gz
 
 bcftools isec -n =3 -O z -p bcftools_isec/chr11_3 fastq/invariants/filtered_combined/VCMA_GATK_chr11_secondFilter.vcf.gz \
-samtools_VC/samtools_invariant_chr11_Filtered_dupsRemoved.vcf.gz \
+samtools_VC/samtools_invariant_chr11_Filtered.vcf.gz \
 freebayes/final_combined/freebayes_invariant_chr11_allFiltered.vcf.gz
