@@ -6,8 +6,8 @@
 #SBATCH --qos=rosalind_htc2_normal
 #SBATCH --cpus-per-task=4
 #SBATCH --time=8:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/bcf-isec_chr17.out
-#SBATCH -e /global/home/users/makman/GATK/outs/bcf-isec_chr17.err
+#SBATCH -o /global/home/users/makman/GATK/outs/bcf-isec_chr17_2.out
+#SBATCH -e /global/home/users/makman/GATK/outs/bcf-isec_chr17_2.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
