@@ -3,7 +3,7 @@ import sys
 
 InputFile1 = sys.argv[1] #vcf file
 InputFile2 = sys.argv[2] #sites file
-chr_no = sys.argv[4]
+chr_no = sys.argv[4][-2:]
 
 OutputFile = sys.argv[3] # name for output file
 
