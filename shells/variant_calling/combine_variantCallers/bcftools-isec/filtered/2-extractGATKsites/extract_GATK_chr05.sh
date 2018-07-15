@@ -5,8 +5,8 @@
 #SBATCH --partition=savio
 #SBATCH --qos=rosalind_savio_normal
 #SBATCH --time=80:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/bcf-isec_chr05.out
-#SBATCH -e /global/home/users/makman/GATK/outs/bcf-isec_chr05.err
+#SBATCH -o /global/home/users/makman/GATK/outs/bcf-isec_unfiltered_chr05.out
+#SBATCH -e /global/home/users/makman/GATK/outs/bcf-isec_unfiltered_chr05.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
