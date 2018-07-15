@@ -11,5 +11,5 @@
 #SBATCH --mail-type=All
 
 
-python /global/home/users/makman/git/Helianthus/shells/variant_calling/combine_variantCallers/bcftools-isec/2-extractGATKsites/extract_GATK_variants.py /clusterfs/rosalind/users/makman/GATK/fastq/invariants/VCMA_chr05.vcf /clusterfs/rosalind/users/makman/GATK/bcftools_isec/chr05_2/sites.txt /clusterfs/rosalind/users/makman/GATK/bcftools_isec/chr05_filtered_2plus_GATK.vcf chr05 
+python /global/home/users/makman/git/Helianthus/shells/variant_calling/combine_variantCallers/bcftools-isec/filtered/2-extractGATKsites/extract_GATK_variants.py /clusterfs/rosalind/users/makman/GATK/fastq/invariants/VCMA_chr05.vcf /clusterfs/rosalind/users/makman/GATK/bcftools_isec/chr05_2/sites.txt /clusterfs/rosalind/users/makman/GATK/bcftools_isec/chr05_filtered_2plus_GATK.vcf chr05 
 
