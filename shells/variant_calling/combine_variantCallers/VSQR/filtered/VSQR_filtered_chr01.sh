@@ -29,7 +29,7 @@ java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp/ -Xmx60G -jar /clust
 -input chr01_intersect_annot.vcf.gz \
 -an QD -an MQ -an MQRankSum -an ReadPosRankSum -an FS -an SOR -an DP -an InbreedingCoeff \
 -mode SNP \
--resource:3callerscombined,known=false,training=true,truth=true,prior=10.0 ../truthSet/chr01_truth_GATK.vcf \
+-resource:3callerscombined,known=false,training=true,truth=true,prior=10.0 ../truthSet/chr01_truth_GATK_variants.vcf \
 -tranche 100.0 -tranche 99.9 -tranche 99.0 -tranche 90.0 \
 -recalFile filtered_chr01.recal \
 -tranchesFile filtered_chr01.tranches \
