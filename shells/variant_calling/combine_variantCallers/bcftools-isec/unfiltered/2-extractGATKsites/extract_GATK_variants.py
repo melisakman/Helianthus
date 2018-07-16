@@ -32,6 +32,7 @@ for line in file2:
 for line in file1:
 	split = line.split("\t")
 	if split[0][0] == "#":
+		file_out.write(line)
 		continue
 	else:
 		chr = split[0]
