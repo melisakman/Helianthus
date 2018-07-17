@@ -11,6 +11,7 @@
 #SBATCH --mail-type=All
 module load java
 module load gatk/4.0.1.2
+module unload r/3.4.2
 module load r/3.2.5
 module load r-packages/default
 module load Rcpp/0.12.14
