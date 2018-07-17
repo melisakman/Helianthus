@@ -13,7 +13,8 @@ module load java
 module load gatk/4.0.1.2
 module load r/3.4.3
 module load r-packages/default
-R_LIBS_USER=$R_LIBS_USER:/global/home/users/makman/R/x86_64-pc-linux-gnu-library/3.4/
+module load Rcpp/0.12.14
+# R_LIBS_USER=$R_LIBS_USER:/global/home/users/makman/R/x86_64-pc-linux-gnu-library/3.4/
 # /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c chr01_filtered_2plus_GATK.vcf > chr01_filtered_2plus_GATK.vcf.gz
 # /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf chr01_filtered_2plus_GATK.vcf.gz  
 # java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
