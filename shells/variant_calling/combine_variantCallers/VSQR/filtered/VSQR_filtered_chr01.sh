@@ -38,8 +38,9 @@ module load gatk/4.0.1.2
 --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" \
 -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
 -V chr01_filtered_2plus_GATK_annot.vcf.gz \
--an QD -an MQ -an MQRankSum -an ReadPosRankSum -an SOR -an DP -an InbreedingCoeff \
+-an QD -an MQ -an MQRankSum -an ReadPosRankSum -an FS -an SOR -an DP -an InbreedingCoeff \
 -mode SNP \
+--max-gaussians 4 \
 --resource 3callerscombined,known=false,training=true,truth=true,prior=10.0:truthSet/chr01_truth_GATK_variants.vcf \
 -O filtered_chr01.recal \
 --tranches-file filtered_chr01.tranches \
