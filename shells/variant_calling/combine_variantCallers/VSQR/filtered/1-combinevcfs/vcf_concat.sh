@@ -9,8 +9,8 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=20
 #SBATCH --time=80:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/freebayes_vcf_concat_chr01.out
-#SBATCH -e /global/home/users/makman/GATK/outs/freebayes_vcf_concat_chr01.err
+#SBATCH -o /global/home/users/makman/GATK/outs/2plus_vcf_concat.out
+#SBATCH -e /global/home/users/makman/GATK/outs/2plus_vcf_concat.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
