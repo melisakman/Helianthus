@@ -38,7 +38,7 @@ module load gatk/4.0.1.2
 # -rscriptFile filtered_chr01.plots.R
 
 /clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" \
--T VariantRecalibrator \
+VariantRecalibrator \
 -nt 20 \
 -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
 -input chr01_filtered_2plus_GATK_annot.vcf.gz \
