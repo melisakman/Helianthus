@@ -2,12 +2,9 @@
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/bcftools_isec/
 #SBATCH -J filchr01
 #SBATCH --account=co_rosalind
-#SBATCH --partition=savio
-#SBATCH --qos=rosalind_savio_normal
-#SBATCH --nodes=1
-#SBATCH --mem=64000
-#SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=20
+#SBATCH --partition=savio2_htc
+#SBATCH --qos=rosalind_htc2_normal
+#SBATCH --cpus-per-task=4
 #SBATCH --time=80:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/VSQR_filtered_chr01.out
 #SBATCH -e /global/home/users/makman/GATK/outs/VSQR_filtered_chr01.err
