@@ -45,6 +45,6 @@ module load gatk/4.0.1.2
 -mode SNP \
 --resource 3callerscombined,known=false,training=true,truth=true,prior=10.0:truthSet/chr01_truth_GATK_variants.vcf \
 -tranche 100.0 -tranche 99.9 -tranche 99.0 -tranche 90.0 \
---recal-file filtered_chr01.recal \
+-O filtered_chr01.recal \
 --tranches-file filtered_chr01.tranches \
 --rscriptFile filtered_chr01.plots.R
