@@ -39,7 +39,6 @@ module load gatk/4.0.1.2
 
 /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/gatk-4.0.1.2/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" \
 VariantRecalibrator \
--nt 20 \
 -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
 -V chr01_filtered_2plus_GATK_annot.vcf.gz \
 -an QD -an MQ -an MQRankSum -an ReadPosRankSum -an FS -an SOR -an DP -an InbreedingCoeff \
