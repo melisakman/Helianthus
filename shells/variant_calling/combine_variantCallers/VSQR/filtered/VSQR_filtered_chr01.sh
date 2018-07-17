@@ -37,15 +37,15 @@ module load gatk/4.0.1.2
 # -tranchesFile filtered_chr01.tranches \
 # -rscriptFile filtered_chr01.plots.R
 
-/clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" \
+/clusterfs/vector/home/groups/software/sl-7.x86_64/modules/gatk-4.0.1.2/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" \
 VariantRecalibrator \
 -nt 20 \
 -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
--input chr01_filtered_2plus_GATK_annot.vcf.gz \
+-V chr01_filtered_2plus_GATK_annot.vcf.gz \
 -an QD -an MQ -an MQRankSum -an ReadPosRankSum -an FS -an SOR -an DP -an InbreedingCoeff \
 -mode SNP \
--resource:3callerscombined,known=false,training=true,truth=true,prior=10.0 truthSet/chr01_truth_GATK_variants.vcf \
+-resource 3callerscombined,known=false,training=true,truth=true,prior=10.0:truthSet/chr01_truth_GATK_variants.vcf \
 -tranche 100.0 -tranche 99.9 -tranche 99.0 -tranche 90.0 \
--recalFile filtered_chr01.recal \
--tranchesFile filtered_chr01.tranches \
+-recal-file filtered_chr01.recal \
+-tranches-file filtered_chr01.tranches \
 -rscriptFile filtered_chr01.plots.R
