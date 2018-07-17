@@ -5,15 +5,15 @@
 #SBATCH --partition=savio
 #SBATCH --qos=rosalind_savio_normal
 #SBATCH --time=80:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/bcf-isec_truth.out
-#SBATCH -e /global/home/users/makman/GATK/outs/bcf-isec_truth.err
+#SBATCH -o /global/home/users/makman/GATK/outs/bcf-isec_truth4.out
+#SBATCH -e /global/home/users/makman/GATK/outs/bcf-isec_truth4.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
 
-python /global/home/users/makman/git/Helianthus/shells/variant_calling/combine_variantCallers/bcftools-isec/unfiltered/2-extractGATKsites/extract_GATK_variants.py /clusterfs/rosalind/users/makman/GATK/fastq/invariants/VCMA_chr01.vcf /clusterfs/rosalind/users/makman/GATK/bcftools_isec/chr01_3/sites.txt /clusterfs/rosalind/users/makman/GATK/bcftools_isec/truthSet/chr01_truth_GATK.vcf chr01 
-python /global/home/users/makman/git/Helianthus/shells/variant_calling/combine_variantCallers/bcftools-isec/unfiltered/2-extractGATKsites/extract_GATK_variants.py /clusterfs/rosalind/users/makman/GATK/fastq/invariants/VCMA_chr02.vcf /clusterfs/rosalind/users/makman/GATK/bcftools_isec/chr02_3/sites.txt /clusterfs/rosalind/users/makman/GATK/bcftools_isec/truthSet/chr02_truth_GATK.vcf chr02 
-python /global/home/users/makman/git/Helianthus/shells/variant_calling/combine_variantCallers/bcftools-isec/unfiltered/2-extractGATKsites/extract_GATK_variants.py /clusterfs/rosalind/users/makman/GATK/fastq/invariants/VCMA_chr03.vcf /clusterfs/rosalind/users/makman/GATK/bcftools_isec/chr03_3/sites.txt /clusterfs/rosalind/users/makman/GATK/bcftools_isec/truthSet/chr03_truth_GATK.vcf chr03 
+# python /global/home/users/makman/git/Helianthus/shells/variant_calling/combine_variantCallers/bcftools-isec/unfiltered/2-extractGATKsites/extract_GATK_variants.py /clusterfs/rosalind/users/makman/GATK/fastq/invariants/VCMA_chr01.vcf /clusterfs/rosalind/users/makman/GATK/bcftools_isec/chr01_3/sites.txt /clusterfs/rosalind/users/makman/GATK/bcftools_isec/truthSet/chr01_truth_GATK.vcf chr01 
+# python /global/home/users/makman/git/Helianthus/shells/variant_calling/combine_variantCallers/bcftools-isec/unfiltered/2-extractGATKsites/extract_GATK_variants.py /clusterfs/rosalind/users/makman/GATK/fastq/invariants/VCMA_chr02.vcf /clusterfs/rosalind/users/makman/GATK/bcftools_isec/chr02_3/sites.txt /clusterfs/rosalind/users/makman/GATK/bcftools_isec/truthSet/chr02_truth_GATK.vcf chr02 
+# python /global/home/users/makman/git/Helianthus/shells/variant_calling/combine_variantCallers/bcftools-isec/unfiltered/2-extractGATKsites/extract_GATK_variants.py /clusterfs/rosalind/users/makman/GATK/fastq/invariants/VCMA_chr03.vcf /clusterfs/rosalind/users/makman/GATK/bcftools_isec/chr03_3/sites.txt /clusterfs/rosalind/users/makman/GATK/bcftools_isec/truthSet/chr03_truth_GATK.vcf chr03 
 python /global/home/users/makman/git/Helianthus/shells/variant_calling/combine_variantCallers/bcftools-isec/unfiltered/2-extractGATKsites/extract_GATK_variants.py /clusterfs/rosalind/users/makman/GATK/fastq/invariants/VCMA_chr04.vcf /clusterfs/rosalind/users/makman/GATK/bcftools_isec/chr04_3/sites.txt /clusterfs/rosalind/users/makman/GATK/bcftools_isec/truthSet/chr04_truth_GATK.vcf chr04 
 # python /global/home/users/makman/git/Helianthus/shells/variant_calling/combine_variantCallers/bcftools-isec/unfiltered/2-extractGATKsites/extract_GATK_variants.py /clusterfs/rosalind/users/makman/GATK/fastq/invariants/VCMA_chr05.vcf /clusterfs/rosalind/users/makman/GATK/bcftools_isec/chr05_3/sites.txt /clusterfs/rosalind/users/makman/GATK/bcftools_isec/truthSet/chr05_truth_GATK.vcf chr05 
 # python /global/home/users/makman/git/Helianthus/shells/variant_calling/combine_variantCallers/bcftools-isec/unfiltered/2-extractGATKsites/extract_GATK_variants.py /clusterfs/rosalind/users/makman/GATK/fastq/invariants/VCMA_chr06.vcf /clusterfs/rosalind/users/makman/GATK/bcftools_isec/chr06_3/sites.txt /clusterfs/rosalind/users/makman/GATK/bcftools_isec/truthSet/chr06_truth_GATK.vcf chr06 
