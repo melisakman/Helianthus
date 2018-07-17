@@ -28,7 +28,7 @@ java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp/ -Xmx60G -jar /clust
 -nt 6 \
 -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
 -input chr01_filtered_2plus_GATK_annot.vcf.gz \
--an QD -an MQ -an MQRankSum -an ReadPosRankSum -an FS -an SOR -an DP -an InbreedingCoeff \
+-an QD -an MQRankSum -an ReadPosRankSum -an FS -an SOR -an DP -an InbreedingCoeff \
 -mode SNP \
 -resource:3callerscombined,known=false,training=true,truth=true,prior=10.0 truthSet/chr01_truth_GATK_variants.vcf \
 -tranche 100.0 -tranche 99.9 -tranche 99.0 -tranche 90.0 \
