@@ -14,6 +14,7 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load java
+module load gatk/4.0.1.2
 # /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c chr01_filtered_2plus_GATK.vcf > chr01_filtered_2plus_GATK.vcf.gz
 # /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf chr01_filtered_2plus_GATK.vcf.gz  
 # java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
@@ -29,6 +30,19 @@ java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp/ -Xmx60G -jar /clust
 -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
 -input chr01_filtered_2plus_GATK_annot.vcf.gz \
 -an QD -an MQRankSum -an ReadPosRankSum -an FS -an SOR -an DP -an InbreedingCoeff \
+-mode SNP \
+-resource:3callerscombined,known=false,training=true,truth=true,prior=10.0 truthSet/chr01_truth_GATK_variants.vcf \
+-tranche 100.0 -tranche 99.9 -tranche 99.0 -tranche 90.0 \
+-recalFile filtered_chr01.recal \
+-tranchesFile filtered_chr01.tranches \
+-rscriptFile filtered_chr01.plots.R
+
+/clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" \
+-T VariantRecalibrator \
+-nt 6 \
+-R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
+-input chr01_filtered_2plus_GATK_annot.vcf.gz \
+-an QD -an MQ -an MQRankSum -an ReadPosRankSum -an FS -an SOR -an DP -an InbreedingCoeff \
 -mode SNP \
 -resource:3callerscombined,known=false,training=true,truth=true,prior=10.0 truthSet/chr01_truth_GATK_variants.vcf \
 -tranche 100.0 -tranche 99.9 -tranche 99.0 -tranche 90.0 \
