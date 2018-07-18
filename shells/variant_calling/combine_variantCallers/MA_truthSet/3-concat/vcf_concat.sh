@@ -33,3 +33,4 @@ chr15_truth_GATK.vcf \
 chr16_truth_GATK.vcf \
 chr17_truth_GATK.vcf > truth_GATK.vcf.gz
 
+
