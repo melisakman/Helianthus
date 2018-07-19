@@ -4,7 +4,7 @@
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio2_htc
 #SBATCH --qos=rosalind_htc2_normal
-#SBATCH --cpus-per-task=20
+#SBATCH --cpus-per-task=12
 #SBATCH --time=80:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/VSQR_unfiltered_all.out
 #SBATCH -e /global/home/users/makman/GATK/outs/VSQR_unfiltered_all.err
