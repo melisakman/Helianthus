@@ -2,9 +2,8 @@
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/bcftools_isec/unfiltered
 #SBATCH -J unfilf
 #SBATCH --account=co_rosalind
-#SBATCH --partition=savio2_htc
-#SBATCH --qos=rosalind_htc2_normal
-#SBATCH --cpus-per-task=12
+#SBATCH --partition=savio
+#SBATCH --qos=rosalind_savio_normal
 #SBATCH --time=80:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/VSQR_unfiltered_allf.out
 #SBATCH -e /global/home/users/makman/GATK/outs/VSQR_unfiltered_allf.err
