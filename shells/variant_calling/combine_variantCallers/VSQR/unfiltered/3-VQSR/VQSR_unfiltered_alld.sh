@@ -25,8 +25,8 @@ R_LIBS_USER=/global/home/users/makman/R/x86_64-pc-linux-gnu-library/3.4/
 -an QD -an MQ -an MQRankSum -an ReadPosRankSum -an FS -an SOR -an DP -an InbreedingCoeff \
 --max-gaussians 4 \
 -mode SNP \
---resource 3callerscombined,known=false,training=true,truth=false,prior=10.0:../truthSet/truth_GATK_variants.vcf \
--O training_unfiltered_all.recal \
---tranches-file training_unfiltered_all.tranches \
---rscript-file training_unfiltered_all.plots.R
+--resource 3callerscombined,known=false,training=false,truth=true,prior=10.0:../truthSet/truth_GATK_variants.vcf \
+-O truth_unfiltered_all.recal \
+--tranches-file truth_unfiltered_all.tranches \
+--rscript-file truth_unfiltered_all.plots.R
 
