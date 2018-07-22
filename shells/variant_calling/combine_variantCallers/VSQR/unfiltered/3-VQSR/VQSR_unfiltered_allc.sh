@@ -4,7 +4,7 @@
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio
 #SBATCH --qos=rosalind_savio_normal
-#SBATCH --time=80:00:00
+#SBATCH --time=48:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/VSQR_unfiltered_allc.out
 #SBATCH -e /global/home/users/makman/GATK/outs/VSQR_unfiltered_allc.err
 #SBATCH --mail-user=makman@berkeley.edu
@@ -31,3 +31,4 @@ R_LIBS_USER=/global/home/users/makman/R/x86_64-pc-linux-gnu-library/3.4/
 --tranches-file AS_unfiltered_all.tranches \
 --rscript-file AS_unfiltered_all.plots.R
 
+#node fail
