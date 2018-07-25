@@ -15,11 +15,11 @@
 #SBATCH --mail-type=All
 module load java
 module load gatk/4.0.1.2
-module unload r/3.4.2
-module load r/3.2.5
-module load r-packages/default
-module load Rcpp/0.12.14
-R_LIBS_USER=/global/home/users/makman/R/x86_64-pc-linux-gnu-library/3.4/
+# module unload r/3.4.2
+# module load r/3.2.5
+# module load r-packages/default
+# module load Rcpp/0.12.14
+# R_LIBS_USER=/global/home/users/makman/R/x86_64-pc-linux-gnu-library/3.4/
 
 
 # /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/gatk-4.0.1.2/gatk VariantRecalibrator \
