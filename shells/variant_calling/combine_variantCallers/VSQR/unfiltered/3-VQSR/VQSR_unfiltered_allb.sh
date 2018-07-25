@@ -38,6 +38,7 @@ R_LIBS_USER=/global/home/users/makman/R/x86_64-pc-linux-gnu-library/3.4/
 -ts-filter-level 90.0 \
 --tranches-file G8_unfiltered_all.tranches \
 --recal-file G8_unfiltered_all.recal \
+--exclude-filtered \
 -mode SNP
   
   
@@ -49,5 +50,6 @@ R_LIBS_USER=/global/home/users/makman/R/x86_64-pc-linux-gnu-library/3.4/
 -ts-filter-level 99.0 \
 --tranches-file G8_unfiltered_all.tranches \
 --recal-file G8_unfiltered_all.recal \
+--exclude-filtered \
 -mode SNP
   
