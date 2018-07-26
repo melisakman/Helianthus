@@ -36,24 +36,36 @@ R_LIBS_USER=/global/home/users/makman/R/x86_64-pc-linux-gnu-library/3.4/
 # --tranches-file unfiltered_all.tranches \
 # --rscript-file unfiltered_all.plots.R
 
-/clusterfs/vector/home/groups/software/sl-7.x86_64/modules/gatk-4.0.1.2/gatk ApplyVQSR \
---java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx128G" \
--R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
--V unfiltered_2plus_GATK_annot.vcf.gz \
--O unfiltered_2plus_GATK_annot_VSQR90_G4.vcf.gz \
--ts-filter-level 90.0 \
---tranches-file unfiltered_all.tranches \
---recal-file unfiltered_all.recal \
---exclude-filtered \
--mode SNP
+# /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/gatk-4.0.1.2/gatk ApplyVQSR \
+# --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx128G" \
+# -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
+# -V unfiltered_2plus_GATK_annot.vcf.gz \
+# -O unfiltered_2plus_GATK_annot_VSQR90_G4.vcf.gz \
+# -ts-filter-level 90.0 \
+# --tranches-file unfiltered_all.tranches \
+# --recal-file unfiltered_all.recal \
+# --exclude-filtered \
+# -mode SNP
+# 
+# /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/gatk-4.0.1.2/gatk ApplyVQSR \
+# --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx128G" \
+# -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
+# -V unfiltered_2plus_GATK_annot.vcf.gz \
+# -O unfiltered_2plus_GATK_annot_VSQR99_G4.vcf.gz \
+# -ts-filter-level 99.0 \
+# --tranches-file unfiltered_all.tranches \
+# --recal-file unfiltered_all.recal \
+# --exclude-filtered \
+# -mode SNP
 
-/clusterfs/vector/home/groups/software/sl-7.x86_64/modules/gatk-4.0.1.2/gatk ApplyVQSR \
---java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx128G" \
+/clusterfs/vector/home/groups/software/sl-7.x86_64/modules/gatk-4.0.1.2/gatk VariantRecalibrator \
+--java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" \
 -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
 -V unfiltered_2plus_GATK_annot.vcf.gz \
--O unfiltered_2plus_GATK_annot_VSQR99_G4.vcf.gz \
--ts-filter-level 99.0 \
---tranches-file unfiltered_all.tranches \
---recal-file unfiltered_all.recal \
---exclude-filtered \
--mode SNP
+-an QD -an MQ -an MQRankSum -an ReadPosRankSum -an FS -an SOR -an DP -an InbreedingCoeff \
+--max-gaussians 6 \
+-mode SNP \
+--resource 3callerscombined,known=false,training=true,truth=true,prior=10.0:../truthSet/truth_GATK_variants.vcf \
+-O G6_unfiltered_all.recal \
+--tranches-file G6_unfiltered_all.tranches \
+--rscript-file G6_unfiltered_all.plots.R
