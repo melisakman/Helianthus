@@ -6,8 +6,8 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=12
 #SBATCH --time=80:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/VSQR_unfiltered_all.out
-#SBATCH -e /global/home/users/makman/GATK/outs/VSQR_unfiltered_all.err
+#SBATCH -o /global/home/users/makman/GATK/outs/VSQR_unfiltered_allk.out
+#SBATCH -e /global/home/users/makman/GATK/outs/VSQR_unfiltered_allk.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load java
