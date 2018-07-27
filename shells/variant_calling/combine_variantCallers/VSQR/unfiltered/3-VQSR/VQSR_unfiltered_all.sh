@@ -1,11 +1,11 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/bcftools_isec/unfiltered
 #SBATCH -J unfil
-#SBATCH --partition=vector
-#SBATCH --qos=vector_batch
-#SBATCH --ntasks=1
-#SBATCH --cpus-per-task=24
-#SBATCH --time=80:00:00
+#SBATCH --account=co_rosalind
+#SBATCH --partition=savio2_htc
+#SBATCH --qos=rosalind_htc2_normal
+#SBATCH --cpus-per-task=12
+#SBATCH --time=100:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/VSQR_unfiltered_allk.out
 #SBATCH -e /global/home/users/makman/GATK/outs/VSQR_unfiltered_allk.err
 #SBATCH --mail-user=makman@berkeley.edu
