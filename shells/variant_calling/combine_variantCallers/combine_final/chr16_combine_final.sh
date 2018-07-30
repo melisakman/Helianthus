@@ -15,9 +15,9 @@ module load bio/vcftools
 module load java
 
 
-zcat unfiltered_2plus_GATK_annot_VSQR90_G4_2.vcf.gz | bcftools filter -r HanXRQChr16 -i 'TYPE = "snp"' | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > VQSRfiltered_90_G4_SNP_chr16.vcf.gz
+bcftools filter -r HanXRQChr16 -i 'TYPE = "snp"' unfiltered_2plus_GATK_annot_VSQR90_G4_2.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > VQSRfiltered_90_G4_SNP_chr16.vcf.gz
 
-zcat ../chr16_filtered_2plus_GATK_annot.vcf.gz | bcftools filter -i 'TYPE = "indel" || TYPE = "ref"' | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > ../filtered_90_G4_indelRef_chr16.vcf.gz
+bcftools filter -i 'TYPE = "indel" || TYPE = "ref"' ../chr16_filtered_2plus_GATK_annot.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > ../filtered_90_G4_indelRef_chr16.vcf.gz
 
 export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
 
