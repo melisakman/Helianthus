@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/rosalind/users/makman/GATK/samtools_VC/old
+#SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/invariants/filtered_combined
 #SBATCH -J gzip
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio
