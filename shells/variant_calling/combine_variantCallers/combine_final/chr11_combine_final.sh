@@ -2,9 +2,10 @@
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/bcftools_isec/unfiltered
 #SBATCH -J comchr11
 #SBATCH --account=co_rosalind
-#SBATCH --partition=savio
-#SBATCH --qos=rosalind_savio_normal
-#SBATCH --time=400:00:00
+#SBATCH --partition=savio2_htc
+#SBATCH --qos=rosalind_htc2_normal
+#SBATCH --cpus-per-task=6
+#SBATCH --time=80:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/VSQR_combine_sort_chr11.out
 #SBATCH -e /global/home/users/makman/GATK/outs/VSQR_combine_sort_chr11.err
 #SBATCH --mail-user=makman@berkeley.edu
