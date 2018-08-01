@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/rosalind/users/makman/GATK/bcftools/final
+#SBATCH -D /clusterfs/rosalind/users/makman/GATK/bcftools_isec/final
 #SBATCH -J vcfpi
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
