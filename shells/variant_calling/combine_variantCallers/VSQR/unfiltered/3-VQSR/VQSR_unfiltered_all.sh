@@ -81,16 +81,16 @@ R_LIBS_USER=/global/home/users/makman/R/x86_64-pc-linux-gnu-library/3.4/
 # --exclude-filtered \
 # -mode SNP
 
-/clusterfs/vector/home/groups/software/sl-7.x86_64/modules/gatk-4.0.1.2/gatk ApplyVQSR \
---java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" \
--R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
--V unfiltered_2plus_GATK_annot.vcf.gz \
--O unfiltered_2plus_GATK_annot_VSQR80_G6.vcf.gz \
--ts-filter-level 80.0 \
---tranches-file G6_unfiltered_all.tranches \
---recal-file G6_unfiltered_all.recal \
---exclude-filtered \
--mode SNP
+# /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/gatk-4.0.1.2/gatk ApplyVQSR \
+# --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" \
+# -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
+# -V unfiltered_2plus_GATK_annot.vcf.gz \
+# -O unfiltered_2plus_GATK_annot_VSQR80_G6.vcf.gz \
+# -ts-filter-level 80.0 \
+# --tranches-file G6_unfiltered_all.tranches \
+# --recal-file G6_unfiltered_all.recal \
+# --exclude-filtered \
+# -mode SNP
 
 /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/gatk-4.0.1.2/gatk ApplyVQSR \
 --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" \
@@ -98,7 +98,7 @@ R_LIBS_USER=/global/home/users/makman/R/x86_64-pc-linux-gnu-library/3.4/
 -V unfiltered_2plus_GATK_annot.vcf.gz \
 -O unfiltered_2plus_GATK_annot_VSQR80_G4.vcf.gz \
 -ts-filter-level 80.0 \
---tranches-file G4_unfiltered_all.tranches \
---recal-file G4_unfiltered_all.recal \
+--tranches-file unfiltered_all.tranches \
+--recal-file unfiltered_all.recal \
 --exclude-filtered \
 -mode SNP
