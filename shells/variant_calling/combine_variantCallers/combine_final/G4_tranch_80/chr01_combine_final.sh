@@ -19,14 +19,14 @@ module load java
 # /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c unfiltered_2plus_GATK_annot_VSQR80_G4.vcf > unfiltered_2plus_GATK_annot_VSQR80_G4_2.vcf.gz
 # /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix unfiltered_2plus_GATK_annot_VSQR80_G4_2.vcf.gz
 
-bcftools filter -r HanXRQChr01 -i 'TYPE = "snp"' unfiltered_2plus_GATK_annot_VSQR80_G4.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > VQSRfiltered_80_G4_SNP_chr01.vcf.gz
+# bcftools filter -r HanXRQChr01 -i 'TYPE = "snp"' unfiltered_2plus_GATK_annot_VSQR80_G4.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > VQSRfiltered_80_G4_SNP_chr01.vcf.gz
 
-# bcftools filter -i 'TYPE = "indel" || TYPE = "ref"' ../chr01_filtered_2plus_GATK_annot.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > ../filtered_80_G4_indelRef_chr01.vcf.gz
+# bcftools filter -i 'TYPE = "indel" || TYPE = "ref"' ../chr01_filtered_2plus_GATK_annot.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > ../filtered_indelRef_chr01.vcf.gz
 
 export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
 
 /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-concat \
 VQSRfiltered_80_G4_SNP_chr01.vcf.gz \
-../filtered_80_G4_indelRef_chr01.vcf.gz | vcf-sort -t /clusterfs/rosalind/users/makman/temp \
+../filtered_indelRef_chr01.vcf.gz | vcf-sort -t /clusterfs/rosalind/users/makman/temp \
 | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > ../final/chr01_final.vcf.gz
 
