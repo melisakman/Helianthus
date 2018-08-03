@@ -5,7 +5,7 @@
 #SBATCH --partition=savio2_htc
 #SBATCH --qos=rosalind_htc2_normal
 #SBATCH --cpus-per-task=6
-#SBATCH --time=80:00:00
+#SBATCH --time=24:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/VSQR_combine_sort_chr08.out
 #SBATCH -e /global/home/users/makman/GATK/outs/VSQR_combine_sort_chr08.err
 #SBATCH --mail-user=makman@berkeley.edu
