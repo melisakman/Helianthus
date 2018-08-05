@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/rosalind/users/makman/GATK/bcftools_isec/final/
+#SBATCH -D /clusterfs/rosalind/users/makman/GATK/bcftools_isec/final/G6_90
 #SBATCH -J snpEff
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
@@ -13,7 +13,7 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load java
-zcat chr01_final.vcf.gz | java -Xmx16g -jar /clusterfs/vector/scratch/makman/snpEff/snpEff.jar -noLof -stats VQSR_final_SNPEff_stats_chr01.html XRQ | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > chr01_final_snpeff.vcf.gz
+cat chr01_final.vcf | java -Xmx16g -jar /clusterfs/vector/scratch/makman/snpEff/snpEff.jar -noLof -stats VQSR_final_SNPEff_stats_chr01.html XRQ | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > chr01_final_snpeff.vcf.gz
 zcat chr02_final.vcf.gz | java -Xmx16g -jar /clusterfs/vector/scratch/makman/snpEff/snpEff.jar -noLof -stats VQSR_final_SNPEff_stats_chr02.html XRQ | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > chr02_final_snpeff.vcf.gz
 zcat chr03_final.vcf.gz | java -Xmx16g -jar /clusterfs/vector/scratch/makman/snpEff/snpEff.jar -noLof -stats VQSR_final_SNPEff_stats_chr03.html XRQ | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > chr03_final_snpeff.vcf.gz
 zcat chr04_final.vcf.gz | java -Xmx16g -jar /clusterfs/vector/scratch/makman/snpEff/snpEff.jar -noLof -stats VQSR_final_SNPEff_stats_chr04.html XRQ | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > chr04_final_snpeff.vcf.gz
