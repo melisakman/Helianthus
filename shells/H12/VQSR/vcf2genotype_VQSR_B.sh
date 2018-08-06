@@ -42,11 +42,11 @@ gunzip chr09_final.vcf.gz
 # python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr02_final.vcf /lr_cv_list.txt G12/VQSR_chr02_G12_input.txt
 # python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr03_final.vcf /lr_cv_list.txt G12/VQSR_chr03_G12_input.txt
 # python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr04_final.vcf /lr_cv_list.txt G12/VQSR_chr04_G12_input.txt
-python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr05_final.vcf /lr_cv_list.txt G12/VQSR_chr05_G12_input.txt
-python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr06_final.vcf /lr_cv_list.txt G12/VQSR_chr06_G12_input.txt
-python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr07_final.vcf /lr_cv_list.txt G12/VQSR_chr07_G12_input.txt
-python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr08_final.vcf /lr_cv_list.txt G12/VQSR_chr08_G12_input.txt
-python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr09_final.vcf /lr_cv_list.txt G12/VQSR_chr09_G12_input.txt
+python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr05_final.vcf ../lr_cv_list.txt G12/VQSR_chr05_G12_input.txt
+python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr06_final.vcf ../lr_cv_list.txt G12/VQSR_chr06_G12_input.txt
+python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr07_final.vcf ../lr_cv_list.txt G12/VQSR_chr07_G12_input.txt
+python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr08_final.vcf ../lr_cv_list.txt G12/VQSR_chr08_G12_input.txt
+python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr09_final.vcf ../lr_cv_list.txt G12/VQSR_chr09_G12_input.txt
 # python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr10_final.vcf /lr_cv_list.txt G12/VQSR_chr10_G12_input.txt
 # python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr11_final.vcf /lr_cv_list.txt G12/VQSR_chr11_G12_input.txt
 # python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr12_final.vcf /lr_cv_list.txt G12/VQSR_chr12_G12_input.txt

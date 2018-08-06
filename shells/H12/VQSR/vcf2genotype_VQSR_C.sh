@@ -47,10 +47,10 @@ gunzip chr13_final.vcf.gz
 # python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr07_final.vcf /lr_cv_list.txt G12/VQSR_chr07_G12_input.txt
 # python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr08_final.vcf /lr_cv_list.txt G12/VQSR_chr08_G12_input.txt
 # python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr09_final.vcf /lr_cv_list.txt G12/VQSR_chr09_G12_input.txt
-python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr10_final.vcf /lr_cv_list.txt G12/VQSR_chr10_G12_input.txt
-python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr11_final.vcf /lr_cv_list.txt G12/VQSR_chr11_G12_input.txt
-python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr12_final.vcf /lr_cv_list.txt G12/VQSR_chr12_G12_input.txt
-python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr13_final.vcf /lr_cv_list.txt G12/VQSR_chr13_G12_input.txt
+python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr10_final.vcf ../lr_cv_list.txt G12/VQSR_chr10_G12_input.txt
+python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr11_final.vcf ../lr_cv_list.txt G12/VQSR_chr11_G12_input.txt
+python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr12_final.vcf ../lr_cv_list.txt G12/VQSR_chr12_G12_input.txt
+python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr13_final.vcf ../lr_cv_list.txt G12/VQSR_chr13_G12_input.txt
 # python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr14_final.vcf /lr_cv_list.txt G12/VQSR_chr14_G12_input.txt
 # python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr15_final.vcf /lr_cv_list.txt G12/VQSR_chr15_G12_input.txt
 # python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr16_final.vcf /lr_cv_list.txt G12/VQSR_chr16_G12_input.txt
