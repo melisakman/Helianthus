@@ -8,7 +8,7 @@
 #SBATCH --mem=64000
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=20
-#SBATCH --time=400:00:00
+#SBATCH --time=6:00:00
 #SBATCH -o /global/home/users/makman/H12/outs/vcf2genotype_VQSR_C.out
 #SBATCH -e /global/home/users/makman/H12/outs/vcf2genotype_VQSR_C.err
 #SBATCH --mail-user=makman@berkeley.edu
