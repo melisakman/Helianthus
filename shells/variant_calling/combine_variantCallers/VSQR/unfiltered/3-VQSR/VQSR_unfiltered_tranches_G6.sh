@@ -2,8 +2,9 @@
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/bcftools_isec/unfiltered
 #SBATCH -J G4
 #SBATCH --account=co_rosalind
-#SBATCH --partition=savio
-#SBATCH --qos=rosalind_savio_normal
+#SBATCH --partition=savio2_htc
+#SBATCH --qos=rosalind_htc2_normal
+#SBATCH --mem=128000
 #SBATCH --time=80:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/VSQR_unfiltered_all_tranches_G4.out
 #SBATCH -e /global/home/users/makman/GATK/outs/VSQR_unfiltered_all_tranches_G4.err
