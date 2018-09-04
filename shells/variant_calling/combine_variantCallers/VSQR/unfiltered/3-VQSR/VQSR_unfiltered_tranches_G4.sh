@@ -4,7 +4,7 @@
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio2_htc
 #SBATCH --qos=rosalind_htc2_normal
-#SBATCH --mem=128000
+#SBATCH --mem=200000
 #SBATCH --time=80:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/VSQR_unfiltered_all_tranches_G4.out
 #SBATCH -e /global/home/users/makman/GATK/outs/VSQR_unfiltered_all_tranches_G4.err
