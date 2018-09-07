@@ -4,9 +4,9 @@
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
 #SBATCH --mem=256000
-#SBATCH --time=80:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/VSQR_unfiltered_all_tranches_G4.out
-#SBATCH -e /global/home/users/makman/GATK/outs/VSQR_unfiltered_all_tranches_G4.err
+#SBATCH --time=800:00:00
+#SBATCH -o /global/home/users/makman/GATK/outs/VSQR_unfiltered_all_tranches_G4_2.out
+#SBATCH -e /global/home/users/makman/GATK/outs/VSQR_unfiltered_all_tranches_G4_2.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load java
@@ -19,6 +19,19 @@ R_LIBS_USER=/global/home/users/makman/R/x86_64-pc-linux-gnu-library/3.4/
 
 
 
+# /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/gatk-4.0.1.2/gatk VariantRecalibrator \
+# --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" \
+# -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
+# -V unfiltered_2plus_GATK_annot.vcf.gz \
+# -an QD -an MQ -an MQRankSum -an ReadPosRankSum -an FS -an SOR -an DP -an InbreedingCoeff \
+# --max-gaussians 4 \
+# -mode SNP \
+# --resource 3callerscombined,known=false,training=true,truth=true,prior=10.0:../truthSet/truth_GATK_variants.vcf \
+# -O G4_unfiltered_all_tranches.recal \
+# -tranche 90 -tranche 80 -tranche 70 -tranche 60 -tranche 50 \
+# --tranches-file G4_unfiltered_all_tranches.tranches \
+# --rscript-file G4_unfiltered_all_tranches.plots.R
+
 /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/gatk-4.0.1.2/gatk VariantRecalibrator \
 --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" \
 -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
@@ -27,11 +40,10 @@ R_LIBS_USER=/global/home/users/makman/R/x86_64-pc-linux-gnu-library/3.4/
 --max-gaussians 4 \
 -mode SNP \
 --resource 3callerscombined,known=false,training=true,truth=true,prior=10.0:../truthSet/truth_GATK_variants.vcf \
--O G4_unfiltered_all_tranches.recal \
+-O G4_unfiltered_all_tranches2.recal \
 -tranche 90 -tranche 80 -tranche 70 -tranche 60 -tranche 50 \
---tranches-file G4_unfiltered_all_tranches.tranches \
---rscript-file G4_unfiltered_all_tranches.plots.R
-
+--tranches-file G4_unfiltered_all_tranches2.tranches \
+--rscript-file G4_unfiltered_all_tranches2.plots.R
 
 
 
