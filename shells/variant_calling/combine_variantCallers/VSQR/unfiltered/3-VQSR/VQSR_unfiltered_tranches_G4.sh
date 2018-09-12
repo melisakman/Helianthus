@@ -41,7 +41,7 @@ R_LIBS_USER=/global/home/users/makman/R/x86_64-pc-linux-gnu-library/3.4/
 -mode SNP \
 --resource 3callerscombined,known=false,training=true,truth=true,prior=10.0:../truthSet/truth_GATK_variants.vcf \
 -O G4_unfiltered_all_tranches2.recal \
--tranche 90 -tranche 80 -tranche 70 -tranche 60 -tranche 50 \
+-tranche 90 -tranche 80 \
 --tranches-file G4_unfiltered_all_tranches2.tranches \
 --rscript-file G4_unfiltered_all_tranches2.plots.R
 
