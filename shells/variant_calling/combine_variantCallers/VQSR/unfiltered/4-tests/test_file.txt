@@ -1,0 +1,14 @@
+HanXRQChr01	2000	.	A	.	
+HanXRQChr01	2005	.	A	.	
+HanXRQChr01	5000	.	A	.	
+HanXRQChr01	8000	.	A	C	
+HanXRQChr01	12571	.	A	.	
+HanXRQChr01	12582	.	A	.	
+HanXRQChr01	12600	.	A	.	
+HanXRQChr01	13000	.	A	S	
+HanXRQChr01	15000	.	A	.	
+HanXRQChr01	16000	.	A	G	
+HanXRQChr01	20000	.	A	.	
+HanXRQChr01	20002	.	A	.	
+HanXRQChr01	20005	.	A	C	
+HanXRQChr01	30000	.	A	.	

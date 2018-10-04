@@ -1,4 +1,4 @@
-file = open('chr01_final.vcf', 'r')
+file = open('chr01_final.vcf.txt', 'r')
 
 out = open('invariant_lowSNPintervals.txt', 'w')
 
@@ -41,7 +41,7 @@ for line in file:
 			else:
 				continue
 			
-				
+out.write(chr + "\t" + str(bin_start) + "\t" + str(bin_end) + "\t" + str(invariant_no) + "\n")				
 			
 
 
