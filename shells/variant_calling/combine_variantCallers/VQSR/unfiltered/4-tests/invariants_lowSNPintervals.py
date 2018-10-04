@@ -1,4 +1,4 @@
-file = open('chr03_final.vcf', 'r')
+file = open('chr01_final.vcf', 'r')
 
 out = open('invariant_lowSNPintervals.txt', 'w')
 
