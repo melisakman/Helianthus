@@ -5,7 +5,7 @@ out = open('invariant_lowSNPintervals.txt', 'w')
 chr_old = "HanXRQChr01"
 bin_start = 1
 bin_end = 10001
-invariant_no
+invariant_no = 0
 for line in file:
 	split = line.split("\t")
 	if split[0][0] == "#":
