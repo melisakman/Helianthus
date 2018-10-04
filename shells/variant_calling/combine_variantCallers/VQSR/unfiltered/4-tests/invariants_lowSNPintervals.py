@@ -1,6 +1,6 @@
 file = open('chr03_final.vcf', 'r')
 
-out = open('lowerthan10SNPsregions.txt', 'w')
+out = open('invariant_lowSNPintervals.txt', 'w')
 
 chr_old = "HanXRQChr01"
 bin_start = 1
