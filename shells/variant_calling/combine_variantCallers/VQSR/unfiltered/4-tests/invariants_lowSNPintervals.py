@@ -22,7 +22,7 @@ for line in file:
 				else:
 					continue
 			else:
-				out.write(chr + "\t" + (bin_start) + "\t" + str(bin_end) + "\t" + str(invariant_no) + "\n")	
+				out.write(chr + "\t" + str(bin_start) + "\t" + str(bin_end) + "\t" + str(invariant_no) + "\n")	
 				invariant_no = 0
 				bin_start = bin_start + 10000
 				bin_end = bin_end + 10000
@@ -32,7 +32,7 @@ for line in file:
 					continue
 					
 		else:
-			out.write(chr + "\t" + (bin_start) + "\t" + str(bin_end) + "\t" + str(invariant_no) + "\n")	
+			out.write(chr + "\t" + str(bin_start) + "\t" + str(bin_end) + "\t" + str(invariant_no) + "\n")	
 			invariant_no = 0
 			bin_start = bin_start + 10000
 			bin_end = bin_end + 10000
