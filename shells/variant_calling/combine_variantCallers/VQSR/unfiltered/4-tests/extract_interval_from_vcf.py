@@ -17,7 +17,7 @@ for line in file:
 		continue
 	else:
 		chr = split[0]
-		site = split[1]
+		site = int(split[1])
 		if chr == bin_chr:
 			print 2
 			if bin_start <= site and site <= bin_end:
