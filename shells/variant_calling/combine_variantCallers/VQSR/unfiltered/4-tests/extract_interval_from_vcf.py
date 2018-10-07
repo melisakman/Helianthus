@@ -5,8 +5,8 @@ import sys
 InputFile = sys.argv[1] 
 OutputFile = sys.argv[2] 
 bin_chr = sys.argv[3]
-bin_start = sys.argv[4]
-bin_end = sys.argv[5]
+bin_start = int(sys.argv[4])
+bin_end = int(sys.argv[5])
 
 file = open(InputFile, "r")
 output = open(OutputFile, 'w')
