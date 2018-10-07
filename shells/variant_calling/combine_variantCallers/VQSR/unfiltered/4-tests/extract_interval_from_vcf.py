@@ -20,6 +20,7 @@ for line in file:
 		site = split[1]
 		if chr == bin_chr:
 			if bin_start <= site and site <= bin_end:
+				print 1
 				output.write(line)
 			else:
 				continue
