@@ -19,7 +19,7 @@ for line in file:
 		chr = split[0]
 		site = split[1]
 		if chr == bin_chr:
-			if bin_start < site < bin_end:
+			if bin_start <= site and site <= bin_end:
 				output.write(line)
 			else:
 				continue
