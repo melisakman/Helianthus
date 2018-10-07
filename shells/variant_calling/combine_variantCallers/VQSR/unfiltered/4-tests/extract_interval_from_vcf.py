@@ -8,7 +8,7 @@ bin_chr = sys.argv[3]
 bin_start = sys.argv[4]
 bin_end = sys.argv[5]
 
-file = open(InputFile1, "r")
+file = open(InputFile, "r")
 output = open(OutputFile, 'w')
 
 for line in file:
