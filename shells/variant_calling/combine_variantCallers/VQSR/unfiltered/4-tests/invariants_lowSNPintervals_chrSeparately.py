@@ -29,14 +29,24 @@ for line in file:
 			out.write(chr + "\t" + str(bin_start) + "\t" + str(bin_end) + "\t" + str(invariant_no) + "\t" + str(variant_no) + "\n")	
 			invariant_no = 0
 			variant_no = 0
-			bin_diff = str(site - bin_start)
-			to_add = int(bin_diff[0:2]) * 100
-			bin_start = bin_start + to_add
-			bin_end = bin_end + to_add
-			if alt == ".":
-				invariant_no +=1
+			new_end = bin_end + 500
+			new_start = bin_start + 500
+			if new_end >= site >= new_start:
+				if alt == ".":
+					invariant_no +=1
+				else:
+					variant_no +=1
+				bin_end = bin_end + 500
+				bin_start = bin_start + 500
 			else:
-				variant_no +=1
+				bin_diff = str(site - bin_start)
+				to_add = int(bin_diff[0:2]) * 100
+				bin_start = bin_start + to_add
+				bin_end = bin_end + to_add
+				if alt == ".":
+					invariant_no +=1
+				else:
+					variant_no +=1
 								
 out.write(chr + "\t" + str(bin_start) + "\t" + str(bin_end) + "\t" + str(invariant_no) + "\t" + str(variant_no) + "\n")				
 			
