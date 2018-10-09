@@ -20,7 +20,6 @@ for line in file:
 		site = int(split[1])
 		ref = split[3]
 		alt = split[4]
-	if chr == chr_old:
 		if bin_end >= site >= bin_start:
 			if alt == ".":
 				invariant_no +=1
@@ -35,17 +34,7 @@ for line in file:
 				invariant_no +=1
 			else:
 				variant_no +=1
-					
-	else:
-		out.write(chr + "\t" + str(bin_start) + "\t" + str(bin_end) + "\t" + str(invariant_no) + "\t" + str(variant_no) + "\n")	
-		invariant_no = 0
-		bin_start = bin_start + 1000
-		bin_end = bin_end + 1000
-		if alt == ".":
-			invariant_no +=1
-		else:
-			variant_no +=1
-			
+								
 out.write(chr + "\t" + str(bin_start) + "\t" + str(bin_end) + "\t" + str(invariant_no) + "\t" + str(variant_no) + "\n")				
 			
 
