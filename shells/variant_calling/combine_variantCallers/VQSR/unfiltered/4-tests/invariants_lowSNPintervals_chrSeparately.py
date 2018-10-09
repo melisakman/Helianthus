@@ -7,7 +7,7 @@ file = open(InputFile, 'r')
 out = open(OutputFile, 'w')
 
 bin_start = 1
-bin_end = 1001
+bin_end = 501
 invariant_no = 0
 variant_no =0
 out.write("chr\tbin_start\tbin_end\tinvariant_no\tvariant_no")
@@ -28,8 +28,8 @@ for line in file:
 		else:
 			out.write(chr + "\t" + str(bin_start) + "\t" + str(bin_end) + "\t" + str(invariant_no) + "\t" + str(variant_no) + "\n")	
 			invariant_no = 0
-			bin_start = bin_start + 1000
-			bin_end = bin_end + 1000
+			bin_start = bin_start + 500
+			bin_end = bin_end + 500
 			if alt == ".":
 				invariant_no +=1
 			else:
