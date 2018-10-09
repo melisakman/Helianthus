@@ -4,8 +4,10 @@ out = open('invariant_lowSNPintervals.txt', 'w')
 
 chr_old = "HanXRQChr01"
 bin_start = 1
-bin_end = 10001
+bin_end = 1001
 invariant_no = 0
+variant_no =0
+out.write("chr\tbin_start\tbin_end\tinvariant_no\tvariant_no")
 for line in file:
 	split = line.split("\t")
 	if split[0][0] == "#":
@@ -20,28 +22,28 @@ for line in file:
 				if alt == ".":
 					invariant_no +=1
 				else:
-					continue
+					variant_no +=1
 			else:
-				out.write(chr + "\t" + str(bin_start) + "\t" + str(bin_end) + "\t" + str(invariant_no) + "\n")	
+				out.write(chr + "\t" + str(bin_start) + "\t" + str(bin_end) + "\t" + str(invariant_no) + "\t" + str(variant_no) + "\n")	
 				invariant_no = 0
-				bin_start = bin_start + 10000
-				bin_end = bin_end + 10000
+				bin_start = bin_start + 1000
+				bin_end = bin_end + 1000
 				if alt == ".":
 					invariant_no +=1
 				else:
-					continue
+					variant_no +=1
 					
 		else:
-			out.write(chr + "\t" + str(bin_start) + "\t" + str(bin_end) + "\t" + str(invariant_no) + "\n")	
+			out.write(chr + "\t" + str(bin_start) + "\t" + str(bin_end) + "\t" + str(invariant_no) + "\t" + str(variant_no) + "\n")	
 			invariant_no = 0
-			bin_start = bin_start + 10000
-			bin_end = bin_end + 10000
+			bin_start = bin_start + 1000
+			bin_end = bin_end + 1000
 			if alt == ".":
 				invariant_no +=1
 			else:
-				continue
+				variant_no +=1
 			
-out.write(chr + "\t" + str(bin_start) + "\t" + str(bin_end) + "\t" + str(invariant_no) + "\n")				
+out.write(chr + "\t" + str(bin_start) + "\t" + str(bin_end) + "\t" + str(invariant_no) + "\t" + str(variant_no) + "\n")				
 			
 
 
