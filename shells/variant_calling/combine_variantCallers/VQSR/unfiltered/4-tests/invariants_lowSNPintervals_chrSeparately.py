@@ -7,7 +7,7 @@ file = open(InputFile, 'r')
 out = open(OutputFile, 'w')
 
 bin_start = 1
-bin_end = 501
+bin_end = 500
 invariant_no = 0
 variant_no =0
 out.write("chr\tbin_start\tbin_end\tinvariant_no\tvariant_no")
