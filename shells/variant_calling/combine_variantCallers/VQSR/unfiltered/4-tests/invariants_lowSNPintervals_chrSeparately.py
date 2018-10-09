@@ -28,6 +28,7 @@ for line in file:
 		else:
 			out.write(chr + "\t" + str(bin_start) + "\t" + str(bin_end) + "\t" + str(invariant_no) + "\t" + str(variant_no) + "\n")	
 			invariant_no = 0
+			variant_no = 0
 			bin_start = bin_start + 500
 			bin_end = bin_end + 500
 			if alt == ".":
