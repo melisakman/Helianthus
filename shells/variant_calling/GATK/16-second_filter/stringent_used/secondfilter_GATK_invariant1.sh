@@ -39,6 +39,6 @@ module load java
 # 
 # cat VCMA_GATK_chr01_sorted.vcf | bcftools filter -g 5 -i 'TYPE = "indel" && QUAL > 20 || TYPE = "snp" && QUAL > 20 || TYPE = "mnp" && QUAL > 20 || TYPE = "ref" && QUAL > 20' | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout > VCMA_GATK_chr01_secondFilter_4.vcf
 
-cat VCMA_chr01_NO_VARIATION_hardfiltered.vcf | vcftools --vcf - --minDP 1 --max-missing 0.8 --maxDP 25 --recode --stdout > VCMA_GATK_chr01_secondFilter_mindepth.vcf
-cat VCMA_chr01_NO_VARIATION_hardfiltered.vcf | vcftools --vcf - --minDP 1 --max-missing 0.8 --recode --stdout > VCMA_GATK_chr01_secondFilter_maxdepth.vcf
-cat VCMA_chr01_NO_VARIATION_hardfiltered.vcf | vcftools --vcf - --minDP 1 --max-missing 0.9 --maxDP 25 --recode --stdout > VCMA_GATK_chr01_secondFilter_maxmissing.vcf
+cat VCMA_chr01_NO_VARIATION_hardfiltered.vcf | vcftools --vcf - --minDP 1 --max-missing 0.8 --maxDP 25 --recode --stdout > VCMA_GATK_chr01_NO_VARIATION_secondFilter_mindepth.vcf
+cat VCMA_chr01_NO_VARIATION_hardfiltered.vcf | vcftools --vcf - --minDP 1 --max-missing 0.8 --recode --stdout > VCMA_GATK_chr01_NO_VARIATION_secondFilter_maxdepth.vcf
+cat VCMA_chr01_NO_VARIATION_hardfiltered.vcf | vcftools --vcf - --minDP 1 --max-missing 0.9 --maxDP 25 --recode --stdout > VCMA_GATK_chr01_NO_VARIATION_secondFilter_maxmissing.vcf
