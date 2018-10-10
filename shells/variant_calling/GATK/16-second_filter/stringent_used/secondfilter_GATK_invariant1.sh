@@ -5,8 +5,8 @@
 #SBATCH --partition=savio
 #SBATCH --qos=rosalind_savio_normal
 #SBATCH --time=24:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/bcftools_filter_GATK1.out
-#SBATCH -e /global/home/users/makman/GATK/outs/bcftools_filter_GATK1.err
+#SBATCH -o /global/home/users/makman/GATK/outs/bcftools_filter_GATK1_secondfilter.out
+#SBATCH -e /global/home/users/makman/GATK/outs/bcftools_filter_GATK1_secondfilter.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
@@ -14,7 +14,7 @@ module load bcftools/1.6
 module load bio/vcftools
 module load java
 
-cat VCMA_GATK_chr01_sorted.vcf | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > VCMA_GATK_chr01_secondFilter.vcf.gz
+# cat VCMA_GATK_chr01_sorted.vcf | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > VCMA_GATK_chr01_secondFilter.vcf.gz
 # zcat VCMA_GATK_chr02_sorted.vcf.gz | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > VCMA_GATK_chr02_secondFilter.vcf.gz
 # zcat VCMA_GATK_chr03_sorted.vcf.gz | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > VCMA_GATK_chr03_secondFilter.vcf.gz
 # zcat VCMA_GATK_chr04_sorted.vcf.gz | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > VCMA_GATK_chr04_secondFilter.vcf.gz
@@ -33,8 +33,12 @@ cat VCMA_GATK_chr01_sorted.vcf | vcftools --vcf - --minDP 3 --max-missing 0.8 --
 # zcat VCMA_GATK_chr17_sorted.vcf.gz | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > VCMA_GATK_chr17_secondFilter.vcf.gz
 
 
-cat VCMA_GATK_chr01_sorted.vcf | bcftools filter -g 5 -i 'TYPE = "indel" && QUAL > 40 || TYPE = "snp" && QUAL > 40 || TYPE = "mnp" && QUAL > 40 || TYPE = "ref" && QUAL > 40' | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout > VCMA_GATK_chr01_secondFilter_3.vcf
+# cat VCMA_GATK_chr01_sorted.vcf | bcftools filter -g 5 -i 'TYPE = "indel" && QUAL > 40 || TYPE = "snp" && QUAL > 40 || TYPE = "mnp" && QUAL > 40 || TYPE = "ref" && QUAL > 40' | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout > VCMA_GATK_chr01_secondFilter_3.vcf
+# 
+# cat VCMA_GATK_chr01_sorted.vcf | bcftools filter -g 5 -i 'TYPE = "indel" && QUAL > 40 || TYPE = "snp" && QUAL > 40 || TYPE = "mnp" && QUAL > 40 || TYPE = "ref" && QUAL > 40' | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout > VCMA_GATK_chr01_secondFilter_2.vcf
+# 
+# cat VCMA_GATK_chr01_sorted.vcf | bcftools filter -g 5 -i 'TYPE = "indel" && QUAL > 20 || TYPE = "snp" && QUAL > 20 || TYPE = "mnp" && QUAL > 20 || TYPE = "ref" && QUAL > 20' | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout > VCMA_GATK_chr01_secondFilter_4.vcf
 
-cat VCMA_GATK_chr01_sorted.vcf | bcftools filter -g 5 -i 'TYPE = "indel" && QUAL > 40 || TYPE = "snp" && QUAL > 40 || TYPE = "mnp" && QUAL > 40 || TYPE = "ref" && QUAL > 40' | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout > VCMA_GATK_chr01_secondFilter_2.vcf
-
-cat VCMA_GATK_chr01_sorted.vcf | bcftools filter -g 5 -i 'TYPE = "indel" && QUAL > 20 || TYPE = "snp" && QUAL > 20 || TYPE = "mnp" && QUAL > 20 || TYPE = "ref" && QUAL > 20' | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout > VCMA_GATK_chr01_secondFilter_4.vcf
+cat VCMA_GATK_chr01_sorted.vcf | vcftools --vcf - --minDP 1 --max-missing 0.8 --maxDP 25 --recode --stdout > VCMA_GATK_chr01_secondFilter_mindepth.vcf
+cat VCMA_GATK_chr01_sorted.vcf | vcftools --vcf - --minDP 1 --max-missing 0.8 --recode --stdout > VCMA_GATK_chr01_secondFilter_maxdepth.vcf
+cat VCMA_GATK_chr01_sorted.vcf | vcftools --vcf - --minDP 1 --max-missing 0.9 --maxDP 25 --recode --stdout > VCMA_GATK_chr01_secondFilter_maxmissing.vcf
