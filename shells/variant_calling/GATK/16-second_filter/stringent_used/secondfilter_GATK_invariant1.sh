@@ -43,6 +43,19 @@ module load java
 # cat VCMA_chr01_NO_VARIATION_hardfiltered.vcf | vcftools --vcf - --minDP 1 --max-missing 0.8 --recode --stdout > VCMA_GATK_chr01_NO_VARIATION_secondFilter_maxdepth.vcf
 # cat VCMA_chr01_NO_VARIATION_hardfiltered.vcf | vcftools --vcf - --minDP 1 --max-missing 0.9 --maxDP 25 --recode --stdout > VCMA_GATK_chr01_NO_VARIATION_secondFilter_maxmissing.vcf
 
-cat VCMA_chr01_NO_VARIATION_hardfiltered.vcf | vcftools --vcf - --minDP 1 --max-missing 0.8 --maxDP 50 --recode --stdout > VCMA_GATK_chr01_NO_VARIATION_secondFilter_50maxdepth.vcf
-cat VCMA_chr01_NO_VARIATION_hardfiltered.vcf | vcftools --vcf - --minDP 1 --max-missing 0.8 --maxDP 100 --recode --stdout > VCMA_GATK_chr01_NO_VARIATION_secondFilter_100maxdepth.vcf
-cat VCMA_chr01_NO_VARIATION_hardfiltered.vcf | vcftools --vcf - --minDP 1 --max-missing 0.8 --maxDP 250 --recode --stdout > VCMA_GATK_chr01_NO_VARIATION_secondFilter_250maxdepth.vcf
+# cat VCMA_chr01_NO_VARIATION_hardfiltered.vcf | vcftools --vcf - --minDP 1 --max-missing 0.8 --maxDP 50 --recode --stdout > VCMA_GATK_chr01_NO_VARIATION_secondFilter_50maxdepth.vcf
+# cat VCMA_chr01_NO_VARIATION_hardfiltered.vcf | vcftools --vcf - --minDP 1 --max-missing 0.8 --maxDP 100 --recode --stdout > VCMA_GATK_chr01_NO_VARIATION_secondFilter_100maxdepth.vcf
+# cat VCMA_chr01_NO_VARIATION_hardfiltered.vcf | vcftools --vcf - --minDP 1 --max-missing 0.8 --maxDP 250 --recode --stdout > VCMA_GATK_chr01_NO_VARIATION_secondFilter_250maxdepth.vcf
+
+python ~/git/Helianthus/shells/variant_calling/combine_variantCallers/VQSR/unfiltered/4-tests/extract_interval_from_vcf.py VCMA_GATK_chr01_NO_VARIATION_secondFilter_50maxdepth.vcf VCMA_chr01_132110001_50maxdepth.vcf VCMA_chr01_132110001_50maxdepth.txt HanXRQChr01 132110001 132120001
+
+python ~/git/Helianthus/shells/variant_calling/combine_variantCallers/VQSR/unfiltered/4-tests/extract_interval_from_vcf.py VCMA_GATK_chr01_NO_VARIATION_secondFilter_100maxdepth.vcf VCMA_chr01_132110001_100maxdepth.vcf VCMA_chr01_132110001_100maxdepth.txt HanXRQChr01 132110001 132120001
+
+python ~/git/Helianthus/shells/variant_calling/combine_variantCallers/VQSR/unfiltered/4-tests/extract_interval_from_vcf.py VCMA_GATK_chr01_NO_VARIATION_secondFilter_250maxdepth.vcf VCMA_chr01_132110001_250maxdepth.vcf VCMA_chr01_132110001_250maxdepth.txt HanXRQChr01 132110001 132120001
+
+
+
+
+
+
+
