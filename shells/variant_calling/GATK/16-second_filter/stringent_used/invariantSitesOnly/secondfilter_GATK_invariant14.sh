@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/invariants/filtered_combined/
+#SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/invariants/
 #SBATCH -J filGK14
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
