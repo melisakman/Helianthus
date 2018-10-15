@@ -7,7 +7,7 @@ file = open(InputFile, 'r')
 out = open(OutputFile, 'w')
 
 bin_start = 1
-bin_end = 1000
+bin_end = 10000
 invariant_no = 0
 variant_no =0
 out.write("chr\tbin_start\tbin_end\tinvariant_no\tvariant_no")
@@ -29,15 +29,15 @@ for line in file:
 			out.write(chr + "\t" + str(bin_start) + "\t" + str(bin_end) + "\t" + str(invariant_no) + "\t" + str(variant_no) + "\n")	
 			invariant_no = 0
 			variant_no = 0
-			new_end = bin_end + 1000
-			new_start = bin_start + 1000
+			new_end = bin_end + 10000
+			new_start = bin_start + 10000
 			if new_end >= site >= new_start:
 				if alt == ".":
 					invariant_no +=1
 				else:
 					variant_no +=1
-				bin_end = bin_end + 1000
-				bin_start = bin_start + 1000
+				bin_end = bin_end + 10000
+				bin_start = bin_start + 10000
 			else:
 				bin_diff = str(site - bin_start)
 				to_add = int(bin_diff[0:2]) * 100
