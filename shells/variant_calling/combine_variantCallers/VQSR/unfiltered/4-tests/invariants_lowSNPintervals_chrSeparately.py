@@ -10,7 +10,7 @@ bin_start = 1
 bin_end = 10000
 invariant_no = 0
 variant_no =0
-out.write("chr\tbin_start\tbin_end\tinvariant_no\tvariant_no")
+out.write("chr\tbin_start\tbin_end\tinvariant_no\tvariant_no\n")
 for line in file:
 	split = line.split("\t")
 	if split[0][0] == "#":
