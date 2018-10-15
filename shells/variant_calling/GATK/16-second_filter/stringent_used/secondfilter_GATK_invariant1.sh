@@ -54,13 +54,17 @@ module load java
 # python ~/git/Helianthus/shells/variant_calling/combine_variantCallers/VQSR/unfiltered/4-tests/extract_interval_from_vcf.py VCMA_GATK_chr01_NO_VARIATION_secondFilter_250maxdepth.vcf VCMA_chr01_132110001_250maxdepth.vcf VCMA_chr01_132110001_250maxdepth.txt HanXRQChr01 132110001 132120001
 
 
-cat VCMA_chr01_NO_VARIATION_hardfiltered.vcf | vcftools --vcf - --minDP 1 --max-missing 0.8 --maxDP 40 --recode --stdout > VCMA_GATK_chr01_NO_VARIATION_secondFilter_40maxdepth.vcf
-python ~/git/Helianthus/shells/variant_calling/combine_variantCallers/VQSR/unfiltered/4-tests/extract_interval_from_vcf.py VCMA_GATK_chr01_NO_VARIATION_secondFilter_40maxdepth.vcf VCMA_chr01_132110001_40maxdepth.vcf VCMA_chr01_132110001_40maxdepth.txt HanXRQChr01 132110001 132120001
+# cat VCMA_chr01_NO_VARIATION_hardfiltered.vcf | vcftools --vcf - --minDP 1 --max-missing 0.8 --maxDP 40 --recode --stdout > VCMA_GATK_chr01_NO_VARIATION_secondFilter_40maxdepth.vcf
+# python ~/git/Helianthus/shells/variant_calling/combine_variantCallers/VQSR/unfiltered/4-tests/extract_interval_from_vcf.py VCMA_GATK_chr01_NO_VARIATION_secondFilter_40maxdepth.vcf VCMA_chr01_132110001_40maxdepth.vcf VCMA_chr01_132110001_40maxdepth.txt HanXRQChr01 132110001 132120001
+# 
+# cat VCMA_chr01_NO_VARIATION_hardfiltered.vcf | vcftools --vcf - --minDP 1 --max-missing 0.8 --maxDP 30 --recode --stdout > VCMA_GATK_chr01_NO_VARIATION_secondFilter_30maxdepth.vcf
+# python ~/git/Helianthus/shells/variant_calling/combine_variantCallers/VQSR/unfiltered/4-tests/extract_interval_from_vcf.py VCMA_GATK_chr01_NO_VARIATION_secondFilter_30maxdepth.vcf VCMA_chr01_132110001_30maxdepth.vcf VCMA_chr01_132110001_30maxdepth.txt HanXRQChr01 132110001 132120001
+# 
+# cat VCMA_chr01_NO_VARIATION_hardfiltered.vcf | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 50 --recode --stdout > VCMA_GATK_chr01_NO_VARIATION_secondFilter_50maxdepthmindepth3.vcf
+# python ~/git/Helianthus/shells/variant_calling/combine_variantCallers/VQSR/unfiltered/4-tests/extract_interval_from_vcf.py VCMA_GATK_chr01_NO_VARIATION_secondFilter_50maxdepthmindepth3.vcf VCMA_chr01_132110001_50maxdepthmindepth3.vcf VCMA_chr01_132110001_50maxdepthmindepth3.txt HanXRQChr01 132110001 132120001
 
-cat VCMA_chr01_NO_VARIATION_hardfiltered.vcf | vcftools --vcf - --minDP 1 --max-missing 0.8 --maxDP 30 --recode --stdout > VCMA_GATK_chr01_NO_VARIATION_secondFilter_30maxdepth.vcf
-python ~/git/Helianthus/shells/variant_calling/combine_variantCallers/VQSR/unfiltered/4-tests/extract_interval_from_vcf.py VCMA_GATK_chr01_NO_VARIATION_secondFilter_30maxdepth.vcf VCMA_chr01_132110001_30maxdepth.vcf VCMA_chr01_132110001_30maxdepth.txt HanXRQChr01 132110001 132120001
+cat VCMA_chr01_NO_VARIATION_hardfiltered.vcf | vcftools --vcf - --minDP 3 --recode --stdout > VCMA_GATK_chr01_NO_VARIATION_secondFilter_onlymindepth3.vcf
+python ~/git/Helianthus/shells/variant_calling/combine_variantCallers/VQSR/unfiltered/4-tests/extract_interval_from_vcf.py VCMA_GATK_chr01_NO_VARIATION_secondFilter_onlymindepth3.vcf VCMA_chr01_132110001_onlymindepth3.vcf VCMA_chr01_132110001_onlymindepth3.txt HanXRQChr01 132110001 132120001
 
-cat VCMA_chr01_NO_VARIATION_hardfiltered.vcf | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 50 --recode --stdout > VCMA_GATK_chr01_NO_VARIATION_secondFilter_50maxdepthmindepth3.vcf
-python ~/git/Helianthus/shells/variant_calling/combine_variantCallers/VQSR/unfiltered/4-tests/extract_interval_from_vcf.py VCMA_GATK_chr01_NO_VARIATION_secondFilter_50maxdepthmindepth3.vcf VCMA_chr01_132110001_50maxdepthmindepth3.vcf VCMA_chr01_132110001_50maxdepthmindepth3.txt HanXRQChr01 132110001 132120001
-
-
+cat VCMA_chr01_NO_VARIATION_hardfiltered.vcf | vcftools --vcf - --maxDP 25 --recode --stdout > VCMA_GATK_chr01_NO_VARIATION_secondFilter_onlymaxdepth25.vcf
+python ~/git/Helianthus/shells/variant_calling/combine_variantCallers/VQSR/unfiltered/4-tests/extract_interval_from_vcf.py VCMA_GATK_chr01_NO_VARIATION_secondFilter_onlymaxdepth25.vcf VCMA_chr01_132110001_onlymaxdepth25.vcf VCMA_chr01_132110001_onlymaxdepth25.txt HanXRQChr01 132110001 132120001
