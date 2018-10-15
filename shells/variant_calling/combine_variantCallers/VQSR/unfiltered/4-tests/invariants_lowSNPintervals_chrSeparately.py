@@ -40,7 +40,7 @@ for line in file:
 				bin_start = bin_start + 10000
 			else:
 				bin_diff = str(site - bin_start)
-				to_add = int(bin_diff[0:2]) * 100
+				to_add = int(bin_diff[:-4]) * 10000
 				bin_start = bin_start + to_add
 				bin_end = bin_end + to_add
 				if alt == ".":
@@ -50,8 +50,8 @@ for line in file:
 								
 out.write(chr + "\t" + str(bin_start) + "\t" + str(bin_end) + "\t" + str(invariant_no) + "\t" + str(variant_no) + "\n")				
 			
-
-
+# 140001	150000
+# 142901	152900
 
 # HanXRQChr01     4220    .       TG      T
 # HanXRQChr01     6556    .       G       C
