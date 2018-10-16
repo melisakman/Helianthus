@@ -15,8 +15,8 @@ module load bcftools/1.6
 
 /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix samtools_VC/samtools_invariant_chr14_Filtered_invariantSitesOnly.vcf.gz
 /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix freebayes/final_combined/freebayes_invariant_chr14_allFiltered_onlyInvariantSites.vcf.gz
-/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix fastq/invariants/VCMA_GATK_chr02_secondFilter_onlyInvariantSites.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix fastq/invariants/VCMA_GATK_chr14_secondFilter_onlyInvariantSites.vcf.gz
 
-bcftools isec -n +2 -O z -p bcftools_isec/unfiltered/invariantSitesOnly/chr14_2 fastq/invariants/VCMA_GATK_chr02_secondFilter_onlyInvariantSites.vcf.gz \
+bcftools isec -n +2 -O z -p bcftools_isec/unfiltered/invariantSitesOnly/chr14_2 fastq/invariants/VCMA_GATK_chr14_secondFilter_onlyInvariantSites.vcf.gz \
 samtools_VC/samtools_invariant_chr14_Filtered_invariantSitesOnly.vcf.gz \
 freebayes/final_combined/freebayes_invariant_chr14_allFiltered_onlyInvariantSites.vcf.gz
