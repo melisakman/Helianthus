@@ -26,7 +26,8 @@ for line in file:
 				else:
 					variant_no +=1
 		else:	
-			break
+			if site > 20000:
+				break
 print invariant_no
 print variant_no
 print indel
