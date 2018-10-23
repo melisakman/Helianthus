@@ -41,7 +41,7 @@ for line in file:
 				bin_start = bin_start + bin_size
 			else:
 				bin_diff = str(site - bin_start)
-				to_add = (int(bin_diff[:decimal]) +1) * bin_size
+				to_add = (int(bin_diff[:decimal])) * bin_size
 				bin_start = bin_start + to_add
 				bin_end = bin_end + to_add
 				if alt == ".":
@@ -51,3 +51,11 @@ for line in file:
 								
 out.write(chr + "\t" + str(bin_start) + "\t" + str(bin_end) + "\t" + str(invariant_no) + "\t" + str(variant_no) + "\n")				
 			
+# 10000
+# 241000
+# 
+# site = 55000
+# bin_start = 20000
+# bin_diff = str(site - bin_start)
+# to_add = (int(bin_diff[:decimal])) * bin_size
+# to_add
