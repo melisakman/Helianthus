@@ -7,7 +7,7 @@ file = open(InputFile, 'r')
 out = open(OutputFile, 'w')
 invariant_no = 0
 variant_no =0
-
+indel +=0
 for line in file:
 	split = line.split("\t")
 	if split[0][0] == "#":
@@ -21,7 +21,10 @@ for line in file:
 			if alt == ".":
 				invariant_no +=1
 			else:
-				variant_no +=1
+				if len(alt)>=2:
+					indel +=1
+				else:
+					variant_no +=1
 		else:	
 			break
 print invariant_no
