@@ -29,26 +29,40 @@ for line in file:
 				invariant_no +=1
 			else:
 				if len(alt)>=2:
-					indel +=1
+					alt_split = alt.split(",")
+					if len(alt_split) > 1:
+						if len(alt_split)[0] == 1 and len(alt_split)[1] == 1:
+							variant_no +=1
+						else:
+							indel +=1
 				else:
 					variant_no +=1
-
 		elif 20000 >= site >= 10001:
 			if alt == ".":
 				invariant_no2 +=1
 			else:
 				if len(alt)>=2:
-					indel2 +=1
+					alt_split = alt.split(",")
+					if len(alt_split) > 1:
+						if len(alt_split)[0] == 1 and len(alt_split)[1] == 1:
+							variant_no2 +=1
+						else:
+							indel2 +=1
 				else:
 					variant_no2 +=1
 		elif 30000 >= site >= 20001:
 			if alt == ".":
-				invariant_no +=1
+				invariant_no3 +=1
 			else:
 				if len(alt)>=2:
-					indel +=1
+					alt_split = alt.split(",")
+					if len(alt_split) > 1:
+						if len(alt_split)[0] == 1 and len(alt_split)[1] == 1:
+							variant_no3 +=1
+						else:
+							indel3 +=1
 				else:
-					variant_no +=1
+					variant_no3 +=1
 
 		else:
 			if site>30000:
