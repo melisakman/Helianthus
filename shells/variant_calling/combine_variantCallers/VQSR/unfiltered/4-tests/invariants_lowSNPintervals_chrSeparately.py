@@ -17,7 +17,7 @@ for line in file:
 		site = int(split[1])
 		ref = split[3]
 		alt = split[4]
-		if 20000 >= site >= 10000:
+		if 30000 >= site >= 20000:
 			if alt == ".":
 				invariant_no +=1
 			else:
@@ -26,7 +26,7 @@ for line in file:
 				else:
 					variant_no +=1
 		else:	
-			if site > 20000:
+			if site > 30000:
 				break
 print invariant_no
 print variant_no
