@@ -50,19 +50,3 @@ for line in file:
 								
 out.write(chr + "\t" + str(bin_start) + "\t" + str(bin_end) + "\t" + str(invariant_no) + "\t" + str(variant_no) + "\n")				
 			
-# 140001	150000
-# 142901	152900
-
-# HanXRQChr01     4220    .       TG      T
-# HanXRQChr01     6556    .       G       C
-# HanXRQChr01     6607    .       C       T
-# HanXRQChr01     6621    .       G       .
-# HanXRQChr01     6622    .       A       .
-# HanXRQChr01     6627    .       G       .
-# HanXRQChr01     6630    .       T       .
-# HanXRQChr01     6631    .       A       .
-# HanXRQChr01     6632    .       A       .
-# HanXRQChr01     6633    .       A       .
-# HanXRQChr01     6637    .       A       .
-# HanXRQChr01     6641    .       T       .
-# HanXRQChr01     6642    .       A       .
