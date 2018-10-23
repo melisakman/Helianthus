@@ -5,9 +5,10 @@ OutputFile = sys.argv[2]
 
 file = open(InputFile, 'r')
 out = open(OutputFile, 'w')
-
+bin_size = 10000
 bin_start = 1
-bin_end = 10000
+bin_end = bin_size
+decimal = (len(str(bin_size)) -1)*-1
 invariant_no = 0
 variant_no =0
 out.write("chr\tbin_start\tbin_end\tinvariant_no\tvariant_no\n")
@@ -29,18 +30,18 @@ for line in file:
 			out.write(chr + "\t" + str(bin_start) + "\t" + str(bin_end) + "\t" + str(invariant_no) + "\t" + str(variant_no) + "\n")	
 			invariant_no = 0
 			variant_no = 0
-			new_end = bin_end + 10000
-			new_start = bin_start + 10000
+			new_end = bin_end + bin_size
+			new_start = bin_start + bin_size
 			if new_end >= site >= new_start:
 				if alt == ".":
 					invariant_no +=1
 				else:
 					variant_no +=1
-				bin_end = bin_end + 10000
-				bin_start = bin_start + 10000
+				bin_end = bin_end + bin_size
+				bin_start = bin_start + bin_size
 			else:
 				bin_diff = str(site - bin_start)
-				to_add = int(bin_diff[:-4]) * 10000
+				to_add = (int(bin_diff[:decimal]) +1) * bin_size
 				bin_start = bin_start + to_add
 				bin_end = bin_end + to_add
 				if alt == ".":
