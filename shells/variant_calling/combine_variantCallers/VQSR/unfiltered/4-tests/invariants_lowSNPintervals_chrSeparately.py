@@ -51,7 +51,8 @@ for line in file:
 					variant_no +=1
 
 		else:
-			break
+			if site>30000:
+				break
 	
 			
 print invariant_no
