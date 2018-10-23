@@ -8,6 +8,13 @@ out = open(OutputFile, 'w')
 invariant_no = 0
 variant_no =0
 indel =0
+invariant_no2 = 0
+variant_no2 =0
+indel2 =0
+invariant_no3 = 0
+variant_no3 =0
+indel3 =0
+
 for line in file:
 	split = line.split("\t")
 	if split[0][0] == "#":
@@ -25,27 +32,16 @@ for line in file:
 					indel +=1
 				else:
 					variant_no +=1
+
 		elif 20000 >= site >= 10001:
-			print invariant_no
-			print variant_no
-			print indel
-			invariant_no = 0
-			variant_no =0
-			indel =0
 			if alt == ".":
-				invariant_no +=1
+				invariant_no2 +=1
 			else:
 				if len(alt)>=2:
-					indel +=1
+					indel2 +=1
 				else:
-					variant_no +=1
+					variant_no2 +=1
 		elif 30000 >= site >= 20001:
-			print invariant_no
-			print variant_no
-			print indel
-			invariant_no = 0
-			variant_no =0
-			indel =0
 			if alt == ".":
 				invariant_no +=1
 			else:
@@ -53,6 +49,7 @@ for line in file:
 					indel +=1
 				else:
 					variant_no +=1
+
 		else:
 			break
 	
@@ -60,6 +57,14 @@ for line in file:
 print invariant_no
 print variant_no
 print indel
+print invariant_no2
+print variant_no2
+print indel2
+print invariant_no3
+print variant_no3
+print indel3
+
+
 
 # bin_size = 10000
 # bin_start = 1
