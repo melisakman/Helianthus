@@ -5,6 +5,8 @@ OutputFile = sys.argv[2]
 
 file = open(InputFile, 'r')
 out = open(OutputFile, 'w')
+invariant_no = 0
+variant_no =0
 
 for line in file:
 	split = line.split("\t")
