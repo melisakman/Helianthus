@@ -31,7 +31,7 @@ for line in file:
 				if len(alt)>=2:
 					alt_split = alt.split(",")
 					if len(alt_split) > 1:
-						if len(alt_split)[0] == 1 and len(alt_split)[1] == 1:
+						if len(alt_split[0]) == 1 and len(alt_split[1]) == 1:
 							variant_no +=1
 						else:
 							indel +=1
@@ -44,7 +44,7 @@ for line in file:
 				if len(alt)>=2:
 					alt_split = alt.split(",")
 					if len(alt_split) > 1:
-						if len(alt_split)[0] == 1 and len(alt_split)[1] == 1:
+						if len(alt_split[0]) == 1 and len(alt_split[1]) == 1:
 							variant_no2 +=1
 						else:
 							indel2 +=1
@@ -57,7 +57,7 @@ for line in file:
 				if len(alt)>=2:
 					alt_split = alt.split(",")
 					if len(alt_split) > 1:
-						if len(alt_split)[0] == 1 and len(alt_split)[1] == 1:
+						if len(alt_split[0]) == 1 and len(alt_split[1]) == 1:
 							variant_no3 +=1
 						else:
 							indel3 +=1
