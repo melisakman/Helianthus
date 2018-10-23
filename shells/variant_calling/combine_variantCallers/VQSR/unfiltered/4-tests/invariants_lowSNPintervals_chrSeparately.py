@@ -33,11 +33,12 @@ for line in file:
 					if len(alt_split) > 1:
 						if len(alt_split[0]) == 1 and len(alt_split[1]) == 1:
 							variant_no +=1
-							print line
 						else:
 							indel +=1
 				else:
 					variant_no +=1
+					print line
+
 		elif 20000 >= site >= 10001:
 			if alt == ".":
 				invariant_no2 +=1
