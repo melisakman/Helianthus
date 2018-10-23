@@ -22,8 +22,9 @@ module load java
 export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
 
 /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-concat \
-VQSRfiltered_90_G4_SNP_chr01.vcf.gz \
+VQSRfiltered_90_G4_SNP_chr01.vcf \
 chr01_unfiltered_2plus_GATK_invariantSitesOnly_noIndels.vcf.gz \
 ../../fastq/invariants/VCMA_GATK_chr01_secondFilter_onlyIndelSites.vcf.gz | vcf-sort -t /clusterfs/rosalind/users/makman/temp \
 | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > ../final/chr01_final_lessStringentInvariants.vcf.gz
+
 
