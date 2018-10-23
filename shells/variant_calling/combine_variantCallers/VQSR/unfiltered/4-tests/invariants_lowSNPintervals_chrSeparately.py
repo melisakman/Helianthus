@@ -29,7 +29,7 @@ for line in file:
 			break
 print invariant_no
 print variant_no
-
+print indel
 
 # bin_size = 10000
 # bin_start = 1
