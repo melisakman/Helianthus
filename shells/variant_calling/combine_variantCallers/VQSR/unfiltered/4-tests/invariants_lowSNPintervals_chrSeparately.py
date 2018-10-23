@@ -33,6 +33,7 @@ for line in file:
 					if len(alt_split) > 1:
 						if len(alt_split[0]) == 1 and len(alt_split[1]) == 1:
 							variant_no +=1
+							print line
 						else:
 							indel +=1
 				else:
