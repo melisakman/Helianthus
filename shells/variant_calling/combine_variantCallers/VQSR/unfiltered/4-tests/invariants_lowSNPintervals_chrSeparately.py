@@ -40,14 +40,11 @@ for line in file:
 								variant_no +=1
 							else:
 								indel_no +=1
-								print line
 						else:
 							indel_no +=1
-							print line
 				
 				else:
 					indel_no +=1
-					print line
 					
 					
 			
@@ -74,14 +71,11 @@ for line in file:
 									variant_no +=1
 								else:
 									indel_no +=1
-									print line
 							else:
 								indel_no +=1
-								print line
 				
 					else:
 						indel_no +=1
-						print line
 				bin_end = bin_end + bin_size
 				bin_start = bin_start + bin_size
 			else:
@@ -93,7 +87,6 @@ for line in file:
 					invariant_no +=1
 				elif alt == "*":
 					indel_no +=1
-					print line
 				else:	
 					if len(ref)==1:	
 						if len(alt) == 1:
@@ -105,13 +98,10 @@ for line in file:
 									variant_no +=1
 								else:
 									indel_no +=1
-									print line
 							else:
 								indel_no +=1
-								print line
 				
 					else:
 						indel_no +=1
-						print line
 								
 out.write(chr + "\t" + str(bin_start) + "\t" + str(bin_end) + "\t" + str(invariant_no) + "\t" + str(variant_no) + "\t" + str(indel_no) + "\n")				

@@ -3,7 +3,7 @@ import sys
 
 InputFile1 = sys.argv[1] #vcf file
 InputFile2 = sys.argv[2] #sites file
-chr_no = sys.argv[4][-2:]
+# chr_no = sys.argv[4][-2:]
 
 OutputFile = sys.argv[3] # name for output file
 
@@ -21,14 +21,14 @@ for line in file2:
 	pos = split[1]
 	type = split[4][:-1]
 	alt = split[3]
-	if chr_no == chr:
-		if type == "110" or type == "101" or type == "011" or type == "111":
-			sites_dict.update({pos:alt}) 
-			sites_count +=1
-		else:
-			continue
+# 	if chr_no == chr:
+# 		if type == "110" or type == "101" or type == "011" or type == "111":
+	if type == "011":
+		sites_dict.update({pos:alt}) 
+		sites_count +=1
 	else:
-		break
+		continue
+
 for line in file1:
 	split = line.split("\t")
 	if split[0][0] == "#":
