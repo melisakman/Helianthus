@@ -41,7 +41,7 @@ for line in file:
 							else:
 								indel_no +=1
 						else:
-							print "hello"
+							print line
 				
 				else:
 					indel_no +=1
