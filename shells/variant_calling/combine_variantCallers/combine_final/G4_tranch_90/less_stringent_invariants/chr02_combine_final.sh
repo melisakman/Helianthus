@@ -46,13 +46,13 @@ export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcfto
 # rm chr02_unfiltered_2plus_GATK_invariantSitesOnly_noIndels_renamed.vcf
 # rm  ../../fastq/invariants/VCMA_GATK_chr02_secondFilter_onlyIndelSites_renamed.vcf
 
-vcf-shuffle-cols -t VQSRfiltered_90_G4_SNP_chr02_renamed.vcf.gz /clusterfs/rosalind/users/makman/GATK/freebayes/final_combined/freebayes_invariantSites_chr02_bcftools_sites.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > /clusterfs/rosalind/users/makman/GATK/freebayes/final_combined/freebayes_invariantSites_chr02_bcftools_sites_colshuffled.vcf.gz
+# vcf-shuffle-cols -t VQSRfiltered_90_G4_SNP_chr02_renamed.vcf.gz /clusterfs/rosalind/users/makman/GATK/freebayes/final_combined/freebayes_invariantSites_chr02_bcftools_sites.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > /clusterfs/rosalind/users/makman/GATK/freebayes/final_combined/freebayes_invariantSites_chr02_bcftools_sites_colshuffled.vcf.gz
 # 
-# /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-concat \
-# /clusterfs/rosalind/users/makman/GATK/freebayes/final_combined/freebayes_invariantSites_chr02_bcftools_sites_colshuffled.vcf.gz \
-# VQSRfiltered_90_G4_SNP_chr02_noHopi.vcf.gz \
-# chr02_unfiltered_2plus_GATK_invariantSitesOnly_noIndels_noHopi.vcf.gz \
-# ../../fastq/invariants/VCMA_GATK_chr02_secondFilter_onlyIndelSites_noHopi.vcf.gz | vcf-sort -t /clusterfs/rosalind/users/makman/temp \
-# | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > ../final/chr02_final_lessStringentInvariants.vcf.gz
+/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-concat \
+/clusterfs/rosalind/users/makman/GATK/freebayes/final_combined/freebayes_invariantSites_chr02_bcftools_sites_colshuffled.vcf.gz \
+VQSRfiltered_90_G4_SNP_chr02_renamed.vcf.gz \
+chr02_unfiltered_2plus_GATK_invariantSitesOnly_noIndels_renamed.vcf.gz \
+../../fastq/invariants/VCMA_GATK_chr02_secondFilter_onlyIndelSites_renamed.vcf.gz | vcf-sort -t /clusterfs/rosalind/users/makman/temp \
+| /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > ../final/chr02_final_lessStringentInvariants.vcf.gz
 # 
 # 
