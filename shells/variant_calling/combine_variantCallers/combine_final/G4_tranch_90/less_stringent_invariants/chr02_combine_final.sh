@@ -27,6 +27,9 @@ module load java
 
 
 export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix VQSRfiltered_90_G4_SNP_chr02.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix chr02_unfiltered_2plus_GATK_invariantSitesOnly_noIndels.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix ../../fastq/invariants/VCMA_GATK_chr02_secondFilter_onlyIndelSites.vcf.gz
 
 bcftools view VQSRfiltered_90_G4_SNP_chr02.vcf.gz -G "Hopi" | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > VQSRfiltered_90_G4_SNP_chr02_noHopi.vcf.gz
 bcftools view chr02_unfiltered_2plus_GATK_invariantSitesOnly_noIndels.vcf.gz -G "Hopi" | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > chr02_unfiltered_2plus_GATK_invariantSitesOnly_noIndels_noHopi.vcf.gz
