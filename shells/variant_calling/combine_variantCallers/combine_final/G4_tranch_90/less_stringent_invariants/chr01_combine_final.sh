@@ -22,8 +22,7 @@ module load java
 gunzip /clusterfs/rosalind/users/makman/GATK/freebayes/final_combined/freebayes_invariant_chr01_allFiltered_onlyInvariantSites.vcf.gz
 python /global/home/users/makman/git/Helianthus/shells/variant_calling/combine_variantCallers/bcftools-isec/unfiltered/2-extractGATKsites/extract_GATK_variants.py /clusterfs/rosalind/users/makman/GATK/freebayes/final_combined/freebayes_invariant_chr01_allFiltered_onlyInvariantSites.vcf /clusterfs/rosalind/users/makman/GATK/bcftools_isec/unfiltered/invariantSitesOnly/chr01_2/sites.txt /clusterfs/rosalind/users/makman/GATK/freebayes/final_combined/freebayes_invariantSites_chr01_bcftools_sites.vcf chr01 
 
-/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c /clusterfs/rosalind/users/makman/GATK/freebayes/final_combined/freebayes_invariant_chr01_allFiltered_onlyInvariantSites.vcf >/clusterfs/rosalind/users/makman/GATK/freebayes/final_combined/freebayes_invariant_chr01_allFiltered_onlyInvariantSites.vcf.gz
-# rm /clusterfs/rosalind/users/makman/GATK/freebayes/final_combined/freebayes_invariant_chr01_allFiltered_onlyInvariantSites.vcf
+rm /clusterfs/rosalind/users/makman/GATK/freebayes/final_combined/freebayes_invariant_chr01_allFiltered_onlyInvariantSites.vcf
 
 export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
 
