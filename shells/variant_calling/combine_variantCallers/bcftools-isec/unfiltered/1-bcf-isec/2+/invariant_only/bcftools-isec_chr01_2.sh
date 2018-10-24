@@ -2,9 +2,10 @@
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/
 #SBATCH -J 2_chr01
 #SBATCH --account=co_rosalind
-#SBATCH --partition=savio
-#SBATCH --qos=rosalind_savio_normal
+#SBATCH --partition=savio2_htc
+#SBATCH --qos=rosalind_htc2_normal
 #SBATCH --time=80:00:00
+#SBATCH --mem=64000
 #SBATCH -o /global/home/users/makman/GATK/outs/bcf-isec_chr01_invariantSitesOnly.out
 #SBATCH -e /global/home/users/makman/GATK/outs/bcf-isec_chr01_invariantSitesOnly.err
 #SBATCH --mail-user=makman@berkeley.edu
