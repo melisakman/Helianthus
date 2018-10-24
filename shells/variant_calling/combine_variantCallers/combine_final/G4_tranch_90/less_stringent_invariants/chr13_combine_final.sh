@@ -26,10 +26,29 @@ rm /clusterfs/rosalind/users/makman/GATK/freebayes/final_combined/freebayes_inva
 
 export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
 
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix VQSRfiltered_90_G4_SNP_chr13.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix chr13_unfiltered_2plus_GATK_invariantSitesOnly_noIndels.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix ../../fastq/invariants/VCMA_GATK_chr13_secondFilter_onlyIndelSites.vcf.gz
+
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c /clusterfs/rosalind/users/makman/GATK/freebayes/final_combined/freebayes_invariantSites_chr13_bcftools_sites.vcf > /clusterfs/rosalind/users/makman/GATK/freebayes/final_combined/freebayes_invariantSites_chr13_bcftools_sites.vcf.gz
+
+bcftools view -S /clusterfs/rosalind/users/makman/GATK/bcftools_isec/old/secondFilter/sample_names.txt VQSRfiltered_90_G4_SNP_chr13.vcf.gz | bcftools reheader -s /clusterfs/rosalind/users/makman/GATK/bcftools_isec/old/secondFilter/sample_rename.txt -o VQSRfiltered_90_G4_SNP_chr13_renamed.vcf
+bcftools view -S /clusterfs/rosalind/users/makman/GATK/bcftools_isec/old/secondFilter/sample_names.txt chr13_unfiltered_2plus_GATK_invariantSitesOnly_noIndels.vcf.gz | bcftools reheader -s /clusterfs/rosalind/users/makman/GATK/bcftools_isec/old/secondFilter/sample_rename.txt -o chr13_unfiltered_2plus_GATK_invariantSitesOnly_noIndels_renamed.vcf
+bcftools view -S /clusterfs/rosalind/users/makman/GATK/bcftools_isec/old/secondFilter/sample_names.txt ../../fastq/invariants/VCMA_GATK_chr13_secondFilter_onlyIndelSites.vcf.gz | bcftools reheader -s /clusterfs/rosalind/users/makman/GATK/bcftools_isec/old/secondFilter/sample_rename.txt -o ../../fastq/invariants/VCMA_GATK_chr13_secondFilter_onlyIndelSites_renamed.vcf
+
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c VQSRfiltered_90_G4_SNP_chr13_renamed.vcf > VQSRfiltered_90_G4_SNP_chr13_renamed.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c chr13_unfiltered_2plus_GATK_invariantSitesOnly_noIndels_renamed.vcf > chr13_unfiltered_2plus_GATK_invariantSitesOnly_noIndels_renamed.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c ../../fastq/invariants/VCMA_GATK_chr13_secondFilter_onlyIndelSites_renamed.vcf > ../../fastq/invariants/VCMA_GATK_chr13_secondFilter_onlyIndelSites_renamed.vcf.gz
+rm VQSRfiltered_90_G4_SNP_chr13_renamed.vcf
+rm chr13_unfiltered_2plus_GATK_invariantSitesOnly_noIndels_renamed.vcf
+rm  ../../fastq/invariants/VCMA_GATK_chr13_secondFilter_onlyIndelSites_renamed.vcf
+
+vcf-shuffle-cols -t VQSRfiltered_90_G4_SNP_chr13_renamed.vcf.gz /clusterfs/rosalind/users/makman/GATK/freebayes/final_combined/freebayes_invariantSites_chr13_bcftools_sites.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > /clusterfs/rosalind/users/makman/GATK/freebayes/final_combined/freebayes_invariantSites_chr13_bcftools_sites_colshuffled.vcf.gz
+# 
 /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-concat \
-/clusterfs/rosalind/users/makman/GATK/freebayes/final_combined/freebayes_invariantSites_chr13_bcftools_sites.vcf \
-VQSRfiltered_90_G4_SNP_chr13.vcf.gz \
-chr13_unfiltered_2plus_GATK_invariantSitesOnly_noIndels.vcf.gz \
-../../fastq/invariants/VCMA_GATK_chr13_secondFilter_onlyIndelSites.vcf.gz | vcf-sort -t /clusterfs/rosalind/users/makman/temp \
+/clusterfs/rosalind/users/makman/GATK/freebayes/final_combined/freebayes_invariantSites_chr13_bcftools_sites_colshuffled.vcf.gz \
+VQSRfiltered_90_G4_SNP_chr13_renamed.vcf.gz \
+chr13_unfiltered_2plus_GATK_invariantSitesOnly_noIndels_renamed.vcf.gz \
+../../fastq/invariants/VCMA_GATK_chr13_secondFilter_onlyIndelSites_renamed.vcf.gz | vcf-sort -t /clusterfs/rosalind/users/makman/temp \
 | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > ../final/chr13_final_lessStringentInvariants.vcf.gz
 
