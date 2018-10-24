@@ -14,4 +14,5 @@ for line in file:
 			site_no +=1
 		else:
 			break
+print site_no			
 			
