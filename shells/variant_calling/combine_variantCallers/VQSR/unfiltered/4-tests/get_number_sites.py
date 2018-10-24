@@ -10,10 +10,11 @@ for line in file:
 		continue
 	else:
 		site = int(split[1])
-		if 30000 >= site >= 20001:
+		if 40000 >= site >= 30001:
 			site_no +=1
+			
 		else:
-			if site <30000:
+			if site <40000:
 				continue
 			else:
 				break
@@ -21,5 +22,5 @@ print site_no
 			
 			
 			
-# SNPs 131, 155
-# indels 82, 75
+# SNPs 131, 155, 184
+# indels 82, 75, 63
