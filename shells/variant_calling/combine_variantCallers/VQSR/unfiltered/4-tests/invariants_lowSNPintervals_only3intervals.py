@@ -26,7 +26,9 @@ for line in file:
 			if alt == ".":
 				invariant_no +=1
 			else:
-				if len(alt)>=2:
+				if len(ref)>=2:
+					indel +=1
+				elif len(alt)>=2:
 					alt_split = alt.split(",")
 					if len(alt_split) > 1:
 						if len(alt_split[0]) == 1 and len(alt_split[1]) == 1:
@@ -41,7 +43,9 @@ for line in file:
 			if alt == ".":
 				invariant_no2 +=1
 			else:
-				if len(alt)>=2:
+				if len(ref)>=2:
+					indel2 +=1
+				elif len(alt)>=2:
 					alt_split = alt.split(",")
 					if len(alt_split) > 1:
 						if len(alt_split[0]) == 1 and len(alt_split[1]) == 1:
@@ -54,7 +58,9 @@ for line in file:
 			if alt == ".":
 				invariant_no3 +=1
 			else:
-				if len(alt)>=2:
+				if len(ref)>=2:
+					indel3 +=1
+				elif len(alt)>=2:
 					alt_split = alt.split(",")
 					if len(alt_split) > 1:
 						if len(alt_split[0]) == 1 and len(alt_split[1]) == 1:
