@@ -13,6 +13,9 @@ for line in file:
 		if 20000 >= site >= 10001:
 			site_no +=1
 		else:
-			break
+			if site <20000:
+				continue
+			else:
+				break
 print site_no			
 			
