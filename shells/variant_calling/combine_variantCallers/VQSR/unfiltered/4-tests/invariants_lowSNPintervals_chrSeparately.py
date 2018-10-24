@@ -13,6 +13,7 @@ bin_end = bin_size
 decimal = (len(str(bin_size)) -1)*-1
 invariant_no = 0
 variant_no =0
+indel_no = 0
 out.write("chr\tbin_start\tbin_end\tinvariant_no\tvariant_no\n")
 for line in file:
 	split = line.split("\t")
@@ -26,8 +27,27 @@ for line in file:
 		if bin_end >= site >= bin_start:
 			if alt == ".":
 				invariant_no +=1
-			else:
-				variant_no +=1
+			elif alt == "*":
+				indel_no +=1
+			else:	
+				if len(ref)==1:	
+					if len(alt) == 1:
+						variant_no +=1
+					else:
+						alt_split = alt.split(",")
+						if len(alt_split) > 1:
+							if len(alt_split[0]) == 1 and len(alt_split[1]) == 1:
+								variant_no +=1
+							else:
+								indel +=1
+						else:
+							print "hello"
+				
+				else:
+					indel_no +=1
+					
+					
+			
 		else:
 			out.write(chr + "\t" + str(bin_start) + "\t" + str(bin_end) + "\t" + str(invariant_no) + "\t" + str(variant_no) + "\n")	
 			invariant_no = 0
@@ -36,9 +56,25 @@ for line in file:
 			new_start = bin_start + bin_size
 			if new_end >= site >= new_start:
 				if alt == ".":
-					invariant_no +=1
+				invariant_no +=1
+			elif alt == "*":
+				indel_no +=1
+			else:	
+				if len(ref)==1:	
+					if len(alt) == 1:
+						variant_no +=1
+					else:
+						alt_split = alt.split(",")
+						if len(alt_split) > 1:
+							if len(alt_split[0]) == 1 and len(alt_split[1]) == 1:
+								variant_no +=1
+							else:
+								indel +=1
+						else:
+							print "hello"
+				
 				else:
-					variant_no +=1
+					indel_no +=1
 				bin_end = bin_end + bin_size
 				bin_start = bin_start + bin_size
 			else:
@@ -47,8 +83,24 @@ for line in file:
 				bin_start = bin_start + to_add
 				bin_end = bin_end + to_add
 				if alt == ".":
-					invariant_no +=1
+				invariant_no +=1
+			elif alt == "*":
+				indel_no +=1
+			else:	
+				if len(ref)==1:	
+					if len(alt) == 1:
+						variant_no +=1
+					else:
+						alt_split = alt.split(",")
+						if len(alt_split) > 1:
+							if len(alt_split[0]) == 1 and len(alt_split[1]) == 1:
+								variant_no +=1
+							else:
+								indel +=1
+						else:
+							print "hello"
+				
 				else:
-					variant_no +=1
+					indel_no +=1
 								
 out.write(chr + "\t" + str(bin_start) + "\t" + str(bin_end) + "\t" + str(invariant_no) + "\t" + str(variant_no) + "\n")				
