@@ -25,7 +25,7 @@ module load java
 # 
 # rm /clusterfs/rosalind/users/makman/GATK/freebayes/final_combined/freebayes_invariant_chr01_allFiltered_onlyInvariantSites.vcf
 # 
-# export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
+export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
 # 
 /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-concat \
 /clusterfs/rosalind/users/makman/GATK/freebayes/final_combined/freebayes_invariantSites_chr01_bcftools_sites.vcf \
