@@ -39,7 +39,7 @@ for line in file:
 							if len(alt_split[0]) == 1 and len(alt_split[1]) == 1:
 								variant_no +=1
 							else:
-								indel +=1
+								indel_no +=1
 						else:
 							print "hello"
 				
@@ -69,7 +69,7 @@ for line in file:
 								if len(alt_split[0]) == 1 and len(alt_split[1]) == 1:
 									variant_no +=1
 								else:
-									indel +=1
+									indel_no +=1
 							else:
 								print "hello"
 				
@@ -96,7 +96,7 @@ for line in file:
 								if len(alt_split[0]) == 1 and len(alt_split[1]) == 1:
 									variant_no +=1
 								else:
-									indel +=1
+									indel_no +=1
 							else:
 								print "hello"
 				
