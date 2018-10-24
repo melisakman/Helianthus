@@ -26,8 +26,11 @@ rm /clusterfs/rosalind/users/makman/GATK/freebayes/final_combined/freebayes_inva
 export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
 
 /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-concat \
+/clusterfs/rosalind/users/makman/GATK/freebayes/final_combined/freebayes_invariantSites_chr10_bcftools_sites.vcf \
 VQSRfiltered_90_G4_SNP_chr10.vcf.gz \
 chr10_unfiltered_2plus_GATK_invariantSitesOnly_noIndels.vcf.gz \
 ../../fastq/invariants/VCMA_GATK_chr10_secondFilter_onlyIndelSites.vcf.gz | vcf-sort -t /clusterfs/rosalind/users/makman/temp \
 | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > ../final/chr10_final_lessStringentInvariants.vcf.gz
+
+
 
