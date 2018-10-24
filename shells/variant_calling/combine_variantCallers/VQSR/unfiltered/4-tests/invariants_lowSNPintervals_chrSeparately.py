@@ -14,7 +14,7 @@ decimal = (len(str(bin_size)) -1)*-1
 invariant_no = 0
 variant_no =0
 indel_no = 0
-out.write("chr\tbin_start\tbin_end\tinvariant_no\tvariant_no\n")
+out.write("chr\tbin_start\tbin_end\tinvariant_no\tvariant_no\tindel_no\n")
 for line in file:
 	split = line.split("\t")
 	if split[0][0] == "#":
@@ -49,7 +49,7 @@ for line in file:
 					
 			
 		else:
-			out.write(chr + "\t" + str(bin_start) + "\t" + str(bin_end) + "\t" + str(invariant_no) + "\t" + str(variant_no) + "\n")	
+			out.write(chr + "\t" + str(bin_start) + "\t" + str(bin_end) + "\t" + str(invariant_no) + "\t" + str(variant_no) + "\t" + str(indel_no) + "\n")	
 			invariant_no = 0
 			variant_no = 0
 			new_end = bin_end + bin_size
@@ -103,4 +103,4 @@ for line in file:
 					else:
 						indel_no +=1
 								
-out.write(chr + "\t" + str(bin_start) + "\t" + str(bin_end) + "\t" + str(invariant_no) + "\t" + str(variant_no) + "\n")				
+out.write(chr + "\t" + str(bin_start) + "\t" + str(bin_end) + "\t" + str(invariant_no) + "\t" + str(variant_no) + "\t" + str(indel_no) + "\n")				
