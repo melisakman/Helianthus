@@ -10,7 +10,7 @@ for line in file:
 		continue
 	else:
 		site = int(split[1])
-		if 10000 >= site >= 1:
+		if 20000 >= site >= 10001:
 			site_no +=1
 		else:
 			break
