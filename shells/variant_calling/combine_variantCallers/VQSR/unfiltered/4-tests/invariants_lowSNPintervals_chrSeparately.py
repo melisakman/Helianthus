@@ -35,13 +35,20 @@ for line in file:
 						variant_no +=1
 					else:
 						alt_split = alt.split(",")
-						if len(alt_split) > 1:
+						if "*" in alt_split:
+							indel_no +=1
+						elif len(alt_split) == 2:
 							if len(alt_split[0]) == 1 and len(alt_split[1]) == 1:
 								variant_no +=1
 							else:
 								indel_no +=1
+						elif len(alt_split) == 3:
+							if len(alt_split[0]) == 1 and len(alt_split[1]) == 1 and len(alt_split[1]) == 1:
+								variant_no +=1
+							else:
+								indel_no +=1
 						else:
-							indel_no +=1
+							print line
 				
 				else:
 					indel_no +=1
@@ -66,13 +73,20 @@ for line in file:
 							variant_no +=1
 						else:
 							alt_split = alt.split(",")
-							if len(alt_split) > 1:
+							if "*" in alt_split:
+								indel_no +=1
+							elif len(alt_split) == 2:
 								if len(alt_split[0]) == 1 and len(alt_split[1]) == 1:
 									variant_no +=1
 								else:
 									indel_no +=1
+							elif len(alt_split) == 3:
+								if len(alt_split[0]) == 1 and len(alt_split[1]) == 1 and len(alt_split[1]) == 1:
+									variant_no +=1
+								else:
+									indel_no +=1
 							else:
-								indel_no +=1
+								print line
 				
 					else:
 						indel_no +=1
@@ -93,13 +107,20 @@ for line in file:
 							variant_no +=1
 						else:
 							alt_split = alt.split(",")
-							if len(alt_split) > 1:
+							if "*" in alt_split:
+								indel_no +=1
+							elif len(alt_split) == 2:
 								if len(alt_split[0]) == 1 and len(alt_split[1]) == 1:
 									variant_no +=1
 								else:
 									indel_no +=1
+							elif len(alt_split) == 3:
+								if len(alt_split[0]) == 1 and len(alt_split[1]) == 1 and len(alt_split[1]) == 1:
+									variant_no +=1
+								else:
+									indel_no +=1
 							else:
-								indel_no +=1
+								print line
 				
 					else:
 						indel_no +=1
