@@ -52,6 +52,7 @@ for line in file:
 			out.write(chr + "\t" + str(bin_start) + "\t" + str(bin_end) + "\t" + str(invariant_no) + "\t" + str(variant_no) + "\t" + str(indel_no) + "\n")	
 			invariant_no = 0
 			variant_no = 0
+			indel_no = 0
 			new_end = bin_end + bin_size
 			new_start = bin_start + bin_size
 			if new_end >= site >= new_start:
