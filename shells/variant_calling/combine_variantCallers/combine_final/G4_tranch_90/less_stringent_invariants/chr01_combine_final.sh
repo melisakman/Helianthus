@@ -26,9 +26,13 @@ module load java
 # rm /clusterfs/rosalind/users/makman/GATK/freebayes/final_combined/freebayes_invariant_chr01_allFiltered_onlyInvariantSites.vcf
 # 
 export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
+
 # 
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c VQSRfiltered_90_G4_SNP_chr01.vcf > VQSRfiltered_90_G4_SNP_chr01.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c ../../fastq/invariants/VCMA_GATK_chr01_secondFilter_onlyIndelSites.vcf > ../../fastq/invariants/VCMA_GATK_chr01_secondFilter_onlyIndelSites.vcf.gz
+
 /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix VQSRfiltered_90_G4_SNP_chr01.vcf.gz
-/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix chr01_unfiltered_2plus_GATK_invariantSitesOnly_noIndels.vcf.gz
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix chr01_unfiltered_2plus_GATK_invariantSitesOnly_noIndels.vcf.gz
 /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix ../../fastq/invariants/VCMA_GATK_chr01_secondFilter_onlyIndelSites.vcf.gz
 
 /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c /clusterfs/rosalind/users/makman/GATK/freebayes/final_combined/freebayes_invariantSites_chr01_bcftools_sites.vcf > /clusterfs/rosalind/users/makman/GATK/freebayes/final_combined/freebayes_invariantSites_chr01_bcftools_sites.vcf.gz

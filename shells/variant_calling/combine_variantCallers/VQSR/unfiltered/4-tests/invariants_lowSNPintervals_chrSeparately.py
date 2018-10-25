@@ -48,7 +48,7 @@ for line in file:
 							else:
 								indel_no +=1
 						else:
-							print line
+							indel_no +=1
 				
 				else:
 					indel_no +=1
@@ -86,7 +86,7 @@ for line in file:
 								else:
 									indel_no +=1
 							else:
-								print line
+								indel_no +=1
 				
 					else:
 						indel_no +=1
@@ -120,7 +120,7 @@ for line in file:
 								else:
 									indel_no +=1
 							else:
-								print line
+								indel_no +=1
 				
 					else:
 						indel_no +=1
