@@ -1,9 +1,11 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/bcftools_isec/final/
 #SBATCH -J vcfstats
-#SBATCH --partition=vector
-#SBATCH --qos=vector_batch
+#SBATCH --account=co_rosalind
+#SBATCH --partition=savio2_htc
+#SBATCH --qos=rosalind_htc2_normal
 #SBATCH --time=80:00:00
+#SBATCH --mem=64000
 #SBATCH -o /global/home/users/makman/vcftools/outs/vcftools_stats.out
 #SBATCH -e /global/home/users/makman/vcftools/outs/vcftools_stats.err
 #SBATCH --mail-user=makman@berkeley.edu
