@@ -2,8 +2,8 @@
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/bcftools_isec/final/pi/
 #SBATCH -J vcfpi1
 #SBATCH --account=co_rosalind
-#SBATCH --partition=savio2_htc
-#SBATCH --qos=rosalind_htc2_normal
+#SBATCH --partition=savio
+#SBATCH --qos=rosalind_savio_normal
 #SBATCH --time=80:00:00
 #SBATCH -o /global/home/users/makman/vcftools/outs/vcftools_VQSR_pi_average.out
 #SBATCH -e /global/home/users/makman/vcftools/outs/vcftools_VQSR_pi_average.err
