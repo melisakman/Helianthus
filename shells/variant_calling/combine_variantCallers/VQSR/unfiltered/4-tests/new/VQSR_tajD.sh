@@ -1,6 +1,6 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/bcftools_isec/final/
-#SBATCH -J vcffst
+#SBATCH -J vcftajD
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio2_htc
 #SBATCH --qos=rosalind_htc2_normal
