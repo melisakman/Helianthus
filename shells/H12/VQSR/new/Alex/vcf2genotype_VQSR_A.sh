@@ -17,7 +17,7 @@
 
 module load python/2.7
 
-# python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr01_final_lessStringentInvariants.vcf lr_cv_list.txt G12/chr01_G12_input.txt
+python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr01_final_lessStringentInvariants.vcf lr_cv_list.txt G12/chr01_G12_input.txt
 python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr02_final_lessStringentInvariants.vcf lr_cv_list.txt G12/chr02_G12_input.txt
 python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr03_final_lessStringentInvariants.vcf lr_cv_list.txt G12/chr03_G12_input.txt
 python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr04_final_lessStringentInvariants.vcf lr_cv_list.txt G12/chr04_G12_input.txt
