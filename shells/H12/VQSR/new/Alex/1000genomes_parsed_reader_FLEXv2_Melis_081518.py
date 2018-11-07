@@ -156,7 +156,7 @@ else:
 
 firstloc_position = chromfile.tell() # character position of the first line containing SNP information (currently it's the third line)
 
-first_SNP = int((chromfile.readline()).split()[2]) # identifies the physical position of the SNP; this indexing works for the example input file, but you may need to change it
+first_SNP = int((chromfile.readline()).split()[0]) # identifies the physical position of the SNP; this indexing works for the example input file, but you may need to change it
 
 chromfile.seek(firstloc_position)
 
@@ -178,7 +178,7 @@ while True:
 
     if (position != ''): # a new line has been read (we're not at the end of the file)
         posplit = position.split()
-        current_SNP = int(posplit[2]) # you may need to change this (needs to match line 155)
+        current_SNP = int(posplit[0]) # you may need to change this (needs to match line 155)
         if (current_SNP in window_size):
 
             update_SNPs(popselect, match, posplit, firstData, popsize, current_values, current_infosites, current_SNPs, current_SNP)
