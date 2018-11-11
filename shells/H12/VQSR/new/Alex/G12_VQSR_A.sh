@@ -17,7 +17,7 @@
 
 module load python/2.7
 
-python ~/git/Helianthus/shells/H12/VQSR/new/Alex/1000genomes_parsed_reader_FLEXv2_Melis_081518.py chr01_G12_input.txt "every" chr01_G12_output.txt 40000 4000 3 
+# python ~/git/Helianthus/shells/H12/VQSR/new/Alex/1000genomes_parsed_reader_FLEXv2_Melis_081518.py chr01_G12_input.txt "every" chr01_G12_output.txt 40000 4000 3 
 # python ~/git/Helianthus/shells/H12/VQSR/new/Alex/11000genomes_parsed_reader_FLEXv2_Melis_081518.py chr02_G12_input.txt "every" chr02_G12_output.txt 40000 4000 3 
 # python ~/git/Helianthus/shells/H12/VQSR/new/Alex/11000genomes_parsed_reader_FLEXv2_Melis_081518.py chr03_G12_input.txt "every" chr03_G12_output.txt 40000 4000 3 
 # python ~/git/Helianthus/shells/H12/VQSR/new/Alex/11000genomes_parsed_reader_FLEXv2_Melis_081518.py chr04_G12_input.txt "every" chr04_G12_output.txt 40000 4000 3 
@@ -34,3 +34,5 @@ python ~/git/Helianthus/shells/H12/VQSR/new/Alex/1000genomes_parsed_reader_FLEXv
 # python ~/git/Helianthus/shells/H12/VQSR/new/Alex/11000genomes_parsed_reader_FLEXv2_Melis_081518.py chr15_G12_input.txt "every" chr15_G12_output.txt 40000 4000 3 
 # python ~/git/Helianthus/shells/H12/VQSR/new/Alex/11000genomes_parsed_reader_FLEXv2_Melis_081518.py chr16_G12_input.txt "every" chr16_G12_output.txt 40000 4000 3 
 # python ~/git/Helianthus/shells/H12/VQSR/new/Alex/11000genomes_parsed_reader_FLEXv2_Melis_081518.py chr17_G12_input.txt "every" chr17_G12_output.txt 40000 4000 3 
+
+python ~/git/Helianthus/shells/H12/VQSR/new/Alex/1000genomes_parsed_reader_FLEXv2_Melis_081518.py chr01_G12_input_100K.txt "every" chr01_G12_100K_output.txt 40000 4000 3 
