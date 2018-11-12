@@ -9,8 +9,8 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=20
 #SBATCH --time=600:00:00
-#SBATCH -o /global/home/users/makman/H12/outs/G12_VQSR_A.out
-#SBATCH -e /global/home/users/makman/H12/outs/G12_VQSR_A.err
+#SBATCH -o /global/home/users/makman/H12/outs/G12_VQSR_A_test.out
+#SBATCH -e /global/home/users/makman/H12/outs/G12_VQSR_A_test.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
@@ -35,4 +35,4 @@ module load python/2.7
 # python ~/git/Helianthus/shells/H12/VQSR/new/Alex/11000genomes_parsed_reader_FLEXv2_Melis_081518.py chr16_G12_input.txt "every" chr16_G12_output.txt 40000 4000 3 
 # python ~/git/Helianthus/shells/H12/VQSR/new/Alex/11000genomes_parsed_reader_FLEXv2_Melis_081518.py chr17_G12_input.txt "every" chr17_G12_output.txt 40000 4000 3 
 
-python ~/git/Helianthus/shells/H12/VQSR/new/Alex/1000genomes_parsed_reader_FLEXv2_Melis_081518.py chr01_G12_input_100K.txt "every" chr01_G12_100K_output.txt 40000 4000 3 
+python ~/git/Helianthus/shells/H12/VQSR/new/Alex/1000genomes_parsed_reader_FLEXv2_Melis_081518.py chr01_G12_input_1M.txt "every" chr01_G12_1M_output 40000 4000 3 
