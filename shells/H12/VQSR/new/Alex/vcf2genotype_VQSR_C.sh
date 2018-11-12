@@ -26,10 +26,10 @@ module load python/2.7
 # python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr07_final_lessStringentInvariants.vcf lr_cv_list.txt G12/chr07_G12_input.txt
 # python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr08_final_lessStringentInvariants.vcf lr_cv_list.txt G12/chr08_G12_input.txt
 # python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr09_final_lessStringentInvariants.vcf lr_cv_list.txt G12/chr09_G12_input.txt
-# python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr10_final_lessStringentInvariants.vcf lr_cv_list.txt G12/chr10_G12_input.txt
-# python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr11_final_lessStringentInvariants.vcf lr_cv_list.txt G12/chr11_G12_input.txt
-# python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr12_final_lessStringentInvariants.vcf lr_cv_list.txt G12/chr12_G12_input.txt
-python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr13_final_lessStringentInvariants.vcf lr_cv_list.txt G12/chr13_G12_input.txt
+python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr10_final_lessStringentInvariants.vcf lr_cv_list.txt G12/chr10_G12_input.txt
+python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr11_final_lessStringentInvariants.vcf lr_cv_list.txt G12/chr11_G12_input.txt
+python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr12_final_lessStringentInvariants.vcf lr_cv_list.txt G12/chr12_G12_input.txt
+# python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr13_final_lessStringentInvariants.vcf lr_cv_list.txt G12/chr13_G12_input.txt
 # python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr14_final_lessStringentInvariants.vcf lr_cv_list.txt G12/chr14_G12_input.txt
 # python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr15_final_lessStringentInvariants.vcf lr_cv_list.txt G12/chr15_G12_input.txt
 # python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Alex.py chr16_final_lessStringentInvariants.vcf lr_cv_list.txt G12/chr16_G12_input.txt
