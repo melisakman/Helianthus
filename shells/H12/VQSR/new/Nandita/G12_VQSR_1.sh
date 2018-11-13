@@ -5,7 +5,7 @@
 #SBATCH --partition=savio2
 #SBATCH --qos=savio_normal
 #SBATCH --cpus-per-task=4
-#SBATCH --time=600:00:00
+#SBATCH --time=72:00:00
 #SBATCH -o /global/home/users/makman/H12/outs/G12_VQSR_Nandita_1.out
 #SBATCH -e /global/home/users/makman/H12/outs/G12_VQSR_Nandita_1.err
 #SBATCH --mail-user=makman@berkeley.edu
