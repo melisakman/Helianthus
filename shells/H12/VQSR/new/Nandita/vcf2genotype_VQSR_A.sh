@@ -1,10 +1,14 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/bcftools_isec/final/
 #SBATCH -J G12-A
-#SBATCH --partition=vector
-#SBATCH --qos=vector_batch
-#SBATCH --mem=8000
-#SBATCH --time=16:00:00
+#SBATCH --account=co_rosalind
+#SBATCH --partition=savio
+#SBATCH --qos=rosalind_savio_normal
+#SBATCH --nodes=1
+#SBATCH --mem=64000
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=20
+#SBATCH --time=6:00:00
 #SBATCH -o /global/home/users/makman/H12/outs/vcf2genotype_VQSR_A.out
 #SBATCH -e /global/home/users/makman/H12/outs/vcf2genotype_VQSR_A.err
 #SBATCH --mail-user=makman@berkeley.edu
