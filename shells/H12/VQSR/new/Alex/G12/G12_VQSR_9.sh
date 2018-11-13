@@ -2,9 +2,12 @@
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/bcftools_isec/final/G12/
 #SBATCH -J G12-9
 #SBATCH --account=co_rosalind
-#SBATCH --partition=savio2_htc
-#SBATCH --qos=rosalind_htc2_normal
-#SBATCH --cpus-per-task=4
+#SBATCH --partition=savio
+#SBATCH --qos=rosalind_savio_normal
+#SBATCH --nodes=1
+#SBATCH --mem=64000
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=20
 #SBATCH --time=600:00:00
 #SBATCH -o /global/home/users/makman/H12/outs/G12_VQSR_9.out
 #SBATCH -e /global/home/users/makman/H12/outs/G12_VQSR_9.err
