@@ -3,8 +3,6 @@
 #SBATCH -J G12-D
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
-#SBATCH --nodes=1
-#SBATCH --ntasks=1
 #SBATCH --mem=8000
 #SBATCH --time=16:00:00
 #SBATCH -o /global/home/users/makman/H12/outs/vcf2genotype_VQSR_D.out
