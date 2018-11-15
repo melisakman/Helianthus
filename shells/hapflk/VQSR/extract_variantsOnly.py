@@ -14,6 +14,7 @@ for line in file1:
 	else:
 		chr = splt[0]
 		pos = splt[1]
+		print pos
 		ref = splt[3]
 		alt = splt[4]
 		if alt == ".":
