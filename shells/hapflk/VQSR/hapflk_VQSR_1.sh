@@ -12,7 +12,7 @@
 #SBATCH --mail-type=All
 
 
-python /global/home/users/makman/git/Helianthus/shells/hapflk/extracts_variantsOnly.py /clusterfs/rosalind/users/makman/GATK/bcftools_isec/final/chr01_final_lessStringentInvariants.vcf /clusterfs/rosalind/users/makman/GATK/bcftools_isec/final/chr01_final_lessStringentInvariants_onlyvariants.vcf
+python /global/home/users/makman/git/Helianthus/shells/hapflk/VQSR/extracts_variantsOnly.py /clusterfs/rosalind/users/makman/GATK/bcftools_isec/final/chr01_final_lessStringentInvariants.vcf /clusterfs/rosalind/users/makman/GATK/bcftools_isec/final/chr01_final_lessStringentInvariants_onlyvariants.vcf
 
 sed 's/HanXRQChr//g' /clusterfs/rosalind/users/makman/GATK/bcftools_isec/final/chr01_final_lessStringentInvariants_onlyvariants.vcf > chr01_final_lessStringentInvariants_onlyvariants_noHanXRQ.vcf
 
