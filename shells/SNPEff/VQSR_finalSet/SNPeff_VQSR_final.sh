@@ -1,13 +1,11 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/bcftools_isec/final/
 #SBATCH -J snpEff
-#SBATCH --partition=vector
-#SBATCH --qos=vector_batch
-#SBATCH --nodes=1
-#SBATCH --ntasks=1
-#SBATCH --cpus-per-task=6
-#SBATCH --mem=16000
-#SBATCH --time=8:00:00
+#SBATCH --account=co_rosalind
+#SBATCH --partition=savio2_htc
+#SBATCH --qos=rosalind_htc2_normal
+#SBATCH --cpus-per-task=12
+#SBATCH --time=600:00:00
 #SBATCH -o /global/home/users/makman/snpEff/outs/snpEff_VQSR_final.out
 #SBATCH -e /global/home/users/makman/snpEff/outs/snpEff_VQSR_final.err
 #SBATCH --mail-user=makman@berkeley.edu
