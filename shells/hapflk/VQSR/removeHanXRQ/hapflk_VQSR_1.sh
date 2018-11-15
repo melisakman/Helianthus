@@ -4,7 +4,7 @@
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio2_htc
 #SBATCH --qos=rosalind_htc2_normal
-#SBATCH --cpus-per-task=16
+#SBATCH --cpus-per-task=12
 #SBATCH --time=600:00:00
 #SBATCH -o /global/home/users/makman/H12/outs/hapflk_VQSR_1.out
 #SBATCH -e /global/home/users/makman/H12/outs/hapflk_VQSR_1.err
@@ -24,4 +24,4 @@ python ../plink_ped_fixer.py ../samples_VQSR.txt chr01_final_plink.ped chr01_fin
 
 module load hapflk/1.4
 
-hapflk --file chr01_final_plink_fixed --miss_pheno 0 --chr 01 --from 1 --to 20000000 -p chr01_1 --ncpu 16 -K 15
+hapflk --file chr01_final_plink_fixed --miss_pheno 0 --chr 01 --from 1 --to 20000000 -p chr01_1 --ncpu 12 -K 15
