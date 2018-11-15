@@ -1,0 +1,78 @@
+Anzac_Pueblo	Anzac_Pueblo~Landrace
+Ari_Mand	Ari_Mand~Landrace
+Ari_broa	Ari_broa~Landrace
+Arikara	Arikara~Landrace
+HA124	HA124~Cultivar
+HA316	HA316~Cultivar
+HA404	HA404~Cultivar
+HA433	HA433~Cultivar
+HA442	HA442~Cultivar
+HA821	HA821~Cultivar
+HA89	HA89~Cultivar
+Havasupai	Havasupai~Landrace
+Hidatsa1	Hidatsa1~Landrace
+Hopi_PPN285	Hopi_PPN285~Landrace
+Hopi_real	Hopi_real~Landrace
+Laguna_Pueblo	Laguna_Pueblo~Landrace
+Mandan2	Mandan2~Landrace
+MexCult1	MexCult1~Landrace
+MexCult14	MexCult14~Landrace
+MexCult15	MexCult15~Landrace
+MexCult3	MexCult3~Landrace
+MexCult6	MexCult6~Landrace
+MexCult7	MexCult7~Landrace
+MexCult9	MexCult9~Landrace
+Mex_A1516	Mex_A1516~Wild
+Mex_A1517	Mex_A1517~Wild #remove
+Mex_A1572	Mex_A1572~Wild
+Mex_A1574	Mex_A1574~Wild #remove
+Mex_Ann261	Mex_Ann261~Wild
+PPN046	PPN046~Landrace
+PPN083	PPN083~Landrace
+PPN255_Manchurian	PPN255_Manchurian~Cultivar
+PPN262	PPN262~Cultivar
+Paiute	Paiute~Landrace
+Pueblo	Pueblo~Landrace
+RHA271	RHA271~Cultivar
+RHA309	RHA309~Cultivar
+RHA311	RHA311~Cultivar
+RHA328	RHA328~Cultivar
+RHA355	RHA355~Cultivar
+RHA358	RHA358~Cultivar
+RHA408	RHA408~Cultivar
+RHA426	RHA426~Cultivar
+RHA857	RHA857~Cultivar
+SF33	SF33~Cultivar
+Se137749	Se137749~Landrace
+Se_purp	Se_purp~Landrace
+Se_strip	Se_strip~Landrace
+Seneca	Seneca~Landrace
+VIR847	VIR847~Cultivar
+Zuni	Zuni~Landrace
+ann01cwIA	ann01cwIA~Wild
+ann04nwAR	ann04nwAR~Wild
+ann05ccNM	ann05ccNM~Wild
+ann06seWY	ann06seWY~Wild #remove
+ann08ceTN	ann08ceTN~Wild #remove
+ann10ccIL	ann10ccIL~Wild
+ann20seAZ	ann20seAZ~Wild
+ann28swSK	ann28swSK~Wild
+ann29neSD	ann29neSD~Wild
+ann34cwKS	ann34cwKS~Wild
+ann39ncNE	ann39ncNE~Wild
+ann44ccCA	ann44ccCA~Wild #remove
+annIA	annIA~Wild
+annIA1W1	annIA1W1~Wild
+annIA2W17	annIA2W17~Wild
+annKS	annKS~Wild
+annKS1W27	annKS1W27~Wild
+annKS2W35	annKS2W35~Wild
+annMB1W40	annMB1W40~Wild
+annMO1W39	annMO1W39~Wild
+annND1W6	annND1W6~Wild #remove
+annNM	annNM~Wild
+annSD1W35	annSD1W35~Wild
+annSD2W18	annSD2W18~Wild
+annSK1WQ	annSK1WQ~Wild
+annWY	annWY~Wild
+	
