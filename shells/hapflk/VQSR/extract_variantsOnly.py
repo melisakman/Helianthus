@@ -9,7 +9,7 @@ file2 = open(OutputFile, 'w')
 
 for line in file1: 
 	splt = line.split("\t")
-	if splt[0][0:2] == "#":
+	if splt[0][0] == "#":
 		file2.write(line)
 	else:
 		chr = splt[0]
