@@ -6,8 +6,7 @@
 #SBATCH --qos=rosalind_htc2_normal
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=12
-#SBATCH -o /global/home/users/makman/H12/outs/hapflk_VQSR_chr11_9.out
+#SBATCH --cpus-per-task=12 
 #SBATCH -e /global/home/users/makman/H12/outs/hapflk_VQSR_chr11_9.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
