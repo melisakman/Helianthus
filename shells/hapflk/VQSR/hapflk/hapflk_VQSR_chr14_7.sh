@@ -2,10 +2,11 @@
 #SBATCH -D /clusterfs/rosalind/users/makman/hapflk/VQSR/
 #SBATCH -J hfchr14_7
 #SBATCH --account=co_rosalind
-#SBATCH --partition=savio
-#SBATCH --qos=rosalind_savio_normal
+#SBATCH --partition=savio2_htc
+#SBATCH --qos=rosalind_htc2_normal
 #SBATCH --nodes=1
-#SBATCH --mem=64000
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=12 
 #SBATCH -e /global/home/users/makman/H12/outs/hapflk_VQSR_chr14_7.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
