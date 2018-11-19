@@ -13,8 +13,8 @@ for line in file:
 	elif split[0] == "lr":
 		output.write(line)
 	else:
-		list.insert(split[5:-1])
-# 		list.insert(split[-1][0])
+		list.insert(0, split[5:-1])
+# 		list.insert(-1, split[-1][0])
 		print list
 		if "2" in list:
 			continue
