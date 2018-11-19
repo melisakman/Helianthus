@@ -25,6 +25,6 @@ for line in file:
 			output.write(line)
 		else:
 			continue
-		list = []
+	list = []
 		
 
