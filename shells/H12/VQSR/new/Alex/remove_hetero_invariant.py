@@ -15,7 +15,6 @@ for line in file:
 	else:
 		for i in range(5, 50):
 			list.append(split[i])
-			list.append(split[50[:-1]])
 			
 		print list
 		if "2" in list:
