@@ -18,13 +18,17 @@ for line in file:
 			
 		print list
 		if "2" in list:
+			list = []
 			continue
 		elif "3" in list:
+			list = []
 			continue
 		elif "4" in list:
+			list = []
 			output.write(line)
-		else:
 			continue
-	list = []
+		else:
+			list = []
+			continue
 		
 
