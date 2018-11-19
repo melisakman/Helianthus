@@ -8,6 +8,7 @@ output = open(OutputFile, "w")
 list = []
 for line in file:
 	split = line.split(" ")
+	print split[1]
 	if split[0] == "Anzac_Pueblo":
 		output.write(line)
 	elif split[0] == "lr":
