@@ -14,7 +14,7 @@ for line in file:
 		output.write(line)
 	else:
 		list.append(split[5:-1])
-		list append(split[-1][0])
+		list.append(split[-1][0])
 		print list
 		if "2" in list:
 			continue
