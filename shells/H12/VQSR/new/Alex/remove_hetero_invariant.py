@@ -13,8 +13,10 @@ for line in file:
 	elif split[0] == "lr":
 		output.write(line)
 	else:
-		list.insert(0, split[5:-1])
-# 		list.insert(-1, split[-1][0])
+		for i in range(5, 50):
+			list.append(split[i])
+			list.append(split[50[:-1]]
+			
 		print list
 		if "2" in list:
 			continue
