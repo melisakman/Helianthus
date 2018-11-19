@@ -7,13 +7,13 @@ output = open(OutputFile, "w")
 
 list = []
 for line in file:
-	split = line.split(" ")
+	split = line.split("\n")[0].split(" ")
 	if split[0] == "Anzac_Pueblo":
 		output.write(line)
 	elif split[0] == "lr":
 		output.write(line)
 	else:
-		for i in range(5, 50):
+		for i in range(5, 51):
 			list.append(split[i])
 			
 		print list
