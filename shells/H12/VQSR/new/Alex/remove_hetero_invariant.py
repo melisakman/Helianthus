@@ -18,9 +18,11 @@ for line in file:
 			
 		if "2" in list:
 			list = []
+			output.write(line)
 			continue
 		elif "3" in list:
 			list = []
+			output.write(line)
 			continue
 		elif "4" in list:
 			list = []
