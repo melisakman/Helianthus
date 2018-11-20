@@ -17,20 +17,20 @@
 
 module load python/2.7
 
-python /global/home/users/makman/git/Helianthus/shells/H12/VQSR/new/Alex/remove_hetero_invariant.py chr01_G12_input.txt chr01_G12_input_heteroSNPs.txt
-python /global/home/users/makman/git/Helianthus/shells/H12/VQSR/new/Alex/remove_hetero_invariant.py chr02_G12_input.txt chr02_G12_input_heteroSNPs.txt
-python /global/home/users/makman/git/Helianthus/shells/H12/VQSR/new/Alex/remove_hetero_invariant.py chr03_G12_input.txt chr03_G12_input_heteroSNPs.txt
-python /global/home/users/makman/git/Helianthus/shells/H12/VQSR/new/Alex/remove_hetero_invariant.py chr04_G12_input.txt chr04_G12_input_heteroSNPs.txt
-python /global/home/users/makman/git/Helianthus/shells/H12/VQSR/new/Alex/remove_hetero_invariant.py chr05_G12_input.txt chr05_G12_input_heteroSNPs.txt
-python /global/home/users/makman/git/Helianthus/shells/H12/VQSR/new/Alex/remove_hetero_invariant.py chr06_G12_input.txt chr06_G12_input_heteroSNPs.txt
-python /global/home/users/makman/git/Helianthus/shells/H12/VQSR/new/Alex/remove_hetero_invariant.py chr07_G12_input.txt chr07_G12_input_heteroSNPs.txt
-python /global/home/users/makman/git/Helianthus/shells/H12/VQSR/new/Alex/remove_hetero_invariant.py chr08_G12_input.txt chr08_G12_input_heteroSNPs.txt
-python /global/home/users/makman/git/Helianthus/shells/H12/VQSR/new/Alex/remove_hetero_invariant.py chr09_G12_input.txt chr09_G12_input_heteroSNPs.txt
-python /global/home/users/makman/git/Helianthus/shells/H12/VQSR/new/Alex/remove_hetero_invariant.py chr10_G12_input.txt chr10_G12_input_heteroSNPs.txt
-python /global/home/users/makman/git/Helianthus/shells/H12/VQSR/new/Alex/remove_hetero_invariant.py chr11_G12_input.txt chr11_G12_input_heteroSNPs.txt
-python /global/home/users/makman/git/Helianthus/shells/H12/VQSR/new/Alex/remove_hetero_invariant.py chr12_G12_input.txt chr12_G12_input_heteroSNPs.txt
-python /global/home/users/makman/git/Helianthus/shells/H12/VQSR/new/Alex/remove_hetero_invariant.py chr13_G12_input.txt chr13_G12_input_heteroSNPs.txt
-python /global/home/users/makman/git/Helianthus/shells/H12/VQSR/new/Alex/remove_hetero_invariant.py chr14_G12_input.txt chr14_G12_input_heteroSNPs.txt
-python /global/home/users/makman/git/Helianthus/shells/H12/VQSR/new/Alex/remove_hetero_invariant.py chr15_G12_input.txt chr15_G12_input_heteroSNPs.txt
-python /global/home/users/makman/git/Helianthus/shells/H12/VQSR/new/Alex/remove_hetero_invariant.py chr16_G12_input.txt chr16_G12_input_heteroSNPs.txt
-python /global/home/users/makman/git/Helianthus/shells/H12/VQSR/new/Alex/remove_hetero_invariant.py chr17_G12_input.txt chr17_G12_input_heteroSNPs.txt
+python /global/home/users/makman/git/Helianthus/shells/H12/VQSR/new/Alex/remove_hetero_invariant.py chr01_G12_input.txt chr01_G12_input_noInvariants.txt
+python /global/home/users/makman/git/Helianthus/shells/H12/VQSR/new/Alex/remove_hetero_invariant.py chr02_G12_input.txt chr02_G12_input_noInvariants.txt
+python /global/home/users/makman/git/Helianthus/shells/H12/VQSR/new/Alex/remove_hetero_invariant.py chr03_G12_input.txt chr03_G12_input_noInvariants.txt
+python /global/home/users/makman/git/Helianthus/shells/H12/VQSR/new/Alex/remove_hetero_invariant.py chr04_G12_input.txt chr04_G12_input_noInvariants.txt
+python /global/home/users/makman/git/Helianthus/shells/H12/VQSR/new/Alex/remove_hetero_invariant.py chr05_G12_input.txt chr05_G12_input_noInvariants.txt
+python /global/home/users/makman/git/Helianthus/shells/H12/VQSR/new/Alex/remove_hetero_invariant.py chr06_G12_input.txt chr06_G12_input_noInvariants.txt
+python /global/home/users/makman/git/Helianthus/shells/H12/VQSR/new/Alex/remove_hetero_invariant.py chr07_G12_input.txt chr07_G12_input_noInvariants.txt
+python /global/home/users/makman/git/Helianthus/shells/H12/VQSR/new/Alex/remove_hetero_invariant.py chr08_G12_input.txt chr08_G12_input_noInvariants.txt
+python /global/home/users/makman/git/Helianthus/shells/H12/VQSR/new/Alex/remove_hetero_invariant.py chr09_G12_input.txt chr09_G12_input_noInvariants.txt
+python /global/home/users/makman/git/Helianthus/shells/H12/VQSR/new/Alex/remove_hetero_invariant.py chr10_G12_input.txt chr10_G12_input_noInvariants.txt
+python /global/home/users/makman/git/Helianthus/shells/H12/VQSR/new/Alex/remove_hetero_invariant.py chr11_G12_input.txt chr11_G12_input_noInvariants.txt
+python /global/home/users/makman/git/Helianthus/shells/H12/VQSR/new/Alex/remove_hetero_invariant.py chr12_G12_input.txt chr12_G12_input_noInvariants.txt
+python /global/home/users/makman/git/Helianthus/shells/H12/VQSR/new/Alex/remove_hetero_invariant.py chr13_G12_input.txt chr13_G12_input_noInvariants.txt
+python /global/home/users/makman/git/Helianthus/shells/H12/VQSR/new/Alex/remove_hetero_invariant.py chr14_G12_input.txt chr14_G12_input_noInvariants.txt
+python /global/home/users/makman/git/Helianthus/shells/H12/VQSR/new/Alex/remove_hetero_invariant.py chr15_G12_input.txt chr15_G12_input_noInvariants.txt
+python /global/home/users/makman/git/Helianthus/shells/H12/VQSR/new/Alex/remove_hetero_invariant.py chr16_G12_input.txt chr16_G12_input_noInvariants.txt
+python /global/home/users/makman/git/Helianthus/shells/H12/VQSR/new/Alex/remove_hetero_invariant.py chr17_G12_input.txt chr17_G12_input_noInvariants.txt
