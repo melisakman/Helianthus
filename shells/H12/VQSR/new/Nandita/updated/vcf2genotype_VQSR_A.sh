@@ -15,9 +15,9 @@
 module load python/2.7
 
 python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Nandita_updated.py chr01_final_lessStringentInvariants.vcf lr_cv_list.txt G12/Nandita/updated/chr01_G12_input_updated.txt
-python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Nandita_updated.py chr02_final_lessStringentInvariants.vcf lr_cv_list.txt G12/Nandita/updated/chr02_G12_input_updated.txt
-python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Nandita_updated.py chr03_final_lessStringentInvariants.vcf lr_cv_list.txt G12/Nandita/updated/chr03_G12_input_updated.txt
-python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Nandita_updated.py chr04_final_lessStringentInvariants.vcf lr_cv_list.txt G12/Nandita/updated/chr04_G12_input_updated.txt
+# python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Nandita_updated.py chr02_final_lessStringentInvariants.vcf lr_cv_list.txt G12/Nandita/updated/chr02_G12_input_updated.txt
+# python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Nandita_updated.py chr03_final_lessStringentInvariants.vcf lr_cv_list.txt G12/Nandita/updated/chr03_G12_input_updated.txt
+# python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Nandita_updated.py chr04_final_lessStringentInvariants.vcf lr_cv_list.txt G12/Nandita/updated/chr04_G12_input_updated.txt
 # python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Nandita_updated.py chr05_final_lessStringentInvariants.vcf lr_cv_list.txt G12/Nandita/updated/chr05_G12_input_updated.txt
 # python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Nandita_updated.py chr06_final_lessStringentInvariants.vcf lr_cv_list.txt G12/Nandita/updated/chr06_G12_input_updated.txt
 # python /clusterfs/rosalind/users/makman/G12/vcf2genotype_Nandita_updated.py chr07_final_lessStringentInvariants.vcf lr_cv_list.txt G12/Nandita/updated/chr07_G12_input_updated.txt
