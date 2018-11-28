@@ -15,7 +15,6 @@ for line in file1:
 			allele = split[i]
 		else:
 			allele = split[i][:-1]
-		print allele
 		if allele in dict:
 			dict[allele] += 1
 		else:
@@ -23,16 +22,12 @@ for line in file1:
 		
 	if "N" in dict:
 		numberOfNs = dict["N"]
-# 		print(numberOfNs)
 		skip = False
 		for key, value in dict.items():
 			if key is "N":
-				print("oytun0: ", value)
 				continue	
 			else:
-# 				print(numberOfNs + value, (len(split)-1))
 				if numberOfNs + value == (len(split)-1):
-					print("oytun: ", value)
 					skip = True
 					break
 		if skip:
