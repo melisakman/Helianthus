@@ -18,6 +18,6 @@ for line in file1:
 		ref = split[3]
 		alt = split[4]
 		if len(ref) == 1 and len(alt) == 1:
-			file2.wite(line)
+			file2.write(line)
 		else:
 			continue
