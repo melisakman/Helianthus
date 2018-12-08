@@ -12,4 +12,4 @@
 #SBATCH --mail-type=All
 #SBATCH --time=600:00:00
 module load hapflk/1.4
-hapflk --bfile chr01_final_plink_fixed --outgroup=wd -p kinship/chr01_tree_kinship --ncpu 12 
+hapflk --bfile chr01_final_plink_fixed --outgroup=Wild -p kinship/chr01_tree_kinship --ncpu 12 
