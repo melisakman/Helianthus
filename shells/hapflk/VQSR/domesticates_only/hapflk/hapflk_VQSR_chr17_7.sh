@@ -12,4 +12,4 @@
 #SBATCH --mail-type=All
 #SBATCH --time=600:00:00
 module load hapflk/1.4
-hapflk --file chr17_final_plink_fixed --miss_pheno 0 --chr 17 --from 120000001 --to 140000000 -p chr17_7 --ncpu 12 -K 15
+hapflk --file chr17_final_plink_domesticates --miss_pheno 0 --chr 17 --from 120000001 --to 140000000 -p chr17_7 --ncpu 12 -K 15

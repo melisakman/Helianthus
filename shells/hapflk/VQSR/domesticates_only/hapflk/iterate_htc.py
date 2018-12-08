@@ -26,7 +26,7 @@ for i in iterations:
 #SBATCH --mail-type=All
 #SBATCH --time=600:00:00
 module load hapflk/1.4
-hapflk --file chr""" + str(chr) + "_final_plink_fixed --miss_pheno 0 --chr " + str(chr) + " --from " + str(start) + " --to " + str(end) + " -p chr" + str(chr) + "_" + str(i) + " --ncpu 12 -K 15")
+hapflk --file chr""" + str(chr) + "_final_plink_domesticates --miss_pheno 0 --chr " + str(chr) + " --from " + str(start) + " --to " + str(end) + " -p chr" + str(chr) + "_" + str(i) + " --ncpu 12 -K 15")
 	start += 20000000
 	end += 20000000
 
