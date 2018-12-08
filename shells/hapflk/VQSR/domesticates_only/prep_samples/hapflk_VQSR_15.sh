@@ -20,10 +20,10 @@ module load bio/vcftools/0.1.15
 
 # vcftools --vcf chr15_final_lessStringentInvariants_onlyvariants_noHanXRQ.vcf --out chr15_final_plink  --plink
 
-python ../plink_ped_fixer.py ../samples_VQSR_domesticates.txt chr15_final_plink.ped chr15_final_plink_domesticates.ped
+python ../plink_ped_fixer.py ../samples_VQSR_domesticates_ethno.txt chr15_final_plink.ped chr15_final_plink_domesticates_ethno.ped
 
-cp chr15_final_plink.map chr15_final_plink_domesticates.map
+cp chr15_final_plink.map chr15_final_plink_domesticates_ethno.map
 
 # module load hapflk/1.4
 # 
-# hapflk --file chr15_final_plink_domesticates --miss_pheno 0 --chr 01 --from 1 --to 20000000 -p chr15_1 --ncpu 12 -K 15
+# hapflk --file chr15_final_plink_domesticates_ethno --miss_pheno 0 --chr 01 --from 1 --to 20000000 -p chr15_1 --ncpu 12 -K 15
