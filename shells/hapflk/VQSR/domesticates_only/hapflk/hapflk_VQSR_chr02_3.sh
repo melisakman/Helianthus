@@ -12,4 +12,4 @@
 #SBATCH --mail-type=All
 #SBATCH --time=600:00:00
 module load hapflk/1.4
-hapflk --file chr02_final_plink_domesticates --miss_pheno 0 --chr 02 --from 40000001 --to 60000000 -p chr02_3 --ncpu 12 -K 15
+hapflk --file chr02_final_plink_domesticates_ethno --outgroup=Wild --kinship kinship/chr02_tree_kinship_fij.txt --miss_pheno 0 --chr 02 --from 40000001 --to 60000000 -p hapflk_domesticates/chr02_3 --ncpu 12 -K 15
