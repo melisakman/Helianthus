@@ -8,6 +8,7 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=12 
 #SBATCH -e /global/home/users/makman/H12/outs/hapflk_VQSR_chr17_kinship.err
+#SBATCH -o /global/home/users/makman/H12/outs/hapflk_VQSR_chr17_kinship.out
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 #SBATCH --time=600:00:00
