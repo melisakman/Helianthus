@@ -45,4 +45,4 @@ export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcfto
 
 
 
-hapflk --file all_final_plink_domesticates_ethno --outgroup=Wild -p kinship/all/all_tree_kinship --ncpu 12 
+hapflk --file all_final_plink_domesticates_ethno --outgroup=Wild --miss_pheno 0 -p kinship/all/all_tree_kinship --ncpu 12 
