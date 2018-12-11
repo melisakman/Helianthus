@@ -2,8 +2,8 @@
 #SBATCH -D /clusterfs/rosalind/users/makman/hapflk/VQSR/
 #SBATCH -J hfchr17_1
 #SBATCH --account=co_rosalind
-#SBATCH --partition=savio2_htc
-#SBATCH --qos=rosalind_htc2_normal
+#SBATCH --partition=savio
+#SBATCH --qos=rosalind_savio_normal
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=12 
@@ -45,4 +45,4 @@ export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcfto
 
 
 
-hapflk --file all_final_plink_domesticates_ethno --outgroup=Wild --miss_pheno 0 -p kinship/all/all_tree_kinship --ncpu 12 
+hapflk --file all_final_plink_domesticates_ethno_firstRemoved --outgroup=Wild --miss_pheno 0 -p kinship/all/all_tree_kinship --ncpu 20 
