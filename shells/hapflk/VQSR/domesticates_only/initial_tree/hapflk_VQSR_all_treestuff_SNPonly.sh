@@ -35,14 +35,14 @@ export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcfto
 # chr16_final_lessStringentInvariants_onlyvariants_noHanXRQ.vcf \
 # chr17_final_lessStringentInvariants_onlyvariants_noHanXRQ.vcf > all_final_lessStringentInvariants_onlyvariants_noHanXRQ.vcf
 # 
-module load bio/vcftools/0.1.15
-# 
-vcftools --vcf all_final_lessStringentInvariants_onlyvariants_noHanXRQ.vcf --remove-indels --chr 01:10 --out all_final_plink_noIndels  --plink
-# 
-python ../plink_ped_fixer.py ../samples_VQSR_domesticates_ethno.txt all_final_plink_noIndels.ped all_final_plink_domesticates_ethno_noIndels.ped
-# 
-cp all_final_plink_noIndels.map all_final_plink_domesticates_ethno_noIndels.map
+# module load bio/vcftools/0.1.15
+# # 
+# vcftools --vcf all_final_lessStringentInvariants_onlyvariants_noHanXRQ.vcf --remove-indels --chr 01:10 --out all_final_plink_noIndels --plink
+# # 
+# python ../plink_ped_fixer.py ../samples_VQSR_domesticates_ethno.txt all_final_plink_noIndels.ped all_final_plink_domesticates_ethno_noIndels.ped
+# # 
+# cp all_final_plink_noIndels.map all_final_plink_domesticates_ethno_noIndels.map
 
 
 
-hapflk --file all_final_plink_domesticates_ethno_noIndels --outgroup=Wild --miss_pheno 0 -p kinship/all_noIndels/all_tree_kinship --ncpu 20 
+hapflk --file all_final_plink_domesticates_ethno_noIndels --outgroup=Wild -p kinship/all_noIndels/all_tree_kinship --ncpu 20 
