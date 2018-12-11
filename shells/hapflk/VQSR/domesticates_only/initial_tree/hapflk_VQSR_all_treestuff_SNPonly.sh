@@ -1,14 +1,14 @@
 #!/bin/bash
 #SBATCH -D /clusterfs/rosalind/users/makman/hapflk/VQSR/
-#SBATCH -J hfchr17_1
+#SBATCH -J kinship
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio
 #SBATCH --qos=rosalind_savio_normal
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=12 
-#SBATCH -e /global/home/users/makman/H12/outs/hapflk_VQSR_chr17_kinship.err
-#SBATCH -o /global/home/users/makman/H12/outs/hapflk_VQSR_chr17_kinship.out
+#SBATCH -e /global/home/users/makman/H12/outs/hapflk_VQSR_chr17_kinship2.err
+#SBATCH -o /global/home/users/makman/H12/outs/hapflk_VQSR_chr17_kinship2.out
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 #SBATCH --time=600:00:00
