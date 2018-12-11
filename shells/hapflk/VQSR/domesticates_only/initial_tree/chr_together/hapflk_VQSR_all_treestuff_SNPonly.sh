@@ -37,7 +37,7 @@ export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcfto
 # 
 # module load bio/vcftools/0.1.15
 # # 
-# vcftools --vcf all_final_lessStringentInvariants_onlyvariants_noHanXRQ.vcf --remove-indels --chr 01:10 --out all_final_plink_noIndels --plink
+# vcftools --vcf all_final_lessStringentInvariants_onlyvariants_noHanXRQ.vcf --remove-indels --out all_final_plink_noIndels --plink
 # # 
 # python ../plink_ped_fixer.py ../samples_VQSR_domesticates_ethno.txt all_final_plink_noIndels.ped all_final_plink_domesticates_ethno_noIndels.ped
 # # 
