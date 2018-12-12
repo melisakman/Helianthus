@@ -29,7 +29,7 @@ module load bio/vcftools/0.1.15
 
 module load plink
 
-plink --file chr01_final_plink_domesticates_ethno --merge-list plink_merge_list.txt --recode --out all_final_plink_merged
+# plink --file chr01_final_plink_domesticates_ethno --merge-list plink_merge_list.txt --recode --out all_final_plink_merged
 
 hapflk --file all_final_plink_merged --outgroup=Wild --miss_pheno 0 -p kinship/all/all_tree_kinship --ncpu 20 
 
