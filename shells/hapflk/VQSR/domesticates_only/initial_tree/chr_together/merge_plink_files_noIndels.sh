@@ -29,3 +29,5 @@ module load plink
 plink --file chr01_final_plink_noIndels_domesticates_ethno --merge-list plink_merge_list_noIndels.txt --out all_final_plink_merged_noIndels
 
 hapflk --file all_final_plink_merged_noIndels --outgroup=Wild --miss_pheno 0 -p kinship/all_noIndels/all_tree_kinship --ncpu 20 
+
+##!!! this one includes mexcult 7 and 14 as cultivars
