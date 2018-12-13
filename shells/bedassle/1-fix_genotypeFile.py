@@ -9,7 +9,7 @@ OutputFile = sys.argv[4] # name for output file
 file1 = open(InputFile1, "r")
 file2 = open(InputFile2, "r")
 file3 = open(InputFile3, "r")
-out = open(OutputFile, "r")
+out = open(OutputFile, "w")
 
 for line in file2:
 	split = line.split("\t")
