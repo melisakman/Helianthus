@@ -14,7 +14,7 @@ out = open(OutputFile, "w")
 for line in file2:
 	split = line.split("\t")
 	chr = split[0]
-	pos = split[1]
+	pos = split[1][:-1]
 	snp_no = str(chr) + "_" + str(pos)
 	out.write("\t" + snp_no)
 
