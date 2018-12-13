@@ -21,7 +21,7 @@ for line in file2:
 ind = []
 
 for line in file3:
-	list.append(line[:-1])
+	ind.append(line[:-1])
 count =-1
 for line in file1:
 	count +=1
