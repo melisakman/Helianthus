@@ -17,6 +17,7 @@ for line in file2:
 	pos = split[1][:-1]
 	snp_no = str(chr) + "_" + str(pos)
 	out.write("\t" + snp_no)
+out.write("\n")	
 
 ind = []
 
