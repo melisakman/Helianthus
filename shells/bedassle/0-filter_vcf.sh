@@ -15,4 +15,4 @@
 
 module load bio/vcftools/0.1.15
 
-vcftools --vcf testy_recode_snpid_fixed.vcf --keep Accession_ForBEDASSLE.txt --max-missing-count 0 --012 --out testy_recode_snpid_fixed_bedassle2
+vcftools --vcf testy_recode_snpid_fixed.vcf --keep Accession_ForBEDASSLE.txt --max-missing-count 10 --012 --out testy_recode_snpid_fixed_bedassle2
