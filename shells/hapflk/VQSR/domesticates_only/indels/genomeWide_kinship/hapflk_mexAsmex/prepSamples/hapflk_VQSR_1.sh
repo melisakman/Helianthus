@@ -20,7 +20,7 @@
 # 
 module load bio/vcftools/0.1.15
 
-vcftools --vcf chr01_final_lessStringentInvariants_onlyvariants_noHanXRQ.vcf --out chr01_final_plink  --plink
+vcftools --vcf chr01_final_lessStringentInvariants_onlyvariants_noHanXRQ.vcf --out chr01_final_plink --plink
 
 # python ../plink_ped_fixer.py ../samples_VQSR_domesticates_ethno.txt chr01_final_plink.ped chr01_final_plink_domesticates_ethno.ped
 # 
