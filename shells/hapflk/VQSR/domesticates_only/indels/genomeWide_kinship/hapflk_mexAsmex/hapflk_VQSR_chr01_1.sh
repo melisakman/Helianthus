@@ -14,6 +14,6 @@ module load hapflk/1.4
 # hapflk --file chr01_final_plink_domesticates_ethno --outgroup=Wild --kinship kinship/all/all_tree_kinship_fij.txt --miss_pheno 0 --chr 01 --from 1 --to 20000000 -p hapflk_domesticates/Indels_mexAsmex/chr01_1 --ncpu 12 -K 15
 
 ##some tests
-hapflk --file chr01_final_plink_domesticates_ethno --outgroup=Wild --kinship kinship/all/all_tree_kinship_fij.txt --miss_pheno 0 --chr 01 --from 1 --to 20000000 -p hapflk_domesticates/Indels_mexAsmex/chr01_1_K6 --ncpu 12 -K 6
+hapflk --file chr01_final_plink_domesticates_ethno --outgroup=Wild --kinship kinship/all/all_tree_kinship_fij.txt --miss_pheno 0 --chr 01 --from 1 --to 20000000 -p hapflk_domesticates/Indels_mexAsmex/chr01_1_K6 --ncpu 40 -K 6
 
-hapflk --file chr01_final_plink_domesticates_ethno --outgroup=Wild --kinship kinship/all/all_tree_kinship_fij.txt --miss_pheno 0 --chr 01 --from 1 --to 20000000 -p hapflk_domesticates/Indels_mexAsmex/chr01_1_K8 --ncpu 12 -K 8
+hapflk --file chr01_final_plink_domesticates_ethno --outgroup=Wild --kinship kinship/all/all_tree_kinship_fij.txt --miss_pheno 0 --chr 01 --from 1 --to 20000000 -p hapflk_domesticates/Indels_mexAsmex/chr01_1_K8 --ncpu 40 -K 8
