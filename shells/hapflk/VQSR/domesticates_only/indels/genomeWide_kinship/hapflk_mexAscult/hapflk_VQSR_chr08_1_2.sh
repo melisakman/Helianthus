@@ -7,9 +7,9 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=12 
-#SBATCH -e /global/home/users/makman/H12/outs/hapflk_VQSR_chr08_1_Indel_mexascult.err
+#SBATCH -e /global/home/users/makman/H12/outs/hapflk_VQSR_chr08_1_2_Indel_mexascult.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 #SBATCH --time=600:00:00
 module load hapflk/1.4
-hapflk --file chr08_final_plink_domesticates_ethno_mexAscult --outgroup=Wild --kinship kinship/indel_mexcult_as_cult/all_tree_kinship_fij.txt --miss_pheno 0 --chr 08 --from 1 --to 10000000 -p hapflk_domesticates/Indels_mexascult/chr08_1_1 --ncpu 12 -K 15
+hapflk --file chr08_final_plink_domesticates_ethno_mexAscult --outgroup=Wild --kinship kinship/indel_mexcult_as_cult/all_tree_kinship_fij.txt --miss_pheno 0 --chr 08 --from 10000001 --to 20000000 -p hapflk_domesticates/Indels_mexascult/chr08_1_2 --ncpu 12 -K 15
