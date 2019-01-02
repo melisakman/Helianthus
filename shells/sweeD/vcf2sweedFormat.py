@@ -57,11 +57,12 @@ for line in file1:
 								alt_no +=2						
 							else:
 								alt_no +=2	
-					alleles = ref_no + alt_no
-					file3.write(" " + str(alt_no) + " " + str(alleles) + " 1") 	
-						
 				else:
 					continue
+				alleles = ref_no + alt_no
+				file3.write(" " + str(alt_no) + " " + str(alleles) + " 1") 	
+						
+				
 		else:
 			continue
 		file3.write("\n")
