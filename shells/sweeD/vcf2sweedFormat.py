@@ -34,9 +34,9 @@ for line in file1:
 		ref = splt[3]
 		alt = splt[4]
 		if alt != ".":
-		ref_no = 0
-		alt_no = 0
-		missing_no = 0
+			ref_no = 0
+			alt_no = 0
+			missing_no = 0
 			file3.write(pos)
 			for j in samples:
 				if group_dict[j] in group_list:
