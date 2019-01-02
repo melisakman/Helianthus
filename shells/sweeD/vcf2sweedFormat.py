@@ -35,6 +35,9 @@ for line in file1:
 		alt = splt[4]
 		if alt != ".":
 			file3.write(pos)
+			ref_no = 0
+			alt_no = 0
+			missing_no = 0
 			for j in samples:
 				if group_dict[j] in group_list:
 					if splt[j][0] == ".":
@@ -42,9 +45,7 @@ for line in file1:
 					else:
 						allele1 = int(splt[j][0])
 						allele2 = int(splt[j][2])
-						ref_no = 0
-						alt_no = 0
-						missing_no = 0
+						
 						if group_dict[j] in group_list:
 							if allele1 == allele2 and allele1 == 0:
 								ref_no +=2
@@ -60,7 +61,7 @@ for line in file1:
 				else:
 					continue
 			alleles = ref_no + alt_no
-			file3.write(" " + str(alt_no))# + " " + str(alleles) + " 1") 	
+			file3.write(" " + str(alt_no) + " " + str(alleles) + " 1") 	
 						
 				
 		else:
