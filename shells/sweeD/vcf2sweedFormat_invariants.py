@@ -62,7 +62,8 @@ for line in file1:
 				continue
 		alleles = ref_no + alt_no
 		file3.write(str(pos) + "\t" + str(alt_no) + "\t" + str(alleles) + "\t1\n")
-		print str(pos) + " missing = " + str(missing_no) + " alt2 = " + str(alt2_no) 
+		if alt2_no >0:
+			print str(pos) + " missing = " + str(missing_no) + " alt2 = " + str(alt2_no) 
 										
 					
 			
