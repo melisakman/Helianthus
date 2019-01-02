@@ -14,7 +14,7 @@ group_dict = {}
 for line_1 in file2:
 	group_list.append(line_1[:-1])
 
-file3.write("location\tx\tn\tfolded\n")
+file3.write("position\tx\tn\tfolded\n")
 for line in file1: 
 	splt = line.split("\t")
 	sample_no = len(splt)
