@@ -34,7 +34,7 @@ for line in file1:
 		ref = splt[3]
 		alt = splt[4]
 		if alt != ".":
-			file3.write(pos)
+			
 			ref_no = 0
 			alt_no = 0
 			missing_no = 0
@@ -64,7 +64,7 @@ for line in file1:
 			if alt_no ==0:
 				continue
 			else:
-				file3.write(" " + str(alt_no) + " " + str(alleles) + " 1") 	
+				file3.write(str(pos) + " " + str(alt_no) + " " + str(alleles) + " 1") 	
 						
 				
 		else:
