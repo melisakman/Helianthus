@@ -15,6 +15,6 @@
 #SBATCH --mail-type=All
 
 
-# python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py ../GATK/bcftools_isec/final/chr01_final_lessStringentInvariants_onlyvariants.vcf ../GATK/bcftools_isec/final/lr_list.txt chr01_variants.SF
-./SweeD-P -name chr01_invariants -input chr01_variants.SF -grid 647012 -folded -threads 20
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py ../GATK/bcftools_isec/final/chr01_final_lessStringentInvariants_onlyvariants.vcf ../GATK/bcftools_isec/final/lr_list.txt chr01_variants.SF
+./SweeD-P -name chr01_invariants -input chr01_variants.SF -grid 15000 -folded -threads 20
 
