@@ -8,8 +8,8 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=3 
 #SBATCH --time=400:00:00
-#SBATCH -o /global/home/users/makman/H12/outs/map.out
-#SBATCH -e /global/home/users/makman/H12/outs/map.err
+#SBATCH -o /global/home/users/makman/H12/outs/map_chr01.out
+#SBATCH -e /global/home/users/makman/H12/outs/map_chr01.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
