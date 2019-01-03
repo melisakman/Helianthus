@@ -15,4 +15,4 @@
 #SBATCH --mail-type=All
 
 
-./SweepFinder2 -lg 10000 variant_biallelic/chr02_variants_biallelic.SF variant_biallelic/all_spectFile.txt variant_biallelic/chr02_variants_biallelic_output.txt
+./SweepFinder2 -lg 10000 variant/chr02_variants.SF variant/all_spectFile.txt variant/chr02_variants_output.txt
