@@ -2,12 +2,11 @@
 #SBATCH -D /clusterfs/rosalind/users/makman/SF2
 #SBATCH -J sf_chr15
 #SBATCH --account=co_rosalind
-#SBATCH --partition=savio
-#SBATCH --qos=rosalind_savio_normal
+#SBATCH --partition=savio2_htc
+#SBATCH --qos=rosalind_htc2_normal
 #SBATCH --nodes=1
-#SBATCH --mem=64000
-#SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=20
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=3 
 #SBATCH --time=400:00:00
 #SBATCH -o /global/home/users/makman/H12/outs/sf2chr15.out
 #SBATCH -e /global/home/users/makman/H12/outs/sf2chr15.err
