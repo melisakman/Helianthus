@@ -15,8 +15,10 @@
 #SBATCH --mail-type=All
 
 
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat_biallelic.py ../GATK/bcftools_isec/final/chr01_final_lessStringentInvariants_onlyvariants.vcf ../GATK/bcftools_isec/final/lr_list.txt chr01_variants_biallelic.SF
-./SweeD-P -name chr01_variants_biallelic -input chr01_variants_biallelic.SF -grid 15000 -folded -threads 20
+# python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat_biallelic.py ../GATK/bcftools_isec/final/chr01_final_lessStringentInvariants_onlyvariants.vcf ../GATK/bcftools_isec/final/lr_list.txt chr01_variants_biallelic.SF
+# ./SweeD-P -name chr01_variants_biallelic -input chr01_variants_biallelic.SF -grid 15000 -folded -threads 20
 
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat_biallelic.py ../GATK/bcftools_isec/final/chr01_final_lessStringentInvariants_onlyvariants.vcf ../GATK/bcftools_isec/final/lr_list.txt chr01_variants_biallelic_unfolded.SF
-./SweeD-P -name chr01_variants_biallelic_unfolded -input chr01_variants_biallelic_unfolded.SF -grid 15000 -folded -threads 20
+# python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat_biallelic.py ../GATK/bcftools_isec/final/chr01_final_lessStringentInvariants_onlyvariants.vcf ../GATK/bcftools_isec/final/lr_list.txt chr01_variants_biallelic_unfolded.SF
+# ./SweeD-P -name chr01_variants_biallelic_unfolded -input chr01_variants_biallelic_unfolded.SF -grid 15000 -folded -threads 20
+
+./SweeD-P -name chr01_variants_biallelic_1000 -input chr01_variants_biallelic.SF -grid 1000 -folded -threads 20
