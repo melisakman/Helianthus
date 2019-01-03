@@ -14,4 +14,4 @@
 #SBATCH --mail-type=All
 
 
-cat chr10_final_lessStringentInvariants.vcf | perl vcf2cmpositions.pl HanXRQr1.0-20151230.bp_to_cM.280x801.extradivisions_columnsFixed.txt > chr10_formap.vcf
+cat ../../GATK/bcftools_isec/final/chr10_final_lessStringentInvariants.vcf | perl vcf2cmpositions.pl HanXRQr1.0-20151230.bp_to_cM.280x801.extradivisions_columnsFixed.txt > chr10_formap.vcf

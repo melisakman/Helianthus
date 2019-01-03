@@ -12,4 +12,4 @@
 #SBATCH -e /global/home/users/makman/H12/outs/map_chr11.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-cat chr11_final_lessStringentInvariants.vcf | perl vcf2cmpositions.pl HanXRQr1.0-20151230.bp_to_cM.280x801.extradivisions_columnsFixed.txt > chr11_formap.vcf
+cat ../../GATK/bcftools_isec/final/chr11_final_lessStringentInvariants.vcf | perl vcf2cmpositions.pl HanXRQr1.0-20151230.bp_to_cM.280x801.extradivisions_columnsFixed.txt > chr11_formap.vcf
