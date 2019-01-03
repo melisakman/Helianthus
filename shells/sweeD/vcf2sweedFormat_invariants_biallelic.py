@@ -37,31 +37,31 @@ for line in file1:
 		alt_no = 0
 		alt2_no = 0
 		missing_no = 0
-		for j in samples:
-			if group_dict[j] in group_list:
-				if splt[j][0] == ".":
-					missing_no += 1
-				else:
-					allele1 = int(splt[j][0])
-					allele2 = int(splt[j][2])
-					
-					if group_dict[j] in group_list:
-						if allele1 == allele2 and allele1 == 0:
-							ref_no +=2
-						elif allele1 == allele2 and allele1 == 1:
-							alt_no +=2
-						elif allele1 != allele2 and allele1 == 0:
-							ref_no +=1
-							alt_no +=1
-						elif allele1 != allele2 and allele1 == 1:
-							alt_no +=2						
+		if len(alt.split(",")) == 1:
+			for j in samples:
+				if group_dict[j] in group_list:
+					if splt[j][0] == ".":
+						missing_no += 1
+					else:
+						allele1 = int(splt[j][0])
+						allele2 = int(splt[j][2])
 						
-			else:
-				continue
-		alleles = ref_no + alt_no
-		file3.write(str(pos) + "\t" + str(alt_no) + "\t" + str(alleles) + "\t1\n")
-# 		if alt2_no >0:
-# 			print str(pos) + " missing = " + str(missing_no) + " alt2 = " + str(alt2_no) 
-								
+						if group_dict[j] in group_list:
+							if allele1 == allele2 and allele1 == 0:
+								ref_no +=2
+							elif allele1 == allele2 and allele1 == 1:
+								alt_no +=2
+							elif allele1 != allele2 and allele1 == 0:
+								ref_no +=1
+								alt_no +=1
+							elif allele1 != allele2 and allele1 == 1:
+								alt_no +=2						
+				else:
+					continue
+			alleles = ref_no + alt_no
+			file3.write(str(pos) + "\t" + str(alt_no) + "\t" + str(alleles) + "\t1\n")
+			if alt2_no >0:
+				print str(pos) + " missing = " + str(missing_no) + " alt2 = " + str(alt2_no) 
+										
 					
 			
