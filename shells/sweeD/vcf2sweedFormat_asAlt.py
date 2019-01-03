@@ -56,7 +56,8 @@ for line in file1:
 								alt_no +=1
 							elif allele1 != allele2 and allele1 == 1:
 								alt_no +=2						
-							
+							else:
+								alt_no +=2	
 				else:
 					continue
 			alleles = ref_no + alt_no

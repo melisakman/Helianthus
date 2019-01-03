@@ -33,8 +33,7 @@ for line in file1:
 		pos = splt[1]
 		ref = splt[3]
 		alt = splt[4]
-		if alt != ".":
-			
+		if alt != "." and len(alt.split(",")) == 1:
 			ref_no = 0
 			alt_no = 0
 			missing_no = 0
@@ -55,8 +54,7 @@ for line in file1:
 								ref_no +=1
 								alt_no +=1
 							elif allele1 != allele2 and allele1 == 1:
-								alt_no +=2						
-							
+								alt_no +=2						 							
 				else:
 					continue
 			alleles = ref_no + alt_no
