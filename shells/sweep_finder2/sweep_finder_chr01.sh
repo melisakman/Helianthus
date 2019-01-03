@@ -55,20 +55,20 @@
 # 
 # ./SweepFinder2 -f variant_biallelic/all_variants_biallelic.SF variant_biallelic/all_spectFile.txt
 # 
-./SweepFinder2 -l 10000 variant_biallelic/chr01_variants_biallelic.SF variant_biallelic/all_spectFile.txt variant_biallelic/chr01_variants_biallelic_output.txt
-./SweepFinder2 -l 10000 variant_biallelic/chr02_variants_biallelic.SF variant_biallelic/all_spectFile.txt variant_biallelic/chr02_variants_biallelic_output.txt
-./SweepFinder2 -l 10000 variant_biallelic/chr03_variants_biallelic.SF variant_biallelic/all_spectFile.txt variant_biallelic/chr03_variants_biallelic_output.txt
-./SweepFinder2 -l 10000 variant_biallelic/chr04_variants_biallelic.SF variant_biallelic/all_spectFile.txt variant_biallelic/chr04_variants_biallelic_output.txt
-./SweepFinder2 -l 10000 variant_biallelic/chr05_variants_biallelic.SF variant_biallelic/all_spectFile.txt variant_biallelic/chr05_variants_biallelic_output.txt
-./SweepFinder2 -l 10000 variant_biallelic/chr06_variants_biallelic.SF variant_biallelic/all_spectFile.txt variant_biallelic/chr06_variants_biallelic_output.txt
-./SweepFinder2 -l 10000 variant_biallelic/chr07_variants_biallelic.SF variant_biallelic/all_spectFile.txt variant_biallelic/chr07_variants_biallelic_output.txt
-./SweepFinder2 -l 10000 variant_biallelic/chr08_variants_biallelic.SF variant_biallelic/all_spectFile.txt variant_biallelic/chr08_variants_biallelic_output.txt
-./SweepFinder2 -l 10000 variant_biallelic/chr09_variants_biallelic.SF variant_biallelic/all_spectFile.txt variant_biallelic/chr09_variants_biallelic_output.txt
-./SweepFinder2 -l 10000 variant_biallelic/chr10_variants_biallelic.SF variant_biallelic/all_spectFile.txt variant_biallelic/chr10_variants_biallelic_output.txt
-./SweepFinder2 -l 10000 variant_biallelic/chr11_variants_biallelic.SF variant_biallelic/all_spectFile.txt variant_biallelic/chr11_variants_biallelic_output.txt
-./SweepFinder2 -l 10000 variant_biallelic/chr12_variants_biallelic.SF variant_biallelic/all_spectFile.txt variant_biallelic/chr12_variants_biallelic_output.txt
-./SweepFinder2 -l 10000 variant_biallelic/chr13_variants_biallelic.SF variant_biallelic/all_spectFile.txt variant_biallelic/chr13_variants_biallelic_output.txt
-./SweepFinder2 -l 10000 variant_biallelic/chr14_variants_biallelic.SF variant_biallelic/all_spectFile.txt variant_biallelic/chr14_variants_biallelic_output.txt
-./SweepFinder2 -l 10000 variant_biallelic/chr15_variants_biallelic.SF variant_biallelic/all_spectFile.txt variant_biallelic/chr15_variants_biallelic_output.txt
-./SweepFinder2 -l 10000 variant_biallelic/chr16_variants_biallelic.SF variant_biallelic/all_spectFile.txt variant_biallelic/chr16_variants_biallelic_output.txt
-./SweepFinder2 -l 10000 variant_biallelic/chr17_variants_biallelic.SF variant_biallelic/all_spectFile.txt variant_biallelic/chr17_variants_biallelic_output.txt
+./SweepFinder2 -lg 10000 variant_biallelic/chr01_variants_biallelic.SF variant_biallelic/all_spectFile.txt variant_biallelic/chr01_variants_biallelic_output.txt
+./SweepFinder2 -lg 10000 variant_biallelic/chr02_variants_biallelic.SF variant_biallelic/all_spectFile.txt variant_biallelic/chr02_variants_biallelic_output.txt
+./SweepFinder2 -lg 10000 variant_biallelic/chr03_variants_biallelic.SF variant_biallelic/all_spectFile.txt variant_biallelic/chr03_variants_biallelic_output.txt
+./SweepFinder2 -lg 10000 variant_biallelic/chr04_variants_biallelic.SF variant_biallelic/all_spectFile.txt variant_biallelic/chr04_variants_biallelic_output.txt
+./SweepFinder2 -lg 10000 variant_biallelic/chr05_variants_biallelic.SF variant_biallelic/all_spectFile.txt variant_biallelic/chr05_variants_biallelic_output.txt
+./SweepFinder2 -lg 10000 variant_biallelic/chr06_variants_biallelic.SF variant_biallelic/all_spectFile.txt variant_biallelic/chr06_variants_biallelic_output.txt
+./SweepFinder2 -lg 10000 variant_biallelic/chr07_variants_biallelic.SF variant_biallelic/all_spectFile.txt variant_biallelic/chr07_variants_biallelic_output.txt
+./SweepFinder2 -lg 10000 variant_biallelic/chr08_variants_biallelic.SF variant_biallelic/all_spectFile.txt variant_biallelic/chr08_variants_biallelic_output.txt
+./SweepFinder2 -lg 10000 variant_biallelic/chr09_variants_biallelic.SF variant_biallelic/all_spectFile.txt variant_biallelic/chr09_variants_biallelic_output.txt
+./SweepFinder2 -lg 10000 variant_biallelic/chr10_variants_biallelic.SF variant_biallelic/all_spectFile.txt variant_biallelic/chr10_variants_biallelic_output.txt
+./SweepFinder2 -lg 10000 variant_biallelic/chr11_variants_biallelic.SF variant_biallelic/all_spectFile.txt variant_biallelic/chr11_variants_biallelic_output.txt
+./SweepFinder2 -lg 10000 variant_biallelic/chr12_variants_biallelic.SF variant_biallelic/all_spectFile.txt variant_biallelic/chr12_variants_biallelic_output.txt
+./SweepFinder2 -lg 10000 variant_biallelic/chr13_variants_biallelic.SF variant_biallelic/all_spectFile.txt variant_biallelic/chr13_variants_biallelic_output.txt
+./SweepFinder2 -lg 10000 variant_biallelic/chr14_variants_biallelic.SF variant_biallelic/all_spectFile.txt variant_biallelic/chr14_variants_biallelic_output.txt
+./SweepFinder2 -lg 10000 variant_biallelic/chr15_variants_biallelic.SF variant_biallelic/all_spectFile.txt variant_biallelic/chr15_variants_biallelic_output.txt
+./SweepFinder2 -lg 10000 variant_biallelic/chr16_variants_biallelic.SF variant_biallelic/all_spectFile.txt variant_biallelic/chr16_variants_biallelic_output.txt
+./SweepFinder2 -lg 10000 variant_biallelic/chr17_variants_biallelic.SF variant_biallelic/all_spectFile.txt variant_biallelic/chr17_variants_biallelic_output.txt
