@@ -61,7 +61,7 @@ for line in file1:
 			if alt_no ==0:
 				continue
 			else:
-				file3.write(str(pos) + "\t" + str(alt_no) + "\t" + str(alleles) + "\t1") 	
+				file3.write(str(pos) + "\t" + str(alt_no) + "\t" + str(alleles) + "\t0") 	
 						
 				
 		else:
