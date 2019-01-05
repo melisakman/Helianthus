@@ -19,4 +19,4 @@ for line1 in input1:
 	split1 = line1.split("\t")
 	pos = split1[0]
 	if pos in list:
-		output.write(line) 
+		output.write(line1) 
