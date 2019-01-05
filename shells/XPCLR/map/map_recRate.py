@@ -10,7 +10,10 @@ output.write("position\trate")
 cM = 0
 for line in input:
 	split = line.split("\t")
-	pos = split[0]
-	cM_new = float(split[1])
-	to_write = cM_new - cM
-	output.write("\n" + str(pos) + "\t" + str(to_write))
+	if split[0] = "position":
+		continue
+	else:
+		pos = split[0]
+		cM_new = float(split[1])
+		to_write = cM_new - cM
+		output.write("\n" + str(pos) + "\t" + str(to_write))
