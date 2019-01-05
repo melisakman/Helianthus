@@ -2,7 +2,7 @@ import sys
 
 InputFile1 = sys.argv[1] # map file
 InputFile2 = sys.argv[2] # site frequency file
-OutputFile1 = sys.argv[2] # output file name group1
+OutputFile1 = sys.argv[3] # output file name group1
 
 input1 = open(InputFile1, "r")
 input2 = open(InputFile2, "r")
