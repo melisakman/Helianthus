@@ -1,3 +1,5 @@
+import sys
+
 InputFile1 = sys.argv[1] # map file
 InputFile2 = sys.argv[2] # site frequency file
 OutputFile1 = sys.argv[2] # output file name group1
