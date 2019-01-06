@@ -14,4 +14,4 @@
 #SBATCH --mail-type=All
 
 
-./SweepFinder2 -lg 10000 variant_asAlt/chr04_variants_asAlt.SF variant_asAlt/all_spectFile.txt variant_asAlt/chr04_variants_asAlt_output.txt
+./SweepFinder2 -lg 10000 variant_asAlt/chr04_variants_asAlt.SF variant_asAlt/all_spectFile.txt /clusterfs/rosalind/users/makman/XPCLR/map/chr04_variants_asAlt_recRate.txt variant_asAlt/chr04_variants_asAlt_rec_output.txt
