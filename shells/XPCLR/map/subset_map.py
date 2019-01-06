@@ -8,12 +8,11 @@ input1 = open(InputFile1, "r")
 input2 = open(InputFile2, "r")
 
 output = open(OutputFile1, 'w')
-output.write("position\trate")
+output.write("position\tcM")
 dict = {}
 for line1 in input1:
 	split1 = line1.split("\t")
-	dict[split1[0]] = split1[1]
-print dict
+	dict[split1[0]] = split1[1][:-1]
 
 for line2 in input2:
 	split1 = line1.split("\t")
