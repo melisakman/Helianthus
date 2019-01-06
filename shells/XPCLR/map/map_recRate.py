@@ -15,6 +15,7 @@ for line in input:
 	else:
 		pos = split[0]
 		cM_new = float(split[1])
-		to_write = float(cM_new - cM) * 100
+		to_write = float(cM_new - cM)
 		cM = cM_new
-		output.write("\n" + str(pos) + "\t" + str(to_write))
+		sayi = '%17.11f' % to_write #str(to_write)
+		output.write("\n" + str(pos) + "\t" + sayi)
