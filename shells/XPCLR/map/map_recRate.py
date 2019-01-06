@@ -15,6 +15,6 @@ for line in input:
 	else:
 		pos = split[0]
 		cM_new = float(split[1])
-		to_write = float(cM_new - cM) * 1000
+		to_write = float(cM_new - cM) * 100
 		cM = cM_new
 		output.write("\n" + str(pos) + "\t" + str(to_write))
