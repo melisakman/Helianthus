@@ -13,6 +13,7 @@ dict = {}
 for line1 in input1:
 	split1 = line1.split("\t")
 	dict[split1[0]] = split1[1]
+print dict
 
 for line2 in input2:
 	split1 = line1.split("\t")
