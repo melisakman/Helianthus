@@ -14,9 +14,9 @@ for line1 in input1:
 	split1 = line1.split("\t")
 	dict[split1[0]] = split1[1][:-1]
 print "dict done"
+
 for line2 in input2:
 	split2 = line2.split("\t")
 	pos = split2[0]
 	if pos in dict:
-		print pos 
 		output.write(str(pos) + "\t" + dict[pos] + "\n") 
