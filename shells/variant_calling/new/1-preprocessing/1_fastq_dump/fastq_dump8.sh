@@ -10,16 +10,15 @@
 #SBATCH -e /global/home/users/makman/GATK/outs/fastqdump8.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-module load sra-tools/2.8.1 
 
 echo '/global/home/users/makman/ncbi/public/root = "/clusterfs/rosalind/users/makman/tmp"' > $HOME/.ncbi/user-settings.mkfg
-# fastq-dump -I --split-files SRR5907869
-# fastq-dump -I --split-files SRR5907847
-# fastq-dump -I --split-files SRR5907848
-# fastq-dump -I --split-files SRR5907845
-# fastq-dump -I --split-files SRR5907851
-# fastq-dump -I --split-files SRR5907826
-# fastq-dump -I --split-files SRR5907825
-fastq-dump -I --split-files SRR5929273
+# clusterfs/rosalind/users/makman/sratoolkit.2.9.2-centos_linux64/bin/fastq-dump -I --split-files SRR5907869
+# clusterfs/rosalind/users/makman/sratoolkit.2.9.2-centos_linux64/bin/fastq-dump -I --split-files SRR5907847
+# clusterfs/rosalind/users/makman/sratoolkit.2.9.2-centos_linux64/bin/fastq-dump -I --split-files SRR5907848
+# clusterfs/rosalind/users/makman/sratoolkit.2.9.2-centos_linux64/bin/fastq-dump -I --split-files SRR5907845
+# clusterfs/rosalind/users/makman/sratoolkit.2.9.2-centos_linux64/bin/fastq-dump -I --split-files SRR5907851
+# clusterfs/rosalind/users/makman/sratoolkit.2.9.2-centos_linux64/bin/fastq-dump -I --split-files SRR5907826
+# clusterfs/rosalind/users/makman/sratoolkit.2.9.2-centos_linux64/bin/fastq-dump -I --split-files SRR5907825
+clusterfs/rosalind/users/makman/sratoolkit.2.9.2-centos_linux64/bin/fastq-dump -I --split-files SRR5929273
 
 
