@@ -14,4 +14,4 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load bio/blast/2.6.0
-blastx -query fst_G12_tajD_pi_2+genes_Jan2019.txt -db /clusterfs/vector/instrumentData/blackmanlab/Helianthus/blast_databases/TAIR10_pep_20101214 -outfmt "7 qseqid qlen sseqid slen qstart qend sstart send evalue bitscore score length pident nident mismatch positive gapopen gaps" -out fst_G12_tajD_pi_2+genes_Jan2019_Genes2AT.txt
+blastx -query fst_G12_tajD_pi_2+genes_Jan2019.txt -db ../../../TAIR10_pep_20101214 -outfmt "7 qseqid qlen sseqid slen qstart qend sstart send evalue bitscore score length pident nident mismatch positive gapopen gaps" -out fst_G12_tajD_pi_2+genes_Jan2019_Genes2AT.txt
