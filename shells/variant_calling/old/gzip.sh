@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/rosalind/users/makman/GATK/bcftools_isec/final
+#SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/sra/
 #SBATCH -J comchr01
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio2_htc
@@ -11,4 +11,4 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
-gzip *.vcf
+gzip *.fastq
