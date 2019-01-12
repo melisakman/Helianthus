@@ -9,10 +9,12 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=20
 #SBATCH --time=720:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/catfastq1.out
-#SBATCH -e /global/home/users/makman/GATK/outs/catfastq1.err
+#SBATCH -o /global/home/users/makman/GATK/outs/catfastq8.out
+#SBATCH -e /global/home/users/makman/GATK/outs/catfastq8.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
+
+gzip *.fastq
 
 zcat HI.1579.002.BioO_27.ann44-ccCA_R1.fastq.gz SRR5907809_1.fastq.gz > ready/ann44-ccCA_R1.fastq
 gzip ready/ann44-ccCA_R1.fastq
