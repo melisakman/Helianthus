@@ -2,11 +2,10 @@
 #SBATCH -D /clusterfs/rosalind/users/makman/Arabidopsis
 #SBATCH -J filtvcf
 #SBATCH --account=co_rosalind
-#SBATCH --partition=savio
-#SBATCH --qos=rosalind_savio_normal
-#SBATCH --nodes=1
+#SBATCH --partition=savio2_htc
+#SBATCH --qos=rosalind_htc2_normal
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=12 
+#SBATCH --cpus-per-task=1
 #SBATCH --time=600:00:00
 #SBATCH -o /global/home/users/makman/Arabidopsis/filter_vcf.out
 #SBATCH -e /global/home/users/makman/Arabidopsis/filter_vcf.err
