@@ -7,7 +7,6 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=4
 #SBATCH --time=480:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/cat_fastq_cv1.out
 #SBATCH -e /global/home/users/makman/GATK/outs/cat_fastq_cv1.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
@@ -44,5 +43,7 @@ gzip ready/RHA408_R1.fastq
 # gzip ready/RHA309_R1.fastq
 # gzip ready/HA442_R1.fastq
 # gzip ready/RHA355_R1.fastq
+
+
 
 
