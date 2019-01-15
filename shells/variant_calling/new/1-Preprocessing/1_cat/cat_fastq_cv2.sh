@@ -7,7 +7,6 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=4
 #SBATCH --time=480:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/cat_fastq_cv2.out
 #SBATCH -e /global/home/users/makman/GATK/outs/cat_fastq_cv2.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
