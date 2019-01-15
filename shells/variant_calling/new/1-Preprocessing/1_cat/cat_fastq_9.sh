@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/
+#SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/raw/ready/
 #SBATCH -J catfastq9
 #SBATCH --account=fc_blackman
 #SBATCH --partition=savio2
