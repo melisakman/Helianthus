@@ -10,7 +10,7 @@
 #SBATCH -e /global/home/users/makman/GATK/outs/cat_fastq7.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-#SBATCH --array=1-4
+
 # zcat HI.1253.007.Index_2.PI432521_R1.fastq.gz HI.1253.006.Index_2.PI432521_R1.fastq.gz HI.1253.005.Index_2.PI432521_R1.fastq.gz > ready/Anzac_Pueblo_R1.fastq.gz
 # zcat HI.1251.006.Index_21.PI369357_R1.fastq.gz HI.1251.005.Index_21.PI369357_R1.fastq.gz > ready/Arikara_R1.fastq.gz
 # zcat HI.1251.006.Index_22.PI369358_R1.fastq.gz HI.1251.005.Index_22.PI369358_R1.fastq.gz > ready/Havasupai_R1.fastq.gz
