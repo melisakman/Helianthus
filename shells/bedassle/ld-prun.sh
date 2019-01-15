@@ -12,6 +12,8 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
-module load bio/vcftools/0.1.15
+# module load bio/vcftools/0.1.15
+module load bcftools/1.6
+# vcftools --gzvcf testy_recode_snpid_fixed.vcf --geno-r2 --ld-window-bp 10000 --out testy_recode_snpid_fixed_ldprunned_10K
 
-vcftools --gzvcf testy_recode_snpid_fixed.vcf --geno-r2 --ld-window-bp 10000 --out testy_recode_snpid_fixed_ldprunned_10K
+bcftools +prune -n 30000 testy_recode_snpid_fixed.vcf -Ov -o testy_recode_snpid_fixed_ldprunned_30K.vcf 
