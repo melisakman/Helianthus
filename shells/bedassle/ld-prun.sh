@@ -1,6 +1,6 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/Arabidopsis
-#SBATCH -J filtvcf
+#SBATCH -J ldprun
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio2_htc
 #SBATCH --qos=rosalind_htc2_normal
