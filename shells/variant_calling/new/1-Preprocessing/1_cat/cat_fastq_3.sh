@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/
+#SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/raw
 #SBATCH -J catfastq3
 #SBATCH --account=fc_blackman
 #SBATCH --partition=savio2
@@ -19,10 +19,15 @@
 # zcat HI.1253.007.Index_3.PI432522_R1.fastq.gz HI.1253.006.Index_3.PI432522_R1.fastq.gz HI.1253.005.Index_3.PI432522_R1.fastq.gz > ready/Laguna_Pueblo_R1.fastq.gz
 # zcat HI.1253.007.Index_4.PI600718_R1.fastq.gz HI.1253.006.Index_4.PI600718_R1.fastq.gz HI.1253.005.Index_4.PI600718_R1.fastq.gz > ready/Mandan2_R1.fastq.gz
 # zcat HI.0913.006.Index_16.MexCult14_R1.fastq.gz HI.0913.005.Index_16.MexCult14_R1.fastq.gz > ready/MexCult14_R1.fastq.gz
+
 zcat HI.0913.006.Index_18.MexCult15_R1.fastq.gz HI.0913.005.Index_18.MexCult15_R1.fastq.gz > ready/MexCult15_R1.fastq.gz
+
 zcat HI.0810.006.Index_12.MexCult3_R1.fastq.gz HI.0810.005.Index_12.MexCult3_R1.fastq.gz > ready/MexCult3_R1.fastq.gz
+
 zcat HI.0810.006.Index_13.MexCult6_R1.fastq.gz HI.0810.005.Index_13.MexCult6_R1.fastq.gz > ready/MexCult6_R1.fastq.gz
+
 zcat HI.0810.006.Index_14.MexCult7_R1.fastq.gz HI.0810.005.Index_14.MexCult7_R1.fastq.gz > ready/MexCult7_R1.fastq.gz
+
 # zcat HI.0810.006.Index_15.MexCult9_R1.fastq.gz HI.0810.005.Index_15.MexCult9_R1.fastq.gz > ready/MexCult9_R1.fastq.gz
 # zcat HI.1253.007.Index_1.PI432516_R1.fastq.gz HI.1253.006.Index_1.PI432516_R1.fastq.gz HI.1253.005.Index_1.PI432516_R1.fastq.gz > ready/Pueblo_R1.fastq.gz
 # zcat HI.1251.006.Index_23.PI369360_R1.fastq.gz HI.1251.005.Index_23.PI369360_R1.fastq.gz > ready/Seneca_R1.fastq.gz

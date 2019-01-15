@@ -12,9 +12,13 @@
 #SBATCH --mail-type=All
 #SBATCH --array=1-4
 zcat HI.1253.007.Index_2.PI432521_R1.fastq.gz HI.1253.006.Index_2.PI432521_R1.fastq.gz HI.1253.005.Index_2.PI432521_R1.fastq.gz > ready/Anzac_Pueblo_R1.fastq.gz
+
 zcat HI.1251.006.Index_21.PI369357_R1.fastq.gz HI.1251.005.Index_21.PI369357_R1.fastq.gz > ready/Arikara_R1.fastq.gz
+
 zcat HI.1251.006.Index_22.PI369358_R1.fastq.gz HI.1251.005.Index_22.PI369358_R1.fastq.gz > ready/Havasupai_R1.fastq.gz
+
 zcat HI.1253.007.Index_5.PI600720_R1.fastq.gz HI.1253.006.Index_5.PI600720_R1.fastq.gz HI.1253.005.Index_5.PI600720_R1.fastq.gz > ready/Hidatsa1_R1.fastq.gz
+
 # zcat HI.1251.006.Index_25.PI432505_R1.fastq.gz HI.1251.005.Index_25.PI432505_R1.fastq.gz > ready/Hopi_R1.fastq.gz
 # zcat HI.1253.007.Index_3.PI432522_R1.fastq.gz HI.1253.006.Index_3.PI432522_R1.fastq.gz HI.1253.005.Index_3.PI432522_R1.fastq.gz > ready/Laguna_Pueblo_R1.fastq.gz
 # zcat HI.1253.007.Index_4.PI600718_R1.fastq.gz HI.1253.006.Index_4.PI600718_R1.fastq.gz HI.1253.005.Index_4.PI600718_R1.fastq.gz > ready/Mandan2_R1.fastq.gz
@@ -27,6 +31,7 @@ zcat HI.1253.007.Index_5.PI600720_R1.fastq.gz HI.1253.006.Index_5.PI600720_R1.fa
 # zcat HI.1253.007.Index_1.PI432516_R1.fastq.gz HI.1253.006.Index_1.PI432516_R1.fastq.gz HI.1253.005.Index_1.PI432516_R1.fastq.gz > ready/Pueblo_R1.fastq.gz
 # zcat HI.1251.006.Index_23.PI369360_R1.fastq.gz HI.1251.005.Index_23.PI369360_R1.fastq.gz > ready/Seneca_R1.fastq.gz
 # zcat HI.1253.007.Index_27.PI432515_R1.fastq.gz HI.1253.006.Index_27.PI432515_R1.fastq.gz HI.1253.005.Index_27.PI432515_R1.fastq.gz > ready/Zuni_R1.fastq.gz
+
 # zcat HI.1253.007.Index_2.PI432521_R2.fastq.gz HI.1253.006.Index_2.PI432521_R2.fastq.gz HI.1253.005.Index_2.PI432521_R2.fastq.gz > ready/Anzac_Pueblo_R2.fastq.gz
 # zcat HI.1251.006.Index_21.PI369357_R2.fastq.gz HI.1251.005.Index_21.PI369357_R2.fastq.gz > ready/Arikara_R2.fastq.gz
 # zcat HI.1251.006.Index_22.PI369358_R2.fastq.gz HI.1251.005.Index_22.PI369358_R2.fastq.gz > ready/Havasupai_R2.fastq.gz
