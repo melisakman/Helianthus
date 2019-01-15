@@ -14,4 +14,4 @@
 
 module load bio/vcftools/0.1.15
 
-vcftools -gzvcf testy_recode_snpid_fixed.vcf --geno-r2 --ld-window-bp 10000 --out testy_recode_snpid_fixed_ldprunned_10K
+vcftools --gzvcf testy_recode_snpid_fixed.vcf --geno-r2 --ld-window-bp 10000 --out testy_recode_snpid_fixed_ldprunned_10K
