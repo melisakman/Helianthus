@@ -27,9 +27,9 @@ module load bio/vcftools/0.1.15
 ##tests above###
 
 
-vcftools --vcf testy_recode_snpid_fixed_ldprunned_2K.vcf --keep bedassle/accession_subset1.txt --max-missing-count 10 --012 --out bedassle/testy_recode_snpid_fixed_prunned_subset1_10
-vcftools --vcf testy_recode_snpid_fixed_ldprunned_2K.vcf --keep bedassle/accession_subset2.txt --max-missing-count 10 --012 --out bedassle/testy_recode_snpid_fixed_prunned_subset2_10
-vcftools --vcf testy_recode_snpid_fixed_ldprunned_2K.vcf --keep bedassle/accession_subset3.txt --max-missing-count 10 --012 --out bedassle/testy_recode_snpid_fixed_prunned_subset3_10
-vcftools --vcf testy_recode_snpid_fixed_ldprunned_2K.vcf --keep bedassle/accession_subset4.txt --max-missing-count 10 --012 --out bedassle/testy_recode_snpid_fixed_prunned_subset4_10
-vcftools --vcf testy_recode_snpid_fixed_ldprunned_2K.vcf --keep bedassle/accession_subset5.txt --max-missing-count 10 --012 --out bedassle/testy_recode_snpid_fixed_prunned_subset5_10
+vcftools --vcf testy_recode_snpid_fixed_ldprunned_1000.vcf --keep bedassle/accession_subset1.txt --max-missing-count 10 --012 --out bedassle/testy_recode_snpid_fixed_1Kprunned_subset1_10
+vcftools --vcf testy_recode_snpid_fixed_ldprunned_1000.vcf --keep bedassle/accession_subset2.txt --max-missing-count 10 --012 --out bedassle/testy_recode_snpid_fixed_1Kprunned_subset2_10
+vcftools --vcf testy_recode_snpid_fixed_ldprunned_1000.vcf --keep bedassle/accession_subset3.txt --max-missing-count 10 --012 --out bedassle/testy_recode_snpid_fixed_1Kprunned_subset3_10
+vcftools --vcf testy_recode_snpid_fixed_ldprunned_1000.vcf --keep bedassle/accession_subset4.txt --max-missing-count 10 --012 --out bedassle/testy_recode_snpid_fixed_1Kprunned_subset4_10
+vcftools --vcf testy_recode_snpid_fixed_ldprunned_1000.vcf --keep bedassle/accession_subset5.txt --max-missing-count 10 --012 --out bedassle/testy_recode_snpid_fixed_1Kprunned_subset5_10
 
