@@ -16,4 +16,4 @@
 module load bcftools/1.6
 # vcftools --gzvcf testy_recode_snpid_fixed.vcf --geno-r2 --ld-window-bp 10000 --out testy_recode_snpid_fixed_ldprunned_10K
 
-bcftools +prune -n 30000 testy_recode_snpid_fixed.vcf -Ov -o testy_recode_snpid_fixed_ldprunned_30K.vcf 
+bcftools +prune -n 1 -w 30000 testy_recode_snpid_fixed.vcf -Ov -o testy_recode_snpid_fixed_ldprunned_30K.vcf 
