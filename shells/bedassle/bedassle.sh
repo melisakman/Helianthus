@@ -28,7 +28,7 @@ module load bio/vcftools/0.1.15
 ##1##
 
 module load bcftools/1.6
-bcftools +prune -n 1 -w 1000 testy_recode_snpid_fixed.vcf -Ov -o testy_recode_snpid_fixed_ldprunned_1000.vcf 
+# bcftools +prune -n 1 -w 1000 testy_recode_snpid_fixed.vcf -Ov -o testy_recode_snpid_fixed_ldprunned_1000.vcf 
 
 ##2##
 # vcftools --vcf testy_recode_snpid_fixed_ldprunned_1000.vcf --keep bedassle/accession_subset1.txt --max-missing-count 20 --012 --out bedassle/testy_recode_snpid_fixed_1Kprunned_subset1_20
@@ -39,4 +39,8 @@ bcftools +prune -n 1 -w 1000 testy_recode_snpid_fixed.vcf -Ov -o testy_recode_sn
 
 ##3##
 cd bedassle
-python ~/git/Helianthus/shells/bedassle/fix_genotypeFile.py testy_recode_snpid_fixed_1Kprunned_subset1_20.012 testy_recode_snpid_fixed_1Kprunned_subset1_20.012.pos testy_recode_snpid_fixed_1Kprunned_subset1_20.012.indv testy_recode_snpid_fixed_1Kprunned_subset1_20_bedassle.txt
+# python ~/git/Helianthus/shells/bedassle/fix_genotypeFile.py testy_recode_snpid_fixed_1Kprunned_subset1_20.012 testy_recode_snpid_fixed_1Kprunned_subset1_20.012.pos testy_recode_snpid_fixed_1Kprunned_subset1_20.012.indv testy_recode_snpid_fixed_1Kprunned_subset1_20_bedassle.txt
+python ~/git/Helianthus/shells/bedassle/fix_genotypeFile.py testy_recode_snpid_fixed_1Kprunned_subset2_20.012 testy_recode_snpid_fixed_1Kprunned_subset2_20.012.pos testy_recode_snpid_fixed_1Kprunned_subset2_20.012.indv testy_recode_snpid_fixed_1Kprunned_subset2_20_bedassle.txt
+python ~/git/Helianthus/shells/bedassle/fix_genotypeFile.py testy_recode_snpid_fixed_1Kprunned_subset3_20.012 testy_recode_snpid_fixed_1Kprunned_subset3_20.012.pos testy_recode_snpid_fixed_1Kprunned_subset3_20.012.indv testy_recode_snpid_fixed_1Kprunned_subset3_20_bedassle.txt
+python ~/git/Helianthus/shells/bedassle/fix_genotypeFile.py testy_recode_snpid_fixed_1Kprunned_subset4_20.012 testy_recode_snpid_fixed_1Kprunned_subset4_20.012.pos testy_recode_snpid_fixed_1Kprunned_subset4_20.012.indv testy_recode_snpid_fixed_1Kprunned_subset4_20_bedassle.txt
+python ~/git/Helianthus/shells/bedassle/fix_genotypeFile.py testy_recode_snpid_fixed_1Kprunned_subset5_20.012 testy_recode_snpid_fixed_1Kprunned_subset5_20.012.pos testy_recode_snpid_fixed_1Kprunned_subset5_20.012.indv testy_recode_snpid_fixed_1Kprunned_subset5_20_bedassle.txt
