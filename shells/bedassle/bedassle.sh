@@ -1,6 +1,6 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/Arabidopsis
-#SBATCH -J filtvcf
+#SBATCH -J bedass
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio2_htc
 #SBATCH --qos=rosalind_htc2_normal
@@ -39,4 +39,4 @@ bcftools +prune -n 1 -w 1000 testy_recode_snpid_fixed.vcf -Ov -o testy_recode_sn
 
 ##3##
 cd bedassle
-python ~/git/Helianthus/shells/bedassle/fix_genotypeFile.py testy_recode_snpid_fixed_1Kprunned_subset1_20 testy_recode_snpid_fixed_1Kprunned_subset1_20.pos testy_recode_snpid_fixed_1Kprunned_subset1_20.indv testy_recode_snpid_fixed_1Kprunned_subset1_20_bedassle.txt
+python ~/git/Helianthus/shells/bedassle/fix_genotypeFile.py testy_recode_snpid_fixed_1Kprunned_subset1_20.012 testy_recode_snpid_fixed_1Kprunned_subset1_20.012.pos testy_recode_snpid_fixed_1Kprunned_subset1_20.012.indv testy_recode_snpid_fixed_1Kprunned_subset1_20_bedassle.txt
