@@ -25,11 +25,18 @@ module load bio/vcftools/0.1.15
 # vcftools --vcf testy_recode_snpid_fixed.vcf --keep bedassle/accession_subset1.txt --max-missing-count 0 --012 --out bedassle/testy_recode_snpid_fixed_subset1_0
 
 ##tests above###
+##1##
 
+module load bcftools/1.6
+bcftools +prune -n 1 -w 1000 testy_recode_snpid_fixed.vcf -Ov -o testy_recode_snpid_fixed_ldprunned_1000.vcf 
 
-vcftools --vcf testy_recode_snpid_fixed_ldprunned_1000.vcf --keep bedassle/accession_subset1.txt --max-missing-count 20 --012 --out bedassle/testy_recode_snpid_fixed_1Kprunned_subset1_20
-vcftools --vcf testy_recode_snpid_fixed_ldprunned_1000.vcf --keep bedassle/accession_subset2.txt --max-missing-count 20 --012 --out bedassle/testy_recode_snpid_fixed_1Kprunned_subset2_20
-vcftools --vcf testy_recode_snpid_fixed_ldprunned_1000.vcf --keep bedassle/accession_subset3.txt --max-missing-count 20 --012 --out bedassle/testy_recode_snpid_fixed_1Kprunned_subset3_20
-vcftools --vcf testy_recode_snpid_fixed_ldprunned_1000.vcf --keep bedassle/accession_subset4.txt --max-missing-count 20 --012 --out bedassle/testy_recode_snpid_fixed_1Kprunned_subset4_20
-vcftools --vcf testy_recode_snpid_fixed_ldprunned_1000.vcf --keep bedassle/accession_subset5.txt --max-missing-count 20 --012 --out bedassle/testy_recode_snpid_fixed_1Kprunned_subset5_20
+##2##
+# vcftools --vcf testy_recode_snpid_fixed_ldprunned_1000.vcf --keep bedassle/accession_subset1.txt --max-missing-count 20 --012 --out bedassle/testy_recode_snpid_fixed_1Kprunned_subset1_20
+# vcftools --vcf testy_recode_snpid_fixed_ldprunned_1000.vcf --keep bedassle/accession_subset2.txt --max-missing-count 20 --012 --out bedassle/testy_recode_snpid_fixed_1Kprunned_subset2_20
+# vcftools --vcf testy_recode_snpid_fixed_ldprunned_1000.vcf --keep bedassle/accession_subset3.txt --max-missing-count 20 --012 --out bedassle/testy_recode_snpid_fixed_1Kprunned_subset3_20
+# vcftools --vcf testy_recode_snpid_fixed_ldprunned_1000.vcf --keep bedassle/accession_subset4.txt --max-missing-count 20 --012 --out bedassle/testy_recode_snpid_fixed_1Kprunned_subset4_20
+# vcftools --vcf testy_recode_snpid_fixed_ldprunned_1000.vcf --keep bedassle/accession_subset5.txt --max-missing-count 20 --012 --out bedassle/testy_recode_snpid_fixed_1Kprunned_subset5_20
 
+##3##
+cd bedassle
+python ~/git/Helianthus/shells/bedassle/fix_genotypeFile.py testy_recode_snpid_fixed_1Kprunned_subset1_20 testy_recode_snpid_fixed_1Kprunned_subset1_20.pos testy_recode_snpid_fixed_1Kprunned_subset1_20.indv testy_recode_snpid_fixed_1Kprunned_subset1_20_bedassle.txt
