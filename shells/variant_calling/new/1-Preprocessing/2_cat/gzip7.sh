@@ -36,8 +36,8 @@
 # gzip Seneca_R2.fastq
 # gzip Zuni_R1.fastq
 # gzip Zuni_R2.fastq
-gzip annKS2W-35_R1.fastq
-gzip annKS2W-35_R2.fastq
+# gzip annKS2W-35_R1.fastq
+# gzip annKS2W-35_R2.fastq
 gzip annMB1W-40_R1.fastq
 gzip annMB1W-40_R2.fastq
 # gzip annMO1W-39_R1.fastq
