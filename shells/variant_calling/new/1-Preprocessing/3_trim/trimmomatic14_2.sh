@@ -1,12 +1,14 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/vector/scratch/makman/GATK_variant_calling/trim/
+#SBATCH -D /clusterfs/vector/scratch/makman/GATK_variant_calling/raw/trim/
 #SBATCH -J trim12
-#SBATCH --partition=vector
-#SBATCH --qos=vector_batch
-#SBATCH --mem=96000
-#SBATCH --time=144:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/trim14a2_update.out
-#SBATCH -e /global/home/users/makman/GATK/outs/trim14a2_update.err
+#SBATCH --account=co_rosalind
+#SBATCH --partition=savio2_htc
+#SBATCH --qos=rosalind_htc2_normal
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=4
+#SBATCH --time=480:00:00
+#SBATCH -o /global/home/users/makman/GATK/outs/trim14a2.out
+#SBATCH -e /global/home/users/makman/GATK/outs/trim14a2.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load java
@@ -65,9 +67,9 @@ module load java
 # java -jar /clusterfs/rosalind/users/makman/Trimmomatic-0.36/trimmomatic-0.36.jar PE RHA328_R1.fastq.gz RHA328_R2.fastq.gz RHA328_R1_trimmed_fastq.gz RHA328_R1_unpaired.fastq.gz RHA328_R2_trimmed_fastq.gz RHA328_R2_unpaired.fastq.gz ILLUMINACLIP:adaptersRay.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
 
 # java -jar /clusterfs/rosalind/users/makman/Trimmomatic-0.36/trimmomatic-0.36.jar PE RHA271_R1.fastq.gz RHA271_R2.fastq.gz RHA271_R1_trimmed_fastq.gz RHA271_R1_unpaired.fastq.gz RHA271_R2_trimmed_fastq.gz RHA271_R2_unpaired.fastq.gz ILLUMINACLIP:adaptersRay.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
-# java -jar /clusterfs/rosalind/users/makman/Trimmomatic-0.36/trimmomatic-0.36.jar PE HA89_R1.fastq.gz HA89_R2.fastq.gz HA89_R1_trimmed_fastq.gz HA89_R1_unpaired.fastq.gz HA89_R2_trimmed_fastq.gz HA89_R2_unpaired.fastq.gz ILLUMINACLIP:adaptersRay.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+java -jar /clusterfs/rosalind/users/makman/Trimmomatic-0.36/trimmomatic-0.36.jar PE HA89_R1.fastq.gz HA89_R2.fastq.gz HA89_R1_trimmed_fastq.gz HA89_R1_unpaired.fastq.gz HA89_R2_trimmed_fastq.gz HA89_R2_unpaired.fastq.gz ILLUMINACLIP:adaptersRay.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
 # java -jar /clusterfs/rosalind/users/makman/Trimmomatic-0.36/trimmomatic-0.36.jar PE RHA408_R1.fastq.gz RHA408_R2.fastq.gz RHA408_R1_trimmed_update.fastq.gz RHA408_R1_unpaired_update.fastq.gz RHA408_R2_trimmed_update.fastq.gz RHA408_R2_unpaired_update.fastq.gz ILLUMINACLIP:adaptersRay.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
-java -jar /clusterfs/vector/scratch/makman/Trimmomatic-0.36/trimmomatic-0.36.jar PE HA316_R1.fastq.gz HA316_R2.fastq.gz HA316_R1_trimmed_update.fastq.gz HA316_R1_unpaired_update.fastq.gz HA316_R2_trimmed_update.fastq.gz HA316_R2_unpaired_update.fastq.gz ILLUMINACLIP:adaptersRay.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+# java -jar /clusterfs/vector/scratch/makman/Trimmomatic-0.36/trimmomatic-0.36.jar PE HA316_R1.fastq.gz HA316_R2.fastq.gz HA316_R1_trimmed_update.fastq.gz HA316_R1_unpaired_update.fastq.gz HA316_R2_trimmed_update.fastq.gz HA316_R2_unpaired_update.fastq.gz ILLUMINACLIP:adaptersRay.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
 
 # java -jar /clusterfs/rosalind/users/makman/Trimmomatic-0.36/trimmomatic-0.36.jar PE HA124_R1.fastq.gz HA124_R2.fastq.gz HA124_R1_trimmed_fastq.gz HA124_R1_unpaired.fastq.gz HA124_R2_trimmed_fastq.gz HA124_R2_unpaired.fastq.gz ILLUMINACLIP:adaptersRay.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
 # java -jar /clusterfs/rosalind/users/makman/Trimmomatic-0.36/trimmomatic-0.36.jar PE RHA309_R1.fastq.gz RHA309_R2.fastq.gz RHA309_R1_trimmed_fastq.gz RHA309_R1_unpaired.fastq.gz RHA309_R2_trimmed_fastq.gz RHA309_R2_unpaired.fastq.gz ILLUMINACLIP:adaptersRay.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
