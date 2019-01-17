@@ -32,8 +32,8 @@
 # gzip Pueblo_R2.fastq
 # gzip RHA355_R1.fastq
 # gzip RHA355_R2.fastq
-gzip Seneca_R1.fastq
-gzip Seneca_R2.fastq
+# gzip Seneca_R1.fastq
+# gzip Seneca_R2.fastq
 gzip Zuni_R1.fastq
 gzip Zuni_R2.fastq
 # gzip annKS2W-35_R1.fastq

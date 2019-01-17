@@ -16,7 +16,7 @@
 # gzip Laguna_Pueblo_R2.fastq
 # gzip Mandan2_R1.fastq
 # gzip Mandan2_R2.fastq
-gzip MexCult14_R1.fastq
+# gzip MexCult14_R1.fastq
 gzip MexCult14_R2.fastq
 gzip MexCult15_R1.fastq
 gzip MexCult15_R2.fastq

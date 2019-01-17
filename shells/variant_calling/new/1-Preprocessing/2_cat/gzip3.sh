@@ -20,8 +20,8 @@
 # gzip MexCult14_R2.fastq
 # gzip MexCult15_R1.fastq
 # gzip MexCult15_R2.fastq
-gzip MexCult3_R1.fastq
-gzip MexCult3_R2.fastq
+# gzip MexCult3_R1.fastq
+# gzip MexCult3_R2.fastq
 gzip MexCult6_R1.fastq
 gzip MexCult6_R2.fastq
 # gzip MexCult7_R1.fastq

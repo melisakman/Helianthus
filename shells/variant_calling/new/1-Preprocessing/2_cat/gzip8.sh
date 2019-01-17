@@ -40,8 +40,8 @@
 # gzip annKS2W-35_R2.fastq
 # gzip annMB1W-40_R1.fastq
 # gzip annMB1W-40_R2.fastq
-gzip annMO1W-39_R1.fastq
-gzip annMO1W-39_R2.fastq
+# gzip annMO1W-39_R1.fastq
+# gzip annMO1W-39_R2.fastq
 gzip annND1W-6_R1.fastq
 gzip annND1W-6_R2.fastq
 # gzip annSK1W-Q_R1.fastq
