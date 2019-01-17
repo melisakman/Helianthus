@@ -1,13 +1,14 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/
+#SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/raw/ready/
 #SBATCH -J trim5
-#SBATCH --account=fc_blackman
-#SBATCH --partition=savio2
-#SBATCH --mem=48000
-#SBATCH --qos=savio_normal
-#SBATCH --time=48:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/trim5a.out
-#SBATCH -e /global/home/users/makman/GATK/outs/trim5a.err
+#SBATCH --account=co_rosalind
+#SBATCH --partition=savio2_htc
+#SBATCH --qos=rosalind_htc2_normal
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=4
+#SBATCH --time=480:00:00
+#SBATCH -o /global/home/users/makman/GATK/outs/trim5.out
+#SBATCH -e /global/home/users/makman/GATK/outs/trim5.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load java
@@ -29,9 +30,9 @@ module load java
 # java -jar /clusterfs/rosalind/users/makman/Trimmomatic-0.36/trimmomatic-0.36.jar PE annNM_R1.fastq.gz annNM_R2.fastq.gz annNM_R1_trimmed_fastq.gz annNM_R1_unpaired.fastq.gz annNM_R2_trimmed_fastq.gz annNM_R2_unpaired.fastq.gz ILLUMINACLIP:adaptersRay.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
 # java -jar /clusterfs/rosalind/users/makman/Trimmomatic-0.36/trimmomatic-0.36.jar PE annWY_R1.fastq.gz annWY_R2.fastq.gz annWY_R1_trimmed_fastq.gz annWY_R1_unpaired.fastq.gz annWY_R2_trimmed_fastq.gz annWY_R2_unpaired.fastq.gz ILLUMINACLIP:adaptersRay.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
 
-# java -jar /clusterfs/rosalind/users/makman/Trimmomatic-0.36/trimmomatic-0.36.jar PE annIA1W-1_R1.fastq.gz annIA1W-1_R2.fastq.gz annIA1W-1_R1_trimmed_fastq.gz annIA1W-1_R1_unpaired.fastq.gz annIA1W-1_R2_trimmed_fastq.gz annIA1W-1_R2_unpaired.fastq.gz ILLUMINACLIP:adaptersRay.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
-# java -jar /clusterfs/rosalind/users/makman/Trimmomatic-0.36/trimmomatic-0.36.jar PE annIA2W-17_R1.fastq.gz annIA2W-17_R2.fastq.gz annIA2W-17_R1_trimmed_fastq.gz annIA2W-17_R1_unpaired.fastq.gz annIA2W-17_R2_trimmed_fastq.gz annIA2W-17_R2_unpaired.fastq.gz ILLUMINACLIP:adaptersRay.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
-# java -jar /clusterfs/rosalind/users/makman/Trimmomatic-0.36/trimmomatic-0.36.jar PE annKS1W-27_R1.fastq.gz annKS1W-27_R2.fastq.gz annKS1W-27_R1_trimmed_fastq.gz annKS1W-27_R1_unpaired.fastq.gz annKS1W-27_R2_trimmed_fastq.gz annKS1W-27_R2_unpaired.fastq.gz ILLUMINACLIP:adaptersRay.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+java -jar /clusterfs/rosalind/users/makman/Trimmomatic-0.36/trimmomatic-0.36.jar PE annIA1W-1_R1.fastq.gz annIA1W-1_R2.fastq.gz annIA1W-1_R1_trimmed_fastq.gz annIA1W-1_R1_unpaired.fastq.gz annIA1W-1_R2_trimmed_fastq.gz annIA1W-1_R2_unpaired.fastq.gz ILLUMINACLIP:adaptersRay.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+java -jar /clusterfs/rosalind/users/makman/Trimmomatic-0.36/trimmomatic-0.36.jar PE annIA2W-17_R1.fastq.gz annIA2W-17_R2.fastq.gz annIA2W-17_R1_trimmed_fastq.gz annIA2W-17_R1_unpaired.fastq.gz annIA2W-17_R2_trimmed_fastq.gz annIA2W-17_R2_unpaired.fastq.gz ILLUMINACLIP:adaptersRay.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+java -jar /clusterfs/rosalind/users/makman/Trimmomatic-0.36/trimmomatic-0.36.jar PE annKS1W-27_R1.fastq.gz annKS1W-27_R2.fastq.gz annKS1W-27_R1_trimmed_fastq.gz annKS1W-27_R1_unpaired.fastq.gz annKS1W-27_R2_trimmed_fastq.gz annKS1W-27_R2_unpaired.fastq.gz ILLUMINACLIP:adaptersRay.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
 java -jar /clusterfs/rosalind/users/makman/Trimmomatic-0.36/trimmomatic-0.36.jar PE annKS2W-35_R1.fastq.gz annKS2W-35_R2.fastq.gz annKS2W-35_R1_trimmed_fastq.gz annKS2W-35_R1_unpaired.fastq.gz annKS2W-35_R2_trimmed_fastq.gz annKS2W-35_R2_unpaired.fastq.gz ILLUMINACLIP:adaptersRay.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
 
 # java -jar /clusterfs/rosalind/users/makman/Trimmomatic-0.36/trimmomatic-0.36.jar PE MB1W-40_R1.fastq.gz MB1W-40_R2.fastq.gz MB1W-40_R1_trimmed_fastq.gz MB1W-40_R1_unpaired.fastq.gz MB1W-40_R2_trimmed_fastq.gz MB1W-40_R2_unpaired.fastq.gz ILLUMINACLIP:adaptersRay.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
