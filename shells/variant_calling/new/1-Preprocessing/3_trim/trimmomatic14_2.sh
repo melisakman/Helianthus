@@ -1,6 +1,6 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/vector/scratch/makman/GATK_variant_calling/raw/trim/
-#SBATCH -J trim12
+#SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/raw/ready/
+#SBATCH -J trim14_2
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio2_htc
 #SBATCH --qos=rosalind_htc2_normal
