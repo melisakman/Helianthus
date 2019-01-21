@@ -12,6 +12,9 @@
 #SBATCH --mail-type=All
 
 
-zcat /clusterfs/vector/instrumentData/blackmanlab/Helianthus/10X/Ann1238-2Hannuus10XLib_MPS12342762_C08_7484_S1_L004_R1_001.fastq.gz /clusterfs/vector/instrumentData/blackmanlab/Helianthus/10X/Ann1238-2Hannuus10XLib_MPS12342762_C08_7506_S1_L004_R1_001.fastq.gz > ann1238_R1.fastq
+zcat Ann1238-2Hannuus10XLib_MPS12342762_C08_7484_S1_L004_R1_001.fastq.gz Ann1238-2Hannuus10XLib_MPS12342762_C08_7506_S1_L004_R1_001.fastq.gz > ann1238_R1.fastq
 
-zcat /clusterfs/vector/instrumentData/blackmanlab/Helianthus/10X/Ann1238-2Hannuus10XLib_MPS12342762_C08_7484_S1_L004_R2_001.fastq.gz /clusterfs/vector/instrumentData/blackmanlab/Helianthus/10X/Ann1238-2Hannuus10XLib_MPS12342762_C08_7506_S1_L004_R2_001.fastq.gz > ann1238_R2.fastq
+zcat Ann1238-2Hannuus10XLib_MPS12342762_C08_7484_S1_L004_R2_001.fastq.gz Ann1238-2Hannuus10XLib_MPS12342762_C08_7506_S1_L004_R2_001.fastq.gz > ann1238_R2.fastq
+
+gzip ann1238_R1.fastq
+gzip ann1238_R2.fastq
