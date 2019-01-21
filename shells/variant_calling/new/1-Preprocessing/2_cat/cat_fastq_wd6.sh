@@ -1,10 +1,11 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/raw/ready/
 #SBATCH -J catfastqwd
-#SBATCH --partition=vector
-#SBATCH --qos=vector_batch
+#SBATCH --account=co_rosalind
+#SBATCH --partition=savio2_htc
+#SBATCH --qos=rosalind_htc2_normal
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=3
+#SBATCH --cpus-per-task=4
 #SBATCH --time=480:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/cat_fastq_wd6.out
 #SBATCH -e /global/home/users/makman/GATK/outs/cat_fastq_wd6.err
