@@ -1,11 +1,10 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/trimmed/
+#SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/raw/ready/
 #SBATCH -J fixfastq3
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio
 #SBATCH --qos=rosalind_savio_normal
-#SBATCH --mem=54000
-#SBATCH --time=72:00:00
+#SBATCH --time=172:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/fix_fastq3.out
 #SBATCH -e /global/home/users/makman/GATK/outs/fix_fastq3.err
 #SBATCH --mail-user=makman@berkeley.edu
@@ -83,3 +82,12 @@ python remove_pair_info.py HA821_R2_trimmed.fastq HA821_R2_trimmed_fixed.fastq
 # python remove_pair_info.py RHA426_R1_trimmed.fastq RHA426_R1_trimmed_fixed.fastq
 # python remove_pair_info.py RHA426_R2_trimmed.fastq RHA426_R2_trimmed_fixed.fastq
 
+gzip HA442_R1_trimmed_fixed.fastq
+gzip HA442_R2_trimmed_fixed.fastq
+gzip HA821_R1_trimmed_fixed.fastq
+gzip HA821_R2_trimmed_fixed.fastq
+
+gzip HA442_R1_trimmed.fastq
+gzip HA442_R2_trimmed.fastq
+gzip HA821_R1_trimmed.fastq
+gzip HA821_R2_trimmed.fastq
