@@ -1,11 +1,10 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/ready/trimmed/
+#SBATCH -D /clusterfs/rosalind/users/makman/GATK/fastq/raw/ready/
 #SBATCH -J fixfastq1
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio
 #SBATCH --qos=rosalind_savio_normal
-#SBATCH --mem=54000
-#SBATCH --time=72:00:00
+#SBATCH --time=172:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/fix_fastq1.out
 #SBATCH -e /global/home/users/makman/GATK/outs/fix_fastq1.err
 #SBATCH --mail-user=makman@berkeley.edu
@@ -83,4 +82,13 @@ python remove_pair_info.py HA316_R2_trimmed.fastq HA316_R2_trimmed_fixed.fastq
 # python remove_pair_info.py PPN255_Manchurian_R2_trimmed_fastq PPN255_Manchurian_R2_trimmed_fixed_fastq
 # python remove_pair_info.py RHA426_R1_trimmed.fastq RHA426_R1_trimmed_fixed.fastq
 # python remove_pair_info.py RHA426_R2_trimmed.fastq RHA426_R2_trimmed_fixed.fastq
+
+gzip HA124_R1_trimmed_fixed.fastq
+gzip HA124_R2_trimmed_fixed.fastq
+gzip HA316_R1_trimmed_fixed.fastq
+gzip HA316_R2_trimmed_fixed.fastq
+gzip HA124_R1_trimmed.fastq
+gzip HA124_R2_trimmed.fastq
+gzip HA316_R1_trimmed.fastq
+gzip HA316_R2_trimmed.fastq
 
