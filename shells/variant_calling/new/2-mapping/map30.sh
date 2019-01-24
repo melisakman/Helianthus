@@ -1,13 +1,13 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/sams/
-#SBATCH -J map_26
+#SBATCH -J map_30
 #SBATCH --account=fc_blackman
 #SBATCH --partition=savio2
 #SBATCH --mem=48000
 #SBATCH --qos=savio_normal
 #SBATCH --time=72:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/map26.out
-#SBATCH -e /global/home/users/makman/GATK/outs/map26.err
+#SBATCH -o /global/home/users/makman/GATK/outs/map30.out
+#SBATCH -e /global/home/users/makman/GATK/outs/map30.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
@@ -61,15 +61,15 @@
 # /clusterfs/rosalind/users/makman/NextGenMap-0.5.2/bin/ngm-0.5.2/ngm -r /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta -p -1 ../fastq/raw/ready/annKS2W-35_R1_trimmed.fastq.gz -2 ../fastq/raw/ready/annKS2W-35_R1_trimmed.fastq.gz -o annKS2W-35.sam
 # /clusterfs/rosalind/users/makman/NextGenMap-0.5.2/bin/ngm-0.5.2/ngm -r /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta -p -1 ../fastq/raw/ready/annKS_R1_trimmed.fastq.gz -2 ../fastq/raw/ready/annKS_R1_trimmed.fastq.gz -o annKS.sam
 # /clusterfs/rosalind/users/makman/NextGenMap-0.5.2/bin/ngm-0.5.2/ngm -r /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta -p -1 ../fastq/raw/ready/annMB1W-40_R1_trimmed.fastq.gz -2 ../fastq/raw/ready/annMB1W-40_R1_trimmed.fastq.gz -o annMB1W-40.sam
-/clusterfs/rosalind/users/makman/NextGenMap-0.5.2/bin/ngm-0.5.2/ngm -r /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta -p -1 ../fastq/raw/ready/annMO1W-39_R1_trimmed.fastq.gz -2 ../fastq/raw/ready/annMO1W-39_R1_trimmed.fastq.gz -o annMO1W-39.sam
-/clusterfs/rosalind/users/makman/NextGenMap-0.5.2/bin/ngm-0.5.2/ngm -r /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta -p -1 ../fastq/raw/ready/annMex_A1516_R1_trimmed.fastq.gz -2 ../fastq/raw/ready/annMex_A1516_R1_trimmed.fastq.gz -o annMex_A1516.sam
+# /clusterfs/rosalind/users/makman/NextGenMap-0.5.2/bin/ngm-0.5.2/ngm -r /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta -p -1 ../fastq/raw/ready/annMO1W-39_R1_trimmed.fastq.gz -2 ../fastq/raw/ready/annMO1W-39_R1_trimmed.fastq.gz -o annMO1W-39.sam
+# /clusterfs/rosalind/users/makman/NextGenMap-0.5.2/bin/ngm-0.5.2/ngm -r /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta -p -1 ../fastq/raw/ready/annMex_A1516_R1_trimmed.fastq.gz -2 ../fastq/raw/ready/annMex_A1516_R1_trimmed.fastq.gz -o annMex_A1516.sam
 # /clusterfs/rosalind/users/makman/NextGenMap-0.5.2/bin/ngm-0.5.2/ngm -r /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta -p -1 ../fastq/raw/ready/annMex_A1517_R1_trimmed.fastq.gz -2 ../fastq/raw/ready/annMex_A1517_R1_trimmed.fastq.gz -o annMex_A1517.sam
 # /clusterfs/rosalind/users/makman/NextGenMap-0.5.2/bin/ngm-0.5.2/ngm -r /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta -p -1 ../fastq/raw/ready/annMex_A1572_R1_trimmed.fastq.gz -2 ../fastq/raw/ready/annMex_A1572_R1_trimmed.fastq.gz -o annMex_A1572.sam
 # /clusterfs/rosalind/users/makman/NextGenMap-0.5.2/bin/ngm-0.5.2/ngm -r /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta -p -1 ../fastq/raw/ready/annMex_A1574_R1_trimmed.fastq.gz -2 ../fastq/raw/ready/annMex_A1574_R1_trimmed.fastq.gz -o annMex_A1574.sam
 # /clusterfs/rosalind/users/makman/NextGenMap-0.5.2/bin/ngm-0.5.2/ngm -r /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta -p -1 ../fastq/raw/ready/annMex_Ann261_R1_trimmed.fastq.gz -2 ../fastq/raw/ready/annMex_Ann261_R1_trimmed.fastq.gz -o annMex_Ann261.sam
 # /clusterfs/rosalind/users/makman/NextGenMap-0.5.2/bin/ngm-0.5.2/ngm -r /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta -p -1 ../fastq/raw/ready/annND1W-6_R1_trimmed.fastq.gz -2 ../fastq/raw/ready/annND1W-6_R1_trimmed.fastq.gz -o annND1W-6.sam
 # /clusterfs/rosalind/users/makman/NextGenMap-0.5.2/bin/ngm-0.5.2/ngm -r /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta -p -1 ../fastq/raw/ready/annNM_R1_trimmed.fastq.gz -2 ../fastq/raw/ready/annNM_R1_trimmed.fastq.gz -o annNM.sam
-# /clusterfs/rosalind/users/makman/NextGenMap-0.5.2/bin/ngm-0.5.2/ngm -r /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta -p -1 ../fastq/raw/ready/annSD1W-35_R1_trimmed.fastq.gz -2 ../fastq/raw/ready/annSD1W-35_R1_trimmed.fastq.gz -o annSD1W-35.sam
-# /clusterfs/rosalind/users/makman/NextGenMap-0.5.2/bin/ngm-0.5.2/ngm -r /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta -p -1 ../fastq/raw/ready/annSD2W-18_R1_trimmed.fastq.gz -2 ../fastq/raw/ready/annSD2W-18_R1_trimmed.fastq.gz -o annSD2W-18.sam
+/clusterfs/rosalind/users/makman/NextGenMap-0.5.2/bin/ngm-0.5.2/ngm -r /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta -p -1 ../fastq/raw/ready/annSD1W-35_R1_trimmed.fastq.gz -2 ../fastq/raw/ready/annSD1W-35_R1_trimmed.fastq.gz -o annSD1W-35.sam
+/clusterfs/rosalind/users/makman/NextGenMap-0.5.2/bin/ngm-0.5.2/ngm -r /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta -p -1 ../fastq/raw/ready/annSD2W-18_R1_trimmed.fastq.gz -2 ../fastq/raw/ready/annSD2W-18_R1_trimmed.fastq.gz -o annSD2W-18.sam
 # /clusterfs/rosalind/users/makman/NextGenMap-0.5.2/bin/ngm-0.5.2/ngm -r /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta -p -1 ../fastq/raw/ready/annSK1W-Q_R1_trimmed.fastq.gz -2 ../fastq/raw/ready/annSK1W-Q_R1_trimmed.fastq.gz -o annSK1W-Q.sam
 # /clusterfs/rosalind/users/makman/NextGenMap-0.5.2/bin/ngm-0.5.2/ngm -r /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta -p -1 ../fastq/raw/ready/annWY_R1_trimmed.fastq.gz -2 ../fastq/raw/ready/annWY_R1_trimmed.fastq.gz -o annWY.sam
