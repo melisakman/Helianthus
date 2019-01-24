@@ -10,4 +10,4 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
-/clusterfs/rosalind/users/makman/NextGenMap-0.5.2/bin/ngm-0.5.2 -r HanXRQr2.0-SUNRISE-2.1.genome.fasta
+/clusterfs/rosalind/users/makman/NextGenMap-0.5.2/bin/ngm-0.5.2/ngm -r HanXRQr2.0-SUNRISE-2.1.genome.fasta
