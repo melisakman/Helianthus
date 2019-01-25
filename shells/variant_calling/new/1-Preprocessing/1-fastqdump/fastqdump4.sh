@@ -15,7 +15,8 @@ echo '/global/home/users/makman/ncbi/public/root = "/clusterfs/rosalind/users/ma
 echo '/global/home/users/makman/ncbi/public/sra = "/clusterfs/rosalind/users/makman/ncbi/public/sra"' > $HOME/.ncbi/user-settings.mkfg
 # /clusterfs/rosalind/users/makman/sratoolkit.2.9.2-centos_linux64/bin/fastq-dump -I --split-files SRR5140365
 # /clusterfs/rosalind/users/makman/sratoolkit.2.9.2-centos_linux64/bin/fastq-dump -I --split-files SRR5140369
-/clusterfs/rosalind/users/makman/sratoolkit.2.9.2-centos_linux64/bin/fastq-dump -I --split-files SRR5140394
+# /clusterfs/rosalind/users/makman/sratoolkit.2.9.2-centos_linux64/bin/fastq-dump -I --split-files SRR5140394
+gzip SRR5140394*
 /clusterfs/rosalind/users/makman/sratoolkit.2.9.2-centos_linux64/bin/fastq-dump -I --split-files SRR5140390
 # /clusterfs/rosalind/users/makman/sratoolkit.2.9.2-centos_linux64/bin/fastq-dump -I --split-files SRR5140342
 # /clusterfs/rosalind/users/makman/sratoolkit.2.9.2-centos_linux64/bin/fastq-dump -I --split-files SRR5140336
@@ -24,3 +25,4 @@ echo '/global/home/users/makman/ncbi/public/sra = "/clusterfs/rosalind/users/mak
 # /clusterfs/rosalind/users/makman/sratoolkit.2.9.2-centos_linux64/bin/fastq-dump -I --split-files SRR5140385
 
 
+gzip SRR5140390*
