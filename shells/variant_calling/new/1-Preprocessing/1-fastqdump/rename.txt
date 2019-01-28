@@ -1,0 +1,10 @@
+mv SRR5140369_1.fastq.gz ../raw/RHA397
+mv SRR5140365_1.fastq.gz ../raw/HA207
+mv SRR5140394_1.fastq.gz ../raw/RHA310
+mv SRR5140390_1.fastq.gz ../raw/RHA354
+mv SRR5140342_1.fastq.gz ../raw/HA323
+mv SRR5140336_1.fastq.gz ../raw/HA380
+mv SRR5140329_1.fastq.gz ../raw/HA314
+mv SRR5140367_1.fastq.gz ../raw/RHA324
+mv SRR5140385_1.fastq.gz ../raw/HA259
+mv SRR5140358_1.fastq.gz ../raw/RHA362
