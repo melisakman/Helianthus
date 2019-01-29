@@ -12,7 +12,7 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
-/clusterfs/rosalind/users/makman/NextGenMap-0.5.2/bin/ngm-0.5.2/ngm -r /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta -p -1 ../fastq/raw/ready/ann01-cwIA_trimmed_R1.fastq.gz -2 ../fastq/raw/ready/ann01-cwIA_trimmed_R2.fastq.gz -o ann01-cwIA.sam
+# /clusterfs/rosalind/users/makman/NextGenMap-0.5.2/bin/ngm-0.5.2/ngm -r /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta -p -1 ../fastq/raw/ready/ann01-cwIA_trimmed_R1.fastq.gz -2 ../fastq/raw/ready/ann01-cwIA_trimmed_R2.fastq.gz -o ann01-cwIA.sam
 /clusterfs/rosalind/users/makman/NextGenMap-0.5.2/bin/ngm-0.5.2/ngm -r /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta -p -1 ../fastq/raw/ready/ann04-nwAR_trimmed_R1.fastq.gz -2 ../fastq/raw/ready/ann04-nwAR_trimmed_R2.fastq.gz -o ann04-nwAR.sam
 # /clusterfs/rosalind/users/makman/NextGenMap-0.5.2/bin/ngm-0.5.2/ngm -r /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta -p -1 ../fastq/raw/ready/ann05-ccNM_trimmed_R1.fastq.gz -2 ../fastq/raw/ready/ann05-ccNM_trimmed_R2.fastq.gz -o ann05-ccNM.sam
 # /clusterfs/rosalind/users/makman/NextGenMap-0.5.2/bin/ngm-0.5.2/ngm -r /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta -p -1 ../fastq/raw/ready/ann10-ccIL_trimmed_R1.fastq.gz -2 ../fastq/raw/ready/ann10-ccIL_trimmed_R2.fastq.gz -o ann10-ccIL.sam
