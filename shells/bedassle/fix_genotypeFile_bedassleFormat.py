@@ -16,33 +16,36 @@ file4 = open(InputFile4, "r")
 out1 = open(OutputFile1, "w")
 out2 = open(OutputFile2, "w")
 
+no_snps = 0
 for line in file2:
+	no_snps +=1
 	split = line.split("\t")
 	chr = split[0]
 	pos = split[1][:-1]
 	snp_no = str(chr) + "_" + str(pos)
 	out.write(snp_no + "\t" )
 out.write("\n")	
+no_snps = no_snps + 1
+dict1 ={}
+list = []
+for i in range(0, no_snps):
+	list.append(0)
+	
+for i in range(0,15):
+	dict1(i) = list
 
-clusters = {}
+dict2 = {}
 for line in file4:
 	split4 = line.split("\t")
 	accession = split4[0]
 	cluster = split4[1]
-	clusters(cluster) = accession
+	dict2(accession) = cluster
 
-ind = []
-for line in file3:
-	ind.append(line[:-1])
 
-count = 0
-big_dict = {}
 for line in file1:
 	count +=1
 	name_of_indi_dict = str(ind[count]) 
-	split1 = line.split("\t")
-	for snp in range(0,len(split1):
-		big_dict(name_of_indi_dict) = int(split1[snp])
+	
 
 
 for key in clusters:
