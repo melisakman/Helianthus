@@ -5,7 +5,7 @@
 #SBATCH --partition=savio
 #SBATCH --qos=rosalind_savio_normal
 #SBATCH --time=172:00:00
-#SBATCH -o /global/scratch/makman/GATK/sams//global/home/users/makman/GATK/outs/map43.out
+#SBATCH -o /global/home/users/makman/GATK/outs/map43.out
 #SBATCH -e /global/home/users/makman/GATK/outs/map43.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All

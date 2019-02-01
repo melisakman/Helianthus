@@ -7,7 +7,7 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=6
 #SBATCH --time=480:00:00
-#SBATCH -o /global/scratch/makman/GATK/sams//global/home/users/makman/GATK/outs/map36.out
+#SBATCH -o /global/home/users/makman/GATK/outs/map36.out
 #SBATCH -e /global/home/users/makman/GATK/outs/map36.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All

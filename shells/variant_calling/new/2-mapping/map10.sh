@@ -2,12 +2,10 @@
 #SBATCH -D /clusterfs/rosalind/users/makman/GATK/sams/
 #SBATCH -J map_10
 #SBATCH --account=co_rosalind
-#SBATCH --partition=savio2_htc
-#SBATCH --qos=rosalind_htc2_normal
-#SBATCH --ntasks=1
-#SBATCH --cpus-per-task=6
-#SBATCH --time=480:00:00
-#SBATCH -o /global/scratch/makman/GATK/sams//global/home/users/makman/GATK/outs/map10.out
+#SBATCH --partition=savio
+#SBATCH --qos=rosalind_savio_normal
+#SBATCH --time=172:00:00
+#SBATCH -o /global/home/users/makman/GATK/outs/map10.out
 #SBATCH -e /global/home/users/makman/GATK/outs/map10.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
