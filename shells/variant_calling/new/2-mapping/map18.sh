@@ -5,7 +5,7 @@
 #SBATCH --partition=savio2_htc
 #SBATCH --qos=rosalind_htc2_normal
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=6
+#SBATCH --cpus-per-task=10
 #SBATCH --time=480:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/map18.out
 #SBATCH -e /global/home/users/makman/GATK/outs/map18.err
