@@ -17,3 +17,4 @@
 /clusterfs/rosalind/users/makman/NextGenMap-0.5.2/bin/ngm-0.5.2/ngm -r /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta -p -1 ../fastq/raw/ready/Se_purp_R1_trimmed.fastq.gz -2 ../fastq/raw/ready/Se_purp_R2_trimmed.fastq.gz -o /global/scratch/makman/GATK/sams/Se_purp.sam
 # /clusterfs/rosalind/users/makman/NextGenMap-0.5.2/bin/ngm-0.5.2/ngm -r /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta -p -1 ../fastq/raw/ready/Se_strip_R1_trimmed.fastq.gz -2 ../fastq/raw/ready/Se_strip_R2_trimmed.fastq.gz -o /global/scratch/makman/GATK/sams/Se_strip.sam
 # /clusterfs/rosalind/users/makman/NextGenMap-0.5.2/bin/ngm-0.5.2/ngm -r /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta -p -1 ../fastq/raw/ready/Se137749_R1_trimmed.fastq.gz -2 ../fastq/raw/ready/Se137749_R2_trimmed.fastq.gz -o /global/scratch/makman/GATK/sams/Se137749.sam
+
