@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/rosalind/users/makman/GATK/sams/
+#SBATCH -D /global/scratch/makman/GATK/sams/
 #SBATCH -J samsort8
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio2_htc
