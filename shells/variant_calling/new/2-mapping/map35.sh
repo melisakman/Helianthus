@@ -10,4 +10,4 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
-/clusterfs/rosalind/users/makman/NextGenMap-0.5.2/bin/ngm-0.5.2/ngm -r /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta -p -1 ../fastq/raw/ready/annIA2W-17_R1_trimmed.fastq.gz -2 ../fastq/raw/ready/annIA2W-17_R2_trimmed.fastq.gz -o annIA2W-17.sam
+/clusterfs/rosalind/users/makman/NextGenMap-0.5.2/bin/ngm-0.5.2/ngm -r /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta -p -1 ../fastq/raw/ready/annIA2W-17_R1_trimmed.fastq.gz -2 ../fastq/raw/ready/annIA2W-17_R2_trimmed.fastq.gz -o /global/scratch/makman/GATK/sams/annIA2W-17.sam
