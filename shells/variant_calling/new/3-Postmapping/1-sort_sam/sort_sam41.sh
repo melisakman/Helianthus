@@ -1,11 +1,12 @@
 #!/bin/bash 
 #SBATCH -D /global/scratch/makman/GATK/sams/
 #SBATCH -J samsort41
-#SBATCH --account=fc_blackman
-#SBATCH --partition=savio2
-#SBATCH --mem=54000
-#SBATCH --qos=savio_normal
-#SBATCH --time=72:00:00
+#SBATCH --account=co_rosalind
+#SBATCH --partition=savio2_htc
+#SBATCH --qos=rosalind_htc2_normal
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=5
+#SBATCH --time=600:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/sam_sort41.out
 #SBATCH -e /global/home/users/makman/GATK/outs/sam_sort41.err
 #SBATCH --mail-user=makman@berkeley.edu
