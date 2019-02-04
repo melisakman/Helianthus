@@ -2,8 +2,7 @@
 #SBATCH -D /global/scratch/makman/GATK/sams/
 #SBATCH -J samsort21
 #SBATCH --account=fc_blackman
-#SBATCH --partition=savio2_knl
-#SBATCH --mem=188000
+#SBATCH --partition=savio3_bigmem
 #SBATCH --qos=savio_normal
 #SBATCH --time=72:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/sam_sort21.out
@@ -54,7 +53,7 @@ module load java
 # java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx54G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar SortSam INPUT=Zuni.sam OUTPUT=Zuni_sorted.bam SORT_ORDER=coordinate 
 # java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx54G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar SortSam INPUT=ann06-seWY.sam OUTPUT=ann06-seWY_sorted.bam SORT_ORDER=coordinate 
 # java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx54G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar SortSam INPUT=ann08-ceTN.sam OUTPUT=ann08-ceTN_sorted.bam SORT_ORDER=coordinate 
-java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx230G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar SortSam INPUT=ann28-swSK.sam OUTPUT=ann28-swSK_sorted.bam SORT_ORDER=coordinate 
+java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx370G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar SortSam INPUT=ann28-swSK.sam OUTPUT=ann28-swSK_sorted.bam SORT_ORDER=coordinate 
 # java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx54G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar SortSam INPUT=ann34-cwKS.sam OUTPUT=ann34-cwKS_sorted.bam SORT_ORDER=coordinate 
 # java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx54G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar SortSam INPUT=ann39-ncNE.sam OUTPUT=ann39-ncNE_sorted.bam SORT_ORDER=coordinate 
 # java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx54G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar SortSam INPUT=annIA.sam OUTPUT=annIA_sorted.bam SORT_ORDER=coordinate 
