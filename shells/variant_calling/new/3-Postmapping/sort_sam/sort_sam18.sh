@@ -4,7 +4,7 @@
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio2_htc
 #SBATCH --qos=rosalind_htc2_normal
-#SBATCH --mem=84000
+#SBATCH --mem=128000
 #SBATCH --time=600:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/sam_sort18.out
 #SBATCH -e /global/home/users/makman/GATK/outs/sam_sort18.err
@@ -48,7 +48,7 @@ module load java
 # java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx54G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar SortSam INPUT=RHA408.sam OUTPUT=RHA408_sorted.bam SORT_ORDER=coordinate 
 # java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx54G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar SortSam INPUT=RHA426.sam OUTPUT=RHA426_sorted.bam SORT_ORDER=coordinate 
 # java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx54G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar SortSam INPUT=RHA857.sam OUTPUT=RHA857_sorted.bam SORT_ORDER=coordinate 
-java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx84G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar SortSam INPUT=SF33.sam OUTPUT=SF33_sorted.bam SORT_ORDER=coordinate 
+java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx128G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar SortSam INPUT=SF33.sam OUTPUT=SF33_sorted.bam SORT_ORDER=coordinate 
 # java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx54G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar SortSam INPUT=Seneca.sam OUTPUT=Seneca_sorted.bam SORT_ORDER=coordinate 
 # java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx54G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar SortSam INPUT=VIR847.sam OUTPUT=VIR847_sorted.bam SORT_ORDER=coordinate 
 # java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx54G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar SortSam INPUT=Zuni.sam OUTPUT=Zuni_sorted.bam SORT_ORDER=coordinate 
