@@ -1,10 +1,11 @@
 #!/bin/bash 
 #SBATCH -D /global/scratch/makman/GATK/sams/
 #SBATCH -J samsort18
-#SBATCH --partition=vector
-#SBATCH --qos=vector_batch
-#SBATCH --mem=196000
-#SBATCH --time=480:00:00
+#SBATCH --account=fc_blackman
+#SBATCH --partition=savio2_knl
+#SBATCH --mem=188000
+#SBATCH --qos=savio_normal
+#SBATCH --time=72:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/sam_sort18.out
 #SBATCH -e /global/home/users/makman/GATK/outs/sam_sort18.err
 #SBATCH --mail-user=makman@berkeley.edu
@@ -47,7 +48,7 @@ module load java
 # java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx54G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar SortSam INPUT=RHA408.sam OUTPUT=RHA408_sorted.bam SORT_ORDER=coordinate 
 # java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx54G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar SortSam INPUT=RHA426.sam OUTPUT=RHA426_sorted.bam SORT_ORDER=coordinate 
 # java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx54G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar SortSam INPUT=RHA857.sam OUTPUT=RHA857_sorted.bam SORT_ORDER=coordinate 
-java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx196G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar SortSam INPUT=SF33.sam OUTPUT=SF33_sorted.bam SORT_ORDER=coordinate 
+java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx188G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar SortSam INPUT=SF33.sam OUTPUT=SF33_sorted.bam SORT_ORDER=coordinate 
 # java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx54G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar SortSam INPUT=Seneca.sam OUTPUT=Seneca_sorted.bam SORT_ORDER=coordinate 
 # java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx54G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar SortSam INPUT=VIR847.sam OUTPUT=VIR847_sorted.bam SORT_ORDER=coordinate 
 # java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx54G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar SortSam INPUT=Zuni.sam OUTPUT=Zuni_sorted.bam SORT_ORDER=coordinate 
