@@ -1,12 +1,11 @@
 #!/bin/bash 
 #SBATCH -D /global/scratch/makman/GATK/sams/
 #SBATCH -J markdu22
-#SBATCH --account=co_rosalind
-#SBATCH --partition=savio2_htc
-#SBATCH --qos=rosalind_htc2_normal
-#SBATCH --ntasks=1
-#SBATCH --cpus-per-task=6
-#SBATCH --time=480:00:003
+#SBATCH --account=fc_blackman
+#SBATCH --partition=savio2
+#SBATCH --mem=64000
+#SBATCH --qos=savio_normal
+#SBATCH --time=72:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/mark_dups22.out
 #SBATCH -e /global/home/users/makman/GATK/outs/mark_dups22.err
 #SBATCH --mail-user=makman@berkeley.edu
