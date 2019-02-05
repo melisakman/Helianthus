@@ -1,14 +1,14 @@
 #!/bin/bash 
 #SBATCH -D /global/scratch/makman/GATK/sams/
-#SBATCH -J markdu10
+#SBATCH -J markdu12
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio2_htc
 #SBATCH --qos=rosalind_htc2_normal
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=6
 #SBATCH --time=480:00:003
-#SBATCH -o /global/home/users/makman/GATK/outs/mark_dups10.out
-#SBATCH -e /global/home/users/makman/GATK/outs/mark_dups10.err
+#SBATCH -o /global/home/users/makman/GATK/outs/mark_dups12.out
+#SBATCH -e /global/home/users/makman/GATK/outs/mark_dups12.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load picard/2.9.0 
@@ -23,9 +23,9 @@ module load java
 # java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar MarkDuplicates INPUT=annMex_A151_sorted.bam OUTPUT=annMex_A151_sorted_markdup.bam METRICS_FILE=metrics_annMex_A151.txt
 # java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar MarkDuplicates INPUT=annMex_A151_sorted.bam OUTPUT=annMex_A151_sorted_markdup.bam METRICS_FILE=metrics_annMex_A151.txt
 # java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar MarkDuplicates INPUT=annMex_A157_sorted.bam OUTPUT=annMex_A157_sorted_markdup.bam METRICS_FILE=metrics_annMex_A157.txt
-java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar MarkDuplicates INPUT=annMex_A1574_sorted.bam OUTPUT=annMex_A1574_sorted_markdup.bam METRICS_FILE=metrics_annMex_A1574.txt
+# java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar MarkDuplicates INPUT=annMex_A157_sorted.bam OUTPUT=annMex_A157_sorted_markdup.bam METRICS_FILE=metrics_annMex_A157.txt
 # java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar MarkDuplicates INPUT=annMex_Ann2_sorted.bam OUTPUT=annMex_Ann2_sorted_markdup.bam METRICS_FILE=metrics_annMex_Ann2.txt
-# java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar MarkDuplicates INPUT=annMO1W-39_sorted.bam OUTPUT=annMO1W-39_sorted_markdup.bam METRICS_FILE=metrics_annMO1W-39.txt
+java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar MarkDuplicates INPUT=annMO1W-39_sorted.bam OUTPUT=annMO1W-39_sorted_markdup.bam METRICS_FILE=metrics_annMO1W-39.txt
 # java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar MarkDuplicates INPUT=annND1W-6_sorted.bam OUTPUT=annND1W-6_sorted_markdup.bam METRICS_FILE=metrics_annND1W-6.txt
 # java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar MarkDuplicates INPUT=annSD1W-35_sorted.bam OUTPUT=annSD1W-35_sorted_markdup.bam METRICS_FILE=metrics_annSD1W-35.txt
 # java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar MarkDuplicates INPUT=annSD2W-18_sorted.bam OUTPUT=annSD2W-18_sorted_markdup.bam METRICS_FILE=metrics_annSD2W-18.txt
