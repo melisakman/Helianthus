@@ -1,11 +1,12 @@
 #!/bin/bash 
 #SBATCH -D /global/scratch/makman/GATK/sams/
 #SBATCH -J markdu22
-#SBATCH --account=fc_blackman
-#SBATCH --partition=savio2
-#SBATCH --mem=64000
-#SBATCH --qos=savio_normal
-#SBATCH --time=72:00:00
+#SBATCH --account=co_rosalind
+#SBATCH --partition=savio2_htc
+#SBATCH --qos=rosalind_htc2_normal
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=8
+#SBATCH --time=480:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/mark_dups22.out
 #SBATCH -e /global/home/users/makman/GATK/outs/mark_dups22.err
 #SBATCH --mail-user=makman@berkeley.edu
@@ -34,7 +35,7 @@ module load java
 # java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar MarkDuplicates INPUT=HA316_sorted.bam OUTPUT=HA316_sorted_markdup.bam METRICS_FILE=metrics_HA316.txt
 # java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar MarkDuplicates INPUT=HA404_sorted.bam OUTPUT=HA404_sorted_markdup.bam METRICS_FILE=metrics_HA404.txt
 # java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar MarkDuplicates INPUT=HA442_sorted.bam OUTPUT=HA442_sorted_markdup.bam METRICS_FILE=metrics_HA442.txt
-java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar MarkDuplicates INPUT=HA89_sorted.bam OUTPUT=HA89_sorted_markdup.bam METRICS_FILE=metrics_HA89.txt
+java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx96G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar MarkDuplicates INPUT=HA89_sorted.bam OUTPUT=HA89_sorted_markdup.bam METRICS_FILE=metrics_HA89.txt
 # java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar MarkDuplicates INPUT=Havasupai_sorted.bam OUTPUT=Havasupai_sorted_markdup.bam METRICS_FILE=metrics_Havasupai.txt
 # java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar MarkDuplicates INPUT=Hidatsa1_sorted.bam OUTPUT=Hidatsa1_sorted_markdup.bam METRICS_FILE=metrics_Hidatsa1.txt
 # java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar MarkDuplicates INPUT=Hopi_sorted.bam OUTPUT=Hopi_sorted_markdup.bam METRICS_FILE=metrics_Hopi.txt
