@@ -13,7 +13,7 @@
 #SBATCH --mail-type=All
 module load picard/2.9.0 
 module load java
-
+ulimit -c unlimited
 # java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar MarkDuplicates INPUT=ann06-seWY_sorted.bam OUTPUT=ann06-seWY_sorted_markdup.bam METRICS_FILE=metrics_ann06-seWY.txt
 # java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar MarkDuplicates INPUT=ann08-ceTN_sorted.bam OUTPUT=ann08-ceTN_sorted_markdup.bam METRICS_FILE=metrics_ann08-ceTN.txt
 # java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx64G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar MarkDuplicates INPUT=ann34-cwKS_sorted.bam OUTPUT=ann34-cwKS_sorted_markdup.bam METRICS_FILE=metrics_ann34-cwKS.txt
