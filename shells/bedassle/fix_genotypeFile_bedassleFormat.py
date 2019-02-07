@@ -25,33 +25,49 @@ for line in file2:
 	snp_no = str(chr) + "_" + str(pos)
 	out.write(snp_no + "\t" )
 out.write("\n")	
-no_snps = no_snps + 1
-dict1 ={}
-list = []
-for i in range(0, no_snps):
-	list.append(0)
-	
-for i in range(0,15):
-	dict1(i) = list
 
-dict2 = {}
+no_snps = no_snps
+list_empty_genotype = []
+for i in range(0, no_snps):
+	list_empty_genotype.append(0)
+
+dict_cluster ={}
+for i in range(1,15):
+	dict_cluster(i) = list_empty_genotype
+
+dict_acc_cluster = {}
 for line in file4:
 	split4 = line.split("\t")
 	accession = split4[0]
 	cluster = split4[1]
-	dict2(accession) = cluster
+	dict_acc_cluster(accession) = cluster
 
-
+list_accession = []
 for line in file1:
+	list_accession.append(line[:-1])
+
+list_genotype = []
+for line in file1:
+	split = line.split("\t")
+	list = []
+	for i in split:
+		list.append(i)		
+	list_genotype.append(list)
+
+	
+count = -1
+for i in file3:
 	count +=1
-	name_of_indi_dict = str(ind[count]) 
-	
-
-
-for key in clusters:
-
-	
-	
+	split = i.split("\n")
+	individual = split[0]
+	accession = list_accession[i]
+	clusterID = dict_acc_cluster(individual)
+	for i in range(0,no_snps):
+		dict_cluster(clusterID)[i] = dict_cluster(clusterID)[i] + list_genotype[count][i] 
+		
+for k, v in dict_cluster.items():
+    out1.write(str(k) + '\t' + "%s\t" % item for item in v:
+      
 	snp1	snp2	snp3
 ind1	total_alleles	0	2	-1
 ind2	total_alleles	1	0	-1
