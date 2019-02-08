@@ -13,6 +13,6 @@
 #SBATCH --mail-type=All
 module load java
 
-module load samtools/1.8
+module load picard/2.9.0 
 
-samtools faidx /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta 
+java -jar CreateSequenceDictionary.jar R= /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta O= /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.dict
