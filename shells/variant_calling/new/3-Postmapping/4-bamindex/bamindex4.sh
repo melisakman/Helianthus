@@ -11,7 +11,7 @@
 #SBATCH -e /global/home/users/makman/GATK/outs/bamindex4.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-module load samtools
+module load samtools/1.8
 
 # samtools index ann06-seWY_sorted_markdup_readGroup.bam ann06-seWY_sorted_markdup_readGroup.bai
 # samtools index ann08-ceTN_sorted_markdup_readGroup.bam ann08-ceTN_sorted_markdup_readGroup.bai
