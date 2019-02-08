@@ -13,6 +13,6 @@
 #SBATCH --mail-type=All
 module load java
 
-module load samtools
+module load samtools/1.8
 
 samtools faidx /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta 
