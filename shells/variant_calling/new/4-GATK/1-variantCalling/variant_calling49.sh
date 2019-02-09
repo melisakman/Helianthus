@@ -5,7 +5,7 @@
 #SBATCH --partition=savio2
 #SBATCH --mem=64000
 #SBATCH --qos=savio_normal
-#SBATCH --time=172:00:00
+#SBATCH --time=72:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/variant_cal49.out
 #SBATCH -e /global/home/users/makman/GATK/outs/variant_cal49.err
 #SBATCH --mail-user=makman@berkeley.edu
