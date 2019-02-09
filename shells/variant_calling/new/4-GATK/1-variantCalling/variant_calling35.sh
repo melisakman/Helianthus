@@ -1,12 +1,11 @@
 #!/bin/bash 
 #SBATCH -D /global/scratch/makman/GATK/sams/
 #SBATCH -J varcal35
-#SBATCH --account=co_rosalind
-#SBATCH --partition=savio2_htc
-#SBATCH --qos=rosalind_htc2_normal
-#SBATCH --ntasks=1
-#SBATCH --cpus-per-task=6
-#SBATCH --time=170:00:00
+#SBATCH --account=fc_blackman
+#SBATCH --partition=savio2
+#SBATCH --mem=64000
+#SBATCH --qos=savio_normal
+#SBATCH --time=72:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/variant_cal35.out
 #SBATCH -e /global/home/users/makman/GATK/outs/variant_cal35.err
 #SBATCH --mail-user=makman@berkeley.edu
