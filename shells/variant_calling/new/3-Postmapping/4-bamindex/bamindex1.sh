@@ -13,16 +13,16 @@
 #SBATCH --mail-type=All
 module load samtools/1.8
 
-samtools index ann06-seWY_sorted_markdup_readGroup.bam ann06-seWY_sorted_markdup_readGroup.bai
-samtools index ann08-ceTN_sorted_markdup_readGroup.bam ann08-ceTN_sorted_markdup_readGroup.bai
-samtools index ann34-cwKS_sorted_markdup_readGroup.bam ann34-cwKS_sorted_markdup_readGroup.bai
-samtools index ann39-ncNE_sorted_markdup_readGroup.bam ann39-ncNE_sorted_markdup_readGroup.bai
-samtools index annIA_sorted_markdup_readGroup.bam annIA_sorted_markdup_readGroup.bai
-samtools index annKS_sorted_markdup_readGroup.bam annKS_sorted_markdup_readGroup.bai
-samtools index annMex_A1516_sorted_markdup_readGroup.bam annMex_A1516_sorted_markdup_readGroup.bai
-samtools index annMex_A1517_sorted_markdup_readGroup.bam annMex_A1517_sorted_markdup_readGroup.bai
+# samtools index ann06-seWY_sorted_markdup_readGroup.bam ann06-seWY_sorted_markdup_readGroup.bai
+# samtools index ann08-ceTN_sorted_markdup_readGroup.bam ann08-ceTN_sorted_markdup_readGroup.bai
+# samtools index ann34-cwKS_sorted_markdup_readGroup.bam ann34-cwKS_sorted_markdup_readGroup.bai
+# samtools index ann39-ncNE_sorted_markdup_readGroup.bam ann39-ncNE_sorted_markdup_readGroup.bai
+# samtools index annIA_sorted_markdup_readGroup.bam annIA_sorted_markdup_readGroup.bai
+# samtools index annKS_sorted_markdup_readGroup.bam annKS_sorted_markdup_readGroup.bai
+# samtools index annMex_A1516_sorted_markdup_readGroup.bam annMex_A1516_sorted_markdup_readGroup.bai
+# samtools index annMex_A1517_sorted_markdup_readGroup.bam annMex_A1517_sorted_markdup_readGroup.bai
 samtools index annMex_A1572_sorted_markdup_readGroup.bam annMex_A1572_sorted_markdup_readGroup.bai
-samtools index annMex_A1574_sorted_markdup_readGroup.bam annMex_A1574_sorted_markdup_readGroup.bai
+# samtools index annMex_A1574_sorted_markdup_readGroup.bam annMex_A1574_sorted_markdup_readGroup.bai
 # samtools index annMex_Ann261_sorted_markdup_readGroup.bam annMex_Ann261_sorted_markdup_readGroup.bai
 # samtools index annMO1W-39_sorted_markdup_readGroup.bam annMO1W-39_sorted_markdup_readGroup.bai
 # samtools index annND1W-6_sorted_markdup_readGroup.bam annND1W-6_sorted_markdup_readGroup.bai
