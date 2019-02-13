@@ -6,7 +6,7 @@
 #SBATCH --partition=savio2_htc
 #SBATCH --qos=rosalind_htc2_normal
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=5
+#SBATCH --cpus-per-task=12
 #SBATCH --time=120:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/sam_sort39.out
 #SBATCH -e /global/home/users/makman/GATK/outs/sam_sort39.err
