@@ -7,7 +7,7 @@
 #SBATCH --qos=rosalind_htc2_normal
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=12
-#SBATCH --time=120:00:00
+#SBATCH --time=100:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/sam_sort39.out
 #SBATCH -e /global/home/users/makman/GATK/outs/sam_sort39.err
 #SBATCH --mail-user=makman@berkeley.edu
@@ -95,7 +95,7 @@ module load java
 # java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx54G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar SortSam INPUT=MexCult15.sam OUTPUT=MexCult15_sorted.bam SORT_ORDER=coordinate 
 # java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx54G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar SortSam INPUT=ann1238.sam OUTPUT=ann1238_sorted.bam SORT_ORDER=coordinate 
 
-java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx54G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar SortSam INPUT=ann1238_lane2.sam OUTPUT=ann1238_lane2_sorted.bam SORT_ORDER=coordinate 
+java -Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx128G -jar /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/picard/2.9.0/lib/picard.jar SortSam INPUT=ann1238_lane2.sam OUTPUT=ann1238_lane2_sorted.bam SORT_ORDER=coordinate 
 
 # 
 # 
