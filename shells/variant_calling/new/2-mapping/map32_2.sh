@@ -4,8 +4,7 @@
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio2_htc
 #SBATCH --qos=rosalind_htc2_normal
-#SBATCH --ntasks=1
-#SBATCH --cpus-per-task=12
+#SBATCH --mem=128000
 #SBATCH --time=120:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/map32_2.out
 #SBATCH -e /global/home/users/makman/GATK/outs/map32_2.err
