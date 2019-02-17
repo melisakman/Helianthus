@@ -5,7 +5,7 @@
 #SBATCH --partition=savio2_htc
 #SBATCH --qos=rosalind_htc2_normal
 #SBATCH --mem=128000
-#SBATCH --time=64:00:00
+#SBATCH --time=60:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/map32_3_v2.out
 #SBATCH -e /global/home/users/makman/GATK/outs/map32_3_v2.err
 #SBATCH --mail-user=makman@berkeley.edu
