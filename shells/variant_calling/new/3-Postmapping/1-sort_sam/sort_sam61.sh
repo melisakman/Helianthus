@@ -6,7 +6,7 @@
 #SBATCH --qos=rosalind_htc2_normal
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
-#SBATCH --time=30:00:00
+#SBATCH --time=28:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/sam_sort61.out
 #SBATCH -e /global/home/users/makman/GATK/outs/sam_sort61.err
 #SBATCH --mail-user=makman@berkeley.edu
