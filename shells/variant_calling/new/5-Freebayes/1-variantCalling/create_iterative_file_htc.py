@@ -2,23 +2,23 @@ import sys
 
 chr = sys.argv[1]
 chr_length = int(sys.argv[2])
-bins = int(chr_length/6000000) + 2
+bins = int(chr_length/4000000) + 2
 
 iterations = range(1,bins)
 border_l = 1
-border_r = 6000000
+border_r = 4000000
 for i in iterations:
 	file_name = "freebayes_invariant_chr" + str(chr) + "_chunk" + str(i) + ".sh"
 	file = open(file_name, 'w')
 	file.write("""#!/bin/bash
-#SBATCH -D /global/scratch/makman/GATK/sams/
+#SBATCH -D /global/scratch/makman/GATK/sams/bams/
 #SBATCH -J fb""" + str(chr) + "-" + str(i) +
 """\n#SBATCH --account=co_rosalind
 #SBATCH --partition=savio2_htc
 #SBATCH --qos=rosalind_htc2_normal
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
-#SBATCH --time=65:00:00
+#SBATCH --time=16:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/freebayes_invariant_chr""" + str(chr) + "_chunk" + str(i) + ".out" +
 """\n#SBATCH -e /global/home/users/makman/GATK/outs/freebayes_invariant_chr""" + str(chr) +"_chunk" + str(i) + ".err" +
 """\n#SBATCH --mail-user=makman@berkeley.edu
@@ -108,8 +108,9 @@ annNM_sorted_markdup_readGroup.bam //
 annSD1W-35_sorted_markdup_readGroup.bam //
 annSD2W-18_sorted_markdup_readGroup.bam //
 annSK1W-Q_sorted_markdup_readGroup.bam //
-annWY_sorted_markdup_readGroup.bam > ../freebayes/freebayes_invariant_chr""" + str(chr) + "_chunk" + str(i) + ".vcf")
-	border_l = border_l + 6000000
-	border_r = border_r + 6000000
+annWY_sorted_markdup_readGroup.bam //
+ann1238_lane2_62_5M_markdup_readGroup.bam > ../freebayes/freebayes_invariant_chr""" + str(chr) + "_chunk" + str(i) + ".vcf")
+	border_l = border_l + 4000000
+	border_r = border_r + 4000000
 
 
