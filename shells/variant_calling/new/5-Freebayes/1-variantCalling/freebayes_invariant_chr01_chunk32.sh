@@ -14,7 +14,7 @@
 module load freebayes/v1.1.0-56-ga180635
 TMPDIR=/clusterfs/rosalind/users/makman/temp
 
-freebayes -f /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa --report-monomorphic -r HanXRQChr01:124000001-128000000 \
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta --report-monomorphic -r HanXRQChr01:124000001-128000000 \
 Anzac_Pueblo_sorted_markdup_readGroup.bam \
 Ari_Mand_sorted_markdup_readGroup.bam \
 Ari_broa_sorted_markdup_readGroup.bam \
