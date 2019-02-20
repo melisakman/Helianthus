@@ -3,6 +3,8 @@
 #SBATCH -J fb09-27
 #SBATCH --account=vector
 #SBATCH --qos=vector_batch
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=1
 #SBATCH --time=172:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/freebayes_invariant_chr09_chunk27.out
 #SBATCH -e /global/home/users/makman/GATK/outs/freebayes_invariant_chr09_chunk27.err
