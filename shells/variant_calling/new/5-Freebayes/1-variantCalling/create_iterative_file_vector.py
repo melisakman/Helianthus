@@ -13,7 +13,7 @@ for i in iterations:
 	file.write("""#!/bin/bash
 #SBATCH -D /global/scratch/makman/GATK/sams/bams/
 #SBATCH -J fb""" + str(chr) + "-" + str(i) +
-"""\n#SBATCH --account=vector
+"""\n#SBATCH --partition=vector
 #SBATCH --qos=vector_batch
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
