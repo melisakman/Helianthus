@@ -2,7 +2,7 @@
 #SBATCH -D /global/scratch/makman/GATK/sams/bams/
 #SBATCH -J fb04-15
 #SBATCH --account=fc_blackman
-#SBATCH --partition=savio2
+#SBATCH --partition=savio2_htc
 #SBATCH --qos=savio_normal
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
