@@ -18,4 +18,4 @@ module load cmake/3.7.2
 # gzip ../fastq/raw/ready/ann1238_lane2_R1_trimmed_125M.fastq
 # gzip ../fastq/raw/ready/ann1238_lane2_R2_trimmed_125M.fastq
 
-/clusterfs/rosalind/users/makman/NextGenMap-0.5.2/bin/ngm-0.5.2/ngm -r /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta -p -1 ../fastq/raw/ready/ann1238_lane2_R1_trimmed_125M.fastq.gz -2 ../fastq/raw/ready/ann1238_lane2_R2_trimmed_125M.fastq.gz -o /global/scratch/makman/GATK/sams/ann1238_lane2_125M.sam
+/clusterfs/rosalind/users/makman/NextGenMap-0.5.2/ngm-0.5.2/ngm -r /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta -p -1 ../fastq/raw/ready/ann1238_lane2_R1_trimmed_125M.fastq.gz -2 ../fastq/raw/ready/ann1238_lane2_R2_trimmed_125M.fastq.gz -o /global/scratch/makman/GATK/sams/ann1238_lane2_125M.sam
