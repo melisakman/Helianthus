@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH -D /global/scratch/makman/GATK/sams/bams/
 #SBATCH -J fb09-40
-#SBATCH --account=vector
+#SBATCH --partition=vector
 #SBATCH --qos=vector_batch
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
