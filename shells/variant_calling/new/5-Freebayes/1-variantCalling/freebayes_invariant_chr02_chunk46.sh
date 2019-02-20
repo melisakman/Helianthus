@@ -6,7 +6,7 @@
 #SBATCH --qos=rosalind_htc2_normal
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
-#SBATCH --time=16:00:00
+#SBATCH --time=160:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/freebayes_invariant_chr02_chunk46.out
 #SBATCH -e /global/home/users/makman/GATK/outs/freebayes_invariant_chr02_chunk46.err
 #SBATCH --mail-user=makman@berkeley.edu
@@ -14,7 +14,7 @@
 module load freebayes/v1.1.0-56-ga180635
 TMPDIR=/clusterfs/rosalind/users/makman/temp
 
-freebayes -f /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta --report-monomorphic -r HanXRQChr02:180000001- \
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta --report-monomorphic -r HanXRQChr02:180000001-184000000 \
 Anzac_Pueblo_sorted_markdup_readGroup.bam \
 Ari_Mand_sorted_markdup_readGroup.bam \
 Ari_broa_sorted_markdup_readGroup.bam \

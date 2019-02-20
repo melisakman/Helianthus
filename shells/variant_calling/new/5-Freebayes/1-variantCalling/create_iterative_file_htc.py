@@ -18,7 +18,7 @@ for i in iterations:
 #SBATCH --qos=rosalind_htc2_normal
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
-#SBATCH --time=16:00:00
+#SBATCH --time=160:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/freebayes_invariant_chr""" + str(chr) + "_chunk" + str(i) + ".out" +
 """\n#SBATCH -e /global/home/users/makman/GATK/outs/freebayes_invariant_chr""" + str(chr) +"_chunk" + str(i) + ".err" +
 """\n#SBATCH --mail-user=makman@berkeley.edu
