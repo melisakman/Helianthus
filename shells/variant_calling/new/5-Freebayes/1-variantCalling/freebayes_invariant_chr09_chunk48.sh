@@ -3,8 +3,6 @@
 #SBATCH -J fb09-48
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
-#SBATCH --ntasks=1
-#SBATCH --cpus-per-task=1
 #SBATCH --time=172:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/freebayes_invariant_chr09_chunk48.out
 #SBATCH -e /global/home/users/makman/GATK/outs/freebayes_invariant_chr09_chunk48.err
