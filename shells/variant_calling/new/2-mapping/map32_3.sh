@@ -4,7 +4,7 @@
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio
 #SBATCH --qos=rosalind_savio_normal
-#SBATCH --mem=128000
+#SBATCH --mem=64000
 #SBATCH --time=60:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/map32_3_v2.out
 #SBATCH -e /global/home/users/makman/GATK/outs/map32_3_v2.err
