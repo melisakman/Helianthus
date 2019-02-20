@@ -11,6 +11,7 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
+module load cmake/3.7.2
 # zcat ../fastq/raw/ready/ann1238_lane2_R1_trimmed.fastq.gz | head -n 500000000 > ../fastq/raw/ready/ann1238_lane2_R1_trimmed_125M.fastq
 # zcat ../fastq/raw/ready/ann1238_lane2_R2_trimmed.fastq.gz | head -n 500000000 > ../fastq/raw/ready/ann1238_lane2_R2_trimmed_125M.fastq
 # 
