@@ -1,12 +1,9 @@
 #!/bin/bash
 #SBATCH -D /global/scratch/makman/GATK/sams/bams/
 #SBATCH -J fb09-42
-#SBATCH --account=co_rosalind
-#SBATCH --partition=savio2_htc
-#SBATCH --qos=rosalind_htc2_normal
-#SBATCH --ntasks=1
-#SBATCH --cpus-per-task=1
-#SBATCH --time=160:00:00
+#SBATCH --account=vector
+#SBATCH --qos=vector_batch
+#SBATCH --time=172:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/freebayes_invariant_chr09_chunk42.out
 #SBATCH -e /global/home/users/makman/GATK/outs/freebayes_invariant_chr09_chunk42.err
 #SBATCH --mail-user=makman@berkeley.edu

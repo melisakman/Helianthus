@@ -13,12 +13,9 @@ for i in iterations:
 	file.write("""#!/bin/bash
 #SBATCH -D /global/scratch/makman/GATK/sams/bams/
 #SBATCH -J fb""" + str(chr) + "-" + str(i) +
-"""\n#SBATCH --account=fc_blackman
-#SBATCH --partition=savio2_htc
-#SBATCH --qos=savio_normal
-#SBATCH --ntasks=1
-#SBATCH --cpus-per-task=1
-#SBATCH --time=72:00:00
+"""\n#SBATCH --account=vector
+#SBATCH --qos=vector_batch
+#SBATCH --time=172:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/freebayes_invariant_chr""" + str(chr) + "_chunk" + str(i) + ".out" +
 """\n#SBATCH -e /global/home/users/makman/GATK/outs/freebayes_invariant_chr""" + str(chr) +"_chunk" + str(i) + ".err" +
 """\n#SBATCH --mail-user=makman@berkeley.edu
