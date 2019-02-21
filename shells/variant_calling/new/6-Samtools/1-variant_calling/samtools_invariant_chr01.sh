@@ -1,20 +1,21 @@
 #!/bin/bash
 #SBATCH -D /global/scratch/makman/GATK/sams/bams/
-#SBATCH -J fb10-15
-#SBATCH --account=fc_blackman
-#SBATCH --partition=savio2_htc
-#SBATCH --qos=savio_normal
-#SBATCH --ntasks=1
-#SBATCH --cpus-per-task=1
-#SBATCH --time=72:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/freebayes_invariant_chr10_chunk15.out
-#SBATCH -e /global/home/users/makman/GATK/outs/freebayes_invariant_chr10_chunk15.err
+#SBATCH -J st01
+#SBATCH --account=co_rosalind
+#SBATCH --partition=savio
+#SBATCH --qos=rosalind_savio_normal
+#SBATCH --nodes=1
+#SBATCH --mem=64000
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=20
+#SBATCH --time=400:00:00
+#SBATCH -o /global/home/users/makman/GATK/outs/samtools_invariant_chr01b.out
+#SBATCH -e /global/home/users/makman/GATK/outs/samtools_invariant_chr01b.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-module load freebayes/v1.1.0-56-ga180635
-TMPDIR=/clusterfs/rosalind/users/makman/temp
-
-freebayes -f /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta --report-monomorphic -r HanXRQChr10:56000001-60000000 \
+module load bcftools/1.6
+TMPDIR=/global/scratch/makman/temp
+bcftools mpileup -Ou --max-depth 100 -f /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta -r HanXRQChr01 \
 Anzac_Pueblo_sorted_markdup_readGroup.bam \
 Ari_Mand_sorted_markdup_readGroup.bam \
 Ari_broa_sorted_markdup_readGroup.bam \
@@ -98,4 +99,4 @@ annSD1W-35_sorted_markdup_readGroup.bam \
 annSD2W-18_sorted_markdup_readGroup.bam \
 annSK1W-Q_sorted_markdup_readGroup.bam \
 annWY_sorted_markdup_readGroup.bam \
-ann1238_lane2_62_5M_markdup_readGroup.bam > ../freebayes/freebayes_invariant_chr10_chunk15.vcf
+ann1238_lane2_62_5M_markdup_readGroup.bam | bcftools call -Oz -m > ../samtools/samtools_invariant_chr01.vcf.gz
