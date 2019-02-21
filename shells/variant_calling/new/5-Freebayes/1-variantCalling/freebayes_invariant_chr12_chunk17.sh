@@ -1,12 +1,12 @@
 #!/bin/bash
 #SBATCH -D /global/scratch/makman/GATK/sams/bams/
 #SBATCH -J fb12-17
-#SBATCH --account=co_rosalind
+#SBATCH --account=fc_blackman
 #SBATCH --partition=savio2_htc
-#SBATCH --qos=rosalind_htc2_normal
+#SBATCH --qos=savio_normal
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
-#SBATCH --time=160:00:00
+#SBATCH --time=72:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/freebayes_invariant_chr12_chunk17.out
 #SBATCH -e /global/home/users/makman/GATK/outs/freebayes_invariant_chr12_chunk17.err
 #SBATCH --mail-user=makman@berkeley.edu
