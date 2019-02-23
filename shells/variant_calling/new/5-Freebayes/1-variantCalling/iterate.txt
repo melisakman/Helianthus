@@ -1,19 +1,37 @@
 python create_iterative_file_htc.py 01 150000000
-python create_iterative_file_htc.py 02 181000000
-python create_iterative_file_htc.py 03 169000000
-python create_iterative_file_fc.py 04 179000000
-python create_iterative_file_fc.py 05 220000000
-python create_iterative_file_fc.py 06 104000000
-python create_iterative_file_htc.py 07 104000000
-python create_iterative_file_htc.py 08 154000000
-python create_iterative_file_htc.py 09 210000000
-python create_iterative_file_fc.py 10 247000000
-python create_iterative_file_fc.py 11 169000000
-python create_iterative_file_fc.py 12 167000000
-python create_iterative_file_htc.py 13 198000000
-python create_iterative_file_htc.py 14 175000000
-python create_iterative_file_htc.py 15 172000000
-python create_iterative_file_htc.py 16 189000000
-python create_iterative_file_htc.py 17 215000000
+python create_iterative_file_htc.py 02 176000000
+python create_iterative_file_htc.py 03 178000000
+python create_iterative_file_fc.py 04 210000000
+python create_iterative_file_fc.py 05 180000000
+python create_iterative_file_fc.py 06 150000000
+python create_iterative_file_htc.py 07 150000000
+python create_iterative_file_htc.py 08 168000000
+python create_iterative_file_htc.py 09 190000000
+python create_iterative_file_fc.py 10 182000000
+python create_iterative_file_fc.py 11 190000000
+python create_iterative_file_fc.py 12 164000000
+python create_iterative_file_htc.py 13 174000000
+python create_iterative_file_htc.py 14 174000000
+python create_iterative_file_htc.py 15 176000000
+python create_iterative_file_htc.py 16 208000000
+python create_iterative_file_htc.py 17 196000000
 
+
+01 149502186
+02 174800439
+03 176490873
+04 208320189
+05 178169690
+06 148147350
+07 149542083
+08 167167940
+09 189665024
+10 181411567
+11 189830405
+12 163781230
+13 173487274
+14 173346949
+15 175671323
+16 206736614
+17 195042445
 
