@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/vector/scratch/makman/
+#SBATCH -D /clusterfs/vector/scratch/makman/bedassle
 #SBATCH -J bedass
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
