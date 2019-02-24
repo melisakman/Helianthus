@@ -1,10 +1,11 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/Arabidopsis/bedassle
 #SBATCH -J bedass
-#SBATCH --account=co_rosalind
-#SBATCH --partition=savio
-#SBATCH --qos=rosalind_savio_normal
-#SBATCH --time=100:00:00
+#SBATCH --partition=vector
+#SBATCH --qos=vector_batch
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=1
+#SBATCH --time=172:00:00
 #SBATCH -o /global/home/users/makman/Arabidopsis/filter_vcf.out
 #SBATCH -e /global/home/users/makman/Arabidopsis/filter_vcf.err
 #SBATCH --mail-user=makman@berkeley.edu
