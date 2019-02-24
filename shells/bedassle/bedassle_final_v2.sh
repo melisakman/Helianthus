@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/rosalind/users/makman/Arabidopsis/bedassle
+#SBATCH -D /clusterfs/vector/scratch/makman/
 #SBATCH -J bedass
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
@@ -16,7 +16,7 @@ module load bcftools/1.6
 # bcftools +prune -n 1 -w 1000 testy_recode_snpid_fixed.vcf -Ov -o testy_recode_snpid_fixed_ldprunned_1000.vcf 
 
 ##2##
-vcftools --vcf ../testy_recode_snpid_fixed_ldprunned_1000.vcf --max-missing-count 20 --012 --out testy_recode_snpid_fixed_ldprunned_1000
+vcftools --vcf testy_recode_snpid_fixed_ldprunned_1000.vcf --max-missing-count 20 --012 --out testy_recode_snpid_fixed_ldprunned_1000
 
 
 cd bedassle
