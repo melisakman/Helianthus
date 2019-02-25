@@ -16,10 +16,9 @@ module load bcftools/1.6
 # bcftools +prune -n 1 -w 1000 testy_recode_snpid_fixed.vcf -Ov -o testy_recode_snpid_fixed_ldprunned_1000.vcf 
 
 ##2##
-vcftools --vcf testy_recode_snpid_fixed_ldprunned_1000.vcf --max-missing-count 20 --012 --out testy_recode_snpid_fixed_ldprunned_1000
+vcftools --vcf testy_recode_snpid_fixed_ldprunned_1000.vcf --012 --out testy_recode_snpid_fixed_ldprunned_1000
+# --max-missing-count 20
 
-
-cd bedassle
 python ~/git/Helianthus/shells/bedassle/fix_genotypeFile.py testy_recode_snpid_fixed_ldprunned_1000.012 testy_recode_snpid_fixed_ldprunned_1000.012.pos testy_recode_snpid_fixed_ldprunned_1000.012.indv accession_subset1.txt subset1_allele_counts.txt subset1_sample_size.txt
 python ~/git/Helianthus/shells/bedassle/fix_genotypeFile.py testy_recode_snpid_fixed_ldprunned_1000.012 testy_recode_snpid_fixed_ldprunned_1000.012.pos testy_recode_snpid_fixed_ldprunned_1000.012.indv accession_subset2.txt subset2_allele_counts.txt subset2_sample_size.txt
 python ~/git/Helianthus/shells/bedassle/fix_genotypeFile.py testy_recode_snpid_fixed_ldprunned_1000.012 testy_recode_snpid_fixed_ldprunned_1000.012.pos testy_recode_snpid_fixed_ldprunned_1000.012.indv accession_subset3.txt subset3_allele_counts.txt subset3_sample_size.txt
