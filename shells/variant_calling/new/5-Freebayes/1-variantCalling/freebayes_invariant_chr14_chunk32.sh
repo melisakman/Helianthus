@@ -4,7 +4,7 @@
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio2_htc
 #SBATCH --qos=rosalind_htc2_normal
-#SBATCH --ntasks=1
+#SBATCH --ntasks=2
 #SBATCH --cpus-per-task=1
 #SBATCH --time=160:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/freebayes_invariant_chr14_chunk32.out
