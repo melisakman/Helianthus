@@ -26,8 +26,9 @@ module load r/3.5.1
 # python ~/git/Helianthus/shells/bedassle/fix_genotypeFile.py testy_recode_snpid_fixed_ldprunned_5K.012 testy_recode_snpid_fixed_ldprunned_5K.012.pos testy_recode_snpid_fixed_ldprunned_5K.012.indv accession_subset3.txt subset3_5K_allele_counts.txt subset3_5K_sample_size.txt
 # python ~/git/Helianthus/shells/bedassle/fix_genotypeFile.py testy_recode_snpid_fixed_ldprunned_5K.012 testy_recode_snpid_fixed_ldprunned_5K.012.pos testy_recode_snpid_fixed_ldprunned_5K.012.indv accession_subset4.txt subset4_5K_allele_counts.txt subset4_5K_sample_size.txt
 # python ~/git/Helianthus/shells/bedassle/fix_genotypeFile.py testy_recode_snpid_fixed_ldprunned_5K.012 testy_recode_snpid_fixed_ldprunned_5K.012.pos testy_recode_snpid_fixed_ldprunned_5K.012.indv accession_subset5.txt subset5_5K_allele_counts.txt subset5_5K_sample_size.txt
-Rserve(args="--no-save")
 R
+Rserve(args="--no-save")
+
 install.packages("BEDASSLE")
 library(BEDASSLE)
 setwd("/clusterfs/rosalind/users/makman/Arabidopsis/bedassle/final")
