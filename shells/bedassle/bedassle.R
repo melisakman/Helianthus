@@ -1,3 +1,4 @@
+lib = "/global/home/users/makman/R/"
 install.packages("BEDASSLE")
 library(BEDASSLE)
 
