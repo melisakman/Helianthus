@@ -1,6 +1,5 @@
-lib = "/global/home/users/makman/R/"
-install.packages("BEDASSLE")
-library(BEDASSLE)
+install.packages("BEDASSLE", lib = "/global/home/users/makman/R/")
+library(BEDASSLE, lib = "/global/home/users/makman/R/")
 
 count = read.table("subset1_5K_allele_counts.txt", h=F)
 dim(count)
