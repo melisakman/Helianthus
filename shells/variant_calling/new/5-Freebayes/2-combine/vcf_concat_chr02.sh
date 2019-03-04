@@ -51,12 +51,12 @@ freebayes_invariant_chr02_chunk34.vcf \
 freebayes_invariant_chr02_chunk35.vcf \
 freebayes_invariant_chr02_chunk36.vcf \
 freebayes_invariant_chr02_chunk37.vcf \
-freebayes_invariant_chr02_chunk38.vcf \ 
-freebayes_invariant_chr02_chunk39.vcf \ 
-freebayes_invariant_chr02_chunk40.vcf \ 
-freebayes_invariant_chr02_chunk41.vcf \ 
-freebayes_invariant_chr02_chunk42.vcf \ 
-freebayes_invariant_chr02_chunk43.vcf \ 
+freebayes_invariant_chr02_chunk38.vcf \
+freebayes_invariant_chr02_chunk39.vcf \
+freebayes_invariant_chr02_chunk40.vcf \
+freebayes_invariant_chr02_chunk41.vcf \
+freebayes_invariant_chr02_chunk42.vcf \
+freebayes_invariant_chr02_chunk43.vcf \
 freebayes_invariant_chr02_chunk44.vcf > freebayes_invariant_chr02_combined.vcf
 
 /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c freebayes_invariant_chr02_combined.vcf > freebayes_invariant_chr02_combined.vcf.gz 
