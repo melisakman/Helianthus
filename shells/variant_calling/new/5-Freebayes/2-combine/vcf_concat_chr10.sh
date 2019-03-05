@@ -53,7 +53,7 @@ freebayes_invariant_chr10_chunk34.vcf \
 freebayes_invariant_chr10_chunk35.vcf \
 freebayes_invariant_chr10_chunk36.vcf \
 freebayes_invariant_chr10_chunk37.vcf \
-freebayes_invariant_chr10_chunk38.vcf 
+freebayes_invariant_chr10_chunk38.vcf \
 freebayes_invariant_chr10_chunk39.vcf \
 freebayes_invariant_chr10_chunk40.vcf \
 freebayes_invariant_chr10_chunk41.vcf \
