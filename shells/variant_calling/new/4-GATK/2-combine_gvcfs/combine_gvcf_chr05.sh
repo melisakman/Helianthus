@@ -16,7 +16,10 @@
 
 module load java
 
-/clusterfs/rosalind/users/makman/gatk-4.0.0.0/gatk --java-options "-Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx64G" CombineGVCFs \
+gatk --java-options "-Xmx64g" GenomicsDBImport \
+--genomicsdb-workspace-path /global/scratch/makman/GATK_DB \
+--tmp-dir=/global/scratch/makman/temp_files/ \
+--reader-threads 20 \
 -R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
 -L HanXRQChr05 \
 --variant Anzac_Pueblo.g.vcf.gz \
@@ -101,5 +104,4 @@ module load java
 --variant annSD1W-35.g.vcf.gz \
 --variant annSD2W-18.g.vcf.gz \
 --variant annSK1W-Q.g.vcf.gz \
---variant annWY.g.vcf.gz \
--O GATK_chr05.g.vcf.gz
+--variant annWY.g.vcf.gz
