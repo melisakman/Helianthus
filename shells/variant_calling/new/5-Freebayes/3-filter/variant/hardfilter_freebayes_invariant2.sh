@@ -1,6 +1,6 @@
 #!/bin/bash 
 #SBATCH -D /global/scratch/makman/GATK/sams/freebayes/
-#SBATCH -J FB_chr01
+#SBATCH -J FB_chr02
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio2_htc
 #SBATCH --qos=rosalind_htc2_normal
