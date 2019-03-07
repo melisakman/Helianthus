@@ -9,8 +9,8 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=20
 #SBATCH --time=400:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/dupfilter_samtools1.out
-#SBATCH -e /global/home/users/makman/GATK/outs/dupfilter_samtools1.err
+#SBATCH -o /global/home/users/makman/GATK/outs/dupfilter_samtools2.out
+#SBATCH -e /global/home/users/makman/GATK/outs/dupfilter_samtools2.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
