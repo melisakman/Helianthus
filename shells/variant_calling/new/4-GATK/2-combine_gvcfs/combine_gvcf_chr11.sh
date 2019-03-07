@@ -19,7 +19,7 @@ module load gatk/4.0.1.2
 
 /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/gatk-4.0.1.2/gatk --java-options "-Xmx64g" GenomicsDBImport \
 --genomicsdb-workspace-path /global/scratch/makman/GATK_DB \
---TMP-DIR=/global/scratch/makman/temp_files/ \
+--TMP_DIR=/global/scratch/makman/temp_files/ \
 --reader-threads 20 \
 -R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
 -L HanXRQChr11 \
