@@ -15,8 +15,9 @@
 #SBATCH --mail-type=All
 
 module load gatk/4.0.1.2
+module load java
 
-gatk --java-options "-Xmx64g" GenomicsDBImport \
+/clusterfs/vector/home/groups/software/sl-7.x86_64/modules/gatk-4.0.1.2/gatk --java-options "-Xmx64g" GenomicsDBImport \
 --genomicsdb-workspace-path /global/scratch/makman/GATK_DB \
 --tmp-dir=/global/scratch/makman/temp_files/ \
 --reader-threads 20 \
