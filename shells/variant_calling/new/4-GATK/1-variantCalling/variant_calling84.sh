@@ -1,6 +1,6 @@
 #!/bin/bash 
 #SBATCH -D /global/scratch/makman/GATK/sams/bams/
-#SBATCH -J varcal83
+#SBATCH -J varcal84
 #SBATCH --account=fc_blackman
 #SBATCH --partition=savio2
 #SBATCH --mem=64000
@@ -96,4 +96,4 @@ module load java
 # /global/scratch/makman/gatk-4.1.0.0/gatk --java-options "-Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta -I HA821_sorted_markdup_readGroup.bam -O HA821.g.vcf.gz -ERC BP_RESOLUTION
 # /global/scratch/makman/gatk-4.1.0.0/gatk --java-options "-Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta -I MexCult15_sorted_markdup_readGroup.bam -O MexCult15.g.vcf.gz -ERC BP_RESOLUTION
 # /global/scratch/makman/gatk-4.1.0.0/gatk --java-options "-Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta -I SF33_sorted_markdup_readGroup.bam -O SF33.g.vcf.gz -ERC BP_RESOLUTION
-/global/scratch/makman/gatk-4.1.0.0/gatk --java-options "-Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta -I ann1238_sorted_markdup_readGroup.bam -O ../gvcfs/ann1238.g.vcf.gz -ERC BP_RESOLUTION
+/global/scratch/makman/gatk-4.1.0.0/gatk --java-options "-Djava.io.tmpdir=/global/scratch/makman/temp_files/ -Xmx64G" HaplotypeCaller -R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta -I ann1238_lane2_62_5M_markdup_readGroup.bam -O ../gvcfs/ann1238.g.vcf.gz -ERC BP_RESOLUTION
