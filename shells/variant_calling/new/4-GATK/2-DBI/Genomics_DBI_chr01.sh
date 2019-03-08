@@ -41,10 +41,10 @@ module load java
 --variant HA89.g.vcf.gz \
 --variant Havasupai.g.vcf.gz \
 --variant Hidatsa1.g.vcf.gz \
---variant Hopi.g.vcf.gz \
 --variant Hopi_dye.g.vcf.gz \
 --variant Hopi_mapping_parent.g.vcf.gz \
 --variant Hopi_other.g.vcf.gz \
+--variant Hopi.g.vcf.gz \
 --variant Laguna_Pueblo.g.vcf.gz \
 --variant Mandan1.g.vcf.gz \
 --variant Mandan2.g.vcf.gz \
@@ -75,7 +75,6 @@ module load java
 --variant Se_strip.g.vcf.gz \
 --variant Seneca.g.vcf.gz \
 --variant Zuni.g.vcf.gz \
---variant ann1238.g.vcf.gz \
 --variant ann01-cwIA.g.vcf.gz \
 --variant ann04-nwAR.g.vcf.gz \
 --variant ann05-ccNM.g.vcf.gz \
@@ -88,12 +87,12 @@ module load java
 --variant ann34-cwKS.g.vcf.gz \
 --variant ann39-ncNE.g.vcf.gz \
 --variant ann44-ccCA.g.vcf.gz \
---variant annIA.g.vcf.gz \
 --variant annIA1W-1.g.vcf.gz \
 --variant annIA2W-17.g.vcf.gz \
---variant annKS.g.vcf.gz \
+--variant annIA.g.vcf.gz \
 --variant annKS1W-27.g.vcf.gz \
 --variant annKS2W-35.g.vcf.gz \
+--variant annKS.g.vcf.gz \
 --variant annMB1W-40.g.vcf.gz \
 --variant annMO1W-39.g.vcf.gz \
 --variant annMex_A1516.g.vcf.gz \
@@ -106,4 +105,5 @@ module load java
 --variant annSD1W-35.g.vcf.gz \
 --variant annSD2W-18.g.vcf.gz \
 --variant annSK1W-Q.g.vcf.gz \
---variant annWY.g.vcf.gz
+--variant annWY.g.vcf.gz \
+--variant ann1238.g.vcf.gz
