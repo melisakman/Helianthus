@@ -75,6 +75,7 @@ module load java
 --variant Se_strip.g.vcf.gz \
 --variant Seneca.g.vcf.gz \
 --variant Zuni.g.vcf.gz \
+--variant ann1238.g.vcf.gz \
 --variant ann01-cwIA.g.vcf.gz \
 --variant ann04-nwAR.g.vcf.gz \
 --variant ann05-ccNM.g.vcf.gz \
