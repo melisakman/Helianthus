@@ -2,11 +2,13 @@
 #SBATCH -D /global/scratch/makman/GATK/sams/gvcfs
 #SBATCH -J chr01DBI
 #SBATCH --account=co_rosalind
-#SBATCH --partition=savio2_htc
-#SBATCH --qos=rosalind_htc2_normal
-#SBATCH --ntasks=1
-#SBATCH --cpus-per-task=12
-#SBATCH --time=660:00:00
+#SBATCH --partition=savio
+#SBATCH --qos=rosalind_savio_normal
+#SBATCH --nodes=1
+#SBATCH --mem=64000
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=20
+#SBATCH --time=400:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/DBI_chr01.out
 #SBATCH -e /global/home/users/makman/GATK/outs/DBI_chr01.err
 #SBATCH --mail-user=makman@berkeley.edu
@@ -18,7 +20,7 @@ module load java
 /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/gatk-4.0.1.2/gatk --java-options "-Xmx64g" GenomicsDBImport \
 --genomicsdb-workspace-path /global/scratch/makman/GATK/DBI/GATK_DB_chr01 \
 --TMP_DIR=/global/scratch/makman/temp_files/ \
---reader-threads 12 \
+--reader-threads 20 \
 -L HanXRQChr01 \
 -R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
 --variant Anzac_Pueblo.g.vcf.gz \
