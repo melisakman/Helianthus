@@ -5,7 +5,7 @@
 #SBATCH --partition=savio2_htc
 #SBATCH --qos=rosalind_htc2_normal
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=12
+#SBATCH --cpus-per-task=6
 #SBATCH --time=660:00:00
 #SBATCH -o /global/home/users/makman/Arabidopsis/bedassle2_3.out
 #SBATCH -e /global/home/users/makman/Arabidopsis/bedassle2_3.err
