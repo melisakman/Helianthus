@@ -1,9 +1,10 @@
 #!/bin/bash 
 #SBATCH -D /global/scratch/makman/GATK/sams/samtools
 #SBATCH -J ST_chr01
-#SBATCH --account=co_rosalind
+#SBATCH --account=fc_blackman
 #SBATCH --partition=savio2_htc
-#SBATCH --qos=rosalind_htc2_normal
+#SBATCH --qos=savio_normal
+#SBATCH --ntasks=1
 #SBATCH --cpus-per-task=4
 #SBATCH --time=72:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/bcftools_filter_samtools_chr01.out
