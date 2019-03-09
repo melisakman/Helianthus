@@ -16,6 +16,6 @@ module load bcftools/1.6
 module load bio/vcftools
 module load java
 
-zcat freebayes_invariant_chr04_combined.vcf.gz | bcftools filter -g 5 -i 'TYPE = "snp" && QUAL > 20 && MQM > 40 || TYPE = "indel" && QUAL > 20 || TYPE = "mnp" && QUAL > 20 && MQM > 40 || TYPE = "ref" && QUAL < 2.723e-15 && MQMR > 40' | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > freebayes_variants_chr04_filtered.vcf.gz
+zcat freebayes_invariant_chr04_combined.vcf.gz | bcftools filter -g 5 -i 'TYPE = "snp" && QUAL > 20 && MQM > 40 || TYPE = "indel" && QUAL > 20 || TYPE = "mnp" && QUAL > 20 && MQM > 40' | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > freebayes_variants_chr04_filtered.vcf.gz
 zcat freebayes_invariant_chr04_combined.vcf.gz | bcftools filter -g 5 -i 'TYPE = "ref" && QUAL < 2.75e-15 && MQMR > 40' | vcftools --vcf - --minDP 1 --max-missing 0.8 --maxDP 30 --recode --stdout | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > freebayes_invariants_chr04_filtered.vcf.gz
 
