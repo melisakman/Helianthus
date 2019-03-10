@@ -13,5 +13,5 @@ climate = load("subset2_envi.RData")
 
 MCMC_BB(counts=count, sample_sizes = sample, D=Euc_dist, E=Climate, k=nrow(count), loci=ncol(count), delta = 0.0001,
      aD_stp = 0.1, aE_stp = 0.1, a2_stp = 0.02, phi_stp = 0.2, thetas_stp = 0.2, mu_stp = 0.35, ngen = 10000, 
-     printfreq=100000, savefreq=1e5, samplefreq=250, prefix = "subset2_v5_",
+     printfreq=100000, savefreq=1e5, samplefreq=25, prefix = "subset2_v5_",
      continue = FALSE, continuing.params = NULL)
