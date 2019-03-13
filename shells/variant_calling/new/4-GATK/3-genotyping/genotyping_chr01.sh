@@ -24,5 +24,5 @@ module load java
 -O chr01_GATK.vcf \
 -L HanXRQChr01 \
 --reader-threads 20 \
---TMP_DIR=/global/scratch/makman/temp_files/ 
+--TMP_DIR=/global/scratch/makman/temp_files/
 
