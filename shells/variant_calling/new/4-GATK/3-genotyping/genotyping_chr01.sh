@@ -22,6 +22,6 @@ module load java
 -V gendb:///global/scratch/makman/GATK/DBI/GATK_DB_chr01 \
 -O chr01_GATK.vcf \
 -L HanXRQChr01 \
--ERC BP_RESOLUTION \
+--includeNonVariantSites \
 --TMP_DIR=/global/scratch/makman/temp_files/
 
