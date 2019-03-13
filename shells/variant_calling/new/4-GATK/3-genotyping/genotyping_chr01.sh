@@ -22,6 +22,5 @@ module load java
 -V gendb:/global/scratch/makman/GATK/DBI/GATK_DB_chr01 \
 -O chr01_GATK.vcf \
 -L HanXRQChr01 \
---reader-threads 20 \
 --TMP_DIR=/global/scratch/makman/temp_files/
 
