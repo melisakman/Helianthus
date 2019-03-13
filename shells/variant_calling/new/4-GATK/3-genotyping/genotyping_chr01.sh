@@ -20,7 +20,6 @@ module load java
 /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/gatk-4.0.1.2/gatk --java-options "-Xmx64g" GenotypeGVCFs \
 -R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
 -V gendb:/global/scratch/makman/GATK/DBI/GATK_DB_chr01 \
--newQual \
 -O chr01_GATK.vcf \
 -L HanXRQChr01 \
 --reader-threads 20 \
