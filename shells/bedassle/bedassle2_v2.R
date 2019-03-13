@@ -11,8 +11,12 @@ climate = load("subset2_envi.RData")
 
 # decreased aD and aE step from 0.1
      
-MCMC_BB(counts=count, sample_sizes = sample, D=Euc_dist, E=Climate, k=nrow(count), loci=ncol(count), delta = 0.0001,
-     aD_stp = 0.01, aE_stp = 0.01, a2_stp = 0.02, phi_stp = 0.2, thetas_stp = 0.2, mu_stp = 0.35, ngen = 1000, 
-     printfreq=1000, savefreq=1e3, samplefreq=5, prefix = "subset2_v2_",
-     continue = FALSE, continuing.params = NULL)
+#MCMC_BB(counts=count, sample_sizes = sample, D=Euc_dist, E=Climate, k=nrow(count), loci=ncol(count), delta = 0.0001,
+#     aD_stp = 0.01, aE_stp = 0.01, a2_stp = 0.02, phi_stp = 0.2, thetas_stp = 0.2, mu_stp = 0.35, ngen = 1000, 
+#     printfreq=1000, savefreq=1e3, samplefreq=5, prefix = "subset2_v2_",
+#     continue = FALSE, continuing.params = NULL)
      
+MCMC_BB(counts=count, sample_sizes = sample, D=Euc_dist, E=Climate, k=nrow(count), loci=ncol(count), delta = 0.0001,
+     aD_stp = 0.001, aE_stp = 0.001, a2_stp = 0.02, phi_stp = 0.4, thetas_stp = 0.2, mu_stp = 0.35, ngen = 1000, 
+     printfreq=1000, savefreq=1e3, samplefreq=5, prefix = "subset2_v2_2_",
+     continue = FALSE, continuing.params = NULL)
