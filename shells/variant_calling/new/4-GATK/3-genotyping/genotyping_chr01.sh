@@ -23,5 +23,5 @@ module load java
 -O chr01_GATK.vcf \
 -L HanXRQChr01 \
 --include-non-variant-sites \
---TMP_DIR=/global/scratch/makman/temp_files/
+--tmp_dir=/global/scratch/makman/temp_files/
 
