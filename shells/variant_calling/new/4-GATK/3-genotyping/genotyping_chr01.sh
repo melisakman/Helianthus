@@ -17,11 +17,10 @@
 # module load gatk/4.0.1.2
 module load java
 
-/global/scratch/makman/gatk-4.1.0.0/gatk --java-options "-Xmx64g" GenotypeGVCFs \
+/global/scratch/makman/gatk-4.1.0.0/gatk --java-options "-Xmx64g -Djava.io.tmpdir=/global/scratch/makman/temp_files/" GenotypeGVCFs \
 -R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
 -V gendb:///global/scratch/makman/GATK/DBI/GATK_DB_chr01 \
 -O chr01_GATK.vcf \
 -L HanXRQChr01 \
 --include-non-variant-sites \
---tmp_dir=/global/scratch/makman/temp_files/
 
