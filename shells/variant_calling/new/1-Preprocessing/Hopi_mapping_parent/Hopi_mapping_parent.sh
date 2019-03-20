@@ -12,7 +12,8 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load java
-
+module load cmake/3.7.2   
+module load gcc/8.3.0
 
 # cp ../SRR5140381_1.fastq.gz Hopi_mapping_parent_R1.fastq.gz
 # cp ../SRR5140381_2.fastq.gz Hopi_mapping_parent_R2.fastq.gz
