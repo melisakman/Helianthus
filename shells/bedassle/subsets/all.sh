@@ -20,8 +20,8 @@ module load r/3.5.1
 # vcftools --vcf testy_recode_snpid_fixed_ldprunned_5K.vcf --012 --out testy_recode_snpid_fixed_ldprunned_5K
 # --max-missing-count 20
 
-python ~/git/Helianthus/shells/bedassle/fix_genotypeFile.py testy_recode_snpid_fixed_ldprunned_5K.012 testy_recode_snpid_fixed_ldprunned_5K.012.pos testy_recode_snpid_fixed_ldprunned_5K.012.indv all_samples.txt allsamples_5K_allele_counts.txt allsamples_5K_sample_size.txt
+# python ~/git/Helianthus/shells/bedassle/fix_genotypeFile.py testy_recode_snpid_fixed_ldprunned_5K.012 testy_recode_snpid_fixed_ldprunned_5K.012.pos testy_recode_snpid_fixed_ldprunned_5K.012.indv all_samples.txt allsamples_5K_allele_counts.txt allsamples_5K_sample_size.txt
 
 
 # 
-Rscript ~/git/Helianthus/shells/bedassle/all.R
+Rscript ~/git/Helianthus/shells/bedassle/subsets/all.R
