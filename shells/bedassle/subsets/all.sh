@@ -14,6 +14,7 @@
 module load bio/vcftools/0.1.15
 module load bcftools/1.6
 module load r/3.5.1
+
 # bcftools +prune -n 1 -w 5000 ../../testy_recode_snpid_fixed.vcf -Ov -o testy_recode_snpid_fixed_ldprunned_5K.vcf 
 
 ##2##
