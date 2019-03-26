@@ -19,7 +19,7 @@ module load gatk/4.0.1.2
 export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
 
 /global/scratch/makman/gatk-4.1.0.0/gatk --java-options "-Xmx64g -Djava.io.tmpdir=/global/scratch/makman/temp_files/" SelectVariants \
--R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
+-R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
 -V VCMA_chr01.vcf.gz \
 --select-type-to-include SNP \
 -O VCMA_chr01_SNP.vcf.gz 
@@ -27,16 +27,16 @@ export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcfto
 cp VCMA_chr01_SNP.vcf.gz /clusterfs/vector/instrumentData/blackmanlab/Helianthus/GATK_4Peter
 
 /global/scratch/makman/gatk-4.1.0.0/gatk --java-options "-Xmx64g -Djava.io.tmpdir=/global/scratch/makman/temp_files/" VariantFiltration \
--R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
--V VCMA_chr01_SNP.vcf.gz \
---filter-expression "QD < 2.0 || MQ < 40.0 || FS > 60.0 || SOR > 3.0 || MQRankSum < -12.5 || ReadPosRankSum < -8.0" \
---filter-name "my_SNP_filter" \
--O VCMA_chr01_SNP_filterInfo.vcf.gz  
+	-R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
+	-V VCMA_chr01_SNP.vcf.gz \
+	--filter-expression "QD < 2.0 || MQ < 40.0 || FS > 60.0 || SOR > 3.0 || MQRankSum < -12.5 || ReadPosRankSum < -8.0" \
+	--filter-name "my_SNP_filter" \
+	-O VCMA_chr01_SNP_filterInfo.vcf.gz  
 	
 /global/scratch/makman/gatk-4.1.0.0/gatk --java-options "-Xmx64g -Djava.io.tmpdir=/global/scratch/makman/temp_files/" SelectVariants \	
--R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
--V VCMA_chr01_SNP_filterInfo.vcf.gz \
---exclude-filtered \
--O VCMA_chr01_SNP_hardfiltered.vcf.gz 
+	-R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
+	-V VCMA_chr01_SNP_filterInfo.vcf.gz \
+	--exclude-filtered \
+	-O VCMA_chr01_SNP_hardfiltered.vcf.gz 
 	
 
