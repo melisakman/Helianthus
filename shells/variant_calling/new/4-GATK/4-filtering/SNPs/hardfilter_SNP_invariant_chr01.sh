@@ -18,7 +18,8 @@ module load java
 module load gatk/4.0.1.2
 export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
 
-# gzip chr01_GATK.vcf
+gunzip chr01_GATK.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c chr01_GATK.vcf > chr01_GATK.vcf.gz
 
 /global/scratch/makman/gatk-4.1.0.0/gatk IndexFeatureFile \
 -F chr01_GATK.vcf.gz
