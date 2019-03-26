@@ -18,7 +18,10 @@ module load java
 module load gatk/4.0.1.2
 export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
 
-gzip chr01_GATK.vcf
+# gzip chr01_GATK.vcf
+
+/global/scratch/makman/gatk-4.1.0.0/gatk IndexFeatureFile \
+-F chr01_GATK.vcf.gz
 
 /global/scratch/makman/gatk-4.1.0.0/gatk --java-options "-Xmx64g -Djava.io.tmpdir=/global/scratch/makman/temp_files/" SelectVariants \
 -R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
@@ -41,4 +44,4 @@ cp chr01_GATK_SNP.vcf.gz /clusterfs/vector/instrumentData/blackmanlab/Helianthus
 --exclude-filtered \
 -O chr01_GATK_SNP_hardfiltered.vcf.gz 
 	
-
+cp chr01_GATK_SNP_hardfiltered.vcf.gz /clusterfs/vector/instrumentData/blackmanlab/Helianthus/GATK_4Peter
