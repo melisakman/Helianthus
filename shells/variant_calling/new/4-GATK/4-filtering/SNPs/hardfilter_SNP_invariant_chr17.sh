@@ -27,7 +27,6 @@ export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcfto
 --select-type-to-include SNP \
 -O chr17_GATK_SNP.vcf.gz 
 
-cp chr17_GATK_SNP.vcf.gz /clusterfs/vector/instrumentData/blackmanlab/Helianthus/GATK_4Peter
 
 /global/scratch/makman/gatk-4.1.0.0/gatk --java-options "-Xmx64g -Djava.io.tmpdir=/global/scratch/makman/temp_files/" VariantFiltration \
 -R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
@@ -36,10 +35,10 @@ cp chr17_GATK_SNP.vcf.gz /clusterfs/vector/instrumentData/blackmanlab/Helianthus
 --filter-name "my_SNP_filter" \
 -O chr17_GATK_SNP_filterInfo.vcf.gz  
 	
-/global/scratch/makman/gatk-4.1.0.0/gatk --java-options "-Xmx64g -Djava.io.tmpdir=/global/scratch/makman/temp_files/" SelectVariants \	
+/global/scratch/makman/gatk-4.1.0.0/gatk --java-options "-Xmx64g -Djava.io.tmpdir=/global/scratch/makman/temp_files/" SelectVariants \
 -R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
 -V chr17_GATK_SNP_filterInfo.vcf.gz \
 --exclude-filtered \
--O chr17_GATK_SNP_hardfiltered.vcf.gz 
+-O chr17_GATK_SNP_hardfiltered.vcf.gz
 	
 cp chr17_GATK_SNP_hardfiltered.vcf.gz /clusterfs/vector/instrumentData/blackmanlab/Helianthus/GATK_4Peter
