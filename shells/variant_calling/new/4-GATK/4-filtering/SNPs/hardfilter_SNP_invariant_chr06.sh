@@ -16,26 +16,26 @@ module load java
 module load gatk/4.0.1.2
 export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
 
-/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c chr06_GATK.vcf > chr06_GATK.vcf.gz
-
-/global/scratch/makman/gatk-4.1.0.0/gatk IndexFeatureFile \
--F chr06_GATK.vcf.gz
-
-/global/scratch/makman/gatk-4.1.0.0/gatk --java-options "-Xmx64g -Djava.io.tmpdir=/global/scratch/makman/temp_files/" SelectVariants \
--R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
--V chr06_GATK.vcf.gz \
---select-type-to-include SNP \
--O chr06_GATK_SNP.vcf.gz 
-
-
-/global/scratch/makman/gatk-4.1.0.0/gatk --java-options "-Xmx64g -Djava.io.tmpdir=/global/scratch/makman/temp_files/" VariantFiltration \
--R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
--V chr06_GATK_SNP.vcf.gz \
---filter-expression "QD < 2.0 || MQ < 40.0 || FS > 60.0 || SOR > 3.0 || MQRankSum < -12.5 || ReadPosRankSum < -8.0" \
---filter-name "my_SNP_filter" \
--O chr06_GATK_SNP_filterInfo.vcf.gz  
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c chr06_GATK.vcf > chr06_GATK.vcf.gz
+# 
+# /global/scratch/makman/gatk-4.1.0.0/gatk IndexFeatureFile \
+# -F chr06_GATK.vcf.gz
+# 
+# /global/scratch/makman/gatk-4.1.0.0/gatk --java-options "-Xmx64g -Djava.io.tmpdir=/global/scratch/makman/temp_files/" SelectVariants \
+# -R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
+# -V chr06_GATK.vcf.gz \
+# --select-type-to-include SNP \
+# -O chr06_GATK_SNP.vcf.gz 
+# 
+# 
+# /global/scratch/makman/gatk-4.1.0.0/gatk --java-options "-Xmx64g -Djava.io.tmpdir=/global/scratch/makman/temp_files/" VariantFiltration \
+# -R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
+# -V chr06_GATK_SNP.vcf.gz \
+# --filter-expression "QD < 2.0 || MQ < 40.0 || FS > 60.0 || SOR > 3.0 || MQRankSum < -12.5 || ReadPosRankSum < -8.0" \
+# --filter-name "my_SNP_filter" \
+# -O chr06_GATK_SNP_filterInfo.vcf.gz  
 	
-/global/scratch/makman/gatk-4.1.0.0/gatk --java-options "-Xmx64g -Djava.io.tmpdir=/global/scratch/makman/temp_files/" SelectVariants \	
+/global/scratch/makman/gatk-4.1.0.0/gatk --java-options "-Xmx64g -Djava.io.tmpdir=/global/scratch/makman/temp_files/" SelectVariants \
 -R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
 -V chr06_GATK_SNP_filterInfo.vcf.gz \
 --exclude-filtered \
