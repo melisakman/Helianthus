@@ -2,10 +2,9 @@
 #SBATCH -D /global/scratch/makman/GATK/bcftools_isec/
 #SBATCH -J cattruth
 #SBATCH --account=co_rosalind
-#SBATCH --partition=savio2_htc
-#SBATCH --qos=rosalind_htc2_normal
-#SBATCH --cpus-per-task=6
-#SBATCH --time=80:00:00
+#SBATCH --partition=savio
+#SBATCH --qos=rosalind_savio_normal
+#SBATCH --time=8:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/truth_vcf_concat.out
 #SBATCH -e /global/home/users/makman/GATK/outs/truth_vcf_concat.err
 #SBATCH --mail-user=makman@berkeley.edu
