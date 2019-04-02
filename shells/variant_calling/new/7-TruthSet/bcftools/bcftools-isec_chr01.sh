@@ -13,7 +13,7 @@
 module load bcftools/1.6
 module load bio/vcftools
 
-# zcat gvcfs/genotyping/chr01_GATK_SNP_hardfiltered.vcf.gz | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > gvcfs/genotyping/chr01_GATK_SNP_hardfiltered_secondfilter.vcf.gz
+zcat gvcfs/genotyping/chr01_GATK_SNP_hardfiltered.vcf.gz | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > gvcfs/genotyping/chr01_GATK_SNP_hardfiltered_secondfilter.vcf.gz
 
 /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix gvcfs/genotyping/chr01_GATK_SNP_hardfiltered_secondfilter.vcf.gz
 /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix freebayes/freebayes_variants_chr01_filtered.vcf.gz
