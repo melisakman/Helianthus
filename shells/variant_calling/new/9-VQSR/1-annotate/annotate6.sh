@@ -17,14 +17,13 @@
 module load java
 module load gatk/4.0.1.2
 
-mv chr06_2plus.vcf.gz chr06_2plus.vcf
-/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c chr06_2plus.vcf > chr06_2plus.vcf.gz
-
-/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf chr06_2plus.vcf.gz  
+# mv chr06_2plus.vcf.gz chr06_2plus.vcf
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c chr06_2plus.vcf > chr06_2plus.vcf.gz
+# 
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf chr06_2plus.vcf.gz  
 
 /global/scratch/makman/gatk-4.1.0.0/gatk --java-options "-Xmx64g -Djava.io.tmpdir=/global/scratch/makman/temp_files/" VariantAnnotator \
    -R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
-   -T VariantAnnotator \
    -V chr06_2plus.vcf.gz \
    -O chr06_2plus_annot.vcf.gz \
    -A Coverage -A QualByDepth -A FisherStrand -A StrandOddsRatio -A MappingQualityRankSumTest -A ReadPosRankSumTest -A RMSMappingQuality -A InbreedingCoeff
