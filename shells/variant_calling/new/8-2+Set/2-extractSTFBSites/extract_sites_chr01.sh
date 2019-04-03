@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /global/scratch/makman/GATK/bcftools/
+#SBATCH -D /global/scratch/makman/GATK/bcftools_isec/
 #SBATCH -J 3chr01
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio
