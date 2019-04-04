@@ -9,11 +9,9 @@
 #SBATCH -e /global/home/users/makman/GATK/outs/truth_vcf_concat.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
-TMPDIR=/clusterfs/rosalind/users/makman/temp
 module load bcftools/1.6
 
-/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-concat \
+bcftools concat \
 ../chr01_3/0000.vcf.gz \
 ../chr02_3/0000.vcf.gz \
 ../chr03_3/0000.vcf.gz \
