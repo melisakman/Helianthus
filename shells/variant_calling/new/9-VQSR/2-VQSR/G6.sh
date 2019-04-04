@@ -9,8 +9,8 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=20
 #SBATCH --time=80:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/VSQRG8_chr01.out
-#SBATCH -e /global/home/users/makman/GATK/outs/VSQRG8_chr01.err
+#SBATCH -o /global/home/users/makman/GATK/outs/VSQRG6_chr01.out
+#SBATCH -e /global/home/users/makman/GATK/outs/VSQRG6_chr01.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
