@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/rosalind/users/makman/GATK/bcftools_isec/truthSet
+#SBATCH -D /global/scratch/makman/GATK/bcftools_isec/truthSet
 #SBATCH -J cattruth
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio
