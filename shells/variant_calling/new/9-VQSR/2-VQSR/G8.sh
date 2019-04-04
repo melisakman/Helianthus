@@ -9,8 +9,8 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=20
 #SBATCH --time=80:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/VSQRG8_chr01.out
-#SBATCH -e /global/home/users/makman/GATK/outs/VSQRG8_chr01.err
+#SBATCH -o /global/home/users/makman/GATK/outs/VSQRG8_90.out
+#SBATCH -e /global/home/users/makman/GATK/outs/VSQRG8_90.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
@@ -18,8 +18,8 @@ export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcfto
 TMPDIR=/clusterfs/rosalind/users/makman/temp
 module load bcftools/1.6
 module load gatk/4.0.1.2
-module load r/3.4.2
-# module load r/3.2.5
+module unload r/3.4.2
+module load r/3.2.5
 module load r-packages/default
 module load Rcpp/0.12.14
 R_LIBS_USER=/global/home/users/makman/R/x86_64-pc-linux-gnu-library/3.4/
@@ -56,6 +56,19 @@ R_LIBS_USER=/global/home/users/makman/R/x86_64-pc-linux-gnu-library/3.4/
 # 
 
 
+# /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/gatk-4.0.1.2/gatk VariantRecalibrator \
+# --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" \
+# -R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
+# -V allChr_2plus_annot.vcf.gz \
+# -an QD -an MQ -an MQRankSum -an ReadPosRankSum -an FS -an SOR -an DP -an InbreedingCoeff \
+# --max-gaussians 8 \
+# -mode SNP \
+# --resource 3callerscombined,known=false,training=true,truth=true,prior=10.0:truthSet/truth_GATK.vcf \
+# -O G8_unfiltered_all_tranches.recal \
+# -tranche 90 -tranche 80 -tranche 70 \
+# --tranches-file G8_unfiltered_all_tranches.tranches \
+# --rscript-file G8_unfiltered_all_tranches.plots.R
+ 
 /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/gatk-4.0.1.2/gatk VariantRecalibrator \
 --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" \
 -R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
@@ -64,8 +77,7 @@ R_LIBS_USER=/global/home/users/makman/R/x86_64-pc-linux-gnu-library/3.4/
 --max-gaussians 8 \
 -mode SNP \
 --resource 3callerscombined,known=false,training=true,truth=true,prior=10.0:truthSet/truth_GATK.vcf \
--O G8_unfiltered_all_tranches.recal \
--tranche 90 -tranche 80 -tranche 70 \
---tranches-file G8_unfiltered_all_tranches.tranches \
---rscript-file G8_unfiltered_all_tranches.plots.R
- 
+-O G8_unfiltered_90_tranches.recal \
+-tranche 99 -tranche 95 -tranche 90 \
+--tranches-file G8_unfiltered_90_tranches.tranches \
+--rscript-file G8_unfiltered_90_tranches.plots.R
