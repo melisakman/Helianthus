@@ -51,11 +51,23 @@ R_LIBS_USER=/global/home/users/makman/R/x86_64-pc-linux-gnu-library/3.4/
 
 
 
-/clusterfs/vector/home/groups/software/sl-7.x86_64/modules/gatk-4.0.1.2/gatk IndexFeatureFile \
---java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" \
--F truthSet/truth_GATK.vcf
-
-IndexFeatureFile
+# /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/gatk-4.0.1.2/gatk IndexFeatureFile \
+# --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" \
+# -F truthSet/truth_GATK.vcf
+# 
+# /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/gatk-4.0.1.2/gatk VariantRecalibrator \
+# --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" \
+# -R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
+# -V allChr_2plus_annot.vcf.gz \
+# -an QD -an MQ -an MQRankSum -an ReadPosRankSum -an FS -an SOR -an DP -an InbreedingCoeff \
+# --max-gaussians 4 \
+# -mode SNP \
+# --resource 3callerscombined,known=false,training=true,truth=true,prior=10.0:truthSet/truth_GATK.vcf \
+# -O G4_unfiltered_all_tranches.recal \
+# -tranche 90 -tranche 80 -tranche 70 \
+# --tranches-file G4_unfiltered_all_tranches.tranches \
+# --rscript-file G4_unfiltered_all_tranches.plots.R
+ 
 /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/gatk-4.0.1.2/gatk VariantRecalibrator \
 --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" \
 -R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
@@ -64,8 +76,7 @@ IndexFeatureFile
 --max-gaussians 4 \
 -mode SNP \
 --resource 3callerscombined,known=false,training=true,truth=true,prior=10.0:truthSet/truth_GATK.vcf \
--O G4_unfiltered_all_tranches.recal \
--tranche 90 -tranche 80 -tranche 70 \
---tranches-file G4_unfiltered_all_tranches.tranches \
---rscript-file G4_unfiltered_all_tranches.plots.R
- 
+-O G4_unfiltered_90plus_tranches.recal \
+-tranche 99 -tranche 95 -tranche 92 -tranche 90 \
+--tranches-file G4_unfiltered_90plus_tranches.tranches \
+--rscript-file G4_unfiltered_90plus_tranches.plots.R
