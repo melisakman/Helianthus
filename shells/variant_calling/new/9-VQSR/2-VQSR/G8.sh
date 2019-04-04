@@ -18,6 +18,11 @@ export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcfto
 TMPDIR=/clusterfs/rosalind/users/makman/temp
 module load bcftools/1.6
 module load gatk/4.0.1.2
+module unload r/3.4.2
+module load r/3.2.5
+module load r-packages/default
+module load Rcpp/0.12.14
+R_LIBS_USER=/global/home/users/makman/R/x86_64-pc-linux-gnu-library/3.4/
 
 
 # /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-concat \
