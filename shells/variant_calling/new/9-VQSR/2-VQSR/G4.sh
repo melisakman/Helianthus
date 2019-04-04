@@ -52,7 +52,7 @@ module load gatk/4.0.1.2
 -mode SNP \
 --resource 3callerscombined,known=false,training=true,truth=true,prior=10.0:truthSet/truth_GATK.vcf \
 -O G4_unfiltered_all_tranches.recal \
--tranche 90 -tranche 80 -tranche 70\
+-tranche 90 -tranche 80 -tranche 70 \
 --tranches-file G4_unfiltered_all_tranches.tranches \
 --rscript-file G4_unfiltered_all_tranches.plots.R
  
