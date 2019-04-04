@@ -43,6 +43,13 @@ module load gatk/4.0.1.2
 # 
 # /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf allChr_2plus_annot.vcf.gz
 
+
+
+/clusterfs/vector/home/groups/software/sl-7.x86_64/modules/gatk-4.0.1.2/gatk IndexFeatureFile \
+--java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" \
+-F truthSet/truth_GATK.vcf
+
+IndexFeatureFile
 /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/gatk-4.0.1.2/gatk VariantRecalibrator \
 --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" \
 -R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
