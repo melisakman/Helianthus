@@ -57,17 +57,43 @@ climate = load("all_envi_small.RData")
 #   printfreq=100, savefreq=100, samplefreq=5, prefix = "all_final_v10_",
 #   continue = FALSE, continuing.params = NULL)
 
+#MCMC_BB(counts=count, sample_sizes = sample, D=Euc_dist, E=Climate, k=nrow(count), loci=ncol(count), delta = 0.0001,
+#   aD_stp = 0.1, aE_stp = 0.1, a2_stp = 0.01, phi_stp = 0.01, thetas_stp = 0.01, mu_stp = 1.5, ngen = 2500, 
+#   printfreq=100, savefreq=100, samplefreq=5, prefix = "all_final_v5a_",
+#   continue = FALSE, continuing.params = NULL)
+#
+#MCMC_BB(counts=count, sample_sizes = sample, D=Euc_dist, E=Climate, k=nrow(count), loci=ncol(count), delta = 0.0001,
+#   aD_stp = 0.1, aE_stp = 0.1, a2_stp = 0.01, phi_stp = 0.01, thetas_stp = 0.01, mu_stp = 1.5, ngen = 2500, 
+#   printfreq=250, savefreq=250, samplefreq=5, prefix = "all_final_v5b_",
+#   continue = FALSE, continuing.params = NULL)
+#MCMC_BB(counts=count, sample_sizes = sample, D=Euc_dist, E=Climate, k=nrow(count), loci=ncol(count), delta = 0.0001,
+#   aD_stp = 0.1, aE_stp = 0.1, a2_stp = 0.01, phi_stp = 0.01, thetas_stp = 0.01, mu_stp = 1.5, ngen = 2500, 
+#   printfreq=100, savefreq=100, samplefreq=100, prefix = "all_final_v5c_",
+#   continue = FALSE, continuing.params = NULL)
+
 MCMC_BB(counts=count, sample_sizes = sample, D=Euc_dist, E=Climate, k=nrow(count), loci=ncol(count), delta = 0.0001,
-   aD_stp = 0.1, aE_stp = 0.1, a2_stp = 0.01, phi_stp = 0.01, thetas_stp = 0.01, mu_stp = 1.5, ngen = 2500, 
-   printfreq=100, savefreq=100, samplefreq=5, prefix = "all_final_v5a_",
+   aD_stp = 0.01, aE_stp = 0.1, a2_stp = 0.001, phi_stp = 0.001, thetas_stp = 0.01, mu_stp = 1.5, ngen = 3000, 
+   printfreq=150, savefreq=150, samplefreq=150, prefix = "all_final_v11_",
    continue = FALSE, continuing.params = NULL)
 
 MCMC_BB(counts=count, sample_sizes = sample, D=Euc_dist, E=Climate, k=nrow(count), loci=ncol(count), delta = 0.0001,
-   aD_stp = 0.1, aE_stp = 0.1, a2_stp = 0.01, phi_stp = 0.01, thetas_stp = 0.01, mu_stp = 1.5, ngen = 2500, 
-   printfreq=250, savefreq=250, samplefreq=5, prefix = "all_final_v5b_",
-   continue = FALSE, continuing.params = NULL)
-MCMC_BB(counts=count, sample_sizes = sample, D=Euc_dist, E=Climate, k=nrow(count), loci=ncol(count), delta = 0.0001,
-   aD_stp = 0.1, aE_stp = 0.1, a2_stp = 0.01, phi_stp = 0.01, thetas_stp = 0.01, mu_stp = 1.5, ngen = 2500, 
-   printfreq=100, savefreq=100, samplefreq=100, prefix = "all_final_v5c_",
+   aD_stp = 0.01, aE_stp = 0.1, a2_stp = 0.001, phi_stp = 0.001, thetas_stp = 0.1, mu_stp = 1.5, ngen = 3000, 
+   printfreq=150, savefreq=150, samplefreq=150, prefix = "all_final_v12_",
    continue = FALSE, continuing.params = NULL)
 
+MCMC_BB(counts=count, sample_sizes = sample, D=Euc_dist, E=Climate, k=nrow(count), loci=ncol(count), delta = 0.0001,
+   aD_stp = 0.01, aE_stp = 0.1, a2_stp = 0.001, phi_stp = 0.001, thetas_stp = 0.001, mu_stp = 1.5, ngen = 3000, 
+   printfreq=150, savefreq=150, samplefreq=150, prefix = "all_final_v13_",
+   continue = FALSE, continuing.params = NULL)
+MCMC_BB(counts=count, sample_sizes = sample, D=Euc_dist, E=Climate, k=nrow(count), loci=ncol(count), delta = 0.00001,
+   aD_stp = 0.01, aE_stp = 0.1, a2_stp = 0.001, phi_stp = 0.001, thetas_stp = 0.01, mu_stp = 1.5, ngen = 3000, 
+   printfreq=150, savefreq=150, samplefreq=150, prefix = "all_final_v14_",
+   continue = FALSE, continuing.params = NULL)
+MCMC_BB(counts=count, sample_sizes = sample, D=Euc_dist, E=Climate, k=nrow(count), loci=ncol(count), delta = 0.001,
+   aD_stp = 0.01, aE_stp = 0.1, a2_stp = 0.001, phi_stp = 0.001, thetas_stp = 0.01, mu_stp = 1.5, ngen = 3000, 
+   printfreq=150, savefreq=150, samplefreq=150, prefix = "all_final_v15_",
+   continue = FALSE, continuing.params = NULL)
+MCMC_BB(counts=count, sample_sizes = sample, D=Euc_dist, E=Climate, k=nrow(count), loci=ncol(count), delta = 0.00001,
+   aD_stp = 0.01, aE_stp = 0.01, a2_stp = 0.001, phi_stp = 0.001, thetas_stp = 0.01, mu_stp = 1.5, ngen = 3000, 
+   printfreq=150, savefreq=150, samplefreq=150, prefix = "all_final_v16_",
+   continue = FALSE, continuing.params = NULL)
