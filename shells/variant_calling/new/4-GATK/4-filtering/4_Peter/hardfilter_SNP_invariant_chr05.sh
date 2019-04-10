@@ -31,4 +31,4 @@ export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcfto
 --exclude-filtered \
 -O chr05_GATK_all_hardfiltered.vcf.gz
 	
-cp chr05_GATK_all_hardfiltered.vcf.gz /clusterfs/vector/instrumentData/blackmanlab/Helianthus/GATK_4Peter
+cp chr05_GATK_all_hardfiltered.vcf.gz* /clusterfs/vector/instrumentData/blackmanlab/Helianthus/GATK_4Peter
