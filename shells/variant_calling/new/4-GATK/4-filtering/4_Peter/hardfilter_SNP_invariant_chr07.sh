@@ -10,7 +10,7 @@
 #SBATCH --cpus-per-task=20
 #SBATCH --time=400:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/hardfilter_SNP_chr07.out
-#SBATCH -e /global/home/users/makman/GATK/outs/hardfilter_SNP_chr07.err
+#SBATCH -e /global/scratch/users/makman/GATK/outs/hardfilter_SNP_chr07.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load gcc/4.8.5 
