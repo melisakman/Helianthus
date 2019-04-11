@@ -1,16 +1,35 @@
 library(BEDASSLE, lib = "/global/home/users/makman/R/")
 
-count = read.table("subset2_5K_allele_counts.txt", h=F)
+count = read.table("allsamples_5K_allele_counts.txt", h=F)
 dim(count)
 count = as.matrix(count[1:2081])
 dim(count)
-sample = read.table("subset2_5K_sample_size.txt", h=F)
+sample = read.table("allsamples_5K_sample_size.txt", h=F)
 sample = as.matrix(sample[1:2081])
 dim(sample)
-climate = load("subset2_envi.RData")
+climate = load("all_envi_small.RData")
 
+MCMC_BB(counts=count, sample_sizes = sample, D=Euc_dist, E=Climate, k=nrow(count), loci=ncol(count), delta = 0.0005,
+   aD_stp = 0.01, aE_stp = 0.01, a2_stp = 0.001, phi_stp = 0.001, thetas_stp = 0.01, mu_stp = 1.5, ngen = 3000, 
+   printfreq=15, savefreq=15, samplefreq=15, prefix = "all_final_v22_1",
+   continue = FALSE, continuing.params = NULL)
 
-MCMC_BB(counts=count, sample_sizes = sample, D=Euc_dist, E=Climate, k=nrow(count), loci=ncol(count), delta = 0.0001,
-     aD_stp = 0.001, aE_stp = 0.001, a2_stp = 0.02, phi_stp = 0.4, thetas_stp = 0.2, mu_stp = 0.35, ngen = 1000, 
-     printfreq=1000, savefreq=1e3, samplefreq=5, prefix = "subset2_v2_2_",
-     continue = FALSE, continuing.params = NULL)
+#MCMC_BB(counts=count, sample_sizes = sample, D=Euc_dist, E=Climate, k=nrow(count), loci=ncol(count), delta = 0.0005,
+#   aD_stp = 0.01, aE_stp = 0.01, a2_stp = 0.001, phi_stp = 0.001, thetas_stp = 0.01, mu_stp = 1.5, ngen = 3000, 
+#   printfreq=15, savefreq=15, samplefreq=15, prefix = "all_final_v22_2",
+#   continue = FALSE, continuing.params = NULL)
+#
+#MCMC_BB(counts=count, sample_sizes = sample, D=Euc_dist, E=Climate, k=nrow(count), loci=ncol(count), delta = 0.0005,
+#   aD_stp = 0.01, aE_stp = 0.01, a2_stp = 0.001, phi_stp = 0.001, thetas_stp = 0.01, mu_stp = 1.5, ngen = 3000, 
+#   printfreq=15, savefreq=15, samplefreq=15, prefix = "all_final_v22_3",
+#   continue = FALSE, continuing.params = NULL)
+#
+#MCMC_BB(counts=count, sample_sizes = sample, D=Euc_dist, E=Climate, k=nrow(count), loci=ncol(count), delta = 0.0005,
+#   aD_stp = 0.01, aE_stp = 0.01, a2_stp = 0.001, phi_stp = 0.001, thetas_stp = 0.01, mu_stp = 1.5, ngen = 3000, 
+#   printfreq=15, savefreq=15, samplefreq=15, prefix = "all_final_v22_4",
+#   continue = FALSE, continuing.params = NULL)
+#
+#MCMC_BB(counts=count, sample_sizes = sample, D=Euc_dist, E=Climate, k=nrow(count), loci=ncol(count), delta = 0.0005,
+#   aD_stp = 0.01, aE_stp = 0.01, a2_stp = 0.001, phi_stp = 0.001, thetas_stp = 0.01, mu_stp = 1.5, ngen = 3000, 
+#   printfreq=15, savefreq=15, samplefreq=15, prefix = "all_final_v22_5",
+#   continue = FALSE, continuing.params = NULL)
