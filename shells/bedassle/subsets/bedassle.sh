@@ -1,6 +1,6 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/vector/scratch/makman/bedassle/final
-#SBATCH -J badass2
+#SBATCH -J badass1
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
 #SBATCH --ntasks=1
@@ -15,4 +15,4 @@ module load bio/vcftools/0.1.15
 module load bcftools/1.6
 module load r/3.5.1
 
-Rscript ~/git/Helianthus/shells/bedassle/subsets/bedassle.R
+Rscript ~/git/Helianthus/shells/bedassle/subsets/bedassle.r
