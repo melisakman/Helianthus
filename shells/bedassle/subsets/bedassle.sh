@@ -4,7 +4,7 @@
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=8
+#SBATCH --cpus-per-task=4
 #SBATCH --time=800:00:00
 #SBATCH -o /global/home/users/makman/Arabidopsis/bedassle_temp_mean.out
 #SBATCH -e /global/home/users/makman/Arabidopsis/bedassle_temp_mean.err
