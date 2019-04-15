@@ -44,20 +44,20 @@ climate = load("all_envi_small.RData")
 #  printfreq=10000, savefreq=1e5, samplefreq=250, prefix = "all_final_v22_7",
 #  continue = FALSE, continuing.params = NULL)
 
-#MCMC_BB(counts=count, sample_sizes = sample, D=Euc_dist, E=Climate$Temp_Mean, k=nrow(count), loci=ncol(count), delta = 0.0005,
-#  aD_stp = 0.01, aE_stp = 0.01, a2_stp = 0.001, phi_stp = 0.001, thetas_stp = 0.01, mu_stp = 1.5, ngen = 3000, 
-#  printfreq=15, savefreq=15, samplefreq=15, prefix = "all_final_v22_temp_mean_1",
-#  continue = FALSE, continuing.params = NULL)
-#
-#MCMC_BB(counts=count, sample_sizes = sample, D=Euc_dist, E=Climate$Temp_Mean, k=nrow(count), loci=ncol(count), delta = 0.0005,
-#  aD_stp = 0.01, aE_stp = 0.01, a2_stp = 0.001, phi_stp = 0.001, thetas_stp = 0.01, mu_stp = 1.5, ngen = 3000, 
-#  printfreq=15, savefreq=15, samplefreq=15, prefix = "all_final_v22_temp_mean_2",
-#  continue = FALSE, continuing.params = NULL)
-#
-#MCMC_BB(counts=count, sample_sizes = sample, D=Euc_dist, E=Climate$Temp_Mean, k=nrow(count), loci=ncol(count), delta = 0.0005,
-#  aD_stp = 0.01, aE_stp = 0.01, a2_stp = 0.001, phi_stp = 0.001, thetas_stp = 0.01, mu_stp = 1.5, ngen = 3000, 
-#  printfreq=15, savefreq=15, samplefreq=15, prefix = "all_final_v22_temp_mean_3",
-#  continue = FALSE, continuing.params = NULL)
+MCMC_BB(counts=count, sample_sizes = sample, D=Euc_dist, E=Climate$Temp_Mean, k=nrow(count), loci=ncol(count), delta = 0.0005,
+  aD_stp = 0.01, aE_stp = 0.01, a2_stp = 0.001, phi_stp = 0.001, thetas_stp = 0.01, mu_stp = 1.5, ngen = 3000, 
+  printfreq=15, savefreq=15, samplefreq=15, prefix = "all_final_v22_temp_mean_1",
+  continue = FALSE, continuing.params = NULL)
+
+MCMC_BB(counts=count, sample_sizes = sample, D=Euc_dist, E=Climate$Temp_Mean, k=nrow(count), loci=ncol(count), delta = 0.0005,
+  aD_stp = 0.01, aE_stp = 0.01, a2_stp = 0.001, phi_stp = 0.001, thetas_stp = 0.01, mu_stp = 1.5, ngen = 3000, 
+  printfreq=15, savefreq=15, samplefreq=15, prefix = "all_final_v22_temp_mean_2",
+  continue = FALSE, continuing.params = NULL)
+
+MCMC_BB(counts=count, sample_sizes = sample, D=Euc_dist, E=Climate$Temp_Mean, k=nrow(count), loci=ncol(count), delta = 0.0005,
+  aD_stp = 0.01, aE_stp = 0.01, a2_stp = 0.001, phi_stp = 0.001, thetas_stp = 0.01, mu_stp = 1.5, ngen = 3000, 
+  printfreq=15, savefreq=15, samplefreq=15, prefix = "all_final_v22_temp_mean_3",
+  continue = FALSE, continuing.params = NULL)
 
 #MCMC_BB(counts=count, sample_sizes = sample, D=Euc_dist, E=Climate$Temp_SSD, k=nrow(count), loci=ncol(count), delta = 0.0005,
 #  aD_stp = 0.01, aE_stp = 0.01, a2_stp = 0.001, phi_stp = 0.001, thetas_stp = 0.01, mu_stp = 1.5, ngen = 3000, 
@@ -74,17 +74,17 @@ climate = load("all_envi_small.RData")
 #  printfreq=15, savefreq=15, samplefreq=15, prefix = "all_final_v22_temp_ssd_3",
 #  continue = FALSE, continuing.params = NULL)
 
-MCMC_BB(counts=count, sample_sizes = sample, D=Euc_dist, E=Climate$Precip_Summer, k=nrow(count), loci=ncol(count), delta = 0.0005,
-  aD_stp = 0.01, aE_stp = 0.01, a2_stp = 0.001, phi_stp = 0.001, thetas_stp = 0.01, mu_stp = 1.5, ngen = 3000, 
-  printfreq=15, savefreq=15, samplefreq=15, prefix = "all_final_v22_summer_precip_1",
-  continue = FALSE, continuing.params = NULL)
-
-MCMC_BB(counts=count, sample_sizes = sample, D=Euc_dist, E=Climate$Precip_Summer, k=nrow(count), loci=ncol(count), delta = 0.0005,
-  aD_stp = 0.01, aE_stp = 0.01, a2_stp = 0.001, phi_stp = 0.001, thetas_stp = 0.01, mu_stp = 1.5, ngen = 3000, 
-  printfreq=15, savefreq=15, samplefreq=15, prefix = "all_final_v22_summer_precip_2",
-  continue = FALSE, continuing.params = NULL)
-
-MCMC_BB(counts=count, sample_sizes = sample, D=Euc_dist, E=Climate$Precip_Summer, k=nrow(count), loci=ncol(count), delta = 0.0005,
-  aD_stp = 0.01, aE_stp = 0.01, a2_stp = 0.001, phi_stp = 0.001, thetas_stp = 0.01, mu_stp = 1.5, ngen = 3000, 
-  printfreq=15, savefreq=15, samplefreq=15, prefix = "all_final_v22_summer_precip_3",
-  continue = FALSE, continuing.params = NULL)
+#MCMC_BB(counts=count, sample_sizes = sample, D=Euc_dist, E=Climate$Precip_Summer, k=nrow(count), loci=ncol(count), delta = 0.0005,
+#  aD_stp = 0.01, aE_stp = 0.01, a2_stp = 0.001, phi_stp = 0.001, thetas_stp = 0.01, mu_stp = 1.5, ngen = 3000, 
+#  printfreq=15, savefreq=15, samplefreq=15, prefix = "all_final_v22_summer_precip_1",
+#  continue = FALSE, continuing.params = NULL)
+#
+#MCMC_BB(counts=count, sample_sizes = sample, D=Euc_dist, E=Climate$Precip_Summer, k=nrow(count), loci=ncol(count), delta = 0.0005,
+#  aD_stp = 0.01, aE_stp = 0.01, a2_stp = 0.001, phi_stp = 0.001, thetas_stp = 0.01, mu_stp = 1.5, ngen = 3000, 
+#  printfreq=15, savefreq=15, samplefreq=15, prefix = "all_final_v22_summer_precip_2",
+#  continue = FALSE, continuing.params = NULL)
+#
+#MCMC_BB(counts=count, sample_sizes = sample, D=Euc_dist, E=Climate$Precip_Summer, k=nrow(count), loci=ncol(count), delta = 0.0005,
+#  aD_stp = 0.01, aE_stp = 0.01, a2_stp = 0.001, phi_stp = 0.001, thetas_stp = 0.01, mu_stp = 1.5, ngen = 3000, 
+#  printfreq=15, savefreq=15, samplefreq=15, prefix = "all_final_v22_summer_precip_3",
+#  continue = FALSE, continuing.params = NULL)
