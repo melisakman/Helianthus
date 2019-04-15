@@ -19,7 +19,7 @@ zcat gvcfs/genotyping/chr01_GATK_SNP_hardfiltered.vcf.gz | vcftools --vcf - --mi
 /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix freebayes/freebayes_variants_chr01_filtered.vcf.gz
 /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix samtools/samtools_variants_chr01_filtered.vcf.gz
 
-bcftools isec -n =3 -O z -p ../bcftools_isec/chr01_3_update gvcfs/genotyping/chr01_GATK_SNP_hardfiltered_secondfilter.vcf.gz \
+bcftools isec -n =3 -O z -p ../bcftools_isec/chr01_3 gvcfs/genotyping/chr01_GATK_SNP_hardfiltered_secondfilter.vcf.gz \
 freebayes/freebayes_variants_chr01_filtered.vcf.gz \
 samtools/samtools_variants_chr01_filtered.vcf.gz
 
