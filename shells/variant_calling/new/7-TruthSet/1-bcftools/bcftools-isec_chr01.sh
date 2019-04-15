@@ -13,17 +13,15 @@
 module load bcftools/1.6
 module load bio/vcftools
 
-zcat samtools/samtools_invariant_chr01_dupsRemoved.vcf | bcftools filter -i 'TYPE = "snp"' | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > samtools/samtools_variants_chr01.vcf.gz
-zcat freebayes/freebayes_invariant_chr01_combined.vcf.gz | bcftools filter -i 'TYPE = "snp"' | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > freebayes/freebayes_variants_chr01.vcf.gz
+zcat gvcfs/genotyping/chr01_GATK_SNP_hardfiltered.vcf.gz | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > gvcfs/genotyping/chr01_GATK_SNP_hardfiltered_secondfilter.vcf.gz
 
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix gvcfs/genotyping/chr01_GATK_SNP_hardfiltered_secondfilter.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix freebayes/freebayes_variants_chr01_filtered.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix samtools/samtools_variants_chr01_filtered.vcf.gz
 
-/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix gvcfs/genotyping/chr01_GATK_SNP.vcf.gz
-/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix freebayes/freebayes_variants_chr01.vcf.gz
-/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix samtools/samtools_variants_chr01.vcf.gz
-
-bcftools isec -n +2 -O z -p ../bcftools_isec/chr01_2 gvcfs/genotyping/chr01_GATK_SNP.vcf.gz \
-freebayes/freebayes_variants_chr01.vcf.gz \
-samtools/samtools_variants_chr01.vcf.gz
+bcftools isec -n =3 -O z -p ../bcftools_isec/chr01_3_update gvcfs/genotyping/chr01_GATK_SNP_hardfiltered_secondfilter.vcf.gz \
+freebayes/freebayes_variants_chr01_filtered.vcf.gz \
+samtools/samtools_variants_chr01_filtered.vcf.gz
 
 
 
