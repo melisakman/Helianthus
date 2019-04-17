@@ -5,9 +5,9 @@
 #SBATCH --qos=vector_batch
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=4
-#SBATCH --time=800:00:00
-#SBATCH -o /global/home/users/makman/Arabidopsis/bedassle_summer_precip2.out
-#SBATCH -e /global/home/users/makman/Arabidopsis/bedassle_summer_precip2.err
+#SBATCH --time=800:00:003
+#SBATCH -o /global/home/users/makman/Arabidopsis/bedassle_summer_precip3.out
+#SBATCH -e /global/home/users/makman/Arabidopsis/bedassle_summer_precip3.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
