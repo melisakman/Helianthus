@@ -2,9 +2,11 @@
 #SBATCH -D /global/scratch/makman/GATK/bcftools_isec/
 #SBATCH -J seperate
 #SBATCH --account=co_rosalind
-#SBATCH --partition=savio
-#SBATCH --qos=rosalind_savio_normal
-#SBATCH --time=8:00:00
+#SBATCH --partition=savio2_htc
+#SBATCH --qos=rosalind_htc2_normal
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=12
+#SBATCH --time=160:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/VQSR_seperate.out
 #SBATCH -e /global/home/users/makman/GATK/outs/VQSR_seperate.err
 #SBATCH --mail-user=makman@berkeley.edu
