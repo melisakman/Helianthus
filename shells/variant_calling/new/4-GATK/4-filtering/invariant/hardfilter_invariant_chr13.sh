@@ -20,15 +20,15 @@ export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcfto
 module load bcftools/1.6
 module load bio/vcftools
 
-/global/scratch/makman/gatk-4.1.0.0/gatk --java-options "-Xmx64g -Djava.io.tmpdir=/global/scratch/makman/temp_files/" SelectVariants \
--R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
--V chr13_GATK.vcf.gz \
---select-type-to-include NO_VARIATION \
--O chr13_GATK_NoVar.vcf.gz
+# /global/scratch/makman/gatk-4.1.0.0/gatk --java-options "-Xmx64g -Djava.io.tmpdir=/global/scratch/makman/temp_files/" SelectVariants \
+# -R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
+# -V chr13_GATK.vcf.gz \
+# --select-type-to-include NO_VARIATION \
+# -O chr13_GATK_NoVar.vcf.gz
 
 /global/scratch/makman/gatk-4.1.0.0/gatk --java-options "-Xmx64g -Djava.io.tmpdir=/global/scratch/makman/temp_files/" VariantFiltration \
 -R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
--V chr13_GATK_Novar.vcf.gz \
+-V chr13_GATK_NoVar.vcf.gz \
 --filter-expression "QD < 2.0 || MQ < 40.0 || FS > 60.0 || SOR > 3.0 || MQRankSum < -12.5 || ReadPosRankSum < -8.0" \
 --filter-name "novar_filter" \
 -O chr13_GATK_NoVar_filterInfo.vcf.gz
