@@ -21,6 +21,7 @@ module load bio/vcftools
 # 
 # /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix freebayes/freebayes_invariant_chr04_combined_ref_filtered.vcf.gz
 # /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix samtools/samtools_invariant_chr04_dupsRemoved_ref_filtered.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix gvcfs/genotyping/chr04_GATK_NoVar_hardfiltered_secondFilter.vcf.gz
 
 bcftools isec -n +2 -O z -p ../bcftools_isec/chr04_2_ref gvcfs/genotyping/chr04_GATK_NoVar_hardfiltered_secondFilter.vcf.gz \
 freebayes/freebayes_invariant_chr04_combined_ref_filtered.vcf.gz \
