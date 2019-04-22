@@ -15,7 +15,7 @@
 module load bcftools/1.6
 module load bio/vcftools
 
-
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c freebayes/freebayes_invariant_chr01_combined.vcf > freebayes/freebayes_invariant_chr01_combined.vcf.gz
 zcat freebayes/freebayes_invariant_chr01_combined.vcf.gz | bcftools filter -g 5 -i 'TYPE = "ref"' | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > freebayes/freebayes_invariant_chr01_combined_ref.vcf.gz
 zcat samtools/samtools_invariant_chr01_dupsRemoved.vcf.gz | bcftools filter -g 5 -i 'TYPE = "ref"' | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > samtools/samtools_invariant_chr01_dupsRemoved_ref.vcf.gz
 
