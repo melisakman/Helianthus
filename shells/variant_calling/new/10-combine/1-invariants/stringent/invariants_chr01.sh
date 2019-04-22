@@ -28,6 +28,6 @@ module load bio/vcftools
 # freebayes/freebayes_invariant_chr01_combined_ref_filtered.vcf.gz \
 # samtools/samtools_invariant_chr01_dupsRemoved_ref_filtered.vcf.gz 
 
-bcftools isec -n +1 -O z -p ../bcftools_isec/chr01_1_ref gvcfs/genotyping/chr01_GATK_NoVar_hardfiltered_secondFilter.vcf.gz \
-freebayes/freebayes_invariant_chr01_combined_ref_filtered.vcf.gz \
-samtools/samtools_invariant_chr01_dupsRemoved_ref_filtered.vcf.gz 
+# bcftools isec -n +1 -O z -p ../bcftools_isec/chr01_1_ref gvcfs/genotyping/chr01_GATK_NoVar_hardfiltered_secondFilter.vcf.gz \
+# freebayes/freebayes_invariant_chr01_combined_ref_filtered.vcf.gz \
+# samtools/samtools_invariant_chr01_dupsRemoved_ref_filtered.vcf.gz 
