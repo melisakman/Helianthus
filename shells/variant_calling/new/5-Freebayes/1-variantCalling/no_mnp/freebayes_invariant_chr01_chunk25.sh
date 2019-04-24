@@ -98,4 +98,4 @@ annSD1W-35_sorted_markdup_readGroup.bam \
 annSD2W-18_sorted_markdup_readGroup.bam \
 annSK1W-Q_sorted_markdup_readGroup.bam \
 annWY_sorted_markdup_readGroup.bam \
-ann1238_lane2_62_5M_markdup_readGroup.bam > ../freebayes/freebayes_invariant_chr01_chunk25.vcf
+ann1238_lane2_62_5M_markdup_readGroup.bam > ../freebayes/no_mnp/freebayes_invariant_chr01_chunk25.vcf
