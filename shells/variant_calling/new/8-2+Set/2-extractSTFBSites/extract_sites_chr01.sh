@@ -24,7 +24,7 @@ module load bcftools/1.6
 # /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c chr01_2/0001.vcf > chr01_2/0001.vcf.gz
 
 /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-concat \
-chr01_2/0000.vcf.gz chr01_2/FB_ST_sites_chr01.vcf.gz | /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-sort > chr01_2plus.vcf.gz
+chr01_2/0000.vcf.gz chr01_2/FB_ST_sites_chr01.vcf.gz | /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-sort > chr01_2plus_update.vcf.gz
 
 
 
