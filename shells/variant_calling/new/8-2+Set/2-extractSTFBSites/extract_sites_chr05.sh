@@ -23,8 +23,11 @@ module load bcftools/1.6
 # /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c chr05_2/FB_ST_sites_chr05.vcf > chr05_2/FB_ST_sites_chr05.vcf.gz
 # /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c chr05_2/0001.vcf > chr05_2/0001.vcf.gz
 
+/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t chr05_2/0000.vcf.gz chr05_2/FB_ST_sites_chr05.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > chr05_2/FB_ST_sites_chr05_sorted.vcf.gz
+
+
 /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-concat \
-chr05_2/0000.vcf.gz chr05_2/FB_ST_sites_chr05.vcf.gz | /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-sort > chr05_2plus.vcf.gz
+chr05_2/0000.vcf.gz chr05_2/FB_ST_sites_chr05_sorted.vcf.gz | /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-sort > chr05_2plus_update.vcf.gz
 
 
 
