@@ -1,10 +1,12 @@
 #!/bin/bash 
 #SBATCH -D /global/scratch/makman/GATK/bcftools_isec/
 #SBATCH -J 3chr04
-#SBATCH --account=co_rosalind
-#SBATCH --partition=savio
-#SBATCH --qos=rosalind_savio_normal
-#SBATCH --time=8:00:00
+#SBATCH --account=fc_blackman
+#SBATCH --partition=savio2_htc
+#SBATCH --qos=savio_normal
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=6
+#SBATCH --time=72:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/bcf-isec_chr04_2.out
 #SBATCH -e /global/home/users/makman/GATK/outs/bcf-isec_chr04_2.err
 #SBATCH --mail-user=makman@berkeley.edu
