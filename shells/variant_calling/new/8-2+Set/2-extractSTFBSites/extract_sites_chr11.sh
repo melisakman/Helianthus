@@ -25,7 +25,7 @@ module load bcftools/1.6
 # /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c chr11_2/FB_ST_sites_chr11.vcf > chr11_2/FB_ST_sites_chr11.vcf.gz
 # /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c chr11_2/0001.vcf > chr11_2/0001.vcf.gz
 
-/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t chr11_2/0000.vcf.gz chr11_2/FB_ST_sites_chr11.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > chr11_2/FB_ST_sites_chr11_sorted.vcf.gz
+# /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t chr11_2/0000.vcf.gz chr11_2/FB_ST_sites_chr11.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > chr11_2/FB_ST_sites_chr11_sorted.vcf.gz
 
 
 /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-concat \
