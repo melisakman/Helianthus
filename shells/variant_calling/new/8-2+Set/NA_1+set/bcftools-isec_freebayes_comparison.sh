@@ -17,12 +17,12 @@
 module load bcftools/1.6
 module load bio/vcftools
 
-cat freebayes/no_mnp/freebayes_invariant_chr01_chunk4.vcf | bcftools filter -i 'TYPE = "snp"' | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > freebayes/no_mnp/freebayes_variants_chr01_chunk4_snps.vcf.gz
-zcat freebayes/freebayes_invariant_chr01_chunk4.vcf.gz | bcftools filter -i 'TYPE = "snp"' | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > freebayes/freebayes_variants_chr01_chunk4_snps.vcf.gz 
-zcat gvcfs/genotyping/chr01_GATK_SNP.vcf.gz | bcftools filter -i 'TYPE = "snp"' -r HanXRQChr01:12000001-16000000 | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > ../bcftools_isec/chr01_1_VQSR gvcfs/genotyping/chr01_GATK_chunk4_snps.vcf.gz 
+# cat freebayes/no_mnp/freebayes_invariant_chr01_chunk4.vcf | bcftools filter -i 'TYPE = "snp"' | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > freebayes/no_mnp/freebayes_variants_chr01_chunk4_snps.vcf.gz
+# zcat freebayes/freebayes_invariant_chr01_chunk4.vcf.gz | bcftools filter -i 'TYPE = "snp"' | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > freebayes/freebayes_variants_chr01_chunk4_snps.vcf.gz 
+zcat gvcfs/genotyping/chr01_GATK_SNP.vcf.gz | bcftools filter -i 'TYPE = "snp"' -r HanXRQChr01:12000001-16000000 | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > gvcfs/genotyping/chr01_GATK_chunk4_snps.vcf.gz 
 
-/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix freebayes/no_mnp/freebayes_variants_chr01_chunk4_snps.vcf.gz
-/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix freebayes/freebayes_variants_chr01_chunk4_snps.vcf.gz 
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix freebayes/no_mnp/freebayes_variants_chr01_chunk4_snps.vcf.gz
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix freebayes/freebayes_variants_chr01_chunk4_snps.vcf.gz 
 /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix gvcfs/genotyping/chr01_GATK_chunk4_snps.vcf.gz
 
 
