@@ -2,10 +2,12 @@
 #SBATCH -D /global/scratch/makman/GATK/sams/bams/
 #SBATCH -J fb04-20
 #SBATCH --account=fc_blackman
-#SBATCH --partition=savio2_htc
+#SBATCH --partition=savio
 #SBATCH --qos=savio_normal
-#SBATCH --ntasks=1
-#SBATCH --cpus-per-task=1
+#SBATCH --nodes=1
+#SBATCH --mem=64000
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=20
 #SBATCH --time=72:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/freebayes_invariant_chr04_chunk20.out
 #SBATCH -e /global/home/users/makman/GATK/outs/freebayes_invariant_chr04_chunk20.err
