@@ -5,7 +5,7 @@
 #SBATCH --partition=savio2_htc
 #SBATCH --qos=savio_normal
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=1
+#SBATCH --cpus-per-task=4
 #SBATCH --time=72:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/freebayes_invariant_chr14_chunk32.out
 #SBATCH -e /global/home/users/makman/GATK/outs/freebayes_invariant_chr14_chunk32.err
