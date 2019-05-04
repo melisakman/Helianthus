@@ -13,8 +13,8 @@ python create_iterative_file_htc.py 12 164000000
 python create_iterative_file_fc.py 13 174000000
 python create_iterative_file_fc.py 14 174000000
 python create_iterative_file_fc.py 15 176000000
-python create_iterative_file_fc.py 16 208000000
-python create_iterative_file_fc.py 17 196000000
+python create_iterative_file_htc.py 16 208000000
+python create_iterative_file_htc.py 17 196000000
 
 
 01 149502186
