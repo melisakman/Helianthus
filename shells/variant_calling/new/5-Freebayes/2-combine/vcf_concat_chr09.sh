@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /global/scratch/makman/GATK/sams/freebayes/
+#SBATCH -D /global/scratch/makman/GATK/sams/freebayes/no_mnp
 #SBATCH -J catchr09
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio2_htc

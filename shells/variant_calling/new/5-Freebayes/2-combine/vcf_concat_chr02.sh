@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /global/scratch/makman/GATK/sams/freebayes/
+#SBATCH -D /global/scratch/makman/GATK/sams/freebayes/no_mnp
 #SBATCH -J catchr02
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio2_htc
@@ -30,7 +30,8 @@ freebayes_invariant_chr02_chunk13.vcf \
 freebayes_invariant_chr02_chunk14.vcf \
 freebayes_invariant_chr02_chunk15.vcf \
 freebayes_invariant_chr02_chunk16.vcf \
-freebayes_invariant_chr02_chunk17.vcf \
+freebayes_invariant_chr02_chunk17a.vcf \
+freebayes_invariant_chr02_chunk17b.vcf \
 freebayes_invariant_chr02_chunk18.vcf \
 freebayes_invariant_chr02_chunk19.vcf \
 freebayes_invariant_chr02_chunk20.vcf \
