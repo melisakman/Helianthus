@@ -9,14 +9,14 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=20
 #SBATCH --time=72:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/freebayes_invariant_chr02_chunk17a1.out
-#SBATCH -e /global/home/users/makman/GATK/outs/freebayes_invariant_chr02_chunk17a1.err
+#SBATCH -o /global/home/users/makman/GATK/outs/freebayes_invariant_chr02_chunk17_2.out
+#SBATCH -e /global/home/users/makman/GATK/outs/freebayes_invariant_chr02_chunk17_2.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load freebayes/v1.1.0-56-ga180635
 TMPDIR=/clusterfs/rosalind/users/makman/temp
 
-freebayes -f /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta --report-monomorphic --haplotype-length -1 -r HanXRQChr02:64000001-64500000 \
+freebayes -f /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta --report-monomorphic --haplotype-length -1 -r HanXRQChr02:64250001-64500000 \
 Anzac_Pueblo_sorted_markdup_readGroup.bam \
 Ari_Mand_sorted_markdup_readGroup.bam \
 Ari_broa_sorted_markdup_readGroup.bam \
@@ -100,4 +100,4 @@ annSD1W-35_sorted_markdup_readGroup.bam \
 annSD2W-18_sorted_markdup_readGroup.bam \
 annSK1W-Q_sorted_markdup_readGroup.bam \
 annWY_sorted_markdup_readGroup.bam \
-ann1238_lane2_62_5M_markdup_readGroup.bam > ../freebayes/no_mnp/freebayes_invariant_chr02_chunk17a1.vcf
+ann1238_lane2_62_5M_markdup_readGroup.bam > ../freebayes/no_mnp/freebayes_invariant_chr02_chunk17_2.vcf
