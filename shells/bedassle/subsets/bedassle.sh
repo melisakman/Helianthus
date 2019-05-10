@@ -1,13 +1,14 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/vector/scratch/makman/bedassle/final/
+#SBATCH -D /clusterfs/rosalind/users/makman/Arabidopsis/bedassle/final
 #SBATCH -J badass5
-#SBATCH --partition=vector
-#SBATCH --qos=vector_batch
+#SBATCH --account=co_rosalind
+#SBATCH --partition=savio2_htc
+#SBATCH --qos=rosalind_htc2_normal
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=4
-#SBATCH --time=800:00:003
-#SBATCH -o /global/home/users/makman/Arabidopsis/bedassle_summer_precip2.out
-#SBATCH -e /global/home/users/makman/Arabidopsis/bedassle_summer_precip2.err
+#SBATCH --cpus-per-task=12
+#SBATCH --time=880:00:00
+#SBATCH -o /global/home/users/makman/Arabidopsis/bedassle_v22_8.out
+#SBATCH -e /global/home/users/makman/Arabidopsis/bedassle_v22_8.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
