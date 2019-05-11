@@ -90,10 +90,10 @@ head(Climate$Temp_Mean)
 #  printfreq=15, savefreq=15, samplefreq=15, prefix = "all_final_v22_summer_precip_3",
 #  continue = FALSE, continuing.params = NULL)
 
-#MCMC(counts=count, sample_sizes = sample, D=Euc_dist, E=Climate, k=nrow(count), loci=ncol(count), delta = 0.00005,
-#  aD_stp = 0.01, aE_stp = 0.01, a2_stp = 0.001, phi_stp = 0.001, thetas_stp = 0.01, mu_stp = 1.5, ngen = 1e6, 
-#  printfreq=10000, savefreq=1e5, samplefreq=10000, prefix = "all_final_v22_8",
-#  continue = FALSE, continuing.params = NULL)
+MCMC(counts=count, sample_sizes = sample, D=Euc_dist, E=Climate, k=nrow(count), loci=ncol(count), delta = 0.00005,
+  aD_stp = 0.01, aE_stp = 0.01, a2_stp = 0.001, phi_stp = 0.001, thetas_stp = 0.01, mu_stp = 1.5, ngen = 1e6, 
+  printfreq=10000, savefreq=1e5, samplefreq=10000, prefix = "all_final_v22_8",
+  continue = FALSE, continuing.params = NULL)
 
 #MCMC(counts=count, sample_sizes = sample, D=Euc_dist, E=Climate, k=nrow(count), loci=ncol(count), delta = 0.005,
 #  aD_stp = 0.01, aE_stp = 0.01, a2_stp = 0.001, phi_stp = 0.001, thetas_stp = 0.01, mu_stp = 1.5, ngen = 1e6, 
@@ -120,10 +120,10 @@ head(Climate$Temp_Mean)
 #  printfreq=10000, savefreq=1e5, samplefreq=10000, prefix = "all_final_v22_13",
 #  continue = FALSE, continuing.params = NULL)
 #
-MCMC(counts=count, sample_sizes = sample, D=Euc_dist, E=Climate, k=nrow(count), loci=ncol(count), delta = 0.00005,
-  aD_stp = 0.01, aE_stp = 0.01, a2_stp = 0.0001, phi_stp = 0.001, thetas_stp = 0.01, mu_stp = 1.5, ngen = 1e6, 
-  printfreq=10000, savefreq=1e5, samplefreq=10000, prefix = "all_final_v22_14",
-  continue = FALSE, continuing.params = NULL)
+#MCMC(counts=count, sample_sizes = sample, D=Euc_dist, E=Climate, k=nrow(count), loci=ncol(count), delta = 0.00005,
+#  aD_stp = 0.01, aE_stp = 0.01, a2_stp = 0.0001, phi_stp = 0.001, thetas_stp = 0.01, mu_stp = 1.5, ngen = 1e6, 
+#  printfreq=10000, savefreq=1e5, samplefreq=10000, prefix = "all_final_v22_14",
+#  continue = FALSE, continuing.params = NULL)
 
 #MCMC(counts=count, sample_sizes = sample, D=Euc_dist, E=Climate, k=nrow(count), loci=ncol(count), delta = 0.00005,
 #  aD_stp = 0.01, aE_stp = 0.01, a2_stp = 0.01, phi_stp = 0.001, thetas_stp = 0.01, mu_stp = 1.5, ngen = 1e6, 
