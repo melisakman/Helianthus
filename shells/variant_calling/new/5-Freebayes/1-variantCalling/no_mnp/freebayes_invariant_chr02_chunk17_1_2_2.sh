@@ -9,8 +9,8 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=20
 #SBATCH --time=72:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/freebayes_invariant_chr02_chunk17_1_2.out
-#SBATCH -e /global/home/users/makman/GATK/outs/freebayes_invariant_chr02_chunk17_1_2.err
+#SBATCH -o /global/home/users/makman/GATK/outs/freebayes_invariant_chr02_chunk17_1_2_2.out
+#SBATCH -e /global/home/users/makman/GATK/outs/freebayes_invariant_chr02_chunk17_1_2_2.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load freebayes/v1.1.0-56-ga180635
