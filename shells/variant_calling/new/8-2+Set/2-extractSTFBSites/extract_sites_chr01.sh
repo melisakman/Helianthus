@@ -38,6 +38,7 @@ java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar
    --variant chr01_2/0000.vcf.gz \
    --variant chr01_2/FB_ST_sites_chr01_sorted.vcf.gz \
    -o chr01_2plus.vcf \
+   --assumeIdenticalSamples
 
 /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c chr01_2plus.vcf > chr01_2plus.vcf.gz
 
