@@ -34,6 +34,7 @@ freebayes_invariant_chr02_chunk15.vcf \
 freebayes_invariant_chr02_chunk16.vcf \
 freebayes_invariant_chr02_chunk17_1_1.vcf \
 freebayes_invariant_chr02_chunk17_1_2.vcf \
+freebayes_invariant_chr02_chunk17_1_2a.vcf \
 freebayes_invariant_chr02_chunk17_1_2_1_1a.vcf \
 freebayes_invariant_chr02_chunk17_1_2_1_1a1.vcf \
 freebayes_invariant_chr02_chunk17_1_2_1_1a2.vcf \
