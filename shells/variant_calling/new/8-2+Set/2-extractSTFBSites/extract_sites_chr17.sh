@@ -18,14 +18,14 @@ export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcfto
 TMPDIR=/clusterfs/rosalind/users/makman/temp
 module load bcftools/1.6
 
-# gunzip chr17_2/0001.vcf.gz
-# 
-# python ~/git/Helianthus/shells/variant_calling/new/8-2+Set/2-extractSTFBSites/extract_GATK_variants.py chr17_2/0001.vcf chr17_2/sites.txt chr17_2/FB_ST_sites_chr17.vcf
-# 
-# /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c chr17_2/FB_ST_sites_chr17.vcf > chr17_2/FB_ST_sites_chr17.vcf.gz
-# /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c chr17_2/0001.vcf > chr17_2/0001.vcf.gz
+gunzip chr17_2/0001.vcf.gz
 
-# /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t chr17_2/0000.vcf.gz chr17_2/FB_ST_sites_chr17.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > chr17_2/FB_ST_sites_chr17_sorted.vcf.gz
+python ~/git/Helianthus/shells/variant_calling/new/8-2+Set/2-extractSTFBSites/extract_GATK_variants.py chr17_2/0001.vcf chr17_2/sites.txt chr17_2/FB_ST_sites_chr17.vcf
+
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c chr17_2/FB_ST_sites_chr17.vcf > chr17_2/FB_ST_sites_chr17.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c chr17_2/0001.vcf > chr17_2/0001.vcf.gz
+
+/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t chr17_2/0000.vcf.gz chr17_2/FB_ST_sites_chr17.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > chr17_2/FB_ST_sites_chr17_sorted.vcf.gz
 
 
 /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-concat \

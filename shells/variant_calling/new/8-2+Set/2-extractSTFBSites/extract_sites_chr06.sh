@@ -18,12 +18,12 @@ export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcfto
 TMPDIR=/clusterfs/rosalind/users/makman/temp
 module load bcftools/1.6
 
-# gunzip chr06_2/0001.vcf.gz
-# 
-# python ~/git/Helianthus/shells/variant_calling/new/8-2+Set/2-extractSTFBSites/extract_GATK_variants.py chr06_2/0001.vcf chr06_2/sites.txt chr06_2/FB_ST_sites_chr06.vcf
-# 
-# /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c chr06_2/FB_ST_sites_chr06.vcf > chr06_2/FB_ST_sites_chr06.vcf.gz
-# /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c chr06_2/0001.vcf > chr06_2/0001.vcf.gz
+gunzip chr06_2/0001.vcf.gz
+
+python ~/git/Helianthus/shells/variant_calling/new/8-2+Set/2-extractSTFBSites/extract_GATK_variants.py chr06_2/0001.vcf chr06_2/sites.txt chr06_2/FB_ST_sites_chr06.vcf
+
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c chr06_2/FB_ST_sites_chr06.vcf > chr06_2/FB_ST_sites_chr06.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c chr06_2/0001.vcf > chr06_2/0001.vcf.gz
 
 /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t chr06_2/0000.vcf.gz chr06_2/FB_ST_sites_chr06.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > chr06_2/FB_ST_sites_chr06_sorted.vcf.gz
 
