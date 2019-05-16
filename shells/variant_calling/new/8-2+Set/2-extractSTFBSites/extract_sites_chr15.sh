@@ -18,18 +18,37 @@ export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcfto
 TMPDIR=/clusterfs/rosalind/users/makman/temp
 module load bcftools/1.6
 
-gunzip chr15_2/0001.vcf.gz
+# gunzip chr15_2/0001.vcf.gz
+# 
+# python ~/git/Helianthus/shells/variant_calling/new/8-2+Set/2-extractSTFBSites/extract_GATK_variants.py chr15_2/0001.vcf chr15_2/sites.txt chr15_2/FB_ST_sites_chr15.vcf
+# 
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c chr15_2/FB_ST_sites_chr15.vcf > chr15_2/FB_ST_sites_chr15.vcf.gz
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c chr15_2/0001.vcf > chr15_2/0001.vcf.gz
+# 
+# /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t chr15_2/0000.vcf.gz chr15_2/FB_ST_sites_chr15.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > chr15_2/FB_ST_sites_chr15_sorted.vcf.gz
+# 
 
-python ~/git/Helianthus/shells/variant_calling/new/8-2+Set/2-extractSTFBSites/extract_GATK_variants.py chr15_2/0001.vcf chr15_2/sites.txt chr15_2/FB_ST_sites_chr15.vcf
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf chr15_2/FB_ST_sites_chr15_sorted.vcf.gz
 
-/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c chr15_2/FB_ST_sites_chr15.vcf > chr15_2/FB_ST_sites_chr15.vcf.gz
-/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c chr15_2/0001.vcf > chr15_2/0001.vcf.gz
+java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
+   -R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
+   -T CombineVariants \
+   --variant chr15_2/0000.vcf.gz \
+   --variant chr15_2/FB_ST_sites_chr15_sorted.vcf.gz \
+   -o chr15_2plus.vcf \
+   --assumeIdenticalSamples
 
-/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t chr15_2/0000.vcf.gz chr15_2/FB_ST_sites_chr15.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > chr15_2/FB_ST_sites_chr15_sorted.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c chr15_2plus.vcf > chr15_2plus.vcf.gz
 
 
-/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-concat \
-chr15_2/0000.vcf.gz chr15_2/FB_ST_sites_chr15_sorted.vcf.gz | /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-sort > chr15_2plus_update.vcf.gz
+
+
+
+
+
+# not used
+# /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-concat \
+# chr15_2/0000.vcf.gz chr15_2/FB_ST_sites_chr15_sorted.vcf.gz | /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-sort > chr15_2plus_update.vcf.gz
 
 
 
