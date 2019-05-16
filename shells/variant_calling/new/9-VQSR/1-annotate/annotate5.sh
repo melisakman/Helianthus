@@ -15,8 +15,6 @@
 module load java
 module load gatk/4.0.1.2
 
-mv chr05_2plus.vcf.gz chr05_2plus.vcf
-/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c chr05_2plus.vcf > chr05_2plus.vcf.gz
 
 /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf chr05_2plus.vcf.gz  
 
