@@ -63,7 +63,7 @@ R_LIBS_USER=/global/home/users/makman/R/x86_64-pc-linux-gnu-library/3.4/
 -mode SNP \
 --resource 3callerscombined,known=false,training=true,truth=true,prior=10.0:truthSet/truth_GATK.vcf \
 -O G8_unfiltered_all_tranches.recal \
--tranche 99 -tranche 95 -tranche 92 -tranche 90 -tranche 80 -tranche 70 \
+-tranche 99 -tranche 95 -tranche 92 -tranche 90 \
 --tranches-file G8_unfiltered_all_tranches.tranches \
 --rscript-file G8_unfiltered_all_tranches.plots.R
  
