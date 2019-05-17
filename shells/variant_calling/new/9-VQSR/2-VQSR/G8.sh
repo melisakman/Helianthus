@@ -1,14 +1,12 @@
 #!/bin/bash 
 #SBATCH -D /global/scratch/makman/GATK/bcftools_isec/
 #SBATCH -J G8
-#SBATCH --account=co_rosalind
-#SBATCH --partition=savio
-#SBATCH --qos=rosalind_savio_normal
-#SBATCH --nodes=1
-#SBATCH --mem=64000
-#SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=20
-#SBATCH --time=80:00:00
+#SBATCH --account=fc_blackman
+#SBATCH --partition=savio2_htc
+#SBATCH --qos=savio_normal
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=6
+#SBATCH --time=72:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/VSQRG8_90.out
 #SBATCH -e /global/home/users/makman/GATK/outs/VSQRG8_90.err
 #SBATCH --mail-user=makman@berkeley.edu
@@ -56,19 +54,6 @@ R_LIBS_USER=/global/home/users/makman/R/x86_64-pc-linux-gnu-library/3.4/
 # 
 
 
-# /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/gatk-4.0.1.2/gatk VariantRecalibrator \
-# --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" \
-# -R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
-# -V allChr_2plus_annot.vcf.gz \
-# -an QD -an MQ -an MQRankSum -an ReadPosRankSum -an FS -an SOR -an DP -an InbreedingCoeff \
-# --max-gaussians 8 \
-# -mode SNP \
-# --resource 3callerscombined,known=false,training=true,truth=true,prior=10.0:truthSet/truth_GATK.vcf \
-# -O G8_unfiltered_all_tranches.recal \
-# -tranche 90 -tranche 80 -tranche 70 \
-# --tranches-file G8_unfiltered_all_tranches.tranches \
-# --rscript-file G8_unfiltered_all_tranches.plots.R
- 
 /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/gatk-4.0.1.2/gatk VariantRecalibrator \
 --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" \
 -R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
@@ -77,7 +62,8 @@ R_LIBS_USER=/global/home/users/makman/R/x86_64-pc-linux-gnu-library/3.4/
 --max-gaussians 8 \
 -mode SNP \
 --resource 3callerscombined,known=false,training=true,truth=true,prior=10.0:truthSet/truth_GATK.vcf \
--O G8_unfiltered_90_tranches.recal \
--tranche 99 -tranche 95 -tranche 90 \
---tranches-file G8_unfiltered_90_tranches.tranches \
---rscript-file G8_unfiltered_90_tranches.plots.R
+-O G8_unfiltered_all_tranches.recal \
+-tranche 99 -tranche 95 -tranche 92 -tranche 90 -tranche 80 -tranche 70 \
+--tranches-file G8_unfiltered_all_tranches.tranches \
+--rscript-file G8_unfiltered_all_tranches.plots.R
+ 
