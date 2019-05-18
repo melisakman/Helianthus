@@ -8,7 +8,7 @@
 #SBATCH --cpus-per-task=6
 #SBATCH --time=72:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/VSQRG8_90.out
-#SBATCH -e /global/home/users/makman/GATK/outs/VSQRG8_90.err
+#SBATCH -e /global/scratch/makman/VSQRG8_90.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
