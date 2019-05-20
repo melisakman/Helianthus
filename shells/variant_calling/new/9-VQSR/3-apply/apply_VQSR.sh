@@ -9,8 +9,8 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=20
 #SBATCH --time=80:00:00
-#SBATCH -o /global/home/users/makman/GATK/outs/VSQRG8_90_apply.out
-#SBATCH -e /global/home/users/makman/GATK/outs/VSQRG8_90_apply.err
+#SBATCH -o /global/home/users/makman/GATK/outs/VSQRG8_99_apply.out
+#SBATCH -e /global/home/users/makman/GATK/outs/VSQRG8_99_apply.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
@@ -23,8 +23,9 @@ module load gatk/4.0.1.2
 -V allChr_2plus_annot.vcf.gz \
 -O allChr_2plus_annot_G8_VQSR99.vcf.gz \
 -ts-filter-level 99.0 \
---tranches-file G8_unfiltered_90_tranches.tranches \
---recal-file G8_unfiltered_90_tranches.recal \
+--tranches-file G8_unfiltered_all_tranches.tranches \
+--recal-file G8_unfiltered_all_tranches.recal \
 --exclude-filtered \
 -mode SNP
+
 
