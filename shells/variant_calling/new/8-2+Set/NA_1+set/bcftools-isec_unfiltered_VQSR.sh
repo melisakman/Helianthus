@@ -24,17 +24,20 @@ module load bio/vcftools
 # /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix samtools/samtools_variants_chr01.vcf.gz
 
 
-/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix ../bcftools_isec/allChr_2plus_annot_G8_VQSR99.vcf.gz
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix ../bcftools_isec/allChr_2plus_annot_G8_VQSR99.vcf.gz
+# 
+# bcftools view ../bcftools_isec/allChr_2plus_annot_G8_VQSR99.vcf.gz -r HanXRQChr01 | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > ../bcftools_isec/chr01_2plus_annot_G8_VQSR99.vcf.gz
+# 
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix ../bcftools_isec/chr01_2plus_annot_G8_VQSR99.vcf.gz 
+# 
+# bcftools isec -n +1 -O z -p ../bcftools_isec/chr01_1_VQSR gvcfs/genotyping/chr01_GATK_SNP.vcf.gz \
+# freebayes/freebayes_variants_chr01.vcf.gz \
+# samtools/samtools_variants_chr01.vcf.gz \
+# ../bcftools_isec/chr01_2plus_annot_G8_VQSR99.vcf.gz
 
-bcftools view ../bcftools_isec/allChr_2plus_annot_G8_VQSR99.vcf.gz -r HanXRQChr01 | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > ../bcftools_isec/chr01_2plus_annot_G8_VQSR99.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix ../bcftools_isec/allChr_2plus_annot.vcf.gz
 
-/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix ../bcftools_isec/chr01_2plus_annot_G8_VQSR99.vcf.gz 
-
-bcftools isec -n +1 -O z -p ../bcftools_isec/chr01_1_VQSR gvcfs/genotyping/chr01_GATK_SNP.vcf.gz \
-freebayes/freebayes_variants_chr01.vcf.gz \
-samtools/samtools_variants_chr01.vcf.gz \
-../bcftools_isec/chr01_2plus_annot_G8_VQSR99.vcf.gz
-
+bcftools view ../bcftools_isec/allChr_2plus_annot.vcf.gz -r HanXRQChr01 | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > ../bcftools_isec/chr01_2plus_annot.vcf.gz
 
 
 
