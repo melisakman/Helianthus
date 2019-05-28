@@ -1,9 +1,9 @@
 #!/bin/bash 
 #SBATCH -D /global/scratch/makman/GATK/sams/
 #SBATCH -J G6
-#SBATCH --account=fc_blackman
+#SBATCH --account=co_rosalind
 #SBATCH --partition=savio2_htc
-#SBATCH --qos=savio_normal
+#SBATCH --qos=rosalind_htc2_normal
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=6
 #SBATCH --time=72:00:00
