@@ -32,3 +32,6 @@ export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcfto
 -O chr01_GATK_all_hardfiltered.vcf.gz
 	
 cp chr01_GATK_all_hardfiltered.vcf.gz* /clusterfs/vector/instrumentData/blackmanlab/Helianthus/GATK_4Peter
+
+
+## /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/gatk-4.0.1.2/gatk

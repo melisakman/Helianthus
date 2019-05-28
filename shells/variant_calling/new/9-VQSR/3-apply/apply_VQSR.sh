@@ -17,15 +17,25 @@
 module load gatk/4.0.1.2
 
 
+# /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/gatk-4.0.1.2/gatk ApplyVQSR \
+# --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" \
+# -R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
+# -V allChr_2plus_annot.vcf.gz \
+# -O allChr_2plus_annot_G8_VQSR99.vcf.gz \
+# -ts-filter-level 99.0 \
+# --tranches-file G8_unfiltered_all_tranches.tranches \
+# --recal-file G8_unfiltered_all_tranches.recal \
+# --exclude-filtered \
+# -mode SNP
+
+
 /clusterfs/vector/home/groups/software/sl-7.x86_64/modules/gatk-4.0.1.2/gatk ApplyVQSR \
 --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" \
 -R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
--V allChr_2plus_annot.vcf.gz \
--O allChr_2plus_annot_G8_VQSR99.vcf.gz \
+-V ../JS/vqsr_50.00-70.00-90.00-99.00-100.00_HanXRQChr01.vcf.gz \
+-O ../JS/vqsr_50.00-70.00-90.00-99.00-100.00_HanXRQChr01_VQSR99.vcf.gz \
 -ts-filter-level 99.0 \
 --tranches-file G8_unfiltered_all_tranches.tranches \
 --recal-file G8_unfiltered_all_tranches.recal \
 --exclude-filtered \
 -mode SNP
-
-
