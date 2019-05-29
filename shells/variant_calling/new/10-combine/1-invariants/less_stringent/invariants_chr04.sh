@@ -16,13 +16,13 @@ module load bcftools/1.6
 module load bio/vcftools
 
 
-zcat freebayes/freebayes_invariant_chr04_combined.vcf.gz | bcftools filter -g 5 -i 'TYPE = "ref"' | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > freebayes/freebayes_invariant_chr04_combined_ref.vcf.gz
-zcat samtools/samtools_invariant_chr04_dupsRemoved.vcf.gz | bcftools filter -g 5 -i 'TYPE = "ref"' | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > samtools/samtools_invariant_chr04_dupsRemoved_ref.vcf.gz
+zcat freebayes/no_mnp/freebayes_invariant_chr04_.vcf.gz | bcftools filter -g 5 -i 'TYPE = "ref"' | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > freebayes/no_mnp/freebayes_invariant_chr04_ref.vcf.gz
+# zcat samtools/samtools_invariant_chr04_dupsRemoved.vcf.gz | bcftools filter -g 5 -i 'TYPE = "ref"' | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > samtools/samtools_invariant_chr04_dupsRemoved_ref.vcf.gz
 
-/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix freebayes/freebayes_invariant_chr04_combined_ref.vcf.gz
-/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix samtools/samtools_invariant_chr04_dupsRemoved_ref.vcf.gz
-/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix gvcfs/genotyping/chr04_GATK_NoVar.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix freebayes/no_mnp/freebayes_invariant_chr04_ref.vcf.gz
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix samtools/samtools_invariant_chr04_dupsRemoved_ref.vcf.gz
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix gvcfs/genotyping/chr04_GATK_NoVar.vcf.gz
 
-bcftools isec -n +2 -O z -p ../bcftools_isec/chr04_2_ref_unfiltered gvcfs/genotyping/chr04_GATK_NoVar.vcf.gz \
-freebayes/freebayes_invariant_chr04_combined_ref.vcf.gz \
+bcftools isec -n +2 -O z -p ../bcftools_isec/chr04_2_ref gvcfs/genotyping/chr04_GATK_NoVar.vcf.gz \
+freebayes/no_mnp/freebayes_invariant_chr04_ref.vcf.gz \
 samtools/samtools_invariant_chr04_dupsRemoved_ref.vcf.gz 
