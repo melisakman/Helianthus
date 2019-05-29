@@ -14,4 +14,7 @@
 
 # gunzip gvcfs/genotyping/chr01_GATK.vcf.gz
 
-python /global/home/users/makman/git/Helianthus/shells/variant_calling/new/JS_comp/not_MA.py /global/scratch/makman/GATK/bcftools_isec/chr01_1_JS_GATK/sites.txt gvcfs/genotyping/chr01_GATK.vcf /global/scratch/makman/GATK/bcftools_isec/chr01_1_JS_GATK/JS_MA_comp.txt
+# python /global/home/users/makman/git/Helianthus/shells/variant_calling/new/JS_comp/not_MA.py /global/scratch/makman/GATK/bcftools_isec/chr01_1_JS_GATK/sites.txt gvcfs/genotyping/chr01_GATK.vcf /global/scratch/makman/GATK/bcftools_isec/chr01_1_JS_GATK/JS_MA_comp.txt
+
+
+python /global/home/users/makman/git/Helianthus/shells/variant_calling/new/JS_comp/not_MA.py /global/scratch/makman/GATK/bcftools_isec/chr01_1_JS_GATK_INDEL/sites.txt gvcfs/genotyping/chr01_GATK.vcf /global/scratch/makman/GATK/bcftools_isec/chr01_1_JS_GATK_INDEL/JS_MA_comp.txt
