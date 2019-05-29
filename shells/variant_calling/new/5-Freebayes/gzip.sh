@@ -1,6 +1,6 @@
 #!/bin/bash 
-#SBATCH -D /global/scratch/makman/GATK/sams/freebayes
-#SBATCH -J comchr01
+#SBATCH -D /global/scratch/makman/GATK/sams/freebayes/no_mnp
+#SBATCH -J gzip
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio2_htc
 #SBATCH --qos=rosalind_htc2_normal
