@@ -15,9 +15,9 @@ positions = {}
 for line in file1:
 	split1 = line.split("\t")
 	pos = split1[1]
-	ref = split[2]
-	alt = split[3]
-	category = split[4]
+	ref = split1[2]
+	alt = split1[3]
+	category = split1[4]
 	if category == "01":
 		positions[pos] = [ref, alt]
 
