@@ -14,19 +14,20 @@ positions = {}
 
 for line in file1:
 	split1 = line.split("\t")
-	pos = split1[1]
+	pos = int(split1[1])
 	ref = split1[2]
 	alt = split1[3]
 	category = split1[4]
 	if category == "01":
 		positions[pos] = [ref, alt]
+print positions
 
 for line2 in file2:
 	split2 = line2.split("\t")
 	if split2[0][0] == "#":
 		continue
 	else:
-		pos2 = split2[1]
+		pos2 = int(split2[1])
 		ref2 = split2[3]
 		alt2 = split2[4]	
 		if pos2 in positions:
