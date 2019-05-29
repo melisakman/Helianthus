@@ -27,7 +27,7 @@ for line2 in file2:
 	if split2[0][0] == "#":
 		continue
 	else:
-		pos2 = int(split2[1])
+		pos2 = split2[1]
 		ref2 = split2[3]
 		alt2 = split2[4]	
 		list = positions[pos2]
