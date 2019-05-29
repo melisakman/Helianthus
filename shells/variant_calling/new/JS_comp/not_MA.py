@@ -17,12 +17,9 @@ for line in file1:
 	pos = int(split1[1])
 	ref = split1[2]
 	alt = split1[3]
-	category = split1[4]
-	print category
+	category = split1[4][:-1]
 	if category == "01":
-		print 1
 		positions[pos] = [ref, alt]
-print positions
 
 for line2 in file2:
 	split2 = line2.split("\t")
