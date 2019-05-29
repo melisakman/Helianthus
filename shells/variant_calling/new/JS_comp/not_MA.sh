@@ -1,6 +1,6 @@
 #!/bin/bash 
 #SBATCH -D /global/scratch/makman/GATK/sams/
-#SBATCH -J G6
+#SBATCH -J not_MA
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio
 #SBATCH --qos=rosalind_savio_normal
