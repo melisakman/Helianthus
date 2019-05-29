@@ -37,15 +37,15 @@ for line2 in file2:
 			else:
 				if len(alt2) == 3:
 					other_count +=1
-					if alt2[0] =="*" or alt[2] =="*":
+					if alt2[0] =="*" or alt2[2] =="*":
 						del_count +=1
 				elif len(alt2) == 5:
 					other_count +=1
-					if alt2[0] =="*" or alt[2] =="*" or alt[4] =="*":
+					if alt2[0] =="*" or alt2[2] =="*" or alt2[4] =="*":
 						del_count +=1
 				elif len(alt2) == 7:
 					other_count +=1
-					if alt2[0] =="*" or alt[2] =="*" or alt[4] =="*" or alt[6] =="*":
+					if alt2[0] =="*" or alt2[2] =="*" or alt2[4] =="*" or alt2[6] =="*":
 						del_count +=1
 			list = positions[pos2]
 			JS_ref = list[0]
