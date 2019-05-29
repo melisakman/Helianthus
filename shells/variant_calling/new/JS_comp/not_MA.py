@@ -34,18 +34,19 @@ for line2 in file2:
 		if pos2 in positions:
 			if alt2 == ".":
 				ref_count +=1
-			elif len(alt2) == 3:
-				other_count +=1
-				if alt2[0] =="*" or alt[2] =="*":
-					del_count +=1
-			elif len(alt2) == 5:
-				other_count +=1
-				if alt2[0] =="*" or alt[2] =="*" or alt[4] =="*":
-					del_count +=1
-			elif len(alt2) == 7:
-				other_count +=1
-				if alt2[0] =="*" or alt[2] =="*" or alt[4] =="*" or alt[6] =="*":
-					del_count +=1
+			else:
+				if len(alt2) == 3:
+					other_count +=1
+					if alt2[0] =="*" or alt[2] =="*":
+						del_count +=1
+				elif len(alt2) == 5:
+					other_count +=1
+					if alt2[0] =="*" or alt[2] =="*" or alt[4] =="*":
+						del_count +=1
+				elif len(alt2) == 7:
+					other_count +=1
+					if alt2[0] =="*" or alt[2] =="*" or alt[4] =="*" or alt[6] =="*":
+						del_count +=1
 			list = positions[pos2]
 			JS_ref = list[0]
 			JS_alt = list[1]
