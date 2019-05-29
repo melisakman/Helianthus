@@ -17,7 +17,7 @@ for line in file1:
 	alt = split[3]
 	category = split[4]
 	if category == "01":
-		positions(pos) = [ref, alt]
+		positions[pos] = [ref, alt]
 
 for line2 in file2:
 	split2 = line2.split("\t")
@@ -25,4 +25,4 @@ for line2 in file2:
 	ref2 = split2[3]
 	alt2 = split2[4]	
 	if pos2 in positions:
-		file_out.write(pos + "\t" + ref2 + "\t" + alt2 + "\tJS: " + positions(pos))
+		file_out.write(pos + "\t" + ref2 + "\t" + alt2 + "\tJS: " + positions[pos])
