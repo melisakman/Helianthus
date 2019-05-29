@@ -21,7 +21,6 @@ for line in file1:
 	if category == "01":
 		positions[pos] = [ref, alt]
 ref_count = 0
-other_count = 0
 del_count = 0
 for line2 in file2:
 	split2 = line2.split("\t")
@@ -31,26 +30,32 @@ for line2 in file2:
 		pos2 = int(split2[1])
 		ref2 = split2[3]
 		alt2 = split2[4]	
+		list = positions[pos2]
+		JS_ref = list[0]
+		JS_alt = list[1]
+		file_out.write(str(pos2) + "\t" + ref2 + "\t" + alt2 + "\tJS: " + JS_ref + "/" + JS_alt + "\n")
 		if pos2 in positions:
 			if alt2 == ".":
 				ref_count +=1
 			else:
-				if len(alt2) == 3:
-					other_count +=1
-					if alt2[0] =="*" or alt2[2] =="*":
+				if len(JS_alt) == 3:
+					if JS_alt[0] =="*" or JS_alt[2] =="*":
 						del_count +=1
-				elif len(alt2) == 5:
-					other_count +=1
-					if alt2[0] =="*" or alt2[2] =="*" or alt2[4] =="*":
+					else:
+						other_count +=1
+				elif len(JS_alt) == 5:
+					
+					if JS_alt[0] =="*" or JS_alt[2] =="*" or JS_alt[4] =="*":
 						del_count +=1
-				elif len(alt2) == 7:
-					other_count +=1
-					if alt2[0] =="*" or alt2[2] =="*" or alt2[4] =="*" or alt2[6] =="*":
+					else:
+						other_count +=1
+				elif len(JS_alt) == 7:
+
+					if JS_alt[0] =="*" or JS_alt[2] =="*" or JS_alt[4] =="*" or JS_alt[6] =="*":
 						del_count +=1
-			list = positions[pos2]
-			JS_ref = list[0]
-			JS_alt = list[1]
-			file_out.write(str(pos2) + "\t" + ref2 + "\t" + alt2 + "\tJS: " + JS_ref + "/" + JS_alt + "\n")
+					else:
+						other_count +=1
+			
 print ref_count
 print other_count
 print del_count
