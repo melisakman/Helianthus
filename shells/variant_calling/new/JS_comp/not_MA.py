@@ -30,4 +30,5 @@ for line2 in file2:
 		ref2 = split2[3]
 		alt2 = split2[4]	
 		if pos2 in positions:
-			file_out.write(str(pos) + "\t" + ref2 + "\t" + alt2 + "\tJS: " + str(positions[pos]))
+			JS = str(positions[pos])
+			file_out.write(str(pos) + "\t" + ref2 + "\t" + alt2 + "\tJS: " + JS)
