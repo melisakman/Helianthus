@@ -1,3 +1,5 @@
+import sys
+
 InputFile1 = sys.argv[1] # sites file
 InputFile2 = sys.argv[2] # vcf file
 
