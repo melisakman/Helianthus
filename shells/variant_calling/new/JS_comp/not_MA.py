@@ -33,4 +33,4 @@ for line2 in file2:
 			list = positions[pos2]
 			JS_ref = list[0]
 			JS_alt = list[1]
-			file_out.write(str(pos) + "\t" + ref2 + "\t" + alt2 + "\tJS: " + JS_ref + "/" + JS_alt + "\n")
+			file_out.write(str(pos2) + "\t" + ref2 + "\t" + alt2 + "\tJS: " + JS_ref + "/" + JS_alt + "\n")
