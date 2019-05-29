@@ -23,8 +23,11 @@ for line in file1:
 
 for line2 in file2:
 	split2 = line2.split("\t")
-	pos2 = split2[1]
-	ref2 = split2[3]
-	alt2 = split2[4]	
-	if pos2 in positions:
-		file_out.write(pos + "\t" + ref2 + "\t" + alt2 + "\tJS: " + positions[pos])
+	if split2[0][0] == "#":
+		continue
+	else:
+		pos2 = split2[1]
+		ref2 = split2[3]
+		alt2 = split2[4]	
+		if pos2 in positions:
+			file_out.write(pos + "\t" + ref2 + "\t" + alt2 + "\tJS: " + positions[pos])
