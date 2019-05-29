@@ -19,6 +19,7 @@ for line in file1:
 	alt = split1[3]
 	category = split1[4]
 	if category == "01":
+		print 1
 		positions[pos] = [ref, alt]
 print positions
 
