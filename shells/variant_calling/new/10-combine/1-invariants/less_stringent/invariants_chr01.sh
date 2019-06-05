@@ -23,7 +23,7 @@ zcat freebayes/no_mnp/freebayes_invariant_chr01_combined.vcf.gz | bcftools filte
 # /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix samtools/samtools_invariant_chr01_dupsRemoved_ref.vcf.gz
 # /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix gvcfs/genotyping/chr01_GATK_NoVar.vcf.gz
 # 
-bcftools isec -n +2 -O z -p ../bcftools_isec/chr01_2_ref_unfiltered gvcfs/genotyping/chr01_GATK_NoVar.vcf.gz \
+bcftools isec -n +2 -O z -p ../bcftools_isec/chr01_2_ref gvcfs/genotyping/chr01_GATK_NoVar.vcf.gz \
 freebayes/no_mnp/freebayes_invariant_chr01_ref.vcf.gz \
 samtools/samtools_invariant_chr01_dupsRemoved_ref.vcf.gz 
 
