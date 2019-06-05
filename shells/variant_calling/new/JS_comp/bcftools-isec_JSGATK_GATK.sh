@@ -59,3 +59,4 @@ bcftools isec -n +1 -O z -p ../bcftools_isec/chr01_1_JS_GATK_BND gvcfs/genotypin
 
 bcftools isec -n +1 -O z -p ../bcftools_isec/chr01_1_JS_GATK_other gvcfs/genotyping/chr01_GATK_other.vcf.gz \
 ../JS/vqsr_50.00-70.00-90.00-99.00-100.00_HanXRQChr01_other.vcf.gz 
+
