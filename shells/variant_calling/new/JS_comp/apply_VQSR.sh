@@ -22,5 +22,6 @@ module load gatk/4.0.1.2
 --java-options "-Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files/ -Xmx64G" \
 -R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
 -V ../JS/vqsr_50.00-70.00-90.00-99.00-100.00_HanXRQChr01.vcf.gz \
--O ../JS/vqsr_50.00-70.00-90.00-99.00-100.00_HanXRQChr01_VQSR99.vcf.gz \
---selectExpressions "PASS & VQSRTrancheINDEL50.00to70.00 & VQSRTrancheSNP90.00to99.00 & VQSRTrancheSNP70.00to90.00"
+-O ../JS/vqsr_50.00-70.00-90.00-99.00-100.00_HanXRQChr01_SNP_VQSR99.vcf.gz \
+-select "vc.isSNP()" \
+-select "vc.isNotFiltered() || vc.getFilters().contains('VQSRTrancheSNP50.00to70.00') || vc.getFilters().contains('VQSRTrancheSNP70.00to90.00') || vc.getFilters().contains('VQSRTrancheSNP90.00to99.00')"
