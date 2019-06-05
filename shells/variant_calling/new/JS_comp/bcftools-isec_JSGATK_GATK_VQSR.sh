@@ -17,6 +17,6 @@ module load bio/vcftools
 
 
 
-bcftools isec -n +1 -O z -p bcftools_isec/chr01_1_JS_GATK_VQSR chr01_2plus_annot_G8_VQSR99.vcf.gz \
+bcftools isec -n +1 -O z -p bcftools_isec/chr01_1_JS_GATK_VQSR bcftools_isec/chr01_2plus_annot_G8_VQSR99.vcf.gz \
 JS/vqsr_50.00-70.00-90.00-99.00-100.00_HanXRQChr01_SNP_VQSR99.vcf.gz
 
