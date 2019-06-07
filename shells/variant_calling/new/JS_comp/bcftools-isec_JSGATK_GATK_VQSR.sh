@@ -21,7 +21,7 @@ module load bio/vcftools
 # JS/vqsr_50.00-70.00-90.00-99.00-100.00_HanXRQChr01_SNP_VQSR99.vcf.gz
 
 
-/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c bcftools_isec/chr01_2plus_annot_G8_VQSR99.vcf > bcftools_isec/chr01_2plus_annot_G8_VQSR99.vcf.gz
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c bcftools_isec/chr01_2plus_annot_G8_VQSR99.vcf > bcftools_isec/chr01_2plus_annot_G8_VQSR99.vcf.gz
 
 
 bcftools isec -n +1 -O z -p bcftools_isec/chr01_1_JS_GATK_VQSR_noVQSR bcftools_isec/chr01_2plus_annot_G8_VQSR99.vcf.gz \
