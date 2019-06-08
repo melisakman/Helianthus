@@ -26,9 +26,9 @@ zcat samtools/samtools_invariant_chr14_dupsRemoved.vcf.gz | bcftools filter -g 5
 /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix samtools/samtools_invariant_chr14_dupsRemoved_ref.vcf.gz
 /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix gvcfs/genotyping/chr14_GATK_NoVar.vcf.gz
 
-bcftools isec -n +2 -O z -p ../bcftools_isec/chr14_2_ref gvcfs/genotyping/chr14_GATK_NoVar.vcf.gz \
-freebayes/no_mnp/freebayes_invariant_chr14_ref.vcf.gz \
-samtools/samtools_invariant_chr14_dupsRemoved_ref.vcf.gz 
+# bcftools isec -n +2 -O z -p ../bcftools_isec/chr14_2_ref gvcfs/genotyping/chr14_GATK_NoVar.vcf.gz \
+# freebayes/no_mnp/freebayes_invariant_chr14_ref.vcf.gz \
+# samtools/samtools_invariant_chr14_dupsRemoved_ref.vcf.gz 
 
 gunzip ../bcftools_isec/chr14_2_ref/0001.vcf.gz
 
