@@ -32,9 +32,9 @@ module load bio/vcftools
 # samtools/samtools_invariant_chr01_dupsRemoved_ref.vcf.gz 
 
 
-gunzip ../bcftools_isec/chr01_1_ref/0001.vcf.gz
+# gunzip ../bcftools_isec/chr01_1_ref/0001.vcf.gz
 
-python ~/git/Helianthus/shells/variant_calling/new/8-2+Set/2-extractSTFBSites/extract_GATK_variants.py ../bcftools_isec/chr01_1_ref/0001.vcf ../bcftools_isec/chr01_1_ref/sites.txt ../bcftools_isec/chr01_1_ref/FB_ST_sites_chr01.vcf
+python ~/git/Helianthus/shells/variant_calling/new/8-2+Set/2-extractSTFBSites/extract_GATK_variants.py ../bcftools_isec/chr01_1_ref/0001.vcf ../bcftools_isec/chr01_1_ref/sites.txt
 
 /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c ../bcftools_isec/chr01_1_ref/FB_ST_sites_chr01.vcf > ../bcftools_isec/chr01_1_ref/FB_ST_sites_chr01.vcf.gz
 /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c ../bcftools_isec/chr01_1_ref/0001.vcf > ../bcftools_isec/chr01_1_ref/0001.vcf.gz
@@ -54,7 +54,7 @@ java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar
 
 /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c ../bcftools_isec/chr01_1_ref/chr01_2plus_ref.vcf > chr01_2plus.vcf.gz
 
-rm ../bcftools_isec/chr01_1_ref/chr01_2plus_ref.vcf
-rm ../bcftools_isec/chr01_1_ref/FB_ST_sites_chr01.vcf.gz
-rm ../bcftools_isec/chr01_1_ref/FB_ST_sites_chr01.vcf
-rm ../bcftools_isec/chr01_1_ref/0001.vcf.gz
+# rm ../bcftools_isec/chr01_1_ref/chr01_2plus_ref.vcf
+# rm ../bcftools_isec/chr01_1_ref/FB_ST_sites_chr01.vcf.gz
+# rm ../bcftools_isec/chr01_1_ref/FB_ST_sites_chr01.vcf
+# rm ../bcftools_isec/chr01_1_ref/0001.vcf.gz
