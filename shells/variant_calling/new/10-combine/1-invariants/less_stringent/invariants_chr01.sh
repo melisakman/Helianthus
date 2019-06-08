@@ -8,7 +8,7 @@
 #SBATCH --cpus-per-task=6
 #SBATCH --time=72:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/chr01_invariants_bcftools.out
-#SBATCH -e /global/home/users/makman/GATK/outs/chr01_invariants_bcftools.err
+#SBATCH -e /global/scratch/makman/GATK/outs/chr01_invariants_bcftools.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
