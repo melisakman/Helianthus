@@ -17,16 +17,44 @@ module load bio/vcftools
 
 # /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c freebayes/no_mnp/freebayes_invariant_chr01.vcf > freebayes/no_mnp/freebayes_invariant_chr01.vcf.gz
 # zcat freebayes/no_mnp/freebayes_invariant_chr01_combined.vcf.gz | bcftools filter -g 5 -i 'TYPE = "ref"' | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > freebayes/no_mnp/freebayes_invariant_chr01_ref.vcf.gz
-cat samtools/samtools_invariant_chr01_dupsRemoved.vcf | bcftools filter -g 5 -i 'TYPE = "ref"' | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > samtools/samtools_invariant_chr01_dupsRemoved_ref.vcf.gz
-
-# /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix freebayes/no_mnp/freebayes_invariant_chr01_ref.vcf.gz
-/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix samtools/samtools_invariant_chr01_dupsRemoved_ref.vcf.gz
-# /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix gvcfs/genotyping/chr01_GATK_NoVar.vcf.gz
+# cat samtools/samtools_invariant_chr01_dupsRemoved.vcf | bcftools filter -g 5 -i 'TYPE = "ref"' | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > samtools/samtools_invariant_chr01_dupsRemoved_ref.vcf.gz
 # 
-bcftools isec -n +2 -O z -p ../bcftools_isec/chr01_2_ref gvcfs/genotyping/chr01_GATK_NoVar.vcf.gz \
-freebayes/no_mnp/freebayes_invariant_chr01_ref.vcf.gz \
-samtools/samtools_invariant_chr01_dupsRemoved_ref.vcf.gz 
+# # /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix freebayes/no_mnp/freebayes_invariant_chr01_ref.vcf.gz
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix samtools/samtools_invariant_chr01_dupsRemoved_ref.vcf.gz
+# # /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix gvcfs/genotyping/chr01_GATK_NoVar.vcf.gz
+# # 
+# bcftools isec -n +2 -O z -p ../bcftools_isec/chr01_2_ref gvcfs/genotyping/chr01_GATK_NoVar.vcf.gz \
+# freebayes/no_mnp/freebayes_invariant_chr01_ref.vcf.gz \
+# samtools/samtools_invariant_chr01_dupsRemoved_ref.vcf.gz 
 
 # bcftools isec -n +1 -O z -p ../bcftools_isec/chr01_1_ref gvcfs/genotyping/chr01_GATK_NoVar.vcf.gz \
 # freebayes/no_mnp/freebayes_invariant_chr01_ref.vcf.gz \
 # samtools/samtools_invariant_chr01_dupsRemoved_ref.vcf.gz 
+
+
+gunzip ../bcftools_isec/chr01_1_ref/0001.vcf.gz
+
+python ~/git/Helianthus/shells/variant_calling/new/8-2+Set/2-extractSTFBSites/extract_GATK_variants.py ../bcftools_isec/chr01_1_ref/0001.vcf ../bcftools_isec/chr01_1_ref/sites.txt ../bcftools_isec/chr01_1_ref/FB_ST_sites_chr01.vcf
+
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c ../bcftools_isec/chr01_1_ref/FB_ST_sites_chr01.vcf > ../bcftools_isec/chr01_1_ref/FB_ST_sites_chr01.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c ../bcftools_isec/chr01_1_ref/0001.vcf > ../bcftools_isec/chr01_1_ref/0001.vcf.gz
+
+/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t ../bcftools_isec/chr01_1_ref/0000.vcf.gz ../bcftools_isec/chr01_1_ref/FB_ST_sites_chr01.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > ../bcftools_isec/chr01_1_ref/FB_ST_sites_chr01_sorted.vcf.gz
+
+
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf ../bcftools_isec/chr01_1_ref/FB_ST_sites_chr01_sorted.vcf.gz
+
+java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
+   -R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
+   -T CombineVariants \
+   --variant ../bcftools_isec/chr01_1_ref/0000.vcf.gz \
+   --variant ../bcftools_isec/chr01_1_ref/FB_ST_sites_chr01_sorted.vcf.gz \
+   -o ../bcftools_isec/chr01_1_ref/chr01_2plus_ref.vcf \
+   --assumeIdenticalSamples
+
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c ../bcftools_isec/chr01_1_ref/chr01_2plus_ref.vcf > chr01_2plus.vcf.gz
+
+rm ../bcftools_isec/chr01_1_ref/chr01_2plus_ref.vcf
+rm ../bcftools_isec/chr01_1_ref/FB_ST_sites_chr01.vcf.gz
+rm ../bcftools_isec/chr01_1_ref/FB_ST_sites_chr01.vcf
+rm ../bcftools_isec/chr01_1_ref/0001.vcf.gz
