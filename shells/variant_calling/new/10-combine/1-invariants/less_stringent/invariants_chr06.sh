@@ -30,46 +30,46 @@ module load java
 # freebayes/no_mnp/freebayes_invariant_chr06_ref.vcf.gz \
 # samtools/samtools_invariant_chr06_dupsRemoved_ref.vcf.gz 
 
-gunzip ../bcftools_isec/chr06_1_ref/0001.vcf.gz
+gunzip ../bcftools_isec/chr06_2_ref/0001.vcf.gz
 
-python ~/git/Helianthus/shells/variant_calling/new/8-2+Set/2-extractSTFBSites/extract_GATK_variants.py ../bcftools_isec/chr06_1_ref/0001.vcf ../bcftools_isec/chr06_1_ref/sites.txt ../bcftools_isec/chr06_1_ref/FB_ST_sites_chr06.vcf
+python ~/git/Helianthus/shells/variant_calling/new/8-2+Set/2-extractSTFBSites/extract_GATK_variants.py ../bcftools_isec/chr06_2_ref/0001.vcf ../bcftools_isec/chr06_2_ref/sites.txt ../bcftools_isec/chr06_2_ref/FB_ST_sites_chr06.vcf
 
-/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c ../bcftools_isec/chr06_1_ref/FB_ST_sites_chr06.vcf > ../bcftools_isec/chr06_1_ref/FB_ST_sites_chr06.vcf.gz
-/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c ../bcftools_isec/chr06_1_ref/0001.vcf > ../bcftools_isec/chr06_1_ref/0001.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c ../bcftools_isec/chr06_2_ref/FB_ST_sites_chr06.vcf > ../bcftools_isec/chr06_2_ref/FB_ST_sites_chr06.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c ../bcftools_isec/chr06_2_ref/0001.vcf > ../bcftools_isec/chr06_2_ref/0001.vcf.gz
 
-/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t ../bcftools_isec/chr06_1_ref/0000.vcf.gz ../bcftools_isec/chr06_1_ref/FB_ST_sites_chr06.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > ../bcftools_isec/chr06_1_ref/FB_ST_sites_chr06_sorted.vcf.gz
+/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t ../bcftools_isec/chr06_2_ref/0000.vcf.gz ../bcftools_isec/chr06_2_ref/FB_ST_sites_chr06.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > ../bcftools_isec/chr06_2_ref/FB_ST_sites_chr06_sorted.vcf.gz
 
 
-/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf ../bcftools_isec/chr06_1_ref/FB_ST_sites_chr06_sorted.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf ../bcftools_isec/chr06_2_ref/FB_ST_sites_chr06_sorted.vcf.gz
 
 java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar \
    -R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
    -T CombineVariants \
-   --variant ../bcftools_isec/chr06_1_ref/0000.vcf.gz \
-   --variant ../bcftools_isec/chr06_1_ref/FB_ST_sites_chr06_sorted.vcf.gz \
-   -o ../bcftools_isec/chr06_1_ref/chr06_2plus_ref.vcf \
+   --variant ../bcftools_isec/chr06_2_ref/0000.vcf.gz \
+   --variant ../bcftools_isec/chr06_2_ref/FB_ST_sites_chr06_sorted.vcf.gz \
+   -o ../bcftools_isec/chr06_2_ref/chr06_2plus_ref.vcf \
    --assumeIdenticalSamples
 
-/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c ../bcftools_isec/chr06_1_ref/chr06_2plus_ref.vcf > ../bcftools_isec/chr06_1_ref/chr06_2plus_ref.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c ../bcftools_isec/chr06_2_ref/chr06_2plus_ref.vcf > ../bcftools_isec/chr06_2_ref/chr06_2plus_ref.vcf.gz
 
-rm ../bcftools_isec/chr06_1_ref/chr06_2plus_ref.vcf
-rm ../bcftools_isec/chr06_1_ref/FB_ST_sites_chr06.vcf.gz
-rm ../bcftools_isec/chr06_1_ref/FB_ST_sites_chr06.vcf
-rm ../bcftools_isec/chr06_1_ref/0001.vcf
+rm ../bcftools_isec/chr06_2_ref/chr06_2plus_ref.vcf
+rm ../bcftools_isec/chr06_2_ref/FB_ST_sites_chr06.vcf.gz
+rm ../bcftools_isec/chr06_2_ref/FB_ST_sites_chr06.vcf
+rm ../bcftools_isec/chr06_2_ref/0001.vcf
 
-/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf ../bcftools_isec/chr06_1_ref/chr06_2plus_ref.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf ../bcftools_isec/chr06_2_ref/chr06_2plus_ref.vcf.gz
 
 java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T VariantFiltration \
 	-R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
-	-V ../bcftools_isec/chr06_1_ref/chr06_2plus_ref.vcf.gz \
+	-V ../bcftools_isec/chr06_2_ref/chr06_2plus_ref.vcf.gz \
 	--filterExpression "QD < 2.0 || MQ < 40.0 || FS > 60.0 || SOR > 3.0 || MQRankSum < -12.5 || ReadPosRankSum < -8.0" \
 	--filterName "my_NO_VARIATION_filter" \
-	-o ../bcftools_isec/chr06_1_ref/chr06_2plus_ref_filterInfo.vcf.gz  
+	-o ../bcftools_isec/chr06_2_ref/chr06_2plus_ref_filterInfo.vcf.gz  
 	
 java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T SelectVariants \
 	-R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
-	-V ../bcftools_isec/chr06_1_ref/chr06_2plus_ref.vcf.gz \
+	-V ../bcftools_isec/chr06_2_ref/chr06_2plus_ref.vcf.gz \
 	--excludeFiltered \
-	-o ../bcftools_isec/chr06_1_ref/chr06_2plus_ref_hardfiltered.vcf.gz 
+	-o ../bcftools_isec/chr06_2_ref/chr06_2plus_ref_hardfiltered.vcf.gz 
 
-zcat ../bcftools_isec/chr06_1_ref/chr06_2plus_ref_hardfiltered.vcf.gz | vcftools --vcf - --minDP 1 --max-missing 0.8 --maxDP 30 --recode --stdout | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > ../bcftools_isec/chr06_1_ref/chr06_2plus_ref_hardfiltered_secondfilter.vcf.gz 
+zcat ../bcftools_isec/chr06_2_ref/chr06_2plus_ref_hardfiltered.vcf.gz | vcftools --vcf - --minDP 1 --max-missing 0.8 --maxDP 30 --recode --stdout | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > ../bcftools_isec/chr06_2_ref/chr06_2plus_ref_hardfiltered_secondfilter.vcf.gz 
