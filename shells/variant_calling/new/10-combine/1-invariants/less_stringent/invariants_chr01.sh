@@ -63,6 +63,8 @@ module load java
 # rm ../bcftools_isec/chr01_1_ref/FB_ST_sites_chr01.vcf
 # rm ../bcftools_isec/chr01_1_ref/0001.vcf
 
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf ../bcftools_isec/chr01_1_ref/chr01_2plus_ref.vcf.gz
+
 java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T VariantFiltration \
 	-R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
 	-V ../bcftools_isec/chr01_1_ref/chr01_2plus_ref.vcf.gz \
