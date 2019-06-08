@@ -14,6 +14,10 @@
 
 module load bcftools/1.6
 module load bio/vcftools
+export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
+TMPDIR=/clusterfs/rosalind/users/makman/temp
+module load java
+
 
 # /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c freebayes/no_mnp/freebayes_invariant_chr01.vcf > freebayes/no_mnp/freebayes_invariant_chr01.vcf.gz
 # zcat freebayes/no_mnp/freebayes_invariant_chr01_combined.vcf.gz | bcftools filter -g 5 -i 'TYPE = "ref"' | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > freebayes/no_mnp/freebayes_invariant_chr01_ref.vcf.gz
@@ -34,10 +38,10 @@ module load bio/vcftools
 
 # gunzip ../bcftools_isec/chr01_1_ref/0001.vcf.gz
 
-python ~/git/Helianthus/shells/variant_calling/new/8-2+Set/2-extractSTFBSites/extract_GATK_variants.py ../bcftools_isec/chr01_1_ref/0001.vcf ../bcftools_isec/chr01_1_ref/sites.txt ../bcftools_isec/chr01_1_ref/FB_ST_sites_chr01.vcf
-
-/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c ../bcftools_isec/chr01_1_ref/FB_ST_sites_chr01.vcf > ../bcftools_isec/chr01_1_ref/FB_ST_sites_chr01.vcf.gz
-/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c ../bcftools_isec/chr01_1_ref/0001.vcf > ../bcftools_isec/chr01_1_ref/0001.vcf.gz
+# python ~/git/Helianthus/shells/variant_calling/new/8-2+Set/2-extractSTFBSites/extract_GATK_variants.py ../bcftools_isec/chr01_1_ref/0001.vcf ../bcftools_isec/chr01_1_ref/sites.txt ../bcftools_isec/chr01_1_ref/FB_ST_sites_chr01.vcf
+# 
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c ../bcftools_isec/chr01_1_ref/FB_ST_sites_chr01.vcf > ../bcftools_isec/chr01_1_ref/FB_ST_sites_chr01.vcf.gz
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c ../bcftools_isec/chr01_1_ref/0001.vcf > ../bcftools_isec/chr01_1_ref/0001.vcf.gz
 
 /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-shuffle-cols -t ../bcftools_isec/chr01_1_ref/0000.vcf.gz ../bcftools_isec/chr01_1_ref/FB_ST_sites_chr01.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > ../bcftools_isec/chr01_1_ref/FB_ST_sites_chr01_sorted.vcf.gz
 
