@@ -34,7 +34,7 @@ module load bio/vcftools
 
 # gunzip ../bcftools_isec/chr01_1_ref/0001.vcf.gz
 
-python ~/git/Helianthus/shells/variant_calling/new/8-2+Set/2-extractSTFBSites/extract_GATK_variants.py ../bcftools_isec/chr01_1_ref/0001.vcf ../bcftools_isec/chr01_1_ref/sites.txt
+python ~/git/Helianthus/shells/variant_calling/new/8-2+Set/2-extractSTFBSites/extract_GATK_variants.py ../bcftools_isec/chr01_1_ref/0001.vcf ../bcftools_isec/chr01_1_ref/sites.txt ../bcftools_isec/chr01_1_ref/FB_ST_sites_chr01.vcf
 
 /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c ../bcftools_isec/chr01_1_ref/FB_ST_sites_chr01.vcf > ../bcftools_isec/chr01_1_ref/FB_ST_sites_chr01.vcf.gz
 /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c ../bcftools_isec/chr01_1_ref/0001.vcf > ../bcftools_isec/chr01_1_ref/0001.vcf.gz
