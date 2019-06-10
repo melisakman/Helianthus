@@ -16,6 +16,8 @@
 
 module load bcftools/1.6
 module load bio/vcftools
+module load java
+module load gatk/4.0.1.2
 
 
 
