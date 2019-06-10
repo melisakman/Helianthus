@@ -39,9 +39,9 @@ module load gatk/4.0.1.2
 # --exclude-filtered \
 # -O chr01_GATK_SNP_annot_filterInfo_hardfiltered.vcf.gz
 
-zcat chr01_GATK_SNP_annot_filterInfo_hardfiltered.vcf.gz | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > chr01_GATK_SNP_annot_filterInfo_hardfiltered_secondfilter.vcf.gz
+# zcat chr01_GATK_SNP_annot_filterInfo_hardfiltered.vcf.gz | vcftools --vcf - --minDP 3 --max-missing 0.8 --maxDP 25 --recode --stdout | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > chr01_GATK_SNP_annot_filterInfo_hardfiltered_secondfilter.vcf.gz
 
-
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix chr01_GATK_SNP_annot_filterInfo_hardfiltered_secondfilter.vcf.gz
 bcftools isec -n =3 -O z -p ../bcftools_isec/chr01_3_QD chr01_GATK_SNP_annot_filterInfo_hardfiltered_secondfilter.vcf.gz \
 freebayes/no_mnp/freebayes_variants_chr01_filtered.vcf.gz \
 samtools/samtools_variants_chr01_filtered.vcf.gz
