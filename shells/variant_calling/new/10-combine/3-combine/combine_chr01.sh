@@ -20,5 +20,5 @@ module load java
  
 bcftools concat chr01_2plus_annot_G8_VQSR99.vcf.gz \
 ../sams/gvcfs/genotyping/chr01_GATK_indel_annot_hardfiltered_secondFilter.vcf.gz \
-chr01_2_ref/chr01_2plus_ref_hardfiltered_secondfilter.vcf.gz | bcftools sort -T /clusterfs/rosalind/users/makman/temp \
+chr01_2_ref/chr01_2plus_ref_hardfiltered.vcf.gz | bcftools sort -T /clusterfs/rosalind/users/makman/temp \
 | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > ../final/chr01_final.vcf.gz

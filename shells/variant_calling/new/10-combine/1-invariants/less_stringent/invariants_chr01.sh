@@ -89,7 +89,7 @@ module load java
 # /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p -f vcf ../bcftools_isec/chr01_2_ref/chr01_2plus_ref_hardfiltered_QDdeneme.vcf.gz
 # /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p -f vcf ../bcftools_isec/chr01_2_ref/chr01_2plus_ref_hardfiltered.vcf.gz
 
-bcftools isec -n +1 -O z -p ../bcftools_isec/chr01_2_ref_QDdeneme ../bcftools_isec/chr01_2_ref/chr01_2plus_ref_hardfiltered_QDdeneme.vcf.gz \
-../bcftools_isec/chr01_2_ref/chr01_2plus_ref_hardfiltered.vcf.gz
+# bcftools isec -n +1 -O z -p ../bcftools_isec/chr01_2_ref_QDdeneme ../bcftools_isec/chr01_2_ref/chr01_2plus_ref_hardfiltered_QDdeneme.vcf.gz \
+# ../bcftools_isec/chr01_2_ref/chr01_2plus_ref_hardfiltered.vcf.gz
 
-# zcat ../bcftools_isec/chr01_2_ref/chr01_2plus_ref_hardfiltered.vcf.gz | vcftools --vcf - --minDP 1 --max-missing 0.8 --maxDP 30 --recode --stdout | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > ../bcftools_isec/chr01_2_ref/chr01_2plus_ref_hardfiltered_secondfilter.vcf.gz 
+zcat ../bcftools_isec/chr01_2_ref/chr01_2plus_ref_hardfiltered.vcf.gz | vcftools --vcf - --minDP 1 --max-missing 0.8 --maxDP 25 --recode --stdout | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > ../bcftools_isec/chr01_2_ref/chr01_2plus_ref_hardfiltered_secondfilter_25.vcf.gz 
