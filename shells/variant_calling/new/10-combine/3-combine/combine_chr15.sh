@@ -12,6 +12,11 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
+module load bcftools/1.6
+module load bio/vcftools
+export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
+TMPDIR=/clusterfs/rosalind/users/makman/temp
+module load java
  
 /clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/bin/vcf-concat \
  chr15_2plus_annot_G8_VQSR99.vcf.gz \
