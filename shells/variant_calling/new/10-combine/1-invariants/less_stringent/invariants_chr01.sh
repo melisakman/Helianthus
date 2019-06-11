@@ -86,8 +86,8 @@ module load java
 # 	--excludeFiltered \
 # 	-o ../bcftools_isec/chr01_2_ref/chr01_2plus_ref_hardfiltered_QDdeneme.vcf.gz 
 
-/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf ../bcftools_isec/chr01_2_ref/chr01_2plus_ref_hardfiltered_QDdeneme.vcf.gz
-/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf ../bcftools_isec/chr01_2_ref/chr01_2plus_ref_hardfiltered.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p -f vcf ../bcftools_isec/chr01_2_ref/chr01_2plus_ref_hardfiltered_QDdeneme.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p -f vcf ../bcftools_isec/chr01_2_ref/chr01_2plus_ref_hardfiltered.vcf.gz
 
 bcftools isec -n =3 -O z -p ../bcftools_isec/chr01_2_ref_QDdeneme ../bcftools_isec/chr01_2_ref/chr01_2plus_ref_hardfiltered_QDdeneme.vcf.gz \
 ../bcftools_isec/chr01_2_ref/chr01_2plus_ref_hardfiltered.vcf.gz  \	
