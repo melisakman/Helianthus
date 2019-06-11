@@ -15,11 +15,11 @@
 module load bcftools/1.6
 module load bio/vcftools
 export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
-TMPDIR=/clusterfs/rosalind/users/makman/temp
+TMPDIR=/global/scratch/makman/temp
 module load java
 
 bcftools concat \
  chr09_2plus_annot_G8_VQSR99.vcf.gz \
 ../sams/gvcfs/genotyping/ chr09_GATK_indel_annot_hardfiltered_secondFilter.vcf.gz \
- chr09_2_ref/ chr09_2plus_ref_hardfiltered.vcf.gz | bcftools sort -T /clusterfs/rosalind/users/makman/temp \
+ chr09_2_ref/ chr09_2plus_ref_hardfiltered.vcf.gz | bcftools sort -T /global/scratch/makman/temp \
 | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > ../final/ chr09_final.vcf.gz
