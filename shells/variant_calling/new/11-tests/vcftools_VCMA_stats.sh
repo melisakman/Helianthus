@@ -6,7 +6,7 @@
 #SBATCH --qos=savio_normal
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=6
-#SBATCH --time=72:00:00M
+#SBATCH --time=72:00:00
 #SBATCH -o /global/home/users/makman/vcftools/outs/vcftools_MA_stats.out
 #SBATCH -e /global/home/users/makman/vcftools/outs/vcftools_MA_stats.err
 #SBATCH --mail-user=makman@berkeley.edu
