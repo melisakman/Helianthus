@@ -13,10 +13,10 @@
 #SBATCH --mail-type=All
 module load bcftools/1.6
 # /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c allChr_2plus_annot_G8_VQSR99.vcf > allChr_2plus_annot_G8_VQSR99.vcf.gz
-rm allChr_2plus_annot_G8_VQSR99.vcf.gz.tbi
-/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix allChr_2plus_annot_G8_VQSR99.vcf.gz
+# rm allChr_2plus_annot_G8_VQSR99.vcf.gz.tbi
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix allChr_2plus_annot_G8_VQSR99.vcf.gz
 
-bcftools view allChr_2plus_annot_G8_VQSR99.vcf.gz -r HanXRQChr01 | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > chr01_2plus_annot_G8_VQSR99.vcf.gz
+# bcftools view allChr_2plus_annot_G8_VQSR99.vcf.gz -r HanXRQChr01 | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > chr01_2plus_annot_G8_VQSR99.vcf.gz
 bcftools view allChr_2plus_annot_G8_VQSR99.vcf.gz -r HanXRQChr02 | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > chr02_2plus_annot_G8_VQSR99.vcf.gz
 bcftools view allChr_2plus_annot_G8_VQSR99.vcf.gz -r HanXRQChr03 | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > chr03_2plus_annot_G8_VQSR99.vcf.gz
 bcftools view allChr_2plus_annot_G8_VQSR99.vcf.gz -r HanXRQChr04 | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > chr04_2plus_annot_G8_VQSR99.vcf.gz
