@@ -19,7 +19,7 @@ TMPDIR=/global/scratch/makman/temp
 module load java
  
 bcftools concat \
- chr14_2plus_annot_G8_VQSR99.vcf.gz \
-../sams/gvcfs/genotyping/ chr14_GATK_indel_annot_hardfiltered_secondFilter.vcf.gz \
- chr14_2_ref/ chr14_2plus_ref_hardfiltered.vcf.gz | bcftools sort -T /global/scratch/makman/temp \
-| /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > ../final/ chr14_final.vcf.gz
+chr14_2plus_annot_G8_VQSR99.vcf.gz \
+../sams/gvcfs/genotyping/chr14_GATK_indel_annot_hardfiltered_secondFilter.vcf.gz \
+chr14_2_ref/chr14_2plus_ref_hardfiltered.vcf.gz | bcftools sort -T /global/scratch/makman/temp \
+| /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > ../final/chr14_final.vcf.gz
