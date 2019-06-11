@@ -31,7 +31,7 @@ java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar
 
 java -Djava.io.tmpdir=/clusterfs/rosalind/users/makman/temp_files2/ -Xmx60G -jar /clusterfs/rosalind/users/makman/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T VariantFiltration \
 -R /clusterfs/rosalind/users/makman/HanXRQr1.0-20151230.fa \
--V VCMA_chr09_indel.vcf.gz \
+-V chr09_GATK_indel_annot.vcf.gz \
 --filterExpression "QD < 2.0 || FS > 200.0 || SOR > 10.0 || ReadPosRankSum < -20.0" \
 --filterName "my_indel_filter" \
 -o chr09_GATK_indel_annot_filterInfo.vcf.gz  
