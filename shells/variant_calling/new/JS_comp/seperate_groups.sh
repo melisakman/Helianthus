@@ -32,10 +32,10 @@ bcftools stats chr01_1_JS_GATK_VQSR_noVQSR/MA_VQSR.vcf > chr01_1_JS_GATK_VQSR_no
 bcftools stats chr01_1_JS_GATK_VQSR_noVQSR/JS_noVQSR.vcf > chr01_1_JS_GATK_VQSR_noVQSR/JS_noVQSR.vchk
 bcftools stats chr01_1_JS_GATK_VQSR_noVQSR/MA_noVQSR.vcf > chr01_1_JS_GATK_VQSR_noVQSR/MA_noVQSR.vchk
 
-plot-vcfstats chr01_1_JS_GATK_VQSR_noVQSR/JS_VQSR.vchk -p chr01_1_JS_GATK_VQSR_noVQSR/plot_JS_VQSR
-plot-vcfstats chr01_1_JS_GATK_VQSR_noVQSR/JS_GATK_VQSR.vchk -p chr01_1_JS_GATK_VQSR_noVQSR/plot_JS_GATK_VQSR
-plot-vcfstats chr01_1_JS_GATK_VQSR_noVQSR/MA_VQSR.vchk -p chr01_1_JS_GATK_VQSR_noVQSR/plot_MA_VQSR
-plot-vcfstats chr01_1_JS_GATK_VQSR_noVQSR/JS_noVQSR.vchk -p chr01_1_JS_GATK_VQSR_noVQSR/plot_JS_noVQSR
-plot-vcfstats chr01_1_JS_GATK_VQSR_noVQSR/MA_noVQSR.vchk -p chr01_1_JS_GATK_VQSR_noVQSR/plot_MA_noVQSR
+plot-vcfstats JS_VQSR.vchk -p chr01_1_JS_GATK_VQSR_noVQSR/plot_JS_VQSR
+plot-vcfstats JS_GATK_VQSR.vchk -p chr01_1_JS_GATK_VQSR_noVQSR/plot_JS_GATK_VQSR
+plot-vcfstats MA_VQSR.vchk -p chr01_1_JS_GATK_VQSR_noVQSR/plot_MA_VQSR
+plot-vcfstats JS_noVQSR.vchk -p chr01_1_JS_GATK_VQSR_noVQSR/plot_JS_noVQSR
+plot-vcfstats MA_noVQSR.vchk -p chr01_1_JS_GATK_VQSR_noVQSR/plot_MA_noVQSR
 
 
