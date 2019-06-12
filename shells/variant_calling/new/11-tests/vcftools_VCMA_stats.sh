@@ -21,3 +21,4 @@ module load matplotlib/2.1.0
 bcftools stats chr01_final.vcf.gz > chr01_final.vchk
 plot-vcfstats chr01_final.vchk -p plot_chr01_final
 
+
