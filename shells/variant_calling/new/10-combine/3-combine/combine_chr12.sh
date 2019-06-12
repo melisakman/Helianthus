@@ -2,10 +2,10 @@
 #SBATCH -D /global/scratch/makman/GATK/bcftools_isec/
 #SBATCH -J chr12
 #SBATCH --account=fc_blackman
-#SBATCH --partition=savio2_htc
+#SBATCH --partition=savio2
 #SBATCH --qos=savio_normal
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=6
+#SBATCH --cpus-per-task=24
 #SBATCH --time=72:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/combine_all_chr12.out
 #SBATCH -e /global/home/users/makman/GATK/outs/combine_all_chr12.err
