@@ -1,6 +1,7 @@
 #!/bin/bash 
 #SBATCH -D /global/scratch/makman/GATK/bcftools_isec/
 #SBATCH -J group
+#SBATCH --account=co_rosalind
 #SBATCH --partition=savio2_htc
 #SBATCH --qos=rosalind_htc2_normal
 #SBATCH --ntasks=1
