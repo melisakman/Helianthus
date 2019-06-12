@@ -41,7 +41,6 @@ for line1 in file1:
 
 for line2 in file2:
 	split2 = line2.split("\t")
-	pos2 = split2[1]
 	if split2[0][0] == "#":
 		out1.write(line2)
 		out2.write(line2)
@@ -49,6 +48,8 @@ for line2 in file2:
 		out4.write(line2)
 		out5.write(line2)
 	else:
+		pos2 = split2[1]
+
 		if pos2 in list1:
 			out1.write(line2)
 		elif pos2 in list2:
