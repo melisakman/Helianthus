@@ -52,7 +52,7 @@ for line2 in file2:
 
 		if pos2 in list1:
 			out1.write(line2)
-		print "AAAAA"
+			print "AAAAA"
 		elif pos2 in list2:
 			out2.write(line2)
 		elif pos2 in list3:
