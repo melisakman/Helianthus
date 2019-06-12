@@ -28,6 +28,8 @@ for line1 in file1:
 	split1 = line1.split("\t")
 	group = split1[4]
 	pos = int(split1[1])
+	print pos
+	print group
 	if group == "0111" or group == "0011":
 		list1.append(pos)
 	elif group == "1111":
