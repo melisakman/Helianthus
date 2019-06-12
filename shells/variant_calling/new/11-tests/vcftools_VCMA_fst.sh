@@ -2,10 +2,10 @@
 #SBATCH -D /global/scratch/makman/GATK/final
 #SBATCH -J vcffst
 #SBATCH --account=fc_blackman
-#SBATCH --partition=savio2_htc
+#SBATCH --partition=savio2
 #SBATCH --qos=savio_normal
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=4
+#SBATCH --cpus-per-task=24
 #SBATCH --time=72:00:00
 #SBATCH -o /global/home/users/makman/vcftools/outs/vcftools_MA_fst.out
 #SBATCH -e /global/home/users/makman/vcftools/outs/vcftools_MA_fst.err
