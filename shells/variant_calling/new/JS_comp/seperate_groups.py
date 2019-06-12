@@ -27,7 +27,7 @@ list5 = []
 for line1 in file1:
 	split1 = line1.split("\t")
 	group = split1[4]
-	pos = split1[1]
+	pos = int(split1[1])
 	if group == "0111" or group == "0011":
 		list1.append(pos)
 	elif group == "1111":
@@ -38,7 +38,7 @@ for line1 in file1:
 		list4.append(pos)
 	elif group == "0100":
 		list5.append(pos)
-
+print list1
 for line2 in file2:
 	split2 = line2.split("\t")
 	if split2[0][0] == "#":
@@ -48,10 +48,11 @@ for line2 in file2:
 		out4.write(line2)
 		out5.write(line2)
 	else:
-		pos2 = split2[1]
+		pos2 = int(split2[1])
 
 		if pos2 in list1:
 			out1.write(line2)
+		print "AAAAA"
 		elif pos2 in list2:
 			out2.write(line2)
 		elif pos2 in list3:
