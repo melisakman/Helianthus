@@ -19,10 +19,10 @@ TMPDIR=/global/scratch/makman/temp
 module load java
 module load python
 
-bcftools concat chr01_1_JS_GATK_VQSR_noVQSR/0000.vcf.gz \
-chr01_1_JS_GATK_VQSR_noVQSR/0001.vcf.gz \
-chr01_1_JS_GATK_VQSR_noVQSR/0002.vcf.gz \
-chr01_1_JS_GATK_VQSR_noVQSR/0003.vcf.gz > chr01_1_JS_GATK_VQSR_noVQSR/all.vcf
+# bcftools concat chr01_1_JS_GATK_VQSR_noVQSR/0000.vcf.gz \
+# chr01_1_JS_GATK_VQSR_noVQSR/0001.vcf.gz \
+# chr01_1_JS_GATK_VQSR_noVQSR/0002.vcf.gz \
+# chr01_1_JS_GATK_VQSR_noVQSR/0003.vcf.gz > chr01_1_JS_GATK_VQSR_noVQSR/all.vcf
 
 python /global/home/users/makman/git/Helianthus/shells/variant_calling/new/JS_comp/seperate_groups.py chr01_1_JS_GATK_VQSR_noVQSR/sites.txt chr01_1_JS_GATK_VQSR_noVQSR/all.vcf
 
