@@ -28,10 +28,10 @@ for line1 in file1:
 	split1 = line1.split("\t")
 	group = split1[4]
 	pos = int(split1[1])
-	print pos
-	print group
+	
 	if group == "0111" or group == "0011":
 		list1.append(pos)
+		print "AA"
 	elif group == "1111":
 		list2.append(pos)
 	elif group == "1110" or group == "1100":
@@ -54,7 +54,6 @@ for line2 in file2:
 
 		if pos2 in list1:
 			out1.write(line2)
-			print "AAAAA"
 		elif pos2 in list2:
 			out2.write(line2)
 		elif pos2 in list3:
