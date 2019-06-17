@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/rosalind/users/makman/GATK/final/
+#SBATCH -D /global/scratch/makman/GATK/final
 #SBATCH -J vcfpi
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio
