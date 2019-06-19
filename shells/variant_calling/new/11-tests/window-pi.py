@@ -39,8 +39,11 @@ for line in file_in:
 			
 		else:
 			if counter != 0:
-				pi_avg = float(pi_sum) / counter
-				file_out1.write(str(chr) + "\t" + str(current_bin) + "\t" + str(counter) + "\t" + str(snp_no) + "\t" + str(pi_avg) + "\n")
+				if pi_sum == 0:
+					file_out1.write(str(chr) + "\t" + str(current_bin) + "\t" + str(counter) + "\t" + str(snp_no) + "\t0"  + "\n")
+				else:
+					pi_avg = float(pi_sum) / counter
+					file_out1.write(str(chr) + "\t" + str(current_bin) + "\t" + str(counter) + "\t" + str(snp_no) + "\t" + str(pi_avg) + "\n")
 			else:
 				pi_avg = "NA"
 				file_out2.write(str(chr) + "\t" + str(current_bin) + "\t" + str(counter) + "\t" + str(snp_no) + "\t" + str(pi_avg) + "\n")
