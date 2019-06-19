@@ -19,6 +19,7 @@ current_bin = int(bin)
 counter = 0;
 first_line = True;
 snp_no = 0
+NAN= False
 for line in file_in:
 	split = line.split("\t")
 	if split[0] == "CHROM":
@@ -32,8 +33,14 @@ for line in file_in:
 			current_bin = pos_start + int(bin)
 
 		if pi_curr == "-nan":
-			pass
+			if pos_start == current_bin:
+				if NAN == True:
+					file_out1.write(str(chr) + "\t" + str(current_bin) + "\t" + str(counter) + "\t" + str(snp_no) + "\tNA"  + "\n")
+					NAN= False
+			else:
+				pass
 		else:
+			NAN = True
 			pi = float(split[2])
 					
 			if pos_start <= current_bin:
@@ -43,6 +50,7 @@ for line in file_in:
 					snp_no += 1
 			
 			else:
+				NAN = False
 				if counter != 0:
 					if pi_sum == 0:
 						file_out1.write(str(chr) + "\t" + str(current_bin) + "\t" + str(counter) + "\t" + str(snp_no) + "\t0"  + "\n")
