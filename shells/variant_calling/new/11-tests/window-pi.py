@@ -34,9 +34,8 @@ for line in file_in:
 
 		if pi_curr == "-nan":
 			if pos_start == current_bin:
-				if NAN == True:
+				if NAN == False:
 					file_out1.write(str(chr) + "\t" + str(current_bin) + "\t" + str(counter) + "\t" + str(snp_no) + "\tNA"  + "\n")
-					NAN= False
 			else:
 				pass
 		else:
