@@ -27,15 +27,15 @@ for line in file_in:
 		pos_start = int(split[1])
 		chr = split[0]	
 		pi_curr = split[2][:-1]
-		current_bin = pos_start + int(bin)
+		if first_line == True:
+			first_line = False
+			current_bin = pos_start + int(bin)
+
 		if pi_curr == "-nan":
 			pass
 		else:
 			pi = float(split[2])
-			if first_line == True:
-				first_line = False
-				
-		
+					
 			if pos_start <= current_bin:
 				pi_sum += pi
 				counter += 1
