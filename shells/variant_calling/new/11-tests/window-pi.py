@@ -25,33 +25,37 @@ for line in file_in:
 		continue
 	else:
 		pos_start = int(split[1])
-		chr = split[0]		
-		pi = float(split[2])
-		if first_line == True:
-			first_line = False
-			current_bin = pos_start + int(bin)
-		
-		if pos_start <= current_bin:
-			pi_sum += pi
-			counter += 1
-			if pi != 0:
-				snp_no += 1
-			
+		chr = split[0]	
+		pi_curr = split[2][:-1]
+		if pi_curr == "-nan":
+			pass
 		else:
-			if counter != 0:
-				if pi_sum == 0:
-					file_out1.write(str(chr) + "\t" + str(current_bin) + "\t" + str(counter) + "\t" + str(snp_no) + "\t0"  + "\n")
-				else:
-					pi_avg = float(pi_sum) / counter
-					file_out1.write(str(chr) + "\t" + str(current_bin) + "\t" + str(counter) + "\t" + str(snp_no) + "\t" + str(pi_avg) + "\n")
+			pi = float(split[2])
+			if first_line == True:
+				first_line = False
+				current_bin = pos_start + int(bin)
+		
+			if pos_start <= current_bin:
+				pi_sum += pi
+				counter += 1
+				if pi != 0:
+					snp_no += 1
+			
 			else:
-				pi_avg = "NA"
-				file_out2.write(str(chr) + "\t" + str(current_bin) + "\t" + str(counter) + "\t" + str(snp_no) + "\t" + str(pi_avg) + "\n")
+				if counter != 0:
+					if pi_sum == 0:
+						file_out1.write(str(chr) + "\t" + str(current_bin) + "\t" + str(counter) + "\t" + str(snp_no) + "\t0"  + "\n")
+					else:
+						pi_avg = float(pi_sum) / counter
+						file_out1.write(str(chr) + "\t" + str(current_bin) + "\t" + str(counter) + "\t" + str(snp_no) + "\t" + str(pi_avg) + "\n")
+				else:
+					pi_avg = "NA"
+					file_out2.write(str(chr) + "\t" + str(current_bin) + "\t" + str(counter) + "\t" + str(snp_no) + "\t" + str(pi_avg) + "\n")
 
-			counter = 0
-			pi_sum = 0
-			current_bin += int(bin)
-			snp_no = 0
+				counter = 0
+				pi_sum = 0
+				current_bin += int(bin)
+				snp_no = 0
 if counter >= 0:
 	if pi_sum == 0:
 		file_out1.write(str(chr) + "\t" + str(current_bin) + "\t" + str(counter) + "\t" + str(snp_no) + "\t0"  + "\n")
