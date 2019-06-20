@@ -33,6 +33,7 @@ for line in file_in:
 			current_bin = pos_start + int(bin)
 
 		if pi_curr == "-nan":
+			print 1
 			if pos_start == current_bin:
 				if NAN == False:
 					file_out1.write(str(chr) + "\t" + str(current_bin) + "\t" + str(counter) + "\t" + str(snp_no) + "\tNA"  + "\n")
