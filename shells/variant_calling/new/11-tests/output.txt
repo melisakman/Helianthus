@@ -1,0 +1,4 @@
+chr	bin-end	no_sites	no_snp	pi
+HanXRQChr01	1258	27	1	0.0170285185185
+HanXRQChr01	1358	30	0	0
+HanXRQChr01	1558	0	0	0

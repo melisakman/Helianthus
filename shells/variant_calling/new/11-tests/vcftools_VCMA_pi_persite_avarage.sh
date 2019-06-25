@@ -49,3 +49,5 @@ python /global/home/users/makman/git/Helianthus/shells/variant_calling/new/11-te
 python /global/home/users/makman/git/Helianthus/shells/variant_calling/new/11-tests/window-pi.py pi/lr_pi_chr15_10kb.sites.pi 10000 pi/lr_pi_chr15_sites_average.pi pi/lr_pi_chr15_sites_averageNA.pi
 python /global/home/users/makman/git/Helianthus/shells/variant_calling/new/11-tests/window-pi.py pi/lr_pi_chr16_10kb.sites.pi 10000 pi/lr_pi_chr16_sites_average.pi pi/lr_pi_chr16_sites_averageNA.pi
 python /global/home/users/makman/git/Helianthus/shells/variant_calling/new/11-tests/window-pi.py pi/lr_pi_chr17_10kb.sites.pi 10000 pi/lr_pi_chr17_sites_average.pi pi/lr_pi_chr17_sites_averageNA.pi
+
+

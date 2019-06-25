@@ -1,0 +1,2 @@
+chr	bin-end	no_sites	no_snp	pi
+HanXRQChr01	1458	0	0	NA
