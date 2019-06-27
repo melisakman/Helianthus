@@ -37,7 +37,6 @@ for line in file_in:
 			if pos_start > current_bin:
 				if diff < int(bin):
 					if NAN == False:
-						print 1
 						file_out1.write(str(chr) + "\t" + str(current_bin) + "\t0" + "\t0" + "\tNA"  + "\n")
 				else:
 					times = int(diff)/int(bin) + 1
@@ -50,7 +49,6 @@ for line in file_in:
 		else:
 			NAN = True
 			pi = float(split[2])
-			print pi	
 			if pos_start <= current_bin:
 				pi_sum += pi
 				counter += 1
