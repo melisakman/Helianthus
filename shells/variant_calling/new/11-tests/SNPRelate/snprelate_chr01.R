@@ -16,7 +16,7 @@ genofile <- snpgdsOpen("MA_chr01.gds")
 
 set.seed(1000)
 # Try different LD thresholds for sensitivity analysis
-snpset <- snpgdsLDpruning(genofile, ld.threshold=0.001)
+snpset <- snpgdsLDpruning(genofile, ld.threshold=0.8)
 names(snpset)
 snpset.id <- unlist(snpset)
 
