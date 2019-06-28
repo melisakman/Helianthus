@@ -37,5 +37,3 @@ head(tab)
 write.table(tab, file = "PCA_chr01.csv")
 
 
-## Sariel merged
-
