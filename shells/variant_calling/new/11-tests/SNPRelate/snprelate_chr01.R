@@ -16,13 +16,13 @@ genofile <- snpgdsOpen("MA_chr01.gds")
 
 set.seed(1000)
 # Try different LD thresholds for sensitivity analysis
-snpset <- snpgdsLDpruning(genofile, ld.threshold=0.8)
-names(snpset)
-snpset.id <- unlist(snpset)
+# snpset <- snpgdsLDpruning(genofile, ld.threshold=0.8)
+# names(snpset)
+# snpset.id <- unlist(snpset)
 
 
 
-pca <- snpgdsPCA(genofile, snp.id=snpset.id, num.thread=2)
+pca <- snpgdsPCA(genofile, num.thread=12)
 pc.percent <- pca$varprop*100
 tab <- data.frame(sample.id = pca$sample.id, EV1 = pca$eigenvect[,1],    # the first eigenvector
 	EV2 = pca$eigenvect[,2],    # the second eigenvector
