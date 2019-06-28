@@ -10,7 +10,7 @@ setwd("/global/scratch/makman/GATK/final/")
 
 # vcf_chr01.fn = "../bcftools_isec/chr01_2plus_annot_G8_VQSR99.vcf.gz"
 # snpgdsVCF2GDS(vcf_chr01.fn, "MA_chr01.gds", method="biallelic.only")
-# snpgdsSummary("MA_chr01.gds")
+snpgdsSummary("MA_chr01.gds")
 genofile <- snpgdsOpen("MA_chr01.gds")
 
 
