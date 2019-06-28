@@ -16,4 +16,4 @@
 
 module load r/3.4.2
 
-Rscript /global/home/users/makman/git/Helianthus/shells/variant_calling/new/11-tests/snprelate_chr03.R
+Rscript /global/home/users/makman/git/Helianthus/shells/variant_calling/new/11-tests/SNPRelate/snprelate_chr03.R
