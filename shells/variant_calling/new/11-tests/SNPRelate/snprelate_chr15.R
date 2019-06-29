@@ -22,7 +22,7 @@ snpset.id <- unlist(snpset)
 
 
 
-pca <- snpgdsPCA(genofile, snp.id=snpset.id, num.thread=2)
+pca <- snpgdsPCA(genofile, snp.id=snpset.id, num.thread=2, autosome.only=FALSE)
 pc.percent <- pca$varprop*100
 tab <- data.frame(sample.id = pca$sample.id, EV1 = pca$eigenvect[,1],    # the first eigenvector
 	EV2 = pca$eigenvect[,2],    # the second eigenvector
