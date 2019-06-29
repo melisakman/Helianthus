@@ -8,17 +8,17 @@ library(gdsfmt)
 library(SNPRelate)
 setwd("/global/scratch/makman/GATK/final/")
 
-vcf_chr07.fn = "../bcftools_isec/chr07_2plus_annot_G8_VQSR99.vcf.gz"
-snpgdsVCF2GDS(vcf_chr07.fn, "MA_chr07.gds", method="biallelic.only")
-snpgdsSummary("MA_chr07.gds")
+#vcf_chr07.fn = "../bcftools_isec/chr07_2plus_annot_G8_VQSR99.vcf.gz"
+#snpgdsVCF2GDS(vcf_chr07.fn, "MA_chr07.gds", method="biallelic.only")
+#snpgdsSummary("MA_chr07.gds")
 genofile <- snpgdsOpen("MA_chr07.gds")
 
 
 set.seed(1000)
 # Try different LD thresholds for sensitivity analysis
-snpset <- snpgdsLDpruning(genofile, ld.threshold=0.2)
-names(snpset)
-snpset.id <- unlist(snpset)
+#snpset <- snpgdsLDpruning(genofile, ld.threshold=0.2)
+#names(snpset)
+#snpset.id <- unlist(snpset)
 
 
 
