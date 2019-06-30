@@ -24,6 +24,8 @@ set.seed(1000)
 
 pca <- snpgdsPCA(genofile, num.thread=12, autosome.only=FALSE)
 pc.percent <- pca$varprop*100
+pc.percent
+
 tab <- data.frame(sample.id = pca$sample.id, EV1 = pca$eigenvect[,1],    # the first eigenvector
 	EV2 = pca$eigenvect[,2],    # the second eigenvector
 	EV3 = pca$eigenvect[,3],
