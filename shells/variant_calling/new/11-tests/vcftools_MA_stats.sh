@@ -58,15 +58,15 @@ module load matplotlib/2.1.0
 # plot-vcfstats chr16_final.vchk -p plot_chr16_final
 # plot-vcfstats chr17_final.vchk -p plot_chr17_final
 
-bcftools stats JS/vqsr_50.00-70.00-90.00-99.00-100.00_HanXRQChr01_SNP.vcf.gz > JS/chr01_JS_SNP.vchk
-bcftools stats JS/vqsr_50.00-70.00-90.00-99.00-100.00_HanXRQChr01_SNP_VQSR99.vcf.gz > JS/chr01_JS_SNP_VQSR.vchk
+# bcftools stats JS/vqsr_50.00-70.00-90.00-99.00-100.00_HanXRQChr01_SNP.vcf.gz > JS/chr01_JS_SNP.vchk
+# bcftools stats JS/vqsr_50.00-70.00-90.00-99.00-100.00_HanXRQChr01_SNP_VQSR99.vcf.gz > JS/chr01_JS_SNP_VQSR.vchk
 
-bcftools stats bcftools_isec/chr01_2plus_annot_G8_VQSR99.vcf.gz > bcftools_isec/chr01_2plus_annot_G8_VQSR99.vchk
-bcftools stats bcftools_isec/chr01_2plus_annot.vcf.gz > bcftools_isec/chr01_2plus_annot.vchk
+# bcftools stats bcftools_isec/chr01_2plus_annot_G8_VQSR99.vcf.gz > bcftools_isec/chr01_2plus_annot_G8_VQSR99.vchk
+# bcftools stats bcftools_isec/chr01_2plus_annot.vcf.gz > bcftools_isec/chr01_2plus_annot.vchk
 
-plot-vcfstats JS/chr01_JS_SNP.vchk -p JS/plot_chr01_JS_SNP
-plot-vcfstats JS/chr01_JS_SNP_VQSR.vchk JS/plot_chr01_JS_SNP_VQSR
-plot-vcfstats bcftools_isec/chr01_2plus_annot_G8_VQSR99.vchk bcftools_isec/plot_chr01_2plus_annot_G8_VQSR99
-plot-vcfstats bcftools_isec/chr01_2plus_annot.vchk bcftools_isec/plot_chr01_2plus_annot
+# plot-vcfstats JS/chr01_JS_SNP.vchk -p JS/plot_chr01_JS_SNP
+plot-vcfstats JS/chr01_JS_SNP_VQSR.vchk -p JS/plot_chr01_JS_SNP_VQSR
+plot-vcfstats bcftools_isec/chr01_2plus_annot_G8_VQSR99.vchk -p bcftools_isec/plot_chr01_2plus_annot_G8_VQSR99
+plot-vcfstats bcftools_isec/chr01_2plus_annot.vchk -p bcftools_isec/plot_chr01_2plus_annot
 
 
