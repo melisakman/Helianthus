@@ -14,18 +14,46 @@ setwd("/global/scratch/makman/GATK/final/")
 genofile <- snpgdsOpen("MA_chr04.gds")
 
 
+#set.seed(1000)
+## Try different LD thresholds for sensitivity analysis
+##snpset <- snpgdsLDpruning(genofile, ld.threshold=0.2)
+##names(snpset)
+##snpset.id <- unlist(snpset)
+#
+#
+#
+#pca <- snpgdsPCA(genofile, num.thread=12, autosome.only=FALSE)
+#pc.percent <- pca$varprop*100
+#pc.percent
+#
+#tab <- data.frame(sample.id = pca$sample.id, EV1 = pca$eigenvect[,1],    # the first eigenvector
+#	EV2 = pca$eigenvect[,2],    # the second eigenvector
+#	EV3 = pca$eigenvect[,3],
+#	EV4 = pca$eigenvect[,4],
+#	EV5 = pca$eigenvect[,5],
+#	EV6 = pca$eigenvect[,6],
+#	EV7 = pca$eigenvect[,7],
+#	stringsAsFactors = FALSE)
+#head(tab)
+#
+#write.table(tab, file = "PCA_chr04.csv")
+
+
+# with pruning
+genofile <- snpgdsOpen("MA_chr04.gds")
+
+
 set.seed(1000)
-# Try different LD thresholds for sensitivity analysis
-#snpset <- snpgdsLDpruning(genofile, ld.threshold=0.2)
-#names(snpset)
-#snpset.id <- unlist(snpset)
+Try different LD thresholds for sensitivity analysis
+snpset <- snpgdsLDpruning(genofile, ld.threshold=0.8, autosome.only=FALSE)
+names(snpset)
+snpset.id <- unlist(snpset)
 
 
 
-pca <- snpgdsPCA(genofile, num.thread=12, autosome.only=FALSE)
+pca <- snpgdsPCA(genofile, snp.id=snpset.id, num.thread=12, autosome.only=FALSE)
 pc.percent <- pca$varprop*100
 pc.percent
-
 tab <- data.frame(sample.id = pca$sample.id, EV1 = pca$eigenvect[,1],    # the first eigenvector
 	EV2 = pca$eigenvect[,2],    # the second eigenvector
 	EV3 = pca$eigenvect[,3],
@@ -36,8 +64,4 @@ tab <- data.frame(sample.id = pca$sample.id, EV1 = pca$eigenvect[,1],    # the f
 	stringsAsFactors = FALSE)
 head(tab)
 
-write.table(tab, file = "PCA_chr04.csv")
-
-
-## Sariel merged
-
+write.table(tab, file = "PCA_chr04_pruned.csv")
