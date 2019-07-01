@@ -10,11 +10,11 @@ setwd("/global/scratch/makman/GATK/final/")
 
 # vcf_chr01.fn = "../bcftools_isec/chr01_2plus_annot_G8_VQSR99.vcf.gz"
 # snpgdsVCF2GDS(vcf_chr01.fn, "MA_chr01.gds", method="biallelic.only")
-snpgdsSummary("MA_chr01.gds")
-genofile <- snpgdsOpen("MA_chr01.gds")
+#snpgdsSummary("MA_chr01.gds")
+#genofile <- snpgdsOpen("MA_chr01.gds")
+#
 
-
-set.seed(1000)
+#set.seed(1000)
 # Try different LD thresholds for sensitivity analysis
 # snpset <- snpgdsLDpruning(genofile, ld.threshold=0.8)
 # names(snpset)
@@ -22,7 +22,35 @@ set.seed(1000)
 
 
 
-pca <- snpgdsPCA(genofile, num.thread=12, autosome.only=FALSE)
+#pca <- snpgdsPCA(genofile, num.thread=12, autosome.only=FALSE)
+#pc.percent <- pca$varprop*100
+#pc.percent
+#tab <- data.frame(sample.id = pca$sample.id, EV1 = pca$eigenvect[,1],    # the first eigenvector
+#	EV2 = pca$eigenvect[,2],    # the second eigenvector
+#	EV3 = pca$eigenvect[,3],
+#	EV4 = pca$eigenvect[,4],
+#	EV5 = pca$eigenvect[,5],
+#	EV6 = pca$eigenvect[,6],
+#	EV7 = pca$eigenvect[,7],
+#	stringsAsFactors = FALSE)
+#head(tab)
+#
+#write.table(tab, file = "PCA_chr01.csv")
+
+
+# with pruning
+genofile <- snpgdsOpen("MA_chr01.gds")
+
+
+set.seed(1000)
+Try different LD thresholds for sensitivity analysis
+snpset <- snpgdsLDpruning(genofile, ld.threshold=0.8, autosome.only=FALSE)
+names(snpset)
+snpset.id <- unlist(snpset)
+
+
+
+pca <- snpgdsPCA(genofile, snp.id=snpset.id, num.thread=12, autosome.only=FALSE)
 pc.percent <- pca$varprop*100
 pc.percent
 tab <- data.frame(sample.id = pca$sample.id, EV1 = pca$eigenvect[,1],    # the first eigenvector
@@ -35,6 +63,4 @@ tab <- data.frame(sample.id = pca$sample.id, EV1 = pca$eigenvect[,1],    # the f
 	stringsAsFactors = FALSE)
 head(tab)
 
-write.table(tab, file = "PCA_chr01.csv")
-
-
+write.table(tab, file = "PCA_chr01_pruned.csv")
