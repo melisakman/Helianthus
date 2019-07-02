@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /global/scratch/makman/GATK/final
+#SBATCH -D /global/scratch/makman/GATK/final/G12/Nandita/
 #SBATCH -J G12-B
 #SBATCH --account=fc_blackman
 #SBATCH --partition=savio2
