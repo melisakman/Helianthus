@@ -16,18 +16,18 @@
 
 module load bio/vcftools/0.1.15
 
-# vcftools --gzvcf chr01_final.vcf.gz --weir-fst-pop wd_list.txt --weir-fst-pop lr_list.txt --fst-window-size 5000 --exclude-bed Repeats_chr01.bed --out fst/lr_wd_chr01_5kb
-# vcftools --gzvcf chr02_final.vcf.gz --weir-fst-pop wd_list.txt --weir-fst-pop lr_list.txt --fst-window-size 5000 --exclude-bed Repeats_chr02.bed --out fst/lr_wd_chr02_5kb
-# vcftools --gzvcf chr03_final.vcf.gz --weir-fst-pop wd_list.txt --weir-fst-pop lr_list.txt --fst-window-size 5000 --exclude-bed Repeats_chr03.bed --out fst/lr_wd_chr03_5kb
-# vcftools --gzvcf chr04_final.vcf.gz --weir-fst-pop wd_list.txt --weir-fst-pop lr_list.txt --fst-window-size 5000 --exclude-bed Repeats_chr04.bed --out fst/lr_wd_chr04_5kb
-# vcftools --gzvcf chr05_final.vcf.gz --weir-fst-pop wd_list.txt --weir-fst-pop lr_list.txt --fst-window-size 5000 --exclude-bed Repeats_chr05.bed --out fst/lr_wd_chr05_5kb
-# vcftools --gzvcf chr06_final.vcf.gz --weir-fst-pop wd_list.txt --weir-fst-pop lr_list.txt --fst-window-size 5000 --exclude-bed Repeats_chr06.bed --out fst/lr_wd_chr06_5kb
-# vcftools --gzvcf chr07_final.vcf.gz --weir-fst-pop wd_list.txt --weir-fst-pop lr_list.txt --fst-window-size 5000 --exclude-bed Repeats_chr07.bed --out fst/lr_wd_chr07_5kb
-# vcftools --gzvcf chr08_final.vcf.gz --weir-fst-pop wd_list.txt --weir-fst-pop lr_list.txt --fst-window-size 5000 --exclude-bed Repeats_chr08.bed --out fst/lr_wd_chr08_5kb
+vcftools --gzvcf chr01_final.vcf.gz --weir-fst-pop wd_list.txt --weir-fst-pop lr_list.txt --fst-window-size 5000 --exclude-bed Repeats_chr01.bed --out fst/lr_wd_chr01_5kb
+vcftools --gzvcf chr02_final.vcf.gz --weir-fst-pop wd_list.txt --weir-fst-pop lr_list.txt --fst-window-size 5000 --exclude-bed Repeats_chr02.bed --out fst/lr_wd_chr02_5kb
+vcftools --gzvcf chr03_final.vcf.gz --weir-fst-pop wd_list.txt --weir-fst-pop lr_list.txt --fst-window-size 5000 --exclude-bed Repeats_chr03.bed --out fst/lr_wd_chr03_5kb
+vcftools --gzvcf chr04_final.vcf.gz --weir-fst-pop wd_list.txt --weir-fst-pop lr_list.txt --fst-window-size 5000 --exclude-bed Repeats_chr04.bed --out fst/lr_wd_chr04_5kb
+vcftools --gzvcf chr05_final.vcf.gz --weir-fst-pop wd_list.txt --weir-fst-pop lr_list.txt --fst-window-size 5000 --exclude-bed Repeats_chr05.bed --out fst/lr_wd_chr05_5kb
+vcftools --gzvcf chr06_final.vcf.gz --weir-fst-pop wd_list.txt --weir-fst-pop lr_list.txt --fst-window-size 5000 --exclude-bed Repeats_chr06.bed --out fst/lr_wd_chr06_5kb
+vcftools --gzvcf chr07_final.vcf.gz --weir-fst-pop wd_list.txt --weir-fst-pop lr_list.txt --fst-window-size 5000 --exclude-bed Repeats_chr07.bed --out fst/lr_wd_chr07_5kb
+vcftools --gzvcf chr08_final.vcf.gz --weir-fst-pop wd_list.txt --weir-fst-pop lr_list.txt --fst-window-size 5000 --exclude-bed Repeats_chr08.bed --out fst/lr_wd_chr08_5kb
 vcftools --gzvcf chr09_final.vcf.gz --weir-fst-pop wd_list.txt --weir-fst-pop lr_list.txt --fst-window-size 5000 --exclude-bed Repeats_chr09.bed --out fst/lr_wd_chr09_5kb
-vcftools --gzvcf chr10_final.vcf.gz --weir-fst-pop wd_list.txt --weir-fst-pop lr_list.txt --fst-window-size 5000 --exclude-bed Repeats_chr10.bed --out fst/lr_wd_chr10_5kb
-vcftools --gzvcf chr11_final.vcf.gz --weir-fst-pop wd_list.txt --weir-fst-pop lr_list.txt --fst-window-size 5000 --exclude-bed Repeats_chr11.bed --out fst/lr_wd_chr11_5kb
-vcftools --gzvcf chr12_final.vcf.gz --weir-fst-pop wd_list.txt --weir-fst-pop lr_list.txt --fst-window-size 5000 --exclude-bed Repeats_chr12.bed --out fst/lr_wd_chr12_5kb
+# vcftools --gzvcf chr10_final.vcf.gz --weir-fst-pop wd_list.txt --weir-fst-pop lr_list.txt --fst-window-size 5000 --exclude-bed Repeats_chr10.bed --out fst/lr_wd_chr10_5kb
+# vcftools --gzvcf chr11_final.vcf.gz --weir-fst-pop wd_list.txt --weir-fst-pop lr_list.txt --fst-window-size 5000 --exclude-bed Repeats_chr11.bed --out fst/lr_wd_chr11_5kb
+# vcftools --gzvcf chr12_final.vcf.gz --weir-fst-pop wd_list.txt --weir-fst-pop lr_list.txt --fst-window-size 5000 --exclude-bed Repeats_chr12.bed --out fst/lr_wd_chr12_5kb
 # vcftools --gzvcf chr13_final.vcf.gz --weir-fst-pop wd_list.txt --weir-fst-pop lr_list.txt --fst-window-size 5000 --exclude-bed Repeats_chr13.bed --out fst/lr_wd_chr13_5kb
 # vcftools --gzvcf chr14_final.vcf.gz --weir-fst-pop wd_list.txt --weir-fst-pop lr_list.txt --fst-window-size 5000 --exclude-bed Repeats_chr14.bed --out fst/lr_wd_chr14_5kb
 # vcftools --gzvcf chr15_final.vcf.gz --weir-fst-pop wd_list.txt --weir-fst-pop lr_list.txt --fst-window-size 5000 --exclude-bed Repeats_chr15.bed --out fst/lr_wd_chr15_5kb
