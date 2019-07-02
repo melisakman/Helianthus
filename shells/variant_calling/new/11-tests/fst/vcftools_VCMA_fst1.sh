@@ -31,5 +31,5 @@ vcftools --gzvcf chr09_final.vcf.gz --weir-fst-pop wd_list.txt --weir-fst-pop lr
 # vcftools --gzvcf chr16_final.vcf.gz --weir-fst-pop wd_list.txt --weir-fst-pop lr_list.txt --fst-window-size 10000 --exclude-bed Repeats_chr16.bed --out fst/lr_wd_chr16_10kb
 # vcftools --gzvcf chr17_final.vcf.gz --weir-fst-pop wd_list.txt --weir-fst-pop lr_list.txt --fst-window-size 10000 --exclude-bed Repeats_chr17.bed --out fst/lr_wd_chr17_10kb
 
-vcftools --gzvcf chr04_final.vcf.gz --weir-fst-pop wd_list_noNM.txt --weir-fst-pop lr_list_noHopi.txt --fst-window-size 10000 --out fst/lr_wd_chr04_10kb_noHopinoNM
-vcftools --gzvcf chr04_final.vcf.gz --weir-fst-pop wd_list_noNM.txt --weir-fst-pop lr_list.txt --fst-window-size 10000 --out fst/lr_wd_chr04_10kb_noNM
+# vcftools --gzvcf chr04_final.vcf.gz --weir-fst-pop wd_list_noNM.txt --weir-fst-pop lr_list_noHopi.txt --fst-window-size 10000 --out fst/lr_wd_chr04_10kb_noHopinoNM
+# vcftools --gzvcf chr04_final.vcf.gz --weir-fst-pop wd_list_noNM.txt --weir-fst-pop lr_list.txt --fst-window-size 10000 --out fst/lr_wd_chr04_10kb_noNM
