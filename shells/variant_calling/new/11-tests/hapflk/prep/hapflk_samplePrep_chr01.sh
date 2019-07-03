@@ -20,6 +20,10 @@ module load gatk/4.0.1.2
 module load bio/vcftools/0.1.15
 export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
 
+gunzip chr01_final.vcf.gz
+
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c chr01_final.vcf > chr01_final.vcf.gz
+
 /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf chr01_final.vcf.gz
 
 /global/scratch/makman/gatk-4.1.0.0/gatk --java-options "-Xmx64g -Djava.io.tmpdir=/global/scratch/makman/temp_files/" SelectVariants \
