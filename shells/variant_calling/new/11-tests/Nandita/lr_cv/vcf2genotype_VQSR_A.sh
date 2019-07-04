@@ -14,7 +14,7 @@
 
 module load python/2.7
 
-gunzip chr01_final.vcf.gz
+# gunzip chr01_final.vcf.gz
 gunzip chr02_final.vcf.gz
 gunzip chr03_final.vcf.gz
 gunzip chr04_final.vcf.gz
