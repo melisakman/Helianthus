@@ -40,7 +40,7 @@ export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcfto
 # 
 # vcftools --vcf chr01_SNP_INDEL_noHanXRQ.vcf --out hapflk/chr01_final_plink  --plink
 
-python /global/home/users/makman/hapflk-1.4/scripts_Hannah/plink_ped_fixer.py lr_mex_ethno_list.txt hapflk/chr01_final_plink.ped hapflk/chr01_final_plink_lr_mex_ethno_fixed.ped
+python /global/home/users/makman/hapflk-1.4/scripts_Hannah/plink_ped_fixer.py hapflk/lr_mex_ethno_list.txt hapflk/chr01_final_plink.ped hapflk/chr01_final_plink_lr_mex_ethno_fixed.ped
 
 cp hapflk/chr01_final_plink.map hapflk/chr01_final_plink_lr_mex_ethno_fixed.map
 
