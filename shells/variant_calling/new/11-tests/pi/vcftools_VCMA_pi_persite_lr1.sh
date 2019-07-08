@@ -18,7 +18,7 @@ module load bio/vcftools/0.1.15
 
 
 
-vcftools --gzvcf chr01_final.vcf.gz --keep lr_list.txt --max-alleles 1 --site-pi --out pi/lr_pi_chr01_10kb_test
+vcftools --gzvcf chr01_final.vcf.gz --keep lr_list.txt --min-alleles 1 --max-alleles 50 --site-pi --out pi/lr_pi_chr01_10kb_test
 
 
 # vcftools --gzvcf chr01_final.vcf.gz --keep wd_list.txt --site-pi --exclude-bed Repeats_chr01.bed --out pi/wd_pi_chr01_10kb
