@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -D /global/scratch/makman/GATK/final/
+#SBATCH -D /global/scratch/makman/GATK/final/haflk/
 #SBATCH -J hfchr17_8
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio
