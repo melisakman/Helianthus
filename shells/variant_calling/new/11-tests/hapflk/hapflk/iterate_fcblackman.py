@@ -24,7 +24,7 @@ for i in iterations:
 #SBATCH -e /global/home/users/makman/H12/outs/hapflk_VQSR_chr""" + str(chr) + "_" + str(i) + ".err" +
 """\n#SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-#SBATCH --time=600:00:00
+#SBATCH --time=72:00:00
 module load hapflk/1.4
 hapflk --file chr""" + str(chr) + "_final_plink_lr_mex_ethno_fixed --miss_pheno 0 --chr " + str(chr) + " --from " + str(start) + " --to " + str(end) + " -p chr" + str(chr) + "_" + str(i) + " --ncpu 12 -K 15")
 	start += 10000000

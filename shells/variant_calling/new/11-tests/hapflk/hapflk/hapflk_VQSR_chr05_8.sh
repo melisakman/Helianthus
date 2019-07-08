@@ -10,6 +10,6 @@
 #SBATCH -e /global/home/users/makman/H12/outs/hapflk_VQSR_chr05_8.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-#SBATCH --time=600:00:00
+#SBATCH --time=72:00:00
 module load hapflk/1.4
 hapflk --file chr05_final_plink_lr_mex_ethno_fixed --miss_pheno 0 --chr 05 --from 70000001 --to 80000000 -p chr05_8 --ncpu 12 -K 15
