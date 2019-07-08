@@ -15,15 +15,18 @@
 #SBATCH --mail-type=All
 
 module load bio/vcftools/0.1.15
-vcftools --gzvcf chr01_final.vcf.gz --keep wd_list.txt --site-pi --exclude-bed Repeats_chr01.bed --out pi/wd_pi_chr01_10kb
-vcftools --gzvcf chr02_final.vcf.gz --keep wd_list.txt --site-pi --exclude-bed Repeats_chr02.bed --out pi/wd_pi_chr02_10kb
-vcftools --gzvcf chr03_final.vcf.gz --keep wd_list.txt --site-pi --exclude-bed Repeats_chr03.bed --out pi/wd_pi_chr03_10kb
-vcftools --gzvcf chr04_final.vcf.gz --keep wd_list.txt --site-pi --exclude-bed Repeats_chr04.bed --out pi/wd_pi_chr04_10kb
-vcftools --gzvcf chr05_final.vcf.gz --keep wd_list.txt --site-pi --exclude-bed Repeats_chr05.bed --out pi/wd_pi_chr05_10kb
-vcftools --gzvcf chr06_final.vcf.gz --keep wd_list.txt --site-pi --exclude-bed Repeats_chr06.bed --out pi/wd_pi_chr06_10kb
-vcftools --gzvcf chr07_final.vcf.gz --keep wd_list.txt --site-pi --exclude-bed Repeats_chr07.bed --out pi/wd_pi_chr07_10kb
-vcftools --gzvcf chr08_final.vcf.gz --keep wd_list.txt --site-pi --exclude-bed Repeats_chr08.bed --out pi/wd_pi_chr08_10kb
-vcftools --gzvcf chr09_final.vcf.gz --keep wd_list.txt --site-pi --exclude-bed Repeats_chr09.bed --out pi/wd_pi_chr09_10kb
+
+vcftools --gzvcf chr01_final.vcf.gz --keep wd_list.txt --site-pi --out pi/wd_pi_chr01_10kb_test
+
+vcftools --gzvcf chr01_final.vcf.gz --keep wd_list.txt --site-pi --exclude-bed Repeats_chr01.bed --out pi/wd_pi_chr01_10kb_TEexcluded_test
+# vcftools --gzvcf chr02_final.vcf.gz --keep wd_list.txt --site-pi --exclude-bed Repeats_chr02.bed --out pi/wd_pi_chr02_10kb
+# vcftools --gzvcf chr03_final.vcf.gz --keep wd_list.txt --site-pi --exclude-bed Repeats_chr03.bed --out pi/wd_pi_chr03_10kb
+# vcftools --gzvcf chr04_final.vcf.gz --keep wd_list.txt --site-pi --exclude-bed Repeats_chr04.bed --out pi/wd_pi_chr04_10kb
+# vcftools --gzvcf chr05_final.vcf.gz --keep wd_list.txt --site-pi --exclude-bed Repeats_chr05.bed --out pi/wd_pi_chr05_10kb
+# vcftools --gzvcf chr06_final.vcf.gz --keep wd_list.txt --site-pi --exclude-bed Repeats_chr06.bed --out pi/wd_pi_chr06_10kb
+# vcftools --gzvcf chr07_final.vcf.gz --keep wd_list.txt --site-pi --exclude-bed Repeats_chr07.bed --out pi/wd_pi_chr07_10kb
+# vcftools --gzvcf chr08_final.vcf.gz --keep wd_list.txt --site-pi --exclude-bed Repeats_chr08.bed --out pi/wd_pi_chr08_10kb
+# vcftools --gzvcf chr09_final.vcf.gz --keep wd_list.txt --site-pi --exclude-bed Repeats_chr09.bed --out pi/wd_pi_chr09_10kb
 # vcftools --gzvcf chr10_final.vcf.gz --keep wd_list.txt --site-pi --exclude-bed Repeats_chr10.bed --out pi/wd_pi_chr10_10kb
 # vcftools --gzvcf chr11_final.vcf.gz --keep wd_list.txt --site-pi --exclude-bed Repeats_chr11.bed --out pi/wd_pi_chr11_10kb
 # vcftools --gzvcf chr12_final.vcf.gz --keep wd_list.txt --site-pi --exclude-bed Repeats_chr12.bed --out pi/wd_pi_chr12_10kb
