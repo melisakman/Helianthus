@@ -13,7 +13,7 @@ for i in iterations:
 	file_name = "hapflk_VQSR_chr" + str(chr) + "_" + str(i) + ".sh"
 	file = open(file_name, 'w')
 	file.write("""#!/bin/bash
-#SBATCH -D /global/scratch/makman/GATK/final/haflk/
+#SBATCH -D /global/scratch/makman/GATK/final/hapflk/
 #SBATCH -J hfchr""" + str(chr) + "_" + str(i) + 
 """\n#SBATCH --account=co_rosalind
 #SBATCH --partition=savio
