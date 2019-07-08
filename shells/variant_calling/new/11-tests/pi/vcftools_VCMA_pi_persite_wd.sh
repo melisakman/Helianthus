@@ -16,9 +16,9 @@
 
 module load bio/vcftools/0.1.15
 
-vcftools --gzvcf chr01_final.vcf.gz --keep wd_list.txt --site-pi --out pi/wd_pi_chr01_10kb_test
+vcftools --gzvcf chr01_final.vcf.gz --keep wd_list.txt --max-alleles 1 --site-pi --out pi/wd_pi_chr01_10kb_test
 
-vcftools --gzvcf chr01_final.vcf.gz --keep wd_list.txt --site-pi --exclude-bed Repeats_chr01.bed --out pi/wd_pi_chr01_10kb_TEexcluded_test
+# vcftools --gzvcf chr01_final.vcf.gz --keep wd_list.txt --site-pi --exclude-bed Repeats_chr01.bed --out pi/wd_pi_chr01_10kb_TEexcluded_test
 # vcftools --gzvcf chr02_final.vcf.gz --keep wd_list.txt --site-pi --exclude-bed Repeats_chr02.bed --out pi/wd_pi_chr02_10kb
 # vcftools --gzvcf chr03_final.vcf.gz --keep wd_list.txt --site-pi --exclude-bed Repeats_chr03.bed --out pi/wd_pi_chr03_10kb
 # vcftools --gzvcf chr04_final.vcf.gz --keep wd_list.txt --site-pi --exclude-bed Repeats_chr04.bed --out pi/wd_pi_chr04_10kb
