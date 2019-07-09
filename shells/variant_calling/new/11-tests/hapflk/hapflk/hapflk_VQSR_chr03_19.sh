@@ -12,4 +12,4 @@
 #SBATCH --mail-type=All
 #SBATCH --time=600:00:00
 module load hapflk/1.4
-hapflk --file chr03_final_plink_lr_mex_ethno_fixed --miss_pheno 0 --chr 03 --from 144000001 --to 152000000 -p chr03_19 --ncpu 12 -K 15
+hapflk --file chr03_final_plink_lr_mex_ethno_fixed --miss_pheno 0 --chr 03 --from 72000001 --to 76000000 -p chr03_19 --ncpu 12 -K 15

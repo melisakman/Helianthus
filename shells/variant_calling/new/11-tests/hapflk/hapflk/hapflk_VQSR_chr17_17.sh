@@ -11,4 +11,4 @@
 #SBATCH --mail-type=All
 #SBATCH --time=600:00:00
 module load hapflk/1.4
-hapflk --file chr17_final_plink_lr_mex_ethno_fixed --miss_pheno 0 --chr 17 --from 128000001 --to 136000000 -p chr17_17 --ncpu 12 -K 15
+hapflk --file chr17_final_plink_lr_mex_ethno_fixed --miss_pheno 0 --chr 17 --from 64000001 --to 68000000 -p chr17_17 --ncpu 12 -K 15
