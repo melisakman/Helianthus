@@ -15,4 +15,4 @@
 
 module load bio/vcftools/0.1.15
 
-vcftools --vcf testy.recode.vcf --bed topMM_genes_5KupDownStream.bed --out testy_topMM_5KupDownStream.recode.vcf 
+vcftools --vcf testy.recode.vcf --bed topMM_genes_5KupDownStream.bed --recode --out testy_topMM_5KupDownStream.recode.vcf 
