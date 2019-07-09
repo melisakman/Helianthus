@@ -1,13 +1,14 @@
 #!/bin/bash 
 #SBATCH -D /clusterfs/rosalind/users/makman/Arabidopsis/
 #SBATCH -J At
-#SBATCH --account=fc_blackman
-#SBATCH --partition=savio2
-#SBATCH --qos=savio_normal
+#SBATCH --account=co_rosalind
+#SBATCH --partition=savio
+#SBATCH --qos=rosalind_savio_normal
 #SBATCH --nodes=1
-#SBATCH --ntasks=1
-#SBATCH --cpus-per-task=4
-#SBATCH --time=72:00:00
+#SBATCH --mem=64000
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=20
+#SBATCH --time=400:00:00
 #SBATCH -o /global/home/users/makman/vcftools/outs/At_extract_vcf.out
 #SBATCH -e /global/home/users/makman/vcftools/outs/At_extract_vcf.err
 #SBATCH --mail-user=makman@berkeley.edu
