@@ -25,3 +25,6 @@ gunzip chr01_final.vcf.gz
 python ~/git/Helianthus/shells/variant_calling/new/11-tests/pi/fix_missing_pi.py ch01_final.vcf chr01_final_fixed_forPi.vcf
 
 rm chr01_final.vcf
+
+vcftools --vcf chr01_final_fixed_forPi.vcf --keep wd_list.txt --site-pi --exclude-bed Repeats_chr01.bed --out pi/wd_pi_chr01_sitePi
+vcftools --vcf chr01_final_fixed_forPi.vcf --keep lr_list.txt --site-pi --exclude-bed Repeats_chr01.bed --out pi/lr_pi_chr01_sitePi
