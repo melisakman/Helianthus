@@ -22,7 +22,7 @@ module load bio/vcftools/0.1.15
 
 gunzip chr07_final.vcf.gz
 
-python ~/git/Helianthus/shells/variant_calling/new/11-tests/pi/fix_missing_pi.py ch01_final.vcf chr07_final_fixed_forPi.vcf
+python ~/git/Helianthus/shells/variant_calling/new/11-tests/pi/fix_missing_pi.py chr07_final.vcf chr07_final_fixed_forPi.vcf
 
 rm chr07_final.vcf
 
