@@ -20,7 +20,7 @@ for i in iterations:
 #SBATCH --qos=rosalind_htc2_normal
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=18 
+#SBATCH --cpus-per-task=12 
 #SBATCH -e /global/home/users/makman/H12/outs/hapflk_VQSR_chr""" + str(chr) + "_" + str(i) + ".err" +
 """\n#SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
