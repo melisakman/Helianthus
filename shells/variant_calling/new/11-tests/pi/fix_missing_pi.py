@@ -14,13 +14,14 @@ for line in file_in:
 	else:
 		for x in range(0,93):
 			item = split[x]
+			coding = item.split(":")
 			if x != 92:
-				if item == ".:.:.:.:.:.:.:.":
+				if coding[0] == ".":
 					file_out.write("./.:.:.:.:.:.:.:.\t")
 				else:
 					file_out.write(item + "\t")
 			else:
-				if item[:-1] == ".:.:.:.:.:.:.:.":
+				if coding[0] == ".":
 					file_out.write("./.:.:.:.:.:.:.:.\n")
 				else:
 					file_out.write(item)
