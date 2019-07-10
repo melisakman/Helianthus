@@ -1,14 +1,15 @@
 #!/bin/bash
 #SBATCH -D /global/scratch/makman/GATK/final/hapflk/
 #SBATCH -J hfchr01_6
-#SBATCH --account=co_rosalind
-#SBATCH --partition=savio
-#SBATCH --qos=rosalind_savio_normal
+#SBATCH --account=fc_blackman
+#SBATCH --partition=savio2
+#SBATCH --qos=savio_normal
 #SBATCH --nodes=1
-#SBATCH --mem=64000
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=18 
 #SBATCH -e /global/home/users/makman/H12/outs/hapflk_VQSR_chr01_6.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-#SBATCH --time=600:00:00
+#SBATCH --time=72:00:00
 module load hapflk/1.4
-hapflk --file chr01_plink_lr_mex_ethno_fixed --miss_pheno 0 --chr 01 --from 100000001 --to 120000000 -p chr01_6 --ncpu 20 -K 15
+hapflk --file chr01_plink_lr_mex_ethno_fixed --miss_pheno 0 --chr 01 --from 50000001 --to 60000000 -p chr01_6 --ncpu 18 -K 15
