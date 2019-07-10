@@ -23,28 +23,27 @@ export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcfto
 
 
 
-/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c chr01_final_fixed_forPi.vcf > chr01_final_fixed_forPi.vcf.gz
-
-/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf chr01_final_fixed_forPi.vcf.gz
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c chr01_final_fixed_forPi.vcf > chr01_final_fixed_forPi.vcf.gz
+# 
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf chr01_final_fixed_forPi.vcf.gz
 
 /global/scratch/makman/gatk-4.1.0.0/gatk --java-options "-Xmx64g -Djava.io.tmpdir=/global/scratch/makman/temp_files/" SelectVariants \
 -R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
 -V chr01_final_fixed_forPi.vcf.gz \
 --select-type-to-include SNP \
---select-type-to-include INDEL \
--O chr01_SNP_INDEL_fixed_forPi.vcf.gz
+-O chr01_SNP_fixed_forPi.vcf.gz
 
-gunzip chr01_SNP_INDEL_fixed_forPi.vcf.gz
-
-sed 's/HanXRQChr//g' chr01_SNP_INDEL_fixed_forPi.vcf > chr01_SNP_INDEL_fixed_forPi_noHanXRQ.vcf
-
-vcftools --vcf chr01_SNP_INDEL_fixed_forPi_noHanXRQ.vcf --out hapflk/chr01_plink_fixed_forPi --plink
-
-python /global/home/users/makman/hapflk-1.4/scripts_Hannah/plink_ped_fixer.py hapflk/lr_mex_ethno_list.txt hapflk/chr01_plink_fixed_forPi.ped hapflk/chr01_plink_fixed_forPi_lr_mex_ethno_fixed.ped
-
-cp hapflk/chr01_plink_fixed_forPi.map hapflk/chr01_plink_fixed_forPi_lr_mex_ethno_fixed.map
-
-
-cd hapflk
-
-hapflk --file chr01_plink_fixed_forPi_lr_mex_ethno_fixed --outgroup=Wild --miss_pheno 0 -p kinship/chr01_tree_lr_mex_ethno_kinship --ncpu 20
+# gunzip chr01_SNP_INDEL_fixed_forPi.vcf.gz
+# 
+# sed 's/HanXRQChr//g' chr01_SNP_INDEL_fixed_forPi.vcf > chr01_SNP_INDEL_fixed_forPi_noHanXRQ.vcf
+# 
+# vcftools --vcf chr01_SNP_INDEL_fixed_forPi_noHanXRQ.vcf --out hapflk/chr01_plink_fixed_forPi --plink
+# 
+# python /global/home/users/makman/hapflk-1.4/scripts_Hannah/plink_ped_fixer.py hapflk/lr_mex_ethno_list.txt hapflk/chr01_plink_fixed_forPi.ped hapflk/chr01_plink_fixed_forPi_lr_mex_ethno_fixed.ped
+# 
+# cp hapflk/chr01_plink_fixed_forPi.map hapflk/chr01_plink_fixed_forPi_lr_mex_ethno_fixed.map
+# 
+# 
+# cd hapflk
+# 
+# hapflk --file chr01_plink_fixed_forPi_lr_mex_ethno_fixed --outgroup=Wild --miss_pheno 0 -p kinship/chr01_tree_lr_mex_ethno_kinship --ncpu 20
