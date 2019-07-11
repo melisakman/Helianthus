@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/rosalind/users/makman/SF2
+#SBATCH -D /global/scratch/makman/GATK/final/
 #SBATCH -J vcf2genotype
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio
@@ -15,43 +15,43 @@
 #SBATCH --mail-type=All
 
 
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py ../GATK/bcftools_isec/final/chr01_final_lessStringentInvariants_onlyvariants.vcf ../GATK/bcftools_isec/final/lr_list.txt variant/chr01_variants.SF
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py ../GATK/bcftools_isec/final/chr02_final_lessStringentInvariants_onlyvariants.vcf ../GATK/bcftools_isec/final/lr_list.txt variant/chr02_variants.SF
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py ../GATK/bcftools_isec/final/chr03_final_lessStringentInvariants_onlyvariants.vcf ../GATK/bcftools_isec/final/lr_list.txt variant/chr03_variants.SF
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py ../GATK/bcftools_isec/final/chr04_final_lessStringentInvariants_onlyvariants.vcf ../GATK/bcftools_isec/final/lr_list.txt variant/chr04_variants.SF
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py ../GATK/bcftools_isec/final/chr05_final_lessStringentInvariants_onlyvariants.vcf ../GATK/bcftools_isec/final/lr_list.txt variant/chr05_variants.SF
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py ../GATK/bcftools_isec/final/chr06_final_lessStringentInvariants_onlyvariants.vcf ../GATK/bcftools_isec/final/lr_list.txt variant/chr06_variants.SF
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py ../GATK/bcftools_isec/final/chr07_final_lessStringentInvariants_onlyvariants.vcf ../GATK/bcftools_isec/final/lr_list.txt variant/chr07_variants.SF
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py ../GATK/bcftools_isec/final/chr08_final_lessStringentInvariants_onlyvariants.vcf ../GATK/bcftools_isec/final/lr_list.txt variant/chr08_variants.SF
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py ../GATK/bcftools_isec/final/chr09_final_lessStringentInvariants_onlyvariants.vcf ../GATK/bcftools_isec/final/lr_list.txt variant/chr09_variants.SF
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py ../GATK/bcftools_isec/final/chr10_final_lessStringentInvariants_onlyvariants.vcf ../GATK/bcftools_isec/final/lr_list.txt variant/chr10_variants.SF
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py ../GATK/bcftools_isec/final/chr11_final_lessStringentInvariants_onlyvariants.vcf ../GATK/bcftools_isec/final/lr_list.txt variant/chr11_variants.SF
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py ../GATK/bcftools_isec/final/chr12_final_lessStringentInvariants_onlyvariants.vcf ../GATK/bcftools_isec/final/lr_list.txt variant/chr12_variants.SF
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py ../GATK/bcftools_isec/final/chr13_final_lessStringentInvariants_onlyvariants.vcf ../GATK/bcftools_isec/final/lr_list.txt variant/chr13_variants.SF
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py ../GATK/bcftools_isec/final/chr14_final_lessStringentInvariants_onlyvariants.vcf ../GATK/bcftools_isec/final/lr_list.txt variant/chr14_variants.SF
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py ../GATK/bcftools_isec/final/chr15_final_lessStringentInvariants_onlyvariants.vcf ../GATK/bcftools_isec/final/lr_list.txt variant/chr15_variants.SF
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py ../GATK/bcftools_isec/final/chr16_final_lessStringentInvariants_onlyvariants.vcf ../GATK/bcftools_isec/final/lr_list.txt variant/chr16_variants.SF
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py ../GATK/bcftools_isec/final/chr17_final_lessStringentInvariants_onlyvariants.vcf ../GATK/bcftools_isec/final/lr_list.txt variant/chr17_variants.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr01_SNP.vcf lr_list.txt sweep_finder/chr01_SNP.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr02_SNP.vcf lr_list.txt sweep_finder/chr02_SNP.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr03_SNP.vcf lr_list.txt sweep_finder/chr03_SNP.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr04_SNP.vcf lr_list.txt sweep_finder/chr04_SNP.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr05_SNP.vcf lr_list.txt sweep_finder/chr05_SNP.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr06_SNP.vcf lr_list.txt sweep_finder/chr06_SNP.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr07_SNP.vcf lr_list.txt sweep_finder/chr07_SNP.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr08_SNP.vcf lr_list.txt sweep_finder/chr08_SNP.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr09_SNP.vcf lr_list.txt sweep_finder/chr09_SNP.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr10_SNP.vcf lr_list.txt sweep_finder/chr10_SNP.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr11_SNP.vcf lr_list.txt sweep_finder/chr11_SNP.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr12_SNP.vcf lr_list.txt sweep_finder/chr12_SNP.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr13_SNP.vcf lr_list.txt sweep_finder/chr13_SNP.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr14_SNP.vcf lr_list.txt sweep_finder/chr14_SNP.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr15_SNP.vcf lr_list.txt sweep_finder/chr15_SNP.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr16_SNP.vcf lr_list.txt sweep_finder/chr16_SNP.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr17_SNP.vcf lr_list.txt sweep_finder/chr17_SNP.SF
 
-cat variant/chr01_variants.SF > variant/01_toCombine.txt
-tail -n +2 variant/chr02_variants.SF > variant/02_toCombine.txt
-tail -n +2 variant/chr03_variants.SF > variant/03_toCombine.txt
-tail -n +2 variant/chr04_variants.SF > variant/04_toCombine.txt
-tail -n +2 variant/chr05_variants.SF > variant/05_toCombine.txt
-tail -n +2 variant/chr06_variants.SF > variant/06_toCombine.txt
-tail -n +2 variant/chr07_variants.SF > variant/07_toCombine.txt
-tail -n +2 variant/chr08_variants.SF > variant/08_toCombine.txt
-tail -n +2 variant/chr09_variants.SF > variant/09_toCombine.txt
-tail -n +2 variant/chr10_variants.SF > variant/10_toCombine.txt
-tail -n +2 variant/chr11_variants.SF > variant/11_toCombine.txt
-tail -n +2 variant/chr12_variants.SF > variant/12_toCombine.txt
-tail -n +2 variant/chr13_variants.SF > variant/13_toCombine.txt
-tail -n +2 variant/chr14_variants.SF > variant/14_toCombine.txt
-tail -n +2 variant/chr15_variants.SF > variant/15_toCombine.txt
-tail -n +2 variant/chr16_variants.SF > variant/16_toCombine.txt
-tail -n +2 variant/chr17_variants.SF > variant/17_toCombine.txt
+cat sweep_finder/chr01_variants.SF > sweep_finder/01_toCombine.txt
+tail -n +2 sweep_finder/chr02_variants.SF > sweep_finder/02_toCombine.txt
+tail -n +2 sweep_finder/chr03_variants.SF > sweep_finder/03_toCombine.txt
+tail -n +2 sweep_finder/chr04_variants.SF > sweep_finder/04_toCombine.txt
+tail -n +2 sweep_finder/chr05_variants.SF > sweep_finder/05_toCombine.txt
+tail -n +2 sweep_finder/chr06_variants.SF > sweep_finder/06_toCombine.txt
+tail -n +2 sweep_finder/chr07_variants.SF > sweep_finder/07_toCombine.txt
+tail -n +2 sweep_finder/chr08_variants.SF > sweep_finder/08_toCombine.txt
+tail -n +2 sweep_finder/chr09_variants.SF > sweep_finder/09_toCombine.txt
+tail -n +2 sweep_finder/chr10_variants.SF > sweep_finder/10_toCombine.txt
+tail -n +2 sweep_finder/chr11_variants.SF > sweep_finder/11_toCombine.txt
+tail -n +2 sweep_finder/chr12_variants.SF > sweep_finder/12_toCombine.txt
+tail -n +2 sweep_finder/chr13_variants.SF > sweep_finder/13_toCombine.txt
+tail -n +2 sweep_finder/chr14_variants.SF > sweep_finder/14_toCombine.txt
+tail -n +2 sweep_finder/chr15_variants.SF > sweep_finder/15_toCombine.txt
+tail -n +2 sweep_finder/chr16_variants.SF > sweep_finder/16_toCombine.txt
+tail -n +2 sweep_finder/chr17_variants.SF > sweep_finder/17_toCombine.txt
 
-cat variant/*_toCombine.txt > variant/all_variants.SF
+cat sweep_finder/*_toCombine.txt > sweep_finder/all_variants.SF
 
-./SweepFinder2 -f variant/all_variants.SF variant/all_spectFile.txt
+./SweepFinder2 -f sweep_finder/all_variants.SF sweep_finder/all_spectFile.txt
 
