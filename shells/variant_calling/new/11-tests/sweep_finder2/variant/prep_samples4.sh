@@ -9,8 +9,8 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=20
 #SBATCH --time=400:00:00
-#SBATCH -o /global/home/users/makman/H12/outs/sweed1.out
-#SBATCH -e /global/home/users/makman/H12/outs/sweed1.err
+#SBATCH -o /global/home/users/makman/H12/outs/sweed4.out
+#SBATCH -e /global/home/users/makman/H12/outs/sweed4.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
@@ -23,11 +23,44 @@ export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcfto
 
 /global/scratch/makman/gatk-4.1.0.0/gatk --java-options "-Xmx64g -Djava.io.tmpdir=/global/scratch/makman/temp_files/" SelectVariants \
 -R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
--V vcfgz/chr01_final.vcf.gz \
+-V vcfgz/chr13_final.vcf.gz \
 --select-type-to-include SNP \
--O chr01_SNP.vcf.gz
+-O chr13_SNP.vcf.gz
 
-gunzip chr01_SNP.vcf.gz
+gunzip chr13_SNP.vcf.gz
+
+/global/scratch/makman/gatk-4.1.0.0/gatk --java-options "-Xmx64g -Djava.io.tmpdir=/global/scratch/makman/temp_files/" SelectVariants \
+-R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
+-V vcfgz/chr14_final.vcf.gz \
+--select-type-to-include SNP \
+-O chr14_SNP.vcf.gz
+
+gunzip chr14_SNP.vcf.gz
+
+/global/scratch/makman/gatk-4.1.0.0/gatk --java-options "-Xmx64g -Djava.io.tmpdir=/global/scratch/makman/temp_files/" SelectVariants \
+-R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
+-V vcfgz/chr15_final.vcf.gz \
+--select-type-to-include SNP \
+-O chr15_SNP.vcf.gz
+
+gunzip chr15_SNP.vcf.gz
+
+/global/scratch/makman/gatk-4.1.0.0/gatk --java-options "-Xmx64g -Djava.io.tmpdir=/global/scratch/makman/temp_files/" SelectVariants \
+-R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
+-V vcfgz/chr16_final.vcf.gz \
+--select-type-to-include SNP \
+-O chr16_SNP.vcf.gz
+
+gunzip chr16_SNP.vcf.gz
+
+/global/scratch/makman/gatk-4.1.0.0/gatk --java-options "-Xmx64g -Djava.io.tmpdir=/global/scratch/makman/temp_files/" SelectVariants \
+-R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
+-V vcfgz/chr17_final.vcf.gz \
+--select-type-to-include SNP \
+-O chr17_SNP.vcf.gz
+
+gunzip chr17_SNP.vcf.gz
+
 
 # python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr01_SNP.vcf lr_list.txt sweep_finder/chr01_SNP.SF
 # python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr02_SNP.vcf lr_list.txt sweep_finder/chr02_SNP.SF

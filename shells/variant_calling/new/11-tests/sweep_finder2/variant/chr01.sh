@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/rosalind/users/makman/SF2
+#SBATCH -D /global/scratch/makman/GATK/final/
 #SBATCH -J sf_chr01
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio2_htc
@@ -14,4 +14,4 @@
 #SBATCH --mail-type=All
 
 
-./SweepFinder2 -lg 10000 variant/chr01_variants.SF variant/all_spectFile.txt variant/chr01_variants_output.txt
+/clusterfs/rosalind/users/makman/SF2/SweepFinder2 -lg 10000 sweep_finder/chr01_SNP_INDEL.SF sweep_finder/all_spectFile.txt sweep_finder/chr01_SNP_INDEL_output.txt
