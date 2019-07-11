@@ -15,23 +15,23 @@
 #SBATCH --mail-type=All
 
 
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr01_SNP.vcf lr_list.txt sweep_finder/chr01_SNP.SF
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr02_SNP.vcf lr_list.txt sweep_finder/chr02_SNP.SF
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr03_SNP.vcf lr_list.txt sweep_finder/chr03_SNP.SF
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr04_SNP.vcf lr_list.txt sweep_finder/chr04_SNP.SF
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr05_SNP.vcf lr_list.txt sweep_finder/chr05_SNP.SF
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr06_SNP.vcf lr_list.txt sweep_finder/chr06_SNP.SF
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr07_SNP.vcf lr_list.txt sweep_finder/chr07_SNP.SF
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr08_SNP.vcf lr_list.txt sweep_finder/chr08_SNP.SF
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr09_SNP.vcf lr_list.txt sweep_finder/chr09_SNP.SF
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr10_SNP.vcf lr_list.txt sweep_finder/chr10_SNP.SF
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr11_SNP.vcf lr_list.txt sweep_finder/chr11_SNP.SF
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr12_SNP.vcf lr_list.txt sweep_finder/chr12_SNP.SF
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr13_SNP.vcf lr_list.txt sweep_finder/chr13_SNP.SF
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr14_SNP.vcf lr_list.txt sweep_finder/chr14_SNP.SF
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr15_SNP.vcf lr_list.txt sweep_finder/chr15_SNP.SF
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr16_SNP.vcf lr_list.txt sweep_finder/chr16_SNP.SF
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr17_SNP.vcf lr_list.txt sweep_finder/chr17_SNP.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr01_final_fixed_forPi.vcf lr_list.txt sweep_finder/chr01_SNP.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr02_final_fixed_forPi.vcf lr_list.txt sweep_finder/chr02_SNP.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr03_final_fixed_forPi.vcf lr_list.txt sweep_finder/chr03_SNP.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr04_final_fixed_forPi.vcf lr_list.txt sweep_finder/chr04_SNP.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr05_final_fixed_forPi.vcf lr_list.txt sweep_finder/chr05_SNP.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr06_final_fixed_forPi.vcf lr_list.txt sweep_finder/chr06_SNP.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr07_final_fixed_forPi.vcf lr_list.txt sweep_finder/chr07_SNP.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr08_final_fixed_forPi.vcf lr_list.txt sweep_finder/chr08_SNP.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr09_final_fixed_forPi.vcf lr_list.txt sweep_finder/chr09_SNP.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr10_final_fixed_forPi.vcf lr_list.txt sweep_finder/chr10_SNP.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr11_final_fixed_forPi.vcf lr_list.txt sweep_finder/chr11_SNP.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr12_final_fixed_forPi.vcf lr_list.txt sweep_finder/chr12_SNP.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr13_final_fixed_forPi.vcf lr_list.txt sweep_finder/chr13_SNP.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr14_final_fixed_forPi.vcf lr_list.txt sweep_finder/chr14_SNP.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr15_final_fixed_forPi.vcf lr_list.txt sweep_finder/chr15_SNP.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr16_final_fixed_forPi.vcf lr_list.txt sweep_finder/chr16_SNP.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr17_final_fixed_forPi.vcf lr_list.txt sweep_finder/chr17_SNP.SF
 
 cat sweep_finder/chr01_variants.SF > sweep_finder/01_toCombine.txt
 tail -n +2 sweep_finder/chr02_variants.SF > sweep_finder/02_toCombine.txt
