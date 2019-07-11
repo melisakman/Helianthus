@@ -1,4 +1,4 @@
-python iterate_htc.py 01 150000000
+python iterate_fcblackman.py 01 150000000
 python iterate_htc.py 02 175000000
 python iterate_htc.py 03 177000000
 python iterate_fcblackman.py 04 209000000

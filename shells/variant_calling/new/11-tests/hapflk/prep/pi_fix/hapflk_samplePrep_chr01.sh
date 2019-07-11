@@ -27,15 +27,15 @@ export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcfto
 # 
 # /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf chr01_final_fixed_forPi.vcf.gz
 
-/global/scratch/makman/gatk-4.1.0.0/gatk --java-options "-Xmx64g -Djava.io.tmpdir=/global/scratch/makman/temp_files/" SelectVariants \
--R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
--V chr01_final.vcf.gz \
---select-type-to-include SNP \
--O chr01_SNP.vcf.gz
+# /global/scratch/makman/gatk-4.1.0.0/gatk --java-options "-Xmx64g -Djava.io.tmpdir=/global/scratch/makman/temp_files/" SelectVariants \
+# -R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
+# -V chr01_final.vcf.gz \
+# --select-type-to-include SNP \
+# -O chr01_SNP.vcf.gz
+# 
+# gunzip chr01_SNP.vcf.gz
 
-gunzip chr01_SNP.vcf.gz
-
-sed 's/HanXRQChr//g' chr01_SNP.vcf > chr01_SNP_noHanXRQ.vcf
+# sed 's/HanXRQChr//g' chr01_SNP.vcf > chr01_SNP_noHanXRQ.vcf
 
 vcftools --vcf chr01_SNP_noHanXRQ.vcf --out hapflk/chr01_SNP_plink --plink
 
