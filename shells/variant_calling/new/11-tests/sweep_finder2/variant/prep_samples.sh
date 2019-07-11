@@ -15,41 +15,41 @@
 #SBATCH --mail-type=All
 
 
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr01_final_fixed_forPi.vcf lr_list.txt sweep_finder/chr01_SNP.SF
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr02_final_fixed_forPi.vcf lr_list.txt sweep_finder/chr02_SNP.SF
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr03_final_fixed_forPi.vcf lr_list.txt sweep_finder/chr03_SNP.SF
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr04_final_fixed_forPi.vcf lr_list.txt sweep_finder/chr04_SNP.SF
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr05_final_fixed_forPi.vcf lr_list.txt sweep_finder/chr05_SNP.SF
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr06_final_fixed_forPi.vcf lr_list.txt sweep_finder/chr06_SNP.SF
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr07_final_fixed_forPi.vcf lr_list.txt sweep_finder/chr07_SNP.SF
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr08_final_fixed_forPi.vcf lr_list.txt sweep_finder/chr08_SNP.SF
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr09_final_fixed_forPi.vcf lr_list.txt sweep_finder/chr09_SNP.SF
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr10_final_fixed_forPi.vcf lr_list.txt sweep_finder/chr10_SNP.SF
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr11_final_fixed_forPi.vcf lr_list.txt sweep_finder/chr11_SNP.SF
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr12_final_fixed_forPi.vcf lr_list.txt sweep_finder/chr12_SNP.SF
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr13_final_fixed_forPi.vcf lr_list.txt sweep_finder/chr13_SNP.SF
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr14_final_fixed_forPi.vcf lr_list.txt sweep_finder/chr14_SNP.SF
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr15_final_fixed_forPi.vcf lr_list.txt sweep_finder/chr15_SNP.SF
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr16_final_fixed_forPi.vcf lr_list.txt sweep_finder/chr16_SNP.SF
-python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr17_final_fixed_forPi.vcf lr_list.txt sweep_finder/chr17_SNP.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr01_SNP_INDEL_fixed_forPi.vcf lr_list.txt sweep_finder/chr01_SNP_INDEL.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr02_SNP_INDEL_fixed_forPi.vcf lr_list.txt sweep_finder/chr02_SNP_INDEL.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr03_SNP_INDEL_fixed_forPi.vcf lr_list.txt sweep_finder/chr03_SNP_INDEL.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr04_SNP_INDEL_fixed_forPi.vcf lr_list.txt sweep_finder/chr04_SNP_INDEL.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr05_SNP_INDEL_fixed_forPi.vcf lr_list.txt sweep_finder/chr05_SNP_INDEL.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr06_SNP_INDEL_fixed_forPi.vcf lr_list.txt sweep_finder/chr06_SNP_INDEL.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr07_SNP_INDEL_fixed_forPi.vcf lr_list.txt sweep_finder/chr07_SNP_INDEL.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr08_SNP_INDEL_fixed_forPi.vcf lr_list.txt sweep_finder/chr08_SNP_INDEL.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr09_SNP_INDEL_fixed_forPi.vcf lr_list.txt sweep_finder/chr09_SNP_INDEL.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr10_SNP_INDEL_fixed_forPi.vcf lr_list.txt sweep_finder/chr10_SNP_INDEL.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr11_SNP_INDEL_fixed_forPi.vcf lr_list.txt sweep_finder/chr11_SNP_INDEL.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr12_SNP_INDEL_fixed_forPi.vcf lr_list.txt sweep_finder/chr12_SNP_INDEL.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr13_SNP_INDEL_fixed_forPi.vcf lr_list.txt sweep_finder/chr13_SNP_INDEL.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr14_SNP_INDEL_fixed_forPi.vcf lr_list.txt sweep_finder/chr14_SNP_INDEL.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr15_SNP_INDEL_fixed_forPi.vcf lr_list.txt sweep_finder/chr15_SNP_INDEL.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr16_SNP_INDEL_fixed_forPi.vcf lr_list.txt sweep_finder/chr16_SNP_INDEL.SF
+python ~/git/Helianthus/shells/sweeD/vcf2sweedFormat.py chr17_SNP_INDEL_fixed_forPi.vcf lr_list.txt sweep_finder/chr17_SNP_INDEL.SF
 
-cat sweep_finder/chr01_variants.SF > sweep_finder/01_toCombine.txt
-tail -n +2 sweep_finder/chr02_variants.SF > sweep_finder/02_toCombine.txt
-tail -n +2 sweep_finder/chr03_variants.SF > sweep_finder/03_toCombine.txt
-tail -n +2 sweep_finder/chr04_variants.SF > sweep_finder/04_toCombine.txt
-tail -n +2 sweep_finder/chr05_variants.SF > sweep_finder/05_toCombine.txt
-tail -n +2 sweep_finder/chr06_variants.SF > sweep_finder/06_toCombine.txt
-tail -n +2 sweep_finder/chr07_variants.SF > sweep_finder/07_toCombine.txt
-tail -n +2 sweep_finder/chr08_variants.SF > sweep_finder/08_toCombine.txt
-tail -n +2 sweep_finder/chr09_variants.SF > sweep_finder/09_toCombine.txt
-tail -n +2 sweep_finder/chr10_variants.SF > sweep_finder/10_toCombine.txt
-tail -n +2 sweep_finder/chr11_variants.SF > sweep_finder/11_toCombine.txt
-tail -n +2 sweep_finder/chr12_variants.SF > sweep_finder/12_toCombine.txt
-tail -n +2 sweep_finder/chr13_variants.SF > sweep_finder/13_toCombine.txt
-tail -n +2 sweep_finder/chr14_variants.SF > sweep_finder/14_toCombine.txt
-tail -n +2 sweep_finder/chr15_variants.SF > sweep_finder/15_toCombine.txt
-tail -n +2 sweep_finder/chr16_variants.SF > sweep_finder/16_toCombine.txt
-tail -n +2 sweep_finder/chr17_variants.SF > sweep_finder/17_toCombine.txt
+cat sweep_finder/chr01_SNP_INDEL.SF > sweep_finder/01_toCombine.txt
+tail -n +2 sweep_finder/chr02_SNP_INDEL.SF > sweep_finder/02_toCombine.txt
+tail -n +2 sweep_finder/chr03_SNP_INDEL.SF > sweep_finder/03_toCombine.txt
+tail -n +2 sweep_finder/chr04_SNP_INDEL.SF > sweep_finder/04_toCombine.txt
+tail -n +2 sweep_finder/chr05_SNP_INDEL.SF > sweep_finder/05_toCombine.txt
+tail -n +2 sweep_finder/chr06_SNP_INDEL.SF > sweep_finder/06_toCombine.txt
+tail -n +2 sweep_finder/chr07_SNP_INDEL.SF > sweep_finder/07_toCombine.txt
+tail -n +2 sweep_finder/chr08_SNP_INDEL.SF > sweep_finder/08_toCombine.txt
+tail -n +2 sweep_finder/chr09_SNP_INDEL.SF > sweep_finder/09_toCombine.txt
+tail -n +2 sweep_finder/chr10_SNP_INDEL.SF > sweep_finder/10_toCombine.txt
+tail -n +2 sweep_finder/chr11_SNP_INDEL.SF > sweep_finder/11_toCombine.txt
+tail -n +2 sweep_finder/chr12_SNP_INDEL.SF > sweep_finder/12_toCombine.txt
+tail -n +2 sweep_finder/chr13_SNP_INDEL.SF > sweep_finder/13_toCombine.txt
+tail -n +2 sweep_finder/chr14_SNP_INDEL.SF > sweep_finder/14_toCombine.txt
+tail -n +2 sweep_finder/chr15_SNP_INDEL.SF > sweep_finder/15_toCombine.txt
+tail -n +2 sweep_finder/chr16_SNP_INDEL.SF > sweep_finder/16_toCombine.txt
+tail -n +2 sweep_finder/chr17_SNP_INDEL.SF > sweep_finder/17_toCombine.txt
 
 cat sweep_finder/*_toCombine.txt > sweep_finder/all_variants.SF
 
