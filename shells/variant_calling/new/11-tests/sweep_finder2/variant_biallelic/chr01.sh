@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/rosalind/users/makman/SF2
+#SBATCH -D /global/scratch/makman/GATK/final/
 #SBATCH -J sf_chr01
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio
@@ -9,10 +9,10 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=20
 #SBATCH --time=400:00:00
-#SBATCH -o /global/home/users/makman/H12/outs/sf2chr01.out
-#SBATCH -e /global/home/users/makman/H12/outs/sf2chr01.err
+#SBATCH -o /global/home/users/makman/H12/outs/sf2chr01_biallelic.out
+#SBATCH -e /global/home/users/makman/H12/outs/sf2chr01_biallelic.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
 
-./SweepFinder2 -lg 10000 variant_biallelic/chr01_variants_biallelic.SF variant_biallelic/all_spectFile.txt variant_biallelic/chr01_variants_biallelic_output.txt
+/clusterfs/rosalind/users/makman/SF2/SweepFinder2 -lg 10000 sweep_finder/chr01_SNP_biallelic.SF sweep_finder/all_biallelic_spectFile.txt sweep_finder/chr01_SNP_biallelic_output.txt
