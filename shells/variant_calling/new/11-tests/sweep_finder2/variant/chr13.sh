@@ -2,11 +2,12 @@
 #SBATCH -D /global/scratch/makman/GATK/final/
 #SBATCH -J sf_chr13
 #SBATCH --account=co_rosalind
-#SBATCH --partition=savio2_htc
-#SBATCH --qos=rosalind_htc2_normal
+#SBATCH --partition=savio
+#SBATCH --qos=rosalind_savio_normal
 #SBATCH --nodes=1
-#SBATCH --ntasks=1
-#SBATCH --cpus-per-task=3 
+#SBATCH --mem=64000
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=20
 #SBATCH --time=400:00:00
 #SBATCH -o /global/home/users/makman/H12/outs/sf2chr13.out
 #SBATCH -e /global/home/users/makman/H12/outs/sf2chr13.err
