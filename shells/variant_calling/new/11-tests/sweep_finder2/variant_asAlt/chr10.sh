@@ -1,6 +1,6 @@
 #!/bin/bash 
 #SBATCH -D /global/scratch/makman/GATK/final/
-#SBATCH -J sf_chr01
+#SBATCH -J sf_chr10
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio
 #SBATCH --qos=rosalind_savio_normal
@@ -9,10 +9,10 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=20
 #SBATCH --time=400:00:00
-#SBATCH -o /global/home/users/makman/H12/outs/sf2chr01_asAlt.out
-#SBATCH -e /global/home/users/makman/H12/outs/sf2chr01_asAlt.err
+#SBATCH -o /global/home/users/makman/H12/outs/sf2chr10_asAlt.out
+#SBATCH -e /global/home/users/makman/H12/outs/sf2chr10_asAlt.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
 
-/clusterfs/rosalind/users/makman/SF2/SweepFinder2 -lg 10000 sweep_finder/chr01_SNP_asAlt.SF sweep_finder/all_spectFile_asAlt.txt sweep_finder/chr01_SNP_asAlt_output.txt
+/clusterfs/rosalind/users/makman/SF2/SweepFinder2 -lg 10000 sweep_finder/chr10_SNP_asAlt.SF sweep_finder/all_spectFile_asAlt.txt sweep_finder/chr10_SNP_asAlt_output.txt
