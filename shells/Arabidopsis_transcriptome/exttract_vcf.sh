@@ -16,5 +16,5 @@
 
 module load bio/vcftools/0.1.15
 
-vcftools --vcf testy.recode.vcf --bed QTL_region.bed --recode --out testy_QTL --plink
+vcftools --vcf testy.recode.vcf --bed QTL_region.bed --out testy_QTL --plink
 
