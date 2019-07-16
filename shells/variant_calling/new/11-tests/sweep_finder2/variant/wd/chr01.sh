@@ -1,7 +1,7 @@
 #!/bin/bash 
 #SBATCH -D /global/scratch/makman/GATK/final/
 #SBATCH -J sf_chr01
-#SBATCH --account=co_rosalind
+#SBATCH --account=co_rosalinds
 #SBATCH --partition=savio
 #SBATCH --qos=rosalind_savio_normal
 #SBATCH --nodes=1
@@ -15,4 +15,4 @@
 #SBATCH --mail-type=All
 
 
-/clusterfs/rosalind/users/makman/SF2/SweepFinder2 -lg 10000 sweep_finder/chr01_SNP.SF sweep_finder/all_spectFile.txt sweep_finder/chr01_SNP_output.txt
+/clusterfs/rosalind/users/makman/SF2/SweepFinder2 -lg 10000 sweep_finder/chr01_SNP_wd.SF sweep_finder/all_spectFile_wd.txt sweep_finder/chr01_SNP_wd_output.txt

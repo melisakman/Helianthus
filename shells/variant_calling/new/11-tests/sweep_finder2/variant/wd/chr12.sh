@@ -15,4 +15,4 @@
 #SBATCH --mail-type=All
 
 
-/clusterfs/rosalind/users/makman/SF2/SweepFinder2 -lg 10000 sweep_finder/chr12_SNP.SF sweep_finder/all_spectFile.txt sweep_finder/chr12_SNP_output.txt
+/clusterfs/rosalind/users/makman/SF2/SweepFinder2 -lg 10000 sweep_finder/chr12_SNP_wd.SF sweep_finder/all_spectFile_wd.txt sweep_finder/chr12_SNP_wd_output.txt
