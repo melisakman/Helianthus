@@ -15,4 +15,4 @@
 module load hapflk/1.4
 export TMPDIR=/global/scratch/makman/temp
 
-hapflk --file chr01_SNP_plink_lr_mex_ethno_fixed --miss_pheno 0 --chr 01 --from 1 --to 20000000 -p chr01_1 --ncpu 20 -K 15
+hapflk --file chr01_SNP_plink_lr_mex_ethno_fixed --miss_pheno 0 --chr 01 --from 1 --to 5000000 -p chr01_1 --ncpu 20 -K 15
