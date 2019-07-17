@@ -14,6 +14,4 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
-python vcf2ssx.py ../vcfgz/chr01_final.vcf.gz <formatting> <nonbi removed>
-[<chromosome index>] [<position index>] [<rsID index>] [<refAllele index>]
-[<altAllele index>] [<data index>]
+python vcf2ssx.py ../vcfgz/chr01_final.vcf.gz yes no 
