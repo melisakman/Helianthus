@@ -14,4 +14,4 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
-java -Xmx64G -jar /global/scratch/makman/beagle/beagle.12Jul19.0df.jar gt=../vcfgz/chr01_final.vcf.gz out=chr01_final_phased
+java -Xmx64G -jar /global/scratch/makman/beagle/beagle.12Jul19.0df.jar gt=../chr01_SNP.vcf out=chr01_SNP_phased

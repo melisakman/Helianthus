@@ -1,7 +1,7 @@
 #!/bin/bash 
 #SBATCH -D /global/scratch/makman/GATK/final/
 #SBATCH -J sf_chr01
-#SBATCH --account=co_rosalinds
+#SBATCH --account=co_rosalind
 #SBATCH --partition=savio
 #SBATCH --qos=rosalind_savio_normal
 #SBATCH --nodes=1
