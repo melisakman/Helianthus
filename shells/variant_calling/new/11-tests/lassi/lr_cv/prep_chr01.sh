@@ -7,7 +7,6 @@
 #SBATCH --nodes=1
 #SBATCH --mem=64000
 #SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=20
 #SBATCH --time=400:00:00
 #SBATCH -o /global/home/users/makman/H12/outs/lassi_prep_chr01_lrcv.out
 #SBATCH -e /global/home/users/makman/H12/outs/lassi_prep_chr01_lrcv.err
