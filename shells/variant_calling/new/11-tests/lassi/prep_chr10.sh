@@ -11,4 +11,4 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
-python vcf2ssx.py ../vcfgz/chr10_final.vcf.gz yes no 
+python /global/home/users/makman/git/shells/Helianthus/variant_calling/new/11-tests/lassi/vcf2genotype_lassi.py ../chr10_SNP.vcf ../lr_list.txt chr10_SNP_lr_lassi.txt  
