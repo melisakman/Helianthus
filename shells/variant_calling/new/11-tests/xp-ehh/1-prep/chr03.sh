@@ -11,4 +11,4 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load java
-java -Xmx64G -jar /global/scratch/makman/beagle/beagle.12Jul19.0df.jar gt=../chr03_final_fixed_forPi.vcf out=chr03_phased
+java -Xmx64G -jar /global/scratch/makman/beagle/beagle.11Mar19.69c.jar gt=../chr03_final_fixed_forPi.vcf out=chr03_phased
