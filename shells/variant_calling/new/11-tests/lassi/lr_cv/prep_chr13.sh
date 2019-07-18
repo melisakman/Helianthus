@@ -2,13 +2,11 @@
 #SBATCH -D /global/scratch/makman/GATK/final/lassi
 #SBATCH -J laschr13
 #SBATCH --account=co_rosalind
-#SBATCH --partition=savio
-#SBATCH --qos=rosalind_savio_normal
-#SBATCH --nodes=1
-#SBATCH --mem=64000
-#SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=20
-#SBATCH --time=400:00:00
+#SBATCH --partition=savio2_htc
+#SBATCH --qos=rosalind_htc2_normal
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=4
+#SBATCH --time=160:00:00
 #SBATCH -o /global/home/users/makman/H12/outs/lassi_prep_chr13_lrcv.out
 #SBATCH -e /global/home/users/makman/H12/outs/lassi_prep_chr13_lrcv.err
 #SBATCH --mail-user=makman@berkeley.edu
