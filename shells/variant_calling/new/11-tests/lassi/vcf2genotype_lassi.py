@@ -33,7 +33,7 @@ for line in file1:
 		alt = splt[4]
 		if alt != "." and len(alt) == 1 and len(ref) ==1:
 
-			file3.write(chr + "\tsnp_" + pos + "\t" + pos + "\t" + ref + "\t" + alt)
+			file3.write(chr + " snp_" + pos + " " + pos + " " + ref + " " + alt)
 			for j in samples:
 				if group_dict[j] in group_list:
 					if splt[j][0] == ".":
@@ -49,7 +49,7 @@ for line in file1:
 							
 							else:
 								allele = 5
-					file3.write("\t" + str(allele))		
+					file3.write(" " + str(allele))		
 				else:
 					continue
 		else:
