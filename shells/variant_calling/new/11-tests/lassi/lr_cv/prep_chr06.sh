@@ -12,4 +12,4 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
-python /global/home/users/makman/git/shells/Helianthus/variant_calling/new/11-tests/lassi/vcf2genotype_lassi.py ../chr06_SNP.vcf ../cv_lr_list.txt chr06_SNP_cv_lr_lassi.txt  
+python /global/home/users/makman/git/Helianthus/shells/variant_calling/new/11-tests/lassi/vcf2genotype_lassi.py ../chr06_SNP.vcf ../cv_lr_list.txt chr06_SNP_cv_lr_lassi.txt  
