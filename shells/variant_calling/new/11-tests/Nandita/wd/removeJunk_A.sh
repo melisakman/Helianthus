@@ -1,13 +1,11 @@
 #!/bin/bash 
 #SBATCH -D /global/scratch/makman/GATK/final/G12/Nandita/
 #SBATCH -J G12-A
-#SBATCH --account=co_rosalind
-#SBATCH --partition=savio
-#SBATCH --qos=rosalind_savio_normal
-#SBATCH --nodes=1
-#SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=20
-#SBATCH --time=400:00:00
+#SBATCH --account=fc_blackman
+#SBATCH --partition=savio2
+#SBATCH --qos=savio_normal
+#SBATCH --cpus-per-task=2
+#SBATCH --time=16:00:00
 #SBATCH -o /global/home/users/makman/H12/outs/removeJunk_xrqv2_A.out
 #SBATCH -e /global/home/users/makman/H12/outs/removeJunk_xrqv2_A.err
 #SBATCH --mail-user=makman@berkeley.edu
