@@ -2,13 +2,11 @@
 #SBATCH -D /global/scratch/makman/GATK/final/hapflk/
 #SBATCH -J hfchr01_1
 #SBATCH --account=co_rosalind
-#SBATCH --partition=savio
-#SBATCH --qos=rosalind_savio_normal
-#SBATCH --nodes=1
-#SBATCH --mem=64000
-#SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=20
-#SBATCH --time=400:00:00
+#SBATCH --partition=savio2_htc
+#SBATCH --qos=rosalind_htc2_normal
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=12
+#SBATCH --time=160:00:00
 #SBATCH -o /global/home/users/makman/H12/outs/hapflk_VQSR_chr01_1.out
 #SBATCH -e /global/home/users/makman/H12/outs/hapflk_VQSR_chr01_1.err
 #SBATCH --mail-user=makman@berkeley.edu
