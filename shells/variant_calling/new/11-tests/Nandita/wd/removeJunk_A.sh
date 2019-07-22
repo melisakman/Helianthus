@@ -16,20 +16,20 @@ module load python/2.7
 
 
 
-python ~/git/Helianthus/shells/H12/VQSR/new/Nandita/updated/remove_junkdata.py chr01_G12_input_lrOnly.txt chr01_G12_input_lrOnly_junkRemoved.txt
-python ~/git/Helianthus/shells/H12/VQSR/new/Nandita/updated/remove_junkdata.py chr02_G12_input_lrOnly.txt chr02_G12_input_lrOnly_junkRemoved.txt
-python ~/git/Helianthus/shells/H12/VQSR/new/Nandita/updated/remove_junkdata.py chr03_G12_input_lrOnly.txt chr03_G12_input_lrOnly_junkRemoved.txt
-python ~/git/Helianthus/shells/H12/VQSR/new/Nandita/updated/remove_junkdata.py chr04_G12_input_lrOnly.txt chr04_G12_input_lrOnly_junkRemoved.txt
-# python ~/git/Helianthus/shells/H12/VQSR/new/Nandita/updated/remove_junkdata.py chr05_G12_input_lrOnly.txt chr05_G12_input_lrOnly_junkRemoved.txt
-# python ~/git/Helianthus/shells/H12/VQSR/new/Nandita/updated/remove_junkdata.py chr06_G12_input_lrOnly.txt chr06_G12_input_lrOnly_junkRemoved.txt
-# python ~/git/Helianthus/shells/H12/VQSR/new/Nandita/updated/remove_junkdata.py chr07_G12_input_lrOnly.txt chr07_G12_input_lrOnly_junkRemoved.txt
-# python ~/git/Helianthus/shells/H12/VQSR/new/Nandita/updated/remove_junkdata.py chr08_G12_input_lrOnly.txt chr08_G12_input_lrOnly_junkRemoved.txt
-# python ~/git/Helianthus/shells/H12/VQSR/new/Nandita/updated/remove_junkdata.py chr09_G12_input_lrOnly.txt chr09_G12_input_lrOnly_junkRemoved.txt
-# python ~/git/Helianthus/shells/H12/VQSR/new/Nandita/updated/remove_junkdata.py chr10_G12_input_lrOnly.txt chr10_G12_input_lrOnly_junkRemoved.txt
-# python ~/git/Helianthus/shells/H12/VQSR/new/Nandita/updated/remove_junkdata.py chr11_G12_input_lrOnly.txt chr11_G12_input_lrOnly_junkRemoved.txt
-# python ~/git/Helianthus/shells/H12/VQSR/new/Nandita/updated/remove_junkdata.py chr12_G12_input_lrOnly.txt chr12_G12_input_lrOnly_junkRemoved.txt
-# python ~/git/Helianthus/shells/H12/VQSR/new/Nandita/updated/remove_junkdata.py chr13_G12_input_lrOnly.txt chr13_G12_input_lrOnly_junkRemoved.txt
-# python ~/git/Helianthus/shells/H12/VQSR/new/Nandita/updated/remove_junkdata.py chr14_G12_input_lrOnly.txt chr14_G12_input_lrOnly_junkRemoved.txt
-# python ~/git/Helianthus/shells/H12/VQSR/new/Nandita/updated/remove_junkdata.py chr15_G12_input_lrOnly.txt chr15_G12_input_lrOnly_junkRemoved.txt
-# python ~/git/Helianthus/shells/H12/VQSR/new/Nandita/updated/remove_junkdata.py chr16_G12_input_lrOnly.txt chr16_G12_input_lrOnly_junkRemoved.txt
-# python ~/git/Helianthus/shells/H12/VQSR/new/Nandita/updated/remove_junkdata.py chr17_G12_input_lrOnly.txt chr17_G12_input_lrOnly_junkRemoved.txt
+python ~/git/Helianthus/shells/H12/VQSR/new/Nandita/updated/remove_junkdata.py chr01_G12_input_wdOnly.txt chr01_G12_input_wdOnly_junkRemoved.txt
+python ~/git/Helianthus/shells/H12/VQSR/new/Nandita/updated/remove_junkdata.py chr02_G12_input_wdOnly.txt chr02_G12_input_wdOnly_junkRemoved.txt
+python ~/git/Helianthus/shells/H12/VQSR/new/Nandita/updated/remove_junkdata.py chr03_G12_input_wdOnly.txt chr03_G12_input_wdOnly_junkRemoved.txt
+python ~/git/Helianthus/shells/H12/VQSR/new/Nandita/updated/remove_junkdata.py chr04_G12_input_wdOnly.txt chr04_G12_input_wdOnly_junkRemoved.txt
+# python ~/git/Helianthus/shells/H12/VQSR/new/Nandita/updated/remove_junkdata.py chr05_G12_input_wdOnly.txt chr05_G12_input_wdOnly_junkRemoved.txt
+# python ~/git/Helianthus/shells/H12/VQSR/new/Nandita/updated/remove_junkdata.py chr06_G12_input_wdOnly.txt chr06_G12_input_wdOnly_junkRemoved.txt
+# python ~/git/Helianthus/shells/H12/VQSR/new/Nandita/updated/remove_junkdata.py chr07_G12_input_wdOnly.txt chr07_G12_input_wdOnly_junkRemoved.txt
+# python ~/git/Helianthus/shells/H12/VQSR/new/Nandita/updated/remove_junkdata.py chr08_G12_input_wdOnly.txt chr08_G12_input_wdOnly_junkRemoved.txt
+# python ~/git/Helianthus/shells/H12/VQSR/new/Nandita/updated/remove_junkdata.py chr09_G12_input_wdOnly.txt chr09_G12_input_wdOnly_junkRemoved.txt
+# python ~/git/Helianthus/shells/H12/VQSR/new/Nandita/updated/remove_junkdata.py chr10_G12_input_wdOnly.txt chr10_G12_input_wdOnly_junkRemoved.txt
+# python ~/git/Helianthus/shells/H12/VQSR/new/Nandita/updated/remove_junkdata.py chr11_G12_input_wdOnly.txt chr11_G12_input_wdOnly_junkRemoved.txt
+# python ~/git/Helianthus/shells/H12/VQSR/new/Nandita/updated/remove_junkdata.py chr12_G12_input_wdOnly.txt chr12_G12_input_wdOnly_junkRemoved.txt
+# python ~/git/Helianthus/shells/H12/VQSR/new/Nandita/updated/remove_junkdata.py chr13_G12_input_wdOnly.txt chr13_G12_input_wdOnly_junkRemoved.txt
+# python ~/git/Helianthus/shells/H12/VQSR/new/Nandita/updated/remove_junkdata.py chr14_G12_input_wdOnly.txt chr14_G12_input_wdOnly_junkRemoved.txt
+# python ~/git/Helianthus/shells/H12/VQSR/new/Nandita/updated/remove_junkdata.py chr15_G12_input_wdOnly.txt chr15_G12_input_wdOnly_junkRemoved.txt
+# python ~/git/Helianthus/shells/H12/VQSR/new/Nandita/updated/remove_junkdata.py chr16_G12_input_wdOnly.txt chr16_G12_input_wdOnly_junkRemoved.txt
+# python ~/git/Helianthus/shells/H12/VQSR/new/Nandita/updated/remove_junkdata.py chr17_G12_input_wdOnly.txt chr17_G12_input_wdOnly_junkRemoved.txt
