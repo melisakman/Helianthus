@@ -11,6 +11,6 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
-module load python
+python/2.7
 module load numpy
 python LASSI_iterator.py initial 01 15 lassi_output_lr chr,_SNP_lr_lassi_mlg.txt lr lr_headfile.txt 117 12 yes
