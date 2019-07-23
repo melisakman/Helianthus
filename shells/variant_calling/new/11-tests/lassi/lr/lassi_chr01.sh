@@ -11,4 +11,4 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
-python ./LASSI_iterator.py initial 01 20 lassi_output_lr chr,_SNP_lr_lassi.txt lr lr_headfile.txt 50 5 yes
+python ./LASSI_iterator.py initial 01 20 lassi_output_lr chr,_SNP_lr_lassi.txt.gz lr lr_headfile.txt 100 10 yes
