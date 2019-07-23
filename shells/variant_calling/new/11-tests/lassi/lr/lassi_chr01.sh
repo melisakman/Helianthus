@@ -13,4 +13,4 @@
 
 module load python
 module load numpy
-python LASSI_iterator.py initial 12 20 lassi_output_lr chr,_SNP_lr_lassi_mlg.txt lr lr_headfile.txt 100 10 yes
+python LASSI_iterator.py initial 01 20 lassi_output_lr chr,_SNP_lr_lassi_mlg.txt lr lr_headfile.txt 100 10 yes
