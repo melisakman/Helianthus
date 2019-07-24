@@ -14,11 +14,11 @@
 module load python/2.7
 module load numpy/1.13.3
 
-python LASSI_iterator.py initial 14 15 lassi_output_lr_chr14 chr,_SNP_lr_lassi_mlg.txt lr lr_headfile.txt 117 12 yes
-
-python LASSI_iterator.py rescan 14 20 lassi_output_lr_chr14 chr,_SNP_lr_lassi_mlg.txt lr lr_headfile.txt 117 12 yes
-
-
-# python LASSI_iterator.py neutavg 14 20 lassi_output_lr_chr14 chr,_SNP_lr_lassi_mlg.txt lr 135414
+# python LASSI_iterator.py initial 14 15 lassi_output_lr_chr14 chr,_SNP_lr_lassi_mlg.txt lr lr_headfile.txt 117 12 yes
 # 
-# python LASSI_iterator.py MLcalc 14 20 lassi_output_lr_chr14 chr,_SNP_lr_lassi_mlg.txt lr 3
+# python LASSI_iterator.py rescan 14 20 lassi_output_lr_chr14 chr,_SNP_lr_lassi_mlg.txt lr lr_headfile.txt 117 12 yes
+
+
+python LASSI_iterator.py neutavg 14 20 lassi_output_lr_chr14 chr,_SNP_lr_lassi_mlg.txt lr 141643
+
+python LASSI_iterator.py MLcalc 14 20 lassi_output_lr_chr14 chr,_SNP_lr_lassi_mlg.txt lr 3
