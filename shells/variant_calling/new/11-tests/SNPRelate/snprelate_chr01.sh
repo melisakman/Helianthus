@@ -7,7 +7,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=20
-#SBATCH --time=400:00:00
+#SBATCH --time=4:00:00
 #SBATCH -o /global/home/users/makman/vcftools/outs/MA_snpRelate_chr01_pruned.out
 #SBATCH -e /global/home/users/makman/vcftools/outs/MA_snpRelate_chr01_pruned.err
 #SBATCH --mail-user=makman@berkeley.edu
