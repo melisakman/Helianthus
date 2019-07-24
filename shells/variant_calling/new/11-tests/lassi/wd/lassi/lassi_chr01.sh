@@ -19,6 +19,6 @@ python LASSI_iterator.py initial 01 15 lassi_output_wd_chr01 chr,_SNP_wd_lassi_m
 python LASSI_iterator.py rescan 01 20 lassi_output_wd_chr01 chr,_SNP_wd_lassi_mlg.txt wd wd_headfile.txt 117 12 yes
 
 
-# python LASSI_iterator.py neutavg 01 20 lassi_output_wd_chr01 chr,_SNP_wd_lassi_mlg.txt wd 135414
+# python LASSI_iterator.py neutavg 01 20 lassi_output_wd_chr01 chr,_SNP_wd_lassi_mlg.txt wd 127238
 # 
 # python LASSI_iterator.py MLcalc 01 20 lassi_output_wd_chr01 chr,_SNP_wd_lassi_mlg.txt wd 3
