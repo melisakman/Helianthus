@@ -9,8 +9,8 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=20
 #SBATCH --time=40:00:00
-#SBATCH -o /global/home/users/makman/blast/outs/intervalGenes_blast_AT_bedtools_1metricOnly.out
-#SBATCH -e /global/home/users/makman/blast/outs/intervalGenes_blast_AT_bedtools_1metricOnly.err
+#SBATCH -o /global/home/users/makman/vcftools/outs/fst_pi_tajD_G12_lassi_CLR.out
+#SBATCH -e /global/home/users/makman/vcftools/outs/fst_pi_tajD_G12_lassi_CLR.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
