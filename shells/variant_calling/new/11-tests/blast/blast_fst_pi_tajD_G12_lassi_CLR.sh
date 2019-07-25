@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -D /global/home/users/makman/GATK/final/blast/
+#SBATCH -D /global/scratch/makman/GATK/final/blast
 #SBATCH -J blast
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio
