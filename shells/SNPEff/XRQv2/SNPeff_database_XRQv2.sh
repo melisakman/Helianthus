@@ -14,4 +14,4 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 module load java
-srun java -jar snpEff/snpEff.jar build -gff3 -v XRQv2
+java -jar /global/scratch/makman/GATK/final/snpeff/snpEff.jar build -gff3 -v XRQv2
