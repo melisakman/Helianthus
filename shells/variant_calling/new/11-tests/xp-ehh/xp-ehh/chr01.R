@@ -2,8 +2,8 @@
 library(rehh)
 
 setwd("/global/scratch/makman/GATK/final")
-lr <- data2haplohh("chr01_SNP_lr.vcf.recode.vcf", min_perc_geno.mrk = 30)
-wd <- data2haplohh("chr01_SNP_wd.vcf.recode.vcf", min_perc_geno.mrk = 30)
+lr <- data2haplohh("chr01_SNP_lr.vcf.recode.vcf", min_perc_geno.mrk = 30, polarize_vcf = FALSE)
+wd <- data2haplohh("chr01_SNP_wd.vcf.recode.vcf", min_perc_geno.mrk = 30, polarize_vcf = FALSE)
 
 analyses = ies2xpehh(lr, wd, popname1 = "landrace", popname2 = "wild")
 
