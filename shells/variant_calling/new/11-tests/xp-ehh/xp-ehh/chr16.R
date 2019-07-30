@@ -26,6 +26,6 @@ phased = FALSE, polarized = FALSE, scalegap = NA, maxgap = NA,
 discard_integration_at_border = TRUE, lower_ehh_y_bound = 0.05,
 lower_ehhs_y_bound = 0.05, threads = 12)
 
-analyses = ies2xpehh(cvlr_scan, wd, popname1 = "domesticates", popname2 = "wild", include_freq =TRUE)
+analyses = ies2xpehh(cvlr_scan, wd_scan, popname1 = "domesticates", popname2 = "wild", include_freq =TRUE)
  
 write.table(analyses, file = "chr16_cvlr_xpehh.txt", sep = "\t")
