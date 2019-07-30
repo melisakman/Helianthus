@@ -1,10 +1,9 @@
 #!/bin/bash 
 #SBATCH -D /global/scratch/makman/GATK/final/
 #SBATCH -J xp-ehh
-#SBATCH --account=co_rosalind
-#SBATCH --partition=savio2_htc
-#SBATCH --qos=rosalind_htc2_normal
-#SBATCH --ntasks=1
+#SBATCH --account=fc_blackman
+#SBATCH --partition=savio2
+#SBATCH --qos=savio_normal
 #SBATCH --cpus-per-task=12
 #SBATCH --time=40:00:00
 #SBATCH -o /global/home/users/makman/vcftools/outs/xpehh_chr11.out
