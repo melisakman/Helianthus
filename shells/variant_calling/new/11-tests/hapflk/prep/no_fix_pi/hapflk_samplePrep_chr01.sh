@@ -21,12 +21,12 @@ module load bio/vcftools/0.1.15
 module load hapflk/1.4
 export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
 
-# gunzip chr01_final.vcf.gz
-# 
-# /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c chr01_final.vcf > chr01_final.vcf.gz
-# 
-# /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf chr01_final.vcf.gz
-# 
+gunzip chr01_final.vcf.gz
+
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c chr01_final.vcf > chr01_final.vcf.gz
+
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf chr01_final.vcf.gz
+
 # /global/scratch/makman/gatk-4.1.0.0/gatk --java-options "-Xmx64g -Djava.io.tmpdir=/global/scratch/makman/temp_files/" SelectVariants \
 # -R /clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
 # -V chr01_final.vcf.gz \
