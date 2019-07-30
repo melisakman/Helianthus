@@ -31,3 +31,4 @@ cat chr14_SNP.vcf | java -Xmx16g -jar /global/scratch/makman/GATK/final/snpeff/s
 cat chr15_SNP.vcf | java -Xmx16g -jar /global/scratch/makman/GATK/final/snpeff/snpEff.jar -noLof -stats XRQv2_final_SNPEff_stats_chr15.html XRQv2 | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > snpeff/chr15_SNP_snpeff.vcf.gz
 cat chr16_SNP.vcf | java -Xmx16g -jar /global/scratch/makman/GATK/final/snpeff/snpEff.jar -noLof -stats XRQv2_final_SNPEff_stats_chr16.html XRQv2 | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > snpeff/chr16_SNP_snpeff.vcf.gz
 cat chr17_SNP.vcf | java -Xmx16g -jar /global/scratch/makman/GATK/final/snpeff/snpEff.jar -noLof -stats XRQv2_final_SNPEff_stats_chr17.html XRQv2 | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > snpeff/chr17_SNP_snpeff.vcf.gz
+
