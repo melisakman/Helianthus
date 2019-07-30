@@ -1,11 +1,10 @@
 #!/bin/bash
 #SBATCH -D /global/scratch/makman/GATK/final/hapflk/
 #SBATCH -J hfchr01
-#SBATCH --account=co_rosalind
-#SBATCH --partition=savio2_htc
-#SBATCH --qos=rosalind_htc2_normal
-#SBATCH --ntasks=1
-#SBATCH --cpus-per-task=12
+#SBATCH --account=fc_blackman
+#SBATCH --partition=savio2
+#SBATCH --qos=savio_normal
+#SBATCH --cpus-per-task=20
 #SBATCH --time=40:00:00
 #SBATCH -e /global/home/users/makman/H12/outs/hapflk_VQSR_chr01.err
 #SBATCH --mail-user=makman@berkeley.edu
