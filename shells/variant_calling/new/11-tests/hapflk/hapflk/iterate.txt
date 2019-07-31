@@ -16,5 +16,21 @@ python iterate_fcblackman.py 15 176000000
 python iterate_fcblackman.py 16 207000000
 python iterate_fcblackman.py 17 196000000
 
-
+HanXRQChr01,length=149502186>
+##contig=<ID=HanXRQChr02,length=174800439>
+##contig=<ID=HanXRQChr03,length=176490873>
+##contig=<ID=HanXRQChr04,length=208320189>
+##contig=<ID=HanXRQChr05,length=178169690>
+##contig=<ID=HanXRQChr06,length=148147350>
+##contig=<ID=HanXRQChr07,length=149542083>
+##contig=<ID=HanXRQChr08,length=167167940>
+##contig=<ID=HanXRQChr09,length=189665024>
+##contig=<ID=HanXRQChr10,length=181411567>
+##contig=<ID=HanXRQChr11,length=189830405>
+##contig=<ID=HanXRQChr12,length=163781230>
+##contig=<ID=HanXRQChr13,length=173487274>
+##contig=<ID=HanXRQChr14,length=173346949>
+##contig=<ID=HanXRQChr15,length=175671323>
+##contig=<ID=HanXRQChr16,length=206736614>
+##contig=<ID=HanXRQChr17,length=195042445>
 
