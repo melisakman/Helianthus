@@ -4,7 +4,7 @@
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio
 #SBATCH --qos=rosalind_savio_normal
-#SBATCH --time=172:00:00
+#SBATCH --time=29:00:00
 #SBATCH -o /global/home/users/makman/GATK/outs/map1.out
 #SBATCH -e /global/home/users/makman/GATK/outs/map1.err
 #SBATCH --mail-user=makman@berkeley.edu
