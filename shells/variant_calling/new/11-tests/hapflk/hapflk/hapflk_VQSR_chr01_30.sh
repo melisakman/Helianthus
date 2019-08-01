@@ -1,9 +1,9 @@
 #!/bin/bash
 #SBATCH -D /global/scratch/makman/GATK/final/hapflk/
 #SBATCH -J hfchr01_30
-#SBATCH --account=co_rosalind
+#SBATCH --account=fc_blackman
 #SBATCH --partition=savio2
-#SBATCH --qos=rosalind_htc2_normal
+#SBATCH --qos=savio_normal
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=12 
