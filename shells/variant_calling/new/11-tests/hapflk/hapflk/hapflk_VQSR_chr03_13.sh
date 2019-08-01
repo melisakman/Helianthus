@@ -2,7 +2,7 @@
 #SBATCH -D /global/scratch/makman/GATK/final/hapflk/
 #SBATCH -J hfchr03_13
 #SBATCH --partition=savio2_htc
-#SBATCH --qos=savio_normal
+#SBATCH --qos=rosalind_htc2_normal
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
