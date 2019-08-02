@@ -32,6 +32,6 @@ for file in infile:
 #SBATCH --mail-type=All
 #SBATCH --time=6:00:00
 module load hapflk/1.4
-hapflk --file """ + str(chr) + "_plink_lr_mex_ethno_fixed --miss_pheno 0 --chr " + str(chr[-2:]) + " --from " + str(start_new) + " --to " + str(end) + " -p " + str(chr) + "_" + str(part) + "_" + str(i) + " --ncpu 6 -K 15")
+hapflk --file """ + str(chr) + "_final_plink_lr_mex_ethno_fixed --miss_pheno 0 --chr " + str(chr[-2:]) + " --from " + str(start_new) + " --to " + str(end) + " -p " + str(chr) + "_" + str(part) + "_" + str(i) + " --ncpu 6 -K 15")
 	
 
