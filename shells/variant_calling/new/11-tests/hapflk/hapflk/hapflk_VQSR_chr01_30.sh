@@ -1,12 +1,12 @@
 #!/bin/bash
 #SBATCH -D /global/scratch/makman/GATK/final/hapflk/
 #SBATCH -J hfchr01_30
-#SBATCH --account=fc_blackman
-#SBATCH --partition=savio2
-#SBATCH --qos=savio_normal
+#SBATCH --account=co_rosalind
+#SBATCH --partition=savio2_htc
+#SBATCH --qos=rosalind_htc2_normal
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=12 
+#SBATCH --cpus-per-task=8 
 #SBATCH -e /global/home/users/makman/H12/outs/hapflk_VQSR_chr01_30.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
