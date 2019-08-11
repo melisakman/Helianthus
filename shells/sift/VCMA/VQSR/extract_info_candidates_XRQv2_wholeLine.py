@@ -14,13 +14,13 @@ gene_list = []
 for i in file2:
 	gene_list.append(i[0:-1])
 	
-range_lr_US = range(0,13)
-range_lr_mex = range(13,18)
-range_ethno = range(18,24)
-range_wd_US = range(24,46)
-range_wd_mex = range(46,49)
+range_lr_US = [0] + [3] + range(4,12) + [18] + [22,23]
+range_lr_mex = range(12,17)
+range_ethno = range(1,3) + 17 + range(19,22)
+range_wd_US = range(24,27) + range(29,36) + range(37,45) + range(51,56)
+range_wd_mex = [45, 47, 49] 
 range_lr = range(0,24)
-range_wd = range(24,49)
+range_wd = range(24,56)
 
 	
 for line1 in file1: 
@@ -52,17 +52,17 @@ for line1 in file1:
 	else:
 		if splt1[4] != ".":
 			ann = splt1[7].split("|")
-			gene = splt1[7].split("gene:")[1][:19]
+			gene = splt1[7].split("gene:")[1][:23]
 			ref = splt1[3]
 			alt = splt1[4]
 			pos = splt1[1]
 			type = splt1[7]
-			# if splt1[7].find("SIFTINFO") != -1:
-# 				type = "SNPEff: " + ann[1] + "; " + ann[2] + "; " + ann[10] + "| SIFT: " + ann[20] + "; " + ann[26] + "; " + ann[27] 
-# 			else:
-# 				type = "SNPEff: " + ann[1] + "; " + ann[2] + "; " + ann[10] 
+			if splt1[7].find("SIFTINFO") != -1:
+				type = "SNPEff: " + ann[1] + "; " + ann[2] + "; " + ann[10] + "| SIFT: " + ann[20] + "; " + ann[26] + "; " + ann[27] 
+			else:
+				type = "SNPEff: " + ann[1] + "; " + ann[2] + "; " + ann[10] 
 			allele_list = []
-			allele_list= [splt1[9]] + [splt1[12]] + splt1[20:26] + splt1[38:40] + [splt1[43]] + [splt1[57]] + [splt1[59]] + [splt1[26]]+ splt1[28:31] + [splt1[32]] + splt1[10:12] + splt1[54:57] + [splt1[42]] + splt1[60:63] + splt1[65:71] + splt1[72:80] + splt1[81:86] + [splt1[33]] + [splt1[35]] + [splt1[37]]
+			allele_list= splt1[9:13] + splt1[25:30] + splt1[31:35] + splt1[36:39] + splt1[40:43] + splt1[56:]
 			if gene in gene_list:
 				for j in range_wd:
 					if str(allele_list[j][0:3]) == "0/0":
