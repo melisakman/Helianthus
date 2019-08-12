@@ -1,13 +1,11 @@
 #!/bin/bash 
 #SBATCH -D /global/scratch/makman/GATK/final/
 #SBATCH -J xp-ehh
-#SBATCH --account=co_rosalind
-#SBATCH --partition=savio
-#SBATCH --qos=rosalind_savio_normal
-#SBATCH --nodes=1
-#SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=20
-#SBATCH --time=40:00:00
+#SBATCH --partition=vector
+#SBATCH --qos=vector_batch
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=12
+#SBATCH --time=800:00:00
 #SBATCH -o /global/home/users/makman/vcftools/outs/xpehh_chr11.out
 #SBATCH -e /global/home/users/makman/vcftools/outs/xpehh_chr11.err
 #SBATCH --mail-user=makman@berkeley.edu
