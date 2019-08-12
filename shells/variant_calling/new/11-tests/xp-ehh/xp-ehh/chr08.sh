@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /global/scratch/makman/GATK/final/
+#SBATCH -D /clusterfs/rosalind/users/makman/GATK/xp-ehh
 #SBATCH -J xp-ehh
 #SBATCH --partition=vector
 #SBATCH --qos=vector_batch
