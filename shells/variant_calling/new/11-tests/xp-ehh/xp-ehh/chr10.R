@@ -1,7 +1,7 @@
 
 library(rehh)
 
-setwd("/global/scratch/makman/GATK/final")
+setwd("/clusterfs/vector/scratch/makman/xp-ehh/")
 lr <- data2haplohh("chr10_SNP_lr.vcf.recode.vcf", min_perc_geno.mrk = 30, polarize_vcf = FALSE)
 wd <- data2haplohh("chr10_SNP_wd.vcf.recode.vcf", min_perc_geno.mrk = 30, polarize_vcf = FALSE)
 
