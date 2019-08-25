@@ -1,0 +1,2 @@
+hapflk_VQSR_chr01_28.sh
+hapflk_VQSR_chr01_30.sh
