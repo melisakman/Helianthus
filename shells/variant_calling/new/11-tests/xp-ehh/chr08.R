@@ -21,7 +21,7 @@ write.table(wd_scan, file = "chr08_wd_scanhh.txt", sep = "\t")
 
 #analyses = ies2xpehh(lr_scan, wd_scan, popname1 = "landrace", popname2 = "wild", include_freq =TRUE)
 
-write.table(analyses, file = "chr08_lr_xpehh.txt", sep = "\t")
+#write.table(analyses, file = "chr08_lr_xpehh.txt", sep = "\t")
 
 # cvlr <- data2haplohh("chr08_SNP_cv_lr.vcf.recode.vcf", min_perc_geno.mrk = 30, polarize_vcf = FALSE)
 #  

@@ -4,7 +4,7 @@
 #SBATCH --account=fc_blackman
 #SBATCH --partition=savio2
 #SBATCH --qos=savio_normal
-#SBATCH --cpus-per-task=12
+#SBATCH --cpus-per-task=8
 #SBATCH --time=72:00:00
 #SBATCH -o /global/home/users/makman/vcftools/outs/xpehh_chr01.out
 #SBATCH -e /global/home/users/makman/vcftools/outs/xpehh_chr01.err
