@@ -21,6 +21,9 @@ module load r/3.4.2
 # vcftools --vcf chr06_SNP.vcf --keep lr_list.txt --recode --out chr06_SNP_lr.vcf
 # vcftools --vcf chr06_SNP.vcf --keep wd_list.txt --recode --out chr06_SNP_wd.vcf
 # vcftools --vcf chr06_SNP.vcf --keep cv_lr_list.txt --recode --out chr06_SNP_cv_lr.vcf
+python /global/home/users/makman/git/Helianthus/shells/variant_calling/new/11-tests/xp-ehh/xp-ehh_bug_fix/filter_hetero.py chr06_SNP_lr.vcf.recode.vcf chr06_SNP_lr_heteroFiltered.vcf
+python /global/home/users/makman/git/Helianthus/shells/variant_calling/new/11-tests/xp-ehh/xp-ehh_bug_fix/filter_hetero.py chr06_SNP_wd.vcf.recode.vcf chr06_SNP_wd_heteroFiltered.vcf
+python /global/home/users/makman/git/Helianthus/shells/variant_calling/new/11-tests/xp-ehh/xp-ehh_bug_fix/filter_hetero.py chr06_SNP_cv_lr.vcf.recode.vcf chr06_SNP_cv_lr_heteroFiltered.vcf
 
 
 Rscript /global/home/users/makman/git/Helianthus/shells/variant_calling/new/11-tests/xp-ehh/xp-ehh/chr06.R

@@ -2,8 +2,8 @@
 library(rehh)
 
 setwd("/clusterfs/vector/scratch/makman/xp-ehh/")
-lr <- data2haplohh("chr09_SNP_lr.vcf.recode.vcf", min_perc_geno.mrk = 30, polarize_vcf = FALSE)
-wd <- data2haplohh("chr09_SNP_wd.vcf.recode.vcf", min_perc_geno.mrk = 30, polarize_vcf = FALSE)
+lr <- data2haplohh("chr09_SNP_lr_heteroFiltered.vcf", min_perc_geno.mrk = 30, polarize_vcf = FALSE)
+wd <- data2haplohh("chr09_SNP_wd_heteroFiltered.vcf", min_perc_geno.mrk = 30, polarize_vcf = FALSE)
 
 lr_scan = scan_hh(lr, limhaplo = 2, limehh = 0.05, limehhs = 0.05,
 phased = FALSE, polarized = FALSE, scalegap = NA, maxgap = NA,
@@ -19,7 +19,7 @@ analyses = ies2xpehh(lr_scan, wd_scan, popname1 = "landrace", popname2 = "wild",
 
 write.table(analyses, file = "chr09_lr_xpehh.txt", sep = "\t")
 
-cvlr <- data2haplohh("chr09_SNP_cv_lr.vcf.recode.vcf", min_perc_geno.mrk = 30, polarize_vcf = FALSE)
+cvlr <- data2haplohh("chr09_SNP_cv_lr_heteroFiltered.vcf", min_perc_geno.mrk = 30, polarize_vcf = FALSE)
  
 cvlr_scan = scan_hh(cvlr, limhaplo = 2, limehh = 0.05, limehhs = 0.05,
 phased = FALSE, polarized = FALSE, scalegap = NA, maxgap = NA,
