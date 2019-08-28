@@ -20,5 +20,5 @@ module load r/3.4.2
 # vcftools --vcf chr01_SNP.vcf --keep cv_lr_list.txt --recode --out chr01_SNP_cv_lr.vcf
 
 
-Rscript /global/home/users/makman/git/Helianthus/shells/variant_calling/new/11-tests/xp-ehh/xp-ehh/chr01.R
+Rscript /global/home/users/makman/git/Helianthus/shells/variant_calling/new/11-tests/xp-ehh/chr01.R
 
