@@ -8,14 +8,14 @@ wd <- data2haplohh("chr08_SNP_wd_heteroFiltered.vcf", min_perc_geno.mrk = 30, po
 lr_scan = scan_hh(lr, limhaplo = 2, limehh = 0.05, limehhs = 0.05,
 phased = FALSE, polarized = FALSE, scalegap = NA, maxgap = NA,
 discard_integration_at_border = TRUE, lower_ehh_y_bound = 0.05,
-lower_ehhs_y_bound = 0.05, threads = 12)
+lower_ehhs_y_bound = 0.05, threads = 4)
 
 write.table(lr_scan, file = "chr08_lr_scanhh.txt", sep = "\t")
 
 wd_scan = scan_hh(wd, limhaplo = 2, limehh = 0.05, limehhs = 0.05,
 phased = FALSE, polarized = FALSE, scalegap = NA, maxgap = NA,
 discard_integration_at_border = TRUE, lower_ehh_y_bound = 0.05,
-lower_ehhs_y_bound = 0.05, threads = 12)
+lower_ehhs_y_bound = 0.05, threads = 4)
 
 write.table(wd_scan, file = "chr08_wd_scanhh.txt", sep = "\t")
 
@@ -28,7 +28,7 @@ write.table(analyses, file = "chr08_lr_xpehh.txt", sep = "\t")
  cvlr_scan = scan_hh(cvlr, limhaplo = 2, limehh = 0.05, limehhs = 0.05,
  phased = FALSE, polarized = FALSE, scalegap = NA, maxgap = NA,
  discard_integration_at_border = TRUE, lower_ehh_y_bound = 0.05,
- lower_ehhs_y_bound = 0.05, threads = 12)
+ lower_ehhs_y_bound = 0.05, threads = 4)
  
  analyses = ies2xpehh(cvlr_scan, wd_scan, popname1 = "domesticates", popname2 = "wild", include_freq =TRUE)
   

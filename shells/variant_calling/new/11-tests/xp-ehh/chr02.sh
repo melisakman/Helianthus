@@ -1,14 +1,11 @@
 #!/bin/bash 
 #SBATCH -D /global/scratch/makman/GATK/final/
 #SBATCH -J xp-ehh
-#SBATCH --account=co_rosalind
-#SBATCH --partition=savio
-#SBATCH --qos=rosalind_savio_normal
-#SBATCH --nodes=1
-#SBATCH --mem=64000
-#SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=20
-#SBATCH --time=40:00:00
+#SBATCH --account=fc_blackman
+#SBATCH --partition=savio2
+#SBATCH --qos=savio_normal
+#SBATCH --cpus-per-task=4
+#SBATCH --time=72:00:00
 #SBATCH -o /global/home/users/makman/vcftools/outs/xpehh_chr02.out
 #SBATCH -e /global/home/users/makman/vcftools/outs/xpehh_chr02.err
 #SBATCH --mail-user=makman@berkeley.edu
@@ -26,5 +23,5 @@ python /global/home/users/makman/git/Helianthus/shells/variant_calling/new/11-te
 python /global/home/users/makman/git/Helianthus/shells/variant_calling/new/11-tests/xp-ehh/xp-ehh_bug_fix/filter_hetero.py chr02_SNP_cv_lr.vcf.recode.vcf chr02_SNP_cv_lr_heteroFiltered.vcf
 
 
-Rscript /global/home/users/makman/git/Helianthus/shells/variant_calling/new/11-tests/xp-ehh/xp-ehh/chr02.R
+Rscript /global/home/users/makman/git/Helianthus/shells/variant_calling/new/11-tests/xp-ehh/chr02.R
 

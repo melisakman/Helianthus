@@ -23,5 +23,5 @@ python /global/home/users/makman/git/Helianthus/shells/variant_calling/new/11-te
 python /global/home/users/makman/git/Helianthus/shells/variant_calling/new/11-tests/xp-ehh/xp-ehh_bug_fix/filter_hetero.py chr08_SNP_cv_lr.vcf.recode.vcf chr08_SNP_cv_lr_heteroFiltered.vcf
 
 
-Rscript /global/home/users/makman/git/Helianthus/shells/variant_calling/new/11-tests/xp-ehh/xp-ehh/chr08.R
+Rscript /global/home/users/makman/git/Helianthus/shells/variant_calling/new/11-tests/xp-ehh/chr08.R
 
