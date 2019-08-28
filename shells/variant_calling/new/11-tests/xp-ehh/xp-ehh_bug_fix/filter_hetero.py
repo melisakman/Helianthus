@@ -13,12 +13,17 @@ for line in infile:
 	if split[0][0] == "#":
 		outfile.write(line)
 	else:
+		hetero = True
 		for i in range(9, sample_no):	
 			split2 = split[i].split(":")[0]
 			if split2 == "0/0" or split2 == "0|0" or split2 == "1/1" or split2 == "1|1":
-				outfile.write(line)
-				break
-			elif split2 == "./." or split2 == ".":
+				hetero = False
+				break				
+			elif split2 == "./." or split2 == "." or split2 == ".|.":
 				continue
+		if hetero == False:
+			outfile.write(line)
+		else:
+			continue
 			
 			
