@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /clusterfs/vector/scratch/makman/xp-ehh/
+#SBATCH -D /global/scratch/makman/GATK/final/
 #SBATCH -J xp-ehh
 #SBATCH --account=fc_blackman
 #SBATCH --partition=savio2
