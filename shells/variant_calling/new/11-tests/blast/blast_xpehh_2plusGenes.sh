@@ -12,4 +12,4 @@
 #SBATCH --mail-type=All
 
 module load blast
-srun blastx -query /global/home/users/makman/git/Helianthus/shells/variant_calling/new/11-tests/blast/xpehh_2plus_genes_CDs_seqs -db /global/scratch/makman/GATK/final/blast/TAIR10_pep_20101214 -outfmt "7 qseqid qlen sseqid slen qstart qend sstart send evalue bitscore score length pident nident mismatch positive gapopen gaps" -out xpehh_genes2AT.txt
+srun blastx -query /global/home/users/makman/git/Helianthus/shells/variant_calling/new/11-tests/blast/xpehh_2plus_genes_CDs_seqs.txt -db /global/scratch/makman/GATK/final/blast/TAIR10_pep_20101214 -outfmt "7 qseqid qlen sseqid slen qstart qend sstart send evalue bitscore score length pident nident mismatch positive gapopen gaps" -out xpehh_genes2AT.txt
