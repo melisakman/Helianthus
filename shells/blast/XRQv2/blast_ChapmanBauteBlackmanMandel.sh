@@ -13,8 +13,8 @@
 #SBATCH -e /global/home/users/makman/blast/outs/combinedGenes_2XRQv2.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
--#SBATCH --array=1-2
-module load blast/2.2.30
+#SBATCH --array=1-2
+module load blast
 
 srun makeblastdb -in ../HanXRQr2/HanXRQr2.0-SUNRISE-2.1.mrna.fasta -input_type fasta -dbtype nucl -title XRQv2_mRNA -out XRQv2_mRNA
 
