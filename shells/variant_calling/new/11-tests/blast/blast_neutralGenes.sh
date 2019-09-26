@@ -12,4 +12,6 @@
 #SBATCH --mail-type=All
 
 module load blast
-srun blastx -query /global/scratch/makman/GATK/final/neutral/100gene_CDs.txt -db /global/scratch/makman/GATK/final/blast/TAIR10_pep_20101214 -outfmt "7 qseqid qlen sseqid slen qstart qend sstart send evalue bitscore score length pident nident mismatch positive gapopen gaps" -out neutral_genes2AT.txt
+# srun blastx -query /global/scratch/makman/GATK/final/neutral/100gene_CDs.txt -db /global/scratch/makman/GATK/final/blast/TAIR10_pep_20101214 -outfmt "7 qseqid qlen sseqid slen qstart qend sstart send evalue bitscore score length pident nident mismatch positive gapopen gaps" -out neutral_genes2AT.txt
+
+srun blastx -query /global/scratch/makman/GATK/final/neutral/all4plus_genes_CDs.txt -db /global/scratch/makman/GATK/final/blast/TAIR10_pep_20101214 -outfmt "7 qseqid qlen sseqid slen qstart qend sstart send evalue bitscore score length pident nident mismatch positive gapopen gaps" -out all4plus_neutralgenes_2AT.txt
