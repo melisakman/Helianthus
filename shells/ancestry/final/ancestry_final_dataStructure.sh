@@ -12,7 +12,7 @@
 #SBATCH -e /global/home/users/makman/H12/outs/ancestry_dataStructure.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-module load python
+module load python/2.7 
 python /global/scratch/makman/ancestry/ancestry_informative_from_vcf_dataStructure.py chr01_SNP.vcf /global/scratch/makman/GATK/final/ancestry/chr01_ancestry_dataStructure.txt
 python /global/scratch/makman/ancestry/ancestry_informative_from_vcf_dataStructure.py chr02_SNP.vcf /global/scratch/makman/GATK/final/ancestry/chr02_ancestry_dataStructure.txt
 python /global/scratch/makman/ancestry/ancestry_informative_from_vcf_dataStructure.py chr03_SNP.vcf /global/scratch/makman/GATK/final/ancestry/chr03_ancestry_dataStructure.txt
