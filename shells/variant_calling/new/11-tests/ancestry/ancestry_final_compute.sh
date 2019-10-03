@@ -8,13 +8,13 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
 #SBATCH --time=72:00:00
-#SBATCH -o /clusterfs/vector/scratch/makman/ancestry/outs/ancestry_compute.out
-#SBATCH -e /clusterfs/vector/scratch/makman/ancestry/outs/ancestry_compute.err
+#SBATCH -o /global/home/users/makman/H12/outs/ancestry_compute.out
+#SBATCH -e /global/home/users/makman/H12/outs/ancestry_compute.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 #SBATCH --array=1-17
 module load python
-
+chmod +x ./infocalc
 ./infocalc -column 2 -input /global/scratch/makman/GATK/final/ancestry/chr01_ancestry_dataStructure.txt -output /global/scratch/makman/GATK/final/ancestry/output/chr01_ancestry.txt
 ./infocalc -column 2 -input /global/scratch/makman/GATK/final/ancestry/chr02_ancestry_dataStructure.txt -output /global/scratch/makman/GATK/final/ancestry/output/chr02_ancestry.txt
 ./infocalc -column 2 -input /global/scratch/makman/GATK/final/ancestry/chr03_ancestry_dataStructure.txt -output /global/scratch/makman/GATK/final/ancestry/output/chr03_ancestry.txt
