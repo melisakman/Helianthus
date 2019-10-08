@@ -12,7 +12,6 @@
 #SBATCH -e /global/home/users/makman/H12/outs/ancestry_compute.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
-#SBATCH --array=1-17
 module load python
 chmod +x ./infocalc
 ./infocalc -column 2 -input /global/scratch/makman/GATK/final/ancestry/chr01_ancestry_dataStructure.txt -output /global/scratch/makman/GATK/final/ancestry/output/chr01_ancestry.txt
