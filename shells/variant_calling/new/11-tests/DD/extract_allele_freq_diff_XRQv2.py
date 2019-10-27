@@ -50,15 +50,15 @@ for line1 in file1:
 		if wild_ref + wild_hetero + wild_alt == 0 and lr_ref + lr_hetero + lr_alt == 0:
 			file3.write(str(chr) + "\t" + str(pos) + "\t" + str(ref) + "\t" + str(alt) + "\t" +
 			str(wild_ref) + "\t" + str(wild_hetero) + "\t" + str(wild_alt) + "\t" + str(lr_ref) + 
-			"\t" + str(lr_hetero) + "\t" + str(lr_alt) + "\tzero wild and lr")
+			"\t" + str(lr_hetero) + "\t" + str(lr_alt) + "\tzero wild and lr\n")
 		elif wild_ref + wild_hetero + wild_alt == 0:
 			file3.write(str(chr) + "\t" + str(pos) + "\t" + str(ref) + "\t" + str(alt) + "\t" +
 			str(wild_ref) + "\t" + str(wild_hetero) + "\t" + str(wild_alt) + "\t" + str(lr_ref) + 
-			"\t" + str(lr_hetero) + "\t" + str(lr_alt) + "\tzero wild")
+			"\t" + str(lr_hetero) + "\t" + str(lr_alt) + "\tzero wild\n")
 		elif lr_ref + lr_hetero + lr_alt == 0:
 			file3.write(str(chr) + "\t" + str(pos) + "\t" + str(ref) + "\t" + str(alt) + "\t" +
 			str(wild_ref) + "\t" + str(wild_hetero) + "\t" + str(wild_alt) + "\t" + str(lr_ref) + 
-			"\t" + str(lr_hetero) + "\t" + str(lr_alt) + "\tzero lr")
+			"\t" + str(lr_hetero) + "\t" + str(lr_alt) + "\tzero lr\n")
 		else:		
 			ref_allele_freq_wd = float(2*wild_ref + wild_hetero)/float(2*(wild_ref + wild_hetero + wild_alt))
 			ref_allele_freq_lr = float(2*lr_ref + lr_hetero)/float(2*(lr_ref + lr_hetero + lr_alt))
