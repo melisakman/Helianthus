@@ -8,7 +8,7 @@
 #SBATCH --mem=64000
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=20
-#SBATCH --time=40:00:00
+#SBATCH --time=24:00:00
 #SBATCH -o /global/home/users/makman/vcftools/outs/DD_allele_freq.out
 #SBATCH -e /global/home/users/makman/vcftools/outs/DD_allele_freq.err
 #SBATCH --mail-user=makman@berkeley.edu
