@@ -27,7 +27,6 @@ for line1 in file1:
 	if splt1[0][0] == "#":
 		continue
 	else:
-		print splt1
 		ref = splt1[3]
 		alt = splt1[4]
 		chr = splt1[0]
