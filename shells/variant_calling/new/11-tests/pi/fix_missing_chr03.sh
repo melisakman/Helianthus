@@ -16,11 +16,12 @@ module load bio/vcftools/0.1.15
 
 
 
-gunzip chr03_final.vcf.gz
-
-python ~/git/Helianthus/shells/variant_calling/new/11-tests/pi/fix_missing_pi.py chr03_final.vcf chr03_final_fixed_forPi.vcf
-
-rm chr03_final.vcf
-
-vcftools --vcf chr03_final_fixed_forPi.vcf --keep wd_list.txt --site-pi --exclude-bed Repeats_chr03.bed --out pi/wd_pi_chr03_sitePi
-vcftools --vcf chr03_final_fixed_forPi.vcf --keep lr_list.txt --site-pi --exclude-bed Repeats_chr03.bed --out pi/lr_pi_chr03_sitePi
+# gunzip chr03_final.vcf.gz
+# 
+# python ~/git/Helianthus/shells/variant_calling/new/11-tests/pi/fix_missing_pi.py chr03_final.vcf chr03_final_fixed_forPi.vcf
+# 
+# rm chr03_final.vcf
+# 
+# vcftools --vcf chr03_final_fixed_forPi.vcf --keep wd_list.txt --site-pi --exclude-bed Repeats_chr03.bed --out pi/wd_pi_chr03_sitePi
+# vcftools --vcf chr03_final_fixed_forPi.vcf --keep lr_list.txt --site-pi --exclude-bed Repeats_chr03.bed --out pi/lr_pi_chr03_sitePi
+vcftools --vcf chr03_final_fixed_forPi.vcf --keep lr_list.txt --site-pi --out pi/lr_pi_chr03_sitePi_withTEs
