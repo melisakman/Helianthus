@@ -23,4 +23,4 @@ module load bio/vcftools/0.1.15
 # 
 # vcftools --vcf chr14_final_fixed_forPi.vcf --keep wd_list.txt --site-pi --exclude-bed Repeats_chr14.bed --out pi/wd_pi_chr14_sitePi
 # vcftools --vcf chr14_final_fixed_forPi.vcf --keep lr_list.txt --site-pi --exclude-bed Repeats_chr14.bed --out pi/lr_pi_chr14_sitePi
-vcftools --vcf chr14_final_fixed_forPi.vcf --keep lr_list.txt --site-pi --out pi/lr_pi_chr14_sitePi_withTEs
+vcftools --vcf chr14_final_fixed_forPi.vcf --keep lr_list.txt --site-pi --max-missing-count 14 --out pi/lr_pi_chr14_sitePi_withTEs
