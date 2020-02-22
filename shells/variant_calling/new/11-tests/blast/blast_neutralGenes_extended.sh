@@ -21,4 +21,6 @@ module load blast
 
 # srun blastx -query /global/scratch/makman/GATK/final/neutral/6plus_neutral_extended.txt -db /global/scratch/makman/GATK/final/blast/TAIR10_pep_20101214 -outfmt "7 qseqid qlen sseqid slen qstart qend sstart send evalue bitscore score length pident nident mismatch positive gapopen gaps" -out 6plus_neutral_extended_2AT.txt
 
-srun blastx -query /global/scratch/makman/GATK/final/neutral/5plus_neutral_extended_CDs.txt -db /global/scratch/makman/GATK/final/blast/TAIR10_pep_20101214 -outfmt "7 qseqid qlen sseqid slen qstart qend sstart send evalue bitscore score length pident nident mismatch positive gapopen gaps" -out 5plus_neutral_extended_CDs_2AT.txt
+# srun blastx -query /global/scratch/makman/GATK/final/neutral/5plus_neutral_extended_CDs.txt -db /global/scratch/makman/GATK/final/blast/TAIR10_pep_20101214 -outfmt "7 qseqid qlen sseqid slen qstart qend sstart send evalue bitscore score length pident nident mismatch positive gapopen gaps" -out 5plus_neutral_extended_CDs_2AT.txt
+
+srun blastx -query /global/scratch/makman/GATK/final/neutral/5plus_neutral_extended_CDs_3.txt -db /global/scratch/makman/GATK/final/blast/TAIR10_pep_20101214 -outfmt "7 qseqid qlen sseqid slen qstart qend sstart send evalue bitscore score length pident nident mismatch positive gapopen gaps" -out 5plus_neutral_extended_CDs_2AT_3.txt
