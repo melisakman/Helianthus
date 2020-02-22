@@ -18,5 +18,6 @@ module load blast
 
 # srun blastn -query /global/home/users/makman/git/Helianthus/shells/variant_calling/new/11-tests/blast/5genes_neutral_forbaitdesign_CDs.txt -db /global/scratch/makman/blast_database/XRQv2 -outfmt "7 qseqid qlen sseqid slen qstart qend sstart send evalue bitscore score length pident nident mismatch positive gapopen gaps" -out 5genes_neutral_forbaitdesign_2XRQv2.txt
 
-srun blastn -query /global/home/users/makman/git/Helianthus/shells/variant_calling/new/11-tests/blast/5genes_neutral_forbaitdesign_CDs_2.txt -db /global/scratch/makman/blast_database/XRQv2 -outfmt "7 qseqid qlen sseqid slen qstart qend sstart send evalue bitscore score length pident nident mismatch positive gapopen gaps" -out 5genes_neutral_forbaitdesign_2XRQv2_2.txt
+# srun blastn -query /global/home/users/makman/git/Helianthus/shells/variant_calling/new/11-tests/blast/5genes_neutral_forbaitdesign_CDs_2.txt -db /global/scratch/makman/blast_database/XRQv2 -outfmt "7 qseqid qlen sseqid slen qstart qend sstart send evalue bitscore score length pident nident mismatch positive gapopen gaps" -out 5genes_neutral_forbaitdesign_2XRQv2_2.txt
 
+srun blastn -query /global/home/users/makman/git/Helianthus/shells/variant_calling/new/11-tests/blast/5genes_neutral_forbaitdesign_CDs_chr4.txt -db /global/scratch/makman/blast_database/XRQv2 -outfmt "7 qseqid qlen sseqid slen qstart qend sstart send evalue bitscore score length pident nident mismatch positive gapopen gaps" -out 5genes_neutral_forbaitdesign_2XRQv2_chr4.txt
