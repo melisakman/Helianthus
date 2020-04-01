@@ -2,9 +2,11 @@
 #SBATCH -D /global/scratch/makman/GATK/final
 #SBATCH -J vcffst
 #SBATCH --account=co_rosalind
-#SBATCH --partition=savio
-#SBATCH --qos=rosalind_savio_normal
+#SBATCH --partition=savio2_htc
+#SBATCH --qos=rosalind_htc2_normal
 #SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=4
 #SBATCH --time=40:00:00
 #SBATCH -o /global/home/users/makman/vcftools/outs/vcftools_MA_fst_persite.out
 #SBATCH -e /global/home/users/makman/vcftools/outs/vcftools_MA_fst_persite.err
