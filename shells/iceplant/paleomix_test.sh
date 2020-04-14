@@ -13,5 +13,6 @@
 #SBATCH --mail-type=All
 
 module load paleomix/1.2.12
+module load mapDamage/2.08
 
 paleomix bam_pipeline example
