@@ -1,0 +1,867 @@
+# -*- mode: Yaml; -*-
+# Timestamp: 2017-02-20T16:32:12.844855
+#
+# Default options.
+# Can also be specific for a set of samples, libraries, and lanes,
+# by including the "Options" hierarchy at the same level as those
+# samples, libraries, or lanes below. This does not include
+# "Features", which may only be specific globally.
+Options:
+  # Sequencing platform, see SAM/BAM reference for valid values
+  Platform: Illumina
+  # Quality offset for Phred scores, either 33 (Sanger/Illumina 1.8+)
+  # or 64 (Illumina 1.3+ / 1.5+). For Bowtie2 it is also possible to
+  # specify 'Solexa', to handle reads on the Solexa scale. This is
+  # used during adapter-trimming and sequence alignment
+  QualityOffset: 33
+  # Split a lane into multiple entries, one for each (pair of) file(s)
+  # found using the search-string specified for a given lane. Each
+  # lane is named by adding a number to the end of the given barcode.
+  SplitLanesByFilenames: yes
+  # Compression format for FASTQ reads; 'gz' for GZip, 'bz2' for BZip2
+  CompressionFormat: gz
+
+  # Settings for trimming of reads, see AdapterRemoval man-page
+  AdapterRemoval:
+     # Adapter sequences, set and uncomment to override defaults
+     --adapter1: AGATCGGAAGAGCACACGTCTGAACTCCAGTCACNNNNNNATCTCGTATGCCGTCTTCTGCTTG  
+     --adapter2: AATGATACGGCGACCACCGAGATCTACACNNNNNNNCACTCTTTCCCTACACGACGCTCTTCCGATCT
+     # Some BAM pipeline defaults differ from AR defaults;
+     # To override, change these value(s):
+     --mm: 3
+     --minlength: 25
+     # Extra features enabled by default; change 'yes' to 'no' to disable
+     --collapse: yes
+     --trimns: yes
+     --trimqualities: yes
+     --mate-separator: "."
+
+  # Settings for aligners supported by the pipeline
+  Aligners:
+    # Choice of aligner software to use, either "BWA" or "Bowtie2"
+    Program: Bowtie2
+
+    # Settings for mappings performed using BWA
+    BWA:
+      # One of "backtrack", "bwasw", or "mem"; see the BWA documentation
+      # for a description of each algorithm (defaults to 'backtrack')
+      Algorithm: mem
+      # Filter aligned reads with a mapping quality (Phred) below this value
+      MinQuality: 25
+      # Filter reads that did not map to the reference sequence
+      FilterUnmappedReads: yes
+      # May be disabled ("no") for aDNA alignments, as post-mortem damage
+      # localizes to the seed region, which BWA expects to have few
+      # errors (sets "-l"). See http://pmid.us/22574660
+      UseSeed: yes
+      # Additional command-line options may be specified for the "aln"
+      # call(s), as described below for Bowtie2 below.
+
+    # Settings for mappings performed using Bowtie2
+    Bowtie2:
+      # Filter aligned reads with a mapping quality (Phred) below this value
+      MinQuality: 30
+      # Filter reads that did not map to the reference sequence
+      FilterUnmappedReads: yes
+      # Examples of how to add additional command-line options
+#      --trim5: 5
+#      --trim3: 5
+      # Note that the colon is required, even if no value is specified
+      #--very-sensitive:
+      --very-sensitive-local:
+      # Example of how to specify multiple values for an option
+#      --rg:
+#        - CN:SequencingCenterNameHere
+#        - DS:DescriptionOfReadGroup
+
+  # Mark / filter PCR duplicates. If set to 'filter', PCR duplicates are
+  # removed from the output files; if set to 'mark', PCR duplicates are
+  # flagged with bit 0x400, and not removed from the output files; if set to
+  # 'no', the reads are assumed to not have been amplified. Collapsed reads
+  # are filtered using the command 'paleomix rmdup_duplicates', while "normal"
+  # reads are filtered using Picard MarkDuplicates.
+  PCRDuplicates: filter
+
+  # Command-line options for mapDamage; note that the long-form
+  # options are expected; --length, not -l, etc. Uncomment the
+  # "mapDamage" line adding command-line options below.
+  mapDamage:
+    # By default, the pipeline will downsample the input to 100k hits
+    # when running mapDamage; remove to use all hits
+    --downsample: 100000
+
+  # Set to 'yes' exclude a type of trimmed reads from alignment / analysis;
+  # possible read-types reflect the output of AdapterRemoval
+  ExcludeReads:
+    # Exclude single-end reads (yes / no)?
+    Single: no
+    # Exclude non-collapsed paired-end reads (yes / no)?
+    Paired: no
+    # Exclude paired-end reads for which the mate was discarded (yes / no)?
+    Singleton: no
+    # Exclude overlapping paired-ended reads collapsed into a single sequence
+    # by AdapterRemoval (yes / no)?
+    Collapsed: no
+    # Like 'Collapsed', but only for collapsed reads truncated due to the
+    # presence of ambiguous or low quality bases at read termini (yes / no).
+    CollapsedTruncated: no
+
+  # Optional steps to perform during processing.
+  Features:
+    # Generate BAM without realignment around indels (yes / no)
+    RawBAM: no
+    # Generate indel-realigned BAM using the GATK Indel realigner (yes / no)
+    RealignedBAM: yes
+    # To disable mapDamage, write 'no'; to generate basic mapDamage plots,
+    # write 'plot'; to build post-mortem damage models, write 'model',
+    # and to produce rescaled BAMs, write 'rescale'. The 'model' option
+    # includes the 'plot' output, and the 'rescale' option includes both
+    # 'plot' and 'model' results. All analyses are carried out per library.
+    mapDamage: plot
+    # Generate coverage information for the raw BAM (wo/ indel realignment).
+    # If one or more 'RegionsOfInterest' have been specified for a prefix,
+    # additional coverage files are generated for each alignment (yes / no)
+    Coverage: yes
+    # Generate histogram of number of sites with a given read-depth, from 0
+    # to 200. If one or more 'RegionsOfInterest' have been specified for a
+    # prefix, additional histograms are generated for each alignment (yes / no)
+    Depths: yes
+    # Generate summary table for each target (yes / no)
+    Summary: yes
+    # Generate histogram of PCR duplicates, for use with PreSeq (yes / no)
+    DuplicateHist: no
+
+
+# Map of prefixes by name, each having a Path key, which specifies the
+# location of the BWA/Bowtie2 index, and optional label, and an option
+# set of regions for which additional statistics are produced.
+Prefixes:
+  # Replace 'NAME_OF_PREFIX' with name of the prefix; this name
+  # is used in summary statistics and as part of output filenames.
+#  Alternaria_alternata:
+#    # Replace 'PATH_TO_PREFIX' with the path to .fasta file containing the
+#    # references against which reads are to be mapped. Using the same name
+#    # as filename is strongly recommended (e.g. /path/to/Human_g1k_v37.fasta
+#    # should be named 'Human_g1k_v37').
+#    Path: "/home/ahomet/v/vanessab/data/bigdata/Reference_genomes/Alternaria_alternata/LMXP01.1.fsa_nt.fasta"
+#  ragweed_Y6oJw_gapclosed:
+#    # Replace 'PATH_TO_PREFIX' with the path to .fasta file containing the
+#    # references against which reads are to be mapped. Using the same name
+#    # as filename is strongly recommended (e.g. /path/to/Human_g1k_v37.fasta
+#    # should be named 'Human_g1k_v37').
+#    Path: /home/ahomet/v/vanessab/data/bigdata/Reference_genomes/ragweed/ragweed_Y6oJw_gapclosed.fasta
+#    RegionsOfInterest: 
+#      unmasked_regions: /home/ahomet/v/vanessab/data/bigdata/Reference_genomes/ragweed/2019-02-27_ragweed_Y6oJw_unmasked_intervals_all_libs.bed 
+#      99_lib: /home/ahomet/v/vanessab/data/bigdata/Reference_genomes/ragweed/masked_bed_files/ragweed_Y6oJw_gapclosed.masked_99.lib.merged.cleaned.sorted.bed
+#      85_lib: /home/ahomet/v/vanessab/data/bigdata/Reference_genomes/ragweed/masked_bed_files/ragweed_Y6oJw_gapclosed.masked_85.lib.merged.cleaned.sorted.bed
+#      99_85_lib: /home/ahomet/v/vanessab/data/bigdata/Reference_genomes/ragweed/masked_bed_files/ragweed_Y6oJw_gapclosed.masked_99_85.lib.merged.cleaned.sorted.bed
+#      99_85_T99_lib: /home/ahomet/v/vanessab/data/bigdata/Reference_genomes/ragweed/masked_bed_files/ragweed_Y6oJw_gapclosed.masked_99_85_T99.lib.merged.cleaned.sorted.bed
+#      MITE_lib: /home/ahomet/v/vanessab/data/bigdata/Reference_genomes/ragweed/masked_bed_files/ragweed_Y6oJw_gapclosed.masked_MITE.lib.merged.cleaned.sorted.bed
+#      ModelerID_lib: /home/ahomet/v/vanessab/data/bigdata/Reference_genomes/ragweed/masked_bed_files/ragweed_Y6oJw_gapclosed.masked_ModelerID.merged.cleaned.sorted.bed
+#      T85_lib: /home/ahomet/v/vanessab/data/bigdata/Reference_genomes/ragweed/masked_bed_files/ragweed_Y6oJw_gapclosed.masked_T85.lib.merged.cleaned.sorted.bed
+#      T99_lib: /home/ahomet/v/vanessab/data/bigdata/Reference_genomes/ragweed/masked_bed_files/ragweed_Y6oJw_gapclosed.masked_T99.lib.merged.cleaned.sorted.bed
+#      all_lib: /home/ahomet/v/vanessab/data/bigdata/Reference_genomes/ragweed/masked_bed_files/ragweed_Y6oJw_gapclosed.masked_all.lib.merged.cleaned.sorted.bed
+#      allLTR_lib: /home/ahomet/v/vanessab/data/bigdata/Reference_genomes/ragweed/masked_bed_files/ragweed_Y6oJw_gapclosed.masked_allLTR.lib.merged.cleaned.sorted.bed    
+    
+
+  IcePlantTrinityOneLine:
+    Path: "/global/scratch/makman/iceplant/reference/TrinityOneLine.fasta"    
+
+    # (Optional) Uncomment and replace 'PATH_TO_BEDFILE' with the path to a
+    # .bed file listing extra regions for which coverage / depth statistics
+    # should be calculated; if no names are specified for the BED records,
+    # results are named after the chromosome / contig. Change 'NAME' to the
+    # name to be used in summary statistics and output filenames.
+#    RegionsOfInterest:
+
+
+
+# Mapping targets are specified using the following structure. Uncomment and
+# replace 'NAME_OF_TARGET' with the desired prefix for filenames.
+#NAME_OF_TARGET:
+   #  Uncomment and replace 'NAME_OF_SAMPLE' with the name of this sample.
+#  NAME_OF_SAMPLE:
+     #  Uncomment and replace 'NAME_OF_LIBRARY' with the name of this sample.
+#    NAME_OF_LIBRARY:
+       # Uncomment and replace 'NAME_OF_LANE' with the name of this lane,
+       # and replace 'PATH_WITH_WILDCARDS' with the path to the FASTQ files
+       # to be trimmed and mapped for this lane (may include wildcards).
+#      NAME_OF_LANE: PATH_WITH_WILDCARDS
+
+
+
+
+#ExpICEPO2_A1	ExpICEPO1/36	Plant_UC2122929	1918		P5_iPCR-LP-27	P7_Cap_index_02	ICEPO2sA1_S1_L001_R1_001.fastq.gz	:
+Plant_UC2122929:
+  Plant_UC2122929:
+    ExpICEPO2_A1:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPO2sA1_S1_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPO3_A7_S74_R{Pair}.fastq.gz
+
+#ExpICEPO2_A2	ExpICEPO1/13	Plant_SANT2	1952	ES	P5_iPCR-LP-27	P7_Cap_index_04	ICEPO2sA2_S2_L001_R1_001.fastq.gz	:
+Plant_SANT2:
+  Plant_SANT2:
+    ExpICEPO2_A2:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPO2sA2_S2_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPO3_A8_S113_R{Pair}.fastq.gz
+
+#ExpICEPO2_A3	ExpICEPO1/48	Plant_MEL2	1852	AU	P5_iPCR-LP-25	P7_Cap_index_02	ICEPO2sA3_S3_L001_R1_001.fastq.gz	:
+Plant_MEL2:
+  Plant_MEL2:
+    ExpICEPO2_A3:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPO2sA3_S3_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPO3_A9_S111_R{Pair}.fastq.gz
+
+#ExpICEPO2_A4	ExpICEPO1/46	Plant_P5	1889	FR	P5_iPCR-LP-31	P7_Cap_index_01	ICEPO2sA4_S4_L001_R1_001.fastq.gz	:
+Plant_P5:
+  Plant_P5:
+    ExpICEPO2_A4:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPO2sA4_S4_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPO3_A10_S92_R{Pair}.fastq.gz
+
+#ExpICEPO2_A5	ExpICEPO1/30	Plant_91429	1927	ZA	P5_iPCR-LP-31	P7_Cap_index_08	ICEPO2sA5_S5_L001_R1_001.fastq.gz	:
+Plant_91429:
+  Plant_91429:
+    ExpICEPO2_A5:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPO2sA5_S5_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPO3_A11_S104_R{Pair}.fastq.gz
+
+#ExpICEPO2_A6	ExpICEPO1/22	Plant_12183	1938	ZA	P5_iPCR-LP-32	P7_Cap_index_03	ICEPO2sA6_S6_L001_R1_001.fastq.gz	:
+Plant_12183:
+  Plant_12183:
+    ExpICEPO2_A6:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPO2sA6_S6_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPO3_A12_S68_R{Pair}.fastq.gz
+
+#ExpICEPO2_B1	ExpICEPO1/27	Plant_JEPS42911	1932		P5_iPCR-LP-30	P7_Cap_index_02	ICEPO2sB1_S7_L001_R1_001.fastq.gz	:
+Plant_JEPS42911:
+  Plant_JEPS42911:
+    ExpICEPO2_B1:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPO2sB1_S7_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPO3_B7_S89_R{Pair}.fastq.gz
+
+#ExpICEPO2_B2	ExpICEPO1/28	Plant_91419	1931	ZA	P5_iPCR-LP-30	P7_Cap_index_05	ICEPO2sB2_S8_L001_R1_001.fastq.gz	:
+Plant_91419:
+  Plant_91419:
+    ExpICEPO2_B2:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPO2sB2_S8_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPO3_B8_S98_R{Pair}.fastq.gz
+
+#ExpICEPO2_B3	ExpICEPO1/44	Plant_91414	1893	ZA	P5_iPCR-LP-25	P7_Cap_index_01	ICEPO2sB3_S9_L001_R1_001.fastq.gz	:
+Plant_91414:
+  Plant_91414:
+    ExpICEPO2_B3:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPO2sB3_S9_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPO3_B9_S93_R{Pair}.fastq.gz
+
+#ExpICEPO2_B4	ExpICEPO1/12	Plant_MEL10	1955	AU	P5_iPCR-LP-25	P7_Cap_index_07	ICEPO2sB4_S10_L001_R1_001.fastq.gz	:
+Plant_MEL10:
+  Plant_MEL10:
+    ExpICEPO2_B4:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPO2sB4_S10_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPO3_B10_S66_R{Pair}.fastq.gz
+
+#ExpICEPO2_B5	ExpICEPO1/43	Plant_MEL4	1895	AU	P5_iPCR-LP-25	P7_Cap_index_08	ICEPO2sB5_S11_L001_R1_001.fastq.gz	:
+Plant_MEL4:
+  Plant_MEL4:
+    ExpICEPO2_B5:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPO2sB5_S11_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPO3_B11_S86_R{Pair}.fastq.gz
+
+#ExpICEPO2_B6	ExpICEPO1/31	Plant_UC382816	1926		P5_iPCR-LP-29	P7_Cap_index_04	ICEPO2sB6_S12_L001_R1_001.fastq.gz	:
+Plant_UC382816:
+  Plant_UC382816:
+    ExpICEPO2_B6:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPO2sB6_S12_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPO3_B12_S87_R{Pair}.fastq.gz
+
+#ExpICEPO2_C1	ExpICEPO1/19	Plant_CAS18	1948	US	P5_iPCR-LP-27	P7_Cap_index_01	ICEPO2sC1_S13_L001_R1_001.fastq.gz	:
+Plant_CAS18:
+  Plant_CAS18:
+    ExpICEPO2_C1:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPO2sC1_S13_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPO3_C7_S83_R{Pair}.fastq.gz
+
+#ExpICEPO2_C2	ExpICEPO1/7	Plant_CAS11	1957	US	P5_iPCR-LP-30	P7_Cap_index_06	ICEPO2sC2_S14_L001_R1_001.fastq.gz	:
+Plant_CAS11:
+  Plant_CAS11:
+    ExpICEPO2_C2:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPO2sC2_S14_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPO3_C8_S101_R{Pair}.fastq.gz
+
+#ExpICEPO2_C3	ExpICEPO1/29	Plant_UC851878	1931		P5_iPCR-LP-30	P7_Cap_index_08	ICEPO2sC3_S15_L001_R1_001.fastq.gz	:
+Plant_UC851878:
+  Plant_UC851878:
+    ExpICEPO2_C3:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPO2sC3_S15_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPO3_C9_S85_R{Pair}.fastq.gz
+
+#ExpICEPO2_C4	ExpICEPO1/18	Plant_31915	1950	ZA	P5_iPCR-LP-26	P7_Cap_index_01	ICEPO2sC4_S16_L001_R1_001.fastq.gz	:
+Plant_31915:
+  Plant_31915:
+    ExpICEPO2_C4:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPO2sC4_S16_L001_R{Pair}_001.fastq.gz
+
+#ExpICEPO2_C5	ExpICEPO1/9	Plant_91408	1955	ZA	P5_iPCR-LP-26	P7_Cap_index_03	ICEPO2sC5_S17_L001_R1_001.fastq.gz	:
+Plant_91408:
+  Plant_91408:
+    ExpICEPO2_C5:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPO2sC5_S17_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPO3_C11_S62_R{Pair}.fastq.gz
+
+#ExpICEPO2_C6	ExpICEPO1/41	Plant_91422	1905	ZA	P5_iPCR-LP-26	P7_Cap_index_04	ICEPO2sC6_S18_L001_R1_001.fastq.gz	:
+Plant_91422:
+  Plant_91422:
+    ExpICEPO2_C6:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPO2sC6_S18_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPO3_C12_S65_R{Pair}.fastq.gz
+
+#ExpICEPO2_D1	ExpICEPO1/14	Plant_CAS21	1952	US	P5_iPCR-LP-30	P7_Cap_index_01	ICEPO2sD1_S19_L001_R1_001.fastq.gz	:
+Plant_CAS21:
+  Plant_CAS21:
+    ExpICEPO2_D1:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPO2sD1_S19_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPO3_D7_S103_R{Pair}.fastq.gz
+
+#ExpICEPO2_D2	ExpICEPO1/23	Plant_91409	1935	ZA	P5_iPCR-LP-27	P7_Cap_index_05	ICEPO2sD2_S20_L001_R1_001.fastq.gz	:
+Plant_91409:
+  Plant_91409:
+    ExpICEPO2_D2:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPO2sD2_S20_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPO3_D8_S77_R{Pair}.fastq.gz
+
+#ExpICEPO2_D3	ExpICEPO1/37	Plant_CAS20	1916	US	P5_iPCR-LP-25	P7_Cap_index_03	ICEPO2sD3_S21_L001_R1_001.fastq.gz	:
+Plant_CAS20:
+  Plant_CAS20:
+    ExpICEPO2_D3:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPO2sD3_S21_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPO3_D9_S37_R{Pair}.fastq.gz
+
+#ExpICEPO2_D4	ExpICEPO1/2	Plant_SD10	1962	US	P5_iPCR-LP-31	P7_Cap_index_03	ICEPO2sD4_S22_L001_R1_001.fastq.gz	:
+Plant_SD10:
+  Plant_SD10:
+    ExpICEPO2_D4:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPO2sD4_S22_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPO3_D10_S69_R{Pair}.fastq.gz
+
+#ExpICEPO2_D5	ExpICEPO1/45	Plant_MEL5	1890	AU	P5_iPCR-LP-29	P7_Cap_index_02	ICEPO2sD5_S23_L001_R1_001.fastq.gz	:
+Plant_MEL5:
+  Plant_MEL5:
+    ExpICEPO2_D5:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPO2sD5_S23_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPO3_D11_S110_R{Pair}.fastq.gz
+
+#ExpICEPO2_D6	ExpICEPO1/21	Plant_CAS10	1945	US	P5_iPCR-LP-29	P7_Cap_index_05	ICEPO2sD6_S24_L001_R1_001.fastq.gz	:
+Plant_CAS10:
+  Plant_CAS10:
+    ExpICEPO2_D6:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPO2sD6_S24_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPO3_D12_S76_R{Pair}.fastq.gz
+
+#ExpICEPO2_E1	ExpICEPO1/42	Plant_P4	1903	FR	P5_iPCR-LP-30	P7_Cap_index_03	ICEPO2sE1_S25_L001_R1_001.fastq.gz	:
+Plant_P4:
+  Plant_P4:
+    ExpICEPO2_E1:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPO2sE1_S25_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPO3_E7_S79_R{Pair}.fastq.gz
+
+#ExpICEPO2_E2	ExpICEPO1/33	Plant_91420	1924	ZA	P5_iPCR-LP-27	P7_Cap_index_06	ICEPO2sE2_S26_L001_R1_001.fastq.gz	:
+Plant_91420:
+  Plant_91420:
+    ExpICEPO2_E2:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPO2sE2_S26_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPO3_E8_S112_R{Pair}.fastq.gz
+
+#ExpICEPO2_E3	ExpICEPO1/26	Plant_12181	1932	ZA	P5_iPCR-LP-25	P7_Cap_index_04	ICEPO2sE3_S27_L001_R1_001.fastq.gz	:
+Plant_12181:
+  Plant_12181:
+    ExpICEPO2_E3:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPO2sE3_S27_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPO3_E9_S82_R{Pair}.fastq.gz
+
+#ExpICEPO2_E4	ExpICEPO1/47	Plant_UC52203	1886		P5_iPCR-LP-31	P7_Cap_index_04	ICEPO2sE4_S28_L001_R1_001.fastq.gz	:
+Plant_UC52203:
+  Plant_UC52203:
+    ExpICEPO2_E4:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPO2sE4_S28_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPO3_E10_S90_R{Pair}.fastq.gz
+
+#ExpICEPO2_E5	ExpICEPO1/6	Plant_CAS14	1958	US	P5_iPCR-LP-32	P7_Cap_index_02	ICEPO2sE5_S29_L001_R1_001.fastq.gz	:
+Plant_CAS14:
+  Plant_CAS14:
+    ExpICEPO2_E5:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPO2sE5_S29_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPO3_E11_S100_R{Pair}.fastq.gz
+
+#ExpICEPO2_E6	ExpICEPO1/34	Plant_CAS5	1923	US	P5_iPCR-LP-29	P7_Cap_index_06	ICEPO2sE6_S30_L001_R1_001.fastq.gz	:
+Plant_CAS5:
+  Plant_CAS5:
+    ExpICEPO2_E6:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPO2sE6_S30_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPO3_E12_S107_R{Pair}.fastq.gz
+
+#ExpICEPO2_F1	ExpICEPO1/4	Plant_UCD2	1962	US	P5_iPCR-LP-26	P7_Cap_index_02	ICEPO2sF1_S31_L001_R1_001.fastq.gz	:
+Plant_UCD2:
+  Plant_UCD2:
+    ExpICEPO2_F1:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPO2sF1_S31_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPO3_F7_S41_R{Pair}.fastq.gz
+
+#ExpICEPO2_F2	ExpICEPO1/38	Plant_91424	1914	ZA	P5_iPCR-LP-27	P7_Cap_index_07	ICEPO2sF2_S32_L001_R1_001.fastq.gz	:
+Plant_91424:
+  Plant_91424:
+    ExpICEPO2_F2:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPO2sF2_S32_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPO3_F8_S91_R{Pair}.fastq.gz
+
+#ExpICEPO2_F3	ExpICEPO1/1	Plant_CAS4	1963	US	P5_iPCR-LP-25	P7_Cap_index_05	ICEPO2sF3_S33_L001_R1_001.fastq.gz	:
+Plant_CAS4:
+  Plant_CAS4:
+    ExpICEPO2_F3:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPO2sF3_S33_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPO3_F9_S75_R{Pair}.fastq.gz
+
+#ExpICEPO2_F4	ExpICEPO1/39	Plant_91416	1913	ZA	P5_iPCR-LP-31	P7_Cap_index_05	ICEPO2sF4_S34_L001_R1_001.fastq.gz	:
+Plant_91416:
+  Plant_91416:
+    ExpICEPO2_F4:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPO2sF4_S34_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPO3_F10_S88_R{Pair}.fastq.gz
+
+#ExpICEPO2_F5	ExpICEPO1/8	Plant_CAS6	1956	US	P5_iPCR-LP-29	P7_Cap_index_01	ICEPO2sF5_S35_L001_R1_001.fastq.gz	:
+Plant_CAS6:
+  Plant_CAS6:
+    ExpICEPO2_F5:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPO2sF5_S35_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPO3_F11_S105_R{Pair}.fastq.gz
+
+#ExpICEPO2_F6	ExpICEPO1/5	Plant_UCD1	1961	US	P5_iPCR-LP-26	P7_Cap_index_05	ICEPO2sF6_S36_L001_R1_001.fastq.gz	:
+Plant_UCD1:
+  Plant_UCD1:
+    ExpICEPO2_F6:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPO2sF6_S36_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPO3_F12_S45_R{Pair}.fastq.gz
+
+#ExpICEPO2_G1	ExpICEPO1/32	Plant_12177	1925	ZA	P5_iPCR-LP-27	P7_Cap_index_03	ICEPO2sG1_S37_L001_R1_001.fastq.gz	:
+Plant_12177:
+  Plant_12177:
+    ExpICEPO2_G1:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPO2sG1_S37_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPO3_G7_S109_R{Pair}.fastq.gz
+
+#ExpICEPO2_G2	ExpICEPO1/17	Plant_CAS13	1950	US	P5_iPCR-LP-27	P7_Cap_index_08	ICEPO2sG2_S38_L001_R1_001.fastq.gz	:
+Plant_CAS13:
+  Plant_CAS13:
+    ExpICEPO2_G2:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPO2sG2_S38_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPO3_G8_S81_R{Pair}.fastq.gz
+
+#ExpICEPO2_G3	ExpICEPO1/25	Plant_SD2	1932	US	P5_iPCR-LP-25	P7_Cap_index_06	ICEPO2sG3_S39_L001_R1_001.fastq.gz	:
+Plant_SD2:
+  Plant_SD2:
+    ExpICEPO2_G3:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPO2sG3_S39_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPO3_G9_S64_R{Pair}.fastq.gz
+
+#ExpICEPO2_G4	ExpICEPO1/10	Plant_91407	1955	ZA	P5_iPCR-LP-31	P7_Cap_index_06	ICEPO2sG4_S40_L001_R1_001.fastq.gz	:
+Plant_91407:
+  Plant_91407:
+    ExpICEPO2_G4:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPO2sG4_S40_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPO3_G10_S63_R{Pair}.fastq.gz
+
+#ExpICEPO2_G5	ExpICEPO1/40	Plant_UC75679	1906		P5_iPCR-LP-32	P7_Cap_index_01	ICEPO2sG5_S41_L001_R1_001.fastq.gz	:
+Plant_UC75679:
+  Plant_UC75679:
+    ExpICEPO2_G5:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPO2sG5_S41_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPO3_G11_S94_R{Pair}.fastq.gz
+
+#ExpICEPO2_G6	ExpICEPO1/24	Plant_CAS15	1932	US	P5_iPCR-LP-29	P7_Cap_index_07	ICEPO2sG6_S42_L001_R1_001.fastq.gz	:
+Plant_CAS15:
+  Plant_CAS15:
+    ExpICEPO2_G6:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPO2sG6_S42_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPO3_G12_S58_R{Pair}.fastq.gz
+
+#ExpICEPO2_H1	ExpICEPO1/11	Plant_91411	1955	ZA	P5_iPCR-LP-30	P7_Cap_index_04	ICEPO2sH1_S43_L001_R1_001.fastq.gz	:
+Plant_91411:
+  Plant_91411:
+    ExpICEPO2_H1:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPO2sH1_S43_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPO3_H7_S106_R{Pair}.fastq.gz
+
+#ExpICEPO2_H2	ExpICEPO1/35	Plant_91410	1922	ZA	P5_iPCR-LP-30	P7_Cap_index_07	ICEPO2sH2_S44_L001_R1_001.fastq.gz	:
+Plant_91410:
+  Plant_91410:
+    ExpICEPO2_H2:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPO2sH2_S44_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPO3_H8_S99_R{Pair}.fastq.gz
+
+#ExpICEPO2_H3	ExpICEPO1/3	Plant_SD15	1962	US	P5_iPCR-LP-31	P7_Cap_index_02	ICEPO2sH3_S45_L001_R1_001.fastq.gz	:
+Plant_SD15:
+  Plant_SD15:
+    ExpICEPO2_H3:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPO2sH3_S45_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPO3_H9_S44_R{Pair}.fastq.gz
+
+#ExpICEPO2_H4	ExpICEPO1/15	Plant_SANT1	1950	ES	P5_iPCR-LP-31	P7_Cap_index_07	ICEPO2sH4_S46_L001_R1_001.fastq.gz	:
+Plant_SANT1:
+  Plant_SANT1:
+    ExpICEPO2_H4:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPO2sH4_S46_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPO3_H10_S78_R{Pair}.fastq.gz
+
+#ExpICEPO2_H5	ExpICEPO1/16	ExpICEPO1_BLANK			P5_iPCR-LP-29	P7_Cap_index_03	ICEPO2sH5_S47_L001_R1_001.fastq.gz	:
+ExpICEPO1_BLANK:
+  ExpICEPO1_BLANK:
+    ExpICEPO2_H5:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPO2sH5_S47_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPO3_H11_S39_R{Pair}.fastq.gz
+
+#ExpICEPO2_H6	ExpICEPO1/20	Plant_P2	1946	FR	P5_iPCR-LP-32	P7_Cap_index_04	ICEPO2sH6_S48_L001_R1_001.fastq.gz	:
+Plant_P2:
+  Plant_P2:
+    ExpICEPO2_H6:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPO2sH6_S48_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPO3_H12_S96_R{Pair}.fastq.gz
+
+#ExpICEPY2_A1	ExpICEPY1/6	Plant_SANT4	2006	ES	P5_iPCR-LP-2	P7_iPCR-MDM-15	ICEPY2sA1_S49_L001_R1_001.fastq.gz	:
+Plant_SANT4:
+  Plant_SANT4:
+    ExpICEPY2_A1:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sA1_S49_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_A1_S61_R{Pair}.fastq.gz
+
+#ExpICEPY2_A2	ExpICEPY1/20	ExpICEPY1_BLANK	n/a	n/a	P5_iPCR-LP-28	P7_Custom_index_24	ICEPY2sA2_S50_L001_R1_001.fastq.gz	:
+ExpICEPY1_BLANK:
+  ExpICEPY1_BLANK:
+    ExpICEPY2_A2:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sA2_S50_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_A2_S38_R{Pair}.fastq.gz
+
+#ExpICEPY2_A3	ExpICEPY1/35	Plant_P1	1976	FR	P5_iPCR-LP-4	P7_iPCR-MDM-15	ICEPY2sA3_S51_L001_R1_001.fastq.gz	:
+Plant_P1:
+  Plant_P1:
+    ExpICEPY2_A3:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sA3_S51_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_A3_S108_R{Pair}.fastq.gz
+
+#ExpICEPY2_A4	ExpICEPY1/23	Plant_MEL9	1985	AU	P5_iPCR-LP-3	P7_Custom_index_24	ICEPY2sA4_S52_L001_R1_001.fastq.gz	:
+Plant_MEL9:
+  Plant_MEL9:
+    ExpICEPY2_A4:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sA4_S52_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_A4_S48_R{Pair}.fastq.gz
+
+#ExpICEPY2_A5	ExpICEPY1/32	Plant_MA1	1981	PT	P5_iPCR-LP-4	P7_iPCR-MDM-10	ICEPY2sA5_S53_L001_R1_001.fastq.gz	:
+Plant_MA1:
+  Plant_MA1:
+    ExpICEPY2_A5:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sA5_S53_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_A5_S52_R{Pair}.fastq.gz
+
+#ExpICEPY2_A6	ExpICEPY1/17	Plant_SD3	1997	US	P5_iPCR-LP-1	P7_iPCR-MDM-15	ICEPY2sA6_S54_L001_R1_001.fastq.gz	:
+Plant_SD3:
+  Plant_SD3:
+    ExpICEPY2_A6:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sA6_S54_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_A6_S36_R{Pair}.fastq.gz
+
+#ExpICEPY2_B1	ExpICEPY1/43	Plant_CAS2	1970	US	P5_iPCR-LP-2	P7_iPCR-MDM-09	ICEPY2sB1_S55_L001_R1_001.fastq.gz	:
+Plant_CAS2:
+  Plant_CAS2:
+    ExpICEPY2_B1:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sB1_S55_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_B1_S53_R{Pair}.fastq.gz
+
+#ExpICEPY2_B2	ExpICEPY1/39	Plant_UCD4	1974	US	P5_iPCR-LP-28	P7_iPCR-MDM-04	ICEPY2sB2_S56_L001_R1_001.fastq.gz	:
+Plant_UCD4:
+  Plant_UCD4:
+    ExpICEPY2_B2:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sB2_S56_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_B2_S24_R{Pair}.fastq.gz
+
+#ExpICEPY2_B3	ExpICEPY1/13	Plant_SD11	2004	US	P5_iPCR-LP-3	P7_iPCR-MDM-15	ICEPY2sB3_S57_L001_R1_001.fastq.gz	:
+Plant_SD11:
+  Plant_SD11:
+    ExpICEPY2_B3:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sB3_S57_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_B3_S23_R{Pair}.fastq.gz
+
+#ExpICEPY2_B4	ExpICEPY1/33	Plant_91427	1981	ZA	P5_iPCR-LP-3	P7_iPCR-MDM-04	ICEPY2sB4_S58_L001_R1_001.fastq.gz	:
+Plant_91427:
+  Plant_91427:
+    ExpICEPY2_B4:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sB4_S58_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_B4_S56_R{Pair}.fastq.gz
+
+#ExpICEPY2_B5	ExpICEPY1/22	Plant_MEL7	1988	AU	P5_iPCR-LP-5	P7_iPCR-MDM-15	ICEPY2sB5_S59_L001_R1_001.fastq.gz	:
+Plant_MEL7:
+  Plant_MEL7:
+    ExpICEPY2_B5:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sB5_S59_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_B5_S43_R{Pair}.fastq.gz
+
+#ExpICEPY2_B6	ExpICEPY1/15	Plant_MEL3	1998	AU	P5_iPCR-LP-15	P7_Custom_index_24	ICEPY2sB6_S60_L001_R1_001.fastq.gz	:
+Plant_MEL3:
+  Plant_MEL3:
+    ExpICEPY2_B6:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sB6_S60_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_B6_S57_R{Pair}.fastq.gz
+
+#ExpICEPY2_C1	ExpICEPY1/47	Plant_CAS19	1967	US	P5_iPCR-LP-28	P7_iPCR-MDM-15	ICEPY2sC1_S61_L001_R1_001.fastq.gz	:
+Plant_CAS19:
+  Plant_CAS19:
+    ExpICEPY2_C1:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sC1_S61_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_C1_S95_R{Pair}.fastq.gz
+
+#ExpICEPY2_C2	ExpICEPY1/36	Plant_CAS12	1976	US	P5_iPCR-LP-28	P7_iPCR-MDM-05	ICEPY2sC2_S62_L001_R1_001.fastq.gz	:
+Plant_CAS12:
+  Plant_CAS12:
+    ExpICEPY2_C2:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sC2_S62_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_C2_S97_R{Pair}.fastq.gz
+
+#ExpICEPY2_C3	ExpICEPY1/29	Plant_91412	1982	ZA	P5_iPCR-LP-4	P7_iPCR-MDM-09	ICEPY2sC3_S63_L001_R1_001.fastq.gz	:
+Plant_91412:
+  Plant_91412:
+    ExpICEPY2_C3:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sC3_S63_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_C3_S19_R{Pair}.fastq.gz
+
+#ExpICEPY2_C4	ExpICEPY1/10	Plant_SD8	2005	US	P5_iPCR-LP-3	P7_iPCR-MDM-05	ICEPY2sC4_S64_L001_R1_001.fastq.gz	:
+Plant_SD8:
+  Plant_SD8:
+    ExpICEPY2_C4:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sC4_S64_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_C4_S49_R{Pair}.fastq.gz
+
+#ExpICEPY2_C5	ExpICEPY1/28	Plant_CAS22	1982	US	P5_iPCR-LP-5	P7_iPCR-MDM-09	ICEPY2sC5_S65_L001_R1_001.fastq.gz	:
+Plant_CAS22:
+  Plant_CAS22:
+    ExpICEPY2_C5:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sC5_S65_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_C5_S70_R{Pair}.fastq.gz
+
+#ExpICEPY2_C6	ExpICEPY1/27	Plant_MEL1	1982	AU	P5_iPCR-LP-15	P7_iPCR-MDM-04	ICEPY2sC6_S66_L001_R1_001.fastq.gz	:
+Plant_MEL1:
+  Plant_MEL1:
+    ExpICEPY2_C6:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sC6_S66_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_C6_S80_R{Pair}.fastq.gz
+
+#ExpICEPY2_D1	ExpICEPY1/21	Plant_SANT3	1994	ES	P5_iPCR-LP-2	P7_Custom_index_24	ICEPY2sD1_S67_L001_R1_001.fastq.gz	:
+Plant_SANT3:
+  Plant_SANT3:
+    ExpICEPY2_D1:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sD1_S67_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_D1_S29_R{Pair}.fastq.gz
+
+#ExpICEPY2_D2	ExpICEPY1/48	Plant_CAS16	1965	US	P5_iPCR-LP-28	P7_iPCR-MDM-06	ICEPY2sD2_S68_L001_R1_001.fastq.gz	:
+Plant_CAS16:
+  Plant_CAS16:
+    ExpICEPY2_D2:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sD2_S68_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_D2_S71_R{Pair}.fastq.gz
+
+#ExpICEPY2_D3	ExpICEPY1/25	Plant_MEL8	1984	AU	P5_iPCR-LP-4	P7_Custom_index_24	ICEPY2sD3_S69_L001_R1_001.fastq.gz	:
+Plant_MEL8:
+  Plant_MEL8:
+    ExpICEPY2_D3:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sD3_S69_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_D3_S72_R{Pair}.fastq.gz
+
+#ExpICEPY2_D4	ExpICEPY1/4	Plant_SD12	2008	US	P5_iPCR-LP-3	P7_iPCR-MDM-06	ICEPY2sD4_S70_L001_R1_001.fastq.gz	:
+Plant_SD12:
+  Plant_SD12:
+    ExpICEPY2_D4:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sD4_S70_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_D4_S28_R{Pair}.fastq.gz
+
+#ExpICEPY2_D5	ExpICEPY1/24	Plant_UCD5	1985	GR	P5_iPCR-LP-15	P7_iPCR-MDM-09	ICEPY2sD5_S71_L001_R1_001.fastq.gz	:
+Plant_UCD5:
+  Plant_UCD5:
+    ExpICEPY2_D5:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sD5_S71_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_D5_S34_R{Pair}.fastq.gz
+
+#ExpICEPY2_D6	ExpICEPY1/16	Plant_HO3	1997	AU	P5_iPCR-LP-15	P7_iPCR-MDM-05	ICEPY2sD6_S72_L001_R1_001.fastq.gz	:
+Plant_HO3:
+  Plant_HO3:
+    ExpICEPY2_D6:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sD6_S72_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_D6_S26_R{Pair}.fastq.gz
+
+#ExpICEPY2_E1	ExpICEPY1/11	Plant_HO2	2004	AU	P5_iPCR-LP-2	P7_iPCR-MDM-04	ICEPY2sE1_S73_L001_R1_001.fastq.gz	:
+Plant_HO2:
+  Plant_HO2:
+    ExpICEPY2_E1:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sE1_S73_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_E1_S22_R{Pair}.fastq.gz
+
+#ExpICEPY2_E2	ExpICEPY1/34	Plant_MEL6	1977	AU	P5_iPCR-LP-28	P7_iPCR-MDM-03	ICEPY2sE2_S74_L001_R1_001.fastq.gz	:
+Plant_MEL6:
+  Plant_MEL6:
+    ExpICEPY2_E2:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sE2_S74_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_E2_S84_R{Pair}.fastq.gz
+
+#ExpICEPY2_E3	ExpICEPY1/5	Plant_SANT5	2007	ES	P5_iPCR-LP-4	P7_iPCR-MDM-04	ICEPY2sE3_S75_L001_R1_001.fastq.gz	:
+Plant_SANT5:
+  Plant_SANT5:
+    ExpICEPY2_E3:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sE3_S75_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_E3_S60_R{Pair}.fastq.gz
+
+#ExpICEPY2_E4	ExpICEPY1/31	Plant_MA2	1981	ES	P5_iPCR-LP-3	P7_iPCR-MDM-03	ICEPY2sE4_S76_L001_R1_001.fastq.gz	:
+Plant_MA2:
+  Plant_MA2:
+    ExpICEPY2_E4:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sE4_S76_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_E4_S51_R{Pair}.fastq.gz
+
+#ExpICEPY2_E5	ExpICEPY1/41	Plant_CAS1	1972	US	P5_iPCR-LP-5	P7_Custom_index_24	ICEPY2sE5_S77_L001_R1_001.fastq.gz	:
+Plant_CAS1:
+  Plant_CAS1:
+    ExpICEPY2_E5:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sE5_S77_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_E5_S40_R{Pair}.fastq.gz
+
+#ExpICEPY2_E6	ExpICEPY1/46	Plant_CAS17	1969	US	P5_iPCR-LP-15	P7_iPCR-MDM-06	ICEPY2sE6_S78_L001_R1_001.fastq.gz	:
+Plant_CAS17:
+  Plant_CAS17:
+    ExpICEPY2_E6:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sE6_S78_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_E6_S31_R{Pair}.fastq.gz
+
+#ExpICEPY2_F1	ExpICEPY1/45	Plant_SD5	1970	US	P5_iPCR-LP-28	P7_iPCR-MDM-09	ICEPY2sF1_S79_L001_R1_001.fastq.gz	:
+Plant_SD5:
+  Plant_SD5:
+    ExpICEPY2_F1:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sF1_S79_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_F1_S30_R{Pair}.fastq.gz
+
+#ExpICEPY2_F2	ExpICEPY1/1	Plant_SD9	2015	US	P5_iPCR-LP-2	P7_iPCR-MDM-03	ICEPY2sF2_S80_L001_R1_001.fastq.gz	:
+Plant_SD9:
+  Plant_SD9:
+    ExpICEPY2_F2:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sF2_S80_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_F2_S33_R{Pair}.fastq.gz
+
+#ExpICEPY2_F3	ExpICEPY1/26	Plant_91415	1983	ZA	P5_iPCR-LP-4	P7_iPCR-MDM-05	ICEPY2sF3_S81_L001_R1_001.fastq.gz	:
+Plant_91415:
+  Plant_91415:
+    ExpICEPY2_F3:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sF3_S81_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_F3_S50_R{Pair}.fastq.gz
+
+#ExpICEPY2_F4	ExpICEPY1/42	Plant_CAS3	1972	US	P5_iPCR-LP-4	P7_iPCR-MDM-03	ICEPY2sF4_S82_L001_R1_001.fastq.gz	:
+Plant_CAS3:
+  Plant_CAS3:
+    ExpICEPY2_F4:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sF4_S82_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_F4_S67_R{Pair}.fastq.gz
+
+#ExpICEPY2_F5	ExpICEPY1/30	Plant_HO5	1981	AU	P5_iPCR-LP-5	P7_iPCR-MDM-04	ICEPY2sF5_S83_L001_R1_001.fastq.gz	:
+Plant_HO5:
+  Plant_HO5:
+    ExpICEPY2_F5:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sF5_S83_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_F5_S55_R{Pair}.fastq.gz
+
+#ExpICEPY2_F6	ExpICEPY1/44	Plant_CAS9	1970	US	P5_iPCR-LP-1	P7_iPCR-MDM-09	ICEPY2sF6_S84_L001_R1_001.fastq.gz	:
+Plant_CAS9:
+  Plant_CAS9:
+    ExpICEPY2_F6:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sF6_S84_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_F6_S47_R{Pair}.fastq.gz
+
+#ExpICEPY2_G1	ExpICEPY1/14	Plant_SD4	2000	US	P5_iPCR-LP-2	P7_iPCR-MDM-05	ICEPY2sG1_S85_L001_R1_001.fastq.gz	:
+Plant_SD4:
+  Plant_SD4:
+    ExpICEPY2_G1:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sG1_S85_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_G1_S32_R{Pair}.fastq.gz
+
+#ExpICEPY2_G2	ExpICEPY1/40	Plant_MA4	1972	PT	P5_iPCR-LP-28	P7_iPCR-MDM-10	ICEPY2sG2_S86_L001_R1_001.fastq.gz	:
+Plant_MA4:
+  Plant_MA4:
+    ExpICEPY2_G2:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sG2_S86_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_G2_S59_R{Pair}.fastq.gz
+
+#ExpICEPY2_G3	ExpICEPY1/37	Plant_91413	1975	ZA	P5_iPCR-LP-4	P7_iPCR-MDM-06	ICEPY2sG3_S87_L001_R1_001.fastq.gz	:
+Plant_91413:
+  Plant_91413:
+    ExpICEPY2_G3:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sG3_S87_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_G3_S102_R{Pair}.fastq.gz
+
+#ExpICEPY2_G4	ExpICEPY1/18	Plant_HO4	1995	AU	P5_iPCR-LP-3	P7_iPCR-MDM-10	ICEPY2sG4_S88_L001_R1_001.fastq.gz	:
+Plant_HO4:
+  Plant_HO4:
+    ExpICEPY2_G4:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sG4_S88_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_G4_S42_R{Pair}.fastq.gz
+
+#ExpICEPY2_G5	ExpICEPY1/8	Plant_SD6	2005	US	P5_iPCR-LP-5	P7_iPCR-MDM-05	ICEPY2sG5_S89_L001_R1_001.fastq.gz	:
+Plant_SD6:
+  Plant_SD6:
+    ExpICEPY2_G5:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sG5_S89_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_G5_S46_R{Pair}.fastq.gz
+
+#ExpICEPY2_G6	ExpICEPY1/7	Plant_SD1	2005	US	P5_iPCR-LP-15	P7_iPCR-MDM-03	ICEPY2sG6_S90_L001_R1_001.fastq.gz	:
+Plant_SD1:
+  Plant_SD1:
+    ExpICEPY2_G6:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sG6_S90_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_G6_S54_R{Pair}.fastq.gz
+
+#ExpICEPY2_H1	ExpICEPY1/9	Plant_SD7	2005	US	P5_iPCR-LP-2	P7_iPCR-MDM-06	ICEPY2sH1_S91_L001_R1_001.fastq.gz	:
+Plant_SD7:
+  Plant_SD7:
+    ExpICEPY2_H1:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sH1_S91_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_H1_S20_R{Pair}.fastq.gz
+
+#ExpICEPY2_H2	ExpICEPY1/2	Plant_SD14	2012	US	P5_iPCR-LP-2	P7_iPCR-MDM-10	ICEPY2sH2_S92_L001_R1_001.fastq.gz	:
+Plant_SD14:
+  Plant_SD14:
+    ExpICEPY2_H2:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sH2_S92_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_H2_S27_R{Pair}.fastq.gz
+
+#ExpICEPY2_H3	ExpICEPY1/38	Plant_UCD3	1974	US	P5_iPCR-LP-3	P7_iPCR-MDM-09	ICEPY2sH3_S93_L001_R1_001.fastq.gz	:
+Plant_UCD3:
+  Plant_UCD3:
+    ExpICEPY2_H3:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sH3_S93_L001_R{Pair}_001.fastq.gz
+      # 2019-08-02 reads from MiniSeq 75bp PE run on ancient Svalbard reindeer samples (and one Ice Plant sample that generated more reads than expected)
+      MiniSeq_run_A000H2VFGW: /data/bigdata/MiniSeq_data/2019-08-01_AncientSvalbardReindeer_190801_MN00686_0017_A000H2VFGW/Alignment_1/20190801_230411/Fastq/ICEPY3-H3_S40_L001_R{Pair}_001.fastq.gz  
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_H3_S35_R{Pair}.fastq.gz
+
+#ExpICEPY2_H4	ExpICEPY1/12	Plant_HO1	2004	AU	P5_iPCR-LP-15	P7_iPCR-MDM-15	ICEPY2sH4_S94_L001_R1_001.fastq.gz	:
+Plant_HO1:
+  Plant_HO1:
+    ExpICEPY2_H4:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sH4_S94_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_H4_S21_R{Pair}.fastq.gz
+
+#ExpICEPY2_H5	ExpICEPY1/19	Plant_MA3	1995	PT	P5_iPCR-LP-5	P7_iPCR-MDM-06	ICEPY2sH5_S95_L001_R1_001.fastq.gz	:
+Plant_MA3:
+  Plant_MA3:
+    ExpICEPY2_H5:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sH5_S95_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_H5_S73_R{Pair}.fastq.gz
+
+#ExpICEPY2_H6	ExpICEPY1/3	Plant_SD13	2010	US	P5_iPCR-LP-15	P7_iPCR-MDM-10	ICEPY2sH6_S96_L001_R1_001.fastq.gz	:
+Plant_SD13:
+  Plant_SD13:
+    ExpICEPY2_H6:
+      MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sH6_S96_L001_R{Pair}_001.fastq.gz
+      HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_H6_S25_R{Pair}.fastq.gz
+
+
