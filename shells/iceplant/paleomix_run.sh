@@ -19,4 +19,4 @@ module load samtools/1.6
 module load bwa/0.7.17-r1188
 
 
-paleomix bam_pipeline run /global/home/users/makman/git/Helianthus/shells/iceplant/iceplant.yml --max-threads 20 --jre-option -Xmx64g 
+paleomix bam_pipeline run /global/home/users/makman/git/Helianthus/shells/iceplant/iceplant.yml --max-threads 12 --jre-option -Xmx64g 
