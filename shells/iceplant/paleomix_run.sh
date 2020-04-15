@@ -6,7 +6,7 @@
 #SBATCH --qos=rosalind_htc2_normal
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=20
+#SBATCH --cpus-per-task=16
 #SBATCH --time=400:00:00
 #SBATCH -o /global/home/users/makman/paloemix_outs/paleomix_run.out
 #SBATCH -e /global/home/users/makman/paloemix_outs/paleomix_run.err
