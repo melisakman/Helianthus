@@ -840,7 +840,6 @@ Plant_UCD3:
     ExpICEPY2_H3:
       MiniSeq_run2_MN00686: /global/scratch/makman/iceplant/rawdata/ICEPY2sH3_S93_L001_R{Pair}_001.fastq.gz
       # 2019-08-02 reads from MiniSeq 75bp PE run on ancient Svalbard reindeer samples (and one Ice Plant sample that generated more reads than expected)
-      MiniSeq_run_A000H2VFGW: /data/bigdata/MiniSeq_data/2019-08-01_AncientSvalbardReindeer_190801_MN00686_0017_A000H2VFGW/Alignment_1/20190801_230411/Fastq/ICEPY3-H3_S40_L001_R{Pair}_001.fastq.gz  
       HiSeq4K_run_GCF-2019-652: /global/scratch/makman/iceplant/rawdata/ExpICEPY3_H3_S35_R{Pair}.fastq.gz
 
 #ExpICEPY2_H4	ExpICEPY1/12	Plant_HO1	2004	AU	P5_iPCR-LP-15	P7_iPCR-MDM-15	ICEPY2sH4_S94_L001_R1_001.fastq.gz	:
