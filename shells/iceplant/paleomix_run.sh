@@ -18,6 +18,6 @@ module load mapDamage/2.08
 module load samtools/1.6
 module load bwa/0.7.17-r1188
 
-export PATH=/global/home/users/makman/install/jar_root/adapterremoval-2.3.1/build/build:$PATH
+export PATH=/global/home/users/makman/install/jar_root/adapterremoval-2.3.1/build/:$PATH
 
 paleomix bam_pipeline run /global/home/users/makman/git/Helianthus/shells/iceplant/iceplant.yml --max-threads 12 --jre-option -Xmx128g --temp-root=/global/scratch/makman/temp/ --destination=/global/scratch/makman/iceplant/analyses/
