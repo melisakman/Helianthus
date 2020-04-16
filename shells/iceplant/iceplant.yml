@@ -39,13 +39,13 @@ Options:
   # Settings for aligners supported by the pipeline
   Aligners:
     # Choice of aligner software to use, either "BWA" or "Bowtie2"
-    Program: Bowtie2
+    Program: BWA
 
     # Settings for mappings performed using BWA
     BWA:
       # One of "backtrack", "bwasw", or "mem"; see the BWA documentation
       # for a description of each algorithm (defaults to 'backtrack')
-      Algorithm: mem
+      Algorithm: backtrack
       # Filter aligned reads with a mapping quality (Phred) below this value
       MinQuality: 25
       # Filter reads that did not map to the reference sequence
