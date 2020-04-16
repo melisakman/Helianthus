@@ -17,6 +17,6 @@ module load paleomix/1.2.12
 module load mapDamage/2.08
 module load samtools/1.6
 module load bwa/0.7.17-r1188
-
+bowtie2/2.3.4.1
 
 paleomix bam_pipeline run /global/home/users/makman/git/Helianthus/shells/iceplant/iceplant.yml --max-threads 12 --jre-option -Xmx128g 
