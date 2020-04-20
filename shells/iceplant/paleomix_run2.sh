@@ -1,15 +1,15 @@
 #!/bin/bash 
 #SBATCH -D /global/scratch/makman/iceplant/analyses2/
-#SBATCH -J paleo1
+#SBATCH -J paleo2
 #SBATCH --account=co_rosalind
 #SBATCH --partition=savio2_htc
 #SBATCH --qos=rosalind_htc2_normal
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=12
-#SBATCH --time=400:00:00
-#SBATCH -o /global/home/users/makman/paloemix_outs/paleomix_run.out
-#SBATCH -e /global/home/users/makman/paloemix_outs/paleomix_run.err
+#SBATCH --time=800:00:00
+#SBATCH -o /global/home/users/makman/paloemix_outs/paleomix_run2.out
+#SBATCH -e /global/home/users/makman/paloemix_outs/paleomix_run2.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
