@@ -16,7 +16,7 @@
 
 
 
-module load fastqc/0.11.5 
+module load fastqc/0.11.7
 
 fastqc ../rawdata/ExpICEPO3_A10_S92_R1.fastq.gz
 fastqc ../rawdata/ExpICEPO3_A10_S92_R2.fastq.gz
