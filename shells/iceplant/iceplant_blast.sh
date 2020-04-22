@@ -1,13 +1,13 @@
 #!/bin/bash 
 #SBATCH -D /global/scratch/makman/iceplant/rawdata
 #SBATCH -J blast
-#SBATCH --account=fc_blackman
+#SBATCH --account=co_rosalind
 #SBATCH --partition=savio2_htc
-#SBATCH --qos=savio_normal
+#SBATCH --qos=rosalind_htc2_normal
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=12
-#SBATCH --time=72:00:00
+#SBATCH --cpus-per-task=4
+#SBATCH --time=400:00:00
 #SBATCH -o /global/home/users/makman/paloemix_outs/iceplant_blast.out
 #SBATCH -e /global/home/users/makman/paloemix_outs/iceplant_blast.err
 #SBATCH --mail-user=makman@berkeley.edu
