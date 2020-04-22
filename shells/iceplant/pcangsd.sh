@@ -2,7 +2,7 @@
 #SBATCH -D /global/scratch/makman/iceplant/analyses/
 #SBATCH -J pcangsd
 #SBATCH --account=fc_blackman
-#SBATCH --partition=savio2
+#SBATCH --partition=savio2_bigmem
 #SBATCH --qos=savio_normal
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
