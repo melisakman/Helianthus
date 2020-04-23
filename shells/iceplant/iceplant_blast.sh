@@ -18,17 +18,17 @@
 module load blast
 
 
-# srun /global/home/users/makman/blast/ncbi-blast-2.10.0+/bin/blastn -task blastn -max_target_seqs 1 -query ExpICEPY3_E1_S22_R1_subsample.fasta -db nt -remote -outfmt 7 -out ExpICEPY3_E1_S22_R1_subsample.out
-# srun /global/home/users/makman/blast/ncbi-blast-2.10.0+/bin/blastn -task blastn -max_target_seqs 1 -query ExpICEPY3_G4_S42_R1_subsample.fasta -db nt -remote -outfmt 7 -out ExpICEPY3_G4_S42_R1_subsample.out
-srun /global/home/users/makman/blast/ncbi-blast-2.10.0+/bin/blastn -task blastn -max_target_seqs 1 -query ExpICEPY3_B3_S23_R1_subsample.fasta -db nt -remote -outfmt 7 -out ExpICEPY3_B3_S23_R1_subsample.out
-srun /global/home/users/makman/blast/ncbi-blast-2.10.0+/bin/blastn -task blastn -max_target_seqs 1 -query ExpICEPY3_D4_S28_R1_subsample.fasta -db nt -remote -outfmt 7 -out ExpICEPY3_D4_S28_R1_subsample.out
-srun /global/home/users/makman/blast/ncbi-blast-2.10.0+/bin/blastn -task blastn -max_target_seqs 1 -query ExpICEPY3_H6_S25_R1_subsample.fasta -db nt -remote -outfmt 7 -out ExpICEPY3_H6_S25_R1_subsample.out
-srun /global/home/users/makman/blast/ncbi-blast-2.10.0+/bin/blastn -task blastn -max_target_seqs 1 -query ExpICEPY3_H2_S27_R1_subsample.fasta -db nt -remote -outfmt 7 -out ExpICEPY3_H2_S27_R1_subsample.out
-srun /global/home/users/makman/blast/ncbi-blast-2.10.0+/bin/blastn -task blastn -max_target_seqs 1 -query ExpICEPY3_G1_S32_R1_subsample.fasta -db nt -remote -outfmt 7 -out ExpICEPY3_G1_S32_R1_subsample.out
-srun /global/home/users/makman/blast/ncbi-blast-2.10.0+/bin/blastn -task blastn -max_target_seqs 1 -query ExpICEPY3_H1_S20_R1_subsample.fasta -db nt -remote -outfmt 7 -out ExpICEPY3_H1_S20_R1_subsample.out
-srun /global/home/users/makman/blast/ncbi-blast-2.10.0+/bin/blastn -task blastn -max_target_seqs 1 -query ExpICEPY3_F2_S33_R1_subsample.fasta -db nt -remote -outfmt 7 -out ExpICEPY3_F2_S33_R1_subsample.out
-srun /global/home/users/makman/blast/ncbi-blast-2.10.0+/bin/blastn -task blastn -max_target_seqs 1 -query ExpICEPY3_B2_S24_R1_subsample.fasta -db nt -remote -outfmt 7 -out ExpICEPY3_B2_S24_R1_subsample.out
-# srun /global/home/users/makman/blast/ncbi-blast-2.10.0+/bin/blastn -task blastn -max_target_seqs 1 -query ExpICEPY3_D5_S34_R1_subsample.fasta -db nt -remote -outfmt 7 -out ExpICEPY3_D5_S34_R1_subsample.out
+# srun /global/home/users/makman/blast/ncbi-blast-2.10.0+/bin/blastn -task blastn -max_target_seqs 1 -query Plant_HO2_subsample.fasta -db nt -remote -outfmt 7 -out Plant_HO2_subsample.out
+# srun /global/home/users/makman/blast/ncbi-blast-2.10.0+/bin/blastn -task blastn -max_target_seqs 1 -query Plant_HO4_subsample.fasta -db nt -remote -outfmt 7 -out Plant_HO4_subsample.out
+srun /global/home/users/makman/blast/ncbi-blast-2.10.0+/bin/blastn -task blastn -max_target_seqs 1 -query Plant_SD11_subsample.fasta -db nt -remote -outfmt 7 -out Plant_SD11_subsample.out
+srun /global/home/users/makman/blast/ncbi-blast-2.10.0+/bin/blastn -task blastn -max_target_seqs 1 -query Plant_SD12_subsample.fasta -db nt -remote -outfmt 7 -out Plant_SD12_subsample.out
+srun /global/home/users/makman/blast/ncbi-blast-2.10.0+/bin/blastn -task blastn -max_target_seqs 1 -query Plant_SD13_subsample.fasta -db nt -remote -outfmt 7 -out Plant_SD13_subsample.out
+srun /global/home/users/makman/blast/ncbi-blast-2.10.0+/bin/blastn -task blastn -max_target_seqs 1 -query Plant_SD14_subsample.fasta -db nt -remote -outfmt 7 -out Plant_SD14_subsample.out
+srun /global/home/users/makman/blast/ncbi-blast-2.10.0+/bin/blastn -task blastn -max_target_seqs 1 -query Plant_SD4_subsample.fasta -db nt -remote -outfmt 7 -out Plant_SD4_subsample.out
+srun /global/home/users/makman/blast/ncbi-blast-2.10.0+/bin/blastn -task blastn -max_target_seqs 1 -query Plant_SD7_subsample.fasta -db nt -remote -outfmt 7 -out Plant_SD7_subsample.out
+srun /global/home/users/makman/blast/ncbi-blast-2.10.0+/bin/blastn -task blastn -max_target_seqs 1 -query Plant_SD9_subsample.fasta -db nt -remote -outfmt 7 -out Plant_SD9_subsample.out
+srun /global/home/users/makman/blast/ncbi-blast-2.10.0+/bin/blastn -task blastn -max_target_seqs 1 -query Plant_UCD4_subsample.fasta -db nt -remote -outfmt 7 -out Plant_UCD4_subsample.out
+# srun /global/home/users/makman/blast/ncbi-blast-2.10.0+/bin/blastn -task blastn -max_target_seqs 1 -query Plant_UCD5_subsample.fasta -db nt -remote -outfmt 7 -out Plant_UCD5_subsample.out
 
 
 
