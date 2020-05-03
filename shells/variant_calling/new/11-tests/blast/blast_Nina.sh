@@ -1,9 +1,9 @@
 #!/bin/bash
 #SBATCH -D /global/scratch/makman/GATK/final/blast
 #SBATCH -J blast
-#SBATCH --account=co_rosalind
-#SBATCH --partition=savio
-#SBATCH --qos=rosalind_savio_normal
+#SBATCH --account=fc_blackman
+#SBATCH --partition=savio2_htc
+#SBATCH --qos=savio_normal
 #SBATCH --nodes=1
 #SBATCH --mem=64000
 #SBATCH --ntasks-per-node=1
