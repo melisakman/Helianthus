@@ -14,4 +14,6 @@
 module load blast
 
 
-srun blastn -query /global/home/users/makman/git/Helianthus/shells/variant_calling/new/11-tests/blast/Final_Combined_Baits.fas.clust-85-99_priority_baits_intron_3prime_removed.txt -db /global/scratch/makman/blast_database/XRQv2 -outfmt "7 qseqid qlen sseqid slen qstart qend sstart send evalue bitscore score length pident nident mismatch positive gapopen gaps" -out baits_to_XRQ.txt
+# srun blastn -query /global/home/users/makman/git/Helianthus/shells/variant_calling/new/11-tests/blast/Final_Combined_Baits.fas.clust-85-99_priority_baits_intron_3prime_removed.txt -db /global/scratch/makman/blast_database/XRQv2 -outfmt "7 qseqid qlen sseqid slen qstart qend sstart send evalue bitscore score length pident nident mismatch positive gapopen gaps" -out baits_to_XRQ.txt
+
+srun blastn -query /global/home/users/makman/git/Helianthus/shells/variant_calling/new/11-tests/blast/extra_baits_replacing_multipleHitBaits.txt -db /global/scratch/makman/blast_database/XRQv2 -outfmt "7 qseqid qlen sseqid slen qstart qend sstart send evalue bitscore score length pident nident mismatch positive gapopen gaps" -out extra_baits_replacing_multipleHitBaits_to_XRQ.txt
