@@ -1,14 +1,11 @@
 #!/bin/bash 
 #SBATCH -D /global/scratch/makman/GATK/final
 #SBATCH -J vcfTajD
-#SBATCH --account=co_rosalind
-#SBATCH --partition=savio
-#SBATCH --qos=rosalind_savio_normal
-#SBATCH --nodes=1
-#SBATCH --mem=64000
-#SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=20
-#SBATCH --time=400:00:00
+#SBATCH --account=fc_blackman
+#SBATCH --partition=savio2
+#SBATCH --mem=36000
+#SBATCH --qos=savio_normal
+#SBATCH --time=48:00:00
 #SBATCH -o /global/home/users/makman/vcftools/outs/gzip1.out
 #SBATCH -e /global/home/users/makman/vcftools/outs/gzip1.err
 #SBATCH --mail-user=makman@berkeley.edu
