@@ -22,8 +22,10 @@
 # gzip chr10_final.vcf
 # gzip chr11_final.vcf
 # gzip chr12_final.vcf
-gzip chr13_final.vcf
-gzip chr14_final.vcf
-gzip chr15_final.vcf
-gzip chr16_final.vcf
-gzip chr17_final.vcf
+# gzip chr13_final.vcf
+# gzip chr14_final.vcf
+# gzip chr15_final.vcf
+# gzip chr16_final.vcf
+# gzip chr17_final.vcf
+
+gzip *.vcf
