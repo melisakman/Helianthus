@@ -23,7 +23,7 @@ module load r/3.4.2
 
 export PATH=/global/home/users/makman/install/jar_root/adapterremoval-2.3.1/build/:$PATH
 
-paleomix bam_pipeline run /global/home/users/makman/git/Helianthus/shells/aDNA/20201026_firstpaleomix.yml --max-threads 12 --jre-option -Xmx128g --temp-root=/global/scratch/makman/temp/ --destination=/global/scratch/makman/aDNA/analyses/
+paleomix bam_pipeline run /global/home/users/makman/git/Helianthus/shells/aDNA/20201026_firstpaleomix.yml --max-threads 12 --jre-option -Xmx128g --temp-root=/global/scratch/makman/temp/ --destination=/global/scratch/makman/Sunflower_paleomix/analyses/
 
 
 
