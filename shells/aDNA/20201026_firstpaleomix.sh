@@ -19,8 +19,8 @@ module load samtools/1.6
 module load bwa/0.7.17-r1188
 module unload r/3.2.5
 module load r/3.4.2
-module unload gsl
-module load gsl/2.3-gcc
+# module unload gsl
+# module load gsl/2.3-gcc
 
 export PATH=/global/home/users/makman/install/jar_root/adapterremoval-2.3.1/build/:$PATH
 
