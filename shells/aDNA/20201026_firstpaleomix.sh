@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /global/scratch/makman/aDNA/
+#SBATCH -D /global/scratch/makman/aDNA/raw_data/
 #SBATCH -J paleo1
 #SBATCH --account=fc_blackman
 #SBATCH --partition=savio2

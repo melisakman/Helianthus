@@ -182,19 +182,19 @@ Prefixes:
 Ethno_A:
   Ethno_A:
     Ethno_A:
-       Lane1: "Ethno_A_CKDL200164431-1a-AK1073_HCJNKCCX2_L5_{Pair}.fq.gz"
+       Lane1: "Ethno_A/Ethno_A_CKDL200164431-1a-AK1073_HCJNKCCX2_L5_{Pair}.fq.gz"
 Ethno_B:
   Ethno_B:
     Ethno_B:
-       Lane1: "Ethno_B_CKDL200164431-1a-41_HCJNKCCX2_L5_{Pair}.fq.gz"
+       Lane1: "Ethno_B/Ethno_B_CKDL200164431-1a-41_HCJNKCCX2_L5_{Pair}.fq.gz"
 Ethno_C:
   Ethno_C:
     Ethno_C:
-       Lane1: "Ethno_C_CKDL200164431-1a-AK3489_HCJNKCCX2_L5_{Pair}.fq.gz"
+       Lane1: "Ethno_C/Ethno_C_CKDL200164431-1a-AK3489_HCJNKCCX2_L5_{Pair}.fq.gz"
 Ethno_D:
   Ethno_D:
     Ethno_D:
-       Lane1: "Ethno_D_CKDL200164431-1a-AK3487_HCJNKCCX2_L5_{Pair}.fq.gz"
+       Lane1: "Ethno_D/Ethno_D_CKDL200164431-1a-AK3487_HCJNKCCX2_L5_{Pair}.fq.gz"
 #Ethno_E:
 #  Ethno_E:
 #    Ethno_E:
