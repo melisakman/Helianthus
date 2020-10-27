@@ -150,7 +150,7 @@ Prefixes:
     # results are named after the chromosome / contig. Change 'NAME' to the
     # name to be used in summary statistics and output filenames.
     RegionsOfInterest:
-      Annotation: "/global/scratch/makman/Sunflower_paleomix/dom_genes.bed"
+#      Annotation: "/global/scratch/makman/Sunflower_paleomix/dom_genes.bed"
       Important_Genes: "/global/scratch/makman/Sunflower_paleomix/dom_genes.bed"
 
   Plastome:
