@@ -3,7 +3,7 @@
 #SBATCH -J paleo1
 #SBATCH --account=fc_blackman
 #SBATCH --partition=savio2_htc
-#SBATCH --qos=savio_htc2_normal
+#SBATCH --qos=savio_normal
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=12
