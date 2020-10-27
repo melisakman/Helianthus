@@ -1,13 +1,13 @@
 #!/bin/bash 
 #SBATCH -D /global/scratch/makman/aDNA/
 #SBATCH -J paleo1
-#SBATCH --account=co_rosalind
+#SBATCH --account=fc_blackman
 #SBATCH --partition=savio2_htc
-#SBATCH --qos=rosalind_htc2_normal
+#SBATCH --qos=savio_htc2_normal
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=12
-#SBATCH --time=400:00:00
+#SBATCH --time=72:00:00
 #SBATCH -o /global/home/users/makman/paloemix_outs/paleomix_run_aDNA.out
 #SBATCH -e /global/home/users/makman/paloemix_outs/paleomix_run_aDNA.err
 #SBATCH --mail-user=makman@berkeley.edu
