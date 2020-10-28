@@ -1,9 +1,9 @@
 #!/bin/bash 
 #SBATCH -D /global/scratch/makman/aDNA/raw_data/
 #SBATCH -J paleo8
-#SBATCH --account=co_rosalind
-#SBATCH --partition=savio1
-#SBATCH --qos=rosalind_savio_normal
+#SBATCH --account=fc_blackman
+#SBATCH --partition=savio2
+#SBATCH --qos=savio_normal
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=20
