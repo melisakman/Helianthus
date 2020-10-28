@@ -459,14 +459,14 @@ Prefixes:
 #  SF_65f_A:
 #    SF_65f_A:
 #       Lane1: "SF_65f_A/SF_65f_A_CKDL200164433-1a-AK972_HCJNKCCX2_L7_{Pair}.fq.gz"
-#SF_65g_e:
-#  SF_65g_e:
-#    SF_65g_e:
-#       Lane1: "SF_65g_e/SF_65g_e_CKDL200164433-1a-AK2945_HCJNKCCX2_L7_{Pair}.fq.gz"
-#SF_65h_e:
-#  SF_65h_e:
-#    SF_65h_e:
-#       Lane1: "SF_65h_e/SF_65h_e_CKDL200164433-1a-AK3290_HCJNKCCX2_L7_{Pair}.fq.gz"
+SF_65g_e:
+  SF_65g_e:
+    SF_65g_e:
+       Lane1: "SF_65g_e/SF_65g_e_CKDL200164433-1a-AK2945_HCJNKCCX2_L7_{Pair}.fq.gz"
+SF_65h_e:
+  SF_65h_e:
+    SF_65h_e:
+       Lane1: "SF_65h_e/SF_65h_e_CKDL200164433-1a-AK3290_HCJNKCCX2_L7_{Pair}.fq.gz"
 SF_65i_A:
   SF_65i_A:
     SF_65i_A:
