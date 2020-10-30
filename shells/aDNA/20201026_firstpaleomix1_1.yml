@@ -152,7 +152,7 @@ Prefixes:
     RegionsOfInterest:
 #      Annotation: "/global/scratch/makman/Sunflower_paleomix/dom_genes.bed"
       Important_Genes: "/global/scratch/makman/Sunflower_paleomix/dom_genes.bed"
-
+      Gene_by_gene: "/global/scratch/makman/Sunflower_paleomix/dom_genes_names.bed"
   Plastome:
     # Replace 'PATH_TO_PREFIX' with the path to .fasta file containing the
     # references against which reads are to be mapped. Using the same name
@@ -183,14 +183,14 @@ Ethno_A:
   Ethno_A:
     Ethno_A:
        Lane1: "Ethno_A/Ethno_A_CKDL200164431-1a-AK1073_HCJNKCCX2_L5_{Pair}.fq.gz"
-Ethno_B:
-  Ethno_B:
-    Ethno_B:
-       Lane1: "Ethno_B/Ethno_B_CKDL200164431-1a-41_HCJNKCCX2_L5_{Pair}.fq.gz"
-Ethno_C:
-  Ethno_C:
-    Ethno_C:
-       Lane1: "Ethno_C/Ethno_C_CKDL200164431-1a-AK3489_HCJNKCCX2_L5_{Pair}.fq.gz"
+#Ethno_B:
+#  Ethno_B:
+#    Ethno_B:
+#       Lane1: "Ethno_B/Ethno_B_CKDL200164431-1a-41_HCJNKCCX2_L5_{Pair}.fq.gz"
+#Ethno_C:
+#  Ethno_C:
+#    Ethno_C:
+#       Lane1: "Ethno_C/Ethno_C_CKDL200164431-1a-AK3489_HCJNKCCX2_L5_{Pair}.fq.gz"
 #Ethno_D:
 #  Ethno_D:
 #    Ethno_D:

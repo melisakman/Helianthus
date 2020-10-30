@@ -1,6 +1,6 @@
 #!/bin/bash 
 #SBATCH -D /global/scratch/makman/aDNA/raw_data/
-#SBATCH -J paleo1_1
+#SBATCH -J paleo1_9
 #SBATCH --account=fc_blackman
 #SBATCH --partition=savio2
 #SBATCH --qos=savio_normal
@@ -8,8 +8,8 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=24
 #SBATCH --time=72:00:00
-#SBATCH -o /global/home/users/makman/paloemix_outs/paleomix_run_aDNA1_1.out
-#SBATCH -e /global/home/users/makman/paloemix_outs/paleomix_run_aDNA1_1.err
+#SBATCH -o /global/home/users/makman/paloemix_outs/paleomix_run_aDNA1_9.out
+#SBATCH -e /global/home/users/makman/paloemix_outs/paleomix_run_aDNA1_9.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
@@ -21,7 +21,7 @@ module load bwa/0.7.17-r1188
 
 export PATH=/global/home/users/makman/install/jar_root/adapterremoval-2.3.1/build/:$PATH
 
-paleomix bam_pipeline run /global/home/users/makman/git/Helianthus/shells/aDNA/20201026_firstpaleomix1_1.yml --max-threads 24 --bwa-max-threads 24 --jre-option -Xmx64g --temp-root=/global/scratch/makman/temp/ --destination=/global/scratch/makman/Sunflower_paleomix/analyses
+paleomix bam_pipeline run /global/home/users/makman/git/Helianthus/shells/aDNA/20201026_firstpaleomix1_3.yml --max-threads 24 --bwa-max-threads 24 --jre-option -Xmx64g --temp-root=/global/scratch/makman/temp/ --destination=/global/scratch/makman/Sunflower_paleomix/analyses
 
 
 
