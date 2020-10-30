@@ -152,6 +152,7 @@ Prefixes:
     RegionsOfInterest:
 #      Annotation: "/global/scratch/makman/Sunflower_paleomix/dom_genes.bed"
       Important_Genes: "/global/scratch/makman/Sunflower_paleomix/dom_genes.bed"
+      Gene_by_gene: "/global/scratch/makman/Sunflower_paleomix/dom_genes_names.bed"
 
   Plastome:
     # Replace 'PATH_TO_PREFIX' with the path to .fasta file containing the
