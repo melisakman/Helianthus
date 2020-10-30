@@ -419,46 +419,46 @@ Prefixes:
 #  SF_59_Ne:
 #    SF_59_Ne:
 #       Lane1: "SF_59_Ne/SF_59_Ne_CKDL200164434-1a-75_HCJNKCCX2_L8_{Pair}.fq.gz"
-SF_63a_B:
-  SF_63a_B:
-    SF_63a_B:
-       Lane1: "SF_63a_B/SF_63a_B_CKDL200164433-1a-AK2959_HCJNKCCX2_L7_{Pair}.fq.gz"
+#SF_63a_B:
+#  SF_63a_B:
+#    SF_63a_B:
+#       Lane1: "SF_63a_B/SF_63a_B_CKDL200164433-1a-AK2959_HCJNKCCX2_L7_{Pair}.fq.gz"
 SF_63b_B:
   SF_63b_B:
     SF_63b_B:
        Lane1: "SF_63b_B/SF_63b_B_CKDL200164433-1a-AK2951_HCJNKCCX2_L7_{Pair}.fq.gz"
-SF_64a_B:
-  SF_64a_B:
-    SF_64a_B:
-       Lane1: "SF_64a_B/SF_64a_B_CKDL200164433-1a-AK2950_HCJNKCCX2_L7_{Pair}.fq.gz"
+#SF_64a_B:
+#  SF_64a_B:
+#    SF_64a_B:
+#       Lane1: "SF_64a_B/SF_64a_B_CKDL200164433-1a-AK2950_HCJNKCCX2_L7_{Pair}.fq.gz"
 SF_64b_B:
   SF_64b_B:
     SF_64b_B:
        Lane1: "SF_64b_B/SF_64b_B_CKDL200164433-1a-AK2957_HCJNKCCX2_L7_{Pair}.fq.gz"
-SF_65a_e:
-  SF_65a_e:
-    SF_65a_e:
-       Lane1: "SF_65a_e/SF_65a_e_CKDL200164433-1a-AK194_HCJNKCCX2_L7_{Pair}.fq.gz"
-SF_65b_A:
-  SF_65b_A:
-    SF_65b_A:
-       Lane1: "SF_65b_A/SF_65b_A_CKDL200164433-1a-AK3793_HCJNKCCX2_L7_{Pair}.fq.gz"
-SF_65c_e:
-  SF_65c_e:
-    SF_65c_e:
-       Lane1: "SF_65c_e/SF_65c_e_CKDL200164434-1a-AK986_HCJNKCCX2_L8_{Pair}.fq.gz"
+#SF_65a_e:
+#  SF_65a_e:
+#    SF_65a_e:
+#       Lane1: "SF_65a_e/SF_65a_e_CKDL200164433-1a-AK194_HCJNKCCX2_L7_{Pair}.fq.gz"
+#SF_65b_A:
+#  SF_65b_A:
+#    SF_65b_A:
+#       Lane1: "SF_65b_A/SF_65b_A_CKDL200164433-1a-AK3793_HCJNKCCX2_L7_{Pair}.fq.gz"
+#SF_65c_e:
+#  SF_65c_e:
+#    SF_65c_e:
+#       Lane1: "SF_65c_e/SF_65c_e_CKDL200164434-1a-AK986_HCJNKCCX2_L8_{Pair}.fq.gz"
 SF_65d_A:
   SF_65d_A:
     SF_65d_A:
        Lane1: "SF_65d_A/SF_65d_A_CKDL200164433-1a-AK2953_HCJNKCCX2_L7_{Pair}.fq.gz"
-SF_65e_A:
-  SF_65e_A:
-    SF_65e_A:
-       Lane1: "SF_65e_A/SF_65e_A_CKDL200164433-1a-AK2956_HCJNKCCX2_L7_{Pair}.fq.gz"
-SF_65f_A:
-  SF_65f_A:
-    SF_65f_A:
-       Lane1: "SF_65f_A/SF_65f_A_CKDL200164433-1a-AK972_HCJNKCCX2_L7_{Pair}.fq.gz"
+#SF_65e_A:
+#  SF_65e_A:
+#    SF_65e_A:
+#       Lane1: "SF_65e_A/SF_65e_A_CKDL200164433-1a-AK2956_HCJNKCCX2_L7_{Pair}.fq.gz"
+#SF_65f_A:
+#  SF_65f_A:
+#    SF_65f_A:
+#       Lane1: "SF_65f_A/SF_65f_A_CKDL200164433-1a-AK972_HCJNKCCX2_L7_{Pair}.fq.gz"
 #SF_65g_e:
 #  SF_65g_e:
 #    SF_65g_e:

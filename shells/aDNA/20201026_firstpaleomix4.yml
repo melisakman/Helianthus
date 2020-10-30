@@ -299,46 +299,46 @@ Prefixes:
 #  SF_22_Ed:
 #    SF_22_Ed:
 #       Lane1: "SF_22_Ed/SF_22_Ed_CKDL200164432-1a-AK3793_HCJNKCCX2_L6_{Pair}.fq.gz"
-SF_23_Ed:
-  SF_23_Ed:
-    SF_23_Ed:
-       Lane1: "SF_23_Ed/SF_23_Ed_CKDL200164432-1a-AK993_HCJNKCCX2_L6_{Pair}.fq.gz"
+#SF_23_Ed:
+#  SF_23_Ed:
+#    SF_23_Ed:
+#       Lane1: "SF_23_Ed/SF_23_Ed_CKDL200164432-1a-AK993_HCJNKCCX2_L6_{Pair}.fq.gz"
 SF_25_NM:
   SF_25_NM:
     SF_25_NM:
        Lane1: "SF_25_NM/SF_25_NM_CKDL200164434-1a-AK2953_HCJNKCCX2_L8_{Pair}.fq.gz"
-SF_27_Be:
-  SF_27_Be:
-    SF_27_Be:
-       Lane1: "SF_27_Be/SF_27_Be_CKDL200164434-1a-AK2956_HCJNKCCX2_L8_{Pair}.fq.gz"
-SF_28_Ed:
-  SF_28_Ed:
-    SF_28_Ed:
-       Lane1: "SF_28_Ed/SF_28_Ed_CKDL200164432-1a-AK972_HCJNKCCX2_L6_{Pair}.fq.gz"
-SF_29_Br:
-  SF_29_Br:
-    SF_29_Br:
-       Lane1: "SF_29_Br/SF_29_Br_CKDL200164434-1a-AK2946_HCJNKCCX2_L8_{Pair}.fq.gz"
-SF_30_Ed:
-  SF_30_Ed:
-    SF_30_Ed:
-       Lane1: "SF_30_Ed/SF_30_Ed_CKDL200164434-1a-AK2945_HCJNKCCX2_L8_{Pair}.fq.gz"
-SF_31_Co:
-  SF_31_Co:
-    SF_31_Co:
-       Lane1: "SF_31_Co/SF_31_Co_CKDL200164433-1a-AK2948_HCJNKCCX2_L7_{Pair}.fq.gz"
-SF_32_Cl:
-  SF_32_Cl:
-    SF_32_Cl:
-       Lane1: "SF_32_Cl/SF_32_Cl_CKDL200164432-1a-AK3290_HCJNKCCX2_L6_{Pair}.fq.gz"
-SF_33_Cl:
-  SF_33_Cl:
-    SF_33_Cl:
-       Lane1: "SF_33_Cl/SF_33_Cl_CKDL200164432-1a-AK199_HCJNKCCX2_L6_{Pair}.fq.gz"
-SF_35_Cl:
-  SF_35_Cl:
-    SF_35_Cl:
-       Lane1: "SF_35_Cl/SF_35_Cl_CKDL200164433-1a-AK2940_HCJNKCCX2_L7_{Pair}.fq.gz"
+#SF_27_Be:
+#  SF_27_Be:
+#    SF_27_Be:
+#       Lane1: "SF_27_Be/SF_27_Be_CKDL200164434-1a-AK2956_HCJNKCCX2_L8_{Pair}.fq.gz"
+#SF_28_Ed:
+#  SF_28_Ed:
+#    SF_28_Ed:
+#       Lane1: "SF_28_Ed/SF_28_Ed_CKDL200164432-1a-AK972_HCJNKCCX2_L6_{Pair}.fq.gz"
+#SF_29_Br:
+#  SF_29_Br:
+#    SF_29_Br:
+#       Lane1: "SF_29_Br/SF_29_Br_CKDL200164434-1a-AK2946_HCJNKCCX2_L8_{Pair}.fq.gz"
+#SF_30_Ed:
+#  SF_30_Ed:
+#    SF_30_Ed:
+#       Lane1: "SF_30_Ed/SF_30_Ed_CKDL200164434-1a-AK2945_HCJNKCCX2_L8_{Pair}.fq.gz"
+#SF_31_Co:
+#  SF_31_Co:
+#    SF_31_Co:
+#       Lane1: "SF_31_Co/SF_31_Co_CKDL200164433-1a-AK2948_HCJNKCCX2_L7_{Pair}.fq.gz"
+#SF_32_Cl:
+#  SF_32_Cl:
+#    SF_32_Cl:
+#       Lane1: "SF_32_Cl/SF_32_Cl_CKDL200164432-1a-AK3290_HCJNKCCX2_L6_{Pair}.fq.gz"
+#SF_33_Cl:
+#  SF_33_Cl:
+#    SF_33_Cl:
+#       Lane1: "SF_33_Cl/SF_33_Cl_CKDL200164432-1a-AK199_HCJNKCCX2_L6_{Pair}.fq.gz"
+#SF_35_Cl:
+#  SF_35_Cl:
+#    SF_35_Cl:
+#       Lane1: "SF_35_Cl/SF_35_Cl_CKDL200164433-1a-AK2940_HCJNKCCX2_L7_{Pair}.fq.gz"
 #SF_35b_C:
 #  SF_35b_C:
 #    SF_35b_C:

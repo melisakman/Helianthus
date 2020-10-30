@@ -179,23 +179,22 @@ Prefixes:
        # to be trimmed and mapped for this lane (may include wildcards).
 #      NAME_OF_LANE: PATH_WITH_WILDCARDS
 
-#Ethno_A:
-#  Ethno_A:
-#    Ethno_A:
-#       Lane1: "Ethno_A/Ethno_A_CKDL200164431-1a-AK1073_HCJNKCCX2_L5_{Pair}.fq.gz"
-#Ethno_B:
-#  Ethno_B:
-#    Ethno_B:
-#       Lane1: "Ethno_B/Ethno_B_CKDL200164431-1a-41_HCJNKCCX2_L5_{Pair}.fq.gz"
-#Ethno_C:
-#  Ethno_C:
-#    Ethno_C:
-#       Lane1: "Ethno_C/Ethno_C_CKDL200164431-1a-AK3489_HCJNKCCX2_L5_{Pair}.fq.gz"
+Ethno_A:
+  Ethno_A:
+    Ethno_A:
+       Lane1: "Ethno_A/Ethno_A_CKDL200164431-1a-AK1073_HCJNKCCX2_L5_{Pair}.fq.gz"
+Ethno_B:
+  Ethno_B:
+    Ethno_B:
+       Lane1: "Ethno_B/Ethno_B_CKDL200164431-1a-41_HCJNKCCX2_L5_{Pair}.fq.gz"
+Ethno_C:
+  Ethno_C:
+    Ethno_C:
+       Lane1: "Ethno_C/Ethno_C_CKDL200164431-1a-AK3489_HCJNKCCX2_L5_{Pair}.fq.gz"
 #Ethno_D:
 #  Ethno_D:
 #    Ethno_D:
 #       Lane1: "Ethno_D/Ethno_D_CKDL200164431-1a-AK3487_HCJNKCCX2_L5_{Pair}.fq.gz"
-#
 #Ethno_E:
 #  Ethno_E:
 #    Ethno_E:
@@ -220,10 +219,10 @@ Prefixes:
 #  Ethno_J:
 #    Ethno_J:
 #       Lane1: "Ethno_J/Ethno_J_CKDL200164431-1a-AK2959_HCJNKCCX2_L5_{Pair}.fq.gz"
-Ethno_L:
-  Ethno_L:
-    Ethno_L:
-       Lane1: "Ethno_L/Ethno_L_CKDL200164431-1a-AK2950_HCJNKCCX2_L5_{Pair}.fq.gz"
+#Ethno_L:
+#  Ethno_L:
+#    Ethno_L:
+#       Lane1: "Ethno_L/Ethno_L_CKDL200164431-1a-AK2950_HCJNKCCX2_L5_{Pair}.fq.gz"
 #SF_01_Ne:
 #  SF_01_Ne:
 #    SF_01_Ne:
@@ -259,7 +258,7 @@ Ethno_L:
 #SF_11_a_:
 #  SF_11_a_:
 #    SF_11_a_:
-#       Lane1: "SF_11_a_/SF_11_a__CKDL200164432-1a-AK1888_HCJNKCCX2_L6_{Pair}.fq.gz"
+#       Lane1: "SF_11_a/SF_11_a_CKDL200164432-1a-AK1888_HCJNKCCX2_L6_{Pair}.fq.gz"
 #SF_12_Pu:
 #  SF_12_Pu:
 #    SF_12_Pu:
