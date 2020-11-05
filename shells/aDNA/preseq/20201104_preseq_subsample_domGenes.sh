@@ -16,7 +16,7 @@
 module load preseq
 module load samtools
 
-# samtools view SF_19_Mo.XRQ_nuclear.realigned.bam -L ../dom_genes.bed -b -o SF_19_Mo_domGenes.bam
+samtools view SF_19_Mo.XRQ_nuclear.realigned.bam -L ../dom_genes.bed -b -o SF_19_Mo_domGenes.bam
 samtools view SF_22_Ed.XRQ_nuclear.realigned.bam -L ../dom_genes.bed -b -o SF_22_Ed_domGenes.bam
 samtools view SF_21_Ed.XRQ_nuclear.realigned.bam -L ../dom_genes.bed -b -o SF_21_Ed_domGenes.bam
 samtools view SF_41_Ed.XRQ_nuclear.realigned.bam -L ../dom_genes.bed -b -o SF_41_Ed_domGenes.bam
