@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /global/scratch/makman/aDNA/analyses/
+#SBATCH -D /global/scratch/makman/Sunflower_paleomix/analyses/
 #SBATCH -J preseq1
 #SBATCH --account=fc_blackman
 #SBATCH --partition=savio2
