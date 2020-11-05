@@ -16,7 +16,7 @@
 module load preseq
 module load samtools
 
-preseq c_curve -o SF_19_Mo.complexity.txt -v -s 10000 -B SF_19_Mo_domGenes.bam
+# preseq c_curve -o SF_19_Mo.complexity.txt -v -s 10000 -B SF_19_Mo_domGenes.bam
 # preseq c_curve -o SF_22_Ed.complexity.txt -v -s 10000 -B SF_22_Ed_domGenes.bam
 # preseq c_curve -o SF_21_Ed.complexity.txt -v -s 10000 -B SF_21_Ed_domGenes.bam
 # preseq c_curve -o SF_41_Ed.complexity.txt -v -s 10000 -B SF_41_Ed_domGenes.bam
@@ -79,7 +79,7 @@ preseq c_curve -o SF_19_Mo.complexity.txt -v -s 10000 -B SF_19_Mo_domGenes.bam
 
 
 
-# preseq lc_extrap -o SF_19_Mo.extrap.txt -v -s 10000 -B SF_19_Mo_domGenes.bam
+preseq lc_extrap -o SF_19_Mo.extrap.txt -v -s 10000 -B SF_19_Mo_domGenes.bam
 # preseq lc_extrap -o SF_22_Ed.extrap.txt -v -s 10000 -B SF_22_Ed_domGenes.bam
 # preseq lc_extrap -o SF_21_Ed.extrap.txt -v -s 10000 -B SF_21_Ed_domGenes.bam
 # preseq lc_extrap -o SF_41_Ed.extrap.txt -v -s 10000 -B SF_41_Ed_domGenes.bam
