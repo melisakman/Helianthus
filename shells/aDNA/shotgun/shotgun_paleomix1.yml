@@ -1,0 +1,993 @@
+# -*- mode: Yaml; -*-
+# Timestamp: 2017-02-20T16:32:12.844855
+#
+# Default options.
+# Can also be specific for a set of samples, libraries, and lanes,
+# by including the "Options" hierarchy at the same level as those
+# samples, libraries, or lanes below. This does not include
+# "Features", which may only be specific globally.
+Options:
+  # Sequencing platform, see SAM/BAM reference for valid values
+  Platform: Illumina
+  # Quality offset for Phred scores, either 33 (Sanger/Illumina 1.8+)
+  # or 64 (Illumina 1.3+ / 1.5+). For Bowtie2 it is also possible to
+  # specify 'Solexa', to handle reads on the Solexa scale. This is
+  # used during adapter-trimming and sequence alignment
+  QualityOffset: 33
+  # Split a lane into multiple entries, one for each (pair of) file(s)
+  # found using the search-string specified for a given lane. Each
+  # lane is named by adding a number to the end of the given barcode.
+  SplitLanesByFilenames: yes
+  # Compression format for FASTQ reads; 'gz' for GZip, 'bz2' for BZip2
+  CompressionFormat: gz
+
+  # Settings for trimming of reads, see AdapterRemoval man-page
+  AdapterRemoval:
+     # Adapter sequences, set and uncomment to override defaults
+#     --adapter1: AGATCGGAAGAGCACACGTCTGAACTCCAGTCACNNNNNNATCTCGTATGCCGTCTTCTGCTTG
+#     --adapter2: AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT
+     # Some BAM pipeline defaults differ from AR defaults;
+     # To override, change these value(s):
+     --mm: 3
+     --minlength: 25
+     # Extra features enabled by default; change 'yes' to 'no' to disable
+     --collapse: no
+     --trimns: yes
+     --trimqualities: yes
+
+
+  # Settings for aligners supported by the pipeline
+  Aligners:
+    # Choice of aligner software to use, either "BWA" or "Bowtie2"
+    Program: BWA
+
+    # Settings for mappings performed using BWA
+    BWA:
+      # One of "backtrack", "bwasw", or "mem"; see the BWA documentation
+      # for a description of each algorithm (defaults to 'backtrack')
+      Algorithm: backtrack
+      # Filter aligned reads with a mapping quality (Phred) below this value
+      MinQuality: 0
+      # Filter reads that did not map to the reference sequence
+      FilterUnmappedReads: yes
+      # May be disabled ("no") for aDNA alignments, as post-mortem damage
+      # localizes to the seed region, which BWA expects to have few
+      # errors (sets "-l"). See http://pmid.us/22574660
+      UseSeed: no
+      # Additional command-line options may be specified for the "aln"
+      # call(s), as described below for Bowtie2 below.
+
+    # Settings for mappings performed using Bowtie2
+    Bowtie2:
+      # Filter aligned reads with a mapping quality (Phred) below this value
+      MinQuality: 0
+      # Filter reads that did not map to the reference sequence
+      FilterUnmappedReads: yes
+      # Examples of how to add additional command-line options
+#      --trim5: 5
+#      --trim3: 5
+      # Note that the colon is required, even if no value is specified
+      --very-sensitive:
+      # Example of how to specify multiple values for an option
+#      --rg:
+#        - CN:SequencingCenterNameHere
+#        - DS:DescriptionOfReadGroup
+
+  # Mark / filter PCR duplicates. If set to 'filter', PCR duplicates are
+  # removed from the output files; if set to 'mark', PCR duplicates are
+  # flagged with bit 0x400, and not removed from the output files; if set to
+  # 'no', the reads are assumed to not have been amplified. Collapsed reads
+  # are filtered using the command 'paleomix rmdup_duplicates', while "normal"
+  # reads are filtered using Picard MarkDuplicates.
+  PCRDuplicates: mark
+
+  # Command-line options for mapDamage; note that the long-form
+  # options are expected; --length, not -l, etc. Uncomment the
+  # "mapDamage" line adding command-line options below.
+  mapDamage:
+    # By default, the pipeline will downsample the input to 100k hits
+    # when running mapDamage; remove to use all hits
+    --downsample: 100000
+
+  # Set to 'yes' exclude a type of trimmed reads from alignment / analysis;
+  # possible read-types reflect the output of AdapterRemoval
+  ExcludeReads:
+    # Exclude single-end reads (yes / no)?
+    Single: no
+    # Exclude non-collapsed paired-end reads (yes / no)?
+    Paired: no
+    # Exclude paired-end reads for which the mate was discarded (yes / no)?
+    Singleton: no
+    # Exclude overlapping paired-ended reads collapsed into a single sequence
+    # by AdapterRemoval (yes / no)?
+    Collapsed: no
+    # Like 'Collapsed', but only for collapsed reads truncated due to the
+    # presence of ambiguous or low quality bases at read termini (yes / no).
+    CollapsedTruncated: no
+
+  # Optional steps to perform during processing.
+  Features:
+    # Generate BAM without realignment around indels (yes / no)
+    RawBAM: no
+    # Generate indel-realigned BAM using the GATK Indel realigner (yes / no)
+    RealignedBAM: yes
+    # To disable mapDamage, write 'no'; to generate basic mapDamage plots,
+    # write 'plot'; to build post-mortem damage models, write 'model',
+    # and to produce rescaled BAMs, write 'rescale'. The 'model' option
+    # includes the 'plot' output, and the 'rescale' option includes both
+    # 'plot' and 'model' results. All analyses are carried out per library.
+    mapDamage: plot
+    # Generate coverage information for the raw BAM (wo/ indel realignment).
+    # If one or more 'RegionsOfInterest' have been specified for a prefix,
+    # additional coverage files are generated for each alignment (yes / no)
+    Coverage: yes
+    # Generate histogram of number of sites with a given read-depth, from 0
+    # to 200. If one or more 'RegionsOfInterest' have been specified for a
+    # prefix, additional histograms are generated for each alignment (yes / no)
+    Depths: yes
+    # Generate summary table for each target (yes / no)
+    Summary: yes
+    # Generate histogram of PCR duplicates, for use with PreSeq (yes / no)
+    DuplicateHist: yes
+
+
+# Map of prefixes by name, each having a Path key, which specifies the
+# location of the BWA/Bowtie2 index, and optional label, and an option
+# set of regions for which additional statistics are produced.
+Prefixes:
+  # Replace 'NAME_OF_PREFIX' with name of the prefix; this name
+  # is used in summary statistics and as part of output filenames.
+  XRQ_nuclear:
+    # Replace 'PATH_TO_PREFIX' with the path to .fasta file containing the
+    # references against which reads are to be mapped. Using the same name
+    # as filename is strongly recommended (e.g. /path/to/Human_g1k_v37.fasta
+    # should be named 'Human_g1k_v37').
+    Path: "/global/scratch/makman/Sunflower_paleomix/genome/HanXRQr1.0-20151230_ch01_to_17.fasta"
+
+    # (Optional) Uncomment and replace 'PATH_TO_BEDFILE' with the path to a
+    # .bed file listing extra regions for which coverage / depth statistics
+    # should be calculated; if no names are specified for the BED records,
+    # results are named after the chromosome / contig. Change 'NAME' to the
+    # name to be used in summary statistics and output filenames.
+    RegionsOfInterest:
+#      Annotation: "/global/scratch/makman/Sunflower_paleomix/dom_genes.bed"
+      Important_Genes: "/global/scratch/makman/Sunflower_paleomix/dom_genes.bed"
+      Gene_by_gene: "/global/scratch/makman/Sunflower_paleomix/dom_genes_names.bed"
+
+  Plastome:
+    # Replace 'PATH_TO_PREFIX' with the path to .fasta file containing the
+    # references against which reads are to be mapped. Using the same name
+    # as filename is strongly recommended (e.g. /path/to/Human_g1k_v37.fasta
+    # should be named 'Human_g1k_v37').
+    Path: "/global/scratch/makman/Sunflower_paleomix/genome/HanXRQCP.fasta"
+
+  Mito:
+    # Replace 'PATH_TO_PREFIX' with the path to .fasta file containing the
+    # references against which reads are to be mapped. Using the same name
+    # as filename is strongly recommended (e.g. /path/to/Human_g1k_v37.fasta
+    # should be named 'Human_g1k_v37').
+    Path: "/global/scratch/makman/Sunflower_paleomix/genome/HanXRQMT.fasta"
+
+# Mapping targets are specified using the following structure. Uncomment and
+# replace 'NAME_OF_TARGET' with the desired prefix for filenames.
+#NAME_OF_TARGET:
+   #  Uncomment and replace 'NAME_OF_SAMPLE' with the name of this sample.
+#  NAME_OF_SAMPLE:
+     #  Uncomment and replace 'NAME_OF_LIBRARY' with the name of this sample.
+#    NAME_OF_LIBRARY:
+       # Uncomment and replace 'NAME_OF_LANE' with the name of this lane,
+       # and replace 'PATH_WITH_WILDCARDS' with the path to the FASTQ files
+       # to be trimmed and mapped for this lane (may include wildcards).
+#      NAME_OF_LANE: PATH_WITH_WILDCARDS
+
+SF_01:
+  SF_01:
+    SF_01:
+      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_01_Newt_Kash_16447_disk_TGAACA_L008_R1_001.fastq.gz"
+      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_01_Newt_Kash_16447_disk_TGAACA_L008_R1_002.fastq.gz"
+      Lane3: "/global/scratch/makman/aDNA/shotgun/SF_01_Newt_Kash_16447_disk_TGAACA_L008_R1_003.fastq.gz"
+      Lane4: "/global/scratch/makman/aDNA/shotgun/SF_01_Newt_Kash_16447_disk_TGAACA_L008_R1_004.fastq.gz"
+      Lane5: "/global/scratch/makman/aDNA/shotgun/SF_01_Newt_Kash_16447_disk_TGAACA_L008_R1_005.fastq.gz"
+      Lane6: "/global/scratch/makman/aDNA/shotgun/SF_01_Newt_Kash_16447_disk_TGAACA_L008_R1_006.fastq.gz"
+      Lane7: "/global/scratch/makman/aDNA/shotgun/SF_01_Newt_Kash_16447_disk_TGAACA_L008_R1_007.fastq.gz"
+      Lane8: "/global/scratch/makman/aDNA/shotgun/SF_01_Newt_Kash_16447_disk_TGAACA_L008_R1_008.fastq.gz"
+      Lane9: "/global/scratch/makman/aDNA/shotgun/SF_01_Newt_Kash_16447_disk_TGAACA_L008_R1_009.fastq.gz"
+      Lane10: "/global/scratch/makman/aDNA/shotgun/SF_01_Newt_Kash_16447_disk_TGAACA_L008_R1_010.fastq.gz"
+      Lane11: "/global/scratch/makman/aDNA/shotgun/SF_01_Newt_Kash_16447_disk_TGAACA_L008_R1_011.fastq.gz"
+      Lane12: "/global/scratch/makman/aDNA/shotgun/SF_01_Newt_Kash_16447_disk_TGAACA_L008_R1_012.fastq.gz"
+
+SF_02:
+  SF_02:
+    SF_02:
+      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_02_Alred_32_4_98a_disk_GTATCT_L008_R1_001.fastq.gz"
+      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_02_Alred_32_4_98a_disk_GTATCT_L008_R1_002.fastq.gz"
+      Lane3: "/global/scratch/makman/aDNA/shotgun/SF_02_Alred_32_4_98a_disk_GTATCT_L008_R1_003.fastq.gz"
+      Lane4: "/global/scratch/makman/aDNA/shotgun/SF_02_Alred_32_4_98a_disk_GTATCT_L008_R1_004.fastq.gz"
+      Lane5: "/global/scratch/makman/aDNA/shotgun/SF_02_Alred_32_4_98a_disk_GTATCT_L008_R1_005.fastq.gz"
+      Lane6: "/global/scratch/makman/aDNA/shotgun/SF_02_Alred_32_4_98a_disk_GTATCT_L008_R1_006.fastq.gz"
+
+SF_03:
+  SF_03:
+    SF_03:
+      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_03_Putnam_32_44_257_disk_CTGACA_L008_R1_001.fastq.gz"
+      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_03_Putnam_32_44_257_disk_CTGACA_L008_R1_002.fastq.gz"
+      Lane3: "/global/scratch/makman/aDNA/shotgun/SF_03_Putnam_32_44_257_disk_CTGACA_L008_R1_003.fastq.gz"
+      Lane4: "/global/scratch/makman/aDNA/shotgun/SF_03_Putnam_32_44_257_disk_CTGACA_L008_R1_004.fastq.gz"
+
+SF_04:
+  SF_04:
+    SF_04:
+      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_04_Montgomery_4_32_34_59_disk_TGCAGG_L008_R1_001.fastq.gz"
+      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_04_Montgomery_4_32_34_59_disk_TGCAGG_L008_R1_002.fastq.gz"
+      Lane3: "/global/scratch/makman/aDNA/shotgun/SF_04_Montgomery_4_32_34_59_disk_TGCAGG_L008_R1_003.fastq.gz"
+      Lane4: "/global/scratch/makman/aDNA/shotgun/SF_04_Montgomery_4_32_34_59_disk_TGCAGG_L008_R1_004.fastq.gz"
+      Lane5: "/global/scratch/makman/aDNA/shotgun/SF_04_Montgomery_4_32_34_59_disk_TGCAGG_L008_R1_005.fastq.gz"
+      Lane6: "/global/scratch/makman/aDNA/shotgun/SF_04_Montgomery_4_32_34_59_disk_TGCAGG_L008_R1_006.fastq.gz"
+      Lane7: "/global/scratch/makman/aDNA/shotgun/SF_04_Montgomery_4_32_34_59_disk_TGCAGG_L008_R1_007.fastq.gz"
+
+SF_05:
+  SF_05:
+    SF_05:
+      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_05_Craddock_34_7_33_disk_ACTGCC_L008_R1_001.fastq.gz"
+      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_05_Craddock_34_7_33_disk_ACTGCC_L008_R1_002.fastq.gz"
+      Lane3: "/global/scratch/makman/aDNA/shotgun/SF_05_Craddock_34_7_33_disk_ACTGCC_L008_R1_003.fastq.gz"
+      Lane4: "/global/scratch/makman/aDNA/shotgun/SF_05_Craddock_34_7_33_disk_ACTGCC_L008_R1_004.fastq.gz"
+      Lane5: "/global/scratch/makman/aDNA/shotgun/SF_05_Craddock_34_7_33_disk_ACTGCC_L008_R1_005.fastq.gz"
+
+SF_06:
+  SF_06:
+    SF_06:
+      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_06_Green_Bluff_33_7_154_disk_GCAACG_L008_R1_001.fastq.gz"
+      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_06_Green_Bluff_33_7_154_disk_GCAACG_L008_R1_002.fastq.gz"
+      Lane3: "/global/scratch/makman/aDNA/shotgun/SF_06_Green_Bluff_33_7_154_disk_GCAACG_L008_R1_003.fastq.gz"
+      Lane4: "/global/scratch/makman/aDNA/shotgun/SF_06_Green_Bluff_33_7_154_disk_GCAACG_L008_R1_004.fastq.gz"
+      Lane5: "/global/scratch/makman/aDNA/shotgun/SF_06_Green_Bluff_33_7_154_disk_GCAACG_L008_R1_005.fastq.gz"
+      Lane6: "/global/scratch/makman/aDNA/shotgun/SF_06_Green_Bluff_33_7_154_disk_GCAACG_L008_R1_006.fastq.gz"
+      Lane7: "/global/scratch/makman/aDNA/shotgun/SF_06_Green_Bluff_33_7_154_disk_GCAACG_L008_R1_007.fastq.gz"
+      Lane8: "/global/scratch/makman/aDNA/shotgun/SF_06_Green_Bluff_33_7_154_disk_GCAACG_L008_R1_008.fastq.gz"
+
+SF_07:
+  SF_07:
+    SF_07:
+      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_07_Edens_Bluff_32_3_27_disk_CGACCT_L008_R1_001.fastq.gz"
+      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_07_Edens_Bluff_32_3_27_disk_CGACCT_L008_R1_002.fastq.gz"
+      Lane3: "/global/scratch/makman/aDNA/shotgun/SF_07_Edens_Bluff_32_3_27_disk_CGACCT_L008_R1_003.fastq.gz"
+      Lane4: "/global/scratch/makman/aDNA/shotgun/SF_07_Edens_Bluff_32_3_27_disk_CGACCT_L008_R1_004.fastq.gz"
+      Lane5: "/global/scratch/makman/aDNA/shotgun/SF_07_Edens_Bluff_32_3_27_disk_CGACCT_L008_R1_005.fastq.gz"
+      Lane6: "/global/scratch/makman/aDNA/shotgun/SF_07_Edens_Bluff_32_3_27_disk_CGACCT_L008_R1_006.fastq.gz"
+      Lane7: "/global/scratch/makman/aDNA/shotgun/SF_07_Edens_Bluff_32_3_27_disk_CGACCT_L008_R1_007.fastq.gz"
+      Lane8: "/global/scratch/makman/aDNA/shotgun/SF_07_Edens_Bluff_32_3_27_disk_CGACCT_L008_R1_008.fastq.gz"
+
+#SF_08:
+#  SF_08:
+#    SF_08:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_08_Extr_blank_TGACGT_L008_R1_001.fastq.gz"
+
+SF_09_a:
+  SF_09_a:
+    SF_09_a:
+      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_09_a_Tularosa_4000-1-2151_disk_TGTCTG_L008_R1_001.fastq.gz"
+      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_09_a_Tularosa_4000-1-2151_disk_TGTCTG_L008_R1_002.fastq.gz"
+      Lane3: "/global/scratch/makman/aDNA/shotgun/SF_09_a_Tularosa_4000-1-2151_disk_TGTCTG_L008_R1_003.fastq.gz"
+      Lane4: "/global/scratch/makman/aDNA/shotgun/SF_09_a_Tularosa_4000-1-2151_disk_TGTCTG_L008_R1_004.fastq.gz"
+      Lane5: "/global/scratch/makman/aDNA/shotgun/SF_09_a_Tularosa_4000-1-2151_disk_TGTCTG_L008_R1_005.fastq.gz"
+      Lane6: "/global/scratch/makman/aDNA/shotgun/SF_09_a_Tularosa_4000-1-2151_disk_TGTCTG_L008_R1_006.fastq.gz"
+
+SF_09_b:
+  SF_09_b:
+    SF_09_b:
+      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_09_b_Tularosa_4000-1-2151_pilot_disk_AGTGAG_L006_R1_001.fastq.gz"
+      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_09_b_Tularosa_4000-1-2151_pilot_disk_AGTGAG_L006_R1_002.fastq.gz"
+      Lane3: "/global/scratch/makman/aDNA/shotgun/SF_09_b_Tularosa_4000-1-2151_pilot_disk_AGTGAG_L006_R1_003.fastq.gz"
+      Lane4: "/global/scratch/makman/aDNA/shotgun/SF_09_b_Tularosa_4000-1-2151_pilot_disk_AGTGAG_L006_R1_004.fastq.gz"
+      Lane5: "/global/scratch/makman/aDNA/shotgun/SF_09_b_Tularosa_4000-1-2151_pilot_disk_AGTGAG_L006_R1_005.fastq.gz"
+      Lane6: "/global/scratch/makman/aDNA/shotgun/SF_09_b_Tularosa_4000-1-2151_pilot_disk_AGTGAG_L006_R1_006.fastq.gz"
+      Lane7: "/global/scratch/makman/aDNA/shotgun/SF_09_b_Tularosa_4000-1-2151_pilot_disk_AGTGAG_L006_R1_007.fastq.gz"
+      Lane8: "/global/scratch/makman/aDNA/shotgun/SF_09_b_Tularosa_4000-1-2151_pilot_disk_AGTGAG_L006_R1_008.fastq.gz"
+      Lane9: "/global/scratch/makman/aDNA/shotgun/SF_09_b_Tularosa_4000-1-2151_pilot_disk_AGTGAG_L006_R1_009.fastq.gz"
+      Lane10: "/global/scratch/makman/aDNA/shotgun/SF_09_b_Tularosa_4000-1-2151_pilot_disk_AGTGAG_L006_R1_010.fastq.gz"
+
+SF_10:
+  SF_10:
+    SF_10:
+      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_10_Trinchera_Creek_disk_ACGTGC_L008_R1_001.fastq.gz"
+      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_10_Trinchera_Creek_disk_ACGTGC_L008_R1_002.fastq.gz"
+      Lane3: "/global/scratch/makman/aDNA/shotgun/SF_10_Trinchera_Creek_disk_ACGTGC_L008_R1_003.fastq.gz"
+      Lane4: "/global/scratch/makman/aDNA/shotgun/SF_10_Trinchera_Creek_disk_ACGTGC_L008_R1_004.fastq.gz"
+      Lane5: "/global/scratch/makman/aDNA/shotgun/SF_10_Trinchera_Creek_disk_ACGTGC_L008_R1_005.fastq.gz"
+      Lane6: "/global/scratch/makman/aDNA/shotgun/SF_10_Trinchera_Creek_disk_ACGTGC_L008_R1_006.fastq.gz"
+
+#SF_11_a:
+#  SF_11_a:
+#    SF_11_a:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_11_a_Newt_Kash_16389_Lab_1083_disk_TGATCC_L008_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_11_a_Newt_Kash_16389_Lab_1083_disk_TGATCC_L008_R1_002.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/SF_11_a_Newt_Kash_16389_Lab_1083_disk_TGATCC_L008_R1_003.fastq.gz"
+#      Lane4: "/global/scratch/makman/aDNA/shotgun/SF_11_a_Newt_Kash_16389_Lab_1083_disk_TGATCC_L008_R1_004.fastq.gz"
+#      Lane5: "/global/scratch/makman/aDNA/shotgun/SF_11_a_Newt_Kash_16389_Lab_1083_disk_TGATCC_L008_R1_005.fastq.gz"
+#      Lane6: "/global/scratch/makman/aDNA/shotgun/SF_11_a_Newt_Kash_16389_Lab_1083_disk_TGATCC_L008_R1_006.fastq.gz"
+#      Lane7: "/global/scratch/makman/aDNA/shotgun/SF_11_a_Newt_Kash_16389_Lab_1083_disk_TGATCC_L008_R1_007.fastq.gz"
+#      Lane8: "/global/scratch/makman/aDNA/shotgun/SF_11_a_Newt_Kash_16389_Lab_1083_disk_TGATCC_L008_R1_008.fastq.gz"
+#
+#SF_11_b:
+#  SF_11_b:
+#    SF_11_b:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_11_b_Newt_Kash_16389_Lab_1083_pilot_disk_GAGTAG_L006_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_11_b_Newt_Kash_16389_Lab_1083_pilot_disk_GAGTAG_L006_R1_002.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/SF_11_b_Newt_Kash_16389_Lab_1083_pilot_disk_GAGTAG_L006_R1_003.fastq.gz"
+#      Lane4: "/global/scratch/makman/aDNA/shotgun/SF_11_b_Newt_Kash_16389_Lab_1083_pilot_disk_GAGTAG_L006_R1_004.fastq.gz"
+#      Lane5: "/global/scratch/makman/aDNA/shotgun/SF_11_b_Newt_Kash_16389_Lab_1083_pilot_disk_GAGTAG_L006_R1_005.fastq.gz"
+#      Lane6: "/global/scratch/makman/aDNA/shotgun/SF_11_b_Newt_Kash_16389_Lab_1083_pilot_disk_GAGTAG_L006_R1_006.fastq.gz"
+#
+#SF_11_c:
+#  SF_11_c:
+#    SF_11_c:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_11c_Newt_Kash_16389_lab_1083_S40_L003_R1_001.fastq.gz"
+#
+#SF_12:
+#  SF_12:
+#    SF_12:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_12_Putnum_32_44_132a_disk_CTCTAG_L008_R1_001.fastq.gz"
+#
+#SF_13:
+#  SF_13:
+#    SF_13:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_13_Alred_32_4_159a_disk_GAGAAG_L008_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_13_Alred_32_4_159a_disk_GAGAAG_L008_R1_002.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/SF_13_Alred_32_4_159a_disk_GAGAAG_L008_R1_003.fastq.gz"
+#      Lane4: "/global/scratch/makman/aDNA/shotgun/SF_13_Alred_32_4_159a_disk_GAGAAG_L008_R1_004.fastq.gz"
+#
+#SF_14:
+#  SF_14:
+#    SF_14:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_14_Putnum_32_44_479_disk_CACGAA_L008_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_14_Putnum_32_44_479_disk_CACGAA_L008_R1_002.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/SF_14_Putnum_32_44_479_disk_CACGAA_L008_R1_003.fastq.gz"
+#      Lane4: "/global/scratch/makman/aDNA/shotgun/SF_14_Putnum_32_44_479_disk_CACGAA_L008_R1_004.fastq.gz"
+#
+#SF_15:
+#  SF_15:
+#    SF_15:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_15_Agnew_Bluff_32_1_168_disk_CATAGA_L008_R1_001.fastq.gz"
+#
+#SF_16:
+#  SF_16:
+#    SF_16:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_16_Extr_blank_ACAGTC_L008_R1_001.fastq.gz"
+#
+#SF_17:
+#  SF_17:
+#    SF_17:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_17_Newt_Kash_16447_1217_1_achene_CATCGT_L008_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_17_Newt_Kash_16447_1217_1_achene_CATCGT_L008_R1_002.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/SF_17_Newt_Kash_16447_1217_1_achene_CATCGT_L008_R1_003.fastq.gz"
+#
+#SF_18:
+#  SF_18:
+#    SF_18:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_18_Newt_Kash_4000_1_10329_2_achene_TTGAAC_L008_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_18_Newt_Kash_4000_1_10329_2_achene_TTGAAC_L008_R1_002.fastq.gz"
+#
+#SF_19:
+#  SF_19:
+#    SF_19:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_19_Montgomery_32_34_160_disk_ACGTCG_L008_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_19_Montgomery_32_34_160_disk_ACGTCG_L008_R1_002.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/SF_19_Montgomery_32_34_160_disk_ACGTCG_L008_R1_003.fastq.gz"
+#      Lane4: "/global/scratch/makman/aDNA/shotgun/SF_19_Montgomery_32_34_160_disk_ACGTCG_L008_R1_004.fastq.gz"
+#      Lane5: "/global/scratch/makman/aDNA/shotgun/SF_19_Montgomery_32_34_160_disk_ACGTCG_L008_R1_005.fastq.gz"
+#
+#SF_20:
+#  SF_20:
+#    SF_20:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_20_Poole_2_32_42_3_disk_GCTACT_L008_R1_001.fastq.gz"
+#
+#SF_21:
+#  SF_21:
+#    SF_21:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_21_Edens_Bluff_32_3_1754b_1_disk_AGTGAG_L008_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_21_Edens_Bluff_32_3_1754b_1_disk_AGTGAG_L008_R1_002.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/SF_21_Edens_Bluff_32_3_1754b_1_disk_AGTGAG_L008_R1_003.fastq.gz"
+#
+#SF_22:
+#  SF_22:
+#    SF_22:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_22_Edens_Bluff_32_3_247a_disk_ACAGAG_L008_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_22_Edens_Bluff_32_3_247a_disk_ACAGAG_L008_R1_002.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/SF_22_Edens_Bluff_32_3_247a_disk_ACAGAG_L008_R1_003.fastq.gz"
+#      Lane4: "/global/scratch/makman/aDNA/shotgun/SF_23_Edens_Bluff_32_3_247b_disk_CTCTGC_L008_R1_001.fastq.gz"
+#      Lane5: "/global/scratch/makman/aDNA/shotgun/SF_23_Edens_Bluff_32_3_247b_disk_CTCTGC_L008_R1_002.fastq.gz"
+#
+#SF_24:
+#  SF_24:
+#    SF_24:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_24_Extr_blank_TAGCTG_L008_R1_001.fastq.gz"
+#
+#SF_25:
+#  SF_25:
+#    SF_25:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_25_NM_cave_4000_1_2146_Lab_3190_disk_CTATCA_L008_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_25_NM_cave_4000_1_2146_Lab_3190_disk_CTATCA_L008_R1_002.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/SF_25_NM_cave_4000_1_2146_Lab_3190_disk_CTATCA_L008_R1_003.fastq.gz"
+#
+#SF_26:
+#  SF_26:
+#    SF_26:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_26_Alred_32_4_103b_disk_CGTATA_L008_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_26_Alred_32_4_103b_disk_CGTATA_L008_R1_002.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/SF_26_Alred_32_4_103b_disk_CGTATA_L008_R1_003.fastq.gz"
+#      Lane4: "/global/scratch/makman/aDNA/shotgun/SF_26_Alred_32_4_103b_disk_CGTATA_L008_R1_004.fastq.gz"
+#      Lane5: "/global/scratch/makman/aDNA/shotgun/SF_26_Alred_32_4_103b_disk_CGTATA_L008_R1_005.fastq.gz"
+#
+#SF_27:
+#  SF_27:
+#    SF_27:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_27_Beaver_Pond_34_2_279_achene_GTGTAT_L008_R1_001.fastq.gz"
+#
+#SF_28:
+#  SF_28:
+#    SF_28:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_28_Edens_Bluff_32_3_1712_disk_CGCTAT_L008_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_28_Edens_Bluff_32_3_1712_disk_CGCTAT_L008_R1_002.fastq.gz"
+#
+#SF_29:
+#  SF_29:
+#    SF_29:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_29_Brown_Bluff_32_10_78_achene_TGAACA_L008_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_29_Brown_Bluff_32_10_78_achene_TGAACA_L008_R1_002.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/SF_29_Brown_Bluff_32_10_78_achene_TGAACA_L008_R1_003.fastq.gz"
+#
+#SF_30:
+#  SF_30:
+#    SF_30:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_30_Edens_Bluff_32_3_247c_disk_GTATCT_L008_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_30_Edens_Bluff_32_3_247c_disk_GTATCT_L008_R1_002.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/SF_30_Edens_Bluff_32_3_247c_disk_GTATCT_L008_R1_003.fastq.gz"
+#
+#SF_31:
+#  SF_31:
+#    SF_31:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_31_Cold_Oak_Fea_54_achene_CAGCTA_L008_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_31_Cold_Oak_Fea_54_achene_CAGCTA_L008_R1_002.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/SF_31_Cold_Oak_Fea_54_achene_CAGCTA_L008_R1_003.fastq.gz"
+#
+#SF_32:
+#  SF_32:
+#    SF_32:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_32_Cloudsplitter_FS2318_disk_ACATAC_L008_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_32_Cloudsplitter_FS2318_disk_ACATAC_L008_R1_002.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/SF_32_Cloudsplitter_FS2318_disk_ACATAC_L008_R1_003.fastq.gz"
+#      Lane4: "/global/scratch/makman/aDNA/shotgun/SF_32_Cloudsplitter_FS2318_disk_ACATAC_L008_R1_004.fastq.gz"
+#
+#SF_33:
+#  SF_33:
+#    SF_33:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_33_Cloudsplitter_FS2280_achene_AGCATG_L008_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_33_Cloudsplitter_FS2280_achene_AGCATG_L008_R1_002.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/SF_33_Cloudsplitter_FS2280_achene_AGCATG_L008_R1_003.fastq.gz"
+#
+#SF_34:
+#  SF_34:
+#    SF_34:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_34_Extr_blank_CGATGA_L008_R1_001.fastq.gz"
+#
+#SF_35:
+#  SF_35:
+#    SF_35:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_35_Cloudsplitter_unk_frg_2_disk_TGTGAC_L008_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_35_Cloudsplitter_unk_frg_2_disk_TGTGAC_L008_R1_002.fastq.gz"
+#
+#SF_35_b:
+#  SF_35_b:
+#    SF_35_b:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_35b_Cloudsplitter_15Mf36_S41_L003_R1_001.fastq.gz"
+#
+#SF_36:
+#  SF_36:
+#    SF_36:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_36_Cloudsplitter_FS2316_achene_CGTAGT_L006_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_36_Cloudsplitter_FS2316_achene_CGTAGT_L006_R1_002.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/SF_36_Cloudsplitter_FS2316_achene_CGTAGT_L006_R1_003.fastq.gz"
+#
+#SF_36b:
+#  SF_36b:
+#    SF_36b:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_36b_Cloudsplitter_FS2316_S42_L003_R1_001.fastq.gz"
+#
+#SF_36c:
+#  SF_36c:
+#    SF_36c:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_36c_Cloudsplitter_FS2316_S43_L003_R1_001.fastq.gz"
+#
+#SF_36d:
+#  SF_36d:
+#    SF_36d:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_36d_Cloudsplitter_FS2316_S44_L003_R1_001.fastq.gz"
+#
+#SF_37:
+#  SF_37:
+#    SF_37:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_37_Cloudsplitter_Level_1_achene_CAGCAC_L006_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_37_Cloudsplitter_Level_1_achene_CAGCAC_L006_R1_002.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/SF_37_Cloudsplitter_Level_1_achene_CAGCAC_L006_R1_003.fastq.gz"
+#
+#SF_37b:
+#  SF_37b:
+#    SF_37b:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_37b_Cloudsplitter_Level_1_S45_L003_R1_001.fastq.gz"
+#
+#SF_38:
+#  SF_38:
+#    SF_38:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_38_Cloudsplitter_FS2353_achene_ACTGCG_L006_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_38_Cloudsplitter_FS2353_achene_ACTGCG_L006_R1_002.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/SF_38_Cloudsplitter_FS2353_achene_ACTGCG_L006_R1_003.fastq.gz"
+#      Lane4: "/global/scratch/makman/aDNA/shotgun/SF_38_Cloudsplitter_FS2353_achene_ACTGCG_L006_R1_004.fastq.gz"
+#
+#SF_38b:
+#  SF_38b:
+#    SF_38b:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_38b_Cloudsplitter_FS2353_S46_L003_R1_001.fastq.gz"
+#
+#SF_39:
+#  SF_39:
+#    SF_39:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_39_Mammoth_Cave_B8_L_2_Str_2_achene_TCGATG_L006_R1_001.fastq.gz"
+#
+#SF_40:
+#  SF_40:
+#    SF_40:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_40_Mammoth_Cave_B6_Str_2_achene_TACGAG_L006_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_40_Mammoth_Cave_B6_Str_2_achene_TACGAG_L006_R1_002.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/SF_40_Mammoth_Cave_B6_Str_2_achene_TACGAG_L006_R1_003.fastq.gz"
+#
+#SF_41:
+#  SF_41:
+#    SF_41:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_41_Edens_Bluff_32_3_95a_disk_GTCGTC_L006_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_41_Edens_Bluff_32_3_95a_disk_GTCGTC_L006_R1_002.fastq.gz"
+#
+#SF_42:
+#  SF_42:
+#    SF_42:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_42_Edens_Bluff_32_3_1701a_disk_GCTACT_L006_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_42_Edens_Bluff_32_3_1701a_disk_GCTACT_L006_R1_002.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/SF_42_Edens_Bluff_32_3_1701a_disk_GCTACT_L006_R1_003.fastq.gz"
+#
+#SF_43:
+#  SF_43:
+#    SF_43:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_43_Edens_Bluff_32_3_1702_disk_GAGTAG_L006_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_43_Edens_Bluff_32_3_1702_disk_GAGTAG_L006_R1_002.fastq.gz"
+#
+#SF_44:
+#  SF_44:
+#    SF_44:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_44_Extr_blank_AGTGAG_L006_R1_001.fastq.gz"
+#
+#SF_45:
+#  SF_45:
+#    SF_45:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_45_Edens_Bluff_32_3_1702_disk_ACAGAG_L006_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_45_Edens_Bluff_32_3_1702_disk_ACAGAG_L006_R1_002.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/SF_45_Edens_Bluff_32_3_1702_disk_ACAGAG_L006_R1_003.fastq.gz"
+#
+#SF_46:
+#  SF_46:
+#    SF_46:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_46_Edens_Bluff_32_3_1698_disk_CTCTGC_L006_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_46_Edens_Bluff_32_3_1698_disk_CTCTGC_L006_R1_002.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/SF_46_Edens_Bluff_32_3_1698_disk_CTCTGC_L006_R1_003.fastq.gz"
+#      Lane4: "/global/scratch/makman/aDNA/shotgun/SF_46_Edens_Bluff_32_3_1698_disk_CTCTGC_L006_R1_004.fastq.gz"
+#
+#SF_47:
+#  SF_47:
+#    SF_47:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_47_Edens_Bluff_32_3_1696b_disk_TAGCTG_L006_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_47_Edens_Bluff_32_3_1696b_disk_TAGCTG_L006_R1_002.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/SF_47_Edens_Bluff_32_3_1696b_disk_TAGCTG_L006_R1_003.fastq.gz"
+#
+#SF_48:
+#  SF_48:
+#    SF_48:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_48_Edens_Bluff_32_3_1696a_disk_CTATCA_L006_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_48_Edens_Bluff_32_3_1696a_disk_CTATCA_L006_R1_002.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/SF_48_Edens_Bluff_32_3_1696a_disk_CTATCA_L006_R1_003.fastq.gz"
+#      Lane4: "/global/scratch/makman/aDNA/shotgun/SF_48_Edens_Bluff_32_3_1696a_disk_CTATCA_L006_R1_004.fastq.gz"
+#
+#SF_49:
+#  SF_49:
+#    SF_49:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_49_Edens_Bluff_32_3_1695_disk_CGTATA_L006_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_49_Edens_Bluff_32_3_1695_disk_CGTATA_L006_R1_002.fastq.gz"
+#
+#SF_50:
+#  SF_50:
+#    SF_50:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_50_Edens_Bluff_32_3_1699a_disk_TGATCG_L006_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_50_Edens_Bluff_32_3_1699a_disk_TGATCG_L006_R1_002.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/SF_50_Edens_Bluff_32_3_1699a_disk_TGATCG_L006_R1_003.fastq.gz"
+#
+#SF_51:
+#  SF_51:
+#    SF_51:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_51_Mammoth_Cave_B11_L_2_achene_GTGTAT_L006_R1_001.fastq.gz"
+#
+#SF_52:
+#  SF_52:
+#    SF_52:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_52_Cloudsplitter_FS2420_achene_CGCTAT_L006_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_52_Cloudsplitter_FS2420_achene_CGCTAT_L006_R1_002.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/SF_52_Cloudsplitter_FS2420_achene_CGCTAT_L006_R1_003.fastq.gz"
+#
+#SF_53:
+#  SF_53:
+#    SF_53:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_53_Cloudsplitter_FS1983_achene_CAGCTA_L006_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_53_Cloudsplitter_FS1983_achene_CAGCTA_L006_R1_002.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/SF_53_Cloudsplitter_FS1983_achene_CAGCTA_L006_R1_003.fastq.gz"
+#
+#SF_54:
+#  SF_54:
+#    SF_54:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_54_Extr_blank_ACATAC_L006_R1_001.fastq.gz"
+#
+#SF_55:
+#  SF_55:
+#    SF_55:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_55_Cloudsplitter_Level_1_disk_TGAGCC_L006_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_55_Cloudsplitter_Level_1_disk_TGAGCC_L006_R1_002.fastq.gz"
+#
+#SF_56:
+#  SF_56:
+#    SF_56:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_56_Cloudsplitter_FS2316_perianth_AGCATG_L006_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_56_Cloudsplitter_FS2316_perianth_AGCATG_L006_R1_002.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/SF_56_Cloudsplitter_FS2316_perianth_AGCATG_L006_R1_003.fastq.gz"
+#
+#SF_57:
+#  SF_57:
+#    SF_57:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_57_Cloudsplitter_Level_2_achene_CGATGA_L006_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_57_Cloudsplitter_Level_2_achene_CGATGA_L006_R1_002.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/SF_57_Cloudsplitter_Level_2_achene_CGATGA_L006_R1_003.fastq.gz"
+#
+#SF_58:
+#  SF_58:
+#    SF_58:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_58_Newt_Kash_16447_1217_disk_TGTGAC_L006_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_58_Newt_Kash_16447_1217_disk_TGTGAC_L006_R1_002.fastq.gz"
+#
+#SF_59:
+#  SF_59:
+#    SF_59:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_59_Newt_Kash_4000_1_10329_achene_TGCATA_L006_R1_001.fastq.gz"
+#
+#SF_60:
+#  SF_60:
+#    SF_60:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_60_Newt_Kash_16446_1216_achene_TCTCGC_L006_R1_001.fastq.gz"
+#
+#SF_61_a:
+#  SF_61_a:
+#    SF_61_a:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_61_a_Edens_Bluff_15478_pilot_achene_GTCGTC_L006_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_61_a_Edens_Bluff_15478_pilot_achene_GTCGTC_L006_R1_002.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/SF_61_a_Edens_Bluff_15478_pilot_achene_GTCGTC_L006_R1_003.fastq.gz"
+#      Lane4: "/global/scratch/makman/aDNA/shotgun/SF_61_a_Edens_Bluff_15478_pilot_achene_GTCGTC_L006_R1_004.fastq.gz"
+#      Lane5: "/global/scratch/makman/aDNA/shotgun/SF_61_a_Edens_Bluff_15478_pilot_achene_GTCGTC_L006_R1_005.fastq.gz"
+#      Lane6: "/global/scratch/makman/aDNA/shotgun/SF_61_a_Edens_Bluff_15478_pilot_achene_GTCGTC_L006_R1_006.fastq.gz"
+#      Lane7: "/global/scratch/makman/aDNA/shotgun/SF_61_a_Edens_Bluff_15478_pilot_achene_GTCGTC_L006_R1_007.fastq.gz"
+#      Lane8: "/global/scratch/makman/aDNA/shotgun/SF_61_a_Edens_Bluff_15478_pilot_achene_GTCGTC_L006_R1_008.fastq.gz"
+#
+#SF_61_b:
+#  SF_61_b:
+#    SF_61_b:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_61_b_Edens_Bluff_15478_pilot_seed_TCGATG_L006_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_61_b_Edens_Bluff_15478_pilot_seed_TCGATG_L006_R1_002.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/SF_61_b_Edens_Bluff_15478_pilot_seed_TCGATG_L006_R1_003.fastq.gz"
+#      Lane4: "/global/scratch/makman/aDNA/shotgun/SF_61_b_Edens_Bluff_15478_pilot_seed_TCGATG_L006_R1_004.fastq.gz"
+#      Lane5: "/global/scratch/makman/aDNA/shotgun/SF_61_b_Edens_Bluff_15478_pilot_seed_TCGATG_L006_R1_005.fastq.gz"
+#      Lane6: "/global/scratch/makman/aDNA/shotgun/SF_61_b_Edens_Bluff_15478_pilot_seed_TCGATG_L006_R1_006.fastq.gz"
+#      Lane7: "/global/scratch/makman/aDNA/shotgun/SF_61_b_Edens_Bluff_15478_pilot_seed_TCGATG_L006_R1_007.fastq.gz"
+#      Lane8: "/global/scratch/makman/aDNA/shotgun/SF_61_b_Edens_Bluff_15478_pilot_seed_TCGATG_L006_R1_008.fastq.gz"
+#
+#SF_62_a:
+#  SF_62_a:
+#    SF_62_a:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_62_a_Salts_Cave_24135_Ky_1946_pilot_1_achene_TCGATG_L004_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_62_a_Salts_Cave_24135_Ky_1946_pilot_1_achene_TCGATG_L004_R1_002.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/SF_62_a_Salts_Cave_24135_Ky_1946_pilot_1_achene_TCGATG_L004_R1_003.fastq.gz"
+#      Lane4: "/global/scratch/makman/aDNA/shotgun/SF_62_a_Salts_Cave_24135_Ky_1946_pilot_1_achene_TCGATG_L004_R1_004.fastq.gz"
+#      Lane5: "/global/scratch/makman/aDNA/shotgun/SF_62_a_Salts_Cave_24135_Ky_1946_pilot_1_achene_TCGATG_L004_R1_005.fastq.gz"
+#      Lane6: "/global/scratch/makman/aDNA/shotgun/SF_62_a_Salts_Cave_24135_Ky_1946_pilot_1_achene_TCGATG_L004_R1_006.fastq.gz"
+#      Lane7: "/global/scratch/makman/aDNA/shotgun/SF_62_a_Salts_Cave_24135_Ky_1946_pilot_1_achene_TCGATG_L004_R1_007.fastq.gz"
+#      Lane8: "/global/scratch/makman/aDNA/shotgun/SF_62_a_Salts_Cave_24135_Ky_1946_pilot_1_achene_TCGATG_L004_R1_008.fastq.gz"
+#      Lane9: "/global/scratch/makman/aDNA/shotgun/SF_62_a_Salts_Cave_24135_Ky_1946_pilot_1_achene_TCGATG_L004_R1_009.fastq.gz"
+#      Lane10: "/global/scratch/makman/aDNA/shotgun/SF_62_a_Salts_Cave_24135_Ky_1946_pilot_1_achene_TCGATG_L004_R1_010.fastq.gz"
+#      Lane11: "/global/scratch/makman/aDNA/shotgun/SF_62_a_Salts_Cave_24135_Ky_1946_pilot_1_achene_TCGATG_L004_R1_011.fastq.gz"
+#
+#SF_62_b:
+#  SF_62_b:
+#    SF_62_b:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_62_b_Salts_Cave_24135_Ky_1946_pilot_11_achenes_TACGAG_L004_R1_001.fastq.gz"
+#
+#SF_63a:
+#  SF_63a:
+#    SF_63a:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_63a_Bushwack_116241_S67_L003_R1_001.fastq.gz"
+#
+#SF_63b:
+#  SF_63b:
+#    SF_63b:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_63b_Bushwack_116241_S70_L003_R1_001.fastq.gz"
+#
+#SF_64a:
+#  SF_64a:
+#    SF_64a:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_64a_Bushwack_246194_S68_L003_R1_001.fastq.gz"
+#
+#SF_64b:
+#  SF_64b:
+#    SF_64b:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_64b_Bushwack_246194_S71_L003_R1_001.fastq.gz"
+#
+#SF_65a_coat:
+#  SF_65a_coat:
+#    SF_65a_coat:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_65a_coat_Alred_117265_S47_L003_R1_001.fastq.gz"
+#
+#SF_65a_endo:
+#  SF_65a_endo:
+#    SF_65a_endo:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_65a_endo_Alred_117265_S48_L003_R1_001.fastq.gz"
+#
+#SF_65b:
+#  SF_65b:
+#    SF_65b:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_65b_Alred_117265_S49_L003_R1_001.fastq.gz"
+#
+#SF_65c_coat:
+#  SF_65c_coat:
+#    SF_65c_coat:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_65c_coat_Alred_117265_S50_L003_R1_001.fastq.gz"
+#
+#SF_65c_endo:
+#  SF_65c_endo:
+#    SF_65c_endo:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_65c_endo_Alred_117265_S51_L003_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/TOG_HCDT_SF_65c_endo_Alred_6a_S1_L001_R1_001.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/TOG_HCDT_SF_65c_endo_Alred_6a_S1_L002_R1_001.fastq.gz"
+#
+#SF_65d:
+#  SF_65d:
+#    SF_65d:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_65d_Alred_117265_S52_L003_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/TOG_HCDT_SF_65d_Alred_7_S2_L001_R1_001.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/TOG_HCDT_SF_65d_Alred_7_S2_L002_R1_001.fastq.gz"
+#
+#SF_65e:
+#  SF_65e:
+#    SF_65e:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_65e_Alred_117265_S54_L003_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/TOG_HCDT_SF_65e_Alred_8_S3_L001_R1_001.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/TOG_HCDT_SF_65e_Alred_8_S3_L002_R1_001.fastq.gz"
+#
+#SF_65f:
+#  SF_65f:
+#    SF_65f:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_65f_Alred_117265_S55_L003_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/TOG_HCDT_SF_65f_Alred_9_S4_L001_R1_001.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/TOG_HCDT_SF_65f_Alred_9_S4_L002_R1_001.fastq.gz"
+#
+#SF_65g_coat:
+#  SF_65g_coat:
+#    SF_65g_coat:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_65g_coat_Alred_117265_S56_L003_R1_001.fastq.gz"
+#
+#SF_65g_endo:
+#  SF_65g_endo:
+#    SF_65g_endo:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_65g_endo_Alred_117265_S57_L003_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/TOG_HCDT_SF_65g_endo_Alred_10a_S5_L001_R1_001.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/TOG_HCDT_SF_65g_endo_Alred_10a_S5_L002_R1_001.fastq.gz"
+#
+#SF_65h_coat:
+#  SF_65h_coat:
+#    SF_65h_coat:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_65h_coat_Alred_117265_S58_L003_R1_001.fastq.gz"
+#
+#SF_65h_endo:
+#  SF_65h_endo:
+#    SF_65h_endo:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_65h_endo_Alred_117265_S59_L003_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/TOG_HCDT_SF_65h_endo_Alred_11a_S6_L001_R1_001.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/TOG_HCDT_SF_65h_endo_Alred_11a_S6_L002_R1_001.fastq.gz"
+#
+#SF_65i:
+#  SF_65i:
+#    SF_65i:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_65i_Alred_117265_S60_L003_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/TOG_HCDT_SF_65i_Alred_12_S7_L001_R1_001.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/TOG_HCDT_SF_65i_Alred_12_S7_L002_R1_001.fastq.gz"
+#
+#SF_65j_coat:
+#  SF_65j_coat:
+#    SF_65j_coat:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_65j_coat_Alred_117265_S62_L003_R1_001.fastq.gz"
+#
+#SF_65j_endo:
+#  SF_65j_endo:
+#    SF_65j_endo:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_65j_endo_Alred_117265_S63_L003_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/TOG_HCDT_SF_65j_endo_Alred_13a_S8_L001_R1_001.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/TOG_HCDT_SF_65j_endo_Alred_13a_S8_L002_R1_001.fastq.gz"
+#
+#SF_65k_coat:
+#  SF_65k_coat:
+#    SF_65k_coat:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_65k_coat_Alred_117265_S64_L003_R1_001.fastq.gz"
+#
+#SF_65k_endo:
+#  SF_65k_endo:
+#    SF_65k_endo:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_65k_endo_Alred_117265_S65_L003_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/TOG_HCDT_SF_65k_endo_Alred_14a_S9_L001_R1_001.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/TOG_HCDT_SF_65k_endo_Alred_14a_S9_L002_R1_001.fastq.gz"
+#
+#SF_65l:
+#  SF_65l:
+#    SF_65l:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_65l_Alred_117265_S66_L003_R1_001.fastq.gz"
+#
+#SF_65m:
+#  SF_65m:
+#    SF_65m:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_65m_Alred_117265_S72_L003_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/TOG_HCDT_SF_65m_Alred_16_S10_L001_R1_001.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/TOG_HCDT_SF_65m_Alred_16_S10_L002_R1_001.fastq.gz"
+#
+#SF_66a:
+#  SF_66a:
+#    SF_66a:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_66a_Indian_Bluff_116506_S69_L003_R1_001.fastq.gz"
+#
+#SF_67:
+#  SF_67:
+#    SF_67:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_67_Extraction_blank_S53_L003_R1_001.fastq.gz"
+#
+#SF_68:
+#  SF_68:
+#    SF_68:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_68_Extraction_blank_S61_L003_R1_001.fastq.gz"
+#
+#SF_69:
+#  SF_69:
+#    SF_69:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/SF_69_Cueva_del_Gallo_kernel_L002_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/SF_69_Cueva_del_Gallo_kernel_L002_R1_001_trimmed.fastq.gz"
+#
+#Ethno_A:
+#  Ethno_A:
+#    Ethno_A:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/Se137749_USPD16084925-AK1073_HJHWVCCXY_L4_1.fq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/Se137749_USPD16084925-AK1073_HJHWVCCXY_L4_2.fq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_A_137749_Seneca_TGATGC_L007_R1_001.fastq.gz"
+#      Lane4: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_A_137749_Seneca_TGATGC_L007_R1_002.fastq.gz"
+#      Lane5: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_A_137749_Seneca_TGATGC_L007_R1_003.fastq.gz"
+#      Lane6: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_A_137749_Seneca_TGATGC_L007_R1_004.fastq.gz"
+#      Lane7: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_A_137749_Seneca_TGATGC_L007_R1_005.fastq.gz"
+#      Lane8: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_A_137749_Seneca_TGATGC_L007_R1_006.fastq.gz"
+#Ethno_B:
+#  Ethno_B:
+#    Ethno_B:
+#      
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_B_126306_Arikara_GACGAC_L007_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_B_126306_Arikara_GACGAC_L007_R1_002.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_B_126306_Arikara_GACGAC_L007_R1_003.fastq.gz"
+#      Lane4: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_B_126306_Arikara_GACGAC_L007_R1_004.fastq.gz"
+#Ethno_C:
+#  Ethno_C:
+#    Ethno_C:      
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_C_122976_Arikara_GACACT_L007_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_C_122976_Arikara_GACACT_L007_R1_002.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_C_122976_Arikara_GACACT_L007_R1_003.fastq.gz"
+#      Lane4: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_C_122976_Arikara_GACACT_L007_R1_004.fastq.gz"
+#      Lane5: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_C_122976_Arikara_GACACT_L007_R1_005.fastq.gz"
+#      Lane6: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_C_122976_Arikara_GACACT_L007_R1_006.fastq.gz"
+#      Lane7: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_C_122976_Arikara_GACACT_L007_R1_007.fastq.gz"
+#Ethno_D:
+#  Ethno_D:
+#    Ethno_D:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_D_14042_Arikara_ACGCAT_L007_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_D_14042_Arikara_ACGCAT_L007_R1_002.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_D_14042_Arikara_ACGCAT_L007_R1_003.fastq.gz"
+#      Lane4: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_D_14042_Arikara_ACGCAT_L007_R1_004.fastq.gz"
+#      Lane5: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_D_14042_Arikara_ACGCAT_L007_R1_005.fastq.gz"
+#      Lane6: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_D_14042_Arikara_ACGCAT_L007_R1_006.fastq.gz"
+#      Lane7: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_D_14042_Arikara_ACGCAT_L007_R1_007.fastq.gz"
+#      Lane8: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_D_14042_Arikara_ACGCAT_L007_R1_008.fastq.gz"
+#      Lane9: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_D_14042_Arikara_ACGCAT_L007_R1_009.fastq.gz"
+#Ethno_E:
+#  Ethno_E:
+#    Ethno_E:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_E_12998_682_Arikara_purple_modern_GACCGG_L007_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_E_12998_682_Arikara_purple_modern_GACCGG_L007_R1_002.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_E_12998_682_Arikara_purple_modern_GACCGG_L007_R1_003.fastq.gz"
+#      Lane4: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_E_12998_682_Arikara_purple_modern_GACCGG_L007_R1_004.fastq.gz"
+#Ethno_F:
+#  Ethno_F:
+#    Ethno_F:      
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_F_13597_San_Ildefonso_Pueblo_ACTGCC_L007_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_F_13597_San_Ildefonso_Pueblo_ACTGCC_L007_R1_002.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_F_13597_San_Ildefonso_Pueblo_ACTGCC_L007_R1_003.fastq.gz"
+#      Lane4: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_F_13597_San_Ildefonso_Pueblo_ACTGCC_L007_R1_004.fastq.gz"
+#      Lane5: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_F_13597_San_Ildefonso_Pueblo_ACTGCC_L007_R1_005.fastq.gz"
+#      Lane6: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_F_13597_San_Ildefonso_Pueblo_ACTGCC_L007_R1_006.fastq.gz"
+#Ethno_G:
+#  Ethno_G:
+#    Ethno_G:      
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_G_12996_Seneca_purple_TGACGT_L007_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_G_12996_Seneca_purple_TGACGT_L007_R1_002.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_G_12996_Seneca_purple_TGACGT_L007_R1_003.fastq.gz"
+#      Lane4: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_G_12996_Seneca_purple_TGACGT_L007_R1_004.fastq.gz"
+#      Lane5: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_G_12996_Seneca_purple_TGACGT_L007_R1_005.fastq.gz"
+#      Lane6: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_G_12996_Seneca_purple_TGACGT_L007_R1_006.fastq.gz"
+#      Lane7: "/global/scratch/makman/aDNA/shotgun/Se_purp_USPD16084925-AK974_HJHWVCCXY_L4_1.fq.gz"
+#      Lane8: "/global/scratch/makman/aDNA/shotgun/Se_purp_USPD16084925-AK974_HJHWVCCXY_L4_2.fq.gz"
+#Ethno_H:
+#  Ethno_H:
+#    Ethno_H:     
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_H_12997_Seneca_striped_TGTCTG_L007_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_H_12997_Seneca_striped_TGTCTG_L007_R1_002.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_H_12997_Seneca_striped_TGTCTG_L007_R1_003.fastq.gz"
+#      Lane4: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_H_12997_Seneca_striped_TGTCTG_L007_R1_004.fastq.gz"
+#      Lane5: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_H_12997_Seneca_striped_TGTCTG_L007_R1_005.fastq.gz"
+#      Lane6: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_H_12997_Seneca_striped_TGTCTG_L007_R1_006.fastq.gz"
+#      Lane7: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_H_12997_Seneca_striped_TGTCTG_L007_R1_007.fastq.gz"
+#      Lane8: "/global/scratch/makman/aDNA/shotgun/Se_strip_USPD16084925-AK2942_HJHWVCCXY_L4_1.fq.gz"
+#      Lane9: "/global/scratch/makman/aDNA/shotgun/Se_strip_USPD16084925-AK2942_HJHWVCCXY_L4_2.fq.gz"
+#Ethno_I:
+#  Ethno_I:
+#    Ethno_I:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_I_12747_Arikara_Manden_modern_ACGTGC_L007_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_I_12747_Arikara_Manden_modern_ACGTGC_L007_R1_002.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_I_12747_Arikara_Manden_modern_ACGTGC_L007_R1_003.fastq.gz"
+#      Lane4: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_I_12747_Arikara_Manden_modern_ACGTGC_L007_R1_004.fastq.gz"
+#      Lane5: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_I_12747_Arikara_Manden_modern_ACGTGC_L007_R1_005.fastq.gz"
+#      Lane6: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_I_12747_Arikara_Manden_modern_ACGTGC_L007_R1_006.fastq.gz"
+#      Lane7: "/global/scratch/makman/aDNA/shotgun/Ari_Mand_USPD16084925-AK1650_HJHWVCCXY_L4_1.fq.gz"
+#      Lane8: "/global/scratch/makman/aDNA/shotgun/Ari_Mand_USPD16084925-AK1650_HJHWVCCXY_L4_2.fq.gz"
+#Ethno_J:
+#  Ethno_J:
+#    Ethno_J:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_J_12999_Arikara_broad_CTCTAG_L007_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_J_12999_Arikara_broad_CTCTAG_L007_R1_002.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_J_12999_Arikara_broad_CTCTAG_L007_R1_003.fastq.gz"
+#      Lane4: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_J_12999_Arikara_broad_CTCTAG_L007_R1_004.fastq.gz"
+#      Lane5: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_J_12999_Arikara_broad_CTCTAG_L007_R1_005.fastq.gz"
+#      Lane6: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_J_12999_Arikara_broad_CTCTAG_L007_R1_006.fastq.gz"
+#      Lane7: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_J_12999_Arikara_broad_CTCTAG_L007_R1_007.fastq.gz"
+#      Lane8: "/global/scratch/makman/aDNA/shotgun/Ari_broa_USPD16084925-AK2959_HJHWVCCXY_L4_1.fq.gz"
+#      Lane9: "/global/scratch/makman/aDNA/shotgun/Ari_broa_USPD16084925-AK2959_HJHWVCCXY_L4_2.fq.gz"
+#Ethno_L:
+#  Ethno_L:
+#    Ethno_L:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_L_141856_Paiute_CACGAA_L007_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_L_141856_Paiute_CACGAA_L007_R1_002.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_L_141856_Paiute_CACGAA_L007_R1_003.fastq.gz"
+#      Lane4: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_L_141856_Paiute_CACGAA_L007_R1_004.fastq.gz"
+#      Lane5: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_L_141856_Paiute_CACGAA_L007_R1_005.fastq.gz"
+#      Lane6: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_L_141856_Paiute_CACGAA_L007_R1_006.fastq.gz"
+#      Lane7: "/global/scratch/makman/aDNA/shotgun/Paiute_USPD16084925-AK2950_HJHWVCCXY_L4_1.fq.gz"
+#      Lane8: "/global/scratch/makman/aDNA/shotgun/Paiute_USPD16084925-AK2950_HJHWVCCXY_L4_2.fq.gz"
+#Ethno_H:
+#  Ethno_H:
+#    Ethno_H:
+#      Lane1: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_M_12997_Seneca_striped_CATAGA_L007_R1_001.fastq.gz"
+#      Lane2: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_M_12997_Seneca_striped_CATAGA_L007_R1_002.fastq.gz"
+#      Lane3: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_M_12997_Seneca_striped_CATAGA_L007_R1_003.fastq.gz"
+#      Lane4: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_M_12997_Seneca_striped_CATAGA_L007_R1_004.fastq.gz"
+#      Lane5: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_M_12997_Seneca_striped_CATAGA_L007_R1_005.fastq.gz"
+#      Lane6: "/global/scratch/makman/aDNA/shotgun/TOG_XDPQ_M_12997_Seneca_striped_CATAGA_L007_R1_006.fastq.gz"
