@@ -4,9 +4,9 @@
 #SBATCH --account=fc_blackman
 #SBATCH --partition=savio2
 #SBATCH --qos=savio_normal
-#SBATCH --nodes=2
+#SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=48
+#SBATCH --cpus-per-task=24
 #SBATCH --time=72:00:00
 #SBATCH -o /global/home/users/makman/paloemix_outs/paleomix_shotgun17.out
 #SBATCH -e /global/home/users/makman/paloemix_outs/paleomix_shotgun17.err
@@ -21,7 +21,7 @@ module load bwa/0.7.17-r1188
 
 export PATH=/global/home/users/makman/install/jar_root/adapterremoval-2.3.1/build/:$PATH
 
-paleomix bam_pipeline run /global/home/users/makman/git/Helianthus/shells/aDNA/shotgun/shotgun_paleomix17.yml --max-threads 48 --bwa-max-threads 48 --jre-option -Xmx128g --temp-root=/global/scratch/makman/temp/ --destination=/global/scratch/makman/Sunflower_paleomix/shotgun
+paleomix bam_pipeline run /global/home/users/makman/git/Helianthus/shells/aDNA/shotgun/shotgun_paleomix17.yml --max-threads 24 --bwa-max-threads 24 --jre-option -Xmx64g --temp-root=/global/scratch/makman/temp/ --destination=/global/scratch/makman/Sunflower_paleomix/shotgun
 
 
 
