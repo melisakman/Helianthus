@@ -24,7 +24,7 @@ export PATH=/global/home/users/makman/install/jar_root/adapterremoval-2.3.1/buil
 # paleomix bam_pipeline run /global/home/users/makman/git/Helianthus/shells/aDNA/20201026_firstpaleomix7.yml --max-threads 24 --bwa-max-threads 6 --jre-option -Xmx16g --temp-root=/global/scratch/makman/temp/ --destination=/global/scratch/makman/Sunflower_paleomix/analyses
 
 # the following line is for addition of the extra data.
-paleomix bam_pipeline run /global/home/users/makman/git/Helianthus/shells/aDNA/20201026_firstpaleomix7.yml --max-threads 24 --bwa-max-threads 6 --jre-option -Xmx16g --temp-root=/global/scratch/makman/temp/ --destination=/global/scratch/makman/Sunflower_paleomix/analyses/additional_data
+paleomix bam_pipeline run /global/home/users/makman/git/Helianthus/shells/aDNA/paleomix/20201026_firstpaleomix7.yml --max-threads 24 --bwa-max-threads 6 --jre-option -Xmx16g --temp-root=/global/scratch/makman/temp/ --destination=/global/scratch/makman/Sunflower_paleomix/analyses/additional_data
 
 
 
