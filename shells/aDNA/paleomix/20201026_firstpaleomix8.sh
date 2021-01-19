@@ -21,7 +21,7 @@ module load bwa/0.7.17-r1188
 
 export PATH=/global/home/users/makman/install/jar_root/adapterremoval-2.3.1/build/:$PATH
 
-paleomix bam_pipeline run /global/home/users/makman/git/Helianthus/shells/aDNA/20201026_firstpaleomix8.yml --max-threads 20 --bwa-max-threads 5 --jre-option -Xmx16g --temp-root=/global/scratch/makman/temp/ --destination=/global/scratch/makman/Sunflower_paleomix/analyses
+paleomix bam_pipeline run /global/home/users/makman/git/Helianthus/shells/aDNA/paleomix/20201026_firstpaleomix8.yml --max-threads 20 --bwa-max-threads 5 --jre-option -Xmx16g --temp-root=/global/scratch/makman/temp/ --destination=/global/scratch/makman/Sunflower_paleomix/analyses
 
 
 
