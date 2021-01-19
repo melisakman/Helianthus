@@ -116,7 +116,7 @@ Options:
     # and to produce rescaled BAMs, write 'rescale'. The 'model' option
     # includes the 'plot' output, and the 'rescale' option includes both
     # 'plot' and 'model' results. All analyses are carried out per library.
-    mapDamage: plot
+    mapDamage: rescale
     # Generate coverage information for the raw BAM (wo/ indel realignment).
     # If one or more 'RegionsOfInterest' have been specified for a prefix,
     # additional coverage files are generated for each alignment (yes / no)
@@ -337,29 +337,30 @@ Prefixes:
 #    SF_33_Cl:
 #       Lane1: "SF_33_Cl/SF_33_Cl_CKDL200164432-1a-AK199_HCJNKCCX2_L6_{Pair}.fq.gz"
 #SF_35_Cl:
-#  SF_35_Cl:
-#    SF_35_Cl:
-#       Lane1: "SF_35_Cl/SF_35_Cl_CKDL200164433-1a-AK2940_HCJNKCCX2_L7_{Pair}.fq.gz"
-#SF_35b_C:
-#  SF_35b_C:
-#    SF_35b_C:
-#       Lane1: "SF_35b_C/SF_35b_C_CKDL200164432-1a-AK5612_HCJNKCCX2_L6_{Pair}.fq.gz"
-#SF_37_Cl:
-#  SF_37_Cl:
-#    SF_37_Cl:
-#       Lane1: "SF_37_Cl/SF_37_Cl_CKDL200164433-1a-AK5612_HCJNKCCX2_L7_{Pair}.fq.gz"
-#SF_37b_C:
-#  SF_37b_C:
-#    SF_37b_C:
-#       Lane1: "SF_37b_C/SF_37b_C_CKDL200164432-1a-AK2086_HCJNKCCX2_L6_{Pair}.fq.gz"
-#SF_38_Cl:
-#  SF_38_Cl:
-#    SF_38_Cl:
-#       Lane1: "SF_38_Cl/SF_38_Cl_CKDL200164433-1a-AK1140_HCJNKCCX2_L7_{Pair}.fq.gz"
-#SF_39_Ma:
-#  SF_39_Ma:
-#    SF_39_Ma:
-#       Lane1: "SF_39_Ma/SF_39_Ma_CKDL200164432-1a-AK18338_HCJNKCCX2_L6_{Pair}.fq.gz"
+# SF_35_Cl:
+#   SF_35_Cl:
+#      Lane1: "SF_35_Cl/SF_35_Cl_CKDL200164433-1a-AK2940_HCJNKCCX2_L7_{Pair}.fq.gz"
+SF_35b_C:
+SF_35b_C:
+  SF_35b_C:
+     Lane1: "SF_35b_C/SF_35b_C_CKDL200164432-1a-AK5612_HCJNKCCX2_L6_{Pair}.fq.gz"
+SF_37_Cl:
+ SF_37_Cl:
+   SF_37_Cl:
+      Lane1: "SF_37_Cl/SF_37_Cl_CKDL200164433-1a-AK5612_HCJNKCCX2_L7_{Pair}.fq.gz"
+SF_37b_C:
+ SF_37b_C:
+   SF_37b_C:
+      Lane1: "SF_37b_C/SF_37b_C_CKDL200164432-1a-AK2086_HCJNKCCX2_L6_{Pair}.fq.gz"
+SF_38_Cl:
+ SF_38_Cl:
+   SF_38_Cl:
+      Lane1: "SF_38_Cl/SF_38_Cl_CKDL200164433-1a-AK1140_HCJNKCCX2_L7_{Pair}.fq.gz"
+SF_39_Ma:
+ SF_39_Ma:
+   SF_39_Ma:
+      Lane1: "SF_39_Ma/SF_39_Ma_CKDL200164432-1a-AK18338_HCJNKCCX2_L6_{Pair}.fq.gz"
+
 #SF_40_Ma:
 #  SF_40_Ma:
 #    SF_40_Ma:
@@ -371,10 +372,11 @@ SF_40_Ma:
       Lane2: "second/SF_40_Ma/SF_40_Ma_CKDL200168947-1a-AK14169_HFJF3CCX2_L4_{Pair}.fq.gz"
 
 
-#SF_41_Ed:
-#  SF_41_Ed:
-#    SF_41_Ed:
-#       Lane1: "SF_41_Ed/SF_41_Ed_CKDL200164433-1a-AK2086_HCJNKCCX2_L7_{Pair}.fq.gz"
+SF_41_Ed:
+ SF_41_Ed:
+   SF_41_Ed:
+      Lane1: "SF_41_Ed/SF_41_Ed_CKDL200164433-1a-AK2086_HCJNKCCX2_L7_{Pair}.fq.gz"
+
 #SF_42_Ed:
 #  SF_42_Ed:
 #    SF_42_Ed:
@@ -386,10 +388,10 @@ SF_42_Ed:
       Lane2: "second/SF_42_Ed/SF_42_Ed_CKDL200168947-1a-AK3320_HFJF3CCX2_L4_{Pair}.fq.gz"
 
 
-#SF_43_Ed:
-#  SF_43_Ed:
-#    SF_43_Ed:
-#       Lane1: "SF_43_Ed/SF_43_Ed_CKDL200164433-1a-AK31363_HCJNKCCX2_L7_{Pair}.fq.gz"
+SF_43_Ed:
+ SF_43_Ed:
+   SF_43_Ed:
+      Lane1: "SF_43_Ed/SF_43_Ed_CKDL200164433-1a-AK31363_HCJNKCCX2_L7_{Pair}.fq.gz"
 #SF_45_Ed:
 #  SF_45_Ed:
 #    SF_45_Ed:

@@ -8,8 +8,8 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=20
 #SBATCH --time=72:00:00
-#SBATCH -o /global/home/users/makman/paloemix_outs/paleomix_run_aDNA8.out
-#SBATCH -e /global/home/users/makman/paloemix_outs/paleomix_run_aDNA8.err
+#SBATCH -o /global/home/users/makman/paloemix_outs/paleomix_run_aDNA8b.out
+#SBATCH -e /global/home/users/makman/paloemix_outs/paleomix_run_aDNA8b.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 

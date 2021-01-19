@@ -116,7 +116,7 @@ Options:
     # and to produce rescaled BAMs, write 'rescale'. The 'model' option
     # includes the 'plot' output, and the 'rescale' option includes both
     # 'plot' and 'model' results. All analyses are carried out per library.
-    mapDamage: plot
+    mapDamage: rescale
     # Generate coverage information for the raw BAM (wo/ indel realignment).
     # If one or more 'RegionsOfInterest' have been specified for a prefix,
     # additional coverage files are generated for each alignment (yes / no)
@@ -300,26 +300,27 @@ Prefixes:
 #  SF_22_Ed:
 #    SF_22_Ed:
 #       Lane1: "SF_22_Ed/SF_22_Ed_CKDL200164432-1a-AK3793_HCJNKCCX2_L6_{Pair}.fq.gz"
-#SF_23_Ed:
-#  SF_23_Ed:
-#    SF_23_Ed:
-#       Lane1: "SF_23_Ed/SF_23_Ed_CKDL200164432-1a-AK993_HCJNKCCX2_L6_{Pair}.fq.gz"
-#SF_25_NM:
-#  SF_25_NM:
-#    SF_25_NM:
-#       Lane1: "SF_25_NM/SF_25_NM_CKDL200164434-1a-AK2953_HCJNKCCX2_L8_{Pair}.fq.gz"
-#SF_27_Be:
-#  SF_27_Be:
-#    SF_27_Be:
-#       Lane1: "SF_27_Be/SF_27_Be_CKDL200164434-1a-AK2956_HCJNKCCX2_L8_{Pair}.fq.gz"
-#SF_28_Ed:
-#  SF_28_Ed:
-#    SF_28_Ed:
-#       Lane1: "SF_28_Ed/SF_28_Ed_CKDL200164432-1a-AK972_HCJNKCCX2_L6_{Pair}.fq.gz"
-#SF_29_Br:
-#  SF_29_Br:
-#    SF_29_Br:
-#       Lane1: "SF_29_Br/SF_29_Br_CKDL200164434-1a-AK2946_HCJNKCCX2_L8_{Pair}.fq.gz"
+SF_23_Ed:
+ SF_23_Ed:
+   SF_23_Ed:
+      Lane1: "SF_23_Ed/SF_23_Ed_CKDL200164432-1a-AK993_HCJNKCCX2_L6_{Pair}.fq.gz"
+SF_25_NM:
+ SF_25_NM:
+   SF_25_NM:
+      Lane1: "SF_25_NM/SF_25_NM_CKDL200164434-1a-AK2953_HCJNKCCX2_L8_{Pair}.fq.gz"
+SF_27_Be:
+ SF_27_Be:
+   SF_27_Be:
+      Lane1: "SF_27_Be/SF_27_Be_CKDL200164434-1a-AK2956_HCJNKCCX2_L8_{Pair}.fq.gz"
+SF_28_Ed:
+ SF_28_Ed:
+   SF_28_Ed:
+      Lane1: "SF_28_Ed/SF_28_Ed_CKDL200164432-1a-AK972_HCJNKCCX2_L6_{Pair}.fq.gz"
+SF_29_Br:
+ SF_29_Br:
+   SF_29_Br:
+      Lane1: "SF_29_Br/SF_29_Br_CKDL200164434-1a-AK2946_HCJNKCCX2_L8_{Pair}.fq.gz"
+
 #SF_30_Ed:
 #  SF_30_Ed:
 #    SF_30_Ed:
@@ -353,10 +354,11 @@ SF_32_Cl:
       Lane2: "second/SF_32_Cl/SF_32_Cl_CKDL200168946-1a-AK3290_HFJF3CCX2_L3_{Pair}.fq.gz"
 
 
-#SF_33_Cl:
-#  SF_33_Cl:
-#    SF_33_Cl:
-#       Lane1: "SF_33_Cl/SF_33_Cl_CKDL200164432-1a-AK199_HCJNKCCX2_L6_{Pair}.fq.gz"
+SF_33_Cl:
+ SF_33_Cl:
+   SF_33_Cl:
+      Lane1: "SF_33_Cl/SF_33_Cl_CKDL200164432-1a-AK199_HCJNKCCX2_L6_{Pair}.fq.gz"
+
 #SF_35_Cl:
 #  SF_35_Cl:
 #    SF_35_Cl:

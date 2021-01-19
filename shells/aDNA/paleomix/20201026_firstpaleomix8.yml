@@ -116,7 +116,7 @@ Options:
     # and to produce rescaled BAMs, write 'rescale'. The 'model' option
     # includes the 'plot' output, and the 'rescale' option includes both
     # 'plot' and 'model' results. All analyses are carried out per library.
-    mapDamage: plot
+    mapDamage: rescale
     # Generate coverage information for the raw BAM (wo/ indel realignment).
     # If one or more 'RegionsOfInterest' have been specified for a prefix,
     # additional coverage files are generated for each alignment (yes / no)

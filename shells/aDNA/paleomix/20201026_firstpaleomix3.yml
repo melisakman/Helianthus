@@ -116,7 +116,7 @@ Options:
     # and to produce rescaled BAMs, write 'rescale'. The 'model' option
     # includes the 'plot' output, and the 'rescale' option includes both
     # 'plot' and 'model' results. All analyses are carried out per library.
-    mapDamage: plot
+    mapDamage: rescale
     # Generate coverage information for the raw BAM (wo/ indel realignment).
     # If one or more 'RegionsOfInterest' have been specified for a prefix,
     # additional coverage files are generated for each alignment (yes / no)
@@ -260,14 +260,15 @@ Prefixes:
 #  SF_11_a_:
 #    SF_11_a_:
 #       Lane1: "SF_11_a/SF_11_a_CKDL200164432-1a-AK1888_HCJNKCCX2_L6_{Pair}.fq.gz"
-#SF_12_Pu:
-#  SF_12_Pu:
-#    SF_12_Pu:
-#       Lane1: "SF_12_Pu/SF_12_Pu_CKDL200164434-1a-AK2959_HCJNKCCX2_L8_{Pair}.fq.gz"
-#SF_13_Al:
-#  SF_13_Al:
-#    SF_13_Al:
-#       Lane1: "SF_13_Al/SF_13_Al_CKDL200164432-1a-AK2944_HCJNKCCX2_L6_{Pair}.fq.gz"
+SF_12_Pu:
+ SF_12_Pu:
+   SF_12_Pu:
+      Lane1: "SF_12_Pu/SF_12_Pu_CKDL200164434-1a-AK2959_HCJNKCCX2_L8_{Pair}.fq.gz"
+SF_13_Al:
+ SF_13_Al:
+   SF_13_Al:
+      Lane1: "SF_13_Al/SF_13_Al_CKDL200164432-1a-AK2944_HCJNKCCX2_L6_{Pair}.fq.gz"
+
 #SF_14_Pu:
 #  SF_14_Pu:
 #    SF_14_Pu:
@@ -278,10 +279,11 @@ SF_14_Pu:
       Lane1: "first/SF_14_Pu/SF_14_Pu_CKDL200164434-1a-AK2950_HCJNKCCX2_L8_{Pair}.fq.gz"
       Lane2: "second/SF_14_Pu/SF_14_Pu_CKDL200168948-1a-AK2950_HFJF3CCX2_L5_{Pair}.fq.gz"
 
-#SF_15_Ag:
-#  SF_15_Ag:
-#    SF_15_Ag:
-#       Lane1: "SF_15_Ag/SF_15_Ag_CKDL200164432-1a-AK2943_HCJNKCCX2_L6_{Pair}.fq.gz"
+SF_15_Ag:
+ SF_15_Ag:
+   SF_15_Ag:
+      Lane1: "SF_15_Ag/SF_15_Ag_CKDL200164432-1a-AK2943_HCJNKCCX2_L6_{Pair}.fq.gz"
+
 #SF_17_Ne:
 #  SF_17_Ne:
 #    SF_17_Ne:
@@ -292,14 +294,15 @@ SF_17_Ne:
       Lane1: "first/SF_17_Ne/SF_17_Ne_CKDL200164432-1a-AK2957_HCJNKCCX2_L6_{Pair}.fq.gz"
       Lane2: "second/SF_17_Ne/SF_17_Ne_CKDL200168946-1a-AK2957_HFJF3CCX2_L3_{Pair}.fq.gz"
 
-#SF_18_Ne:
-#  SF_18_Ne:
-#    SF_18_Ne:
-#       Lane1: "SF_18_Ne/SF_18_Ne_CKDL200164432-1a-AK2939_HCJNKCCX2_L6_{Pair}.fq.gz"
-#SF_19_Mo:
-#  SF_19_Mo:
-#    SF_19_Mo:
-#       Lane1: "SF_19_Mo/SF_19_Mo_CKDL200164434-1a-AK2947_HCJNKCCX2_L8_{Pair}.fq.gz"
+SF_18_Ne:
+ SF_18_Ne:
+   SF_18_Ne:
+      Lane1: "SF_18_Ne/SF_18_Ne_CKDL200164432-1a-AK2939_HCJNKCCX2_L6_{Pair}.fq.gz"
+SF_19_Mo:
+ SF_19_Mo:
+   SF_19_Mo:
+      Lane1: "SF_19_Mo/SF_19_Mo_CKDL200164434-1a-AK2947_HCJNKCCX2_L8_{Pair}.fq.gz"
+
 #SF_20_Po:
 #  SF_20_Po:
 #    SF_20_Po:
@@ -311,14 +314,14 @@ SF_20_Po:
       Lane2: "second/SF_20_Po/SF_20_Po_CKDL200168948-1a-AK3320_HFJF3CCX2_L5_{Pair}.fq.gz"
 
 
-#SF_21_Ed:
-#  SF_21_Ed:
-#    SF_21_Ed:
-#       Lane1: "SF_21_Ed/SF_21_Ed_CKDL200164432-1a-AK194_HCJNKCCX2_L6_{Pair}.fq.gz"
-#SF_22_Ed:
-#  SF_22_Ed:
-#    SF_22_Ed:
-#       Lane1: "SF_22_Ed/SF_22_Ed_CKDL200164432-1a-AK3793_HCJNKCCX2_L6_{Pair}.fq.gz"
+SF_21_Ed:
+ SF_21_Ed:
+   SF_21_Ed:
+      Lane1: "SF_21_Ed/SF_21_Ed_CKDL200164432-1a-AK194_HCJNKCCX2_L6_{Pair}.fq.gz"
+SF_22_Ed:
+ SF_22_Ed:
+   SF_22_Ed:
+      Lane1: "SF_22_Ed/SF_22_Ed_CKDL200164432-1a-AK3793_HCJNKCCX2_L6_{Pair}.fq.gz"
 #SF_23_Ed:
 #  SF_23_Ed:
 #    SF_23_Ed:
