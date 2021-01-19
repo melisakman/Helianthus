@@ -153,6 +153,7 @@ Prefixes:
 #      Annotation: "/global/scratch/makman/Sunflower_paleomix/dom_genes.bed"
       Important_Genes: "/global/scratch/makman/Sunflower_paleomix/dom_genes.bed"
       Gene_by_gene: "/global/scratch/makman/Sunflower_paleomix/dom_genes_names.bed"
+
   Plastome:
     # Replace 'PATH_TO_PREFIX' with the path to .fasta file containing the
     # references against which reads are to be mapped. Using the same name
@@ -195,6 +196,7 @@ Prefixes:
 #  Ethno_D:
 #    Ethno_D:
 #       Lane1: "first/Ethno_D/Ethno_D_CKDL200164431-1a-AK3487_HCJNKCCX2_L5_{Pair}.fq.gz"
+#
 #Ethno_E:
 #  Ethno_E:
 #    Ethno_E:
@@ -211,7 +213,7 @@ Prefixes:
 #  Ethno_H:
 #    Ethno_H:
 #       Lane1: "first/Ethno_H/Ethno_H_CKDL200164431-1a-AK2942_HCJNKCCX2_L5_{Pair}.fq.gz"
-#Ethno_I:E
+#Ethno_I:
 #  Ethno_I:
 #    Ethno_I:
 #       Lane1: "first/Ethno_I/Ethno_I_CKDL200164431-1a-AK1650_HCJNKCCX2_L5_{Pair}.fq.gz"
@@ -219,46 +221,67 @@ Prefixes:
 #  Ethno_J:
 #    Ethno_J:
 #       Lane1: "first/Ethno_J/Ethno_J_CKDL200164431-1a-AK2959_HCJNKCCX2_L5_{Pair}.fq.gz"
-Ethno_L:
- Ethno_L:
-   Ethno_L:
-      Lane1: "first/Ethno_L/Ethno_L_CKDL200164431-1a-AK2950_HCJNKCCX2_L5_{Pair}.fq.gz"
+#Ethno_L:
+#  Ethno_L:
+#    Ethno_L:
+#       Lane1: "first/Ethno_L/Ethno_L_CKDL200164431-1a-AK2950_HCJNKCCX2_L5_{Pair}.fq.gz"
+
 #SF_01_Ne:
-#  SF_01_Ne:
-#    SF_01_Ne:
-#       Lane1: "first/SF_01_Ne/SF_01_Ne_CKDL200164432-1a-AK2946_HCJNKCCX2_L6_{Pair}.fq.gz"
+# SF_01_Ne:
+#   SF_01_Ne:
+#      Lane1: "first/SF_01_Ne/SF_01_Ne_CKDL200164432-1a-AK2946_HCJNKCCX2_L6_{Pair}.fq.gz"
+SF_01_Ne:
+ SF_01_Ne:
+   SF_01_Ne:
+      Lane1: "first/SF_01_Ne/SF_01_Ne_CKDL200164432-1a-AK2946_HCJNKCCX2_L6_{Pair}.fq.gz"
+      Lane2: "second/SF_01_Ne/SF_01_Ne_CKDL200168946-1a-AK2946_HFJF3CCX2_L3_{Pair}.fq.gz"
+
 #SF_02_Al:
-#  SF_02_Al:
-#    SF_02_Al:
-#       Lane1: "first/SF_02_Al/SF_02_Al_CKDL200164432-1a-AK2945_HCJNKCCX2_L6_{Pair}.fq.gz"
+# SF_02_Al:
+#   SF_02_Al:
+#      Lane1: "first/SF_02_Al/SF_02_Al_CKDL200164432-1a-AK2945_HCJNKCCX2_L6_{Pair}.fq.gz"
 #SF_03_Pu:
-#  SF_03_Pu:
-#    SF_03_Pu:
-#       Lane1: "first/SF_03_Pu/SF_03_Pu_CKDL200164434-1a-AK3486_HCJNKCCX2_L8_{Pair}.fq.gz"
+# SF_03_Pu:
+#   SF_03_Pu:
+#      Lane1: "first/SF_03_Pu/SF_03_Pu_CKDL200164434-1a-AK3486_HCJNKCCX2_L8_{Pair}.fq.gz"
+
 #SF_04_Mo:
-#  SF_04_Mo:
-#    SF_04_Mo:
-#       Lane1: "first/SF_04_Mo/SF_04_Mo_CKDL200164434-1a-AK2949_HCJNKCCX2_L8_{Pair}.fq.gz"
+# SF_04_Mo:
+#   SF_04_Mo:
+#      Lane1: "first/SF_04_Mo/SF_04_Mo_CKDL200164434-1a-AK2949_HCJNKCCX2_L8_{Pair}.fq.gz"
+SF_04_Mo:
+ SF_04_Mo:
+   SF_04_Mo:
+      Lane1: "first/SF_04_Mo/SF_04_Mo_CKDL200164434-1a-AK2949_HCJNKCCX2_L8_{Pair}.fq.gz"
+      Lane2: "second/SF_04_Mo/SF_04_Mo_CKDL200168948-1a-AK2949_HFJF3CCX2_L5_{Pair}.fq.gz"
+
 #SF_05_Cr:
-#  SF_05_Cr:
-#    SF_05_Cr:
-#       Lane1: "first/SF_05_Cr/SF_05_Cr_CKDL200164434-1a-AK2954_HCJNKCCX2_L8_{Pair}.fq.gz"
+# SF_05_Cr:
+#   SF_05_Cr:
+#      Lane1: "first/SF_05_Cr/SF_05_Cr_CKDL200164434-1a-AK2954_HCJNKCCX2_L8_{Pair}.fq.gz"
+
 #SF_06_Gr:
-#  SF_06_Gr:
-#    SF_06_Gr:
-#       Lane1: "first/SF_06_Gr/SF_06_Gr_CKDL200164432-1a-AK2941_HCJNKCCX2_L6_{Pair}.fq.gz"
+# SF_06_Gr:
+#   SF_06_Gr:
+#      Lane1: "first/SF_06_Gr/SF_06_Gr_CKDL200164432-1a-AK2941_HCJNKCCX2_L6_{Pair}.fq.gz"
+SF_06_Gr:
+ SF_06_Gr:
+   SF_06_Gr:
+      Lane1: "first/SF_06_Gr/SF_06_Gr_CKDL200164432-1a-AK2941_HCJNKCCX2_L6_{Pair}.fq.gz"
+      Lane2: "second/SF_06_Gr/SF_06_Gr_CKDL200168946-1a-AK2941_HFJF3CCX2_L3_{Pair}.fq.gz"
+
 #SF_07_Ed:
-#  SF_07_Ed:
-#    SF_07_Ed:
-#       Lane1: "first/SF_07_Ed/SF_07_Ed_CKDL200164434-1a-AK1004_HCJNKCCX2_L8_{Pair}.fq.gz"
+# SF_07_Ed:
+#   SF_07_Ed:
+#      Lane1: "first/SF_07_Ed/SF_07_Ed_CKDL200164434-1a-AK1004_HCJNKCCX2_L8_{Pair}.fq.gz"
 #SF_10_Tr:
-#  SF_10_Tr:
-#    SF_10_Tr:
-#       Lane1: "first/SF_10_Tr/SF_10_Tr_CKDL200164434-1a-AK1650_HCJNKCCX2_L8_{Pair}.fq.gz"
+# SF_10_Tr:
+#   SF_10_Tr:
+#      Lane1: "first/SF_10_Tr/SF_10_Tr_CKDL200164434-1a-AK1650_HCJNKCCX2_L8_{Pair}.fq.gz"
 #SF_11_a_:
-#  SF_11_a_:
-#    SF_11_a_:
-#       Lane1: "first/SF_11_a/SF_11_a_CKDL200164432-1a-AK1888_HCJNKCCX2_L6_{Pair}.fq.gz"
+# SF_11_a_:
+#   SF_11_a_:
+#      Lane1: "first/SF_11_a_/SF_11_a__CKDL200164432-1a-AK1888_HCJNKCCX2_L6_{Pair}.fq.gz"
 #SF_12_Pu:
 #  SF_12_Pu:
 #    SF_12_Pu:

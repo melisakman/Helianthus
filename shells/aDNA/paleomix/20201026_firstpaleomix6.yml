@@ -183,334 +183,334 @@ Prefixes:
 #Ethno_A:
 #  Ethno_A:
 #    Ethno_A:
-#       Lane1: "Ethno_A/Ethno_A_CKDL200164431-1a-AK1073_HCJNKCCX2_L5_{Pair}.fq.gz"
+#       Lane1: "first/Ethno_A/Ethno_A_CKDL200164431-1a-AK1073_HCJNKCCX2_L5_{Pair}.fq.gz"
 #Ethno_B:
 #  Ethno_B:
 #    Ethno_B:
-#       Lane1: "Ethno_B/Ethno_B_CKDL200164431-1a-41_HCJNKCCX2_L5_{Pair}.fq.gz"
+#       Lane1: "first/Ethno_B/Ethno_B_CKDL200164431-1a-41_HCJNKCCX2_L5_{Pair}.fq.gz"
 #Ethno_C:
 #  Ethno_C:
 #    Ethno_C:
-#       Lane1: "Ethno_C/Ethno_C_CKDL200164431-1a-AK3489_HCJNKCCX2_L5_{Pair}.fq.gz"
+#       Lane1: "first/Ethno_C/Ethno_C_CKDL200164431-1a-AK3489_HCJNKCCX2_L5_{Pair}.fq.gz"
 #Ethno_D:
 #  Ethno_D:
 #    Ethno_D:
-#       Lane1: "Ethno_D/Ethno_D_CKDL200164431-1a-AK3487_HCJNKCCX2_L5_{Pair}.fq.gz"
+#       Lane1: "first/Ethno_D/Ethno_D_CKDL200164431-1a-AK3487_HCJNKCCX2_L5_{Pair}.fq.gz"
 #Ethno_E:
 #  Ethno_E:
 #    Ethno_E:
-#       Lane1: "Ethno_E/Ethno_E_CKDL200164431-1a-AK2952_HCJNKCCX2_L5_{Pair}.fq.gz"
+#       Lane1: "first/Ethno_E/Ethno_E_CKDL200164431-1a-AK2952_HCJNKCCX2_L5_{Pair}.fq.gz"
 #Ethno_F:
 #  Ethno_F:
 #    Ethno_F:
-#       Lane1: "Ethno_F/Ethno_F_CKDL200164431-1a-AK2954_HCJNKCCX2_L5_{Pair}.fq.gz"
+#       Lane1: "first/Ethno_F/Ethno_F_CKDL200164431-1a-AK2954_HCJNKCCX2_L5_{Pair}.fq.gz"
 #Ethno_G:
 #  Ethno_G:
 #    Ethno_G:
-#       Lane1: "Ethno_G/Ethno_G_CKDL200164431-1a-AK974_HCJNKCCX2_L5_{Pair}.fq.gz"
+#       Lane1: "first/Ethno_G/Ethno_G_CKDL200164431-1a-AK974_HCJNKCCX2_L5_{Pair}.fq.gz"
 #Ethno_H:
 #  Ethno_H:
 #    Ethno_H:
-#       Lane1: "Ethno_H/Ethno_H_CKDL200164431-1a-AK2942_HCJNKCCX2_L5_{Pair}.fq.gz"
+#       Lane1: "first/Ethno_H/Ethno_H_CKDL200164431-1a-AK2942_HCJNKCCX2_L5_{Pair}.fq.gz"
 #Ethno_I:
 #  Ethno_I:
 #    Ethno_I:
-#       Lane1: "Ethno_I/Ethno_I_CKDL200164431-1a-AK1650_HCJNKCCX2_L5_{Pair}.fq.gz"
+#       Lane1: "first/Ethno_I/Ethno_I_CKDL200164431-1a-AK1650_HCJNKCCX2_L5_{Pair}.fq.gz"
 #Ethno_J:
 #  Ethno_J:
 #    Ethno_J:
-#       Lane1: "Ethno_J/Ethno_J_CKDL200164431-1a-AK2959_HCJNKCCX2_L5_{Pair}.fq.gz"
+#       Lane1: "first/Ethno_J/Ethno_J_CKDL200164431-1a-AK2959_HCJNKCCX2_L5_{Pair}.fq.gz"
 #Ethno_L:
 #  Ethno_L:
 #    Ethno_L:
-#       Lane1: "Ethno_L/Ethno_L_CKDL200164431-1a-AK2950_HCJNKCCX2_L5_{Pair}.fq.gz"
+#       Lane1: "first/Ethno_L/Ethno_L_CKDL200164431-1a-AK2950_HCJNKCCX2_L5_{Pair}.fq.gz"
 #SF_01_Ne:
 #  SF_01_Ne:
 #    SF_01_Ne:
-#       Lane1: "SF_01_Ne/SF_01_Ne_CKDL200164432-1a-AK2946_HCJNKCCX2_L6_{Pair}.fq.gz"
+#       Lane1: "first/SF_01_Ne/SF_01_Ne_CKDL200164432-1a-AK2946_HCJNKCCX2_L6_{Pair}.fq.gz"
 #SF_02_Al:
 #  SF_02_Al:
 #    SF_02_Al:
-#       Lane1: "SF_02_Al/SF_02_Al_CKDL200164432-1a-AK2945_HCJNKCCX2_L6_{Pair}.fq.gz"
+#       Lane1: "first/SF_02_Al/SF_02_Al_CKDL200164432-1a-AK2945_HCJNKCCX2_L6_{Pair}.fq.gz"
 #SF_03_Pu:
 #  SF_03_Pu:
 #    SF_03_Pu:
-#       Lane1: "SF_03_Pu/SF_03_Pu_CKDL200164434-1a-AK3486_HCJNKCCX2_L8_{Pair}.fq.gz"
+#       Lane1: "first/SF_03_Pu/SF_03_Pu_CKDL200164434-1a-AK3486_HCJNKCCX2_L8_{Pair}.fq.gz"
 #SF_04_Mo:
 #  SF_04_Mo:
 #    SF_04_Mo:
-#       Lane1: "SF_04_Mo/SF_04_Mo_CKDL200164434-1a-AK2949_HCJNKCCX2_L8_{Pair}.fq.gz"
+#       Lane1: "first/SF_04_Mo/SF_04_Mo_CKDL200164434-1a-AK2949_HCJNKCCX2_L8_{Pair}.fq.gz"
 #SF_05_Cr:
 #  SF_05_Cr:
 #    SF_05_Cr:
-#       Lane1: "SF_05_Cr/SF_05_Cr_CKDL200164434-1a-AK2954_HCJNKCCX2_L8_{Pair}.fq.gz"
+#       Lane1: "first/SF_05_Cr/SF_05_Cr_CKDL200164434-1a-AK2954_HCJNKCCX2_L8_{Pair}.fq.gz"
 #SF_06_Gr:
 #  SF_06_Gr:
 #    SF_06_Gr:
-#       Lane1: "SF_06_Gr/SF_06_Gr_CKDL200164432-1a-AK2941_HCJNKCCX2_L6_{Pair}.fq.gz"
+#       Lane1: "first/SF_06_Gr/SF_06_Gr_CKDL200164432-1a-AK2941_HCJNKCCX2_L6_{Pair}.fq.gz"
 #SF_07_Ed:
 #  SF_07_Ed:
 #    SF_07_Ed:
-#       Lane1: "SF_07_Ed/SF_07_Ed_CKDL200164434-1a-AK1004_HCJNKCCX2_L8_{Pair}.fq.gz"
+#       Lane1: "first/SF_07_Ed/SF_07_Ed_CKDL200164434-1a-AK1004_HCJNKCCX2_L8_{Pair}.fq.gz"
 #SF_10_Tr:
 #  SF_10_Tr:
 #    SF_10_Tr:
-#       Lane1: "SF_10_Tr/SF_10_Tr_CKDL200164434-1a-AK1650_HCJNKCCX2_L8_{Pair}.fq.gz"
+#       Lane1: "first/SF_10_Tr/SF_10_Tr_CKDL200164434-1a-AK1650_HCJNKCCX2_L8_{Pair}.fq.gz"
 #SF_11_a_:
 #  SF_11_a_:
 #    SF_11_a_:
-#       Lane1: "SF_11_a/SF_11_a_CKDL200164432-1a-AK1888_HCJNKCCX2_L6_{Pair}.fq.gz"
+#       Lane1: "first/SF_11_a/SF_11_a_CKDL200164432-1a-AK1888_HCJNKCCX2_L6_{Pair}.fq.gz"
 #SF_12_Pu:
 #  SF_12_Pu:
 #    SF_12_Pu:
-#       Lane1: "SF_12_Pu/SF_12_Pu_CKDL200164434-1a-AK2959_HCJNKCCX2_L8_{Pair}.fq.gz"
+#       Lane1: "first/SF_12_Pu/SF_12_Pu_CKDL200164434-1a-AK2959_HCJNKCCX2_L8_{Pair}.fq.gz"
 #SF_13_Al:
 #  SF_13_Al:
 #    SF_13_Al:
-#       Lane1: "SF_13_Al/SF_13_Al_CKDL200164432-1a-AK2944_HCJNKCCX2_L6_{Pair}.fq.gz"
+#       Lane1: "first/SF_13_Al/SF_13_Al_CKDL200164432-1a-AK2944_HCJNKCCX2_L6_{Pair}.fq.gz"
 #SF_14_Pu:
 #  SF_14_Pu:
 #    SF_14_Pu:
-#       Lane1: "SF_14_Pu/SF_14_Pu_CKDL200164434-1a-AK2950_HCJNKCCX2_L8_{Pair}.fq.gz"
+#       Lane1: "first/SF_14_Pu/SF_14_Pu_CKDL200164434-1a-AK2950_HCJNKCCX2_L8_{Pair}.fq.gz"
 #SF_15_Ag:
 #  SF_15_Ag:
 #    SF_15_Ag:
-#       Lane1: "SF_15_Ag/SF_15_Ag_CKDL200164432-1a-AK2943_HCJNKCCX2_L6_{Pair}.fq.gz"
+#       Lane1: "first/SF_15_Ag/SF_15_Ag_CKDL200164432-1a-AK2943_HCJNKCCX2_L6_{Pair}.fq.gz"
 #SF_17_Ne:
 #  SF_17_Ne:
 #    SF_17_Ne:
-#       Lane1: "SF_17_Ne/SF_17_Ne_CKDL200164432-1a-AK2957_HCJNKCCX2_L6_{Pair}.fq.gz"
+#       Lane1: "first/SF_17_Ne/SF_17_Ne_CKDL200164432-1a-AK2957_HCJNKCCX2_L6_{Pair}.fq.gz"
 #SF_18_Ne:
 #  SF_18_Ne:
 #    SF_18_Ne:
-#       Lane1: "SF_18_Ne/SF_18_Ne_CKDL200164432-1a-AK2939_HCJNKCCX2_L6_{Pair}.fq.gz"
+#       Lane1: "first/SF_18_Ne/SF_18_Ne_CKDL200164432-1a-AK2939_HCJNKCCX2_L6_{Pair}.fq.gz"
 #SF_19_Mo:
 #  SF_19_Mo:
 #    SF_19_Mo:
-#       Lane1: "SF_19_Mo/SF_19_Mo_CKDL200164434-1a-AK2947_HCJNKCCX2_L8_{Pair}.fq.gz"
+#       Lane1: "first/SF_19_Mo/SF_19_Mo_CKDL200164434-1a-AK2947_HCJNKCCX2_L8_{Pair}.fq.gz"
 #SF_20_Po:
 #  SF_20_Po:
 #    SF_20_Po:
-#       Lane1: "SF_20_Po/SF_20_Po_CKDL200164434-1a-AK3320_HCJNKCCX2_L8_{Pair}.fq.gz"
+#       Lane1: "first/SF_20_Po/SF_20_Po_CKDL200164434-1a-AK3320_HCJNKCCX2_L8_{Pair}.fq.gz"
 #SF_21_Ed:
 #  SF_21_Ed:
 #    SF_21_Ed:
-#       Lane1: "SF_21_Ed/SF_21_Ed_CKDL200164432-1a-AK194_HCJNKCCX2_L6_{Pair}.fq.gz"
+#       Lane1: "first/SF_21_Ed/SF_21_Ed_CKDL200164432-1a-AK194_HCJNKCCX2_L6_{Pair}.fq.gz"
 #SF_22_Ed:
 #  SF_22_Ed:
 #    SF_22_Ed:
-#       Lane1: "SF_22_Ed/SF_22_Ed_CKDL200164432-1a-AK3793_HCJNKCCX2_L6_{Pair}.fq.gz"
+#       Lane1: "first/SF_22_Ed/SF_22_Ed_CKDL200164432-1a-AK3793_HCJNKCCX2_L6_{Pair}.fq.gz"
 #SF_23_Ed:
 #  SF_23_Ed:
 #    SF_23_Ed:
-#       Lane1: "SF_23_Ed/SF_23_Ed_CKDL200164432-1a-AK993_HCJNKCCX2_L6_{Pair}.fq.gz"
+#       Lane1: "first/SF_23_Ed/SF_23_Ed_CKDL200164432-1a-AK993_HCJNKCCX2_L6_{Pair}.fq.gz"
 #SF_25_NM:
 #  SF_25_NM:
 #    SF_25_NM:
-#       Lane1: "SF_25_NM/SF_25_NM_CKDL200164434-1a-AK2953_HCJNKCCX2_L8_{Pair}.fq.gz"
+#       Lane1: "first/SF_25_NM/SF_25_NM_CKDL200164434-1a-AK2953_HCJNKCCX2_L8_{Pair}.fq.gz"
 #SF_27_Be:
 #  SF_27_Be:
 #    SF_27_Be:
-#       Lane1: "SF_27_Be/SF_27_Be_CKDL200164434-1a-AK2956_HCJNKCCX2_L8_{Pair}.fq.gz"
+#       Lane1: "first/SF_27_Be/SF_27_Be_CKDL200164434-1a-AK2956_HCJNKCCX2_L8_{Pair}.fq.gz"
 #SF_28_Ed:
 #  SF_28_Ed:
 #    SF_28_Ed:
-#       Lane1: "SF_28_Ed/SF_28_Ed_CKDL200164432-1a-AK972_HCJNKCCX2_L6_{Pair}.fq.gz"
+#       Lane1: "first/SF_28_Ed/SF_28_Ed_CKDL200164432-1a-AK972_HCJNKCCX2_L6_{Pair}.fq.gz"
 #SF_29_Br:
 #  SF_29_Br:
 #    SF_29_Br:
-#       Lane1: "SF_29_Br/SF_29_Br_CKDL200164434-1a-AK2946_HCJNKCCX2_L8_{Pair}.fq.gz"
+#       Lane1: "first/SF_29_Br/SF_29_Br_CKDL200164434-1a-AK2946_HCJNKCCX2_L8_{Pair}.fq.gz"
 #SF_30_Ed:
 #  SF_30_Ed:
 #    SF_30_Ed:
-#       Lane1: "SF_30_Ed/SF_30_Ed_CKDL200164434-1a-AK2945_HCJNKCCX2_L8_{Pair}.fq.gz"
+#       Lane1: "first/SF_30_Ed/SF_30_Ed_CKDL200164434-1a-AK2945_HCJNKCCX2_L8_{Pair}.fq.gz"
 #SF_31_Co:
 #  SF_31_Co:
 #    SF_31_Co:
-#       Lane1: "SF_31_Co/SF_31_Co_CKDL200164433-1a-AK2948_HCJNKCCX2_L7_{Pair}.fq.gz"
+#       Lane1: "first/SF_31_Co/SF_31_Co_CKDL200164433-1a-AK2948_HCJNKCCX2_L7_{Pair}.fq.gz"
 #SF_32_Cl:
 #  SF_32_Cl:
 #    SF_32_Cl:
-#       Lane1: "SF_32_Cl/SF_32_Cl_CKDL200164432-1a-AK3290_HCJNKCCX2_L6_{Pair}.fq.gz"
+#       Lane1: "first/SF_32_Cl/SF_32_Cl_CKDL200164432-1a-AK3290_HCJNKCCX2_L6_{Pair}.fq.gz"
 #SF_33_Cl:
 #  SF_33_Cl:
 #    SF_33_Cl:
-#       Lane1: "SF_33_Cl/SF_33_Cl_CKDL200164432-1a-AK199_HCJNKCCX2_L6_{Pair}.fq.gz"
+#       Lane1: "first/SF_33_Cl/SF_33_Cl_CKDL200164432-1a-AK199_HCJNKCCX2_L6_{Pair}.fq.gz"
 #SF_35_Cl:
 #  SF_35_Cl:
 #    SF_35_Cl:
-#       Lane1: "SF_35_Cl/SF_35_Cl_CKDL200164433-1a-AK2940_HCJNKCCX2_L7_{Pair}.fq.gz"
+#       Lane1: "first/SF_35_Cl/SF_35_Cl_CKDL200164433-1a-AK2940_HCJNKCCX2_L7_{Pair}.fq.gz"
 #SF_35b_C:
 #  SF_35b_C:
 #    SF_35b_C:
-#       Lane1: "SF_35b_C/SF_35b_C_CKDL200164432-1a-AK5612_HCJNKCCX2_L6_{Pair}.fq.gz"
+#       Lane1: "first/SF_35b_C/SF_35b_C_CKDL200164432-1a-AK5612_HCJNKCCX2_L6_{Pair}.fq.gz"
 #SF_37_Cl:
 #  SF_37_Cl:
 #    SF_37_Cl:
-#       Lane1: "SF_37_Cl/SF_37_Cl_CKDL200164433-1a-AK5612_HCJNKCCX2_L7_{Pair}.fq.gz"
+#       Lane1: "first/SF_37_Cl/SF_37_Cl_CKDL200164433-1a-AK5612_HCJNKCCX2_L7_{Pair}.fq.gz"
 #SF_37b_C:
 #  SF_37b_C:
 #    SF_37b_C:
-#       Lane1: "SF_37b_C/SF_37b_C_CKDL200164432-1a-AK2086_HCJNKCCX2_L6_{Pair}.fq.gz"
+#       Lane1: "first/SF_37b_C/SF_37b_C_CKDL200164432-1a-AK2086_HCJNKCCX2_L6_{Pair}.fq.gz"
 #SF_38_Cl:
 #  SF_38_Cl:
 #    SF_38_Cl:
-#       Lane1: "SF_38_Cl/SF_38_Cl_CKDL200164433-1a-AK1140_HCJNKCCX2_L7_{Pair}.fq.gz"
+#       Lane1: "first/SF_38_Cl/SF_38_Cl_CKDL200164433-1a-AK1140_HCJNKCCX2_L7_{Pair}.fq.gz"
 #SF_39_Ma:
 #  SF_39_Ma:
 #    SF_39_Ma:
-#       Lane1: "SF_39_Ma/SF_39_Ma_CKDL200164432-1a-AK18338_HCJNKCCX2_L6_{Pair}.fq.gz"
+#       Lane1: "first/SF_39_Ma/SF_39_Ma_CKDL200164432-1a-AK18338_HCJNKCCX2_L6_{Pair}.fq.gz"
 #SF_40_Ma:
 #  SF_40_Ma:
 #    SF_40_Ma:
-#       Lane1: "SF_40_Ma/SF_40_Ma_CKDL200164432-1a-AK14169_HCJNKCCX2_L6_{Pair}.fq.gz"
+#       Lane1: "first/SF_40_Ma/SF_40_Ma_CKDL200164432-1a-AK14169_HCJNKCCX2_L6_{Pair}.fq.gz"
 #SF_41_Ed:
 #  SF_41_Ed:
 #    SF_41_Ed:
-#       Lane1: "SF_41_Ed/SF_41_Ed_CKDL200164433-1a-AK2086_HCJNKCCX2_L7_{Pair}.fq.gz"
+#       Lane1: "first/SF_41_Ed/SF_41_Ed_CKDL200164433-1a-AK2086_HCJNKCCX2_L7_{Pair}.fq.gz"
 #SF_42_Ed:
 #  SF_42_Ed:
 #    SF_42_Ed:
-#       Lane1: "SF_42_Ed/SF_42_Ed_CKDL200164433-1a-AK3320_HCJNKCCX2_L7_{Pair}.fq.gz"
+#       Lane1: "first/SF_42_Ed/SF_42_Ed_CKDL200164433-1a-AK3320_HCJNKCCX2_L7_{Pair}.fq.gz"
 #SF_43_Ed:
 #  SF_43_Ed:
 #    SF_43_Ed:
-#       Lane1: "SF_43_Ed/SF_43_Ed_CKDL200164433-1a-AK31363_HCJNKCCX2_L7_{Pair}.fq.gz"
+#       Lane1: "first/SF_43_Ed/SF_43_Ed_CKDL200164433-1a-AK31363_HCJNKCCX2_L7_{Pair}.fq.gz"
 SF_45_Ed:
  SF_45_Ed:
    SF_45_Ed:
-      Lane1: "SF_45_Ed/SF_45_Ed_CKDL200164434-1a-AK3793_HCJNKCCX2_L8_{Pair}.fq.gz"
+      Lane1: "first/SF_45_Ed/SF_45_Ed_CKDL200164434-1a-AK3793_HCJNKCCX2_L8_{Pair}.fq.gz"
 SF_46_Ed:
  SF_46_Ed:
    SF_46_Ed:
-      Lane1: "SF_46_Ed/SF_46_Ed_CKDL200164433-1a-AK993_HCJNKCCX2_L7_{Pair}.fq.gz"
+      Lane1: "first/SF_46_Ed/SF_46_Ed_CKDL200164433-1a-AK993_HCJNKCCX2_L7_{Pair}.fq.gz"
 SF_48_Ed:
  SF_48_Ed:
    SF_48_Ed:
-      Lane1: "SF_48_Ed/SF_48_Ed_CKDL200164432-1a-AK2953_HCJNKCCX2_L6_{Pair}.fq.gz"
+      Lane1: "first/SF_48_Ed/SF_48_Ed_CKDL200164432-1a-AK2953_HCJNKCCX2_L6_{Pair}.fq.gz"
 
 #SF_49_Ed:
 #  SF_49_Ed:
 #    SF_49_Ed:
-#       Lane1: "SF_49_Ed/SF_49_Ed_CKDL200164434-1a-AK2958_HCJNKCCX2_L8_{Pair}.fq.gz"
-SF_49_Ed:
- SF_49_Ed:
-   SF_49_Ed:
-      Lane1: "first/SF_49_Ed/SF_49_Ed_CKDL200164434-1a-AK2958_HCJNKCCX2_L8_{Pair}.fq.gz"
-      Lane2: "second/SF_49_Ed/SF_49_Ed_CKDL200168948-1a-AK2958_HFJF3CCX2_L5_{Pair}.fq.gz"
+#       Lane1: "first/SF_49_Ed/SF_49_Ed_CKDL200164434-1a-AK2958_HCJNKCCX2_L8_{Pair}.fq.gz"
+#SF_49_Ed:
+# SF_49_Ed:
+#   SF_49_Ed:
+#      Lane1: "first/SF_49_Ed/SF_49_Ed_CKDL200164434-1a-AK2958_HCJNKCCX2_L8_{Pair}.fq.gz"
+#      Lane2: "second/SF_49_Ed/SF_49_Ed_CKDL200168948-1a-AK2958_HFJF3CCX2_L5_{Pair}.fq.gz"
 
 
 #SF_50_Ed:
 #  SF_50_Ed:
 #    SF_50_Ed:
-#       Lane1: "SF_50_Ed/SF_50_Ed_CKDL200164433-1a-AK2955_HCJNKCCX2_L7_{Pair}.fq.gz"
-SF_50_Ed:
- SF_50_Ed:
-   SF_50_Ed:
-      Lane1: "first/SF_50_Ed/SF_50_Ed_CKDL200164433-1a-AK2955_HCJNKCCX2_L7_{Pair}.fq.gz"
-      Lane2: "second/SF_50_Ed/SF_50_Ed_CKDL200168948-1a-AK2955_HFJF3CCX2_L5_{Pair}.fq.gz"
+#       Lane1: "first/SF_50_Ed/SF_50_Ed_CKDL200164433-1a-AK2955_HCJNKCCX2_L7_{Pair}.fq.gz"
+#SF_50_Ed:
+# SF_50_Ed:
+#   SF_50_Ed:
+#      Lane1: "first/SF_50_Ed/SF_50_Ed_CKDL200164433-1a-AK2955_HCJNKCCX2_L7_{Pair}.fq.gz"
+#      Lane2: "second/SF_50_Ed/SF_50_Ed_CKDL200168948-1a-AK2955_HFJF3CCX2_L5_{Pair}.fq.gz"
 
 
 SF_51_Ma:
  SF_51_Ma:
    SF_51_Ma:
-      Lane1: "SF_51_Ma/SF_51_Ma_CKDL200164432-1a-AK2956_HCJNKCCX2_L6_{Pair}.fq.gz"
+      Lane1: "first/SF_51_Ma/SF_51_Ma_CKDL200164432-1a-AK2956_HCJNKCCX2_L6_{Pair}.fq.gz"
 SF_52_Cl:
  SF_52_Cl:
    SF_52_Cl:
-      Lane1: "SF_52_Cl/SF_52_Cl_CKDL200164434-1a-AK972_HCJNKCCX2_L8_{Pair}.fq.gz"
+      Lane1: "first/SF_52_Cl/SF_52_Cl_CKDL200164434-1a-AK972_HCJNKCCX2_L8_{Pair}.fq.gz"
 SF_55_Cl:
  SF_55_Cl:
    SF_55_Cl:
-      Lane1: "SF_55_Cl/SF_55_Cl_CKDL200164434-1a-AK3488_HCJNKCCX2_L8_{Pair}.fq.gz"
+      Lane1: "first/SF_55_Cl/SF_55_Cl_CKDL200164434-1a-AK3488_HCJNKCCX2_L8_{Pair}.fq.gz"
 SF_57_Cl:
  SF_57_Cl:
    SF_57_Cl:
-      Lane1: "SF_57_Cl/SF_57_Cl_CKDL200164434-1a-AK1044_HCJNKCCX2_L8_{Pair}.fq.gz"
+      Lane1: "first/SF_57_Cl/SF_57_Cl_CKDL200164434-1a-AK1044_HCJNKCCX2_L8_{Pair}.fq.gz"
 
 #SF_58_Ne:
 #  SF_58_Ne:
 #    SF_58_Ne:
-#       Lane1: "SF_58_Ne/SF_58_Ne_CKDL200164432-1a-AK2940_HCJNKCCX2_L6_{Pair}.fq.gz"
-SF_58_Ne:
- SF_58_Ne:
-   SF_58_Ne:
-      Lane1: "first/SF_58_Ne/SF_58_Ne_CKDL200164432-1a-AK2940_HCJNKCCX2_L6_{Pair}.fq.gz"
-      Lane2: "second/SF_58_Ne/SF_58_Ne_CKDL200168946-1a-AK2940_HFJF3CCX2_L3_{Pair}.fq.gz"
+#       Lane1: "first/SF_58_Ne/SF_58_Ne_CKDL200164432-1a-AK2940_HCJNKCCX2_L6_{Pair}.fq.gz"
+#SF_58_Ne:
+# SF_58_Ne:
+#   SF_58_Ne:
+#      Lane1: "first/SF_58_Ne/SF_58_Ne_CKDL200164432-1a-AK2940_HCJNKCCX2_L6_{Pair}.fq.gz"
+#      Lane2: "second/SF_58_Ne/SF_58_Ne_CKDL200168946-1a-AK2940_HFJF3CCX2_L3_{Pair}.fq.gz"
 
 #SF_59_Ne:
 #  SF_59_Ne:
 #    SF_59_Ne:
-#       Lane1: "SF_59_Ne/SF_59_Ne_CKDL200164434-1a-75_HCJNKCCX2_L8_{Pair}.fq.gz"
+#       Lane1: "first/SF_59_Ne/SF_59_Ne_CKDL200164434-1a-75_HCJNKCCX2_L8_{Pair}.fq.gz"
 #SF_63a_B:
 #  SF_63a_B:
 #    SF_63a_B:
-#       Lane1: "SF_63a_B/SF_63a_B_CKDL200164433-1a-AK2959_HCJNKCCX2_L7_{Pair}.fq.gz"
+#       Lane1: "first/SF_63a_B/SF_63a_B_CKDL200164433-1a-AK2959_HCJNKCCX2_L7_{Pair}.fq.gz"
 #SF_63b_B:
 #  SF_63b_B:
 #    SF_63b_B:
-#       Lane1: "SF_63b_B/SF_63b_B_CKDL200164433-1a-AK2951_HCJNKCCX2_L7_{Pair}.fq.gz"
+#       Lane1: "first/SF_63b_B/SF_63b_B_CKDL200164433-1a-AK2951_HCJNKCCX2_L7_{Pair}.fq.gz"
 #SF_64a_B:
 #  SF_64a_B:
 #    SF_64a_B:
-#       Lane1: "SF_64a_B/SF_64a_B_CKDL200164433-1a-AK2950_HCJNKCCX2_L7_{Pair}.fq.gz"
+#       Lane1: "first/SF_64a_B/SF_64a_B_CKDL200164433-1a-AK2950_HCJNKCCX2_L7_{Pair}.fq.gz"
 #SF_64b_B:
 #  SF_64b_B:
 #    SF_64b_B:
-#       Lane1: "SF_64b_B/SF_64b_B_CKDL200164433-1a-AK2957_HCJNKCCX2_L7_{Pair}.fq.gz"
+#       Lane1: "first/SF_64b_B/SF_64b_B_CKDL200164433-1a-AK2957_HCJNKCCX2_L7_{Pair}.fq.gz"
 #SF_65a_e:
 #  SF_65a_e:
 #    SF_65a_e:
-#       Lane1: "SF_65a_e/SF_65a_e_CKDL200164433-1a-AK194_HCJNKCCX2_L7_{Pair}.fq.gz"
+#       Lane1: "first/SF_65a_e/SF_65a_e_CKDL200164433-1a-AK194_HCJNKCCX2_L7_{Pair}.fq.gz"
 #SF_65b_A:
 #  SF_65b_A:
 #    SF_65b_A:
-#       Lane1: "SF_65b_A/SF_65b_A_CKDL200164433-1a-AK3793_HCJNKCCX2_L7_{Pair}.fq.gz"
+#       Lane1: "first/SF_65b_A/SF_65b_A_CKDL200164433-1a-AK3793_HCJNKCCX2_L7_{Pair}.fq.gz"
 #SF_65c_e:
 #  SF_65c_e:
 #    SF_65c_e:
-#       Lane1: "SF_65c_e/SF_65c_e_CKDL200164434-1a-AK986_HCJNKCCX2_L8_{Pair}.fq.gz"
+#       Lane1: "first/SF_65c_e/SF_65c_e_CKDL200164434-1a-AK986_HCJNKCCX2_L8_{Pair}.fq.gz"
 #SF_65d_A:
 #  SF_65d_A:
 #    SF_65d_A:
-#       Lane1: "SF_65d_A/SF_65d_A_CKDL200164433-1a-AK2953_HCJNKCCX2_L7_{Pair}.fq.gz"
+#       Lane1: "first/SF_65d_A/SF_65d_A_CKDL200164433-1a-AK2953_HCJNKCCX2_L7_{Pair}.fq.gz"
 #SF_65e_A:
 #  SF_65e_A:
 #    SF_65e_A:
-#       Lane1: "SF_65e_A/SF_65e_A_CKDL200164433-1a-AK2956_HCJNKCCX2_L7_{Pair}.fq.gz"
+#       Lane1: "first/SF_65e_A/SF_65e_A_CKDL200164433-1a-AK2956_HCJNKCCX2_L7_{Pair}.fq.gz"
 #SF_65f_A:
 #  SF_65f_A:
 #    SF_65f_A:
-#       Lane1: "SF_65f_A/SF_65f_A_CKDL200164433-1a-AK972_HCJNKCCX2_L7_{Pair}.fq.gz"
+#       Lane1: "first/SF_65f_A/SF_65f_A_CKDL200164433-1a-AK972_HCJNKCCX2_L7_{Pair}.fq.gz"
 #SF_65g_e:
 #  SF_65g_e:
 #    SF_65g_e:
-#       Lane1: "SF_65g_e/SF_65g_e_CKDL200164433-1a-AK2945_HCJNKCCX2_L7_{Pair}.fq.gz"
+#       Lane1: "first/SF_65g_e/SF_65g_e_CKDL200164433-1a-AK2945_HCJNKCCX2_L7_{Pair}.fq.gz"
 #SF_65h_e:
 #  SF_65h_e:
 #    SF_65h_e:
-#       Lane1: "SF_65h_e/SF_65h_e_CKDL200164433-1a-AK3290_HCJNKCCX2_L7_{Pair}.fq.gz"
+#       Lane1: "first/SF_65h_e/SF_65h_e_CKDL200164433-1a-AK3290_HCJNKCCX2_L7_{Pair}.fq.gz"
 #SF_65i_A:
 #  SF_65i_A:
 #    SF_65i_A:
-#       Lane1: "SF_65i_A/SF_65i_A_CKDL200164433-1a-AK199_HCJNKCCX2_L7_{Pair}.fq.gz"
+#       Lane1: "first/SF_65i_A/SF_65i_A_CKDL200164433-1a-AK199_HCJNKCCX2_L7_{Pair}.fq.gz"
 #SF_65j_e:
 #  SF_65j_e:
 #    SF_65j_e:
-#       Lane1: "SF_65j_e/SF_65j_e_CKDL200164433-1a-AK974_HCJNKCCX2_L7_{Pair}.fq.gz"
+#       Lane1: "first/SF_65j_e/SF_65j_e_CKDL200164433-1a-AK974_HCJNKCCX2_L7_{Pair}.fq.gz"
 #SF_65k_e:
 #  SF_65k_e:
 #    SF_65k_e:
-#      Lane1: "SF_65k_e/SF_65k_e_CKDL200164433-1a-AK1650_HCJNKCCX2_L7_{Pair}.fq.gz"
+#      Lane1: "first/SF_65k_e/SF_65k_e_CKDL200164433-1a-AK1650_HCJNKCCX2_L7_{Pair}.fq.gz"
 #SF_65l_A:
 # SF_65l_A:
 #   SF_65l_A:
-#      Lane1: "SF_65l_A/SF_65l_A_CKDL200164434-1a-AK1888_HCJNKCCX2_L8_{Pair}.fq.gz"
+#      Lane1: "first/SF_65l_A/SF_65l_A_CKDL200164434-1a-AK1888_HCJNKCCX2_L8_{Pair}.fq.gz"
 #SF_65m_A:
 #  SF_65m_A:
 #    SF_65m_A:
-#       Lane1: "SF_65m_A/SF_65m_A_CKDL200164434-1a-AK2939_HCJNKCCX2_L8_{Pair}.fq.gz"
+#       Lane1: "first/SF_65m_A/SF_65m_A_CKDL200164434-1a-AK2939_HCJNKCCX2_L8_{Pair}.fq.gz"
 #SF_66a_I:
 #  SF_66a_I:
 #    SF_66a_I:
-#       Lane1: "SF_66a_I/SF_66a_I_CKDL200164433-1a-AK2943_HCJNKCCX2_L7_{Pair}.fq.gz"
+#       Lane1: "first/SF_66a_I/SF_66a_I_CKDL200164433-1a-AK2943_HCJNKCCX2_L7_{Pair}.fq.gz"
