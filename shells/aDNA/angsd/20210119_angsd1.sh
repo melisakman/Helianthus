@@ -44,7 +44,7 @@ angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file.
 -GL 2 -doGlf 2 \
 -checkBamHeaders 1 \
 -rf /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/regions_file.txt \
--doMajorMinor 1 \ #-SNP_pval 1e-6 \
+-doMajorMinor 1 \
 -doMaf 1 -minMaf 0.01 \
 -minMapQ 30 -minQ 20 -doDepth 1 \
 -doCounts 1 -dumpCounts 2 -rmTrans 1 \
@@ -52,3 +52,4 @@ angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file.
 -doHaploCall 2 \
 -doPlink 2 -doGeno 55 -geno_minDepth -1 -postCutoff 0.95 -doPost 1 -doVcf 1
 
+#-SNP_pval 1e-6 \
