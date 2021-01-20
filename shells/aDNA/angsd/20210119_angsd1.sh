@@ -40,8 +40,9 @@ module load angsd/0.919-50-gc558037
 # doPOst 2 using uniform prior; 1 using frequency as prior; 3 using SFS as prior
 
 angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file.txt -nThreads ${SLURM_CPUS_PER_TASK} \
--out /global/scratch/makman/Sunflower_angsd/
+-out /global/scratch/makman/Sunflower_angsd/ \
 -GL 2 -doGlf 2 \
+-checkBamHeaders 1 \
 -rf /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/regions_file.txt \
 -doMajorMinor 1 \ #-SNP_pval 1e-6 \
 -doMaf 1 -minMaf 0.01 \
