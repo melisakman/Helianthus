@@ -15,13 +15,6 @@
 
 module load angsd/0.919-50-gc558037
 
-bam_directory="/global/scratch/makman/Sunflower_paleomix/analyses/"
-bam_file="Bam_list_aDNA_for_ngsRelate.txt"
-output_directory="/global/scratch/makman/Sunflower_angsd/"
-
-output_extension="aDNA_domGenes"
-
-
 
 ### Parameter choices:
 # GL samtools model, for GATK 2
@@ -46,9 +39,10 @@ output_extension="aDNA_domGenes"
 # Plink is useful for LD corrections, and it based on geno calls
 # doPOst 2 using uniform prior; 1 using frequency as prior; 3 using SFS as prior
 
-angsd -bam  ${bam_directory}/${bam_file} -out ${output_directory}/${output_extension} -nThreads ${SLURM_CPUS_PER_TASK} \
+angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file.txt -nThreads ${SLURM_CPUS_PER_TASK} \
+-out /global/scratch/makman/Sunflower_angsd/
 -GL 2 -doGlf 2 \
--rf \
+-rf /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/regions_file.txt \
 -doMajorMinor 1 \ #-SNP_pval 1e-6 \
 -doMaf 1 -minMaf 0.01 \
 -minMapQ 30 -minQ 20 -doDepth 1 \
