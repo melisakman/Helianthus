@@ -340,8 +340,8 @@ Prefixes:
 # SF_35_Cl:
 #   SF_35_Cl:
 #      Lane1: "first/SF_35_Cl/SF_35_Cl_CKDL200164433-1a-AK2940_HCJNKCCX2_L7_{Pair}.fq.gz"
-
 SF_35b_C:
+ SF_35b_C:
   SF_35b_C:
      Lane1: "first/SF_35b_C/SF_35b_C_CKDL200164432-1a-AK5612_HCJNKCCX2_L6_{Pair}.fq.gz"
 SF_37_Cl:
