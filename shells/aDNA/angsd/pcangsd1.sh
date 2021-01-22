@@ -15,6 +15,6 @@
 
 
 
-module load python/3.6
+# module load python/3.6
 
 python /global/home/users/makman/pcangsd/pcangsd.py -beagle angsd.beagle.gz -admix -o PCAngsd_allSamples -threads $SLURM_CPUS_PER_TASK
