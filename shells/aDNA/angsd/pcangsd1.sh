@@ -14,9 +14,8 @@
 #SBATCH --mail-type=All
 
 
-
+module purge
 module load python/3.6
-# module load numpy
 export PATH=/global/home/users/makman/pcangsd/:$PATH
 python /global/home/users/makman/pcangsd/pcangsd.py -beagle angsd.beagle.gz -admix -o PCAngsd_allSamples -threads $SLURM_CPUS_PER_TASK
 
