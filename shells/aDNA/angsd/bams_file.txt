@@ -99,7 +99,6 @@ additional_data/SF_65d_A.XRQ_nuclear.realigned.bam
 /global/scratch/makman/GATK/sams/bams/Hopi_other_sorted_markdup_readGroup.bam
 /global/scratch/makman/GATK/sams/bams/Hopi_sorted_markdup_readGroup.bam
 /global/scratch/makman/GATK/sams/bams/Laguna_Pueblo_sorted_markdup_readGroup.bam
-/global/scratch/makman/GATK/sams/bams/Mandan1_sorted_markdup_readGroup.bam
 /global/scratch/makman/GATK/sams/bams/Mandan2_sorted_markdup_readGroup.bam
 /global/scratch/makman/GATK/sams/bams/MexCult14_sorted_markdup_readGroup.bam
 /global/scratch/makman/GATK/sams/bams/MexCult15_sorted_markdup_readGroup.bam
