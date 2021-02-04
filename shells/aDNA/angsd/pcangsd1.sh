@@ -17,6 +17,10 @@
 module purge
 module load python/3.6
 export PATH=/global/home/users/makman/pcangsd/:$PATH
-python /global/home/users/makman/pcangsd/pcangsd.py -beagle all_angsd.beagle.gz -admix -o PCAngsd_all -threads $SLURM_CPUS_PER_TASK
-python /global/home/users/makman/pcangsd/pcangsd.py -beagle dom_angsd.beagle.gz -admix -o PCAngsd_dom -threads $SLURM_CPUS_PER_TASK
-python /global/home/users/makman/pcangsd/pcangsd.py -beagle neut_angsd.beagle.gz -admix -o PCAngsd_neut -threads $SLURM_CPUS_PER_TASK
+# python /global/home/users/makman/pcangsd/pcangsd.py -beagle all_angsd.beagle.gz -admix -o PCAngsd_all -threads $SLURM_CPUS_PER_TASK
+# python /global/home/users/makman/pcangsd/pcangsd.py -beagle dom_angsd.beagle.gz -admix -o PCAngsd_dom -threads $SLURM_CPUS_PER_TASK
+# python /global/home/users/makman/pcangsd/pcangsd.py -beagle neut_angsd.beagle.gz -admix -o PCAngsd_neut -threads $SLURM_CPUS_PER_TASK
+
+
+python /global/home/users/makman/pcangsd/pcangsd.py -beagle dom_angsd_trans.beagle.gz -admix -o PCAngsd_dom_trans -threads $SLURM_CPUS_PER_TASK
+python /global/home/users/makman/pcangsd/pcangsd.py -beagle neut_angsd_trans.beagle.gz -admix -o PCAngsd_neut_trans -threads $SLURM_CPUS_PER_TASK
