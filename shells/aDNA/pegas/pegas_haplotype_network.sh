@@ -17,10 +17,9 @@
 ## This script takes a list of genes and makes networks for them
 ## New SNPs are called using just the reads for the gene 
 
-# export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
+# export PERL5LIB=/global/home/users/makman/vcftools_0.1.13/perl/
 export PATH=/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/global/home/groups/allhands/bin:/global/home/users/makman/bin:/global/home/users/makman/angsd/liblzma/:/global/home/users/makman/angsd/liblzma/include/lzma/:/clusterfs/vector/scratch/makman/tabix-0.2.6/
 module load samtools
-module load bio/vcftools/0.1.15
 
 module load java
 module load r/3.2.5
@@ -45,7 +44,7 @@ do
 	var_upper_flanking=`expr $var_current_gene_end + 5000`
 	
 	# Make VCF file for gene to speed things up 
-	srun vcftools --gzvcf /global/scratch/makman/Sunflower_angsd/all_angsd.vcf.gz --chr $var_current_gene_chr --from-bp $var_current_gene_start --to-bp $var_current_gene_end --recode --out ${var_current_gene_name}
+	srun /global/home/users/makman/vcftools_0.1.13/bin/vcftools --gzvcf /global/scratch/makman/Sunflower_angsd/all_angsd.vcf.gz --chr $var_current_gene_chr --from-bp $var_current_gene_start --to-bp $var_current_gene_end --recode --out ${var_current_gene_name}
  	mv ${var_current_gene_name}.recode.vcf /global/scratch/makman/aDNA/pegas/Haplo_by_gene/VCF_per_gene/${var_current_gene_name}.vcf
 
 	# Make a loop to process each BAM file individually
