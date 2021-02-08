@@ -45,7 +45,7 @@ do
 	var_upper_flanking=`expr $var_current_gene_end + 5000`
 	
 	# Make VCF file for gene to speed things up 
-	srun vcftools --gvcf /global/scratch/makman/Sunflower_angsd/all_angsd.vcf.gz --chr $var_current_gene_chr --from-bp $var_current_gene_start --to-bp $var_current_gene_end --recode --out ${var_current_gene_name}
+	srun vcftools --gzvcf /global/scratch/makman/Sunflower_angsd/all_angsd.vcf.gz --chr $var_current_gene_chr --from-bp $var_current_gene_start --to-bp $var_current_gene_end --recode --out ${var_current_gene_name}
  	mv ${var_current_gene_name}.recode.vcf /global/scratch/makman/aDNA/pegas/Haplo_by_gene/VCF_per_gene/${var_current_gene_name}.vcf
 
 	# Make a loop to process each BAM file individually
