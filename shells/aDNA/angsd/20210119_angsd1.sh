@@ -95,28 +95,81 @@ module load angsd/0.919-50-gc558037
 # -doPlink 2 -doGeno 55 -geno_minDepth -1 -postCutoff 0.95 -doPost 1 -doVcf 1
 
 
-angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file.txt -nThreads ${SLURM_CPUS_PER_TASK} \
--out /global/scratch/makman/Sunflower_angsd/dom_angsd_trans \
+# angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file.txt -nThreads ${SLURM_CPUS_PER_TASK} \
+# -out /global/scratch/makman/Sunflower_angsd/dom_angsd_trans \
+# -GL 2 -doGlf 2 -SNP_pval 1e-6 \
+# -checkBamHeaders 0 \
+# -rf /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/dom_regions_file.txt \
+# -doMajorMinor 1 \
+# -doMaf 1 -minMaf 0.01 \
+# -minMapQ 30 -minQ 20 -doDepth 1 \
+# -doCounts 1 -dumpCounts 2 -rmTrans 0 \
+# -doIBS 1 -makeMatrix 1 -doCov 1 \
+# -doHaploCall 2 \
+# -doPlink 2 -doGeno 55 -geno_minDepth -1 -postCutoff 0.95 -doPost 1 -doVcf 1
+# 
+# angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file.txt -nThreads ${SLURM_CPUS_PER_TASK} \
+# -out /global/scratch/makman/Sunflower_angsd/neut_angsd_trans \
+# -GL 2 -doGlf 2 -SNP_pval 1e-6 \
+# -checkBamHeaders 0 \
+# -rf /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/neut_regions_file.txt \
+# -doMajorMinor 1 \
+# -doMaf 1 -minMaf 0.01 \
+# -minMapQ 30 -minQ 20 -doDepth 1 \
+# -doCounts 1 -dumpCounts 2 -rmTrans 0 \
+# -doIBS 1 -makeMatrix 1 -doCov 1 \
+# -doHaploCall 2 \
+# -doPlink 2 -doGeno 55 -geno_minDepth -1 -postCutoff 0.95 -doPost 1 -doVcf 1
+
+angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file_only_capture.txt -nThreads ${SLURM_CPUS_PER_TASK} \
+-out /global/scratch/makman/Sunflower_angsd/dom_angsd_capture \
 -GL 2 -doGlf 2 -SNP_pval 1e-6 \
 -checkBamHeaders 0 \
 -rf /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/dom_regions_file.txt \
 -doMajorMinor 1 \
 -doMaf 1 -minMaf 0.01 \
 -minMapQ 30 -minQ 20 -doDepth 1 \
--doCounts 1 -dumpCounts 2 -rmTrans 0 \
+-doCounts 1 -dumpCounts 2 -rmTrans 1 \
 -doIBS 1 -makeMatrix 1 -doCov 1 \
 -doHaploCall 2 \
 -doPlink 2 -doGeno 55 -geno_minDepth -1 -postCutoff 0.95 -doPost 1 -doVcf 1
 
-angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file.txt -nThreads ${SLURM_CPUS_PER_TASK} \
--out /global/scratch/makman/Sunflower_angsd/neut_angsd_trans \
+angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file_only_capture.txt -nThreads ${SLURM_CPUS_PER_TASK} \
+-out /global/scratch/makman/Sunflower_angsd/neut_angsd_capture \
 -GL 2 -doGlf 2 -SNP_pval 1e-6 \
 -checkBamHeaders 0 \
 -rf /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/neut_regions_file.txt \
 -doMajorMinor 1 \
 -doMaf 1 -minMaf 0.01 \
 -minMapQ 30 -minQ 20 -doDepth 1 \
--doCounts 1 -dumpCounts 2 -rmTrans 0 \
+-doCounts 1 -dumpCounts 2 -rmTrans 1 \
 -doIBS 1 -makeMatrix 1 -doCov 1 \
 -doHaploCall 2 \
 -doPlink 2 -doGeno 55 -geno_minDepth -1 -postCutoff 0.95 -doPost 1 -doVcf 1
+
+angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file_capture_shotgun_ethno.txt -nThreads ${SLURM_CPUS_PER_TASK} \
+-out /global/scratch/makman/Sunflower_angsd/dom_angsd_capture_shotgun_ethno \
+-GL 2 -doGlf 2 -SNP_pval 1e-6 \
+-checkBamHeaders 0 \
+-rf /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/dom_regions_file.txt \
+-doMajorMinor 1 \
+-doMaf 1 -minMaf 0.01 \
+-minMapQ 30 -minQ 20 -doDepth 1 \
+-doCounts 1 -dumpCounts 2 -rmTrans 1 \
+-doIBS 1 -makeMatrix 1 -doCov 1 \
+-doHaploCall 2 \
+-doPlink 2 -doGeno 55 -geno_minDepth -1 -postCutoff 0.95 -doPost 1 -doVcf 1
+
+angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file_capture_shotgun_ethno.txt -nThreads ${SLURM_CPUS_PER_TASK} \
+-out /global/scratch/makman/Sunflower_angsd/neut_angsd_capture_shotgun_ethno \
+-GL 2 -doGlf 2 -SNP_pval 1e-6 \
+-checkBamHeaders 0 \
+-rf /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/neut_regions_file.txt \
+-doMajorMinor 1 \
+-doMaf 1 -minMaf 0.01 \
+-minMapQ 30 -minQ 20 -doDepth 1 \
+-doCounts 1 -dumpCounts 2 -rmTrans 1 \
+-doIBS 1 -makeMatrix 1 -doCov 1 \
+-doHaploCall 2 \
+-doPlink 2 -doGeno 55 -geno_minDepth -1 -postCutoff 0.95 -doPost 1 -doVcf 1
+
