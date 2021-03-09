@@ -67,7 +67,7 @@ module load angsd/0.919-50-gc558037
 
 for j in {1..10}; do
 	# run it K=i
-	for k in {1..5}; do
+	for k in {6..10}; do
 		echo "Run #" $j "K:" $k
 		x=NGSAdmix_Run_$j/K_$k
 		echo $x
@@ -78,7 +78,7 @@ done
 
 for j in {1..10}; do
 	# run it K=i
-	for k in {1..5}; do
+	for k in {6..10}; do
 		echo "Run #" $j "K:" $k
 		x=NGSAdmix_Run_$j/K_$k
 		echo $x
@@ -86,7 +86,8 @@ for j in {1..10}; do
 	done
 done
 
+(for log in `ls dom_K*Run*.log`; do grep -Po 'like=\K[^ ]+' $log; done) > dom_logfile.txt
 
 
-
+(for log in `ls neut_K*Run*.log`; do grep -Po 'like=\K[^ ]+' $log; done) > neut_logfile.txt
 
