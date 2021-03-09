@@ -161,7 +161,7 @@ angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file_
 -doPlink 2 -doGeno 55 -geno_minDepth -1 -postCutoff 0.95 -doPost 1 -doVcf 1
 
 angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file_capture_shotgun_ethno.txt -nThreads ${SLURM_CPUS_PER_TASK} \
--out /global/scratch/makman/Sunflower_angsd/neut_angsd_capture_shotgun_ethno \
+-out /global/scratch/makman/Sunflower_angsd/neut_angsd_captureminInd 40minInd 40minInd 40 \
 -GL 2 -doGlf 2 -SNP_pval 1e-6 \
 -checkBamHeaders 0 \
 -rf /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/neut_regions_file.txt \

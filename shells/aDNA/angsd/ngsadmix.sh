@@ -55,60 +55,38 @@ module load angsd/0.919-50-gc558037
 # NGSadmix -likes dom_angsd_capture_shotgun_ethno.beagle.gz -K 5 -P ${SLURM_CPUS_PER_TASK} -o dom_capture_shotgun_ethno_K5_ngsadmix -minMaf 0.01 -printInfo 1
 # NGSadmix -likes dom_angsd_capture_shotgun_ethno.beagle.gz -K 6 -P ${SLURM_CPUS_PER_TASK} -o dom_capture_shotgun_ethno_K6_ngsadmix -minMaf 0.01 -printInfo 1
 # 
-NGSadmix -likes neut_angsd_capture.beagle_shotgun_ethno.gz -K 1 -P ${SLURM_CPUS_PER_TASK} -o neut_capture_shotgun_ethno_K1_ngsadmix -minMaf 0.01 -printInfo 1
+# NGSadmix -likes neut_angsd_capture.beagle_shotgun_ethno.gz -K 1 -P ${SLURM_CPUS_PER_TASK} -o neut_capture_shotgun_ethno_K1_ngsadmix -minMaf 0.01 -printInfo 1
+# 
+# NGSadmix -likes neut_angsd_capture_shotgun_ethno.beagle.gz -K 2 -P ${SLURM_CPUS_PER_TASK} -o neut_capture_shotgun_ethno_K2_ngsadmix -minMaf 0.01 -printInfo 1
+# NGSadmix -likes neut_angsd_capture_shotgun_ethno.beagle.gz -K 3 -P ${SLURM_CPUS_PER_TASK} -o neut_capture_shotgun_ethno_K3_ngsadmix -minMaf 0.01 -printInfo 1
+# NGSadmix -likes neut_angsd_capture_shotgun_ethno.beagle.gz -K 4 -P ${SLURM_CPUS_PER_TASK} -o neut_capture_shotgun_ethno_K4_ngsadmix -minMaf 0.01 -printInfo 1
+# NGSadmix -likes neut_angsd_capture_shotgun_ethno.beagle.gz -K 5 -P ${SLURM_CPUS_PER_TASK} -o neut_capture_shotgun_ethno_K5_ngsadmix -minMaf 0.01 -printInfo 1
+# NGSadmix -likes neut_angsd_capture_shotgun_ethno.beagle.gz -K 6 -P ${SLURM_CPUS_PER_TASK} -o neut_capture_shotgun_ethno_K6_ngsadmix -minMaf 0.01 -printInfo 1
 
-NGSadmix -likes neut_angsd_capture_shotgun_ethno.beagle.gz -K 2 -P ${SLURM_CPUS_PER_TASK} -o neut_capture_shotgun_ethno_K2_ngsadmix -minMaf 0.01 -printInfo 1
-NGSadmix -likes neut_angsd_capture_shotgun_ethno.beagle.gz -K 3 -P ${SLURM_CPUS_PER_TASK} -o neut_capture_shotgun_ethno_K3_ngsadmix -minMaf 0.01 -printInfo 1
-NGSadmix -likes neut_angsd_capture_shotgun_ethno.beagle.gz -K 4 -P ${SLURM_CPUS_PER_TASK} -o neut_capture_shotgun_ethno_K4_ngsadmix -minMaf 0.01 -printInfo 1
-NGSadmix -likes neut_angsd_capture_shotgun_ethno.beagle.gz -K 5 -P ${SLURM_CPUS_PER_TASK} -o neut_capture_shotgun_ethno_K5_ngsadmix -minMaf 0.01 -printInfo 1
-NGSadmix -likes neut_angsd_capture_shotgun_ethno.beagle.gz -K 6 -P ${SLURM_CPUS_PER_TASK} -o neut_capture_shotgun_ethno_K6_ngsadmix -minMaf 0.01 -printInfo 1
+
+
+for j in {1..10}; do
+	# run it K=i
+	for k in {1..5}; do
+		echo "Run #" $j "K:" $k
+		x=NGSAdmix_Run_$j/K_$k
+		echo $x
+		NGSadmix -likes dom_angsd_capture.beagle.gz -K $k -P ${SLURM_CPUS_PER_TASK} -o dom_K"$k"_Run$j -minMaf 0.01 -printInfo 1
+	done
+done
+
+
+for j in {1..10}; do
+	# run it K=i
+	for k in {1..5}; do
+		echo "Run #" $j "K:" $k
+		x=NGSAdmix_Run_$j/K_$k
+		echo $x
+		NGSadmix -likes neut_angsd_capture.beagle.gz -K $k -P ${SLURM_CPUS_PER_TASK} -o neut_K"$k"_Run$j -minMaf 0.01 -printInfo 1
+	done
+done
 
 
 
-for (j in 1:10) {
-    for (i in 1:8) {
-        system(paste("NGSadmix -likes dom_angsd.beagle.gz -minMaf 0.01 -K ", 
-            i, " -o ", "dom_all", i, "run", j, " -minInd 40", 
-            sep = ""))
-    }
-}
 
-for (j in 1:10) {
-    for (i in 1:8) {
-        system(paste("NGSadmix -likes neut_angsd.beagle.gz -minMaf 0.01 -K ", 
-            i, " -o ", "neut_all", i, "run", j, " -minInd 40", 
-            sep = ""))
-    }
-}
 
-for (j in 1:10) {
-    for (i in 1:8) {
-        system(paste("NGSadmix -likes dom_angsd_capture.beagle.gz -minMaf 0.01 -K ", 
-            i, " -o ", "dom_capture", i, "run", j, " -minInd 40", 
-            sep = ""))
-    }
-}
-
-for (j in 1:10) {
-    for (i in 1:8) {
-        system(paste("NGSadmix -likes neut_angsd_capture.beagle.gz -minMaf 0.01 -K ", 
-            i, " -o ", "neut_capture", i, "run", j, " -minInd 40", 
-            sep = ""))
-    }
-}
-
-for (j in 1:10) {
-    for (i in 1:8) {
-        system(paste("NGSadmix -likes dom_angsd_capture_shotgun_ethno.beagle.gz -minMaf 0.01 -K ", 
-            i, " -o ", "dom_capture_sg", i, "run", j, " -minInd 40", 
-            sep = ""))
-    }
-}
-
-for (j in 1:10) {
-    for (i in 1:8) {
-        system(paste("NGSadmix -likes neut_angsd_capture_shotgun_ethno.beagle.gz -minMaf 0.01 -K ", 
-            i, " -o ", "neut_capture_sg", i, "run", j, " -minInd 40", 
-            sep = ""))
-    }
-}
