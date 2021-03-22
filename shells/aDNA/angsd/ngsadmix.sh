@@ -91,16 +91,16 @@ module load angsd/0.919-50-gc558037
 # 
 # (for log in `ls neut_K*Run*.log`; do grep -Po 'like=\K[^ ]+' $log; done) > neut_logfile.txt
 
-for j in {1..1}; do
-	# run it K=i
-	for k in {9..12}; do
-		echo "Run #" $j "K:" $k
-		x=NGSAdmix_Run_$j/K_$k
-		echo $x
-		NGSadmix -likes dom_angsd.beagle.gz -K $k -P ${SLURM_CPUS_PER_TASK} -o all_dom_K"$k"_Run$j -minMaf 0.01 -printInfo 1
-	done
-done
-
+# for j in {1..1}; do
+# 	# run it K=i
+# 	for k in {9..12}; do
+# 		echo "Run #" $j "K:" $k
+# 		x=NGSAdmix_Run_$j/K_$k
+# 		echo $x
+# 		NGSadmix -likes dom_angsd.beagle.gz -K $k -P ${SLURM_CPUS_PER_TASK} -o all_dom_K"$k"_Run$j -minMaf 0.01 -printInfo 1
+# 	done
+# done
+# 
 
 # for j in {1..10}; do
 # 	# run it K=i
@@ -112,7 +112,34 @@ done
 # 	done
 # done
 
-(for log in `ls all_dom_K*Run*.log`; do grep -Po 'like=\K[^ ]+' $log; done) > all_dom_logfile.txt
+# (for log in `ls all_dom_K*Run*.log`; do grep -Po 'like=\K[^ ]+' $log; done) > all_dom_logfile.txt
 
 
 # (for log in `ls all_neut_K*Run*.log`; do grep -Po 'like=\K[^ ]+' $log; done) > all_neut_logfile.txt
+
+
+for j in {1..10}; do
+	# run it K=i
+	for k in {1..8}; do
+		echo "Run #" $j "K:" $k
+		x=NGSAdmix_Run_$j/K_$k
+		echo $x
+		NGSadmix -likes dom_angsd_captureDepth_shotgun_ethno_wd_lr.beagle.gz -K $k -P ${SLURM_CPUS_PER_TASK} -o depth_dom_K"$k"_Run$j -minMaf 0.01 -printInfo 1
+	done
+done
+
+
+for j in {1..10}; do
+	# run it K=i
+	for k in {1..8}; do
+		echo "Run #" $j "K:" $k
+		x=NGSAdmix_Run_$j/K_$k
+		echo $x
+		NGSadmix -likes neut_angsd_captureDepth_shotgun_ethno_wd_lr.beagle.gz -K $k -P ${SLURM_CPUS_PER_TASK} -o depth_neut_K"$k"_Run$j -minMaf 0.01 -printInfo 1
+	done
+done
+
+(for log in `ls depth_dom_K*Run*.log`; do grep -Po 'like=\K[^ ]+' $log; done) > depth_dom_logfile.txt
+
+
+(for log in `ls depth_neut_K*Run*.log`; do grep -Po 'like=\K[^ ]+' $log; done) > depth_neut_logfile.txt
