@@ -14,4 +14,4 @@
 #SBATCH --mail-type=All
 module load python/2.7 
 
-python /global/scratch/makman/ancestry/ancestry_informative_from_vcf_dataStructure.py chr01_SNP.vcf /global/scratch/makman/GATK/final/ancestry/chr01_ancestry_dataStructure.txt
+python /global/scratch/makman/ancestry/ancestry_informative_from_vcf_dataStructure.py chr01_SNP.vcf /global/scratch/makman/GATK/final/ancestry/aDNA_ancestry_dataStructure.txt

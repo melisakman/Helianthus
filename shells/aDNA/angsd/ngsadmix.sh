@@ -118,7 +118,7 @@ module load angsd/0.919-50-gc558037
 # (for log in `ls all_neut_K*Run*.log`; do grep -Po 'like=\K[^ ]+' $log; done) > all_neut_logfile.txt
 
 
-for j in {1..10}; do
+for j in {7..10}; do
 	# run it K=i
 	for k in {1..8}; do
 		echo "Run #" $j "K:" $k
