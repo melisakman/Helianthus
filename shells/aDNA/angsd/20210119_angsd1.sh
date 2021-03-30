@@ -13,8 +13,7 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
-module load angsd/0.919-50-gc558037
-
+export PATH=/global/scratch/makman/angsd/angsd:$PATH
 
 ### Parameter choices:
 # GL samtools model, for GATK 2
