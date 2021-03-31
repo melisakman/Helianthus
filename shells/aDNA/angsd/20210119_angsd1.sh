@@ -237,7 +237,7 @@ angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file_
 -doCounts 1 -dumpCounts 2 -rmTrans 1 \
 -doIBS 1 -makeMatrix 1 -doCov 1 \
 -doHaploCall 2 \
--doPlink 2 -doGeno 55 -geno_minDepth -1 -postCutoff 0.95 -doPost 1 -doVcf 1
+-doPlink 2 -doGeno 55 -geno_minDepth -1 -postCutoff 0.95 -doPost 1 -dovcf 1
 
 angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file_capture_wd_lr.txt -nThreads ${SLURM_CPUS_PER_TASK} \
 -out /global/scratch/makman/Sunflower_angsd/dom_angsd_capture_wd_lr/dom_angsd_capture_wd_lr \
@@ -250,4 +250,4 @@ angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file_
 -doCounts 1 -dumpCounts 2 -rmTrans 1 \
 -doIBS 1 -makeMatrix 1 -doCov 1 \
 -doHaploCall 2 \
--doPlink 2 -doGeno 55 -geno_minDepth -1 -postCutoff 0.95 -doPost 1 -doVcf 1
+-doPlink 2 -doGeno 55 -geno_minDepth -1 -postCutoff 0.95 -doPost 1 -dovcf 1
