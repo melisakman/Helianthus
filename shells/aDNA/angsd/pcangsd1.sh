@@ -30,7 +30,11 @@ export PATH=/global/home/users/makman/pcangsd/:$PATH
 # python /global/home/users/makman/pcangsd/pcangsd.py -beagle dom_angsd_capture_shotgun_ethno.beagle.gz -admix -o PCAngsd_dom_capture_shotgun_ethno -threads $SLURM_CPUS_PER_TASK
 # python /global/home/users/makman/pcangsd/pcangsd.py -beagle neut_angsd_capture_shotgun_ethno.beagle.gz -admix -o PCAngsd_neut_capture_shotgun_ethno -threads $SLURM_CPUS_PER_TASK
 
-python /global/home/users/makman/pcangsd/pcangsd.py -beagle neut_angsd_capture_shotgun_ethno_wd_lr.beagle.gz -admix -o PCAngsd_neut_angsd_capture_shotgun_ethno_wd_lr -threads $SLURM_CPUS_PER_TASK
-python /global/home/users/makman/pcangsd/pcangsd.py -beagle dom_angsd_capture_shotgun_ethno_wd_lr.beagle.gz -admix -o PCAngsd_dom_angsd_capture_shotgun_ethno_wd_lr -threads $SLURM_CPUS_PER_TASK
-python /global/home/users/makman/pcangsd/pcangsd.py -beagle dom_angsd_captureDepth_shotgun_ethno_wd_lr.beagle.gz -admix -o PCAngsd_dom_angsd_captureDepth_shotgun_ethno_wd_lr -threads $SLURM_CPUS_PER_TASK
-python /global/home/users/makman/pcangsd/pcangsd.py -beagle neut_angsd_captureDepth_shotgun_ethno_wd_lr.beagle.gz -admix -o PCAngsd_neut_angsd_captureDepth_shotgun_ethno_wd_lr -threads $SLURM_CPUS_PER_TASK
+# python /global/home/users/makman/pcangsd/pcangsd.py -beagle neut_angsd_capture_shotgun_ethno_wd_lr.beagle.gz -admix -o PCAngsd_neut_angsd_capture_shotgun_ethno_wd_lr -threads $SLURM_CPUS_PER_TASK
+# python /global/home/users/makman/pcangsd/pcangsd.py -beagle dom_angsd_capture_shotgun_ethno_wd_lr.beagle.gz -admix -o PCAngsd_dom_angsd_capture_shotgun_ethno_wd_lr -threads $SLURM_CPUS_PER_TASK
+# python /global/home/users/makman/pcangsd/pcangsd.py -beagle dom_angsd_captureDepth_shotgun_ethno_wd_lr.beagle.gz -admix -o PCAngsd_dom_angsd_captureDepth_shotgun_ethno_wd_lr -threads $SLURM_CPUS_PER_TASK
+# python /global/home/users/makman/pcangsd/pcangsd.py -beagle neut_angsd_captureDepth_shotgun_ethno_wd_lr.beagle.gz -admix -o PCAngsd_neut_angsd_captureDepth_shotgun_ethno_wd_lr -threads $SLURM_CPUS_PER_TASK
+
+
+python /global/home/users/makman/pcangsd/pcangsd.py -beagle /global/scratch/makman/Sunflower_angsd/neut_angsd_capture_wd_lr/neut_angsd_capture_wd_lr.beagle.gz -admix -o neut_angsd_capture_wd_lr/PCAngsd_neut_angsd_capture_wd_lr -threads $SLURM_CPUS_PER_TASK
+python /global/home/users/makman/pcangsd/pcangsd.py -beagle /global/scratch/makman/Sunflower_angsd/dom_angsd_capture_wd_lr/dom_angsd_capture_wd_lr.beagle.gz -admix -o dom_angsd_capture_wd_lr/PCAngsd_dom_angsd_capture_wd_lr -threads $SLURM_CPUS_PER_TASK
