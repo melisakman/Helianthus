@@ -14,7 +14,7 @@
 #SBATCH --mail-type=All
 
 export PATH=/global/scratch/makman/angsd/angsd:$PATH
-
+## this whole thing was ran twice one with dohaplocall1 and dohaplocall 2
 ### Parameter choices:
 # GL samtools model, for GATK 2
 # doGlf 2 (beagle geno likelihood)
@@ -39,7 +39,7 @@ export PATH=/global/scratch/makman/angsd/angsd:$PATH
 # doPOst 2 using uniform prior; 1 using frequency as prior; 3 using SFS as prior
 
 angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file.txt -nThreads ${SLURM_CPUS_PER_TASK} \
--out /global/scratch/makman/aDNA/Sunflower_angsd/angsd/angsd \
+-out /global/scratch/makman/aDNA/Sunflower_angsd/random_sampling/angsd/angsd \
 -GL 2 \
 -checkBamHeaders 0 \
 -rf /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/regions_file.txt \
@@ -54,7 +54,7 @@ angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file.
 
 
 angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file.txt -nThreads ${SLURM_CPUS_PER_TASK} \
--out /global/scratch/makman/aDNA/Sunflower_angsd/angsd_pvalue/all_angsd \
+-out /global/scratch/makman/aDNA/Sunflower_angsd/random_sampling/angsd_pvalue/all_angsd \
 -GL 2 -doGlf 2 -SNP_pval 1e-6 \
 -checkBamHeaders 0 \
 -rf /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/regions_file.txt \
@@ -68,7 +68,7 @@ angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file.
 
 
 angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file.txt -nThreads ${SLURM_CPUS_PER_TASK} \
--out /global/scratch/makman/aDNA/Sunflower_angsd/dom_angsd/dom_angsd \
+-out /global/scratch/makman/aDNA/Sunflower_angsd/random_sampling/dom_angsd/dom_angsd \
 -GL 2 -doGlf 2 -SNP_pval 1e-6 \
 -checkBamHeaders 0 \
 -rf /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/dom_regions_file.txt \
@@ -81,7 +81,7 @@ angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file.
 -doPlink 2 -doGeno 55 -geno_minDepth -1 -postCutoff 0.95 -doPost 1 -doBcf 1
 
 angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file.txt -nThreads ${SLURM_CPUS_PER_TASK} \
--out /global/scratch/makman/aDNA/Sunflower_angsd/neut_angsd/neut_angsd \
+-out /global/scratch/makman/aDNA/Sunflower_angsd/random_sampling/neut_angsd/neut_angsd \
 -GL 2 -doGlf 2 -SNP_pval 1e-6 \
 -checkBamHeaders 0 \
 -rf /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/neut_regions_file.txt \
@@ -95,7 +95,7 @@ angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file.
 
 
 angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file.txt -nThreads ${SLURM_CPUS_PER_TASK} \
--out /global/scratch/makman/aDNA/Sunflower_angsd/dom_angsd_trans/dom_angsd_trans \
+-out /global/scratch/makman/aDNA/Sunflower_angsd/random_sampling/dom_angsd_trans/dom_angsd_trans \
 -GL 2 -doGlf 2 -SNP_pval 1e-6 \
 -checkBamHeaders 0 \
 -rf /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/dom_regions_file.txt \
@@ -108,7 +108,7 @@ angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file.
 -doPlink 2 -doGeno 55 -geno_minDepth -1 -postCutoff 0.95 -doPost 1 -doBcf 1
 
 angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file.txt -nThreads ${SLURM_CPUS_PER_TASK} \
--out /global/scratch/makman/aDNA/Sunflower_angsd/neut_angsd_trans/neut_angsd_trans \
+-out /global/scratch/makman/aDNA/Sunflower_angsd/random_sampling/neut_angsd_trans/neut_angsd_trans \
 -GL 2 -doGlf 2 -SNP_pval 1e-6 \
 -checkBamHeaders 0 \
 -rf /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/neut_regions_file.txt \
@@ -121,7 +121,7 @@ angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file.
 -doPlink 2 -doGeno 55 -geno_minDepth -1 -postCutoff 0.95 -doPost 1 -doBcf 1
 
 angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file_only_capture.txt -nThreads ${SLURM_CPUS_PER_TASK} \
--out /global/scratch/makman/aDNA/Sunflower_angsd/dom_angsd_capture/dom_angsd_capture \
+-out /global/scratch/makman/aDNA/Sunflower_angsd/random_sampling/dom_angsd_capture/dom_angsd_capture \
 -GL 2 -doGlf 2 -SNP_pval 1e-6 \
 -checkBamHeaders 0 \
 -rf /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/dom_regions_file.txt \
@@ -134,7 +134,7 @@ angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file_
 -doPlink 2 -doGeno 55 -geno_minDepth -1 -postCutoff 0.95 -doPost 1 -doBcf 1
 
 angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file_only_capture.txt -nThreads ${SLURM_CPUS_PER_TASK} \
--out /global/scratch/makman/aDNA/Sunflower_angsd/neut_angsd_capture/neut_angsd_capture \
+-out /global/scratch/makman/aDNA/Sunflower_angsd/random_sampling/neut_angsd_capture/neut_angsd_capture \
 -GL 2 -doGlf 2 -SNP_pval 1e-6 \
 -checkBamHeaders 0 \
 -rf /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/neut_regions_file.txt \
@@ -147,7 +147,7 @@ angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file_
 -doPlink 2 -doGeno 55 -geno_minDepth -1 -postCutoff 0.95 -doPost 1 -doBcf 1
 
 angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file_capture_shotgun_ethno.txt -nThreads ${SLURM_CPUS_PER_TASK} \
--out /global/scratch/makman/aDNA/Sunflower_angsd/dom_angsd_capture_shotgun_ethno/dom_angsd_capture_shotgun_ethno \
+-out /global/scratch/makman/aDNA/Sunflower_angsd/random_sampling/dom_angsd_capture_shotgun_ethno/dom_angsd_capture_shotgun_ethno \
 -GL 2 -doGlf 2 -SNP_pval 1e-6 \
 -checkBamHeaders 0 \
 -rf /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/dom_regions_file.txt \
@@ -160,7 +160,7 @@ angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file_
 -doPlink 2 -doGeno 55 -geno_minDepth -1 -postCutoff 0.95 -doPost 1 -doBcf 1
 
 angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file_capture_shotgun_ethno.txt -nThreads ${SLURM_CPUS_PER_TASK} \
--out /global/scratch/makman/aDNA/Sunflower_angsd/neut_angsd_capture_shotgun_ethno/neut_angsd_capture_shotgun_ethno \
+-out /global/scratch/makman/aDNA/Sunflower_angsd/random_sampling/neut_angsd_capture_shotgun_ethno/neut_angsd_capture_shotgun_ethno \
 -GL 2 -doGlf 2 -SNP_pval 1e-6 \
 -checkBamHeaders 0 \
 -rf /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/neut_regions_file.txt \
@@ -173,7 +173,7 @@ angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file_
 -doPlink 2 -doGeno 55 -geno_minDepth -1 -postCutoff 0.95 -doPost 1 -doBcf 1
 
 angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file_capture_shotgun_ethno_wd_lr.txt -nThreads ${SLURM_CPUS_PER_TASK} \
--out /global/scratch/makman/aDNA/Sunflower_angsd/neut_angsd_capture_shotgun_ethno_wd_lr/neut_angsd_capture_shotgun_ethno_wd_lr \
+-out /global/scratch/makman/aDNA/Sunflower_angsd/random_sampling/neut_angsd_capture_shotgun_ethno_wd_lr/neut_angsd_capture_shotgun_ethno_wd_lr \
 -GL 2 -doGlf 2 -SNP_pval 1e-6 \
 -checkBamHeaders 0 \
 -rf /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/neut_regions_file.txt \
@@ -186,7 +186,7 @@ angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file_
 -doPlink 2 -doGeno 55 -geno_minDepth -1 -postCutoff 0.95 -doPost 1 -doBcf 1
 
 angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file_capture_shotgun_ethno_wd_lr.txt -nThreads ${SLURM_CPUS_PER_TASK} \
--out /global/scratch/makman/aDNA/Sunflower_angsd/dom_angsd_capture_shotgun_ethno_wd_lr/dom_angsd_capture_shotgun_ethno_wd_lr \
+-out /global/scratch/makman/aDNA/Sunflower_angsd/random_sampling/dom_angsd_capture_shotgun_ethno_wd_lr/dom_angsd_capture_shotgun_ethno_wd_lr \
 -GL 2 -doGlf 2 -SNP_pval 1e-6 \
 -checkBamHeaders 0 \
 -rf /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/dom_regions_file.txt \
@@ -199,7 +199,7 @@ angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file_
 -doPlink 2 -doGeno 55 -geno_minDepth -1 -postCutoff 0.95 -doPost 1 -doBcf 1
 
 angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file_captureDepth_shotgun_ethno_wd_lr.txt -nThreads ${SLURM_CPUS_PER_TASK} \
--out /global/scratch/makman/aDNA/Sunflower_angsd/neut_angsd_captureDepth_shotgun_ethno_wd_lr/neut_angsd_captureDepth_shotgun_ethno_wd_lr \
+-out /global/scratch/makman/aDNA/Sunflower_angsd/random_sampling/neut_angsd_captureDepth_shotgun_ethno_wd_lr/neut_angsd_captureDepth_shotgun_ethno_wd_lr \
 -GL 2 -doGlf 2 -SNP_pval 1e-6 \
 -checkBamHeaders 0 \
 -rf /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/neut_regions_file.txt \
@@ -212,7 +212,7 @@ angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file_
 -doPlink 2 -doGeno 55 -geno_minDepth -1 -postCutoff 0.95 -doPost 1 -doBcf 1
 
 angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file_captureDepth_shotgun_ethno_wd_lr.txt -nThreads ${SLURM_CPUS_PER_TASK} \
--out /global/scratch/makman/aDNA/Sunflower_angsd/dom_angsd_captureDepth_shotgun_ethno_wd_lr/dom_angsd_captureDepth_shotgun_ethno_wd_lr \
+-out /global/scratch/makman/aDNA/Sunflower_angsd/random_sampling/dom_angsd_captureDepth_shotgun_ethno_wd_lr/dom_angsd_captureDepth_shotgun_ethno_wd_lr \
 -GL 2 -doGlf 2 -SNP_pval 1e-6 \
 -checkBamHeaders 0 \
 -rf /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/dom_regions_file.txt \
@@ -227,7 +227,7 @@ angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file_
 
 
 angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file_capture_wd_lr.txt -nThreads ${SLURM_CPUS_PER_TASK} \
--out /global/scratch/makman/aDNA/Sunflower_angsd/neut_angsd_capture_wd_lr/neut_angsd_capture_wd_lr \
+-out /global/scratch/makman/aDNA/Sunflower_angsd/random_sampling/neut_angsd_capture_wd_lr/neut_angsd_capture_wd_lr \
 -GL 2 -doGlf 2 -SNP_pval 1e-6 \
 -checkBamHeaders 0 \
 -rf /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/neut_regions_file.txt \
@@ -240,7 +240,7 @@ angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file_
 -doPlink 2 -doGeno 55 -geno_minDepth -1 -postCutoff 0.95 -doPost 1 -doBcf 1
 
 angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file_capture_wd_lr.txt -nThreads ${SLURM_CPUS_PER_TASK} \
--out /global/scratch/makman/aDNA/Sunflower_angsd/dom_angsd_capture_wd_lr/dom_angsd_capture_wd_lr \
+-out /global/scratch/makman/aDNA/Sunflower_angsd/random_sampling/dom_angsd_capture_wd_lr/dom_angsd_capture_wd_lr \
 -GL 2 -doGlf 2 -SNP_pval 1e-6 \
 -checkBamHeaders 0 \
 -rf /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/dom_regions_file.txt \
