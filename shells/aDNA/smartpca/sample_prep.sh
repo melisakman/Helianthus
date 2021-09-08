@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /global/scratch/users/makman/aDNA/
+#SBATCH -D /global/scratch/users/makman/aDNA/smartpca/
 #SBATCH -J smartpca
 #SBATCH --account=fc_blackman
 #SBATCH --partition=savio2
