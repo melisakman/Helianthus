@@ -64,9 +64,12 @@ export PATH="$PATH:/global/scratch/makman/EIG/bin"
 # 
 # bcftools view neut_angsd_captureDepth_shotgun_ethno_wd_lr.bcf > neut_angsd_captureDepth_shotgun_ethno_wd_lr.vcf
 # 
-# sed -i s/HanXRQChr//g allChr_2plus_annot.vcf 
 
-sh ../convertVCFtoEigenstrat.sh allChr_2plus_annot.vcf 
+cd /global/scratch/users/makman/GATK/final/
+vcf-concat chr01_SNP.vcf.gz chr02_SNP.vcf.gz chr03_SNP.vcf.gz chr04_SNP.vcf.gz chr05_SNP.vcf.gz chr06_SNP.vcf.gz chr07_SNP.vcf.gz chr08_SNP.vcf.gz chr09_SNP.vcf.gz chr10_SNP.vcf.gz chr11_SNP.vcf.gz chr12_SNP.vcf.gz chr13_SNP.vcf.gz chr14_SNP.vcf.gz chr15_SNP.vcf.gz chr16_SNP.vcf.gz chr17_SNP.vcf.gz > ../../aDNA/smartpca/all_SNP.vcf
+cd /global/scratch/users/makman/aDNA/smartpca/
+sed -i s/HanXRQChr//g all_SNP.vcf 
+sh ../convertVCFtoEigenstrat.sh all_SNP.vcf 
 
 # touch allChr_2plus_annot.parameter
 # vi allChr_2plus_annot.parameter
