@@ -19,6 +19,11 @@ module load gsl
 module load openblas
 export PATH="$PATH:/global/scratch/makman/EIG/bin"
 
+export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
+TMPDIR=/global/scratch/users/makman/temp
+module load java
+
+
 
 # genome_path="//global/scratch/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta"
 # SNP_db_path="/mnt/lustre/groups/arch-adna-2019/programs/Reich_genotypes_v42.4/"
