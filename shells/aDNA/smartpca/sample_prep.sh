@@ -75,7 +75,7 @@ module load java
 # cd /global/scratch/users/makman/aDNA/smartpca/
 # sed -i s/HanXRQChr//g all_SNP.vcf 
 
-vcf-merge all_SNP.vcf ../Sunflower_angsd/random_sampling/neut_angsd_capture_wd_lr/neut_angsd_capture_wd_lr.vcf > all_neut_capture_wd_lr.vcf
+ bcftools merge all_SNP.vcf ../Sunflower_angsd/random_sampling/neut_angsd_capture_wd_lr/neut_angsd_capture_wd_lr.vcf > all_neut_capture_wd_lr.vcf
 
 # sh ../convertVCFtoEigenstrat.sh all_SNP.vcf 
 
