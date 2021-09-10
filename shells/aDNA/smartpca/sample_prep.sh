@@ -17,7 +17,7 @@ module load bcftools
 module load bio/vcftools/0.1.15
 module load gsl
 module load openblas
-export PATH="$PATH:/global/scratch/makman/EIG/bin"
+export PATH="$PATH:/global/scratch/users/makman/EIG/bin"
 
 export PERL5LIB=/clusterfs/vector/home/groups/software/sl-6.x86_64/modules/vcftools/0.1.13/perl/
 TMPDIR=/global/scratch/users/makman/temp
