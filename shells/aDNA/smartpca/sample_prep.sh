@@ -74,8 +74,9 @@ module load java
 # vcf-concat chr01_SNP.vcf.gz chr02_SNP.vcf.gz chr03_SNP.vcf.gz chr04_SNP.vcf.gz chr05_SNP.vcf.gz chr06_SNP.vcf.gz chr07_SNP.vcf.gz chr08_SNP.vcf.gz chr09_SNP.vcf.gz chr10_SNP.vcf.gz chr11_SNP.vcf.gz chr12_SNP.vcf.gz chr13_SNP.vcf.gz chr14_SNP.vcf.gz chr15_SNP.vcf.gz chr16_SNP.vcf.gz chr17_SNP.vcf.gz > ../../aDNA/smartpca/all_SNP.vcf
 # cd /global/scratch/users/makman/aDNA/smartpca/
 # sed -i s/HanXRQChr//g all_SNP.vcf 
-
- bcftools merge all_SNP.vcf ../Sunflower_angsd/random_sampling/neut_angsd_capture_wd_lr/neut_angsd_capture_wd_lr.vcf > all_neut_capture_wd_lr.vcf
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c all_SNP.vcf > all_SNP.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c ../Sunflower_angsd/random_sampling/neut_angsd_capture_wd_lr/neut_angsd_capture_wd_lr.vcf > ../Sunflower_angsd/random_sampling/neut_angsd_capture_wd_lr/neut_angsd_capture_wd_lr.vcf.gz
+bcftools merge all_SNP.vcf.gz ../Sunflower_angsd/random_sampling/neut_angsd_capture_wd_lr/neut_angsd_capture_wd_lr.vcf.gz > all_neut_capture_wd_lr.vcf
 
 # sh ../convertVCFtoEigenstrat.sh all_SNP.vcf 
 
