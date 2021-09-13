@@ -81,12 +81,14 @@ module load java
 cd /global/scratch/users/makman/aDNA/smartpca/allSNP_PCA/
 # bcftools view dom_angsd_capture.bcf | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > dom_angsd_capture.vcf.gz
 # bcftools view neut_angsd_capture.bcf | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > neut_angsd_capture.vcf.gz
-bcftools sort dom_angsd_capture.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > dom_angsd_capture_sorted.vcf.gz
-bcftools sort neut_angsd_capture.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > neut_angsd_capture_sorted.vcf.gz
-
-/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf dom_angsd_capture_sorted.vcf.gz
-/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf neut_angsd_capture_sorted.vcf.gz
-bcftools merge all_SNP.vcf.gz dom_angsd_capture_sorted.vcf.gz neut_angsd_capture_sorted.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > all_neut_dom_capture.vcf.gz
+# bcftools sort dom_angsd_capture.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > dom_angsd_capture_sorted.vcf.gz
+# bcftools sort neut_angsd_capture.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > neut_angsd_capture_sorted.vcf.gz
+# 
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf dom_angsd_capture_sorted.vcf.gz
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf neut_angsd_capture_sorted.vcf.gz
+bcftools concat dom_angsd_capture_sorted.vcf.gz neut_angsd_capture_sorted.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > neut_dom_angsd_capture_sorted.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf neut_dom_angsd_capture_sorted.vcf.gz
+bcftools merge all_SNP.vcf.gz neut_dom_angsd_capture_sorted.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > all_neut_dom_angsd_capture.vcf.gz
 
 
 # sh ../convertVCFtoEigenstrat.sh all_SNP.vcf 
