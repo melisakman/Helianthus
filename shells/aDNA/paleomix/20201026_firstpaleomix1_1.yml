@@ -142,7 +142,7 @@ Prefixes:
     # references against which reads are to be mapped. Using the same name
     # as filename is strongly recommended (e.g. /path/to/Human_g1k_v37.fasta
     # should be named 'Human_g1k_v37').
-    Path: "/global/scratch/makman/Sunflower_paleomix/genome/HanXRQr1.0-20151230_ch01_to_17.fasta"
+    Path: "/clusterfs/rosalind/users/makman/HanXRQr2/HanXRQr2.0-SUNRISE-2.1.genome.fasta"
 
     # (Optional) Uncomment and replace 'PATH_TO_BEDFILE' with the path to a
     # .bed file listing extra regions for which coverage / depth statistics
@@ -150,22 +150,22 @@ Prefixes:
     # results are named after the chromosome / contig. Change 'NAME' to the
     # name to be used in summary statistics and output filenames.
     RegionsOfInterest:
-#      Annotation: "/global/scratch/makman/Sunflower_paleomix/dom_genes.bed"
-      Important_Genes: "/global/scratch/makman/Sunflower_paleomix/dom_genes.bed"
-      Gene_by_gene: "/global/scratch/makman/Sunflower_paleomix/dom_genes_names.bed"
-  Plastome:
-    # Replace 'PATH_TO_PREFIX' with the path to .fasta file containing the
-    # references against which reads are to be mapped. Using the same name
-    # as filename is strongly recommended (e.g. /path/to/Human_g1k_v37.fasta
-    # should be named 'Human_g1k_v37').
-    Path: "/global/scratch/makman/Sunflower_paleomix/genome/HanXRQCP.fasta"
-
-  Mito:
-    # Replace 'PATH_TO_PREFIX' with the path to .fasta file containing the
-    # references against which reads are to be mapped. Using the same name
-    # as filename is strongly recommended (e.g. /path/to/Human_g1k_v37.fasta
-    # should be named 'Human_g1k_v37').
-    Path: "/global/scratch/makman/Sunflower_paleomix/genome/HanXRQMT.fasta"
+#      Annotation: "/global/scratch/users/makman/aDNA/Sunflower_paleomix/dom_genes.bed"
+      Important_Genes: "/global/scratch/users/makman/aDNA/Sunflower_paleomix/dom_genes.bed"
+      Gene_by_gene: "/global/scratch/users/makman/aDNA/Sunflower_paleomix/dom_genes_names.bed"
+ # Plastome:
+#    # Replace 'PATH_TO_PREFIX' with the path to .fasta file containing the
+#    # references against which reads are to be mapped. Using the same name
+#    # as filename is strongly recommended (e.g. /path/to/Human_g1k_v37.fasta
+#    # should be named 'Human_g1k_v37').
+#    Path: "/global/scratch/users/makman/aDNA/Sunflower_paleomix/genome/HanXRQCP.fasta"
+#
+#  Mito:
+#    # Replace 'PATH_TO_PREFIX' with the path to .fasta file containing the
+#    # references against which reads are to be mapped. Using the same name
+#    # as filename is strongly recommended (e.g. /path/to/Human_g1k_v37.fasta
+#    # should be named 'Human_g1k_v37').
+#    Path: "/global/scratch/users/makman/aDNA/Sunflower_paleomix/genome/HanXRQMT.fasta"
 
 # Mapping targets are specified using the following structure. Uncomment and
 # replace 'NAME_OF_TARGET' with the desired prefix for filenames.
