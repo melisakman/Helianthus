@@ -90,6 +90,7 @@ cd /global/scratch/users/makman/aDNA/smartpca/allSNP_PCA/
 # sed -i s/HanXRQChr//g neut_dom_angsd_capture_sorted.vcf
 # /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c neut_dom_angsd_capture_sorted.vcf > neut_dom_angsd_capture_sorted.vcf.gz
 # /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf neut_dom_angsd_capture_sorted.vcf.gz
+bcftools +fixref neut_dom_angsd_capture_sorted.vcf.gz -- -f ref.fa
 bcftools merge all_SNP.vcf.gz neut_dom_angsd_capture_sorted.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > all_neut_dom_angsd_capture.vcf.gz
 
 

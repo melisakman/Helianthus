@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /global/scratch/makman/aDNA/shotgun/
+#SBATCH -D /global/scratch/users/makman/aDNA/shotgun/
 #SBATCH -J paleo4
 #SBATCH --account=fc_blackman
 #SBATCH --partition=savio2
@@ -21,7 +21,7 @@ module load bwa/0.7.17-r1188
 
 export PATH=/global/home/users/makman/install/jar_root/adapterremoval-2.3.1/build/:$PATH
 
-paleomix bam_pipeline run /global/home/users/makman/git/Helianthus/shells/aDNA/shotgun/shotgun_paleomix4.yml --max-threads 24 --bwa-max-threads 6 --jre-option -Xmx16g --temp-root=/global/scratch/makman/temp/ --destination=/global/scratch/makman/Sunflower_paleomix/shotgun
+paleomix bam_pipeline run /global/home/users/makman/git/Helianthus/shells/aDNA/shotgun/shotgun_paleomix4.yml --max-threads 24 --bwa-max-threads 6 --jre-option -Xmx16g --temp-root=/global/scratch/users/makman/temp/ --destination=/global/scratch/users/makman/Sunflower_paleomix_new
 
 
 
