@@ -142,7 +142,7 @@ Prefixes:
     # references against which reads are to be mapped. Using the same name
     # as filename is strongly recommended (e.g. /path/to/Human_g1k_v37.fasta
     # should be named 'Human_g1k_v37').
-    Path: "/global/scratch/users/makman/Sunflower_paleomix_new/HanXRQr2.0-SUNRISE-2.1.genome_MT.fasta"
+    Path: "/global/scratch/users/makman/Sunflower_paleomix_new/HanXRQr2.0-SUNRISE-2.1.genome.fasta"
 
     # (Optional) Uncomment and replace 'PATH_TO_BEDFILE' with the path to a
     # .bed file listing extra regions for which coverage / depth statistics
