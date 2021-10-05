@@ -13,7 +13,7 @@
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
-export PATH=/global/scratch/makman/angsd/angsd:$PATH
+export PATH=/global/scratch/users/makman/angsd/angsd:$PATH
 ## this whole thing was ran twice one with dohaplocall1 and dohaplocall 2
 ### Parameter choices:
 # GL samtools model, for GATK 2
