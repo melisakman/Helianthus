@@ -257,7 +257,7 @@ angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file_
 -GL 2 -doGlf 2 -SNP_pval 1e-6 \
 -checkBamHeaders 0 \
 -rf /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/neut_regions_file.txt \
--doMajorMinor 4 \
+-doMajorMinor 1 \
 -ref /global/scratch/users/makman/Sunflower_paleomix_new/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
 -doMaf 1 -minMaf 0.01 \
 -minMapQ 30 -minQ 20 -doDepth 1 \
