@@ -115,11 +115,11 @@ module load java
 ## 
 
 cd ../Sunflower_angsd/new/random_sampling/dom_angsd_capture/
-bcftools view dom_angsd_capture.bcf | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > dom_angsd_capture.vcf.gz
-bcftools sort dom_angsd_capture.vcf.gz > dom_angsd_capture_sorted.vcf
-
-sed -i s/HanXRQChr//g dom_angsd_capture_sorted.vcf
-
+# bcftools view dom_angsd_capture.bcf | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > dom_angsd_capture.vcf.gz
+# bcftools sort dom_angsd_capture.vcf.gz > dom_angsd_capture_sorted.vcf
+# 
+# sed -i s/HanXRQChr//g dom_angsd_capture_sorted.vcf
+# 
 
 bcftools reheader -s new_sample_names.txt dom_angsd_capture_sorted.vcf | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > dom_angsd_capture_sorted_renamed.vcf.gz
 
@@ -128,10 +128,10 @@ bcftools merge dom_angsd_capture_sorted_renamed.vcf.gz /global/scratch/users/mak
 sh ../../../../convertVCFtoEigenstrat.sh all_SNP_lr_wd_dom_capture.vcf
 
 cd ../neut_angsd_capture/
-bcftools view neut_angsd_capture.bcf | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > neut_angsd_capture.vcf.gz
-bcftools sort neut_angsd_capture.vcf.gz > neut_angsd_capture_sorted.vcf
-
-sed -i s/HanXRQChr//g neut_angsd_capture_sorted.vcf
+# bcftools view neut_angsd_capture.bcf | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > neut_angsd_capture.vcf.gz
+# bcftools sort neut_angsd_capture.vcf.gz > neut_angsd_capture_sorted.vcf
+# 
+# sed -i s/HanXRQChr//g neut_angsd_capture_sorted.vcf
 
 
 bcftools reheader -s ../dom_angsd_capture/new_sample_names.txt neut_angsd_capture_sorted.vcf | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > neut_angsd_capture_sorted_renamed.vcf.gz
