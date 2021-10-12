@@ -110,8 +110,8 @@ module load java
 # /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c all_SNP.vcf > all_SNP.vcf.gz
 # /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf all_SNP.vcf.gz
 cd allSNP_PCA/
-bcftools view -S lr_wd.txt all_SNP.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > all_SNP_lr_wd.vcf.gz
-/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf all_SNP_lr_wd.vcf.gz
+# bcftools view -S lr_wd.txt all_SNP.vcf.gz | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > all_SNP_lr_wd.vcf.gz
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf all_SNP_lr_wd.vcf.gz
 ## 
 
 
@@ -123,7 +123,7 @@ bcftools view -S lr_wd.txt all_SNP.vcf.gz | /clusterfs/rosalind/users/makman/tab
 # 
 # bcftools reheader -s new_sample_names.txt neut_angsd_capture_sorted.vcf | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > neut_angsd_capture_sorted_renamed.vcf.gz
 
-cd ../../Sunflower_angsd/new/random_Sampling/neut_angsd_capture/
+cd ../../Sunflower_angsd/new/random_sampling/neut_angsd_capture/
 bcftools merge neut_angsd_capture_sorted_renamed.vcf.gz /global/scratch/users/makman/aDNA/smartpca/allSNP_PCA/all_SNP_lr_wd.vcf.gz -o all_SNP_lr_wd_capture.vcf
 
 # sh ../../../../convertVCFtoEigenstrat.sh neut_angsd_capture_sorted_renamed.vcf 
