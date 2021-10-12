@@ -1,7 +1,7 @@
 #!/bin/bash 
 #SBATCH -D /global/scratch/users/makman/Sunflower_paleomix_new/
 #SBATCH -J angsd1
-#SBATCH --account=fc_blackma
+#SBATCH --account=fc_blackman
 #SBATCH --partition=savio2
 #SBATCH --qos=savio_normal
 #SBATCH --nodes=1
