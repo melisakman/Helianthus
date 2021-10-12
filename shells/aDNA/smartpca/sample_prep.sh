@@ -121,8 +121,8 @@ cd ../Sunflower_angsd/new/random_sampling/dom_angsd_capture/
 # sed -i s/HanXRQChr//g dom_angsd_capture_sorted.vcf
 # 
 
-bcftools reheader -s new_sample_names.txt dom_angsd_capture_sorted.vcf | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > dom_angsd_capture_sorted_renamed.vcf.gz
-
+# bcftools reheader -s new_sample_names.txt dom_angsd_capture_sorted.vcf | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > dom_angsd_capture_sorted_renamed.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf dom_angsd_capture_sorted_renamed.vcf.gz
 bcftools merge dom_angsd_capture_sorted_renamed.vcf.gz /global/scratch/users/makman/aDNA/smartpca/allSNP_PCA/all_SNP_lr_wd.vcf.gz -o all_SNP_lr_wd_dom_capture.vcf
 
 sh ../../../../convertVCFtoEigenstrat.sh all_SNP_lr_wd_dom_capture.vcf
@@ -134,8 +134,8 @@ cd ../neut_angsd_capture/
 # sed -i s/HanXRQChr//g neut_angsd_capture_sorted.vcf
 
 
-bcftools reheader -s ../dom_angsd_capture/new_sample_names.txt neut_angsd_capture_sorted.vcf | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > neut_angsd_capture_sorted_renamed.vcf.gz
-
+# bcftools reheader -s ../dom_angsd_capture/new_sample_names.txt neut_angsd_capture_sorted.vcf | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > neut_angsd_capture_sorted_renamed.vcf.gz
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf neut_angsd_capture_sorted_renamed.vcf.gz
 bcftools merge neut_angsd_capture_sorted_renamed.vcf.gz /global/scratch/users/makman/aDNA/smartpca/allSNP_PCA/all_SNP_lr_wd.vcf.gz -o all_SNP_lr_wd_neut_capture.vcf
 sh ../../../../convertVCFtoEigenstrat.sh all_SNP_lr_wd_neut_capture.vcf
 
