@@ -1,7 +1,7 @@
 #!/bin/bash 
 #SBATCH -D /global/scratch/users/makman/Sunflower_paleomix_new/
 #SBATCH -J angsd1
-#SBATCH --account=fc_blackman
+#SBATCH --account=fc_blackma
 #SBATCH --partition=savio2
 #SBATCH --qos=savio_normal
 #SBATCH --nodes=1
@@ -20,7 +20,7 @@ export PATH=/global/scratch/users/makman/angsd/angsd:$PATH
 # doGlf 2 (beagle geno likelihood)
 # doMajorMinor 1: major and minor are inferred from GL with maximum likelihood approach
 # doMaf 1 is known or inferred major minor based on GL
-# dodepth 1 output depth distribution
+# dodepth 1 output depth distributio
 # doCounts 1 output count distribution??
 # doIBS 1 sample single base at each position (random sampled read); 2 consensus base
 # doCov 1 covariance matrix for PCA
@@ -43,7 +43,8 @@ export PATH=/global/scratch/users/makman/angsd/angsd:$PATH
 # -GL 2 \
 # -checkBamHeaders 0 \
 # -rf /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/regions_file.txt \
-# -doMajorMinor 1 \
+# -doMajorMinor 4 \
+# -ref /global/scratch/users/makman/Sunflower_paleomix_new/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
 # -doMaf 1 -minMaf 0.01 \
 # -minMapQ 30 -minQ 20 -doDepth 1 \
 # -doCounts 1 -dumpCounts 2 -rmTrans 1 \
@@ -58,7 +59,8 @@ export PATH=/global/scratch/users/makman/angsd/angsd:$PATH
 # -GL 2 -doGlf 2 -SNP_pval 1e-6 \
 # -checkBamHeaders 0 \
 # -rf /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/regions_file.txt \
-# -doMajorMinor 1 \
+# -doMajorMinor 4 \
+# -ref /global/scratch/users/makman/Sunflower_paleomix_new/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
 # -doMaf 1 -minMaf 0.01 \
 # -minMapQ 30 -minQ 20 -doDepth 1 \
 # -doCounts 1 -dumpCounts 2 -rmTrans 1 \
@@ -72,7 +74,8 @@ export PATH=/global/scratch/users/makman/angsd/angsd:$PATH
 # -GL 2 -doGlf 2 -SNP_pval 1e-6 \
 # -checkBamHeaders 0 \
 # -rf /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/dom_regions_file.txt \
-# -doMajorMinor 1 \
+# -doMajorMinor 4 \
+# -ref /global/scratch/users/makman/Sunflower_paleomix_new/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
 # -doMaf 1 -minMaf 0.01 \
 # -minMapQ 30 -minQ 20 -doDepth 1 \
 # -doCounts 1 -dumpCounts 2 -rmTrans 1 \
@@ -85,21 +88,23 @@ export PATH=/global/scratch/users/makman/angsd/angsd:$PATH
 # -GL 2 -doGlf 2 -SNP_pval 1e-6 \
 # -checkBamHeaders 0 \
 # -rf /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/neut_regions_file.txt \
-# -doMajorMinor 1 \
+# -doMajorMinor 4 \
+# -ref /global/scratch/users/makman/Sunflower_paleomix_new/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
 # -doMaf 1 -minMaf 0.01 \
 # -minMapQ 30 -minQ 20 -doDepth 1 \
 # -doCounts 1 -dumpCounts 2 -rmTrans 1 \
 # -doIBS 1 -makeMatrix 1 -doCov 1 \
 # -doHaploCall 1 \
 # -doPlink 2 -doGeno 55 -geno_minDepth -1 -postCutoff 0.95 -doPost 1 -doBcf 1
-# 
-# 
+
+
 # angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file.txt -nThreads ${SLURM_CPUS_PER_TASK} \
 # -out /global/scratch/users/makman/aDNA/Sunflower_angsd/new/random_sampling/dom_angsd_trans/dom_angsd_trans \
 # -GL 2 -doGlf 2 -SNP_pval 1e-6 \
 # -checkBamHeaders 0 \
 # -rf /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/dom_regions_file.txt \
-# -doMajorMinor 1 \
+# -doMajorMinor 4 \
+# -ref /global/scratch/users/makman/Sunflower_paleomix_new/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
 # -doMaf 1 -minMaf 0.01 \
 # -minMapQ 30 -minQ 20 -doDepth 1 \
 # -doCounts 1 -dumpCounts 2 \
@@ -112,46 +117,50 @@ export PATH=/global/scratch/users/makman/angsd/angsd:$PATH
 # -GL 2 -doGlf 2 -SNP_pval 1e-6 \
 # -checkBamHeaders 0 \
 # -rf /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/neut_regions_file.txt \
-# -doMajorMinor 1 \
+# -doMajorMinor 4 \
+# -ref /global/scratch/users/makman/Sunflower_paleomix_new/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
 # -doMaf 1 -minMaf 0.01 \
 # -minMapQ 30 -minQ 20 -doDepth 1 \
 # -doCounts 1 -dumpCounts 2 \
 # -doIBS 1 -makeMatrix 1 -doCov 1 \
 # -doHaploCall 1 \
 # -doPlink 2 -doGeno 55 -geno_minDepth -1 -postCutoff 0.95 -doPost 1 -doBcf 1
-# 
-# angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file_only_capture.txt -nThreads ${SLURM_CPUS_PER_TASK} \
-# -out /global/scratch/users/makman/aDNA/Sunflower_angsd/new/random_sampling/dom_angsd_capture/dom_angsd_capture \
-# -GL 2 -doGlf 2 -SNP_pval 1e-6 \
-# -checkBamHeaders 0 \
-# -rf /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/dom_regions_file.txt \
-# -doMajorMinor 1 \
-# -doMaf 1 -minMaf 0.01 \
-# -minMapQ 30 -minQ 20 -doDepth 1 \
-# -doCounts 1 -dumpCounts 2 -rmTrans 1 \
-# -doIBS 1 -makeMatrix 1 -doCov 1 \
-# -doHaploCall 1 \
-# -doPlink 2 -doGeno 55 -geno_minDepth -1 -postCutoff 0.95 -doPost 1 -doBcf 1
-# 
-# angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file_only_capture.txt -nThreads ${SLURM_CPUS_PER_TASK} \
-# -out /global/scratch/users/makman/aDNA/Sunflower_angsd/new/random_sampling/neut_angsd_capture/neut_angsd_capture \
-# -GL 2 -doGlf 2 -SNP_pval 1e-6 \
-# -checkBamHeaders 0 \
-# -rf /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/neut_regions_file.txt \
-# -doMajorMinor 1 \
-# -doMaf 1 -minMaf 0.01 \
-# -minMapQ 30 -minQ 20 -doDepth 1 \
-# -doCounts 1 -dumpCounts 2 -rmTrans 1 \
-# -doIBS 1 -makeMatrix 1 -doCov 1 \
-# -doHaploCall 1 \
-# -doPlink 2 -doGeno 55 -geno_minDepth -1 -postCutoff 0.95 -doPost 1 -doBcf 1
-# 
+
+angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file_only_capture.txt -nThreads ${SLURM_CPUS_PER_TASK} \
+-out /global/scratch/users/makman/aDNA/Sunflower_angsd/new/random_sampling/dom_angsd_capture/dom_angsd_capture \
+-GL 2 -doGlf 2 -SNP_pval 1e-6 \
+-checkBamHeaders 0 \
+-rf /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/dom_regions_file.txt \
+-doMajorMinor 4 \
+-ref /global/scratch/users/makman/Sunflower_paleomix_new/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
+-doMaf 1 -minMaf 0.01 \
+-minMapQ 30 -minQ 20 -doDepth 1 \
+-doCounts 1 -dumpCounts 2 -rmTrans 1 \
+-doIBS 1 -makeMatrix 1 -doCov 1 \
+-doHaploCall 1 \
+-doPlink 2 -doGeno 55 -geno_minDepth -1 -postCutoff 0.95 -doPost 1 -doBcf 1
+
+angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file_only_capture.txt -nThreads ${SLURM_CPUS_PER_TASK} \
+-out /global/scratch/users/makman/aDNA/Sunflower_angsd/new/random_sampling/neut_angsd_capture/neut_angsd_capture \
+-GL 2 -doGlf 2 -SNP_pval 1e-6 \
+-checkBamHeaders 0 \
+-rf /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/neut_regions_file.txt \
+-doMajorMinor 4 \
+-ref /global/scratch/users/makman/Sunflower_paleomix_new/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
+-doMaf 1 -minMaf 0.01 \
+-minMapQ 30 -minQ 20 -doDepth 1 \
+-doCounts 1 -dumpCounts 2 -rmTrans 1 \
+-doIBS 1 -makeMatrix 1 -doCov 1 \
+-doHaploCall 1 \
+-doPlink 2 -doGeno 55 -geno_minDepth -1 -postCutoff 0.95 -doPost 1 -doBcf 1
+
 # angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file_capture_shotgun_ethno.txt -nThreads ${SLURM_CPUS_PER_TASK} \
 # -out /global/scratch/users/makman/aDNA/Sunflower_angsd/new/random_sampling/dom_angsd_capture_shotgun_ethno/dom_angsd_capture_shotgun_ethno \
 # -GL 2 -doGlf 2 -SNP_pval 1e-6 \
 # -checkBamHeaders 0 \
 # -rf /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/dom_regions_file.txt \
-# -doMajorMinor 1 \
+# -doMajorMinor 4 \
+# -ref /global/scratch/users/makman/Sunflower_paleomix_new/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
 # -doMaf 1 -minMaf 0.01 \
 # -minMapQ 30 -minQ 20 -doDepth 1 \
 # -doCounts 1 -dumpCounts 2 -rmTrans 1 \
@@ -164,7 +173,8 @@ export PATH=/global/scratch/users/makman/angsd/angsd:$PATH
 # -GL 2 -doGlf 2 -SNP_pval 1e-6 \
 # -checkBamHeaders 0 \
 # -rf /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/neut_regions_file.txt \
-# -doMajorMinor 1 \
+# -doMajorMinor 4 \
+# -ref /global/scratch/users/makman/Sunflower_paleomix_new/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
 # -doMaf 1 -minMaf 0.01 \
 # -minMapQ 30 -minQ 20 -doDepth 1 \
 # -doCounts 1 -dumpCounts 2 -rmTrans 1 \
@@ -177,7 +187,8 @@ export PATH=/global/scratch/users/makman/angsd/angsd:$PATH
 # -GL 2 -doGlf 2 -SNP_pval 1e-6 \
 # -checkBamHeaders 0 \
 # -rf /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/neut_regions_file.txt \
-# -doMajorMinor 1 \
+# -doMajorMinor 4 \
+# -ref /global/scratch/users/makman/Sunflower_paleomix_new/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
 # -doMaf 1 -minMaf 0.01 \
 # -minMapQ 30 -minQ 20 -doDepth 1 \
 # -doCounts 1 -dumpCounts 2 -rmTrans 1 \
@@ -190,7 +201,8 @@ export PATH=/global/scratch/users/makman/angsd/angsd:$PATH
 # -GL 2 -doGlf 2 -SNP_pval 1e-6 \
 # -checkBamHeaders 0 \
 # -rf /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/dom_regions_file.txt \
-# -doMajorMinor 1 \
+# -doMajorMinor 4 \
+# -ref /global/scratch/users/makman/Sunflower_paleomix_new/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
 # -doMaf 1 -minMaf 0.01 \
 # -minMapQ 30 -minQ 20 -doDepth 1 \
 # -doCounts 1 -dumpCounts 2 -rmTrans 1 \
@@ -203,7 +215,8 @@ export PATH=/global/scratch/users/makman/angsd/angsd:$PATH
 # -GL 2 -doGlf 2 -SNP_pval 1e-6 \
 # -checkBamHeaders 0 \
 # -rf /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/neut_regions_file.txt \
-# -doMajorMinor 1 \
+# -doMajorMinor 4 \
+# -ref /global/scratch/users/makman/Sunflower_paleomix_new/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
 # -doMaf 1 -minMaf 0.01 \
 # -minMapQ 30 -minQ 20 -doDepth 1 \
 # -doCounts 1 -dumpCounts 2 -rmTrans 1 \
@@ -216,7 +229,8 @@ export PATH=/global/scratch/users/makman/angsd/angsd:$PATH
 # -GL 2 -doGlf 2 -SNP_pval 1e-6 \
 # -checkBamHeaders 0 \
 # -rf /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/dom_regions_file.txt \
-# -doMajorMinor 1 \
+# -doMajorMinor 4 \
+# -ref /global/scratch/users/makman/Sunflower_paleomix_new/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
 # -doMaf 1 -minMaf 0.01 \
 # -minMapQ 30 -minQ 20 -doDepth 1 \
 # -doCounts 1 -dumpCounts 2 -rmTrans 1 \
@@ -231,7 +245,8 @@ export PATH=/global/scratch/users/makman/angsd/angsd:$PATH
 # -GL 2 -doGlf 2 -SNP_pval 1e-6 \
 # -checkBamHeaders 0 \
 # -rf /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/neut_regions_file.txt \
-# -doMajorMinor 1 \
+# -doMajorMinor 4 \
+# -ref /global/scratch/users/makman/Sunflower_paleomix_new/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
 # -doMaf 1 -minMaf 0.01 \
 # -minMapQ 30 -minQ 20 -doDepth 1 \
 # -doCounts 1 -dumpCounts 2 -rmTrans 1 \
@@ -244,25 +259,26 @@ export PATH=/global/scratch/users/makman/angsd/angsd:$PATH
 # -GL 2 -doGlf 2 -SNP_pval 1e-6 \
 # -checkBamHeaders 0 \
 # -rf /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/dom_regions_file.txt \
-# -doMajorMinor 1 \
+# -doMajorMinor 4 \
+# -ref /global/scratch/users/makman/Sunflower_paleomix_new/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
 # -doMaf 1 -minMaf 0.01 \
 # -minMapQ 30 -minQ 20 -doDepth 1 \
 # -doCounts 1 -dumpCounts 2 -rmTrans 1 \
 # -doIBS 1 -makeMatrix 1 -doCov 1 \
 # -doHaploCall 1 \
 # -doPlink 2 -doGeno 55 -geno_minDepth -1 -postCutoff 0.95 -doPost 1 -doBcf 1
-
-angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file_only_capture.txt -nThreads ${SLURM_CPUS_PER_TASK} \
--out /global/scratch/users/makman/aDNA/Sunflower_angsd/new/random_sampling/neut_angsd_capture_test/neut_angsd_capture \
--GL 2 -doGlf 2 -SNP_pval 1e-6 \
--checkBamHeaders 0 \
--rf /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/neut_regions_file.txt \
--doMajorMinor 4 \
--ref /global/scratch/users/makman/Sunflower_paleomix_new/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
--doMaf 1 -minMaf 0.01 \
--minMapQ 30 -minQ 20 -doDepth 1 \
--doCounts 1 -dumpCounts 2 -rmTrans 1 \
--doIBS 1 -makeMatrix 1 -doCov 1 \
--doHaploCall 1 \
--doPlink 2 -doGeno 55 -geno_minDepth -1 -postCutoff 0.95 -doPost 1 -doBcf 1
+# 
+# angsd -bam /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/bams_file_only_capture.txt -nThreads ${SLURM_CPUS_PER_TASK} \
+# -out /global/scratch/users/makman/aDNA/Sunflower_angsd/new/random_sampling/neut_angsd_capture_test/neut_angsd_capture \
+# -GL 2 -doGlf 2 -SNP_pval 1e-6 \
+# -checkBamHeaders 0 \
+# -rf /global/home/users/makman/git/Helianthus/shells/aDNA/angsd/neut_regions_file.txt \
+# -doMajorMinor 4 \
+# -ref /global/scratch/users/makman/Sunflower_paleomix_new/HanXRQr2.0-SUNRISE-2.1.genome.fasta \
+# -doMaf 1 -minMaf 0.01 \
+# -minMapQ 30 -minQ 20 -doDepth 1 \
+# -doCounts 1 -dumpCounts 2 -rmTrans 1 \
+# -doIBS 1 -makeMatrix 1 -doCov 1 \
+# -doHaploCall 1 \
+# -doPlink 2 -doGeno 55 -geno_minDepth -1 -postCutoff 0.95 -doPost 1 -doBcf 1
 
