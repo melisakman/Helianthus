@@ -8,8 +8,8 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=24
 #SBATCH --time=72:00:00
-#SBATCH -o /global/home/users/makman/paloemix_outs/smartpca_2.out
-#SBATCH -e /global/home/users/makman/paloemix_outs/smartpca_2.err
+#SBATCH -o /global/home/users/makman/paloemix_outs/smartpca_2dom.out
+#SBATCH -e /global/home/users/makman/paloemix_outs/smartpca_2dom.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
@@ -128,7 +128,7 @@ cd ../Sunflower_angsd/new/random_sampling/dom_angsd_capture/
 # sh ../../../../convertVCFtoEigenstrat.sh all_SNP_lr_wd_dom_capture.vcf
 # /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c all_SNP_lr_wd_dom_capture.vcf > all_SNP_lr_wd_dom_capture.vcf.gz
 
-cd ../neut_angsd_capture/
+# cd ../neut_angsd_capture/
 # bcftools view neut_angsd_capture.bcf | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > neut_angsd_capture.vcf.gz
 # bcftools sort neut_angsd_capture.vcf.gz > neut_angsd_capture_sorted.vcf
 # 
@@ -145,16 +145,16 @@ cd ../neut_angsd_capture/
 # touch all_SNP_lr_wd_neut_capture.parameter
 # vi touch all_SNP_lr_wd_neut_capture.parameter.parameter
 # 
-# genotypename: all_SNP_lr_wd_neut_capture.eigenstratgeno
-# snpname:      all_SNP_lr_wd_neut_capture.snp
-# indivname:    all_SNP_lr_wd_neut_capture.ind
-# evecoutname:  all_SNP_lr_wd_neut_capture.eigenvector
-# evaloutname:  all_SNP_lr_wd_neut_capture.eigenvalues
+# genotypename: all_SNP_lr_wd_dom_capture.eigenstratgeno
+# snpname:      all_SNP_lr_wd_dom_capture.snp
+# indivname:    all_SNP_lr_wd_dom_capture.ind
+# evecoutname:  all_SNP_lr_wd_dom_capture.eigenvector
+# evaloutname:  all_SNP_lr_wd_dom_capture.eigenvalues
 # ldregress:    200
-# outlieroutname: all_SNP_lr_wd_neut_capture.outliers
+# outlieroutname: all_SNP_lr_wd_dom_capture.outliers
 # ldlimit:      0.001
 # ldposlimit:   100000
 # outliermode:  1
 # poplistname: 	landrace_wd.txt
 # 
-/global/scratch/users/makman/EIG/bin/smartpca -p all_SNP_lr_wd_neut_capture.parameter > all_SNP_lr_wd_neut_capture.out
+/global/scratch/users/makman/EIG/bin/smartpca -p all_SNP_lr_wd_dom_capture.parameter > all_SNP_lr_wd_dom_capture.out
