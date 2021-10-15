@@ -126,7 +126,7 @@ cd ../Sunflower_angsd/new/random_sampling/dom_angsd_capture/
 # bcftools merge dom_angsd_capture_sorted_renamed.vcf.gz /global/scratch/users/makman/aDNA/smartpca/allSNP_PCA/all_SNP_lr_wd.vcf.gz -o all_SNP_lr_wd_dom_capture.vcf
 # 
 # sh ../../../../convertVCFtoEigenstrat.sh all_SNP_lr_wd_dom_capture.vcf
-/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c all_SNP_lr_wd_dom_capture.vcf > all_SNP_lr_wd_dom_capture.vcf.gz
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c all_SNP_lr_wd_dom_capture.vcf > all_SNP_lr_wd_dom_capture.vcf.gz
 
 cd ../neut_angsd_capture/
 # bcftools view neut_angsd_capture.bcf | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > neut_angsd_capture.vcf.gz
@@ -140,20 +140,21 @@ cd ../neut_angsd_capture/
 # bcftools merge neut_angsd_capture_sorted_renamed.vcf.gz /global/scratch/users/makman/aDNA/smartpca/allSNP_PCA/all_SNP_lr_wd.vcf.gz -o all_SNP_lr_wd_neut_capture.vcf
 # sh ../../../../convertVCFtoEigenstrat.sh all_SNP_lr_wd_neut_capture.vcf
 
-/clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c all_SNP_lr_wd_neut_capture.vcf > all_SNP_lr_wd_neut_capture.vcf.gz
+# /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c all_SNP_lr_wd_neut_capture.vcf > all_SNP_lr_wd_neut_capture.vcf.gz
 # 
-# touch all_SNP.parameter
-# vi dom_angsd_capture_sorted_renamed.parameter
+# touch all_SNP_lr_wd_neut_capture.parameter
+# vi touch all_SNP_lr_wd_neut_capture.parameter.parameter
 # 
-# genotypename: allChr_2plus_annot.eigenstratgeno
-# snpname:      allChr_2plus_annot.snp
-# indivname:    allChr_2plus_annot.ind
-# evecoutname:  allChr_2plus_annot.eigenvector
-# evaloutname:  allChr_2plus_annot.eigenvalues
+# genotypename: all_SNP_lr_wd_neut_capture.eigenstratgeno
+# snpname:      all_SNP_lr_wd_neut_capture.snp
+# indivname:    all_SNP_lr_wd_neut_capture.ind
+# evecoutname:  all_SNP_lr_wd_neut_capture.eigenvector
+# evaloutname:  all_SNP_lr_wd_neut_capture.eigenvalues
 # ldregress:    200
-# outlieroutname: allChr_2plus_annot.outliers
+# outlieroutname: all_SNP_lr_wd_neut_capture.outliers
 # ldlimit:      0.001
 # ldposlimit:   100000
 # outliermode:  1
+# poplistname: 	landrace_wd.txt
 # 
-# ../../EIG/bin/smartpca -p allChr_2plus_annot.parameter > allChr_2plus_annot.out
+/global/scratch/users/makman/EIG/bin/smartpca -p all_SNP_lr_wd_neut_capture.parameter > all_SNP_lr_wd_neut_capture.out
