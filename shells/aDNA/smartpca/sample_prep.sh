@@ -2,11 +2,12 @@
 #SBATCH -D /global/scratch/users/makman/aDNA/smartpca/
 #SBATCH -J smartpca
 #SBATCH --account=fc_blackman
-#SBATCH --partition=savio2
+#SBATCH --partition=savio2_htc
 #SBATCH --qos=savio_normal
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=24
+#SBATCH --cpus-per-task=12
+#SBATCH --mem=128gb
 #SBATCH --time=72:00:00
 #SBATCH -o /global/home/users/makman/paloemix_outs/smartpca_2dom.out
 #SBATCH -e /global/home/users/makman/paloemix_outs/smartpca_2dom.err
