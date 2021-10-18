@@ -2,7 +2,7 @@
 #SBATCH -D /global/scratch/users/makman/aDNA/smartpca/
 #SBATCH -J smartpca
 #SBATCH --account=fc_blackman
-#SBATCH --partition=savio3_htc
+#SBATCH --partition=savio_bigmem
 #SBATCH --qos=savio_normal
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
