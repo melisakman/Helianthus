@@ -6,7 +6,7 @@
 #SBATCH --qos=savio_normal
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=40
+#SBATCH --cpus-per-task=20
 #SBATCH --time=72:00:00
 #SBATCH -o /global/home/users/makman/paloemix_outs/smartpca_2dom.out
 #SBATCH -e /global/home/users/makman/paloemix_outs/smartpca_2dom.err
