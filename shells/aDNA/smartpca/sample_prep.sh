@@ -9,8 +9,8 @@
 #SBATCH --cpus-per-task=32
 #SBATCH --time=400:00:00
 #SBATCH --mem=1500000
-#SBATCH -o /global/home/users/makman/paloemix_outs/smartpca_2neut.out
-#SBATCH -e /global/home/users/makman/paloemix_outs/smartpca_2neut.err
+#SBATCH -o /global/home/users/makman/paloemix_outs/smartpca_2dom.out
+#SBATCH -e /global/home/users/makman/paloemix_outs/smartpca_2dom.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
@@ -130,7 +130,7 @@ cd ../Sunflower_angsd/new/random_sampling/dom_angsd_capture/
 # sh ../../../../convertVCFtoEigenstrat.sh all_SNP_lr_wd_dom_capture.vcf
 # /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c all_SNP_lr_wd_dom_capture.vcf > all_SNP_lr_wd_dom_capture.vcf.gz
 
-cd ../neut_angsd_capture/
+# cd ../neut_angsd_capture/
 # bcftools view neut_angsd_capture.bcf | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > neut_angsd_capture.vcf.gz
 # bcftools sort neut_angsd_capture.vcf.gz > neut_angsd_capture_sorted.vcf
 # 
@@ -159,4 +159,4 @@ cd ../neut_angsd_capture/
 # outliermode:  1
 # poplistname: 	landrace_wd.txt
 # 
-/global/scratch/users/makman/EIG/bin/smartpca -p all_SNP_lr_wd_neut_capture.parameter > all_SNP_lr_wd_neut_capture.out
+/global/scratch/users/makman/EIG/bin/smartpca -p all_SNP_lr_wd_dom_capture.parameter > all_SNP_lr_wd_dom_capture.out
