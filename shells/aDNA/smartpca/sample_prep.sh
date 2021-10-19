@@ -1,17 +1,19 @@
 #!/bin/bash 
 #SBATCH -D /global/scratch/users/makman/aDNA/smartpca/
 #SBATCH -J smartpca
-#SBATCH --account=fc_blackman
-#SBATCH --partition=savio_bigmem
-#SBATCH --qos=savio_normal
+#SBATCH --account=co_rosalind
+#SBATCH --partition=savio3_xlmem
+#SBATCH --qos=rosalind_xlmem3_normal
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=20
-#SBATCH --time=72:00:00
+#SBATCH --cpus-per-task=52
+#SBATCH --time=400:00:00
+#SBATCH --mem=1500000
 #SBATCH -o /global/home/users/makman/paloemix_outs/smartpca_2neut.out
 #SBATCH -e /global/home/users/makman/paloemix_outs/smartpca_2neut.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
+
 
 module load bcftools
 module load bio/vcftools/0.1.15
