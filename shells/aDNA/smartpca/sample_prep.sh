@@ -6,9 +6,9 @@
 #SBATCH --qos=rosalind_xlmem3_normal
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=52
+#SBATCH --cpus-per-task=16
 #SBATCH --time=400:00:00
-#SBATCH --mem=1500000
+#SBATCH --mem=750000
 #SBATCH -o /global/home/users/makman/paloemix_outs/smartpca_2neut.out
 #SBATCH -e /global/home/users/makman/paloemix_outs/smartpca_2neut.err
 #SBATCH --mail-user=makman@berkeley.edu
