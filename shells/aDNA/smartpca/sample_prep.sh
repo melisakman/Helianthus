@@ -159,4 +159,4 @@ cd ../neut_angsd_capture/
 # outliermode:  1
 # poplistname: 	landrace_wd.txt
 # 
-/global/scratch/users/makman/EIG/bin/smartpca -p all_SNP_lr_wd_neut_capture.parameter > all_SNP_lr_wd_neut_capture.out
+/global/scratch/users/makman/EIG/bin/smartpca -p all_SNP_lr_wd_neut_capture.parameter > all_SNP_lr_wd_neut_capture_all.out
