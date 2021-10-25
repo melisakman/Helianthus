@@ -1,13 +1,13 @@
 #!/bin/bash 
 #SBATCH -D /global/scratch/users/makman/aDNA/smartpca/
 #SBATCH -J smartpca
-#SBATCH --account=co_rosalind
+#SBATCH --account=fc_blackman
 #SBATCH --partition=savio3_xlmem
 #SBATCH --qos=rosalind_xlmem3_normal
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=32
-#SBATCH --time=400:00:00
+#SBATCH --time=72:00:00
 #SBATCH --mem=1500000
 #SBATCH -o /global/home/users/makman/paloemix_outs/smartpca_2neut.out
 #SBATCH -e /global/home/users/makman/paloemix_outs/smartpca_2neut.err
@@ -158,6 +158,19 @@ cd ../neut_angsd_capture/
 # ldposlimit:   100000
 # outliermode:  1
 # poplistname: 	landrace_wd.txt
+
+
+# genotypename: all_SNP_lr_wd_neut_capture.eigenstratgeno
+# snpname:      all_SNP_lr_wd_neut_capture.snp
+# indivname:    all_SNP_lr_wd_neut_capture.ind
+# evecoutname:  all_SNP_lr_wd_neut_capture.eigenvector
+# evaloutname:  all_SNP_lr_wd_neut_capture.eigenvalues
+# ldregress:    200
+# outlieroutname: all_SNP_lr_wd_neut_capture.outliers
+# ldlimit:      0.001
+# ldposlimit:   100000
+# lsqproject:  YES
+# poplistname:    landrace_wd.txt
 # 
 /global/scratch/users/makman/EIG/bin/smartpca -p all_SNP_lr_wd_neut_capture.parameter > all_SNP_lr_wd_neut_capture.out
 
