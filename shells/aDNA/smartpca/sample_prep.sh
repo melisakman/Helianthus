@@ -2,13 +2,13 @@
 #SBATCH -D /global/scratch/users/makman/aDNA/smartpca/
 #SBATCH -J smartpca
 #SBATCH --account=fc_blackman
-#SBATCH --partition=savio_bigmem
+#SBATCH --partition=savio3_bigmem
 #SBATCH --qos=savio_normal
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=20
+#SBATCH --cpus-per-task=32
 #SBATCH --time=72:00:00
-#SBATCH --mem=512000
+#SBATCH --mem=384000
 #SBATCH -o /global/home/users/makman/paloemix_outs/smartpca_2neut.out
 #SBATCH -e /global/home/users/makman/paloemix_outs/smartpca_2neut.err
 #SBATCH --mail-user=makman@berkeley.edu
