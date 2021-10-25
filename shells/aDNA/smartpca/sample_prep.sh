@@ -3,7 +3,7 @@
 #SBATCH -J smartpca
 #SBATCH --account=fc_blackman
 #SBATCH --partition=savio_bigmem
-#SBATCH --qos=rosalind_xlmem3_normal
+#SBATCH --qos=savio_normal
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=20
