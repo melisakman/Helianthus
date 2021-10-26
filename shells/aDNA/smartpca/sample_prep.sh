@@ -9,8 +9,8 @@
 #SBATCH --cpus-per-task=32
 #SBATCH --time=72:00:00
 #SBATCH --mem=384000
-#SBATCH -o /global/home/users/makman/paloemix_outs/smartpca_2dom.out
-#SBATCH -e /global/home/users/makman/paloemix_outs/smartpca_2dom.err
+#SBATCH -o /global/home/users/makman/paloemix_outs/smartpca_2neut.out
+#SBATCH -e /global/home/users/makman/paloemix_outs/smartpca_2neut.err
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH --mail-type=All
 
@@ -172,6 +172,6 @@ cd ../Sunflower_angsd/new/random_sampling/dom_angsd_capture/
 # lsqproject:  YES
 # poplistname:    landrace_wd.txt
 # 
-/global/scratch/users/makman/EIG/bin/smartpca -p all_SNP_lr_wd_dom_capture.parameter > all_SNP_lr_wd_dom_capture.out
+/global/scratch/users/makman/EIG/bin/smartpca -p all_SNP_lr_wd_neut_capture.parameter > all_SNP_lr_wd_neut_capture.out
 
 
