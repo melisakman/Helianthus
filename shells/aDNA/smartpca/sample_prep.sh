@@ -130,7 +130,7 @@ cd ../Sunflower_angsd/new/random_sampling/dom_angsd_capture/
 # sh ../../../../convertVCFtoEigenstrat.sh all_SNP_lr_wd_dom_capture.vcf
 # /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c all_SNP_lr_wd_dom_capture.vcf > all_SNP_lr_wd_dom_capture.vcf.gz
 
-# cd ../neut_angsd_capture/
+cd ../neut_angsd_capture/
 # bcftools view neut_angsd_capture.bcf | /clusterfs/rosalind/users/makman/tabix-0.2.6/bgzip -c > neut_angsd_capture.vcf.gz
 # bcftools sort neut_angsd_capture.vcf.gz > neut_angsd_capture_sorted.vcf
 # 
