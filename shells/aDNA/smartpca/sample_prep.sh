@@ -147,16 +147,16 @@ cd ../neut_angsd_capture/
 # touch all_SNP_lr_wd_neut_capture.parameter
 # vi touch all_SNP_lr_wd_neut_capture.parameter.parameter
 # 
-# genotypename: all_SNP_lr_wd_dom_capture.eigenstratgeno
-# snpname:      all_SNP_lr_wd_dom_capture.snp
-# indivname:    all_SNP_lr_wd_dom_capture.ind
-# evecoutname:  all_SNP_lr_wd_dom_capture.eigenvector
-# evaloutname:  all_SNP_lr_wd_dom_capture.eigenvalues
-# ldregress:    200
-# outlieroutname: all_SNP_lr_wd_dom_capture.outliers
+# genotypename: GATK_SNP_lr_wd_dom_capture.eigenstratgeno
+# snpname:      GATK_SNP_lr_wd_dom_capture.snp
+# indivname:    GATK_SNP_lr_wd_dom_capture.ind
+# evecoutname:  GATK_SNP_lr_wd_dom_capture.eigenvector
+# evaloutname:  GATK_SNP_lr_wd_dom_capture.eigenvalues
+# outlieroutname: GATK_SNP_lr_wd_dom_capture.outliers
 # ldlimit:      0.001
 # ldposlimit:   100000
-# outliermode:  1
+# ldregress:    200
+# lsqproject:  YES
 # poplistname: 	landrace_wd.txt
 
 
@@ -174,4 +174,14 @@ cd ../neut_angsd_capture/
 # 
 /global/scratch/users/makman/EIG/bin/smartpca -p all_SNP_lr_wd_neut_capture.parameter > all_SNP_lr_wd_neut_capture.out
 
+#SNPs from GATK for lr and wd for capture genes
 
+
+
+
+/clusterfs/rosalind/users/makman/tabix-0.2.6/tabix -p vcf all_SNP_lr_wd_dom_capture.vcf.gz
+bcftools view all_SNP_lr_wd_dom_capture.vcf.gz -R /global/scratch/users/makman/aDNA/Sunflower_angsd/new/random_sampling/dom_angsd_capture/dom_capture_gene_regions.txt > GATK_SNP_lr_wd_dom_capture.vcf
+
+sh ../../../../convertVCFtoEigenstrat.sh GATK_SNP_lr_wd_dom_capture.vcf
+
+/global/scratch/users/makman/EIG/bin/smartpca -p GATK_SNP_lr_wd_dom_capture.parameter > GATK_SNP_lr_wd_dom_capture.out

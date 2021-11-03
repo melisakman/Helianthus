@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH -D /global/scratch/makman/Sunflower_angsd
+#SBATCH -D /global/scratch/users/makman/aDNA/Sunflower_angsd/new/random_sampling/ngsadmix
 #SBATCH -J ngsadmix
 #SBATCH --account=fc_blackman
 #SBATCH --partition=savio2
