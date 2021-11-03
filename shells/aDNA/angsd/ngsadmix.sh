@@ -152,7 +152,7 @@ for j in {1..10}; do
 		echo "Run #" $j "K:" $k
 		x=NGSAdmix_Run_$j/K_$k
 		echo $x
-		NGSadmix -likes neut_angsd_capture_wd_lr/neut_angsd_capture_wd_lr.beagle.gz -K $k -P ${SLURM_CPUS_PER_TASK} -o capture_wd_lr_neut_K"$k"_Run$j -minMaf 0.01 -printInfo 1
+		NGSadmix -likes ../neut_angsd_capture_wd_lr/neut_angsd_capture_wd_lr.beagle.gz -K $k -P ${SLURM_CPUS_PER_TASK} -o capture_wd_lr_neut_K"$k"_Run$j -minMaf 0.01 -printInfo 1
 	done
 done
 
@@ -163,7 +163,7 @@ for j in {1..10}; do
 		echo "Run #" $j "K:" $k
 		x=NGSAdmix_Run_$j/K_$k
 		echo $x
-		NGSadmix -likes dom_angsd_capture_wd_lr/dom_angsd_capture_wd_lr.beagle.gz -K $k -P ${SLURM_CPUS_PER_TASK} -o capture_wd_lr_dom_K"$k"_Run$j -minMaf 0.01 -printInfo 1
+		NGSadmix -likes ../dom_angsd_capture_wd_lr/dom_angsd_capture_wd_lr.beagle.gz -K $k -P ${SLURM_CPUS_PER_TASK} -o capture_wd_lr_dom_K"$k"_Run$j -minMaf 0.01 -printInfo 1
 	done
 done
 
